@@ -3,10 +3,11 @@ import React, { useState, useMemo, useEffect } from 'react';
 export default function MatchupsPage() {
   const [games, setGames] = useState([]);
   const [exportedDate, setExportedDate] = useState('');
-  const [selectedGameIndex, setSelectedGameIndex] = useState(0);
-  const [selectedSide, setSelectedSide] = useState('home');
+  const [selectedGame, setSelectedGame] = useState('all'); // 'all' or game index as string
   const [selectedPosition, setSelectedPosition] = useState('All');
   const [searchText, setSearchText] = useState('');
+  const [sortBy, setSortBy] = useState('pa');
+  const [sortOrder, setSortOrder] = useState('desc');
   const [dataLoading, setDataLoading] = useState(true);
 
   useEffect(() => {
@@ -23,50 +24,121 @@ export default function MatchupsPage() {
       });
   }, []);
 
-  const currentGame = games[selectedGameIndex];
+  const isAllGames = selectedGame === 'all';
 
-  const battersAndPitcher = useMemo(() => {
-    if (!currentGame) return { batters: [], pitcher: null, teamName: '', vsTeam: '' };
-    if (selectedSide === 'home') {
-      return {
-        batters: currentGame.home_batters || [],
-        pitcher: currentGame.away_pitcher,
-        teamName: currentGame.home_team,
-        vsTeam: currentGame.away_team
-      };
-    }
-    return {
-      batters: currentGame.away_batters || [],
-      pitcher: currentGame.home_pitcher,
-      teamName: currentGame.away_team,
-      vsTeam: currentGame.home_team
-    };
-  }, [currentGame, selectedSide]);
-
-  const filteredBatters = useMemo(() => {
-    let filtered = battersAndPitcher.batters;
-    if (selectedPosition !== 'All') {
-      filtered = filtered.filter(b => b.position === selectedPosition);
-    }
-    if (searchText) {
-      const search = searchText.toLowerCase();
-      filtered = filtered.filter(b => b.batter_name.toLowerCase().includes(search));
-    }
-    return filtered;
-  }, [battersAndPitcher, selectedPosition, searchText]);
-
-  const positions = ['All', 'C', '1B', '2B', '3B', 'SS', 'OF'];
-
-  const prettyDate = exportedDate
-    ? new Date(exportedDate + 'T00:00:00').toLocaleDateString('en-US', {
-        weekday: 'long', month: 'long', day: 'numeric', year: 'numeric'
-      })
-    : '';
-
+  const pitcherName = (p) => (p && p.pitcher_name ? p.pitcher_name : 'TBD');
   const pitcherLabel = (p) => {
     if (!p || !p.pitcher_name) return 'TBD';
     return p.throws ? `${p.pitcher_name} (${p.throws})` : p.pitcher_name;
   };
+
+  // Flatten a list of games into batter rows, each paired with the pitcher faced
+  const buildRows = (gameList) => {
+    const rows = [];
+    gameList.forEach((game) => {
+      const matchup = `${game.away_team} @ ${game.home_team}`;
+      (game.home_batters || []).forEach((b) => {
+        rows.push({
+          ...b,
+          matchup,
+          pitcher_name: pitcherName(game.away_pitcher),
+          pitcher_throws: game.away_pitcher?.throws || '',
+        });
+      });
+      (game.away_batters || []).forEach((b) => {
+        rows.push({
+          ...b,
+          matchup,
+          pitcher_name: pitcherName(game.home_pitcher),
+          pitcher_throws: game.home_pitcher?.throws || '',
+        });
+      });
+    });
+    return rows;
+  };
+
+  const allRows = useMemo(() => {
+    if (!games.length) return [];
+    if (isAllGames) return buildRows(games);
+    const idx = parseInt(selectedGame, 10);
+    const g = games[idx];
+    return g ? buildRows([g]) : [];
+  }, [games, selectedGame, isAllGames]);
+
+  const filteredRows = useMemo(() => {
+    let rows = allRows;
+
+    if (selectedPosition !== 'All') {
+      rows = rows.filter((r) => r.position === selectedPosition);
+    }
+
+    if (searchText) {
+      const s = searchText.toLowerCase();
+      rows = rows.filter(
+        (r) =>
+          (r.batter_name && r.batter_name.toLowerCase().includes(s)) ||
+          (r.pitcher_name && r.pitcher_name.toLowerCase().includes(s))
+      );
+    }
+
+    const textCols = ['batter_name', 'pitcher_name', 'matchup', 'position'];
+    const isText = textCols.includes(sortBy);
+
+    const sorted = [...rows].sort((a, b) => {
+      let av = a[sortBy];
+      let bv = b[sortBy];
+      if (isText) {
+        av = (av || '').toString().toLowerCase();
+        bv = (bv || '').toString().toLowerCase();
+        if (av < bv) return sortOrder === 'asc' ? -1 : 1;
+        if (av > bv) return sortOrder === 'asc' ? 1 : -1;
+        return 0;
+      }
+      av = typeof av === 'number' ? av : -Infinity;
+      bv = typeof bv === 'number' ? bv : -Infinity;
+      return sortOrder === 'asc' ? av - bv : bv - av;
+    });
+
+    return sorted;
+  }, [allRows, selectedPosition, searchText, sortBy, sortOrder]);
+
+  const handleSort = (key, type) => {
+    if (sortBy === key) {
+      setSortOrder((o) => (o === 'asc' ? 'desc' : 'asc'));
+    } else {
+      setSortBy(key);
+      setSortOrder(type === 'text' ? 'asc' : 'desc');
+    }
+  };
+
+  const positions = ['All', 'C', '1B', '2B', '3B', 'SS', 'OF'];
+
+  // Column definitions; 'matchup' only shown in All-Games view
+  const columns = [
+    { key: 'batter_name', label: 'Batter', type: 'text', align: 'left' },
+    ...(isAllGames ? [{ key: 'matchup', label: 'Matchup', type: 'text', align: 'left' }] : []),
+    { key: 'pitcher_name', label: 'Pitcher', type: 'text', align: 'left' },
+    { key: 'pa', label: 'PA', type: 'num', align: 'center' },
+    { key: 'ab', label: 'AB', type: 'num', align: 'center' },
+    { key: 'h', label: 'H', type: 'num', align: 'center' },
+    { key: 'b1', label: '1B', type: 'num', align: 'center' },
+    { key: 'b2', label: '2B', type: 'num', align: 'center' },
+    { key: 'b3', label: '3B', type: 'num', align: 'center' },
+    { key: 'hr', label: 'HR', type: 'num', align: 'center' },
+    { key: 'bb', label: 'BB', type: 'num', align: 'center' },
+    { key: 'so', label: 'SO', type: 'num', align: 'center' },
+    { key: 'avg', label: 'AVG', type: 'num', align: 'center' },
+    { key: 'obp', label: 'OBP', type: 'num', align: 'center' },
+    { key: 'slg', label: 'SLG', type: 'num', align: 'center' },
+  ];
+
+  const fmt3 = (v) => (typeof v === 'number' ? v.toFixed(3) : v || '.000');
+
+  const prettyDate = exportedDate
+    ? new Date(exportedDate + 'T00:00:00').toLocaleDateString('en-US', {
+        weekday: 'long', month: 'long', day: 'numeric', year: 'numeric',
+      })
+    : '';
 
   return (
     <div style={{ padding: '20px', background: '#f9f9f9', minHeight: '100vh' }}>
@@ -74,7 +146,7 @@ export default function MatchupsPage() {
         <div style={{ textAlign: 'center', color: '#666' }}>Loading games...</div>
       ) : (
         <>
-          {/* Slate header */}
+          {/* Header */}
           <div style={{ marginBottom: '15px' }}>
             <h2 style={{ margin: '0 0 4px 0' }}>Batter vs Pitcher Matchups</h2>
             {prettyDate && (
@@ -88,13 +160,11 @@ export default function MatchupsPage() {
           <div style={{ marginBottom: '20px', background: 'white', padding: '15px', borderRadius: '8px' }}>
             <label style={{ fontWeight: 'bold', marginRight: '10px' }}>Game:</label>
             <select
-              value={selectedGameIndex}
-              onChange={(e) => {
-                setSelectedGameIndex(parseInt(e.target.value));
-                setSelectedSide('home');
-              }}
+              value={selectedGame}
+              onChange={(e) => setSelectedGame(e.target.value)}
               style={{ padding: '8px', fontSize: '16px', borderRadius: '4px', border: '1px solid #ddd', minWidth: '320px' }}
             >
+              <option value="all">All Games</option>
               {games.map((game, idx) => (
                 <option key={idx} value={idx}>
                   {game.away_team} @ {game.home_team}
@@ -103,132 +173,106 @@ export default function MatchupsPage() {
             </select>
           </div>
 
-          {currentGame && (
-            <>
-              {/* Side Selector */}
-              <div style={{ marginBottom: '20px', background: 'white', padding: '15px', borderRadius: '8px', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-                <button
-                  onClick={() => setSelectedSide('home')}
-                  style={{
-                    padding: '10px 20px',
-                    background: selectedSide === 'home' ? '#007bff' : '#e9ecef',
-                    color: selectedSide === 'home' ? 'white' : 'black',
-                    border: 'none', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold'
-                  }}
-                >
-                  {currentGame.home_team} batters vs {pitcherLabel(currentGame.away_pitcher)}
-                </button>
-                <button
-                  onClick={() => setSelectedSide('away')}
-                  style={{
-                    padding: '10px 20px',
-                    background: selectedSide === 'away' ? '#007bff' : '#e9ecef',
-                    color: selectedSide === 'away' ? 'white' : 'black',
-                    border: 'none', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold'
-                  }}
-                >
-                  {currentGame.away_team} batters vs {pitcherLabel(currentGame.home_pitcher)}
-                </button>
-              </div>
+          {/* Position Filters */}
+          <div style={{ marginBottom: '20px', display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+            {positions.map((pos) => (
+              <button
+                key={pos}
+                onClick={() => setSelectedPosition(pos)}
+                style={{
+                  padding: '8px 16px',
+                  background: selectedPosition === pos ? '#007bff' : '#f0f0f0',
+                  color: selectedPosition === pos ? 'white' : 'black',
+                  border: 'none', borderRadius: '4px', cursor: 'pointer',
+                  fontWeight: selectedPosition === pos ? 'bold' : 'normal',
+                }}
+              >
+                {pos}
+              </button>
+            ))}
+          </div>
 
-              {/* Position Filters */}
-              <div style={{ marginBottom: '20px', display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-                {positions.map(pos => (
-                  <button
-                    key={pos}
-                    onClick={() => setSelectedPosition(pos)}
-                    style={{
-                      padding: '8px 16px',
-                      background: selectedPosition === pos ? '#007bff' : '#f0f0f0',
-                      color: selectedPosition === pos ? 'white' : 'black',
-                      border: 'none', borderRadius: '4px', cursor: 'pointer',
-                      fontWeight: selectedPosition === pos ? 'bold' : 'normal'
-                    }}
-                  >
-                    {pos}
-                  </button>
-                ))}
-              </div>
+          {/* Search */}
+          <div style={{ marginBottom: '20px' }}>
+            <input
+              type="text"
+              placeholder="Search Player Name"
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+              style={{ width: '100%', maxWidth: '400px', padding: '10px', fontSize: '16px', borderRadius: '4px', border: '1px solid #ddd' }}
+            />
+          </div>
 
-              {/* Search */}
-              <div style={{ marginBottom: '20px' }}>
-                <input
-                  type="text"
-                  placeholder="Search Player Name"
-                  value={searchText}
-                  onChange={(e) => setSearchText(e.target.value)}
-                  style={{ width: '100%', maxWidth: '400px', padding: '10px', fontSize: '16px', borderRadius: '4px', border: '1px solid #ddd' }}
-                />
-              </div>
+          {/* Table */}
+          <div style={{ background: 'white', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
+            <div style={{ padding: '15px', borderBottom: '2px solid #ddd' }}>
+              <p style={{ margin: 0, color: '#666', fontSize: '14px' }}>
+                {filteredRows.length} matchups{isAllGames ? ` across ${games.length} games` : ''}
+              </p>
+            </div>
 
-              {/* BvP Table */}
-              <div style={{ background: 'white', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
-                <div style={{ padding: '15px', borderBottom: '2px solid #ddd' }}>
-                  <h3 style={{ margin: 0 }}>
-                    {battersAndPitcher.teamName} batters vs {pitcherLabel(battersAndPitcher.pitcher)}
-                  </h3>
-                  <p style={{ margin: '5px 0 0 0', color: '#666', fontSize: '14px' }}>
-                    {filteredBatters.length} batters
-                  </p>
+            <div style={{ overflowX: 'auto' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
+                <thead>
+                  <tr style={{ background: '#f5f5f5', borderBottom: '2px solid #ddd' }}>
+                    {columns.map((col) => (
+                      <th
+                        key={col.key}
+                        onClick={() => handleSort(col.key, col.type)}
+                        style={{
+                          padding: '10px',
+                          textAlign: col.align,
+                          cursor: 'pointer',
+                          userSelect: 'none',
+                          whiteSpace: 'nowrap',
+                          background: sortBy === col.key ? '#e6e6e6' : '#f5f5f5',
+                          fontWeight: 'bold',
+                        }}
+                      >
+                        {col.label}
+                        {sortBy === col.key ? (sortOrder === 'asc' ? ' ▲' : ' ▼') : ''}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {filteredRows.map((r, idx) => (
+                    <tr key={idx} style={{ borderBottom: '1px solid #eee' }}>
+                      <td style={{ padding: '10px', textAlign: 'left', fontWeight: 'bold' }}>
+                        {r.batter_name}
+                        <span style={{ marginLeft: '6px', color: '#666', fontSize: '12px', fontWeight: 'normal' }}>
+                          {r.bats ? `(${r.bats}) ` : ''}{r.position}
+                        </span>
+                      </td>
+                      {isAllGames && (
+                        <td style={{ padding: '10px', textAlign: 'left', color: '#555' }}>{r.matchup}</td>
+                      )}
+                      <td style={{ padding: '10px', textAlign: 'left' }}>
+                        {r.pitcher_name}{r.pitcher_throws ? ` (${r.pitcher_throws})` : ''}
+                      </td>
+                      <td style={{ padding: '10px', textAlign: 'center' }}>{r.pa || 0}</td>
+                      <td style={{ padding: '10px', textAlign: 'center' }}>{r.ab || 0}</td>
+                      <td style={{ padding: '10px', textAlign: 'center' }}>{r.h || 0}</td>
+                      <td style={{ padding: '10px', textAlign: 'center' }}>{r.b1 || 0}</td>
+                      <td style={{ padding: '10px', textAlign: 'center' }}>{r.b2 || 0}</td>
+                      <td style={{ padding: '10px', textAlign: 'center' }}>{r.b3 || 0}</td>
+                      <td style={{ padding: '10px', textAlign: 'center' }}>{r.hr || 0}</td>
+                      <td style={{ padding: '10px', textAlign: 'center' }}>{r.bb || 0}</td>
+                      <td style={{ padding: '10px', textAlign: 'center' }}>{r.so || 0}</td>
+                      <td style={{ padding: '10px', textAlign: 'center' }}>{fmt3(r.avg)}</td>
+                      <td style={{ padding: '10px', textAlign: 'center' }}>{fmt3(r.obp)}</td>
+                      <td style={{ padding: '10px', textAlign: 'center' }}>{fmt3(r.slg)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              {filteredRows.length === 0 && (
+                <div style={{ padding: '20px', textAlign: 'center', color: '#666' }}>
+                  No matchups found.
                 </div>
-
-                <div style={{ overflowX: 'auto' }}>
-                  <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
-                    <thead>
-                      <tr style={{ background: '#f5f5f5', borderBottom: '2px solid #ddd' }}>
-                        <th style={{ padding: '10px', textAlign: 'left' }}>Batter</th>
-                        <th style={{ padding: '10px', textAlign: 'left' }}>Pitcher</th>
-                        <th style={{ padding: '10px', textAlign: 'center' }}>PA</th>
-                        <th style={{ padding: '10px', textAlign: 'center' }}>AB</th>
-                        <th style={{ padding: '10px', textAlign: 'center' }}>H</th>
-                        <th style={{ padding: '10px', textAlign: 'center' }}>1B</th>
-                        <th style={{ padding: '10px', textAlign: 'center' }}>2B</th>
-                        <th style={{ padding: '10px', textAlign: 'center' }}>3B</th>
-                        <th style={{ padding: '10px', textAlign: 'center' }}>HR</th>
-                        <th style={{ padding: '10px', textAlign: 'center' }}>BB</th>
-                        <th style={{ padding: '10px', textAlign: 'center' }}>SO</th>
-                        <th style={{ padding: '10px', textAlign: 'center' }}>AVG</th>
-                        <th style={{ padding: '10px', textAlign: 'center' }}>OBP</th>
-                        <th style={{ padding: '10px', textAlign: 'center' }}>SLG</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {filteredBatters.map((batter, idx) => (
-                        <tr key={idx} style={{ borderBottom: '1px solid #eee' }}>
-                          <td style={{ padding: '10px', textAlign: 'left', fontWeight: 'bold' }}>
-                            {batter.batter_name}
-                            <span style={{ marginLeft: '6px', color: '#666', fontSize: '12px', fontWeight: 'normal' }}>
-                              {batter.bats ? `(${batter.bats}) ` : ''}{batter.position}
-                            </span>
-                          </td>
-                          <td style={{ padding: '10px', textAlign: 'left' }}>
-                            {pitcherLabel(battersAndPitcher.pitcher)}
-                          </td>
-                          <td style={{ padding: '10px', textAlign: 'center' }}>{batter.pa || 0}</td>
-                          <td style={{ padding: '10px', textAlign: 'center' }}>{batter.ab || 0}</td>
-                          <td style={{ padding: '10px', textAlign: 'center' }}>{batter.h || 0}</td>
-                          <td style={{ padding: '10px', textAlign: 'center' }}>{batter.b1 || 0}</td>
-                          <td style={{ padding: '10px', textAlign: 'center' }}>{batter.b2 || 0}</td>
-                          <td style={{ padding: '10px', textAlign: 'center' }}>{batter.b3 || 0}</td>
-                          <td style={{ padding: '10px', textAlign: 'center' }}>{batter.hr || 0}</td>
-                          <td style={{ padding: '10px', textAlign: 'center' }}>{batter.bb || 0}</td>
-                          <td style={{ padding: '10px', textAlign: 'center' }}>{batter.so || 0}</td>
-                          <td style={{ padding: '10px', textAlign: 'center' }}>{typeof batter.avg === 'number' ? batter.avg.toFixed(3) : (batter.avg || '.000')}</td>
-                          <td style={{ padding: '10px', textAlign: 'center' }}>{typeof batter.obp === 'number' ? batter.obp.toFixed(3) : (batter.obp || '.000')}</td>
-                          <td style={{ padding: '10px', textAlign: 'center' }}>{typeof batter.slg === 'number' ? batter.slg.toFixed(3) : (batter.slg || '.000')}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                  {filteredBatters.length === 0 && (
-                    <div style={{ padding: '20px', textAlign: 'center', color: '#666' }}>
-                      No batters with history vs this pitcher.
-                    </div>
-                  )}
-                </div>
-              </div>
-            </>
-          )}
+              )}
+            </div>
+          </div>
         </>
       )}
     </div>
