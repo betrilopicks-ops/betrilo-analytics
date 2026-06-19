@@ -27,34 +27,32 @@ export default function MatchupsPage() {
   const isAllGames = selectedGame === 'all';
 
   const pitcherName = (p) => (p && p.pitcher_name ? p.pitcher_name : 'TBD');
-  
-
-  // Flatten a list of games into batter rows, each paired with the pitcher faced
-  const buildRows = (gameList) => {
-    const rows = [];
-    gameList.forEach((game) => {
-      const matchup = `${game.away_team} @ ${game.home_team}`;
-      (game.home_batters || []).forEach((b) => {
-        rows.push({
-          ...b,
-          matchup,
-          pitcher_name: pitcherName(game.away_pitcher),
-          pitcher_throws: game.away_pitcher?.throws || '',
-        });
-      });
-      (game.away_batters || []).forEach((b) => {
-        rows.push({
-          ...b,
-          matchup,
-          pitcher_name: pitcherName(game.home_pitcher),
-          pitcher_throws: game.home_pitcher?.throws || '',
-        });
-      });
-    });
-    return rows;
-  };
 
   const allRows = useMemo(() => {
+    const buildRows = (gameList) => {
+      const rows = [];
+      gameList.forEach((game) => {
+        const matchup = `${game.away_team} @ ${game.home_team}`;
+        (game.home_batters || []).forEach((b) => {
+          rows.push({
+            ...b,
+            matchup,
+            pitcher_name: pitcherName(game.away_pitcher),
+            pitcher_throws: game.away_pitcher?.throws || '',
+          });
+        });
+        (game.away_batters || []).forEach((b) => {
+          rows.push({
+            ...b,
+            matchup,
+            pitcher_name: pitcherName(game.home_pitcher),
+            pitcher_throws: game.home_pitcher?.throws || '',
+          });
+        });
+      });
+      return rows;
+    };
+
     if (!games.length) return [];
     if (isAllGames) return buildRows(games);
     const idx = parseInt(selectedGame, 10);
