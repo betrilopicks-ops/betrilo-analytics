@@ -21,7 +21,6 @@ export default function MatchupsPage() {
   const [dataLoading, setDataLoading] = useState(true);
 
   useEffect(() => {
-    // Load matchups from JSON file
     fetch('/data/matchups_2026-06-19.json')
       .then(res => res.json())
       .then(data => {
@@ -37,6 +36,14 @@ export default function MatchupsPage() {
   // Filter and search
   const filteredMatchups = useMemo(() => {
     let filtered = allMatchups;
+
+    // Date filter
+    if (selectedDate && filtered.length > 0) {
+      filtered = filtered.filter(m => {
+        if (!m.game_date) return false;
+        return m.game_date.startsWith(selectedDate);
+      });
+    }
 
     // Position filter
     if (selectedPosition !== 'All') {
@@ -69,7 +76,7 @@ export default function MatchupsPage() {
     });
 
     return filtered;
-  }, [selectedPosition, searchText, sortBy, sortOrder, allMatchups]);
+  }, [selectedPosition, searchText, sortBy, sortOrder, allMatchups, selectedDate]);
 
   // Handle column click to sort
   const handleColumnClick = (column) => {
@@ -146,7 +153,7 @@ export default function MatchupsPage() {
       {/* Results Count */}
       {!dataLoading && (
         <div style={{ marginBottom: '10px', color: '#666' }}>
-          {filteredMatchups.length} matchups found
+          {filteredMatchups.length} matchups found for {selectedDate}
         </div>
       )}
 
@@ -162,8 +169,8 @@ export default function MatchupsPage() {
           <thead>
             <tr style={{ background: '#f0f0f0', borderBottom: '2px solid #333' }}>
               {[
-                { key: 'pitcher_name', label: 'Pitcher' },
                 { key: 'batter_name', label: 'Batter' },
+                { key: 'pitcher_name', label: 'Pitcher' },
                 { key: 'pa', label: 'PA' },
                 { key: 'ab', label: 'AB' },
                 { key: 'h', label: 'H' },
@@ -182,7 +189,7 @@ export default function MatchupsPage() {
                   onClick={() => handleColumnClick(col.key)}
                   style={{
                     padding: '12px',
-                    textAlign: col.key === 'pitcher_name' || col.key === 'batter_name' ? 'left' : 'center',
+                    textAlign: col.key === 'batter_name' || col.key === 'pitcher_name' ? 'left' : 'center',
                     cursor: 'pointer',
                     userSelect: 'none',
                     fontWeight: sortBy === col.key ? 'bold' : 'normal',
@@ -197,8 +204,8 @@ export default function MatchupsPage() {
           <tbody>
             {filteredMatchups.map((m, i) => (
               <tr key={i} style={{ borderBottom: '1px solid #ddd' }}>
-                <td style={{ padding: '10px' }}>{m.pitcher_name}</td>
                 <td style={{ padding: '10px' }}>{m.batter_name}</td>
+                <td style={{ padding: '10px' }}>{m.pitcher_name}</td>
                 <td style={{ padding: '10px', textAlign: 'center' }}>{m.pa}</td>
                 <td style={{ padding: '10px', textAlign: 'center' }}>{m.ab}</td>
                 <td style={{ padding: '10px', textAlign: 'center' }}>{m.h}</td>
@@ -225,7 +232,7 @@ export default function MatchupsPage() {
 
       {!dataLoading && filteredMatchups.length === 0 && (
         <div style={{ padding: '20px', textAlign: 'center', color: '#666' }}>
-          No matchups found
+          No matchups found for {selectedDate}
         </div>
       )}
     </div>
