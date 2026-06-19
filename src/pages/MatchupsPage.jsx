@@ -37,14 +37,6 @@ export default function MatchupsPage() {
   const filteredMatchups = useMemo(() => {
     let filtered = allMatchups;
 
-    // Date filter
-    if (selectedDate && filtered.length > 0) {
-      filtered = filtered.filter(m => {
-        if (!m.game_date) return false;
-        return m.game_date.startsWith(selectedDate);
-      });
-    }
-
     // Position filter
     if (selectedPosition !== 'All') {
       filtered = filtered.filter(m => m.batter_pos === selectedPosition);
@@ -76,7 +68,7 @@ export default function MatchupsPage() {
     });
 
     return filtered;
-  }, [selectedPosition, searchText, sortBy, sortOrder, allMatchups, selectedDate]);
+  }, [selectedPosition, searchText, sortBy, sortOrder, allMatchups]);
 
   // Handle column click to sort
   const handleColumnClick = (column) => {
@@ -153,7 +145,7 @@ export default function MatchupsPage() {
       {/* Results Count */}
       {!dataLoading && (
         <div style={{ marginBottom: '10px', color: '#666' }}>
-          {filteredMatchups.length} matchups found for {selectedDate}
+          {filteredMatchups.length} matchups found
         </div>
       )}
 
@@ -232,7 +224,7 @@ export default function MatchupsPage() {
 
       {!dataLoading && filteredMatchups.length === 0 && (
         <div style={{ padding: '20px', textAlign: 'center', color: '#666' }}>
-          No matchups found for {selectedDate}
+          No matchups found
         </div>
       )}
     </div>
