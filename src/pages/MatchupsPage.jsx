@@ -15,10 +15,9 @@ export default function MatchupsPage() {
     setMatchups([]);
 
     try {
-      // API call to Flask backend
-      const response = await axios.get(
-        'https://betrilopicks.pythonanywhere.com/api/health'
-      );
+      await axios.get(
+  'https://betrilopicks.pythonanywhere.com/api/health'
+);
       
       // For now, just show a placeholder
       setMatchups([
