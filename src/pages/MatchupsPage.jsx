@@ -182,6 +182,7 @@ export default function MatchupsPage() {
                     <thead>
                       <tr style={{ background: '#f5f5f5', borderBottom: '2px solid #ddd' }}>
                         <th style={{ padding: '10px', textAlign: 'left', fontWeight: 'bold' }}>Batter</th>
+                        <th style={{ padding: '10px', textAlign: 'left', fontWeight: 'bold' }}>Pitcher</th>
                         <th style={{ padding: '10px', textAlign: 'center', fontWeight: 'bold' }}>PA</th>
                         <th style={{ padding: '10px', textAlign: 'center', fontWeight: 'bold' }}>AB</th>
                         <th style={{ padding: '10px', textAlign: 'center', fontWeight: 'bold' }}>H</th>
@@ -199,9 +200,12 @@ export default function MatchupsPage() {
                     <tbody>
                       {filteredBatters.map((batter, idx) => (
                         <tr key={idx} style={{ borderBottom: '1px solid #eee' }}>
-                          <td style={{ padding: '10px', textAlign: 'left' }}>
-                            <span style={{ fontWeight: 'bold' }}>{batter.batter_name}</span>
+                          <td style={{ padding: '10px', textAlign: 'left', fontWeight: 'bold' }}>
+                            {batter.batter_name}
                             <span style={{ marginLeft: '5px', color: '#666', fontSize: '12px' }}>({batter.position})</span>
+                          </td>
+                          <td style={{ padding: '10px', textAlign: 'left' }}>
+                            {battersAndPitcher.pitcher?.pitcher_name || 'Unknown'}
                           </td>
                           <td style={{ padding: '10px', textAlign: 'center' }}>{batter.pa || 0}</td>
                           <td style={{ padding: '10px', textAlign: 'center' }}>{batter.ab || 0}</td>
