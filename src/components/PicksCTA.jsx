@@ -5,7 +5,7 @@ export default function PicksCTA() {
   return (
     <div style={{ background: `linear-gradient(90deg, ${colors.blue} 0%, ${colors.green} 100%)`, borderRadius: '10px', padding: '16px 20px', margin: '20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.15)' }}>
       <div style={{ color: '#fff' }}>
-        <div style={{ fontSize: '17px', fontWeight: 'bold', marginBottom: '2px' }}>Want today''s picks?</div>
+        <div style={{ fontSize: '17px', fontWeight: 'bold', marginBottom: '2px' }}>Want today's picks?</div>
         <div style={{ fontSize: '14px', opacity: 0.95 }}>We post daily MLB betting picks with verified accuracy on Instagram and Threads.</div>
       </div>
       <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
