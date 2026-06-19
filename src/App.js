@@ -1,17 +1,19 @@
 import React from 'react';
 import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import PicksCTA from './components/PicksCTA';
 import MatchupsPage from './pages/MatchupsPage';
 
 function App() {
   return (
     <div className="App">
-      <header style={{ padding: '20px', background: '#333', color: '#fff' }}>
-        <h1>⚾ Betrilo Analytics</h1>
-        <p>MLB Batter vs Pitcher Matchups</p>
-      </header>
-      <main style={{ padding: '20px' }}>
+      <Header />
+      <PicksCTA />
+      <main>
         <MatchupsPage />
       </main>
+      <Footer />
     </div>
   );
 }
