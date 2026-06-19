@@ -27,10 +27,7 @@ export default function MatchupsPage() {
   const isAllGames = selectedGame === 'all';
 
   const pitcherName = (p) => (p && p.pitcher_name ? p.pitcher_name : 'TBD');
-  const pitcherLabel = (p) => {
-    if (!p || !p.pitcher_name) return 'TBD';
-    return p.throws ? `${p.pitcher_name} (${p.throws})` : p.pitcher_name;
-  };
+  
 
   // Flatten a list of games into batter rows, each paired with the pitcher faced
   const buildRows = (gameList) => {
