@@ -9,6 +9,7 @@ export default function MatchupsPage() {
   const [sortBy, setSortBy] = useState('ab');
   const [sortOrder, setSortOrder] = useState('desc');
   const [dataLoading, setDataLoading] = useState(true);
+  const [dataError, setDataError] = useState(false);
   const [statsMinYear, setStatsMinYear] = useState(null);
 
   useEffect(() => {
@@ -30,6 +31,7 @@ export default function MatchupsPage() {
       })
       .catch(err => {
         console.error('Failed to load games:', err);
+        setDataError(true);
         setDataLoading(false);
       });
   }, []);
@@ -159,6 +161,10 @@ export default function MatchupsPage() {
     <div style={{ padding: '20px', background: '#f9f9f9', minHeight: '100vh' }}>
       {dataLoading ? (
         <div style={{ textAlign: 'center', color: '#666' }}>Loading games...</div>
+      ) : dataError ? (
+        <div style={{ textAlign: 'center', padding: '60px', color: '#666' }}>
+          Matchups unavailable right now. Check back after today's slate posts.
+        </div>
       ) : (
         <>
           {/* Header */}
