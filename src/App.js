@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import React from 'react';
 import './App.css';
 import Header from './components/Header';
@@ -14,6 +15,7 @@ function App() {
         <MatchupsPage />
       </main>
       <Footer />
+      <Analytics />
     </div>
   );
 }
