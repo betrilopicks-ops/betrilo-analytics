@@ -6,16 +6,26 @@ export default function MatchupsPage() {
   const [selectedGame, setSelectedGame] = useState('all'); // 'all' or game index as string
   const [selectedPosition, setSelectedPosition] = useState('All');
   const [searchText, setSearchText] = useState('');
-  const [sortBy, setSortBy] = useState('pa');
+  const [sortBy, setSortBy] = useState('ab');
   const [sortOrder, setSortOrder] = useState('desc');
   const [dataLoading, setDataLoading] = useState(true);
+  const [statsMinYear, setStatsMinYear] = useState(null);
 
   useEffect(() => {
     fetch('/data/game_matchups_latest.json')
       .then(res => res.json())
       .then(data => {
-        setGames(data.games || []);
+        const sortedGames = (data.games || []).slice().sort((a, b) => {
+          const ta = a.start_time || '';
+          const tb = b.start_time || '';
+          if (!ta && !tb) return 0;
+          if (!ta) return 1;   // games without a start time sort last
+          if (!tb) return -1;
+          return ta < tb ? -1 : ta > tb ? 1 : 0;
+        });
+        setGames(sortedGames);
         setExportedDate(data.exported_date || '');
+        setStatsMinYear(data.stats_min_year || null);
         setDataLoading(false);
       })
       .catch(err => {
@@ -113,7 +123,6 @@ export default function MatchupsPage() {
     { key: 'batter_name', label: 'Batter', type: 'text', align: 'left' },
     ...(isAllGames ? [{ key: 'matchup', label: 'Matchup', type: 'text', align: 'left' }] : []),
     { key: 'pitcher_name', label: 'Pitcher', type: 'text', align: 'left' },
-    { key: 'pa', label: 'PA', type: 'num', align: 'center' },
     { key: 'ab', label: 'AB', type: 'num', align: 'center' },
     { key: 'h', label: 'H', type: 'num', align: 'center' },
     { key: 'b1', label: '1B', type: 'num', align: 'center' },
@@ -128,6 +137,17 @@ export default function MatchupsPage() {
   ];
 
   const fmt3 = (v) => (typeof v === 'number' ? v.toFixed(3) : v || '.000');
+
+  const fmtTime = (iso) => {
+    if (!iso) return 'TBD';
+    try {
+      return new Date(iso).toLocaleTimeString('en-US', {
+        hour: 'numeric', minute: '2-digit', timeZone: 'America/New_York',
+      });
+    } catch {
+      return 'TBD';
+    }
+  };
 
   const prettyDate = exportedDate
     ? new Date(exportedDate + 'T00:00:00').toLocaleDateString('en-US', {
@@ -149,6 +169,9 @@ export default function MatchupsPage() {
                 Showing matchups for {prettyDate}
               </div>
             )}
+            <div style={{ color: '#999', fontSize: '12px', marginTop: '4px' }}>
+              Batter vs Pitcher stats cover {statsMinYear || '2021'} to present.
+            </div>
           </div>
 
           {/* Game Selector */}
@@ -162,7 +185,7 @@ export default function MatchupsPage() {
               <option value="all">All Games</option>
               {games.map((game, idx) => (
                 <option key={idx} value={idx}>
-                  {game.away_team} @ {game.home_team}
+                  {fmtTime(game.start_time)} - {game.away_team} @ {game.home_team}
                 </option>
               ))}
             </select>
@@ -245,7 +268,6 @@ export default function MatchupsPage() {
                       <td style={{ padding: '10px', textAlign: 'left' }}>
                         {r.pitcher_name}{r.pitcher_throws ? ` (${r.pitcher_throws})` : ''}
                       </td>
-                      <td style={{ padding: '10px', textAlign: 'center' }}>{r.pa || 0}</td>
                       <td style={{ padding: '10px', textAlign: 'center' }}>{r.ab || 0}</td>
                       <td style={{ padding: '10px', textAlign: 'center' }}>{r.h || 0}</td>
                       <td style={{ padding: '10px', textAlign: 'center' }}>{r.b1 || 0}</td>
