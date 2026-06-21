@@ -7,7 +7,7 @@ function niceDate(s) {
   return new Date(s + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 }
 
-function TrendChart({ daily }) {
+function TrendChart({ daily, baselineDate }) {
   // Simple responsive SVG line of daily rate over time, with a baseline at 50%.
   const W = 720, H = 200, pad = { l: 36, r: 12, t: 14, b: 22 };
   const pts = daily.filter((d) => d.scored > 0);
@@ -17,6 +17,15 @@ function TrendChart({ daily }) {
   const ys = (r) => pad.t + (1 - (r - lo) / (hi - lo)) * (H - pad.t - pad.b);
   const path = pts.map((d, i) => `${i === 0 ? 'M' : 'L'}${xs(i).toFixed(1)},${ys(d.rate).toFixed(1)}`).join(' ');
   const gline = (r) => ys(r);
+
+  // Subtle model-baseline marker: vertical line at the first point on/after the baseline date.
+  let markerX = null;
+  if (baselineDate) {
+    const idx = pts.findIndex((d) => d.date >= baselineDate);
+    // Only draw if the baseline falls within the plotted range (i.e. there are points at/after it).
+    if (idx > 0) markerX = xs(idx);
+  }
+
   return (
     <svg viewBox={`0 0 ${W} ${H}`} style={{ width: '100%', height: 'auto', display: 'block' }} role="img" aria-label="Daily hit rate over time">
       {[0.4, 0.5, 0.6, 0.7, 0.8].map((r) => (
@@ -25,6 +34,12 @@ function TrendChart({ daily }) {
           <text x={pad.l - 6} y={gline(r) + 3} textAnchor="end" fontSize="10" fill="#9fb3c0">{Math.round(r * 100)}%</text>
         </g>
       ))}
+      {markerX !== null && (
+        <g>
+          <line x1={markerX} y1={pad.t} x2={markerX} y2={H - pad.b} stroke={colors.navy} strokeWidth="1" strokeDasharray="3 3" opacity="0.5" />
+          <text x={markerX} y={pad.t - 3} textAnchor="middle" fontSize="9" fill={colors.navy} opacity="0.7">model update</text>
+        </g>
+      )}
       <path d={path} fill="none" stroke={colors.green} strokeWidth="2" strokeLinejoin="round" />
       <text x={pad.l} y={H - 6} fontSize="10" fill="#9fb3c0">{niceDate(pts[0].date)}</text>
       <text x={W - pad.r} y={H - 6} textAnchor="end" fontSize="10" fill="#9fb3c0">{niceDate(pts[pts.length - 1].date)}</text>
@@ -84,10 +99,11 @@ export default function TrackRecordPage() {
       <section style={{ marginBottom: '30px' }}>
         <h2 style={{ color: colors.navy, fontSize: '18px', fontWeight: 800, margin: '0 0 10px' }}>Daily hit rate over time</h2>
         <div style={{ background: '#fff', borderRadius: '10px', padding: '12px', boxShadow: '0 1px 4px rgba(0,0,0,0.08)' }}>
-          <TrendChart daily={data.daily || []} />
+          <TrendChart daily={data.daily || []} baselineDate={data.model_baseline?.date} />
         </div>
         <p style={{ color: '#8a99a3', fontSize: '12px', margin: '8px 0 0' }}>
           Each point is one day's hit rate. The dashed line marks 50% (coin-flip). The early-season climb reflects the model calibrating over its first weeks.
+          {data.model_baseline?.note && <><br />{data.model_baseline.note}</>}
         </p>
       </section>
 
