@@ -10,6 +10,8 @@ import TrackRecordPage from './pages/TrackRecordPage';
 import EdgeReportPage from './pages/EdgeReportPage';
 import BestBetsPage from './pages/BestBetsPage';
 import LeaderboardsPage from './pages/LeaderboardsPage';
+import PlayerProjectionsPage from './pages/PlayerProjectionsPage';
+import BatterSplitsPage from './pages/BatterSplitsPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Navigate to="/mlb/matchups" replace />} />
             <Route path="/mlb/matchups" element={<MatchupsPage />} />
+            <Route path="/mlb/player-projections" element={<PlayerProjectionsPage />} />
+            <Route path="/mlb/batter-splits" element={<BatterSplitsPage />} />
             <Route path="/mlb/track-record" element={<TrackRecordPage />} />
             <Route path="/mlb/edge-report" element={<EdgeReportPage />} />
             <Route path="/mlb/best-bets" element={<BestBetsPage />} />

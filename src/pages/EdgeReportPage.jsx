@@ -10,22 +10,6 @@ const PROP_LABELS = {
 
 const PROP_FILTERS = ['All', 'hits', 'hits_runs_rbis', 'rbis', 'walks'];
 
-function fmtOdds(o) {
-  if (o === null || o === undefined) return '—';
-  return o > 0 ? `+${o}` : `${o}`;
-}
-function fmtPct(x) {
-  if (x === null || x === undefined) return '—';
-  return `${(x * 100).toFixed(1)}%`;
-}
-function fmtEv(x) {
-  if (x === null || x === undefined) return '—';
-  return x > 0 ? `+${x.toFixed(2)}` : x.toFixed(2);
-}
-function titleCaseBook(b) {
-  if (!b) return '—';
-  return b.charAt(0).toUpperCase() + b.slice(1);
-}
 function flipName(n) {
   if (typeof n === 'string' && n.includes(', ')) {
     const [last, first] = n.split(', ');
@@ -43,10 +27,6 @@ const COLUMNS = [
   { key: 'prop',    label: 'Prop',     align: 'left',   accessor: (r) => r.prop || '' },
   { key: 'line',    label: 'Line',     align: 'center', accessor: (r) => (r.line ?? -Infinity) },
   { key: 'dir',     label: 'Pick',     align: 'center', accessor: (r) => r.dir || '' },
-  { key: 'book',    label: 'Book',     align: 'left',   accessor: (r) => r.book || '' },
-  { key: 'odds',    label: 'Odds',     align: 'right',  accessor: (r) => (r.odds ?? -Infinity) },
-  { key: 'edge',    label: 'Edge',     align: 'right',  accessor: (r) => (r.edge ?? -Infinity) },
-  { key: 'ev',      label: 'EV/Unit',  align: 'right',  accessor: (r) => (r.ev ?? -Infinity) },
 ];
 
 export default function EdgeReportPage() {
@@ -55,8 +35,8 @@ export default function EdgeReportPage() {
   const [error, setError] = useState(false);
   const [propFilter, setPropFilter] = useState('All');
   const [dirFilter, setDirFilter] = useState('All');
-  const [sortKey, setSortKey] = useState('edge');
-  const [sortDir, setSortDir] = useState('desc');
+  const [sortKey, setSortKey] = useState('player');
+  const [sortDir, setSortDir] = useState('asc');
   const [search, setSearch] = useState('');
 
   useEffect(() => {
@@ -112,10 +92,10 @@ export default function EdgeReportPage() {
       <div style={{ textAlign: 'center', marginBottom: '6px' }}>
         <h1 style={{ color: colors.navy, fontSize: '30px', fontWeight: 800, margin: 0 }}>Edge Report</h1>
         <p style={{ color: '#5a6b76', fontSize: '14px', margin: '6px 0 2px' }}>
-          Model edges vs. market, ranked. {niceDate && `Slate: ${niceDate}.`}
+          Today's model picks by prop. {niceDate && `Slate: ${niceDate}.`}
         </p>
         <p style={{ color: '#8a99a3', fontSize: '12px', margin: 0 }}>
-          {data.count} props. Edge = our probability minus the market's. EV/unit is expected return per unit staked.
+          {data.count} props. Odds, edge, and EV are temporarily hidden while we upgrade our odds source.
         </p>
       </div>
 
@@ -159,7 +139,6 @@ export default function EdgeReportPage() {
           <tbody>
             {rows.map((r, i) => {
               const strong = (r.label || '').startsWith('STRONG');
-              const posEdge = r.edge > 0;
               return (
                 <tr key={i} style={{ borderTop: '1px solid #eef2f5', background: i % 2 ? '#fafcfd' : '#fff' }}>
                   <td style={{ padding: '9px 12px', textAlign: 'left', fontWeight: 600, color: colors.navy, whiteSpace: 'nowrap' }}>{flipName(r.player)}</td>
@@ -172,10 +151,6 @@ export default function EdgeReportPage() {
                     <span style={{ fontWeight: 700, color: r.dir === 'OVER' ? colors.green : '#c0392b' }}>{r.dir}</span>
                     {strong && <span style={{ marginLeft: '5px', fontSize: '10px', fontWeight: 700, color: colors.navy, background: colors.green, padding: '1px 5px', borderRadius: '3px' }}>STRONG</span>}
                   </td>
-                  <td style={{ padding: '9px 12px', textAlign: 'left', color: '#5a6b76' }}>{titleCaseBook(r.book)}</td>
-                  <td style={{ padding: '9px 12px', textAlign: 'right', fontVariantNumeric: 'tabular-nums' }}>{fmtOdds(r.odds)}</td>
-                  <td style={{ padding: '9px 12px', textAlign: 'right', fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: posEdge ? colors.green : '#c0392b' }}>{fmtPct(r.edge)}</td>
-                  <td style={{ padding: '9px 12px', textAlign: 'right', fontVariantNumeric: 'tabular-nums', color: r.ev > 0 ? colors.navy : '#c0392b' }}>{fmtEv(r.ev)}</td>
                 </tr>
               );
             })}

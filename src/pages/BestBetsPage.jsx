@@ -92,7 +92,6 @@ export default function BestBetsPage() {
     { label: 'Pick', align: 'center', render: (r) => <DirBadge dir={r.dir} /> },
     { label: 'Conf', align: 'right', cellStyle: { fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: colors.navy }, render: (r) => fmtConf(r.conf) },
     { label: 'L10', align: 'right', cellStyle: muted, render: (r) => r.l10 || '—' },
-    { label: 'Odds', align: 'right', cellStyle: { fontVariantNumeric: 'tabular-nums' }, render: (r) => r.odds || '—' },
   ];
 
   const perGameCols = [
@@ -102,7 +101,6 @@ export default function BestBetsPage() {
     { label: 'Prop', align: 'left', cellStyle: muted, render: (r) => propLabel(r.prop) },
     { label: 'Pick', align: 'center', render: (r) => <DirBadge dir={r.dir} /> },
     { label: 'Conf', align: 'right', cellStyle: { fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: colors.navy }, render: (r) => fmtConf(r.conf) },
-    { label: 'Odds', align: 'right', cellStyle: { fontVariantNumeric: 'tabular-nums' }, render: (r) => r.odds || '—' },
   ];
 
   const topHitCols = [
@@ -113,7 +111,6 @@ export default function BestBetsPage() {
     { label: 'Proj Hits', align: 'center', render: (r) => (r.proj_hits ?? '—') },
     { label: 'Conf', align: 'right', cellStyle: { fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: colors.navy }, render: (r) => fmtConf(r.conf) },
     { label: 'L10', align: 'right', cellStyle: muted, render: (r) => r.l10 || '—' },
-    { label: 'Odds', align: 'right', cellStyle: { fontVariantNumeric: 'tabular-nums' }, render: (r) => r.odds || '—' },
     { label: 'Streak', align: 'right', cellStyle: muted, render: (r) => (r.streak ?? '—') },
   ];
 
