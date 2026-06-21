@@ -20,9 +20,10 @@ export default function BatterSplitsPage() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [frame, setFrame] = useState('career');
+  const [frame, setFrame] = useState('season');
   const [search, setSearch] = useState('');
   const [minAb, setMinAb] = useState(0);
+  const [teamFilter, setTeamFilter] = useState('all');
   const [sortKey, setSortKey] = useState('vsR.avg');
   const [sortDir, setSortDir] = useState('desc');
 
@@ -48,9 +49,16 @@ export default function BatterSplitsPage() {
     return f[cut][stat];
   };
 
+  const teams = useMemo(() => {
+    if (!data) return [];
+    const set = new Set(data.players.map((p) => p.team).filter(Boolean));
+    return Array.from(set).sort();
+  }, [data]);
+
   const rows = useMemo(() => {
     if (!data) return [];
     let r = data.players.slice();
+    if (teamFilter !== 'all') r = r.filter((p) => p.team === teamFilter);
     if (search.trim()) {
       const q = search.trim().toLowerCase();
       r = r.filter((p) => p.player.toLowerCase().includes(q));
@@ -67,7 +75,7 @@ export default function BatterSplitsPage() {
     });
     return r;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data, search, minAb, sortKey, sortDir, frame]);
+  }, [data, search, teamFilter, minAb, sortKey, sortDir, frame]);
 
   const setSort = (key) => {
     if (sortKey === key) setSortDir((d) => (d === 'asc' ? 'desc' : 'asc'));
@@ -81,21 +89,27 @@ export default function BatterSplitsPage() {
     </div>
   );
 
-  const headerCell = (label, key, align = 'right') => (
+  const headerCell = (label, key, align = 'right', groupStart = false) => (
     <th onClick={() => setSort(key)}
       style={{ textAlign: align, padding: '8px 10px', cursor: 'pointer', userSelect: 'none', whiteSpace: 'nowrap',
-        color: sortKey === key ? colors.green : '#fff', fontSize: '11px', fontWeight: 700, letterSpacing: '0.3px' }}>
+        color: sortKey === key ? colors.green : '#fff', fontSize: '11px', fontWeight: 700, letterSpacing: '0.3px',
+        borderLeft: groupStart ? '2px solid rgba(255,255,255,0.30)' : 'none' }}>
       {label}{sortKey === key ? (sortDir === 'asc' ? ' ▲' : ' ▼') : ''}
     </th>
   );
 
   return (
-    <div style={{ maxWidth: 1200, margin: '0 auto', padding: '24px 16px 60px' }}>
+    <div style={{ maxWidth: 1600, margin: '0 auto', padding: '24px 16px 60px' }}>
       <div style={{ textAlign: 'center', marginBottom: '16px' }}>
         <h1 style={{ color: colors.navy, fontSize: '30px', fontWeight: 800, margin: 0 }}>Batter Splits</h1>
         <p style={{ color: '#5a6b76', fontSize: '14px', margin: '6px 0 0' }}>
           Platoon and home/away splits for today's batters. Career covers 2008–present.
         </p>
+        {data.generated && (
+          <p style={{ color: '#8a99a3', fontSize: '13px', margin: '4px 0 0' }}>
+            {new Date(data.generated + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}
+          </p>
+        )}
       </div>
 
       <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', marginBottom: '8px' }}>
@@ -108,6 +122,11 @@ export default function BatterSplitsPage() {
             </button>
           ))}
         </div>
+        <select value={teamFilter} onChange={(e) => setTeamFilter(e.target.value)}
+          style={{ padding: '7px 10px', borderRadius: '6px', border: '1px solid #cdd8e0', fontSize: '13px', color: colors.navy, background: '#fff', cursor: 'pointer' }}>
+          <option value="all">All Teams</option>
+          {teams.map((t) => <option key={t} value={t}>{t}</option>)}
+        </select>
         <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search player"
           style={{ padding: '7px 12px', borderRadius: '6px', border: '1px solid #cdd8e0', fontSize: '13px', minWidth: '160px' }} />
         <label style={{ fontSize: '13px', color: '#5a6b76', display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -128,14 +147,15 @@ export default function BatterSplitsPage() {
             <tr style={{ background: colors.navy }}>
               <th rowSpan={2} onClick={() => setSort('player')}
                 style={{ textAlign: 'left', padding: '8px 12px', cursor: 'pointer', verticalAlign: 'bottom',
-                  color: sortKey === 'player' ? colors.green : '#fff', fontSize: '11px', fontWeight: 700 }}>
+                  color: sortKey === 'player' ? colors.green : '#fff', fontSize: '11px', fontWeight: 700,
+                  position: 'sticky', left: 0, zIndex: 3, background: colors.navy }}>
                 Player{sortKey === 'player' ? (sortDir === 'asc' ? ' ▲' : ' ▼') : ''}
               </th>
               {CUTS.map((c, i) => (
-                <th key={c.key} colSpan={3}
+                <th key={c.key} colSpan={6}
                   style={{ textAlign: 'center', padding: '6px 10px', color: colors.green, fontSize: '11px', fontWeight: 800,
                     textTransform: 'uppercase', letterSpacing: '0.5px',
-                    borderLeft: i === 0 ? 'none' : '1px solid rgba(255,255,255,0.12)' }}>
+                    borderLeft: i === 0 ? 'none' : '2px solid rgba(255,255,255,0.30)' }}>
                   {c.label}
                 </th>
               ))}
@@ -143,9 +163,12 @@ export default function BatterSplitsPage() {
             <tr style={{ background: colors.navy }}>
               {CUTS.map((c, i) => (
                 <React.Fragment key={c.key}>
-                  {headerCell('AVG', `${c.key}.avg`)}
+                  {headerCell('AVG', `${c.key}.avg`, 'right', i > 0)}
                   {headerCell('AB', `${c.key}.ab`)}
+                  {headerCell('H', `${c.key}.h`)}
+                  {headerCell('XBH', `${c.key}.xbh`)}
                   {headerCell('HR', `${c.key}.hr`)}
+                  {headerCell('W', `${c.key}.bb`)}
                 </React.Fragment>
               ))}
             </tr>
@@ -153,16 +176,21 @@ export default function BatterSplitsPage() {
           <tbody>
             {rows.map((p, idx) => {
               const f = p[frame] || {};
+              const rowBg = idx % 2 ? '#fafcfd' : '#fff';
               return (
-                <tr key={idx} style={{ borderTop: '1px solid #eef2f5', background: idx % 2 ? '#fafcfd' : '#fff' }}>
-                  <td style={{ padding: '8px 12px', textAlign: 'left', fontWeight: 600, color: colors.navy, whiteSpace: 'nowrap' }}>{p.player}</td>
-                  {CUTS.map((c) => {
+                <tr key={idx} style={{ borderTop: '1px solid #eef2f5', background: rowBg }}>
+                  <td style={{ padding: '8px 12px', textAlign: 'left', fontWeight: 600, color: colors.navy, whiteSpace: 'nowrap',
+                    position: 'sticky', left: 0, zIndex: 1, background: rowBg, borderRight: '2px solid #e3e9ed' }}>{p.player}</td>
+                  {CUTS.map((c, ci) => {
                     const cut = f[c.key] || {};
                     return (
                       <React.Fragment key={c.key}>
-                        <td style={{ padding: '8px 10px', textAlign: 'right', fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: colors.navy }}>{fmtAvg(cut.avg)}</td>
+                        <td style={{ padding: '8px 10px', textAlign: 'right', fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: colors.navy, borderLeft: ci > 0 ? '2px solid #e3e9ed' : 'none' }}>{fmtAvg(cut.avg)}</td>
                         <td style={{ padding: '8px 10px', textAlign: 'right', color: '#5a6b76', fontVariantNumeric: 'tabular-nums' }}>{fmtInt(cut.ab)}</td>
+                        <td style={{ padding: '8px 10px', textAlign: 'right', color: '#5a6b76', fontVariantNumeric: 'tabular-nums' }}>{fmtInt(cut.h)}</td>
+                        <td style={{ padding: '8px 10px', textAlign: 'right', color: '#5a6b76', fontVariantNumeric: 'tabular-nums' }}>{fmtInt(cut.xbh)}</td>
                         <td style={{ padding: '8px 10px', textAlign: 'right', color: '#5a6b76', fontVariantNumeric: 'tabular-nums' }}>{fmtInt(cut.hr)}</td>
+                        <td style={{ padding: '8px 10px', textAlign: 'right', color: '#5a6b76', fontVariantNumeric: 'tabular-nums' }}>{fmtInt(cut.bb)}</td>
                       </React.Fragment>
                     );
                   })}
@@ -173,9 +201,9 @@ export default function BatterSplitsPage() {
         </table>
         {rows.length === 0 && <div style={{ padding: '24px', textAlign: 'center', color: colors.textMuted }}>No batters match those filters.</div>}
       </div>
-      <p style={{ color: '#8a99a3', fontSize: '12px', marginTop: '10px', textAlign: 'center' }}>
-        {rows.length} batters. Splits built on pitcher handedness, so switch-hitter platoon numbers resolve correctly. AVG shown when AB &gt; 0.
-      </p>
+      <div style={{ marginTop: '12px', padding: '12px 14px', background: '#f4f7f9', borderRadius: '8px', fontSize: '12px', color: '#5a6b76', lineHeight: 1.6 }}>
+        <strong style={{ color: colors.navy }}>Key:</strong> <strong>vs LHP / vs RHP</strong> — vs left/right-handed pitchers. <strong>Home / Away</strong> — by venue. Each group: <strong>AVG</strong> (average), <strong>AB</strong> (at-bats), <strong>H</strong> (hits), <strong>XBH</strong> (extra-base hits: 2B+3B), <strong>HR</strong> (home runs), <strong>W</strong> (walks). Toggle <strong>Career (2008+)</strong> or <strong>2026 Season</strong> above. Built on pitcher handedness, so switch-hitter platoon numbers resolve correctly. AVG shows when AB &gt; 0. {rows.length} batters on today's slate.
+      </div>
     </div>
   );
 }

@@ -6,6 +6,14 @@ const PROP_LABELS = {
 };
 const propLabel = (p) => PROP_LABELS[p] || p;
 
+// Odds are indicative (~), captured at generation. Best Bets blocks are hits/H+R+RBI only.
+function fmtOdds(o) {
+  if (o === null || o === undefined || o === '') return '—';
+  const n = typeof o === 'number' ? o : parseInt(o, 10);
+  if (Number.isNaN(n)) return '—';
+  return `${n > 0 ? '+' : ''}${n}`;
+}
+
 function fmtConf(c) {
   if (c === null || c === undefined || c === '') return '—';
   const n = typeof c === 'number' ? c : parseFloat(c);
@@ -92,6 +100,7 @@ export default function BestBetsPage() {
     { label: 'Pick', align: 'center', render: (r) => <DirBadge dir={r.dir} /> },
     { label: 'Conf', align: 'right', cellStyle: { fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: colors.navy }, render: (r) => fmtConf(r.conf) },
     { label: 'L10', align: 'right', cellStyle: muted, render: (r) => r.l10 || '—' },
+    { label: 'Odds (~)', align: 'right', cellStyle: { ...muted, fontVariantNumeric: 'tabular-nums' }, render: (r) => fmtOdds(r.odds) },
   ];
 
   const perGameCols = [
@@ -101,6 +110,7 @@ export default function BestBetsPage() {
     { label: 'Prop', align: 'left', cellStyle: muted, render: (r) => propLabel(r.prop) },
     { label: 'Pick', align: 'center', render: (r) => <DirBadge dir={r.dir} /> },
     { label: 'Conf', align: 'right', cellStyle: { fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: colors.navy }, render: (r) => fmtConf(r.conf) },
+    { label: 'Odds (~)', align: 'right', cellStyle: { ...muted, fontVariantNumeric: 'tabular-nums' }, render: (r) => fmtOdds(r.odds) },
   ];
 
   const topHitCols = [
@@ -119,7 +129,7 @@ export default function BestBetsPage() {
       <div style={{ textAlign: 'center', marginBottom: '28px' }}>
         <h1 style={{ color: colors.navy, fontSize: '30px', fontWeight: 800, margin: 0 }}>Best Bets</h1>
         <p style={{ color: '#5a6b76', fontSize: '14px', margin: '6px 0 0' }}>
-          Today's sharpest picks, ranked by model confidence. {niceDate && `Slate: ${niceDate}.`}
+          Today's sharpest Hits and H+R+RBI picks, ranked by model confidence. {niceDate && `Slate: ${niceDate}.`}
         </p>
       </div>
 
@@ -141,6 +151,9 @@ export default function BestBetsPage() {
         columns={topHitCols}
         rows={blocks.top_hit}
       />
+      <div style={{ marginTop: '8px', padding: '12px 14px', background: '#f4f7f9', borderRadius: '8px', fontSize: '12px', color: '#5a6b76', lineHeight: 1.6 }}>
+        <strong style={{ color: colors.navy }}>Key:</strong> <strong>Proj</strong> — model's projected stat value. <strong>Line</strong> — the betting threshold. <strong>Pick</strong> — model's side (Over/Under). <strong>Conf</strong> — confidence score (5.0–9.85). <strong>L10</strong> — hit rate over the player's last 10 games. <strong>Streak</strong> — current games with a hit. <strong>Odds</strong> — American odds; ~ means indicative, captured at generation (lines move by game time). Best Bets show only Hits and H+R+RBI props.
+      </div>
     </div>
   );
 }

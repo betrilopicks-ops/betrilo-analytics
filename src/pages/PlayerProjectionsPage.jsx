@@ -126,7 +126,7 @@ export default function PlayerProjectionsPage() {
     : '';
 
   return (
-    <div style={{ maxWidth: 1200, margin: '0 auto', padding: '24px 16px 60px' }}>
+    <div style={{ maxWidth: 1600, margin: '0 auto', padding: '24px 16px 60px' }}>
       <div style={{ textAlign: 'center', marginBottom: '18px' }}>
         <h1 style={{ color: colors.navy, fontSize: '30px', fontWeight: 800, margin: 0 }}>Player Projections</h1>
         <p style={{ color: '#5a6b76', fontSize: '14px', margin: '6px 0 0' }}>
@@ -160,20 +160,25 @@ export default function PlayerProjectionsPage() {
         <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px', background: '#fff' }}>
           <thead style={{ background: colors.navy }}>
             <tr>
-              {columns.map((col) => (
+              {columns.map((col) => {
+                const sticky = col.key === 'player';
+                return (
                 <th key={col.key} onClick={() => handleSort(col.key, col.type)}
                   style={{ padding: '10px 11px', textAlign: col.align, cursor: 'pointer', userSelect: 'none', whiteSpace: 'nowrap',
                     color: sortBy === col.key ? colors.green : '#fff', fontSize: '11px', fontWeight: 700,
-                    textTransform: 'uppercase', letterSpacing: '0.4px' }}>
+                    textTransform: 'uppercase', letterSpacing: '0.4px',
+                    ...(sticky ? { position: 'sticky', left: 0, zIndex: 3, background: colors.navy } : {}) }}>
                   {col.label}{sortBy === col.key ? (sortOrder === 'asc' ? ' ▲' : ' ▼') : ''}
                 </th>
-              ))}
+              );})}
             </tr>
           </thead>
           <tbody>
-            {filteredRows.map((r, idx) => (
-              <tr key={idx} style={{ borderTop: '1px solid #eef2f5', background: idx % 2 ? '#fafcfd' : '#fff' }}>
-                <td style={{ padding: '9px 11px', textAlign: 'left', fontWeight: 600, color: colors.navy, whiteSpace: 'nowrap' }}>{r.player}</td>
+            {filteredRows.map((r, idx) => {
+              const rowBg = idx % 2 ? '#fafcfd' : '#fff';
+              return (
+              <tr key={idx} style={{ borderTop: '1px solid #eef2f5', background: rowBg }}>
+                <td style={{ padding: '9px 11px', textAlign: 'left', fontWeight: 600, color: colors.navy, whiteSpace: 'nowrap', position: 'sticky', left: 0, zIndex: 1, background: rowBg, borderRight: '2px solid #e3e9ed' }}>{r.player}</td>
                 <td style={{ padding: '9px 11px', textAlign: 'left', color: '#5a6b76' }}>{r.team}</td>
                 {isAllGames && <td style={{ padding: '9px 11px', textAlign: 'left', color: '#5a6b76' }}>{r.matchup}</td>}
                 <td style={{ padding: '9px 11px', textAlign: 'center', fontWeight: 700, color: colors.navy, background: projHitsColor(r.proj_hits) }}>{cellValue(r, 'proj_hits')}</td>
@@ -187,14 +192,14 @@ export default function PlayerProjectionsPage() {
                 <td style={{ padding: '9px 11px', textAlign: 'center', color: '#5a6b76' }}>{cellValue(r, 'vp_xwoba')}</td>
                 <td style={{ padding: '9px 11px', textAlign: 'center' }}>{cellValue(r, 'h_streak')}</td>
               </tr>
-            ))}
+            );})}
           </tbody>
         </table>
         {filteredRows.length === 0 && <div style={{ padding: '24px', textAlign: 'center', color: colors.textMuted }}>No batters match those filters.</div>}
       </div>
-      <p style={{ color: '#8a99a3', fontSize: '12px', marginTop: '10px', textAlign: 'center' }}>
-        {filteredRows.length} batters{isAllGames ? ` across ${games.length} games` : ''}. Green shading marks projected hits ≥ 0.75. "vP" = career vs. today's pitcher.
-      </p>
+      <div style={{ marginTop: '10px', padding: '12px 14px', background: '#f4f7f9', borderRadius: '8px', fontSize: '12px', color: '#5a6b76', lineHeight: 1.6 }}>
+        <strong style={{ color: colors.navy }}>Key:</strong> Model projections for today's slate. <strong>Proj H/HR/R/RBI</strong> — projected hits, home runs, runs, RBIs. <strong>vP AVG/xwOBA</strong> — career performance vs. today's probable pitcher. <strong>H Streak</strong> — current games with a hit. Green shading marks projected hits ≥ 0.75. {filteredRows.length} batters{isAllGames ? ` across ${games.length} games` : ''}.
+      </div>
     </div>
   );
 }

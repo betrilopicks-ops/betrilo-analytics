@@ -4,7 +4,7 @@ import symbol from '../assets/betrilo_symbol.png';
 import { colors } from '../theme';
 
 const navItems = [
-  { to: '/mlb/matchups', label: 'Matchups' },
+  { to: '/mlb/matchups', label: 'Batter vs. Pitcher' },
   { to: '/mlb/player-projections', label: 'Player Projections' },
   { to: '/mlb/batter-splits', label: 'Batter Splits' },
   { to: '/mlb/best-bets', label: 'Best Bets' },
