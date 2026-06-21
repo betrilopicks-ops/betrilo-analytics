@@ -9,6 +9,7 @@ export default function MatchupsPage() {
   const [sortBy, setSortBy] = useState('ab');
   const [sortOrder, setSortOrder] = useState('desc');
   const [dataLoading, setDataLoading] = useState(true);
+  const [dataError, setDataError] = useState(false);
   const [statsMinYear, setStatsMinYear] = useState(null);
 
   useEffect(() => {
@@ -30,6 +31,7 @@ export default function MatchupsPage() {
       })
       .catch(err => {
         console.error('Failed to load games:', err);
+        setDataError(true);
         setDataLoading(false);
       });
   }, []);
@@ -159,11 +161,15 @@ export default function MatchupsPage() {
     <div style={{ padding: '20px', background: '#f9f9f9', minHeight: '100vh' }}>
       {dataLoading ? (
         <div style={{ textAlign: 'center', color: '#666' }}>Loading games...</div>
+      ) : dataError ? (
+        <div style={{ textAlign: 'center', padding: '60px', color: '#666' }}>
+          Matchups unavailable right now. Check back after today's slate posts.
+        </div>
       ) : (
         <>
           {/* Header */}
           <div style={{ marginBottom: '15px' }}>
-            <h2 style={{ margin: '0 0 4px 0' }}>Batter vs Pitcher Matchups</h2>
+            <h2 style={{ margin: '0 0 4px 0' }}>Batter vs. Pitcher</h2>
             {prettyDate && (
               <div style={{ color: '#666', fontSize: '14px' }}>
                 Showing matchups for {prettyDate}
@@ -233,7 +239,7 @@ export default function MatchupsPage() {
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
                 <thead>
                   <tr style={{ background: '#f5f5f5', borderBottom: '2px solid #ddd' }}>
-                    {columns.map((col) => (
+                    {columns.map((col, ci) => (
                       <th
                         key={col.key}
                         onClick={() => handleSort(col.key, col.type)}
@@ -245,6 +251,7 @@ export default function MatchupsPage() {
                           whiteSpace: 'nowrap',
                           background: sortBy === col.key ? '#e6e6e6' : '#f5f5f5',
                           fontWeight: 'bold',
+                          ...(ci === 0 ? { position: 'sticky', left: 0, zIndex: 3 } : {}),
                         }}
                       >
                         {col.label}
@@ -255,8 +262,8 @@ export default function MatchupsPage() {
                 </thead>
                 <tbody>
                   {filteredRows.map((r, idx) => (
-                    <tr key={idx} style={{ borderBottom: '1px solid #eee' }}>
-                      <td style={{ padding: '10px', textAlign: 'left', fontWeight: 'bold' }}>
+                    <tr key={idx} style={{ borderBottom: '1px solid #eee', background: '#fff' }}>
+                      <td style={{ padding: '10px', textAlign: 'left', fontWeight: 'bold', position: 'sticky', left: 0, zIndex: 1, background: '#fff', borderRight: '2px solid #e3e9ed' }}>
                         {r.batter_name}
                         <span style={{ marginLeft: '6px', color: '#666', fontSize: '12px', fontWeight: 'normal' }}>
                           {r.bats ? `(${r.bats}) ` : ''}{r.position}
@@ -288,6 +295,9 @@ export default function MatchupsPage() {
                   No matchups found.
                 </div>
               )}
+              <div style={{ marginTop: '12px', padding: '12px 14px', background: '#f4f7f9', borderRadius: '8px', fontSize: '12px', color: '#5a6b76', lineHeight: 1.6 }}>
+                <strong style={{ color: '#0B2331' }}>Key:</strong> Career batter-vs-pitcher totals against today's probable pitcher. <strong>AB</strong> at-bats, <strong>H</strong> hits, <strong>1B/2B/3B</strong> singles/doubles/triples, <strong>HR</strong> home runs, <strong>BB</strong> walks, <strong>SO</strong> strikeouts, <strong>AVG/OBP/SLG</strong> average / on-base / slugging. Stats cover {statsMinYear || '2021'} to present.
+              </div>
             </div>
           </div>
         </>
