@@ -61,12 +61,17 @@ export default function BatterSplitsPage() {
     if (teamFilter !== 'all') r = r.filter((p) => p.team === teamFilter);
     if (search.trim()) {
       const q = search.trim().toLowerCase();
-      r = r.filter((p) => p.player.toLowerCase().includes(q));
+      r = r.filter((p) => p.player.toLowerCase().includes(q)
+        || (p.vs_pitcher || '').toLowerCase().includes(q));
     }
     if (minAb > 0) r = r.filter((p) => frameTotalAb(p) >= minAb);
     r.sort((a, b) => {
       if (sortKey === 'player') {
         return sortDir === 'asc' ? a.player.localeCompare(b.player) : b.player.localeCompare(a.player);
+      }
+      if (sortKey === 'vs_pitcher') {
+        const ap = a.vs_pitcher || '', bp = b.vs_pitcher || '';
+        return sortDir === 'asc' ? ap.localeCompare(bp) : bp.localeCompare(ap);
       }
       const av = getVal(a, sortKey), bv = getVal(b, sortKey);
       const an = av === null || av === undefined ? -Infinity : av;
@@ -127,7 +132,7 @@ export default function BatterSplitsPage() {
           <option value="all">All Teams</option>
           {teams.map((t) => <option key={t} value={t}>{t}</option>)}
         </select>
-        <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search player"
+        <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search player or pitcher"
           style={{ padding: '7px 12px', borderRadius: '6px', border: '1px solid #cdd8e0', fontSize: '13px', minWidth: '160px' }} />
         <label style={{ fontSize: '13px', color: '#5a6b76', display: 'flex', alignItems: 'center', gap: '8px' }}>
           Min AB ({frame === 'career' ? 'career' : '2026'}):
@@ -150,6 +155,13 @@ export default function BatterSplitsPage() {
                   color: sortKey === 'player' ? colors.green : '#fff', fontSize: '11px', fontWeight: 700,
                   position: 'sticky', left: 0, zIndex: 3, background: colors.navy }}>
                 Player{sortKey === 'player' ? (sortDir === 'asc' ? ' ▲' : ' ▼') : ''}
+              </th>
+              <th rowSpan={2} onClick={() => setSort('vs_pitcher')}
+                style={{ textAlign: 'left', padding: '8px 12px', cursor: 'pointer', verticalAlign: 'bottom',
+                  whiteSpace: 'nowrap',
+                  color: sortKey === 'vs_pitcher' ? colors.green : '#fff', fontSize: '11px', fontWeight: 700,
+                  borderRight: '2px solid rgba(255,255,255,0.30)' }}>
+                vs Pitcher{sortKey === 'vs_pitcher' ? (sortDir === 'asc' ? ' ▲' : ' ▼') : ''}
               </th>
               {CUTS.map((c, i) => (
                 <th key={c.key} colSpan={6}
@@ -180,7 +192,12 @@ export default function BatterSplitsPage() {
               return (
                 <tr key={idx} style={{ borderTop: '1px solid #eef2f5', background: rowBg }}>
                   <td style={{ padding: '8px 12px', textAlign: 'left', fontWeight: 600, color: colors.navy, whiteSpace: 'nowrap',
-                    position: 'sticky', left: 0, zIndex: 1, background: rowBg, borderRight: '2px solid #e3e9ed' }}>{p.player}</td>
+                    position: 'sticky', left: 0, zIndex: 1, background: rowBg, borderRight: '2px solid #e3e9ed' }}>
+                    {p.player}
+                    {p.bats ? <span style={{ marginLeft: '5px', color: '#8a99a3', fontWeight: 500, fontSize: '12px' }}>({p.bats})</span> : null}
+                  </td>
+                  <td style={{ padding: '8px 12px', textAlign: 'left', color: '#5a6b76', whiteSpace: 'nowrap',
+                    borderRight: '2px solid #e3e9ed' }}>{p.vs_pitcher || '—'}</td>
                   {CUTS.map((c, ci) => {
                     const cut = f[c.key] || {};
                     return (
@@ -202,7 +219,7 @@ export default function BatterSplitsPage() {
         {rows.length === 0 && <div style={{ padding: '24px', textAlign: 'center', color: colors.textMuted }}>No batters match those filters.</div>}
       </div>
       <div style={{ marginTop: '12px', padding: '12px 14px', background: '#f4f7f9', borderRadius: '8px', fontSize: '12px', color: '#5a6b76', lineHeight: 1.6 }}>
-        <strong style={{ color: colors.navy }}>Key:</strong> <strong>vs LHP / vs RHP</strong> — vs left/right-handed pitchers. <strong>Home / Away</strong> — by venue. Each group: <strong>AVG</strong> (average), <strong>AB</strong> (at-bats), <strong>H</strong> (hits), <strong>XBH</strong> (extra-base hits: 2B+3B), <strong>HR</strong> (home runs), <strong>W</strong> (walks). Toggle <strong>Career (2008+)</strong> or <strong>2026 Season</strong> above. Built on pitcher handedness, so switch-hitter platoon numbers resolve correctly. AVG shows when AB &gt; 0. {rows.length} batters on today's slate.
+        <strong style={{ color: colors.navy }}>Key:</strong> <strong>vs LHP / vs RHP</strong> — vs left/right-handed pitchers. <strong>vs Pitcher</strong> — today’s opposing probable starter and throwing hand (RHP/LHP). <strong>Home / Away</strong> — by venue. Each group: <strong>AVG</strong> (average), <strong>AB</strong> (at-bats), <strong>H</strong> (hits), <strong>XBH</strong> (extra-base hits: 2B+3B), <strong>HR</strong> (home runs), <strong>W</strong> (walks). Toggle <strong>Career (2008+)</strong> or <strong>2026 Season</strong> above. Built on pitcher handedness, so switch-hitter platoon numbers resolve correctly. AVG shows when AB &gt; 0. {rows.length} batters on today's slate.
       </div>
     </div>
   );
