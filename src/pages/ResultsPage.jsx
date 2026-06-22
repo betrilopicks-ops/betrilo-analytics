@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { colors } from '../theme';
 
 function pct(x) { return x === null || x === undefined ? '—' : `${(x * 100).toFixed(1)}%`; }
@@ -37,6 +37,7 @@ const thStyle = {
 };
 
 export default function ResultsPage() {
+  const [searchParams] = useSearchParams();
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -47,7 +48,10 @@ export default function ResultsPage() {
       .then((r) => { if (!r.ok) throw new Error('fetch failed'); return r.json(); })
       .then((d) => {
         setData(d);
-        if (d.available_dates && d.available_dates.length > 0) {
+        const urlDate = searchParams.get('date');
+        if (urlDate && d.available_dates.includes(urlDate)) {
+          setSelectedDate(urlDate);
+        } else if (d.available_dates && d.available_dates.length > 0) {
           setSelectedDate(d.available_dates[d.available_dates.length - 1]);
         }
         setLoading(false);
