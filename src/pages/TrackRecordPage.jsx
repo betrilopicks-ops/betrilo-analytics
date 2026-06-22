@@ -129,7 +129,7 @@ export default function TrackRecordPage() {
       </div>
       {/* Hero disclaimer (Edit 2) */}
       <p style={{ textAlign: 'center', color: '#8a99a3', fontSize: '12px', margin: '0 0 28px' }}>
-        Hit rate on the picks we actually post — not profit. Five categories tracked; <a href="#methodology" style={{ color: '#8a99a3' }}>full breakdown below</a>.
+        Hit rate on the picks we actually post — not profit. Four categories tracked; <a href="#methodology" style={{ color: '#8a99a3' }}>full breakdown below</a>.
       </p>
 
       {/* Trend */}
@@ -187,14 +187,15 @@ export default function TrackRecordPage() {
           </p>
           <h3 style={{ color: colors.navy, fontSize: '15px', fontWeight: 700, margin: '0 0 6px' }}>What's counted</h3>
           <p style={{ margin: '0 0 18px' }}>
-            Five published pick categories are tracked: Hits, H+R+RBI, Walks, Team Hits, and Parlays.
+            Four published pick categories are tracked: Hits, H+R+RBI, Walks, and Team Hits.
             Every pick in these categories is counted — wins and losses both.
           </p>
           <h3 style={{ color: colors.navy, fontSize: '15px', fontWeight: 700, margin: '0 0 6px' }}>What's excluded</h3>
           <ul style={{ margin: '0', paddingLeft: '20px' }}>
             <li style={{ marginBottom: '6px' }}><strong>Strikeouts</strong> — watch-list only, never scored.</li>
             <li style={{ marginBottom: '6px' }}><strong>Home Runs (HR Watch)</strong> — still published, but not part of the graded record (entertainment/watch feature, not a scored pick).</li>
-            <li><strong>Game Lines (ML / O-U)</strong> — retired; no longer published.</li>
+            <li style={{ marginBottom: '6px' }}><strong>Game Lines (ML / O-U)</strong> — retired; no longer published.</li>
+            <li><strong>Parlay Builder</strong> — a menu card whose picks duplicate the individual categories above; excluded to avoid double-counting.</li>
           </ul>
         </div>
       </section>
