@@ -51,6 +51,23 @@ export default function TrackRecordPage() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [showReveal, setShowReveal] = useState(() => {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        return localStorage.getItem('betrilo_rebase_reveal_dismissed_v1') !== '1';
+      }
+    } catch (_) { /* storage unavailable — default to showing */ }
+    return true;
+  });
+
+  const dismissReveal = () => {
+    setShowReveal(false);
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        localStorage.setItem('betrilo_rebase_reveal_dismissed_v1', '1');
+      }
+    } catch (_) { /* storage unavailable — dismiss for this session only */ }
+  };
 
   useEffect(() => {
     fetch('/data/track_record_latest.json')
@@ -61,7 +78,7 @@ export default function TrackRecordPage() {
 
   const verified = !!(data && data.verified);
 
-  if (loading) return <div style={{ textAlign: 'center', padding: '60px', color: colors.textMuted }}>Loading track record…</div>;
+  if (loading) return <div style={{ textAlign: 'center', padding: '60px', color: colors.textMuted }}>Loading track record...</div>;
   if (error || !data) return (
     <div style={{ textAlign: 'center', padding: '60px', color: colors.textMuted }}>
       Track record unavailable right now. Check back shortly.
@@ -73,11 +90,29 @@ export default function TrackRecordPage() {
 
   return (
     <div style={{ maxWidth: 880, margin: '0 auto', padding: '24px 16px 60px' }}>
+      {/* Rebase-reveal banner (Edit 6) */}
+      {showReveal && (
+        <div style={{ background: '#f0f6fa', border: '1px solid #d4e1ea', borderRadius: '10px',
+          padding: '14px 16px', margin: '0 0 16px', position: 'relative', fontSize: '13px',
+          color: '#3a5060', lineHeight: 1.55 }}>
+          <button onClick={dismissReveal} style={{ position: 'absolute', top: '8px',
+            right: '10px', background: 'none', border: 'none', cursor: 'pointer', fontSize: '18px',
+            color: '#8a99a3', lineHeight: 1 }} aria-label="Dismiss">x</button>
+          <strong>Source correction (June 2026):</strong> We updated our Track Record to count
+          only the picks we actually publish — the cards you see on Instagram every day.
+          Previously the record included our full internal edge list, which contains picks in
+          directions and at volumes that never made it onto a card. The correction raised the
+          headline from ~64% to ~67% because published cards are a curated subset. This is a
+          measurement change, not a model improvement.
+        </div>
+      )}
+
+      {/* Badge (Edit 1) */}
       <div style={{ textAlign: 'center', marginBottom: '8px' }}>
         <span style={{ display: 'inline-block', background: verified ? colors.green : colors.navyLight,
           color: verified ? colors.navy : colors.green, fontSize: '11px', fontWeight: 700,
           letterSpacing: '1.5px', textTransform: 'uppercase', padding: '5px 13px', borderRadius: '999px' }}>
-          {verified ? 'Verified Track Record' : 'Validation in Progress'}
+          {verified ? 'Publicly Tracked Record' : 'Validation in Progress'}
         </span>
       </div>
 
@@ -87,12 +122,14 @@ export default function TrackRecordPage() {
         <div style={{ color: '#fff', fontSize: '15px', fontWeight: 600, marginTop: '8px' }}>
           Overall hit rate
         </div>
+        {/* Date line (Edit 3) */}
         <div style={{ color: colors.textMuted, fontSize: '13px', marginTop: '4px' }}>
-          {o.hits?.toLocaleString()} of {o.scored?.toLocaleString()} graded picks · {niceDate(w.start)} – {niceDate(w.end)}
+          {o.hits?.toLocaleString()} of {o.scored?.toLocaleString()} graded picks · {niceDate(w.start)} – {niceDate(w.end)} · updated daily
         </div>
       </div>
+      {/* Hero disclaimer (Edit 2) */}
       <p style={{ textAlign: 'center', color: '#8a99a3', fontSize: '12px', margin: '0 0 28px' }}>
-        Every pick is graded against the closing line and counted — wins and losses both. Discontinued prop types are excluded.
+        Hit rate on the picks we actually post — not profit. Five categories tracked; <a href="#methodology" style={{ color: '#8a99a3' }}>full breakdown below</a>.
       </p>
 
       {/* Trend */}
@@ -107,8 +144,8 @@ export default function TrackRecordPage() {
         </p>
       </section>
 
-      {/* Per-prop */}
-      <section>
+      {/* Per-prop (Edit 5 — table handles N rows natively via .map()) */}
+      <section style={{ marginBottom: '30px' }}>
         <h2 style={{ color: colors.navy, fontSize: '18px', fontWeight: 800, margin: '0 0 10px' }}>By prop type</h2>
         <div style={{ overflowX: 'auto', borderRadius: '10px', boxShadow: '0 1px 4px rgba(0,0,0,0.08)' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px', background: '#fff' }}>
@@ -131,6 +168,34 @@ export default function TrackRecordPage() {
               ))}
             </tbody>
           </table>
+        </div>
+      </section>
+
+      {/* Methodology (Edit 4) */}
+      <section id="methodology">
+        <h2 style={{ color: colors.navy, fontSize: '18px', fontWeight: 800, margin: '0 0 10px' }}>Methodology</h2>
+        <div style={{ background: '#fff', borderRadius: '10px', padding: '20px', boxShadow: '0 1px 4px rgba(0,0,0,0.08)', fontSize: '14px', color: '#3a5060', lineHeight: 1.65 }}>
+          <h3 style={{ color: colors.navy, fontSize: '15px', fontWeight: 700, margin: '0 0 6px' }}>How picks are graded</h3>
+          <p style={{ margin: '0 0 14px' }}>
+            Every pick is graded against its published line and direction — a "hit" means the actual
+            stat beat the line in the called direction. Pushes (actual equals the line) and DNPs
+            (player did not play) are excluded from the count.
+          </p>
+          <p style={{ margin: '0 0 18px' }}>
+            Hit rate measures directional accuracy only. It does not reflect betting profit or ROI,
+            which depend on odds and stake sizing.
+          </p>
+          <h3 style={{ color: colors.navy, fontSize: '15px', fontWeight: 700, margin: '0 0 6px' }}>What's counted</h3>
+          <p style={{ margin: '0 0 18px' }}>
+            Five published pick categories are tracked: Hits, H+R+RBI, Walks, Team Hits, and Parlays.
+            Every pick in these categories is counted — wins and losses both.
+          </p>
+          <h3 style={{ color: colors.navy, fontSize: '15px', fontWeight: 700, margin: '0 0 6px' }}>What's excluded</h3>
+          <ul style={{ margin: '0', paddingLeft: '20px' }}>
+            <li style={{ marginBottom: '6px' }}><strong>Strikeouts</strong> — watch-list only, never scored.</li>
+            <li style={{ marginBottom: '6px' }}><strong>Home Runs (HR Watch)</strong> — still published, but not part of the graded record (entertainment/watch feature, not a scored pick).</li>
+            <li><strong>Game Lines (ML / O-U)</strong> — retired; no longer published.</li>
+          </ul>
         </div>
       </section>
     </div>
