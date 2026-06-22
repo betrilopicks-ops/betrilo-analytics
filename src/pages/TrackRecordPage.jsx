@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { colors } from '../theme';
 
 function pct(x) { return x === null || x === undefined ? '—' : `${(x * 100).toFixed(1)}%`; }
@@ -7,43 +8,170 @@ function niceDate(s) {
   return new Date(s + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 }
 
-function TrendChart({ daily, baselineDate }) {
-  // Simple responsive SVG line of daily rate over time, with a baseline at 50%.
-  const W = 720, H = 200, pad = { l: 36, r: 12, t: 14, b: 22 };
-  const pts = daily.filter((d) => d.scored > 0);
-  if (pts.length < 2) return null;
-  const xs = (i) => pad.l + (i / (pts.length - 1)) * (W - pad.l - pad.r);
-  const lo = 0.3, hi = 0.85; // fixed y window so the slow start is visible without flattening
-  const ys = (r) => pad.t + (1 - (r - lo) / (hi - lo)) * (H - pad.t - pad.b);
-  const path = pts.map((d, i) => `${i === 0 ? 'M' : 'L'}${xs(i).toFixed(1)},${ys(d.rate).toFixed(1)}`).join(' ');
-  const gline = (r) => ys(r);
+// Color for a day cell based on rate (0–1). Green for high, muted for low, navy base.
+function cellColor(rate) {
+  if (rate >= 0.75) return { bg: colors.green, text: colors.navy };
+  if (rate >= 0.65) return { bg: '#1a8a3a', text: '#fff' };
+  if (rate >= 0.55) return { bg: colors.navyLight, text: colors.green };
+  if (rate >= 0.45) return { bg: colors.navyLight, text: '#9fb3c0' };
+  return { bg: '#1a2a38', text: '#c0392b' };
+}
 
-  // Subtle model-baseline marker: vertical line at the first point on/after the baseline date.
-  let markerX = null;
-  if (baselineDate) {
-    const idx = pts.findIndex((d) => d.date >= baselineDate);
-    // Only draw if the baseline falls within the plotted range (i.e. there are points at/after it).
-    if (idx > 0) markerX = xs(idx);
+const MONTH_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const DAY_LABELS = ['S','M','T','W','T','F','S'];
+
+function CalendarHeatGrid({ daily }) {
+  const byDate = useMemo(() => {
+    const m = {};
+    for (const d of daily) m[d.date] = d;
+    return m;
+  }, [daily]);
+
+  // Determine available month range
+  const dates = daily.map(d => d.date).sort();
+  const firstDate = dates[0] ? new Date(dates[0] + 'T12:00:00') : new Date();
+  const lastDate = dates.length ? new Date(dates[dates.length - 1] + 'T12:00:00') : new Date();
+  const firstIso = dates[0] || '';
+  const lastIso = dates[dates.length - 1] || '';
+  const minMonth = firstDate.getFullYear() * 12 + firstDate.getMonth();
+  const maxMonth = lastDate.getFullYear() * 12 + lastDate.getMonth();
+
+  // Detect multi-day gaps (≥3 consecutive no-data days within the record window) as ASB
+  const breakDates = useMemo(() => {
+    const dateSet = new Set(dates);
+    const breaks = new Set();
+    if (!firstIso || !lastIso) return breaks;
+    const cur = new Date(firstIso + 'T12:00:00');
+    const end = new Date(lastIso + 'T12:00:00');
+    let gap = [];
+    const flush = () => {
+      if (gap.length >= 3) gap.forEach(d => breaks.add(d));
+      gap = [];
+    };
+    while (cur <= end) {
+      const iso = cur.toISOString().slice(0, 10);
+      if (!dateSet.has(iso)) {
+        gap.push(iso);
+      } else {
+        flush();
+      }
+      cur.setDate(cur.getDate() + 1);
+    }
+    flush();
+    return breaks;
+  }, [dates, firstIso, lastIso]);
+
+  const [viewMonth, setViewMonth] = useState(maxMonth);
+  const year = Math.floor(viewMonth / 12);
+  const month = viewMonth % 12;
+
+  // Build the grid: first day of month, pad to Sunday start
+  const firstOfMonth = new Date(year, month, 1);
+  const startDow = firstOfMonth.getDay(); // 0=Sun
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+  const cells = [];
+  // Leading blanks
+  for (let i = 0; i < startDow; i++) cells.push(null);
+  // Days
+  for (let d = 1; d <= daysInMonth; d++) {
+    const iso = `${year}-${String(month + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+    const dayData = byDate[iso] || null;
+    cells.push({ day: d, iso, data: dayData });
   }
 
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} style={{ width: '100%', height: 'auto', display: 'block' }} role="img" aria-label="Daily hit rate over time">
-      {[0.4, 0.5, 0.6, 0.7, 0.8].map((r) => (
-        <g key={r}>
-          <line x1={pad.l} y1={gline(r)} x2={W - pad.r} y2={gline(r)} stroke={r === 0.5 ? '#cbd5dd' : '#eef2f5'} strokeWidth={r === 0.5 ? 1.5 : 1} strokeDasharray={r === 0.5 ? '4 3' : ''} />
-          <text x={pad.l - 6} y={gline(r) + 3} textAnchor="end" fontSize="10" fill="#9fb3c0">{Math.round(r * 100)}%</text>
-        </g>
-      ))}
-      {markerX !== null && (
-        <g>
-          <line x1={markerX} y1={pad.t} x2={markerX} y2={H - pad.b} stroke={colors.navy} strokeWidth="1" strokeDasharray="3 3" opacity="0.5" />
-          <text x={markerX} y={pad.t - 3} textAnchor="middle" fontSize="9" fill={colors.navy} opacity="0.7">model update</text>
-        </g>
-      )}
-      <path d={path} fill="none" stroke={colors.green} strokeWidth="2" strokeLinejoin="round" />
-      <text x={pad.l} y={H - 6} fontSize="10" fill="#9fb3c0">{niceDate(pts[0].date)}</text>
-      <text x={W - pad.r} y={H - 6} textAnchor="end" fontSize="10" fill="#9fb3c0">{niceDate(pts[pts.length - 1].date)}</text>
-    </svg>
+    <div>
+      {/* Month nav */}
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
+        <button onClick={() => setViewMonth(Math.max(minMonth, viewMonth - 1))} disabled={viewMonth <= minMonth}
+          style={{ background: viewMonth > minMonth ? colors.navy : '#d4e1ea', color: viewMonth > minMonth ? '#fff' : '#8a99a3',
+            border: 'none', borderRadius: '6px', padding: '6px 12px', fontWeight: 700, fontSize: '13px',
+            cursor: viewMonth > minMonth ? 'pointer' : 'default' }}>
+          Prev
+        </button>
+        <span style={{ color: colors.navy, fontSize: '16px', fontWeight: 800 }}>
+          {MONTH_NAMES[month]} {year}
+        </span>
+        <button onClick={() => setViewMonth(Math.min(maxMonth, viewMonth + 1))} disabled={viewMonth >= maxMonth}
+          style={{ background: viewMonth < maxMonth ? colors.navy : '#d4e1ea', color: viewMonth < maxMonth ? '#fff' : '#8a99a3',
+            border: 'none', borderRadius: '6px', padding: '6px 12px', fontWeight: 700, fontSize: '13px',
+            cursor: viewMonth < maxMonth ? 'pointer' : 'default' }}>
+          Next
+        </button>
+      </div>
+
+      {/* Day-of-week headers */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', gap: '3px', marginBottom: '3px' }}>
+        {DAY_LABELS.map((l, i) => (
+          <div key={i} style={{ textAlign: 'center', fontSize: '11px', fontWeight: 700, color: '#8a99a3', padding: '4px 0' }}>
+            {l}
+          </div>
+        ))}
+      </div>
+
+      {/* Calendar grid */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', gap: '3px' }}>
+        {cells.map((cell, i) => {
+          if (!cell) return <div key={`blank-${i}`} />;
+          const { day, iso, data } = cell;
+          const hasData = data && data.scored > 0;
+          const isPast = iso <= lastIso;
+          const inWindow = iso >= firstIso && isPast;
+          const isBreak = breakDates.has(iso);
+          const isGap = inWindow && !hasData && !isBreak; // single-day gap like 4/2
+
+          const cellBase = { borderRadius: '6px', padding: '8px 2px',
+            textAlign: 'center', aspectRatio: '1', display: 'flex', flexDirection: 'column',
+            justifyContent: 'center', alignItems: 'center', minHeight: '0' };
+
+          // State 1: Data day — colored, clickable
+          if (hasData) {
+            const rate = data.rate;
+            const c = cellColor(rate);
+            return (
+              <Link key={iso} to={`/mlb/results?date=${iso}`} style={{ textDecoration: 'none' }}>
+                <div style={{ ...cellBase, background: c.bg, cursor: 'pointer' }}>
+                  <span style={{ fontSize: 'clamp(9px, 2vw, 11px)', color: c.text, opacity: 0.7, lineHeight: 1 }}>{day}</span>
+                  <span style={{ fontSize: 'clamp(10px, 2.5vw, 14px)', color: c.text, fontWeight: 800, lineHeight: 1.3, whiteSpace: 'nowrap' }}>
+                    {pct(rate)}
+                  </span>
+                </div>
+              </Link>
+            );
+          }
+
+          // State 4: All-Star Break — labeled, non-clickable
+          if (isBreak) {
+            return (
+              <div key={iso} style={{ ...cellBase, background: '#e8f0e8', border: '1px solid #d0ddd0' }} title="All-Star Break — no games">
+                <span style={{ fontSize: 'clamp(9px, 2vw, 11px)', color: '#8a99a3', opacity: 0.7, lineHeight: 1 }}>{day}</span>
+                <span style={{ fontSize: 'clamp(9px, 2vw, 11px)', color: '#5a8a6a', fontWeight: 700, lineHeight: 1.3 }}>
+                  ASB
+                </span>
+              </div>
+            );
+          }
+
+          // State 3: Past gap (e.g. 4/2) — light with dash marker, non-clickable
+          if (isGap) {
+            return (
+              <div key={iso} style={{ ...cellBase, background: '#eef2f5', border: '1px solid #d4e1ea' }}>
+                <span style={{ fontSize: 'clamp(10px, 2.5vw, 13px)', color: '#8a99a3', fontWeight: 600 }}>{day}</span>
+                <span style={{ fontSize: 'clamp(9px, 2vw, 11px)', color: '#b0bec5' }}>—</span>
+              </div>
+            );
+          }
+
+          // State 2: Future / outside window — light neutral, non-clickable
+          return (
+            <div key={iso} style={{ ...cellBase, background: '#f5f7f9', border: '1px solid #e8eef2' }}>
+              <span style={{ fontSize: 'clamp(10px, 2.5vw, 13px)', color: '#c0cdd6', fontWeight: 600 }}>{day}</span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 
@@ -132,14 +260,14 @@ export default function TrackRecordPage() {
         Hit rate on the picks we actually post — not profit. Four categories tracked; <a href="#methodology" style={{ color: '#8a99a3' }}>full breakdown below</a>.
       </p>
 
-      {/* Trend */}
+      {/* Calendar heat grid — replaces TrendChart */}
       <section style={{ marginBottom: '30px' }}>
-        <h2 style={{ color: colors.navy, fontSize: '18px', fontWeight: 800, margin: '0 0 10px' }}>Daily hit rate over time</h2>
-        <div style={{ background: '#fff', borderRadius: '10px', padding: '12px', boxShadow: '0 1px 4px rgba(0,0,0,0.08)' }}>
-          <TrendChart daily={data.daily || []} baselineDate={data.model_baseline?.date} />
+        <h2 style={{ color: colors.navy, fontSize: '18px', fontWeight: 800, margin: '0 0 10px' }}>Daily results</h2>
+        <div style={{ background: '#fff', borderRadius: '10px', padding: '14px', boxShadow: '0 1px 4px rgba(0,0,0,0.08)' }}>
+          <CalendarHeatGrid daily={data.daily || []} />
         </div>
         <p style={{ color: '#8a99a3', fontSize: '12px', margin: '8px 0 0' }}>
-          Each point is one day's hit rate. The dashed line marks 50% (coin-flip). The early-season climb reflects the model calibrating over its first weeks.
+          Click any day to see that date's full pick-by-pick results. Brighter green = higher hit rate.
           {data.model_baseline?.note && <><br />{data.model_baseline.note}</>}
         </p>
       </section>
