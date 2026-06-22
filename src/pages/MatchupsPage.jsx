@@ -45,26 +45,56 @@ export default function MatchupsPage() {
       const rows = [];
       gameList.forEach((game) => {
         const matchup = `${game.away_team} @ ${game.home_team}`;
-        (game.home_batters || []).forEach((b) => {
+        const homeBatters = game.home_batters || [];
+        const awayBatters = game.away_batters || [];
+        const awayPName = pitcherName(game.away_pitcher);
+        const homePName = pitcherName(game.home_pitcher);
+
+        if (homeBatters.length > 0) {
+          homeBatters.forEach((b) => {
+            rows.push({
+              ...b,
+              matchup,
+              batter_team: game.home_team,
+              pitcher_team: game.away_team,
+              pitcher_name: awayPName,
+              pitcher_throws: game.away_pitcher?.throws || '',
+            });
+          });
+        } else if (awayPName && awayPName !== 'TBD') {
           rows.push({
-            ...b,
+            _empty: true,
+            _emptyMsg: `No career BvP history — ${awayPName} has not faced ${game.home_team} batters`,
             matchup,
             batter_team: game.home_team,
             pitcher_team: game.away_team,
-            pitcher_name: pitcherName(game.away_pitcher),
+            pitcher_name: awayPName,
             pitcher_throws: game.away_pitcher?.throws || '',
           });
-        });
-        (game.away_batters || []).forEach((b) => {
+        }
+
+        if (awayBatters.length > 0) {
+          awayBatters.forEach((b) => {
+            rows.push({
+              ...b,
+              matchup,
+              batter_team: game.away_team,
+              pitcher_team: game.home_team,
+              pitcher_name: homePName,
+              pitcher_throws: game.home_pitcher?.throws || '',
+            });
+          });
+        } else if (homePName && homePName !== 'TBD') {
           rows.push({
-            ...b,
+            _empty: true,
+            _emptyMsg: `No career BvP history — ${homePName} has not faced ${game.away_team} batters`,
             matchup,
             batter_team: game.away_team,
             pitcher_team: game.home_team,
-            pitcher_name: pitcherName(game.home_pitcher),
+            pitcher_name: homePName,
             pitcher_throws: game.home_pitcher?.throws || '',
           });
-        });
+        }
       });
       return rows;
     };
@@ -268,6 +298,14 @@ export default function MatchupsPage() {
                 </thead>
                 <tbody>
                   {filteredRows.map((r, idx) => (
+                    r._empty ? (
+                    <tr key={idx} style={{ borderBottom: '1px solid #eee', background: '#fafafa' }}>
+                      <td colSpan={columns.length} style={{ padding: '12px 16px', textAlign: 'center',
+                        color: '#8a99a3', fontSize: '13px', fontStyle: 'italic' }}>
+                        {r._emptyMsg}
+                      </td>
+                    </tr>
+                    ) : (
                     <tr key={idx} style={{ borderBottom: '1px solid #eee', background: '#fff' }}>
                       <td style={{ padding: '10px', textAlign: 'center', fontWeight: 700, fontSize: '13px', color: '#0B2331', position: 'sticky', left: 0, zIndex: 1, background: '#fff' }}>
                         {r.batter_team}
@@ -299,6 +337,7 @@ export default function MatchupsPage() {
                       <td style={{ padding: '10px', textAlign: 'center' }}>{fmt3(r.obp)}</td>
                       <td style={{ padding: '10px', textAlign: 'center' }}>{fmt3(r.slg)}</td>
                     </tr>
+                    )
                   ))}
                 </tbody>
               </table>
