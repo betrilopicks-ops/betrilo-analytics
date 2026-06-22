@@ -38,6 +38,7 @@ const thStyle = {
 
 export default function ResultsPage() {
   const [searchParams] = useSearchParams();
+  const dateParam = searchParams.get('date');
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -48,16 +49,15 @@ export default function ResultsPage() {
       .then((r) => { if (!r.ok) throw new Error('fetch failed'); return r.json(); })
       .then((d) => {
         setData(d);
-        const urlDate = searchParams.get('date');
-        if (urlDate && d.available_dates.includes(urlDate)) {
-          setSelectedDate(urlDate);
+        if (dateParam && d.available_dates.includes(dateParam)) {
+          setSelectedDate(dateParam);
         } else if (d.available_dates && d.available_dates.length > 0) {
           setSelectedDate(d.available_dates[d.available_dates.length - 1]);
         }
         setLoading(false);
       })
       .catch(() => { setError(true); setLoading(false); });
-  }, []);
+  }, [dateParam]);
 
   const daysByDate = useMemo(() => {
     if (!data) return {};
