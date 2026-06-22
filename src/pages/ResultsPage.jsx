@@ -7,6 +7,10 @@ function niceDate(s) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(s || '')) return s || '';
   return new Date(s + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 }
+function fmtNum(x) {
+  if (x === null || x === undefined) return '—';
+  return Number.isInteger(x) ? String(x) : x.toFixed(2);
+}
 
 const resultBadge = (result) => {
   const base = { display: 'inline-block', padding: '3px 10px', borderRadius: '4px',
@@ -19,8 +23,16 @@ const resultBadge = (result) => {
   }
 };
 
+// Block display labels
+const BLOCK_LABELS = {
+  "hit_proj": "Hits",
+  "walk_props": "Walks",
+  "combo": "H+R+RBI",
+  "team_hits": "Hit Leaders by Team",
+};
+
 const thStyle = {
-  textAlign: 'left', padding: '10px 10px', color: '#fff', fontSize: '12px',
+  padding: '10px 10px', color: '#fff', fontSize: '12px',
   fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px',
 };
 
@@ -101,7 +113,7 @@ export default function ResultsPage() {
       ) : (
         <>
           {/* Day record header */}
-          <div style={{ textAlign: 'center', background: colors.navy, borderRadius: '14px', padding: '20px', marginBottom: '20px' }}>
+          <div style={{ textAlign: 'center', background: colors.navy, borderRadius: '14px', padding: '20px', marginBottom: '12px' }}>
             <div style={{ color: colors.green, fontSize: '42px', fontWeight: 800, lineHeight: 1 }}>{pct(day.rate)}</div>
             <div style={{ color: '#fff', fontSize: '14px', fontWeight: 600, marginTop: '6px' }}>
               {day.hits} hits, {day.scored - day.hits} misses ({day.scored} graded)
@@ -112,13 +124,34 @@ export default function ResultsPage() {
             </div>
           </div>
 
+          {/* Jump buttons */}
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', flexWrap: 'wrap', marginBottom: '20px' }}>
+            {(day.blocks || []).map((block) => (
+              <a key={block.card_type} href={`#block-${block.card_type}`}
+                style={{ background: '#f0f6fa', border: '1px solid #d4e1ea', borderRadius: '6px',
+                  padding: '6px 12px', fontSize: '12px', fontWeight: 600, color: colors.navy,
+                  textDecoration: 'none', whiteSpace: 'nowrap' }}>
+                {BLOCK_LABELS[block.card_type] || block.type} {block.hits}/{block.scored} · {pct(block.rate)}
+              </a>
+            ))}
+          </div>
+
           {/* Per-type blocks */}
           {(day.blocks || []).map((block) => (
-            <section key={block.card_type} style={{ marginBottom: '20px' }}>
+            <section key={block.card_type} id={`block-${block.card_type}`} style={{ marginBottom: '20px' }}>
               {/* Block header */}
               <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between',
                 padding: '10px 12px', background: colors.navyLight, borderRadius: '10px 10px 0 0' }}>
-                <span style={{ color: '#fff', fontSize: '15px', fontWeight: 700 }}>{block.type}</span>
+                <div>
+                  <span style={{ color: '#fff', fontSize: '15px', fontWeight: 700 }}>
+                    {BLOCK_LABELS[block.card_type] || block.type}
+                  </span>
+                  {block.direction && (
+                    <span style={{ color: colors.textMuted, fontSize: '12px', marginLeft: '8px' }}>
+                      {block.direction}
+                    </span>
+                  )}
+                </div>
                 <span style={{ color: colors.textMuted, fontSize: '13px' }}>
                   {block.hits}/{block.scored} · {pct(block.rate)}
                   {block.not_counted > 0 && <span style={{ opacity: 0.7 }}> ({block.not_counted} not counted)</span>}
@@ -130,10 +163,10 @@ export default function ResultsPage() {
                 <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px', background: '#fff' }}>
                   <thead style={{ background: colors.navy }}>
                     <tr>
-                      <th style={thStyle}>Player</th>
-                      <th style={thStyle}>Matchup</th>
-                      <th style={{ ...thStyle, textAlign: 'center' }}>Line</th>
-                      <th style={{ ...thStyle, textAlign: 'center' }}>Actual</th>
+                      <th style={{ ...thStyle, textAlign: 'left' }}>Player</th>
+                      <th style={{ ...thStyle, textAlign: 'left' }}>Matchup</th>
+                      <th style={{ ...thStyle, textAlign: 'right' }}>Projected</th>
+                      <th style={{ ...thStyle, textAlign: 'right' }}>Actual</th>
                       <th style={{ ...thStyle, textAlign: 'center' }}>Result</th>
                     </tr>
                   </thead>
@@ -144,13 +177,13 @@ export default function ResultsPage() {
                         <td style={{ padding: '8px 10px', fontWeight: 600, color: colors.navy, fontSize: '13px' }}>
                           {p.player}
                         </td>
-                        <td style={{ padding: '8px 10px', fontSize: '12px', color: '#5a6b76' }}>
+                        <td style={{ padding: '8px 10px', fontSize: '12px', color: '#5a6b76', textAlign: 'left' }}>
                           {p.matchup}
                         </td>
-                        <td style={{ padding: '8px 10px', textAlign: 'center', color: '#5a6b76', fontVariantNumeric: 'tabular-nums', fontSize: '13px' }}>
-                          {p.line != null ? p.line : '—'}
+                        <td style={{ padding: '8px 10px', textAlign: 'right', color: '#5a6b76', fontVariantNumeric: 'tabular-nums', fontSize: '13px' }}>
+                          {fmtNum(p.projected)}
                         </td>
-                        <td style={{ padding: '8px 10px', textAlign: 'center', fontWeight: 600, fontVariantNumeric: 'tabular-nums', fontSize: '13px', color: colors.navy }}>
+                        <td style={{ padding: '8px 10px', textAlign: 'right', fontWeight: 600, fontVariantNumeric: 'tabular-nums', fontSize: '13px', color: colors.navy }}>
                           {p.actual != null ? p.actual : '—'}
                         </td>
                         <td style={{ padding: '8px 10px', textAlign: 'center' }}>
@@ -166,7 +199,7 @@ export default function ResultsPage() {
 
           {/* Exclusions note */}
           <p style={{ textAlign: 'center', color: '#8a99a3', fontSize: '12px', margin: '8px 0 0' }}>
-            Strikeouts, Home Runs (HR Watch), and Game Lines are not part of the graded record.{' '}
+            Strikeouts, Home Runs (HR Watch), Game Lines, and the Parlay Builder are not part of the graded record.{' '}
             <Link to="/mlb/track-record#methodology" style={{ color: '#8a99a3' }}>See methodology</Link>.
           </p>
         </>
