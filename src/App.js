@@ -12,6 +12,7 @@ import BestBetsPage from './pages/BestBetsPage';
 import LeaderboardsPage from './pages/LeaderboardsPage';
 import PlayerProjectionsPage from './pages/PlayerProjectionsPage';
 import BatterSplitsPage from './pages/BatterSplitsPage';
+import ResultsPage from './pages/ResultsPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path="/mlb/player-projections" element={<PlayerProjectionsPage />} />
             <Route path="/mlb/batter-splits" element={<BatterSplitsPage />} />
             <Route path="/mlb/track-record" element={<TrackRecordPage />} />
+            <Route path="/mlb/results" element={<ResultsPage />} />
             <Route path="/mlb/edge-report" element={<EdgeReportPage />} />
             <Route path="/mlb/best-bets" element={<BestBetsPage />} />
             <Route path="/mlb/leaderboards/:board" element={<LeaderboardsPage />} />
