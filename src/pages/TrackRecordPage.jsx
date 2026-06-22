@@ -36,30 +36,13 @@ function CalendarHeatGrid({ daily }) {
   const minMonth = firstDate.getFullYear() * 12 + firstDate.getMonth();
   const maxMonth = lastDate.getFullYear() * 12 + lastDate.getMonth();
 
-  // Detect multi-day gaps (≥3 consecutive no-data days within the record window) as ASB
-  const breakDates = useMemo(() => {
-    const dateSet = new Set(dates);
-    const breaks = new Set();
-    if (!firstIso || !lastIso) return breaks;
-    const cur = new Date(firstIso + 'T12:00:00');
-    const end = new Date(lastIso + 'T12:00:00');
-    let gap = [];
-    const flush = () => {
-      if (gap.length >= 3) gap.forEach(d => breaks.add(d));
-      gap = [];
-    };
-    while (cur <= end) {
-      const iso = cur.toISOString().slice(0, 10);
-      if (!dateSet.has(iso)) {
-        gap.push(iso);
-      } else {
-        flush();
-      }
-      cur.setDate(cur.getDate() + 1);
-    }
-    flush();
-    return breaks;
-  }, [dates, firstIso, lastIso]);
+  // 2026 All-Star break: confirmed dates with specific labels.
+  // Jul 16 (NYY @ PHI) is a real one-game day — NOT a break day.
+  const ASB_LABELS = {
+    '2026-07-13': ['Home Run', 'Derby'],
+    '2026-07-14': ['All-Star', 'Game'],
+    '2026-07-15': ['All-Star', 'Break'],
+  };
 
   const [viewMonth, setViewMonth] = useState(maxMonth);
   const year = Math.floor(viewMonth / 12);
@@ -118,8 +101,8 @@ function CalendarHeatGrid({ daily }) {
           const hasData = data && data.scored > 0;
           const isPast = iso <= lastIso;
           const inWindow = iso >= firstIso && isPast;
-          const isBreak = breakDates.has(iso);
-          const isGap = inWindow && !hasData && !isBreak; // single-day gap like 4/2
+          const asbLabel = ASB_LABELS[iso] || null;
+          const isGap = inWindow && !hasData && !asbLabel; // single-day gap like 4/2
 
           const cellBase = { borderRadius: '6px', padding: '8px 2px',
             textAlign: 'center', aspectRatio: '1', display: 'flex', flexDirection: 'column',
@@ -141,13 +124,15 @@ function CalendarHeatGrid({ daily }) {
             );
           }
 
-          // State 4: All-Star Break — labeled, non-clickable
-          if (isBreak) {
+          // State 4: All-Star break event — specific label, non-clickable
+          if (asbLabel && !hasData) {
             return (
-              <div key={iso} style={{ ...cellBase, background: '#e8f0e8', border: '1px solid #d0ddd0' }} title="All-Star Break — no games">
-                <span style={{ fontSize: 'clamp(9px, 2vw, 11px)', color: '#8a99a3', opacity: 0.7, lineHeight: 1 }}>{day}</span>
-                <span style={{ fontSize: 'clamp(9px, 2vw, 11px)', color: '#5a8a6a', fontWeight: 700, lineHeight: 1.3 }}>
-                  ASB
+              <div key={iso} style={{ ...cellBase, background: '#e4edf4', border: `1px solid ${colors.navyLight}` }}
+                title={asbLabel.join(' ') + ' — no regular-season games'}>
+                <span style={{ fontSize: 'clamp(9px, 2vw, 11px)', color: '#8a99a3', lineHeight: 1 }}>{day}</span>
+                <span style={{ fontSize: 'clamp(8px, 1.8vw, 10px)', color: colors.navy, fontWeight: 700,
+                  lineHeight: 1.15, textAlign: 'center', whiteSpace: 'nowrap' }}>
+                  {asbLabel[0]}<br />{asbLabel[1]}
                 </span>
               </div>
             );
