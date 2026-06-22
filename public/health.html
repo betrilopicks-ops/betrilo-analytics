@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Betrilo — Pipeline Health</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    background:#0B2331; color:#e8eef2; min-height:100vh;
+    display:flex; align-items:center; justify-content:center; padding:20px; }
+  .wrap { width:100%; max-width:480px; }
+  .card { background:#16344a; border-radius:18px; padding:28px 24px; }
+  .verdict { font-size:34px; font-weight:900; text-align:center; padding:18px;
+    border-radius:14px; margin-bottom:18px; letter-spacing:-0.5px; }
+  .good { background:rgba(25,201,62,0.15); color:#19C93E; border:2px solid #19C93E; }
+  .bad  { background:rgba(255,90,90,0.12); color:#ff6b6b; border:2px solid #ff6b6b; }
+  .headline { font-size:16px; color:#9fb4c0; text-align:center; margin-bottom:22px; line-height:1.5; }
+  .meta { font-size:13px; color:#7f93a0; text-align:center; margin-bottom:24px; }
+  .steps { display:flex; flex-direction:column; gap:8px; }
+  .step { display:flex; justify-content:space-between; align-items:center;
+    padding:11px 14px; background:rgba(255,255,255,0.04); border-radius:10px; font-size:14px; }
+  .step .nm { color:#cdd8e0; }
+  .ok { color:#19C93E; font-weight:700; }
+  .fail { color:#ff6b6b; font-weight:700; }
+  .refresh { text-align:center; margin-top:22px; }
+  .refresh button { background:#19C93E; color:#0B2331; border:none; font-weight:700;
+    font-size:15px; padding:12px 28px; border-radius:100px; cursor:pointer; }
+  .stale { background:rgba(255,180,0,0.12); color:#ffc14d; border:1px solid #ffc14d;
+    border-radius:10px; padding:10px; font-size:13px; text-align:center; margin-bottom:18px; display:none; }
+  h1 { font-size:18px; text-align:center; margin-bottom:20px; color:#fff; font-weight:800; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <h1>⚾ Betrilo Pipeline</h1>
+    <div id="stale" class="stale"></div>
+    <div id="verdict" class="verdict">Loading…</div>
+    <div id="headline" class="headline"></div>
+    <div id="meta" class="meta"></div>
+    <div id="steps" class="steps"></div>
+    <div class="refresh"><button onclick="load()">Refresh</button></div>
+  </div>
+</div>
+<script>
+async function load(){
+  const v=document.getElementById('verdict'), h=document.getElementById('headline'),
+        m=document.getElementById('meta'), s=document.getElementById('steps'),
+        stale=document.getElementById('stale');
+  try{
+    const r=await fetch('/data/health_latest.json?t='+Date.now());
+    if(!r.ok) throw new Error('no health file');
+    const d=await r.json();
+    const good = d.verdict==='ALL GOOD';
+    v.textContent = good ? '✓ ALL GOOD' : '⚠ NEEDS ATTENTION';
+    v.className = 'verdict ' + (good?'good':'bad');
+    h.textContent = d.headline||'';
+    m.textContent = 'Checked ' + (d.checked_at||'').replace('T',' ') + '  ·  run date ' + (d.run_date||'');
+    // stale check — if run_date isn't today, warn
+    const today = new Date().toISOString().slice(0,10);
+    if(d.run_date && d.run_date!==today){
+      stale.style.display='block';
+      stale.textContent='⚠ Last run was '+d.run_date+', not today. Pipeline may not have fired this morning.';
+    } else { stale.style.display='none'; }
+    s.innerHTML='';
+    const steps=d.steps||{};
+    Object.keys(steps).forEach(k=>{
+      const ok=steps[k]==='OK';
+      const row=document.createElement('div'); row.className='step';
+      row.innerHTML='<span class="nm">'+k+'</span><span class="'+(ok?'ok':'fail')+'">'+(ok?'OK':'FAIL')+'</span>';
+      s.appendChild(row);
+    });
+  }catch(e){
+    v.textContent='⚠ NO DATA'; v.className='verdict bad';
+    h.textContent='Could not load health file. The pipeline may not have run, or the site has not redeployed yet.';
+    m.textContent=''; s.innerHTML='';
+  }
+}
+load();
+</script>
+</body>
+</html>
