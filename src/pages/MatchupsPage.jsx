@@ -45,22 +45,56 @@ export default function MatchupsPage() {
       const rows = [];
       gameList.forEach((game) => {
         const matchup = `${game.away_team} @ ${game.home_team}`;
-        (game.home_batters || []).forEach((b) => {
+        const homeBatters = game.home_batters || [];
+        const awayBatters = game.away_batters || [];
+        const awayPName = pitcherName(game.away_pitcher);
+        const homePName = pitcherName(game.home_pitcher);
+
+        if (homeBatters.length > 0) {
+          homeBatters.forEach((b) => {
+            rows.push({
+              ...b,
+              matchup,
+              batter_team: game.home_team,
+              pitcher_team: game.away_team,
+              pitcher_name: awayPName,
+              pitcher_throws: game.away_pitcher?.throws || '',
+            });
+          });
+        } else if (awayPName && awayPName !== 'TBD') {
           rows.push({
-            ...b,
+            _empty: true,
+            _emptyMsg: `No career BvP history — ${awayPName} has not faced ${game.home_team} batters`,
             matchup,
-            pitcher_name: pitcherName(game.away_pitcher),
+            batter_team: game.home_team,
+            pitcher_team: game.away_team,
+            pitcher_name: awayPName,
             pitcher_throws: game.away_pitcher?.throws || '',
           });
-        });
-        (game.away_batters || []).forEach((b) => {
+        }
+
+        if (awayBatters.length > 0) {
+          awayBatters.forEach((b) => {
+            rows.push({
+              ...b,
+              matchup,
+              batter_team: game.away_team,
+              pitcher_team: game.home_team,
+              pitcher_name: homePName,
+              pitcher_throws: game.home_pitcher?.throws || '',
+            });
+          });
+        } else if (homePName && homePName !== 'TBD') {
           rows.push({
-            ...b,
+            _empty: true,
+            _emptyMsg: `No career BvP history — ${homePName} has not faced ${game.away_team} batters`,
             matchup,
-            pitcher_name: pitcherName(game.home_pitcher),
+            batter_team: game.away_team,
+            pitcher_team: game.home_team,
+            pitcher_name: homePName,
             pitcher_throws: game.home_pitcher?.throws || '',
           });
-        });
+        }
       });
       return rows;
     };
@@ -88,7 +122,7 @@ export default function MatchupsPage() {
       );
     }
 
-    const textCols = ['batter_name', 'pitcher_name', 'matchup', 'position'];
+    const textCols = ['batter_name', 'pitcher_name', 'matchup', 'position', 'batter_team', 'pitcher_team'];
     const isText = textCols.includes(sortBy);
 
     const sorted = [...rows].sort((a, b) => {
@@ -122,8 +156,10 @@ export default function MatchupsPage() {
 
   // Column definitions; 'matchup' only shown in All-Games view
   const columns = [
+    { key: 'batter_team', label: 'Team', type: 'text', align: 'center' },
     { key: 'batter_name', label: 'Batter', type: 'text', align: 'left' },
     ...(isAllGames ? [{ key: 'matchup', label: 'Matchup', type: 'text', align: 'left' }] : []),
+    { key: 'pitcher_team', label: 'P Team', type: 'text', align: 'center' },
     { key: 'pitcher_name', label: 'Pitcher', type: 'text', align: 'left' },
     { key: 'ab', label: 'AB', type: 'num', align: 'center' },
     { key: 'h', label: 'H', type: 'num', align: 'center' },
@@ -251,7 +287,7 @@ export default function MatchupsPage() {
                           whiteSpace: 'nowrap',
                           background: sortBy === col.key ? '#e6e6e6' : '#f5f5f5',
                           fontWeight: 'bold',
-                          ...(ci === 0 ? { position: 'sticky', left: 0, zIndex: 3 } : {}),
+                          ...(col.key === 'batter_team' ? { position: 'sticky', left: 0, zIndex: 3 } : {}),
                         }}
                       >
                         {col.label}
@@ -262,8 +298,19 @@ export default function MatchupsPage() {
                 </thead>
                 <tbody>
                   {filteredRows.map((r, idx) => (
+                    r._empty ? (
+                    <tr key={idx} style={{ borderBottom: '1px solid #eee', background: '#fafafa' }}>
+                      <td colSpan={columns.length} style={{ padding: '12px 16px', textAlign: 'center',
+                        color: '#8a99a3', fontSize: '13px', fontStyle: 'italic' }}>
+                        {r._emptyMsg}
+                      </td>
+                    </tr>
+                    ) : (
                     <tr key={idx} style={{ borderBottom: '1px solid #eee', background: '#fff' }}>
-                      <td style={{ padding: '10px', textAlign: 'left', fontWeight: 'bold', position: 'sticky', left: 0, zIndex: 1, background: '#fff', borderRight: '2px solid #e3e9ed' }}>
+                      <td style={{ padding: '10px', textAlign: 'center', fontWeight: 700, fontSize: '13px', color: '#0B2331', position: 'sticky', left: 0, zIndex: 1, background: '#fff' }}>
+                        {r.batter_team}
+                      </td>
+                      <td style={{ padding: '10px', textAlign: 'left', fontWeight: 'bold', borderRight: '2px solid #e3e9ed' }}>
                         {r.batter_name}
                         <span style={{ marginLeft: '6px', color: '#666', fontSize: '12px', fontWeight: 'normal' }}>
                           {r.bats ? `(${r.bats}) ` : ''}{r.position}
@@ -272,6 +319,9 @@ export default function MatchupsPage() {
                       {isAllGames && (
                         <td style={{ padding: '10px', textAlign: 'left', color: '#555' }}>{r.matchup}</td>
                       )}
+                      <td style={{ padding: '10px', textAlign: 'center', fontWeight: 600, fontSize: '13px', color: '#555' }}>
+                        {r.pitcher_team}
+                      </td>
                       <td style={{ padding: '10px', textAlign: 'left' }}>
                         {r.pitcher_name}{r.pitcher_throws ? ` (${r.pitcher_throws})` : ''}
                       </td>
@@ -287,6 +337,7 @@ export default function MatchupsPage() {
                       <td style={{ padding: '10px', textAlign: 'center' }}>{fmt3(r.obp)}</td>
                       <td style={{ padding: '10px', textAlign: 'center' }}>{fmt3(r.slg)}</td>
                     </tr>
+                    )
                   ))}
                 </tbody>
               </table>
