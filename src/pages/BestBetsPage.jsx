@@ -108,6 +108,7 @@ export default function BestBetsPage() {
     { label: 'Time', align: 'left', cellStyle: muted, render: (r) => r.time || '—' },
     { label: 'Player', align: 'left', cellStyle: { fontWeight: 600, color: colors.navy }, render: (r) => r.player },
     { label: 'Prop', align: 'left', cellStyle: muted, render: (r) => propLabel(r.prop) },
+    { label: 'Line', align: 'center', render: (r) => (r.line ?? '—') },
     { label: 'Pick', align: 'center', render: (r) => <DirBadge dir={r.dir} /> },
     { label: 'Conf', align: 'right', cellStyle: { fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: colors.navy }, render: (r) => fmtConf(r.conf) },
     { label: 'Odds (~)', align: 'right', cellStyle: { ...muted, fontVariantNumeric: 'tabular-nums' }, render: (r) => fmtOdds(r.odds) },
