@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <header style={{ position: 'sticky', top: 0, zIndex: 100, background: colors.navy, borderBottom: `3px solid ${colors.green}` }}>
       <div style={{ padding: '12px 24px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '14px' }}>
-        <NavLink to="/mlb/matchups" style={{ display: 'flex', alignItems: 'center', gap: '14px', textDecoration: 'none' }}>
+        <NavLink to="/" style={{ display: 'flex', alignItems: 'center', gap: '14px', textDecoration: 'none' }}>
           <img src={symbol} alt="Betrilo" style={{ height: '52px', width: 'auto' }} />
           <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
             <span style={{ color: '#fff', fontSize: '28px', fontWeight: 800, letterSpacing: '0.5px' }}>Betrilo</span>
