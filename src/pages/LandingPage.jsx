@@ -42,35 +42,64 @@ const CARDS = [
     desc: 'Day-by-day pick results — every pick graded against actuals.',
     to: '/mlb/results',
   },
+  {
+    name: 'Leaderboards',
+    desc: 'Hit streaks and home run leaders across the league.',
+    to: '/mlb/leaderboards/streaks',
+    comingSoon: true,
+  },
 ];
 
-function Card({ name, desc, to }) {
+function Card({ name, desc, to, comingSoon }) {
   const [hover, setHover] = React.useState(false);
-  return (
-    <Link to={to} style={{ textDecoration: 'none' }}
-      onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
-      <div style={{
-        background: hover ? '#122d3f' : NAVY,
-        border: `1px solid ${hover ? GREEN : '#1a3a4d'}`,
-        borderRadius: '10px',
-        padding: '22px 20px',
-        transition: 'border-color 0.15s, background 0.15s',
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-      }}>
-        <div style={{ color: '#fff', fontSize: '17px', fontWeight: 800, marginBottom: '6px' }}>
-          {name}
-        </div>
-        <div style={{ color: '#9fb3c0', fontSize: '14px', lineHeight: 1.45 }}>
-          {desc}
-        </div>
-        <div style={{ marginTop: 'auto', paddingTop: '12px' }}>
-          <span style={{ color: hover ? HOVER_CYAN : GREEN, fontSize: '13px', fontWeight: 700 }}>
-            View →
+
+  const inner = (
+    <div style={{
+      background: hover && !comingSoon ? '#122d3f' : NAVY,
+      border: `1px solid ${hover && !comingSoon ? GREEN : '#1a3a4d'}`,
+      borderRadius: '10px',
+      padding: '22px 20px',
+      transition: 'border-color 0.15s, background 0.15s',
+      display: 'flex',
+      flexDirection: 'column',
+      height: '100%',
+      boxSizing: 'border-box',
+      opacity: comingSoon ? 0.6 : 1,
+    }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', marginBottom: '6px' }}>
+        <span style={{ color: '#fff', fontSize: '17px', fontWeight: 800, textAlign: 'center' }}>{name}</span>
+        {comingSoon && (
+          <span style={{ fontSize: '10px', fontWeight: 700, color: '#8a99a3', background: '#1a3a4d',
+            padding: '2px 7px', borderRadius: '4px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+            Coming Soon
           </span>
-        </div>
+        )}
       </div>
+      <div style={{ color: '#9fb3c0', fontSize: '14px', lineHeight: 1.45, flex: 1 }}>
+        {desc}
+      </div>
+      <div style={{ paddingTop: '14px' }}>
+        <span style={{ color: comingSoon ? '#4a6070' : (hover ? HOVER_CYAN : GREEN),
+          fontSize: '13px', fontWeight: 700 }}>
+          {comingSoon ? 'Coming soon' : 'View →'}
+        </span>
+      </div>
+    </div>
+  );
+
+  if (comingSoon) {
+    return (
+      <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}
+        style={{ height: '100%' }}>
+        {inner}
+      </div>
+    );
+  }
+
+  return (
+    <Link to={to} style={{ textDecoration: 'none', display: 'block', height: '100%' }}
+      onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+      {inner}
     </Link>
   );
 }
@@ -86,16 +115,30 @@ export default function LandingPage() {
         </p>
       </div>
 
-      {/* Card grid */}
+      {/* Card grid — 4 columns × 2 rows, equal height */}
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+        gridTemplateColumns: 'repeat(4, 1fr)',
         gap: '14px',
       }}>
         {CARDS.map((card) => (
           <Card key={card.to} {...card} />
         ))}
       </div>
+
+      {/* Responsive: 2-col on tablet, 1-col on phone */}
+      <style>{`
+        @media (max-width: 800px) {
+          div[style*="grid-template-columns: repeat(4"] {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
+        @media (max-width: 480px) {
+          div[style*="grid-template-columns: repeat(4"] {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }
