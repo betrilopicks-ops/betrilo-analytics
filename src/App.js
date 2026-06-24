@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import React from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
@@ -41,6 +42,7 @@ function AppContent() {
       </main>
       <Footer />
       <Analytics />
+      <SpeedInsights />
     </div>
   );
 }
