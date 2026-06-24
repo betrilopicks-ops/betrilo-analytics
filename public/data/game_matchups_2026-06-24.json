@@ -1,0 +1,879 @@
+{
+  "exported_date": "2026-06-24",
+  "games_count": 16,
+  "stats_min_year": "2008",
+  "games": [
+    {
+      "game_pk": 822719,
+      "game_date": "2026-06-24",
+      "start_time": "2026-06-24T22:45:00Z",
+      "home_team": "WSH",
+      "away_team": "PHI",
+      "home_pitcher": {
+        "pitcher_id": 571945,
+        "pitcher_name": "Miles Mikolas"
+      },
+      "away_pitcher": {
+        "pitcher_id": 605400,
+        "pitcher_name": "Aaron Nola"
+      },
+      "home_batters": [],
+      "away_batters": []
+    },
+    {
+      "game_pk": 822798,
+      "game_date": "2026-06-24",
+      "start_time": "2026-06-24T23:07:00Z",
+      "home_team": "TOR",
+      "away_team": "HOU",
+      "home_pitcher": {
+        "pitcher_id": 702056,
+        "pitcher_name": "Trey Yesavage"
+      },
+      "away_pitcher": {
+        "pitcher_id": 681347,
+        "pitcher_name": "Mike Burrows"
+      },
+      "home_batters": [],
+      "away_batters": []
+    },
+    {
+      "game_pk": 822965,
+      "game_date": "2026-06-24",
+      "start_time": "2026-06-24T22:40:00Z",
+      "home_team": "TB",
+      "away_team": "KC",
+      "home_pitcher": {
+        "pitcher_id": 643377,
+        "pitcher_name": "Griffin Jax"
+      },
+      "away_pitcher": {
+        "pitcher_id": 702070,
+        "pitcher_name": "Noah Cameron"
+      },
+      "home_batters": [
+        {
+          "batter_id": 810938,
+          "batter_name": "Ben Williamson",
+          "position": "2B",
+          "bats": "R",
+          "ab": 1,
+          "h": 0,
+          "b1": 0,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 1,
+          "so": 0,
+          "avg": 0.0,
+          "obp": 0.5,
+          "slg": 0.0
+        },
+        {
+          "batter_id": 802415,
+          "batter_name": "Chandler Simpson",
+          "position": "OF",
+          "bats": "L",
+          "ab": 3,
+          "h": 0,
+          "b1": 0,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 1,
+          "avg": 0.0,
+          "obp": 0.0,
+          "slg": 0.0
+        }
+      ],
+      "away_batters": []
+    },
+    {
+      "game_pk": 823041,
+      "game_date": "2026-06-24",
+      "start_time": "2026-06-24T23:45:00Z",
+      "home_team": "STL",
+      "away_team": "AZ",
+      "home_pitcher": {
+        "pitcher_id": 669461,
+        "pitcher_name": "Matthew Liberatore"
+      },
+      "away_pitcher": {
+        "pitcher_id": 683352,
+        "pitcher_name": "Mitch Bratt"
+      },
+      "home_batters": [],
+      "away_batters": []
+    },
+    {
+      "game_pk": 823208,
+      "game_date": "2026-06-24",
+      "start_time": "2026-06-25T01:45:00Z",
+      "home_team": "SF",
+      "away_team": "ATH",
+      "home_pitcher": {
+        "pitcher_id": 641816,
+        "pitcher_name": "Tyler Mahle"
+      },
+      "away_pitcher": {
+        "pitcher_id": 695611,
+        "pitcher_name": "Gage Jump"
+      },
+      "home_batters": [],
+      "away_batters": [
+        {
+          "batter_id": 667670,
+          "batter_name": "Brent Rooker",
+          "position": "DH",
+          "bats": "R",
+          "ab": 8,
+          "h": 2,
+          "b1": 1,
+          "b2": 1,
+          "b3": 0,
+          "hr": 0,
+          "bb": 2,
+          "so": 3,
+          "avg": 0.25,
+          "obp": 0.4,
+          "slg": 0.375
+        },
+        {
+          "batter_id": 687231,
+          "batter_name": "Darell Hernaiz",
+          "position": "SS",
+          "bats": "R",
+          "ab": 1,
+          "h": 1,
+          "b1": 1,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 0,
+          "avg": 1.0,
+          "obp": 1.0,
+          "slg": 1.0
+        },
+        {
+          "batter_id": 703607,
+          "batter_name": "Henry Bolte",
+          "position": "OF",
+          "bats": "R",
+          "ab": 3,
+          "h": 2,
+          "b1": 2,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 0,
+          "avg": 0.667,
+          "obp": 0.667,
+          "slg": 0.667
+        },
+        {
+          "batter_id": 805779,
+          "batter_name": "Jacob Wilson",
+          "position": "SS",
+          "bats": "R",
+          "ab": 3,
+          "h": 1,
+          "b1": 1,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 0,
+          "avg": 0.333,
+          "obp": 0.333,
+          "slg": 0.333
+        },
+        {
+          "batter_id": 643446,
+          "batter_name": "Jeff McNeil",
+          "position": "2B",
+          "bats": "L",
+          "ab": 5,
+          "h": 2,
+          "b1": 1,
+          "b2": 1,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 0,
+          "avg": 0.4,
+          "obp": 0.4,
+          "slg": 0.6
+        },
+        {
+          "batter_id": 608841,
+          "batter_name": "Joey Meneses",
+          "position": "1B",
+          "bats": "R",
+          "ab": 3,
+          "h": 1,
+          "b1": 0,
+          "b2": 0,
+          "b3": 0,
+          "hr": 1,
+          "bb": 0,
+          "so": 1,
+          "avg": 0.333,
+          "obp": 0.333,
+          "slg": 1.333
+        },
+        {
+          "batter_id": 671732,
+          "batter_name": "Lawrence Butler",
+          "position": "OF",
+          "bats": "L",
+          "ab": 5,
+          "h": 1,
+          "b1": 1,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 2,
+          "avg": 0.2,
+          "obp": 0.2,
+          "slg": 0.2
+        },
+        {
+          "batter_id": 701762,
+          "batter_name": "Nick Kurtz",
+          "position": "1B",
+          "bats": "L",
+          "ab": 5,
+          "h": 1,
+          "b1": 0,
+          "b2": 0,
+          "b3": 0,
+          "hr": 1,
+          "bb": 0,
+          "so": 4,
+          "avg": 0.2,
+          "obp": 0.2,
+          "slg": 0.8
+        },
+        {
+          "batter_id": 669127,
+          "batter_name": "Shea Langeliers",
+          "position": "C",
+          "bats": "R",
+          "ab": 3,
+          "h": 1,
+          "b1": 1,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 0,
+          "avg": 0.333,
+          "obp": 0.333,
+          "slg": 0.333
+        },
+        {
+          "batter_id": 691016,
+          "batter_name": "Tyler Soderstrom",
+          "position": "OF",
+          "bats": "L",
+          "ab": 6,
+          "h": 3,
+          "b1": 2,
+          "b2": 1,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 1,
+          "avg": 0.5,
+          "obp": 0.5,
+          "slg": 0.667
+        },
+        {
+          "batter_id": 680869,
+          "batter_name": "Zack Gelof",
+          "position": "3B",
+          "bats": "R",
+          "ab": 2,
+          "h": 0,
+          "b1": 0,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 1,
+          "so": 1,
+          "avg": 0.0,
+          "obp": 0.333,
+          "slg": 0.0
+        }
+      ]
+    },
+    {
+      "game_pk": 823284,
+      "game_date": "2026-06-24",
+      "start_time": "2026-06-25T00:40:00Z",
+      "home_team": "SD",
+      "away_team": "ATL",
+      "home_pitcher": {
+        "pitcher_id": 676664,
+        "pitcher_name": "JP Sears"
+      },
+      "away_pitcher": {
+        "pitcher_id": 527048,
+        "pitcher_name": "Martín Pérez"
+      },
+      "home_batters": [
+        {
+          "batter_id": 665487,
+          "batter_name": "Fernando Tatis Jr.",
+          "position": "OF",
+          "bats": "R",
+          "ab": 3,
+          "h": 0,
+          "b1": 0,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 0,
+          "avg": 0.0,
+          "obp": 0.0,
+          "slg": 0.0
+        },
+        {
+          "batter_id": 630105,
+          "batter_name": "Jake Cronenworth",
+          "position": "2B",
+          "bats": "L",
+          "ab": 2,
+          "h": 2,
+          "b1": 2,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 0,
+          "avg": 1.0,
+          "obp": 1.0,
+          "slg": 1.0
+        },
+        {
+          "batter_id": 669134,
+          "batter_name": "Luis Campusano",
+          "position": "C",
+          "bats": "R",
+          "ab": 3,
+          "h": 2,
+          "b1": 2,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 1,
+          "avg": 0.667,
+          "obp": 0.667,
+          "slg": 0.667
+        },
+        {
+          "batter_id": 592518,
+          "batter_name": "Manny Machado",
+          "position": "3B",
+          "bats": "R",
+          "ab": 20,
+          "h": 7,
+          "b1": 5,
+          "b2": 1,
+          "b3": 0,
+          "hr": 1,
+          "bb": 5,
+          "so": 1,
+          "avg": 0.35,
+          "obp": 0.48,
+          "slg": 0.55
+        },
+        {
+          "batter_id": 609280,
+          "batter_name": "Miguel Andujar",
+          "position": "DH",
+          "bats": "R",
+          "ab": 7,
+          "h": 1,
+          "b1": 1,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 1,
+          "avg": 0.143,
+          "obp": 0.143,
+          "slg": 0.143
+        },
+        {
+          "batter_id": 657656,
+          "batter_name": "Ramón Laureano",
+          "position": "OF",
+          "bats": "R",
+          "ab": 11,
+          "h": 2,
+          "b1": 1,
+          "b2": 0,
+          "b3": 1,
+          "hr": 0,
+          "bb": 0,
+          "so": 2,
+          "avg": 0.182,
+          "obp": 0.182,
+          "slg": 0.364
+        },
+        {
+          "batter_id": 664034,
+          "batter_name": "Ty France",
+          "position": "1B",
+          "bats": "R",
+          "ab": 17,
+          "h": 3,
+          "b1": 2,
+          "b2": 1,
+          "b3": 0,
+          "hr": 0,
+          "bb": 1,
+          "so": 5,
+          "avg": 0.176,
+          "obp": 0.3,
+          "slg": 0.235
+        },
+        {
+          "batter_id": 593428,
+          "batter_name": "Xander Bogaerts",
+          "position": "SS",
+          "bats": "R",
+          "ab": 20,
+          "h": 3,
+          "b1": 3,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 3,
+          "so": 3,
+          "avg": 0.15,
+          "obp": 0.261,
+          "slg": 0.15
+        }
+      ],
+      "away_batters": []
+    },
+    {
+      "game_pk": 823367,
+      "game_date": "2026-06-24",
+      "start_time": "2026-06-24T22:40:00Z",
+      "home_team": "PIT",
+      "away_team": "SEA",
+      "home_pitcher": {
+        "pitcher_id": 677952,
+        "pitcher_name": "Braxton Ashcraft"
+      },
+      "away_pitcher": {
+        "pitcher_id": 693433,
+        "pitcher_name": "Bryan Woo"
+      },
+      "home_batters": [
+        {
+          "batter_id": 664040,
+          "batter_name": "Brandon Lowe",
+          "position": "2B",
+          "bats": "L",
+          "ab": 5,
+          "h": 1,
+          "b1": 0,
+          "b2": 1,
+          "b3": 0,
+          "hr": 0,
+          "bb": 1,
+          "so": 1,
+          "avg": 0.2,
+          "obp": 0.333,
+          "slg": 0.4
+        },
+        {
+          "batter_id": 668804,
+          "batter_name": "Bryan Reynolds",
+          "position": "OF",
+          "bats": "S",
+          "ab": 2,
+          "h": 0,
+          "b1": 0,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 1,
+          "so": 2,
+          "avg": 0.0,
+          "obp": 0.333,
+          "slg": 0.0
+        },
+        {
+          "batter_id": 663968,
+          "batter_name": "Jake Mangum",
+          "position": "OF",
+          "bats": "S",
+          "ab": 5,
+          "h": 1,
+          "b1": 0,
+          "b2": 1,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 2,
+          "avg": 0.2,
+          "obp": 0.2,
+          "slg": 0.4
+        },
+        {
+          "batter_id": 693304,
+          "batter_name": "Nick Gonzales",
+          "position": "3B",
+          "bats": "R",
+          "ab": 3,
+          "h": 3,
+          "b1": 2,
+          "b2": 1,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 0,
+          "avg": 1.0,
+          "obp": 1.0,
+          "slg": 1.333
+        },
+        {
+          "batter_id": 665833,
+          "batter_name": "Oneil Cruz",
+          "position": "OF",
+          "bats": "L",
+          "ab": 2,
+          "h": 0,
+          "b1": 0,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 1,
+          "so": 0,
+          "avg": 0.0,
+          "obp": 0.333,
+          "slg": 0.0
+        },
+        {
+          "batter_id": 656811,
+          "batter_name": "Ryan O'Hearn",
+          "position": "OF",
+          "bats": "L",
+          "ab": 6,
+          "h": 2,
+          "b1": 2,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 2,
+          "avg": 0.333,
+          "obp": 0.333,
+          "slg": 0.333
+        },
+        {
+          "batter_id": 687462,
+          "batter_name": "Spencer Horwitz",
+          "position": "1B",
+          "bats": "L",
+          "ab": 3,
+          "h": 0,
+          "b1": 0,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 1,
+          "avg": 0.0,
+          "obp": 0.0,
+          "slg": 0.0
+        }
+      ],
+      "away_batters": [
+        {
+          "batter_id": 663728,
+          "batter_name": "Cal Raleigh",
+          "position": "C",
+          "bats": "S",
+          "ab": 1,
+          "h": 0,
+          "b1": 0,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 0,
+          "avg": 0.0,
+          "obp": 0.0,
+          "slg": 0.0
+        },
+        {
+          "batter_id": 702284,
+          "batter_name": "Cole Young",
+          "position": "2B",
+          "bats": "L",
+          "ab": 1,
+          "h": 0,
+          "b1": 0,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 1,
+          "avg": 0.0,
+          "obp": 0.0,
+          "slg": 0.0
+        },
+        {
+          "batter_id": 641487,
+          "batter_name": "J.P. Crawford",
+          "position": "SS",
+          "bats": "L",
+          "ab": 1,
+          "h": 1,
+          "b1": 1,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 0,
+          "avg": 1.0,
+          "obp": 1.0,
+          "slg": 1.0
+        },
+        {
+          "batter_id": 647304,
+          "batter_name": "Josh Naylor",
+          "position": "1B",
+          "bats": "L",
+          "ab": 1,
+          "h": 0,
+          "b1": 0,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 0,
+          "avg": 0.0,
+          "obp": 0.0,
+          "slg": 0.0
+        },
+        {
+          "batter_id": 677594,
+          "batter_name": "Julio Rodríguez",
+          "position": "OF",
+          "bats": "R",
+          "ab": 1,
+          "h": 0,
+          "b1": 0,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 0,
+          "avg": 0.0,
+          "obp": 0.0,
+          "slg": 0.0
+        },
+        {
+          "batter_id": 641598,
+          "batter_name": "Mitch Garver",
+          "position": "C",
+          "bats": "R",
+          "ab": 1,
+          "h": 0,
+          "b1": 0,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 1,
+          "avg": 0.0,
+          "obp": 0.0,
+          "slg": 0.0
+        },
+        {
+          "batter_id": 668227,
+          "batter_name": "Randy Arozarena",
+          "position": "OF",
+          "bats": "R",
+          "ab": 2,
+          "h": 1,
+          "b1": 1,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 0,
+          "avg": 0.5,
+          "obp": 0.5,
+          "slg": 0.5
+        }
+      ]
+    },
+    {
+      "game_pk": 823611,
+      "game_date": "2026-06-24",
+      "start_time": "2026-06-24T23:10:00Z",
+      "home_team": "NYM",
+      "away_team": "CHC",
+      "home_pitcher": {
+        "pitcher_id": 640455,
+        "pitcher_name": "Sean Manaea"
+      },
+      "away_pitcher": {
+        "pitcher_id": null,
+        "pitcher_name": "TBD"
+      },
+      "home_batters": [],
+      "away_batters": []
+    },
+    {
+      "game_pk": 823613,
+      "game_date": "2026-06-24",
+      "start_time": "2026-06-24T17:10:00Z",
+      "home_team": "NYM",
+      "away_team": "CHC",
+      "home_pitcher": {
+        "pitcher_id": 690997,
+        "pitcher_name": "Nolan McLean"
+      },
+      "away_pitcher": {
+        "pitcher_id": null,
+        "pitcher_name": "TBD"
+      },
+      "home_batters": [],
+      "away_batters": []
+    },
+    {
+      "game_pk": 823691,
+      "game_date": "2026-06-24",
+      "start_time": "2026-06-24T23:40:00Z",
+      "home_team": "MIN",
+      "away_team": "LAD",
+      "home_pitcher": {
+        "pitcher_id": 657746,
+        "pitcher_name": "Joe Ryan"
+      },
+      "away_pitcher": {
+        "pitcher_id": 660271,
+        "pitcher_name": "Shohei Ohtani"
+      },
+      "home_batters": [],
+      "away_batters": []
+    },
+    {
+      "game_pk": 823850,
+      "game_date": "2026-06-24",
+      "start_time": "2026-06-24T16:10:00Z",
+      "home_team": "MIA",
+      "away_team": "TEX",
+      "home_pitcher": {
+        "pitcher_id": 691587,
+        "pitcher_name": "Eury Pérez"
+      },
+      "away_pitcher": {
+        "pitcher_id": 594798,
+        "pitcher_name": "Jacob deGrom"
+      },
+      "home_batters": [],
+      "away_batters": []
+    },
+    {
+      "game_pk": 824018,
+      "game_date": "2026-06-24",
+      "start_time": "2026-06-24T20:07:00Z",
+      "home_team": "LAA",
+      "away_team": "BAL",
+      "home_pitcher": {
+        "pitcher_id": 667755,
+        "pitcher_name": "José Soriano"
+      },
+      "away_pitcher": {
+        "pitcher_id": 694346,
+        "pitcher_name": "Trey Gibson"
+      },
+      "home_batters": [],
+      "away_batters": []
+    },
+    {
+      "game_pk": 824259,
+      "game_date": "2026-06-24",
+      "start_time": "2026-06-24T22:40:00Z",
+      "home_team": "DET",
+      "away_team": "NYY",
+      "home_pitcher": {
+        "pitcher_id": 669373,
+        "pitcher_name": "Tarik Skubal"
+      },
+      "away_pitcher": {
+        "pitcher_id": 677960,
+        "pitcher_name": "Ryan Weathers"
+      },
+      "home_batters": [],
+      "away_batters": []
+    },
+    {
+      "game_pk": 824341,
+      "game_date": "2026-06-24",
+      "start_time": "2026-06-24T19:10:00Z",
+      "home_team": "COL",
+      "away_team": "BOS",
+      "home_pitcher": {
+        "pitcher_id": 607536,
+        "pitcher_name": "Kyle Freeland"
+      },
+      "away_pitcher": {
+        "pitcher_id": 624133,
+        "pitcher_name": "Ranger Suarez"
+      },
+      "home_batters": [],
+      "away_batters": []
+    },
+    {
+      "game_pk": 824500,
+      "game_date": "2026-06-24",
+      "start_time": "2026-06-24T23:10:00Z",
+      "home_team": "CIN",
+      "away_team": "MIL",
+      "home_pitcher": {
+        "pitcher_id": 695076,
+        "pitcher_name": "Rhett Lowder"
+      },
+      "away_pitcher": {
+        "pitcher_id": 675660,
+        "pitcher_name": "Shane Drohan"
+      },
+      "home_batters": [],
+      "away_batters": []
+    },
+    {
+      "game_pk": 824583,
+      "game_date": "2026-06-24",
+      "start_time": "2026-06-24T18:10:00Z",
+      "home_team": "CWS",
+      "away_team": "CLE",
+      "home_pitcher": {
+        "pitcher_id": 607200,
+        "pitcher_name": "Erick Fedde"
+      },
+      "away_pitcher": {
+        "pitcher_id": 676440,
+        "pitcher_name": "Tanner Bibee"
+      },
+      "home_batters": [],
+      "away_batters": []
+    }
+  ]
+}
