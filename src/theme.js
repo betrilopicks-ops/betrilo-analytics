@@ -5,4 +5,5 @@ export const colors = {
   navyLight: '#16344a', // slightly lighter navy for accents
   text: '#e8eef2',      // light text on dark
   textMuted: '#9fb3c0', // muted light text
+  subtitleOnWhite: '#586771', // muted text on white — WCAG AA 5.84:1
 };

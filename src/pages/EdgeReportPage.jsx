@@ -125,7 +125,7 @@ export default function EdgeReportPage() {
         <p style={{ color: '#5a6b76', fontSize: '14px', margin: '6px 0 2px' }}>
           Today's model picks by prop. {niceDate && `Slate: ${niceDate}.`}
         </p>
-        <p style={{ color: '#8a99a3', fontSize: '12px', margin: 0 }}>
+        <p style={{ color: colors.subtitleOnWhite, fontSize: '12px', margin: 0 }}>
           {data.count} props. Odds (~) are indicative, captured when the slate was generated — lines move by game time. Edge/EV shown only where a real market line exists.
         </p>
       </div>
@@ -163,7 +163,8 @@ export default function EdgeReportPage() {
           <thead style={{ background: colors.navy }}>
             <tr>
               {COLUMNS.map((c) => (
-                <th key={c.key} onClick={() => setSort(c.key)}
+                <th key={c.key} onClick={() => setSort(c.key)} scope="col"
+                  aria-sort={sortKey === c.key ? (sortDir === 'asc' ? 'ascending' : 'descending') : 'none'}
                   style={{ textAlign: c.align, padding: '10px 12px', cursor: 'pointer', userSelect: 'none', whiteSpace: 'nowrap',
                     color: sortKey === c.key ? colors.green : '#fff', fontSize: '12px', fontWeight: 700,
                     textTransform: 'uppercase', letterSpacing: '0.5px',
@@ -189,7 +190,7 @@ export default function EdgeReportPage() {
                     <span style={{ fontWeight: 700, color: r.dir === 'OVER' ? colors.green : '#c0392b' }}>{r.dir}</span>
                     {strong && <span style={{ marginLeft: '5px', fontSize: '10px', fontWeight: 700, color: colors.navy, background: colors.green, padding: '1px 5px', borderRadius: '3px' }}>STRONG</span>}
                   </td>
-                  <td style={{ padding: '9px 12px', textAlign: 'left', color: r.odds_source === 'derived' ? '#8a99a3' : '#5a6b76', fontStyle: r.odds_source === 'derived' ? 'italic' : 'normal' }}>{titleBook(r)}</td>
+                  <td style={{ padding: '9px 12px', textAlign: 'left', color: r.odds_source === 'derived' ? colors.subtitleOnWhite : '#5a6b76', fontStyle: r.odds_source === 'derived' ? 'italic' : 'normal' }}>{titleBook(r)}</td>
                   <td style={{ padding: '9px 12px', textAlign: 'right', fontVariantNumeric: 'tabular-nums' }}>{fmtOdds(r)}</td>
                   <td style={{ padding: '9px 12px', textAlign: 'right', fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: (r.edge > 0 && r.odds_source === 'book') ? colors.green : '#5a6b76' }}>{fmtPct(r)}</td>
                   <td style={{ padding: '9px 12px', textAlign: 'right', fontVariantNumeric: 'tabular-nums', color: (r.ev > 0 && r.odds_source === 'book') ? colors.navy : '#5a6b76' }}>{fmtEv(r)}</td>

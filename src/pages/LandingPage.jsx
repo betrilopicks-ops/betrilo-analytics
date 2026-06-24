@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { colors } from '../theme';
 import logo from '../assets/betrilo_logo.png';
 
 const NAVY = '#0B2331';
@@ -69,7 +70,7 @@ function Card({ name, desc, to, comingSoon }) {
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', marginBottom: '6px' }}>
         <span style={{ color: '#fff', fontSize: '17px', fontWeight: 800, textAlign: 'center' }}>{name}</span>
         {comingSoon && (
-          <span style={{ fontSize: '10px', fontWeight: 700, color: '#8a99a3', background: '#1a3a4d',
+          <span style={{ fontSize: '10px', fontWeight: 700, color: colors.subtitleOnWhite, background: '#1a3a4d',
             padding: '2px 7px', borderRadius: '4px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
             Coming Soon
           </span>
@@ -110,7 +111,7 @@ export default function LandingPage() {
       {/* Logo + tagline */}
       <div style={{ textAlign: 'center', marginBottom: '36px' }}>
         <img src={logo} alt="Betrilo" style={{ width: 'clamp(160px, 40vw, 280px)', height: 'auto', marginBottom: '14px' }} />
-        <p style={{ color: '#8a99a3', fontSize: '16px', margin: 0, lineHeight: 1.5 }}>
+        <p style={{ color: colors.subtitleOnWhite, fontSize: '16px', margin: 0, lineHeight: 1.5 }}>
           Data-driven MLB picks with a publicly tracked record.
         </p>
       </div>

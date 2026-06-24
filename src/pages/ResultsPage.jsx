@@ -19,7 +19,7 @@ const resultBadge = (result) => {
     case 'HIT':  return { ...base, color: '#fff', background: colors.green };
     case 'MISS': return { ...base, color: '#fff', background: '#c0392b' };
     case 'PUSH': return { ...base, color: colors.navy, background: '#d4e1ea', fontWeight: 600 };
-    default:     return { ...base, color: '#8a99a3', background: '#eef2f5', fontWeight: 600 };
+    default:     return { ...base, color: colors.subtitleOnWhite, background: '#eef2f5', fontWeight: 600 };
   }
 };
 
@@ -88,7 +88,7 @@ export default function ResultsPage() {
       {/* Date navigation */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
         <button onClick={() => prevDate && setSelectedDate(prevDate)} disabled={!prevDate}
-          style={{ background: prevDate ? colors.navy : '#d4e1ea', color: prevDate ? '#fff' : '#8a99a3',
+          style={{ background: prevDate ? colors.navy : '#d4e1ea', color: prevDate ? '#fff' : colors.subtitleOnWhite,
             border: 'none', borderRadius: '6px', padding: '8px 14px', fontWeight: 700, fontSize: '13px',
             cursor: prevDate ? 'pointer' : 'default' }}>
           Prev
@@ -101,7 +101,7 @@ export default function ResultsPage() {
           ))}
         </select>
         <button onClick={() => nextDate && setSelectedDate(nextDate)} disabled={!nextDate}
-          style={{ background: nextDate ? colors.navy : '#d4e1ea', color: nextDate ? '#fff' : '#8a99a3',
+          style={{ background: nextDate ? colors.navy : '#d4e1ea', color: nextDate ? '#fff' : colors.subtitleOnWhite,
             border: 'none', borderRadius: '6px', padding: '8px 14px', fontWeight: 700, fontSize: '13px',
             cursor: nextDate ? 'pointer' : 'default' }}>
           Next
@@ -167,11 +167,11 @@ export default function ResultsPage() {
                 <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px', background: '#fff' }}>
                   <thead style={{ background: colors.navy }}>
                     <tr>
-                      <th style={{ ...thStyle, textAlign: 'left' }}>Player</th>
-                      <th style={{ ...thStyle, textAlign: 'left' }}>Matchup</th>
-                      <th style={{ ...thStyle, textAlign: 'right' }}>Projected</th>
-                      <th style={{ ...thStyle, textAlign: 'right' }}>Actual</th>
-                      <th style={{ ...thStyle, textAlign: 'center' }}>Result</th>
+                      <th scope="col" style={{ ...thStyle, textAlign: 'left' }}>Player</th>
+                      <th scope="col" style={{ ...thStyle, textAlign: 'left' }}>Matchup</th>
+                      <th scope="col" style={{ ...thStyle, textAlign: 'right' }}>Projected</th>
+                      <th scope="col" style={{ ...thStyle, textAlign: 'right' }}>Actual</th>
+                      <th scope="col" style={{ ...thStyle, textAlign: 'center' }}>Result</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -202,9 +202,9 @@ export default function ResultsPage() {
           ))}
 
           {/* Exclusions note */}
-          <p style={{ textAlign: 'center', color: '#8a99a3', fontSize: '12px', margin: '8px 0 0' }}>
+          <p style={{ textAlign: 'center', color: colors.subtitleOnWhite, fontSize: '12px', margin: '8px 0 0' }}>
             Strikeouts, Home Runs (HR Watch), Game Lines, and the Parlay Builder are not part of the graded record.{' '}
-            <Link to="/mlb/track-record#methodology" style={{ color: '#8a99a3' }}>See methodology</Link>.
+            <Link to="/mlb/track-record#methodology" style={{ color: colors.subtitleOnWhite }}>See methodology</Link>.
           </p>
         </>
       )}

@@ -279,6 +279,8 @@ export default function MatchupsPage() {
                       <th
                         key={col.key}
                         onClick={() => handleSort(col.key, col.type)}
+                        scope="col"
+                        aria-sort={sortBy === col.key ? (sortOrder === 'asc' ? 'ascending' : 'descending') : 'none'}
                         style={{
                           padding: '10px',
                           textAlign: col.align,
@@ -301,7 +303,7 @@ export default function MatchupsPage() {
                     r._empty ? (
                     <tr key={idx} style={{ borderBottom: '1px solid #eee', background: '#fafafa' }}>
                       <td colSpan={columns.length} style={{ padding: '12px 16px', textAlign: 'center',
-                        color: '#8a99a3', fontSize: '13px', fontStyle: 'italic' }}>
+                        color: '#586771', fontSize: '13px', fontStyle: 'italic' }}>
                         {r._emptyMsg}
                       </td>
                     </tr>

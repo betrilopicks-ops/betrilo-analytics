@@ -36,14 +36,14 @@ function SectionTable({ title, blurb, columns, rows, emptyMsg }) {
   return (
     <section style={{ marginBottom: '40px' }}>
       <h2 style={{ color: colors.navy, fontSize: '20px', fontWeight: 800, margin: '0 0 2px' }}>{title}</h2>
-      {blurb && <p style={{ color: '#8a99a3', fontSize: '13px', margin: '0 0 12px' }}>{blurb}</p>}
+      {blurb && <p style={{ color: colors.subtitleOnWhite, fontSize: '13px', margin: '0 0 12px' }}>{blurb}</p>}
       {(!rows || rows.length === 0) ? (
         <p style={{ color: colors.textMuted, fontSize: '14px' }}>{emptyMsg || 'No picks today.'}</p>
       ) : (
         <div style={{ overflowX: 'auto', borderRadius: '10px', boxShadow: '0 1px 4px rgba(0,0,0,0.08)' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px', background: '#fff' }}>
             <thead style={{ background: colors.navy }}>
-              <tr>{columns.map((c, i) => <th key={i} style={thStyle(c.align)}>{c.label}</th>)}</tr>
+              <tr>{columns.map((c, i) => <th key={i} scope="col" style={thStyle(c.align)}>{c.label}</th>)}</tr>
             </thead>
             <tbody>
               {rows.map((r, i) => (

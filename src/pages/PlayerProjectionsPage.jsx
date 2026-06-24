@@ -163,7 +163,8 @@ export default function PlayerProjectionsPage() {
               {columns.map((col) => {
                 const sticky = col.key === 'player';
                 return (
-                <th key={col.key} onClick={() => handleSort(col.key, col.type)}
+                <th key={col.key} onClick={() => handleSort(col.key, col.type)} scope="col"
+                  aria-sort={sortBy === col.key ? (sortOrder === 'asc' ? 'ascending' : 'descending') : 'none'}
                   style={{ padding: '10px 11px', textAlign: col.align, cursor: 'pointer', userSelect: 'none', whiteSpace: 'nowrap',
                     color: sortBy === col.key ? colors.green : '#fff', fontSize: '11px', fontWeight: 700,
                     textTransform: 'uppercase', letterSpacing: '0.4px',

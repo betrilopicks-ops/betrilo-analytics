@@ -68,7 +68,7 @@ function CalendarHeatGrid({ daily }) {
       {/* Month nav */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
         <button onClick={() => setViewMonth(Math.max(minMonth, viewMonth - 1))} disabled={viewMonth <= minMonth}
-          style={{ background: viewMonth > minMonth ? colors.navy : '#d4e1ea', color: viewMonth > minMonth ? '#fff' : '#8a99a3',
+          style={{ background: viewMonth > minMonth ? colors.navy : '#d4e1ea', color: viewMonth > minMonth ? '#fff' : colors.subtitleOnWhite,
             border: 'none', borderRadius: '6px', padding: '6px 12px', fontWeight: 700, fontSize: '13px',
             cursor: viewMonth > minMonth ? 'pointer' : 'default' }}>
           Prev
@@ -77,7 +77,7 @@ function CalendarHeatGrid({ daily }) {
           {MONTH_NAMES[month]} {year}
         </span>
         <button onClick={() => setViewMonth(Math.min(maxMonth, viewMonth + 1))} disabled={viewMonth >= maxMonth}
-          style={{ background: viewMonth < maxMonth ? colors.navy : '#d4e1ea', color: viewMonth < maxMonth ? '#fff' : '#8a99a3',
+          style={{ background: viewMonth < maxMonth ? colors.navy : '#d4e1ea', color: viewMonth < maxMonth ? '#fff' : colors.subtitleOnWhite,
             border: 'none', borderRadius: '6px', padding: '6px 12px', fontWeight: 700, fontSize: '13px',
             cursor: viewMonth < maxMonth ? 'pointer' : 'default' }}>
           Next
@@ -87,7 +87,7 @@ function CalendarHeatGrid({ daily }) {
       {/* Day-of-week headers */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', gap: '3px', marginBottom: '3px' }}>
         {DAY_LABELS.map((l, i) => (
-          <div key={i} style={{ textAlign: 'center', fontSize: '11px', fontWeight: 700, color: '#8a99a3', padding: '4px 0' }}>
+          <div key={i} style={{ textAlign: 'center', fontSize: '11px', fontWeight: 700, color: colors.subtitleOnWhite, padding: '4px 0' }}>
             {l}
           </div>
         ))}
@@ -113,8 +113,9 @@ function CalendarHeatGrid({ daily }) {
             const rate = data.rate;
             const c = cellColor(rate);
             return (
-              <Link key={iso} to={`/mlb/results?date=${iso}`} style={{ textDecoration: 'none' }}>
-                <div style={{ ...cellBase, background: c.bg, cursor: 'pointer' }}>
+              <Link key={iso} to={`/mlb/results?date=${iso}`} style={{ textDecoration: 'none' }}
+                aria-label={`${MONTH_NAMES[month]} ${day}: ${pct(rate)} hit rate`}>
+                <div style={{ ...cellBase, background: c.bg, cursor: 'pointer' }} aria-hidden="true">
                   <span style={{ fontSize: 'clamp(9px, 2vw, 11px)', color: c.text, opacity: 0.7, lineHeight: 1 }}>{day}</span>
                   <span style={{ fontSize: 'clamp(10px, 2.5vw, 14px)', color: c.text, fontWeight: 800, lineHeight: 1.3, whiteSpace: 'nowrap' }}>
                     {pct(rate)}
@@ -129,7 +130,7 @@ function CalendarHeatGrid({ daily }) {
             return (
               <div key={iso} style={{ ...cellBase, background: '#e4edf4', border: `1px solid ${colors.navyLight}` }}
                 title={asbLabel.join(' ') + ' — no regular-season games'}>
-                <span style={{ fontSize: 'clamp(9px, 2vw, 11px)', color: '#8a99a3', lineHeight: 1 }}>{day}</span>
+                <span style={{ fontSize: 'clamp(9px, 2vw, 11px)', color: colors.subtitleOnWhite, lineHeight: 1 }}>{day}</span>
                 <span style={{ fontSize: 'clamp(8px, 1.8vw, 10px)', color: colors.navy, fontWeight: 700,
                   lineHeight: 1.15, textAlign: 'center', whiteSpace: 'nowrap' }}>
                   {asbLabel[0]}<br />{asbLabel[1]}
@@ -142,7 +143,7 @@ function CalendarHeatGrid({ daily }) {
           if (isGap) {
             return (
               <div key={iso} style={{ ...cellBase, background: '#eef2f5', border: '1px solid #d4e1ea' }}>
-                <span style={{ fontSize: 'clamp(10px, 2.5vw, 13px)', color: '#8a99a3', fontWeight: 600 }}>{day}</span>
+                <span style={{ fontSize: 'clamp(10px, 2.5vw, 13px)', color: colors.subtitleOnWhite, fontWeight: 600 }}>{day}</span>
                 <span style={{ fontSize: 'clamp(9px, 2vw, 11px)', color: '#b0bec5' }}>—</span>
               </div>
             );
@@ -203,6 +204,7 @@ export default function TrackRecordPage() {
 
   return (
     <div style={{ maxWidth: 880, margin: '0 auto', padding: '24px 16px 60px' }}>
+      <h1 style={{ color: colors.navy, fontSize: '30px', fontWeight: 800, margin: '0 0 4px', textAlign: 'center' }}>Track Record</h1>
       {/* Rebase-reveal banner (Edit 6) */}
       {showReveal && (
         <div style={{ background: '#f0f6fa', border: '1px solid #d4e1ea', borderRadius: '10px',
@@ -210,7 +212,7 @@ export default function TrackRecordPage() {
           color: '#3a5060', lineHeight: 1.55 }}>
           <button onClick={dismissReveal} style={{ position: 'absolute', top: '8px',
             right: '10px', background: 'none', border: 'none', cursor: 'pointer', fontSize: '18px',
-            color: '#8a99a3', lineHeight: 1 }} aria-label="Dismiss">x</button>
+            color: colors.subtitleOnWhite, lineHeight: 1 }} aria-label="Dismiss">x</button>
           <strong>Source correction (June 2026):</strong> We updated our Track Record to count
           only the picks we actually publish — the cards you see on Instagram every day.
           Previously the record included our full internal edge list, which contains picks in
@@ -241,8 +243,8 @@ export default function TrackRecordPage() {
         </div>
       </div>
       {/* Hero disclaimer (Edit 2) */}
-      <p style={{ textAlign: 'center', color: '#8a99a3', fontSize: '12px', margin: '0 0 28px' }}>
-        Hit rate on the picks we actually post — not profit. Four categories tracked; <a href="#methodology" style={{ color: '#8a99a3' }}>full breakdown below</a>.
+      <p style={{ textAlign: 'center', color: colors.subtitleOnWhite, fontSize: '12px', margin: '0 0 28px' }}>
+        Hit rate on the picks we actually post — not profit. Four categories tracked; <a href="#methodology" style={{ color: colors.subtitleOnWhite }}>full breakdown below</a>.
       </p>
 
       {/* Calendar heat grid — replaces TrendChart */}
@@ -251,7 +253,7 @@ export default function TrackRecordPage() {
         <div style={{ background: '#fff', borderRadius: '10px', padding: '14px', boxShadow: '0 1px 4px rgba(0,0,0,0.08)' }}>
           <CalendarHeatGrid daily={data.daily || []} />
         </div>
-        <p style={{ color: '#8a99a3', fontSize: '12px', margin: '8px 0 0' }}>
+        <p style={{ color: colors.subtitleOnWhite, fontSize: '12px', margin: '8px 0 0' }}>
           Click any day to see that date's full pick-by-pick results. Brighter green = higher hit rate.
           {data.model_baseline?.note && <><br />{data.model_baseline.note}</>}
         </p>
@@ -264,10 +266,10 @@ export default function TrackRecordPage() {
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px', background: '#fff' }}>
             <thead style={{ background: colors.navy }}>
               <tr>
-                <th style={{ textAlign: 'left', padding: '10px 12px', color: '#fff', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Prop</th>
-                <th style={{ textAlign: 'right', padding: '10px 12px', color: '#fff', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Hits</th>
-                <th style={{ textAlign: 'right', padding: '10px 12px', color: '#fff', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Scored</th>
-                <th style={{ textAlign: 'right', padding: '10px 12px', color: '#fff', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Hit Rate</th>
+                <th scope="col" style={{ textAlign: 'left', padding: '10px 12px', color: '#fff', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Prop</th>
+                <th scope="col" style={{ textAlign: 'right', padding: '10px 12px', color: '#fff', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Hits</th>
+                <th scope="col" style={{ textAlign: 'right', padding: '10px 12px', color: '#fff', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Scored</th>
+                <th scope="col" style={{ textAlign: 'right', padding: '10px 12px', color: '#fff', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Hit Rate</th>
               </tr>
             </thead>
             <tbody>
