@@ -14,6 +14,7 @@ import LeaderboardsPage from './pages/LeaderboardsPage';
 import PlayerProjectionsPage from './pages/PlayerProjectionsPage';
 import BatterSplitsPage from './pages/BatterSplitsPage';
 import ResultsPage from './pages/ResultsPage';
+import StartingLineupsPage from './pages/StartingLineupsPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 function AppContent() {
@@ -28,6 +29,7 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/mlb/matchups" element={<MatchupsPage />} />
+          <Route path="/mlb/starting-lineups" element={<StartingLineupsPage />} />
           <Route path="/mlb/player-projections" element={<PlayerProjectionsPage />} />
           <Route path="/mlb/batter-splits" element={<BatterSplitsPage />} />
           <Route path="/mlb/track-record" element={<TrackRecordPage />} />

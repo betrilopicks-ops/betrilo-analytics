@@ -1,6 +1,6 @@
 # @betrilopicks Frontend (betrilo.com) — Technical Project Book
 
-**Version:** BFEv0.1.2 | **Last Updated:** June 27, 2026 | **Includes:** Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display
+**Version:** BFEv0.2.0 | **Last Updated:** June 27, 2026 | **Includes:** Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; change pending preview review + merge, not yet live)
 
 ---
 
@@ -39,3 +39,21 @@ added `last_refreshed` and `lineup_status` fields to the projections JSON).
 ### Session: June 25, 2026 — BFEv0.1.2 VOIDED (no-op)
 
 **Summary:** footer-wording-fix ran through the full /feature pipeline but resolved as NO-OP — main already read "Sports Betting Projections" since commit `54a7e5e`. The routing-nav localhost branch was 33 commits behind main, so testing verified a stale site. No code shipped. Version bump to BFEv0.1.2 reverted to BFEv0.1.1. Captured two follow-up items: stale-localhost-branch fix and no-op status model enhancement.
+
+---
+
+### Session: June 27, 2026 — BFEv0.1.2 → BFEv0.2.0
+
+**Summary:** New page: Starting Lineups (/mlb/starting-lineups). Shows per-game ordered
+batting order (1–9) side-by-side (away left, home right) with confirmed/projected badge
+and freshness timestamp. Reads from starting_lineups_latest.json (new MLB data export,
+BMLBv3.28.0). Data-source: Branch B — new JSON required. Pending preview review + merge.
+
+| File | Change |
+|---|---|
+| `src/pages/StartingLineupsPage.jsx` | New page component |
+| `src/App.js` | Route /mlb/starting-lineups added |
+| `src/components/Header.jsx` | "Starting Lineups" nav item added |
+| `public/data/starting_lineups_latest.json` | Seed data for preview |
+
+**Status:** On feature branch `starting-lineups`. Not yet live — pending operator review + merge to main.
