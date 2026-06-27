@@ -10,6 +10,8 @@ export default function PlayerProjectionsPage() {
   const [sortOrder, setSortOrder] = useState('desc');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [lastRefreshed, setLastRefreshed] = useState('');
+  const [lineupStatus, setLineupStatus] = useState('projected');
 
   useEffect(() => {
     fetch('/data/player_projections_latest.json')
@@ -17,6 +19,8 @@ export default function PlayerProjectionsPage() {
       .then((data) => {
         setGames(data.games || []);
         setSlateDate(data.slate_date || '');
+        setLastRefreshed(data.last_refreshed || '');
+        setLineupStatus(data.lineup_status || 'projected');
         setLoading(false);
       })
       .catch(() => { setError(true); setLoading(false); });
@@ -125,6 +129,17 @@ export default function PlayerProjectionsPage() {
     ? new Date(slateDate + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })
     : '';
 
+  const niceRefreshed = lastRefreshed
+    ? (() => {
+        try {
+          return new Date(lastRefreshed).toLocaleTimeString('en-US', {
+            hour: 'numeric', minute: '2-digit', hour12: true,
+            timeZone: 'America/New_York',
+          }) + ' ET';
+        } catch { return ''; }
+      })()
+    : '';
+
   return (
     <div style={{ maxWidth: 1600, margin: '0 auto', padding: '24px 16px 60px' }}>
       <div style={{ textAlign: 'center', marginBottom: '18px' }}>
@@ -132,6 +147,17 @@ export default function PlayerProjectionsPage() {
         <p style={{ color: '#5a6b76', fontSize: '14px', margin: '6px 0 0' }}>
           Full projections, matchup splits, and streaks for every batter. {niceDate && `Slate: ${niceDate}.`}
         </p>
+        {niceRefreshed && (
+          <p style={{ color: '#5a6b76', fontSize: '13px', margin: '6px 0 0' }}>
+            {lineupStatus === 'confirmed' ? 'Lineups & projections' : 'Projections'} last refreshed {niceRefreshed}
+            {' — '}
+            <span style={{ color: '#8a9ba8' }}>
+              updates on confirmed lineups throughout the day.{' '}
+              <a href="/best-bets" style={{ color: colors.navy, textDecoration: 'underline' }}>Best Bets</a>
+              {' '}shows today's locked morning picks.
+            </span>
+          </p>
+        )}
       </div>
 
       <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', marginBottom: '18px' }}>

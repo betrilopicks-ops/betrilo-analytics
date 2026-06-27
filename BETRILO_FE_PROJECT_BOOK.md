@@ -1,6 +1,6 @@
 # @betrilopicks Frontend (betrilo.com) — Technical Project Book
 
-**Version:** BFEv0.1.1 | **Last Updated:** June 25, 2026 | **Includes:** Footer tagline fix
+**Version:** BFEv0.1.2 | **Last Updated:** June 27, 2026 | **Includes:** Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display
 
 ---
 
@@ -23,6 +23,18 @@ betrilo-analytics is the React 19 frontend for betrilo.com, deployed on Vercel. 
 | `src/components/Footer.jsx` | Line 12: "Projections" → "Analytics" |
 
 **Build:** `CI=true npm run build` — passed clean, exit 0.
+
+### Session: June 27, 2026 — BFEv0.1.1 → BFEv0.1.2
+
+**Summary:** Player Projections page now displays "Projections last refreshed H:MM AM/PM ET" label
+and lineup status. Companion to MLB §13.15 (afternoon_refresh.py + export_player_projections_json.py
+added `last_refreshed` and `lineup_status` fields to the projections JSON).
+
+| File | Change |
+|---|---|
+| `src/pages/PlayerProjectionsPage.jsx` | Added `lastRefreshed`, `lineupStatus` state; reads `data.last_refreshed` / `data.lineup_status`; renders timestamp label under projections header |
+
+---
 
 ### Session: June 25, 2026 — BFEv0.1.2 VOIDED (no-op)
 

@@ -1,3 +1,3 @@
 # @betrilopicks Project Book Versions
 
-FE: BFEv0.1.1
+FE: BFEv0.1.2
