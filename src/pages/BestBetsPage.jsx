@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { colors } from '../theme';
 
 const PROP_LABELS = {
@@ -125,8 +126,20 @@ export default function BestBetsPage() {
     { label: 'Streak', align: 'right', cellStyle: muted, render: (r) => (r.streak ?? '—') },
   ];
 
+  const title = "Today's MLB Best Bets — Model-Ranked | Betrilo";
+  const desc = "Today's top MLB pick recommendations, ranked by model edge. Updated daily before first pitch.";
+  const url = 'https://betrilo.com/mlb/best-bets';
   return (
     <div style={{ maxWidth: 1100, margin: '0 auto', padding: '24px 16px 60px' }}>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={desc} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href={url} />
+      </Helmet>
       <div style={{ textAlign: 'center', marginBottom: '28px' }}>
         <h1 style={{ color: colors.navy, fontSize: '30px', fontWeight: 800, margin: 0 }}>Best Bets</h1>
         <p style={{ color: '#5a6b76', fontSize: '14px', margin: '6px 0 0' }}>

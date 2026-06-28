@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { colors } from '../theme';
 
 function pct(x) { return x === null || x === undefined ? '—' : `${(x * 100).toFixed(1)}%`; }
@@ -79,8 +80,20 @@ export default function ResultsPage() {
   const nextDate = idx < dates.length - 1 ? dates[idx + 1] : null;
   const day = daysByDate[selectedDate];
 
+  const title = 'MLB Pick Results — Daily Graded History | Betrilo';
+  const desc = 'Daily graded MLB pick results. See hit/miss history, accuracy by category, and running performance metrics.';
+  const url = 'https://betrilo.com/mlb/results';
   return (
     <div style={{ maxWidth: 880, margin: '0 auto', padding: '24px 16px 60px' }}>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={desc} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href={url} />
+      </Helmet>
       <h1 style={{ color: colors.navy, fontSize: '22px', fontWeight: 800, margin: '0 0 16px', textAlign: 'center' }}>
         Daily Results
       </h1>

@@ -1,6 +1,6 @@
 # @betrilopicks Frontend (betrilo.com) — Technical Project Book
 
-**Version:** BFEv0.2.2 | **Last Updated:** June 28, 2026 | **Includes:** Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display
+**Version:** BFEv0.3.0 | **Last Updated:** June 28, 2026 | **Includes:** Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema
 
 ---
 
@@ -148,7 +148,36 @@ BMLBv3.28.0). Data-source: Branch B — new JSON required. Pending preview revie
 
 **Verify via:** `?forceProjected=1` on preview — banner should appear as solid #16344a panel with bright white text and full-opacity green left border.
 
-**Branch:** `lineups-polish` — preview-only, pending operator merge.
+**Branch:** `lineups-polish`
 **Files changed:** `src/pages/StartingLineupsPage.jsx`
-**Build:** pending
-**Status:** PENDING — merge to main is operator go-live step.
+**Build:** `CI=true npm run build` — "Compiled successfully." Zero warnings.
+**Status:** LIVE — merged to main 2026-06-28 (branch `lineups-polish`, SHA `5e69be3`). BFEv0.2.2 shipped.
+
+---
+
+### Session: June 28, 2026 — BFEv0.2.2 → BFEv0.3.0 — SEO Foundation
+
+**Summary:** SEO foundation infrastructure layer. Added react-helmet-async per-page `<Helmet>` blocks with unique title, meta description, OG tags, and canonical link to all 8 route pages. Added JSON-LD Organization/WebSite schema on LandingPage. Created `public/sitemap.xml` (9 routes, canonical apex host). Rewrote `public/robots.txt` with sitemap pointer. Updated static fallback in `public/index.html`.
+
+| File | Change |
+|---|---|
+| `src/index.js` | Wrap App in `<HelmetProvider>` |
+| `src/pages/LandingPage.jsx` | `<Helmet>` + JSON-LD schema |
+| `src/pages/MatchupsPage.jsx` | `<Helmet>` title/desc/OG/canonical |
+| `src/pages/StartingLineupsPage.jsx` | `<Helmet>` title/desc/OG/canonical |
+| `src/pages/TrackRecordPage.jsx` | `<Helmet>` title/desc/OG/canonical |
+| `src/pages/BestBetsPage.jsx` | `<Helmet>` title/desc/OG/canonical |
+| `src/pages/PlayerProjectionsPage.jsx` | `<Helmet>` title/desc/OG/canonical |
+| `src/pages/BatterSplitsPage.jsx` | `<Helmet>` title/desc/OG/canonical |
+| `src/pages/ResultsPage.jsx` | `<Helmet>` title/desc/OG/canonical |
+| `public/index.html` | Static fallback title → "Betrilo"; updated desc + og:site_name; canonical og:url → apex |
+| `public/sitemap.xml` | Created — 9 routes with apex canonical URLs |
+| `public/robots.txt` | Rewrote — Allow: / + Sitemap pointer |
+
+**Canonical host:** `https://betrilo.com` (apex; both apex and www return 200 with no redirect — apex chosen per project default).
+
+**Build:** `CI=true npm run build` — "Compiled successfully." Zero warnings.
+
+**Version:** BFEv0.2.2 → **BFEv0.3.0** (MINOR — new SEO infrastructure layer)
+
+**Status:** Branch `seo-foundation` — pending merge to main.

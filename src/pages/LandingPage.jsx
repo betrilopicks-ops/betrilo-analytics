@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { colors } from '../theme';
 import logo from '../assets/betrilo_logo.png';
 
@@ -199,8 +200,37 @@ function TrackRecordBanner() {
 }
 
 export default function LandingPage() {
+  const title = 'Betrilo — MLB Betting Projections & Tracked Record';
+  const desc = 'Model-driven MLB hit projections with a publicly tracked pick record. Batter vs pitcher splits, best bets, and daily results.';
+  const url = 'https://betrilo.com/';
   return (
     <div style={{ maxWidth: 960, margin: '0 auto', padding: '40px 16px 60px' }}>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={desc} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href={url} />
+        <script type="application/ld+json">{JSON.stringify({
+          '@context': 'https://schema.org',
+          '@graph': [
+            {
+              '@type': 'WebSite',
+              'name': 'Betrilo',
+              'url': 'https://betrilo.com',
+              'description': 'Model-driven MLB betting projections with a publicly tracked record.'
+            },
+            {
+              '@type': 'Organization',
+              'name': 'Betrilo',
+              'url': 'https://betrilo.com',
+              'sameAs': []
+            }
+          ]
+        })}</script>
+      </Helmet>
       {/* Logo + tagline */}
       <div style={{ textAlign: 'center', marginBottom: '36px' }}>
         <img src={logo} alt="Betrilo" style={{ width: 'clamp(160px, 40vw, 280px)', height: 'auto', marginBottom: '14px' }} />
