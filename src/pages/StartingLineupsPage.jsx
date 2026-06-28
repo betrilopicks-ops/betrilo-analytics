@@ -93,7 +93,7 @@ function LineupTable({ lineup, lineupStatus }) {
           >
             <td style={{ padding: '7px 8px', color: colors.green, fontWeight: 700 }}>{p.order}</td>
             <td style={{ padding: '7px 8px', color: colors.text, fontWeight: 500, textAlign: 'left' }}>{p.name || '—'}</td>
-            <td style={{ padding: '7px 8px', color: colors.textMuted }}>{p.position || '—'}</td>
+            <td style={{ padding: '7px 8px', color: colors.textMuted }}>{p.position === 'TWP' ? 'P/DH' : (p.position || '—')}</td>
             <td style={{ padding: '7px 8px', color: colors.textMuted }}>{p.bats || '—'}</td>
           </tr>
         ))}
@@ -274,13 +274,14 @@ export default function StartingLineupsPage() {
             <div style={{
               color: colors.text,
               fontSize: '12px',
+              fontWeight: 500,
               marginBottom: '14px',
               padding: '8px 12px',
-              background: 'rgba(22,52,74,0.4)',
-              borderLeft: `3px solid rgba(25,201,62,0.45)`,
+              background: colors.navyLight,
+              borderLeft: `3px solid ${colors.green}`,
               borderRadius: '0 4px 4px 0',
             }}>
-              Lineups projected from batter history vs. pitcher handedness — they&apos;ll refresh to confirmed as official lineups post.
+              Projected lineups based on each team&apos;s most recent batting order — they&apos;ll refresh to confirmed as official lineups post.
             </div>
           )}
 

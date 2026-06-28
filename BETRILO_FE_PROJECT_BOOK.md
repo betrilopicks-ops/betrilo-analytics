@@ -1,6 +1,6 @@
 # @betrilopicks Frontend (betrilo.com) — Technical Project Book
 
-**Version:** BFEv0.2.1 | **Last Updated:** June 28, 2026 | **Includes:** Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param)
+**Version:** BFEv0.2.2 | **Last Updated:** June 28, 2026 | **Includes:** Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display
 
 ---
 
@@ -139,3 +139,16 @@ BMLBv3.28.0). Data-source: Branch B — new JSON required. Pending preview revie
 **Build:** `CI=true npm run build` — "Compiled successfully." Zero warnings.
 
 **Status:** LIVE — merged to main 2026-06-28 (branch `fix-projected-note`, SHA `625cfe6`). BFEv0.2.1 shipped — projected-note contrast fix live on production.
+
+### Session: June 28, 2026 — BFEv0.2.1 → BFEv0.2.2 — Lineups polish (banner contrast + TWP)
+
+**Changes:**
+1. **Projected-note banner**: switched background from `rgba(22,52,74,0.4)` (semi-transparent, renders inconsistently) to solid `colors.navyLight` (#16344a); added `fontWeight: 500`; green border upgraded from `rgba(25,201,62,0.45)` to `colors.green` (fully opaque). Text already `colors.text` (#e8eef2) from 0.2.1 — now clearly readable on solid dark background. Wording updated from "batter history vs pitcher handedness" → "most recent batting order" to match the 3.31.0 backend method.
+2. **TWP → P/DH**: display-layer mapping in LineupTable position cell. `p.position === 'TWP' ? 'P/DH' : (p.position || '—')`. No data mutation; all other position codes pass through unchanged.
+
+**Verify via:** `?forceProjected=1` on preview — banner should appear as solid #16344a panel with bright white text and full-opacity green left border.
+
+**Branch:** `lineups-polish` — preview-only, pending operator merge.
+**Files changed:** `src/pages/StartingLineupsPage.jsx`
+**Build:** pending
+**Status:** PENDING — merge to main is operator go-live step.
