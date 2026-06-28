@@ -104,3 +104,17 @@ BMLBv3.28.0). Data-source: Branch B — new JSON required. Pending preview revie
 **Build:** `CI=true npm run build` — "Compiled successfully." Zero warnings.
 **No img/logo assets added.**
 **Status:** LIVE — merged to main 2026-06-27 (branch `starting-lineups`, SHA `bb7c356`).
+
+### Session: June 28, 2026 — BFEv0.2.0 revision — Projected-lineups conditional note
+
+**Summary:** Added a conditional note on the Starting Lineups page, shown only when ≥1 displayed game is still projected (not yet confirmed). Note text: "Lineups projected from batter history vs. pitcher handedness — they'll refresh to confirmed as official lineups post." Hidden when all displayed games are confirmed. Selector-aware: reflects the currently displayed games, not the full slate. Styled as muted secondary text with a green left-border accent, no layout disruption to game cards.
+
+**Version decision:** No bump — this is a copy/conditional display addition on an unreleased behavior pattern; BFEv0.2.0 unchanged.
+
+**Branch:** `lineups-projected-note` — preview-only, pending operator merge.
+
+**Files changed:** `src/pages/StartingLineupsPage.jsx`
+
+**Build:** `CI=true npm run build` — "Compiled successfully." Zero warnings.
+
+**Status:** PENDING — preview at `betrilo-analytics-git-lineups-projected-note-betrilo.vercel.app`, merge to main is operator go-live step.

@@ -266,6 +266,20 @@ export default function StartingLineupsPage() {
             </select>
           </div>
 
+          {displayedGames.some(g => g.lineup_status !== 'confirmed') && (
+            <div style={{
+              color: colors.textMuted,
+              fontSize: '12px',
+              marginBottom: '14px',
+              padding: '8px 12px',
+              background: 'rgba(22,52,74,0.4)',
+              borderLeft: `3px solid rgba(25,201,62,0.3)`,
+              borderRadius: '0 4px 4px 0',
+            }}>
+              Lineups projected from batter history vs. pitcher handedness — they'll refresh to confirmed as official lineups post.
+            </div>
+          )}
+
           {displayedGames.map((g, i) => (
             <GameCard key={g.game_pk || i} game={g} />
           ))}
