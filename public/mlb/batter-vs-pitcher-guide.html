@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MLB Batter vs Pitcher Matchups — Free Daily Data | Betrilo</title>
+  <meta name="description" content="How to read MLB batter vs pitcher matchups: handedness, sample size, platoon splits, and prop applications. Free BvP data updated daily at Betrilo." />
+  <meta property="og:title" content="MLB Batter vs Pitcher Matchups — Free Daily Data | Betrilo" />
+  <meta property="og:description" content="How to read MLB batter vs pitcher matchups: handedness, sample size, platoon splits, and prop applications. Free BvP data updated daily at Betrilo." />
+  <meta property="og:url" content="https://betrilo.com/mlb/batter-vs-pitcher-guide" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Betrilo" />
+  <link rel="canonical" href="https://betrilo.com/mlb/batter-vs-pitcher-guide" />
+  <meta name="theme-color" content="#0B2331" />
+  <link rel="icon" href="/favicon.ico" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "MLB Batter vs Pitcher Matchups — Free Daily Data",
+    "description": "How to read MLB batter vs pitcher matchups: handedness, sample size, platoon splits, and prop applications.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Betrilo",
+      "url": "https://betrilo.com"
+    },
+    "url": "https://betrilo.com/mlb/batter-vs-pitcher-guide",
+    "dateModified": "2026-06-28"
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0B2331;
+      color: #e8eef2;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    a { color: #19C93E; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Nav */
+    .nav {
+      background: #16344a;
+      border-bottom: 2px solid #19C93E;
+      padding: 0 20px;
+    }
+    .nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      height: 52px;
+      gap: 24px;
+    }
+    .nav-brand {
+      color: #fff;
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: -0.3px;
+      flex-shrink: 0;
+    }
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      color: #9fb3c0;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .nav-links a:hover { color: #e8eef2; text-decoration: none; }
+
+    /* Page */
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 36px 20px 64px;
+    }
+    .breadcrumb {
+      font-size: 12px;
+      color: #9fb3c0;
+      margin-bottom: 20px;
+    }
+    .breadcrumb a { color: #9fb3c0; }
+    .breadcrumb a:hover { color: #19C93E; }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+    .subhead {
+      font-size: 15px;
+      color: #9fb3c0;
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      margin: 32px 0 10px;
+    }
+    p { margin-bottom: 14px; color: #e8eef2; }
+
+    .card {
+      background: #16344a;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 28px 0;
+      border: 1px solid rgba(25,201,62,0.15);
+    }
+    .card h2 { margin-top: 0; }
+
+    .callout {
+      border-left: 3px solid #19C93E;
+      background: #16344a;
+      padding: 14px 18px;
+      border-radius: 0 6px 6px 0;
+      margin: 20px 0;
+      font-size: 14px;
+      color: #9fb3c0;
+    }
+    .callout strong { color: #e8eef2; }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 36px;
+    }
+    .btn {
+      display: inline-block;
+      background: #19C93E;
+      color: #0B2331;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 11px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .btn:hover { opacity: 0.88; text-decoration: none; }
+    .btn-outline {
+      background: transparent;
+      color: #19C93E;
+      border: 1.5px solid #19C93E;
+    }
+    .btn-outline:hover { background: rgba(25,201,62,0.08); }
+
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(159,179,192,0.12);
+      margin: 32px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px 20px;
+      font-size: 12px;
+      color: #9fb3c0;
+      border-top: 1px solid rgba(159,179,192,0.1);
+    }
+    footer a { color: #9fb3c0; }
+
+    @media (max-width: 520px) {
+      h1 { font-size: 22px; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="/">Betrilo</a>
+      <div class="nav-links">
+        <a href="/mlb/starting-lineups">Starting Lineups</a>
+        <a href="/mlb/matchups">BvP Matchups</a>
+        <a href="/mlb/best-bets">Best Bets</a>
+        <a href="/mlb/player-projections">Projections</a>
+        <a href="/mlb/track-record">Track Record</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+
+    <div class="breadcrumb">
+      <a href="/">Betrilo</a> &rsaquo; <a href="/mlb/matchups">MLB</a> &rsaquo; Batter vs Pitcher Guide
+    </div>
+
+    <h1>MLB Batter vs Pitcher Matchups</h1>
+    <p class="subhead">How to read BvP data honestly — and where it actually moves the needle for betting and DFS.</p>
+
+    <h2>What Is Batter vs Pitcher Data?</h2>
+    <p>
+      Batter vs pitcher (BvP) data tracks a hitter's historical results against a specific pitcher:
+      at-bats, hits, home runs, strikeouts, walks, and slugging percentage accumulated over every
+      plate appearance the two players have ever faced each other. It's one of the oldest analytical
+      tools in baseball, and one of the most misused.
+    </p>
+    <p>
+      In the modern era, BvP data is widely available and widely over-weighted. The core problem is
+      sample size: most pitcher-batter matchups in any given season involve 5–15 plate appearances —
+      far too few to distinguish signal from variance. A .400 average in 10 at-bats against a
+      particular starter tells you almost nothing reliable about what will happen the 11th time.
+    </p>
+    <p>
+      That doesn't mean BvP data is useless. It means you have to know which situations make it
+      meaningful before acting on it.
+    </p>
+
+    <h2>When BvP Data Actually Matters</h2>
+
+    <div class="callout">
+      <strong>Rule of thumb:</strong> treat BvP as a weak signal until a matchup has at least
+      20–30 plate appearances. Below that threshold, weight handedness and recent form more heavily.
+    </div>
+
+    <p>
+      BvP data becomes more reliable in two conditions:
+    </p>
+    <p>
+      <strong>Deep career matchups.</strong> A hitter who has seen a pitcher 30 or more times across
+      multiple seasons has established a real sample. Tendencies like "struggles with the slider,"
+      "can't turn on the fastball," or "makes consistent hard contact" are more likely to reflect
+      genuine skill edges than a 6-AB hot streak.
+    </p>
+    <p>
+      <strong>Handedness overlap with career platoon data.</strong> A left-handed hitter with a
+      career .350 OBP against right-handed pitching, facing an RHP starter in a situation where the
+      BvP sample also leans positive — that's two corroborating signals, which is more meaningful
+      than either alone.
+    </p>
+
+    <h2>Handedness and Platoon Splits</h2>
+    <p>
+      Platoon splits — how a hitter performs against same-handed versus opposite-handed pitching —
+      are among the most durable and predictive statistics in baseball. They stabilize much faster
+      than BvP matchup data, typically around 200–300 plate appearances.
+    </p>
+    <p>
+      Most left-handed hitters hit better against right-handed pitchers (the ball comes from the
+      opposite side, giving them a longer look at the pitch path). Right-handed batters typically
+      perform better against left-handed pitching for the same mechanical reason. Switch hitters are
+      designed to neutralize this — though their platoon splits vary considerably by individual.
+    </p>
+    <p>
+      When evaluating a BvP matchup, start with the handedness combination. If a hitter has a
+      pronounced career platoon advantage in the direction of tonight's matchup, the BvP number is
+      more likely to be meaningful. If the platoon is neutral or unfavorable, even a positive BvP
+      line deserves more skepticism.
+    </p>
+
+    <h2>BvP for Prop Bets: Hits and Total Bases</h2>
+    <p>
+      The places where BvP data has the most practical value for single-game betting are player
+      props — specifically hits and total bases lines.
+    </p>
+    <p>
+      Unlike game-level outcomes (which depend on run support, bullpen performance, and numerous
+      variables outside a hitter's control), hitting props are more directly tied to the specific
+      pitcher matchup. A hitter who historically makes hard contact against a particular arm type,
+      confirmed by a decent career BvP sample and a favorable handedness split, is a reasonable
+      prop candidate. Combine that with lineup position (higher in the order = more plate
+      appearances) and confirmed lineup status, and the signal gets sharper.
+    </p>
+    <p>
+      The key discipline: don't isolate BvP. Use it as one factor in a checklist — not a reason on
+      its own. A 3-for-7 lifetime line against a pitcher who hasn't started in three weeks and is
+      facing a different ballpark is not the same as a 3-for-7 line under controlled conditions.
+      Context always travels with the number.
+    </p>
+
+    <hr class="divider" />
+
+    <div class="card">
+      <h2>How Betrilo Uses BvP Data</h2>
+      <p>
+        Betrilo's matchup tool pulls daily BvP stats alongside career platoon splits, recent batting
+        form, and confirmed lineup data — so you're looking at the full picture, not just one number
+        in isolation. The data is free, updated daily, and built on a model that has a publicly
+        posted track record you can verify yourself.
+      </p>
+      <p>
+        There's no paywall, no teaser, no locked picks. The track record is posted publicly — wins,
+        losses, and the overall rate — because we think that accountability is the baseline for any
+        analytical tool worth using.
+      </p>
+      <p>
+        Betrilo's best bets are driven by model edge, not narratives. BvP enters the model as one
+        input weight among several, scaled by sample size and filtered against the platoon context.
+        Small samples are discounted automatically; deep matchups with handedness corroboration
+        carry more weight.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn" href="/mlb/matchups">View Today's BvP Matchups</a>
+        <a class="btn btn-outline" href="/mlb/track-record">See the Publicly Tracked Record</a>
+      </div>
+    </div>
+
+    <h2>What to Check Before Acting on a BvP Line</h2>
+    <p>Here's a practical checklist for evaluating any BvP matchup:</p>
+    <p>
+      <strong>Sample size:</strong> How many plate appearances? Under 15, treat as anecdote.
+      20–30 is the floor for weak signal. 40+ is meaningful.
+    </p>
+    <p>
+      <strong>Handedness:</strong> Does the matchup align with the hitter's career platoon strength?
+      If yes, the BvP is more credible. If it's a platoon disadvantage, discount heavily.
+    </p>
+    <p>
+      <strong>Pitcher recency:</strong> Is this the same pitcher who was effective in those earlier
+      matchups? Velocity decline, injury history, or a changed pitch mix can make career BvP data
+      against a different version of the pitcher nearly irrelevant.
+    </p>
+    <p>
+      <strong>Hitter recency:</strong> What's the hitter's form over the last 10–15 games? A cold
+      hitter with good career BvP numbers is still a cold hitter.
+    </p>
+    <p>
+      <strong>Lineup position:</strong> A 9-hole hitter gets fewer plate appearances per game.
+      A positive BvP edge matters more for a confirmed 1–4 hitter who will see the starter 3 times.
+    </p>
+    <p>
+      <strong>Lineup confirmation:</strong> Projected lineups are exactly that — projections. BvP
+      research on a player who gets scratched is wasted work. Check confirmed lineup status before
+      acting on any prop.
+    </p>
+
+  </main>
+
+  <footer>
+    <p>
+      <a href="/">Betrilo</a> &nbsp;&middot;&nbsp;
+      <a href="/mlb/matchups">BvP Matchups</a> &nbsp;&middot;&nbsp;
+      <a href="/mlb/starting-lineups">Starting Lineups</a> &nbsp;&middot;&nbsp;
+      <a href="/mlb/track-record">Track Record</a>
+    </p>
+    <p style="margin-top: 8px;">Free MLB analytics. Publicly tracked record. No paywall.</p>
+  </footer>
+
+</body>
+</html>
