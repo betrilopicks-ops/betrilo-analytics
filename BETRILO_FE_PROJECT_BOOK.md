@@ -1,6 +1,6 @@
 # @betrilopicks Frontend (betrilo.com) — Technical Project Book
 
-**Version:** BFEv0.3.0 | **Last Updated:** June 28, 2026 | **Includes:** Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema
+**Version:** BFEv0.3.1 | **Last Updated:** June 28, 2026 | **Includes:** Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema; BvP guide: crawlable static HTML at /mlb/batter-vs-pitcher-guide (~800 words, content in served HTML pre-JS)
 
 ---
 
@@ -180,4 +180,28 @@ BMLBv3.28.0). Data-source: Branch B — new JSON required. Pending preview revie
 
 **Version:** BFEv0.2.2 → **BFEv0.3.0** (MINOR — new SEO infrastructure layer)
 
-**Status:** Branch `seo-foundation` — pending merge to main.
+**Status:** LIVE — merged to main 2026-06-28 (branch `seo-foundation`, SHA `2e4e61e`). BFEv0.3.0 shipped.
+
+---
+
+### Session: June 28, 2026 — BFEv0.3.0 → BFEv0.3.1 — BvP Evergreen Guide Page
+
+**Summary:** New crawlable static guide page at `/mlb/batter-vs-pitcher-guide`. Implemented as Option B (standalone static HTML in `public/mlb/batter-vs-pitcher-guide.html` + Vercel rewrite rule) — zero changes to React app entry or shared components. Content and meta are present in served HTML before JS runs, making this page indexable by crawlers that don't execute JavaScript. ~800 words of genuine evergreen content: what BvP data is, when it matters, handedness/platoon context, sample-size caveats, prop bet application, and Betrilo's approach. No competitor names.
+
+| File | Change |
+|---|---|
+| `public/mlb/batter-vs-pitcher-guide.html` | New crawlable static guide page |
+| `vercel.json` | Added rewrite rule `/mlb/batter-vs-pitcher-guide` → `...html` before catch-all |
+| `public/sitemap.xml` | Appended guide route (changefreq: monthly, priority: 0.7) |
+
+**Approach:** Option B — standalone static HTML. Option A (react-snap) ruled out because it requires changing the shared `index.js` entry (render→hydrateRoot), which would affect all existing pages.
+
+**Canonical host:** `https://betrilo.com` (apex — inherited from SEO foundation pass).
+
+**CTAs:** `/mlb/matchups` (data) and `/mlb/track-record` (proof).
+
+**Build:** `CI=true npm run build` — "Compiled successfully." Zero warnings.
+
+**Version:** BFEv0.3.0 → **BFEv0.3.1** (PATCH — new static content page; no prerender infra change)
+
+**Status:** Branch `seo-bvp-guide` — preview only, pending operator verify + merge.
