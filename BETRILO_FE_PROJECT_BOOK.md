@@ -1,6 +1,6 @@
 # @betrilopicks Frontend (betrilo.com) — Technical Project Book
 
-**Version:** BFEv0.2.0 | **Last Updated:** June 27, 2026 | **Includes:** Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; change pending preview review + merge, not yet live)
+**Version:** BFEv0.2.0 | **Last Updated:** June 27, 2026 | **Includes:** Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27)
 
 ---
 
@@ -56,7 +56,7 @@ BMLBv3.28.0). Data-source: Branch B — new JSON required. Pending preview revie
 | `src/components/Header.jsx` | "Starting Lineups" nav item added |
 | `public/data/starting_lineups_latest.json` | Seed data for preview |
 
-**Status:** On feature branch `starting-lineups`. Not yet live — pending operator review + merge to main.
+**Status:** LIVE — merged to main 2026-06-27 (branch `starting-lineups`, SHA `bb7c356`).
 
 ---
 
@@ -82,7 +82,7 @@ BMLBv3.28.0). Data-source: Branch B — new JSON required. Pending preview revie
 
 **Build:** `CI=true npm run build` — "Compiled successfully." Zero warnings.
 **No logo/image assets added.** grep: 0 `<img` tags, 0 `.png/.jpg/.svg` references in StartingLineupsPage.jsx.
-**Status:** On feature branch `starting-lineups`. Not yet live — pending operator review + merge to main.
+**Status:** LIVE — merged to main 2026-06-27 (branch `starting-lineups`, SHA `bb7c356`).
 
 ---
 
@@ -103,4 +103,4 @@ BMLBv3.28.0). Data-source: Branch B — new JSON required. Pending preview revie
 
 **Build:** `CI=true npm run build` — "Compiled successfully." Zero warnings.
 **No img/logo assets added.**
-**Status:** On feature branch `starting-lineups`. Not yet live — pending operator review + merge to main.
+**Status:** LIVE — merged to main 2026-06-27 (branch `starting-lineups`, SHA `bb7c356`).
