@@ -138,4 +138,4 @@ BMLBv3.28.0). Data-source: Branch B — new JSON required. Pending preview revie
 
 **Build:** `CI=true npm run build` — "Compiled successfully." Zero warnings.
 
-**Status:** PENDING — preview at `betrilo-analytics-git-fix-projected-note-betrilo.vercel.app`. Verify projected state at `?forceProjected=1`. Merge to main is operator go-live step.
+**Status:** LIVE — merged to main 2026-06-28 (branch `fix-projected-note`, SHA `625cfe6`). BFEv0.2.1 shipped — projected-note contrast fix live on production.
