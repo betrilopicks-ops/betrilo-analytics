@@ -57,3 +57,29 @@ BMLBv3.28.0). Data-source: Branch B — new JSON required. Pending preview revie
 | `public/data/starting_lineups_latest.json` | Seed data for preview |
 
 **Status:** On feature branch `starting-lineups`. Not yet live — pending operator review + merge to main.
+
+---
+
+### Session: June 27, 2026 — BFEv0.2.0 revision — Pitcher/Bats/Team-Name pass
+
+**Summary:** Extended Starting Lineups page (still BFEv0.2.0, unreleased). Three display upgrades driven by new MLB pipeline fields (BMLBv3.29.0):
+
+1. **Pitcher band**: Full-width navy band between game header and batting tables, split left (away SP) / right (home SP). Format: "SP: {Name} · {L/R} · {W-L} · {ERA} ERA · {WHIP} WHIP". TBD renders as "SP: TBD". Null-safe for any missing field.
+
+2. **Full team names**: Replaced abbreviated "{abbr} — Away/Home" labels with full franchise name (e.g., "Houston Astros") + small "(Away)"/"(Home)" tag. Falls back to abbreviation if full name absent. No collision — old label removed.
+
+3. **Name cell alignment**: Player name `<td>` now explicitly `textAlign: 'left'` (was unset/center in some browsers).
+
+4. **Nav order**: "Starting Lineups" moved to first position in `navItems` array in Header.jsx (was second).
+
+5. **JSON updated**: `public/data/starting_lineups_latest.json` regenerated with real 2026-06-27 slate data (15 confirmed games, 270 batters, all pitchers with W/L/ERA/WHIP).
+
+| File | Change |
+|---|---|
+| `src/pages/StartingLineupsPage.jsx` | PitcherBand component; full team name labels; left-align name cells |
+| `src/components/Header.jsx` | Starting Lineups moved to navItems[0] |
+| `public/data/starting_lineups_latest.json` | Regenerated with bats + pitcher objects + full team names |
+
+**Build:** `CI=true npm run build` — "Compiled successfully." Zero warnings.
+**No logo/image assets added.** grep: 0 `<img` tags, 0 `.png/.jpg/.svg` references in StartingLineupsPage.jsx.
+**Status:** On feature branch `starting-lineups`. Not yet live — pending operator review + merge to main.

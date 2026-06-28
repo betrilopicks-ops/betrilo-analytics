@@ -14,6 +14,53 @@ function formatRefreshed(iso) {
   }
 }
 
+function PitcherBand({ awayPitcher, homePitcher }) {
+  function pitcherLabel(p) {
+    if (!p || p.name === 'TBD' || !p.name) return 'SP: TBD';
+    const hand = p.throws ? ` · ${p.throws}` : '';
+    const wl = (p.w != null && p.l != null) ? ` · ${p.w}-${p.l}` : '';
+    const era = p.era != null ? ` · ${p.era} ERA` : '';
+    const whip = p.whip != null ? ` · ${p.whip} WHIP` : '';
+    return `SP: ${p.name}${hand}${wl}${era}${whip}`;
+  }
+
+  return (
+    <div style={{
+      background: colors.navy,
+      borderTop: `1px solid rgba(25,201,62,0.2)`,
+      borderBottom: `2px solid rgba(25,201,62,0.15)`,
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr',
+    }}>
+      {/* Away pitcher — left */}
+      <div style={{
+        padding: '8px 16px',
+        borderRight: `1px solid rgba(22,52,74,0.6)`,
+      }}>
+        <span style={{
+          color: '#19C93E',
+          fontSize: '12px',
+          fontWeight: 700,
+          letterSpacing: '0.2px',
+        }}>
+          {pitcherLabel(awayPitcher)}
+        </span>
+      </div>
+      {/* Home pitcher — right */}
+      <div style={{ padding: '8px 16px' }}>
+        <span style={{
+          color: '#19C93E',
+          fontSize: '12px',
+          fontWeight: 700,
+          letterSpacing: '0.2px',
+        }}>
+          {pitcherLabel(homePitcher)}
+        </span>
+      </div>
+    </div>
+  );
+}
+
 function LineupTable({ lineup, lineupStatus }) {
   const isConfirmed = lineupStatus === 'confirmed';
 
@@ -45,7 +92,7 @@ function LineupTable({ lineup, lineupStatus }) {
             }}
           >
             <td style={{ padding: '7px 8px', color: colors.green, fontWeight: 700 }}>{p.order}</td>
-            <td style={{ padding: '7px 8px', color: colors.text, fontWeight: 500 }}>{p.name || '—'}</td>
+            <td style={{ padding: '7px 8px', color: colors.text, fontWeight: 500, textAlign: 'left' }}>{p.name || '—'}</td>
             <td style={{ padding: '7px 8px', color: colors.textMuted }}>{p.position || '—'}</td>
             <td style={{ padding: '7px 8px', color: colors.textMuted }}>{p.bats || '—'}</td>
           </tr>
@@ -60,6 +107,9 @@ function GameCard({ game }) {
   const badge = isConfirmed
     ? { label: '✓ Confirmed', bg: colors.green, color: colors.navy }
     : { label: 'Projected (TBD)', bg: 'rgba(159,179,192,0.15)', color: colors.textMuted };
+
+  const awayName = game.away_team_full || game.away_team;
+  const homeName = game.home_team_full || game.home_team;
 
   return (
     <div style={{
@@ -96,19 +146,27 @@ function GameCard({ game }) {
         </span>
       </div>
 
+      {/* Pitcher band */}
+      <PitcherBand
+        awayPitcher={game.away_pitcher || null}
+        homePitcher={game.home_pitcher || null}
+      />
+
       {/* Side-by-side lineups */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0' }}>
         {/* Away */}
         <div style={{ padding: '12px 16px', borderRight: `1px solid rgba(22,52,74,0.6)` }}>
-          <div style={{ color: colors.textMuted, fontSize: '11px', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', marginBottom: '8px' }}>
-            {game.away_team} — Away
+          <div style={{ marginBottom: '8px' }}>
+            <span style={{ color: '#fff', fontSize: '13px', fontWeight: 700 }}>{awayName}</span>
+            <span style={{ color: colors.textMuted, fontSize: '11px', fontWeight: 600, marginLeft: '6px' }}>(Away)</span>
           </div>
           <LineupTable lineup={game.away_lineup} lineupStatus={game.lineup_status} />
         </div>
         {/* Home */}
         <div style={{ padding: '12px 16px' }}>
-          <div style={{ color: colors.textMuted, fontSize: '11px', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', marginBottom: '8px' }}>
-            {game.home_team} — Home
+          <div style={{ marginBottom: '8px' }}>
+            <span style={{ color: '#fff', fontSize: '13px', fontWeight: 700 }}>{homeName}</span>
+            <span style={{ color: colors.textMuted, fontSize: '11px', fontWeight: 600, marginLeft: '6px' }}>(Home)</span>
           </div>
           <LineupTable lineup={game.home_lineup} lineupStatus={game.lineup_status} />
         </div>
