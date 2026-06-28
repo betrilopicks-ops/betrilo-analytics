@@ -6,12 +6,12 @@ import { colors } from '../theme';
 const navItems = [
   { to: '/mlb/starting-lineups', label: 'Starting Lineups' },
   { to: '/mlb/matchups', label: 'Batter vs. Pitcher' },
-  { to: '/mlb/player-projections', label: 'Player Projections' },
   { to: '/mlb/batter-splits', label: 'Batter Splits' },
   { to: '/mlb/best-bets', label: 'Best Bets' },
+  { to: '/mlb/player-projections', label: 'Player Projections' },
   { to: '/mlb/edge-report', label: 'Edge Report' },
-  { to: '/mlb/track-record', label: 'Track Record' },
   { to: '/mlb/results', label: 'Results' },
+  { to: '/mlb/track-record', label: 'Track Record' },
   { to: '/mlb/leaderboards/streaks', label: 'Leaderboards' },
 ];
 

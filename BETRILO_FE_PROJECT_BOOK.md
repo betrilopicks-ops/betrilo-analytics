@@ -83,3 +83,24 @@ BMLBv3.28.0). Data-source: Branch B — new JSON required. Pending preview revie
 **Build:** `CI=true npm run build` — "Compiled successfully." Zero warnings.
 **No logo/image assets added.** grep: 0 `<img` tags, 0 `.png/.jpg/.svg` references in StartingLineupsPage.jsx.
 **Status:** On feature branch `starting-lineups`. Not yet live — pending operator review + merge to main.
+
+---
+
+### Session: June 27, 2026 — BFEv0.2.0 revision — Hero banner + grid reorder
+
+**Summary:** Landing page hero banner and grid reorder (still BFEv0.2.0, unreleased on `starting-lineups`).
+
+1. **Hero banner**: Full-width `TrackRecordBanner` component added ABOVE the card grid in LandingPage.jsx. Fetches `/data/track_record_latest.json` (same source as TrackRecordPage). Displays `overall.rate` as "{rate}% hit rate". Framing label uses identical `verified` boolean: `!!(data && data.verified)` → `verified=false` → "Publicly Tracked Record", `verified=true` → "Verified Track Record". Graceful fallback: if fetch fails or `overall.rate` is null/undefined/NaN, rate display is omitted; banner still renders. No crash, no "undefined%". No `<img>` tags.
+
+2. **Grid reorder (8 cards)**: Track Record removed from grid (now hero banner). Starting Lineups added as slot 1. Canonical order: Starting Lineups · Batter vs Pitcher · Batter Splits · Best Bets · Player Projections · Edge Report · Results · Leaderboards (Coming Soon).
+
+3. **Nav reorder (9 items)**: Header.jsx navItems set to canonical order — Starting Lineups · BvP · Batter Splits · Best Bets · Player Projections · Edge Report · Results · Track Record · Leaderboards. Track Record moved to slot 8 (was slot 7). Player Projections moved from slot 3 to slot 5. Batter Splits moved from slot 4 to slot 3.
+
+| File | Change |
+|---|---|
+| `src/pages/LandingPage.jsx` | `TrackRecordBanner` hero component added above grid; CARDS array reordered, Track Record removed, Starting Lineups added slot 1 |
+| `src/components/Header.jsx` | navItems reordered to canonical 9-item sequence |
+
+**Build:** `CI=true npm run build` — "Compiled successfully." Zero warnings.
+**No img/logo assets added.**
+**Status:** On feature branch `starting-lineups`. Not yet live — pending operator review + merge to main.
