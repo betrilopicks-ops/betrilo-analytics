@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { colors } from '../theme';
 
 const FRAMES = [
@@ -103,8 +104,20 @@ export default function BatterSplitsPage() {
     </th>
   );
 
+  const title = 'MLB Batter Splits & Platoon Data | Betrilo';
+  const desc = 'MLB batter performance splits vs. left-handed and right-handed pitching. Filter by handedness and date range.';
+  const url = 'https://betrilo.com/mlb/batter-splits';
   return (
     <div style={{ maxWidth: 1600, margin: '0 auto', padding: '24px 16px 60px' }}>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={desc} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href={url} />
+      </Helmet>
       <div style={{ textAlign: 'center', marginBottom: '16px' }}>
         <h1 style={{ color: colors.navy, fontSize: '30px', fontWeight: 800, margin: 0 }}>Batter Splits</h1>
         <p style={{ color: '#5a6b76', fontSize: '14px', margin: '6px 0 0' }}>

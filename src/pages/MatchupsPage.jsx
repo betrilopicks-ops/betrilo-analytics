@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 export default function MatchupsPage() {
   const [games, setGames] = useState([]);
@@ -193,8 +194,20 @@ export default function MatchupsPage() {
       })
     : '';
 
+  const title = 'MLB Batter vs. Pitcher Matchups | Betrilo';
+  const desc = "Head-to-head MLB batter vs. pitcher split data for today's slate. Filter by handedness, see historical hit rates.";
+  const url = 'https://betrilo.com/mlb/matchups';
   return (
     <div style={{ padding: '20px', background: '#f9f9f9', minHeight: '100vh' }}>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={desc} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href={url} />
+      </Helmet>
       {dataLoading ? (
         <div style={{ textAlign: 'center', color: '#666' }}>Loading games...</div>
       ) : dataError ? (

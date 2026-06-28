@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { colors } from '../theme';
 
 function formatRefreshed(iso) {
@@ -205,8 +206,20 @@ export default function StartingLineupsPage() {
 
   const confirmedCount = games.filter(g => g.lineup_status === 'confirmed').length;
 
+  const title = 'MLB Starting Lineups Today — Confirmed & Projected | Betrilo';
+  const desc = "Today's confirmed and projected MLB starting lineups, updated through first pitch. Batting order, position, and handedness.";
+  const url = 'https://betrilo.com/mlb/starting-lineups';
   return (
     <div style={{ maxWidth: '960px', margin: '0 auto', padding: '24px 16px' }}>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={desc} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href={url} />
+      </Helmet>
       {/* Page header */}
       <div style={{ marginBottom: '20px' }}>
         <h1 style={{ color: '#fff', fontSize: '24px', fontWeight: 800, margin: '0 0 4px' }}>

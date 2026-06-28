@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { colors } from '../theme';
 
 function pct(x) { return x === null || x === undefined ? '—' : `${(x * 100).toFixed(1)}%`; }
@@ -202,8 +203,20 @@ export default function TrackRecordPage() {
   const o = data.overall || {};
   const w = data.window || {};
 
+  const title = 'Betrilo MLB Track Record — Verified Pick Accuracy';
+  const desc = 'Publicly tracked MLB pick results. See our hit rate, graded history, and validation methodology.';
+  const url = 'https://betrilo.com/mlb/track-record';
   return (
     <div style={{ maxWidth: 880, margin: '0 auto', padding: '24px 16px 60px' }}>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={desc} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href={url} />
+      </Helmet>
       <h1 style={{ color: colors.navy, fontSize: '30px', fontWeight: 800, margin: '0 0 4px', textAlign: 'center' }}>Track Record</h1>
       {/* Rebase-reveal banner (Edit 6) */}
       {showReveal && (

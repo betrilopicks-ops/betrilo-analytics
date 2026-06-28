@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { colors } from '../theme';
 
 export default function PlayerProjectionsPage() {
@@ -140,8 +141,20 @@ export default function PlayerProjectionsPage() {
       })()
     : '';
 
+  const title = 'MLB Player Projections — Hits, TB, HR | Betrilo';
+  const desc = 'Daily MLB batter projections for hits, total bases, and home runs based on opposing pitcher matchups.';
+  const url = 'https://betrilo.com/mlb/player-projections';
   return (
     <div style={{ maxWidth: 1600, margin: '0 auto', padding: '24px 16px 60px' }}>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={desc} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href={url} />
+      </Helmet>
       <div style={{ textAlign: 'center', marginBottom: '18px' }}>
         <h1 style={{ color: colors.navy, fontSize: '30px', fontWeight: 800, margin: 0 }}>Player Projections</h1>
         <p style={{ color: '#5a6b76', fontSize: '14px', margin: '6px 0 0' }}>
