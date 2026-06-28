@@ -175,6 +175,9 @@ function GameCard({ game }) {
   );
 }
 
+// ?forceProjected=1 overrides all lineup_status to 'projected' — used to verify the note on preview
+const forceProjected = new URLSearchParams(window.location.search).get('forceProjected') === '1';
+
 export default function StartingLineupsPage() {
   const [games, setGames] = useState([]);
   const [slateDate, setSlateDate] = useState('');
@@ -187,7 +190,8 @@ export default function StartingLineupsPage() {
     fetch('/data/starting_lineups_latest.json')
       .then((res) => { if (!res.ok) throw new Error('fetch failed'); return res.json(); })
       .then((data) => {
-        setGames(data.games || []);
+        const raw = data.games || [];
+        setGames(forceProjected ? raw.map(g => ({ ...g, lineup_status: 'projected' })) : raw);
         setSlateDate(data.slate_date || '');
         setLastRefreshed(data.last_refreshed || '');
         setLoading(false);
@@ -268,15 +272,15 @@ export default function StartingLineupsPage() {
 
           {displayedGames.some(g => g.lineup_status !== 'confirmed') && (
             <div style={{
-              color: colors.textMuted,
+              color: colors.text,
               fontSize: '12px',
               marginBottom: '14px',
               padding: '8px 12px',
               background: 'rgba(22,52,74,0.4)',
-              borderLeft: `3px solid rgba(25,201,62,0.3)`,
+              borderLeft: `3px solid rgba(25,201,62,0.45)`,
               borderRadius: '0 4px 4px 0',
             }}>
-              Lineups projected from batter history vs. pitcher handedness — they'll refresh to confirmed as official lineups post.
+              Lineups projected from batter history vs. pitcher handedness — they&apos;ll refresh to confirmed as official lineups post.
             </div>
           )}
 

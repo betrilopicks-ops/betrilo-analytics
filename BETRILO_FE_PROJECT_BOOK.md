@@ -1,6 +1,6 @@
 # @betrilopicks Frontend (betrilo.com) — Technical Project Book
 
-**Version:** BFEv0.2.0 | **Last Updated:** June 27, 2026 | **Includes:** Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27)
+**Version:** BFEv0.2.1 | **Last Updated:** June 28, 2026 | **Includes:** Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param)
 
 ---
 
@@ -117,4 +117,25 @@ BMLBv3.28.0). Data-source: Branch B — new JSON required. Pending preview revie
 
 **Build:** `CI=true npm run build` — "Compiled successfully." Zero warnings.
 
-**Status:** PENDING — preview at `betrilo-analytics-git-lineups-projected-note-betrilo.vercel.app`, merge to main is operator go-live step.
+**Status:** MERGED — live on main 2026-06-28 (branch `lineups-projected-note`).
+
+### Session: June 28, 2026 — BFEv0.2.0 → BFEv0.2.1 — Projected-lineups note bugfix
+
+**Root cause:** `color: colors.textMuted` (#9fb3c0) at 12px on `rgba(22,52,74,0.4)` semi-transparent dark background produced near-zero perceived contrast — the container (gray bar + green left-border) rendered correctly but the text was visually invisible. Bug was masked in preview because all 15 games in the seed data were confirmed, so the note never rendered during review.
+
+**Fix:** Changed text color from `colors.textMuted` to `colors.text` (#e8eef2) — muted feel retained via background/border styling, not text color. Also added `?forceProjected=1` URL param that overrides all game lineup_status to 'projected' in-memory so the projected state can be verified on any preview or production URL without waiting for live projected data.
+
+**Three render states verified via forceProjected param:**
+- `?forceProjected=1` (all projected): note renders with readable #e8eef2 text
+- Default (all confirmed from live data): note absent
+- Single-game filter on a projected game: note present; on a confirmed game: absent
+
+**Version:** BFEv0.2.0 → **BFEv0.2.1** (PATCH — bugfix to shipped output)
+
+**Branch:** `fix-projected-note` — preview-only, pending operator merge.
+
+**Files changed:** `src/pages/StartingLineupsPage.jsx`
+
+**Build:** `CI=true npm run build` — "Compiled successfully." Zero warnings.
+
+**Status:** PENDING — preview at `betrilo-analytics-git-fix-projected-note-betrilo.vercel.app`. Verify projected state at `?forceProjected=1`. Merge to main is operator go-live step.
