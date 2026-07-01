@@ -18,7 +18,18 @@ export default function PlayerProjectionsPage() {
     fetch('/data/player_projections_latest.json')
       .then((res) => { if (!res.ok) throw new Error('fetch failed'); return res.json(); })
       .then((data) => {
-        setGames(data.games || []);
+        const parseTimeET = (t) => {
+          if (!t) return Infinity;
+          const m = t.match(/(\d+):(\d+)\s*(AM|PM)/i);
+          if (!m) return Infinity;
+          let h = parseInt(m[1], 10);
+          const min = parseInt(m[2], 10);
+          if (m[3].toUpperCase() === 'AM') { if (h === 12) h = 0; }
+          else { if (h !== 12) h += 12; }
+          return h * 60 + min;
+        };
+        const sorted = (data.games || []).slice().sort((a, b) => parseTimeET(a.time) - parseTimeET(b.time));
+        setGames(sorted);
         setSlateDate(data.slate_date || '');
         setLastRefreshed(data.last_refreshed || '');
         setLineupStatus(data.lineup_status || 'projected');

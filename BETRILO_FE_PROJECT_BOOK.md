@@ -1,6 +1,6 @@
 # @betrilopicks Frontend (betrilo.com) — Technical Project Book
 
-**Version:** BFEv0.3.2 | **Last Updated:** July 1, 2026 | **Includes:** Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema; BvP guide: crawlable static HTML at /mlb/batter-vs-pitcher-guide (~800 words, content in served HTML pre-JS); Footer support mailto (support@betrilo.com; green on navy; legible contrast)
+**Version:** BFEv0.3.3 | **Last Updated:** July 1, 2026 | **Includes:** Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema; BvP guide: crawlable static HTML at /mlb/batter-vs-pitcher-guide (~800 words, content in served HTML pre-JS); Footer support mailto (support@betrilo.com; green on navy; legible contrast); Game dropdown chronological sort (PlayerProjections + StartingLineups)
 
 ---
 
@@ -221,3 +221,26 @@ BMLBv3.28.0). Data-source: Branch B — new JSON required. Pending preview revie
 **Version:** BFEv0.3.1 → **BFEv0.3.2** (PATCH — footer support contact)
 
 **Status:** Branch `support-footer` — preview only, pending operator verify + merge.
+
+---
+
+### Session: July 1, 2026 — BFEv0.3.2 → BFEv0.3.3 — Game Dropdown Chronological Sort
+
+**Summary:** Fixed game-selector dropdown sort order on two pages. Games were rendering in JSON arrival order (e.g. 3:07 PM before 12:35 PM). Fixed to sort chronologically by first pitch. MatchupsPage already sorted correctly (via `start_time` ISO field); PlayerProjectionsPage and StartingLineupsPage did not.
+
+- **PlayerProjectionsPage** — `player_projections_latest.json` has only a display string (`time`: "3:07 PM ET", no `start_time`). Fix: `parseTimeET()` converts 12-hour AM/PM display string to minutes-since-midnight; games sorted in `useEffect` before `setGames()`.
+- **StartingLineupsPage** — `starting_lineups_latest.json` has `start_time` (ISO: "2026-07-01T16:35:00Z"). Fix: lexicographic sort on `start_time` (same pattern as MatchupsPage), applied before `setGames()`.
+- "All Games" option stays pinned at top in both dropdowns.
+
+| File | Change |
+|---|---|
+| `src/pages/PlayerProjectionsPage.jsx` | `parseTimeET()` sort on `time` display string in `useEffect` |
+| `src/pages/StartingLineupsPage.jsx` | `start_time` ISO sort in `useEffect` |
+
+**Rendered order (both pages):** 12:35 PM → 1:10 PM → 1:35 PM → 1:35 PM → 2:20 PM → 3:07 PM → 6:40 PM → 7:15 PM → 7:40 PM → 8:10 PM → 8:10 PM → 8:40 PM → 9:40 PM → 9:40 PM
+
+**Build:** `CI=true npm run build` — "Compiled successfully." Zero warnings.
+
+**Version:** BFEv0.3.2 → **BFEv0.3.3** (PATCH — dropdown sort fix, two pages)
+
+**Status:** Branch `dropdown-sort` — preview only, pending operator verify + merge.
