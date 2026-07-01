@@ -1,6 +1,6 @@
 # @betrilopicks Frontend (betrilo.com) — Technical Project Book
 
-**Version:** BFEv0.3.1 | **Last Updated:** June 28, 2026 | **Includes:** Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema; BvP guide: crawlable static HTML at /mlb/batter-vs-pitcher-guide (~800 words, content in served HTML pre-JS)
+**Version:** BFEv0.3.2 | **Last Updated:** July 1, 2026 | **Includes:** Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema; BvP guide: crawlable static HTML at /mlb/batter-vs-pitcher-guide (~800 words, content in served HTML pre-JS); Footer support mailto (support@betrilo.com; green on navy; legible contrast)
 
 ---
 
@@ -205,3 +205,19 @@ BMLBv3.28.0). Data-source: Branch B — new JSON required. Pending preview revie
 **Version:** BFEv0.3.0 → **BFEv0.3.1** (PATCH — new static content page; no prerender infra change)
 
 **Status:** Branch `seo-bvp-guide` — preview only, pending operator verify + merge.
+
+---
+
+### Session: July 1, 2026 — BFEv0.3.1 → BFEv0.3.2 — Footer Support Mailto
+
+**Summary:** Added support contact line to site footer. Text: "Questions or feedback? Email support@betrilo.com" with mailto link. Label (`colors.text`, `#e8eef2`) and link (`colors.green`, `#19C93E`) on navy (`#0B2331`) — high contrast, matches design system. Placed between copyright line and disclaimer block.
+
+| File | Change |
+|---|---|
+| `src/components/Footer.jsx` | Support mailto line added |
+
+**Build:** `CI=true npm run build` — "Compiled successfully." Zero warnings.
+
+**Version:** BFEv0.3.1 → **BFEv0.3.2** (PATCH — footer support contact)
+
+**Status:** Branch `support-footer` — preview only, pending operator verify + merge.
