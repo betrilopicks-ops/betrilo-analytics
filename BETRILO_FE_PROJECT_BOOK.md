@@ -1,6 +1,6 @@
 # @betrilopicks Frontend (betrilo.com) — Technical Project Book
 
-**Version:** BFEv0.3.3 | **Last Updated:** July 1, 2026 | **Includes:** Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema; BvP guide: crawlable static HTML at /mlb/batter-vs-pitcher-guide (~800 words, content in served HTML pre-JS); Footer support mailto (support@betrilo.com; green on navy; legible contrast); Game dropdown chronological sort (PlayerProjections + StartingLineups)
+**Version:** BFEv0.3.4 | **Last Updated:** July 5, 2026 | **Includes:** H+R+RBI column on Player Projections page (proj_hrrbi passthrough from DB — same value as Results page; sortable; 327/520 batters covered; footer Key corrected); Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema; BvP guide: crawlable static HTML at /mlb/batter-vs-pitcher-guide (~800 words, content in served HTML pre-JS); Footer support mailto (support@betrilo.com; green on navy; legible contrast); Game dropdown chronological sort (PlayerProjections + StartingLineups)
 
 ---
 
@@ -244,3 +244,21 @@ BMLBv3.28.0). Data-source: Branch B — new JSON required. Pending preview revie
 **Version:** BFEv0.3.2 → **BFEv0.3.3** (PATCH — dropdown sort fix, two pages)
 
 **Status:** Branch `dropdown-sort` — preview only, pending operator verify + merge.
+
+### Session: July 5, 2026 — BFEv0.3.3 → BFEv0.3.4 — H+R+RBI Column on Player Projections
+
+**Summary:** Added H+R+RBI projected combo column to the Player Projections table. Prior recon had incorrectly concluded the projection was "not computed" — it IS computed in the MLB pipeline (`batter_projections.proj_hits + proj_runs + proj_rbi`) and already shown on the Results page. Fix: MLB pipeline (`export_player_projections_json.py`) now passes the value into `player_projections_latest.json` as `proj_hrrbi`; FE reads that field.
+
+| File | Change |
+|---|---|
+| `src/pages/PlayerProjectionsPage.jsx` | Added `proj_hrrbi` column (after Proj BB); cellValue case; td with `fontWeight: 600, color: navy`; footer Key text corrected |
+
+**Column:** labeled "H+R+RBI"; placed after Proj BB in the projections cluster; sortable (numeric desc on click); null → "—". 327/520 batters covered (deep bench/reserves without pitching matchup data show "—", consistent with other projection columns).
+
+**Value consistency:** `proj_hrrbi` in Player Projections page = `proj_hrrbi` in Results page combo block — both read from `batter_projections.proj_hits + proj_runs + proj_rbi`. Spot-check July 5: Jackson Chourio 3.25, Luis Arraez 3.05, Bo Bichette 2.24.
+
+**Companion MLB change:** BMLBv3.34.0 — `export_player_projections_json.py` `_load_hrrbi_lookup()`.
+
+**Build:** `CI=true npm run build` — see below.
+
+**Version:** BFEv0.3.3 → **BFEv0.3.4** (PATCH — new column, existing data)
