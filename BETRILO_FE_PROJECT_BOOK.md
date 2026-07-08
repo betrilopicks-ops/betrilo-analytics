@@ -1,6 +1,6 @@
 # @betrilopicks Frontend (betrilo.com) — Technical Project Book
 
-**Version:** BFEv0.3.4 | **Last Updated:** July 5, 2026 | **Includes:** H+R+RBI column on Player Projections page (proj_hrrbi passthrough from DB — same value as Results page; sortable; 327/520 batters covered; footer Key corrected); Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema; BvP guide: crawlable static HTML at /mlb/batter-vs-pitcher-guide (~800 words, content in served HTML pre-JS); Footer support mailto (support@betrilo.com; green on navy; legible contrast); Game dropdown chronological sort (PlayerProjections + StartingLineups)
+**Version:** BFEv0.3.5 | **Last Updated:** July 8, 2026 | **Includes:** VP AB column on Player Projections page (column relabeled VP AB, reads vp_ab from JSON instead of vp_pa; cellValue switch and td render updated; footer Key text updated to "VP AB/H/HR/xwOBA — career at-bats and performance vs. today's probable pitcher"); H+R+RBI column on Player Projections page (proj_hrrbi passthrough from DB — same value as Results page; sortable; 327/520 batters covered; footer Key corrected); Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema; BvP guide: crawlable static HTML at /mlb/batter-vs-pitcher-guide (~800 words, content in served HTML pre-JS); Footer support mailto (support@betrilo.com; green on navy; legible contrast); Game dropdown chronological sort (PlayerProjections + StartingLineups)
 
 ---
 
@@ -262,3 +262,15 @@ BMLBv3.28.0). Data-source: Branch B — new JSON required. Pending preview revie
 **Build:** `CI=true npm run build` — see below.
 
 **Version:** BFEv0.3.3 → **BFEv0.3.4** (PATCH — new column, existing data)
+
+---
+
+### Session: July 8, 2026 — BFEv0.3.4 → BFEv0.3.5 — VP AB Column on Player Projections
+
+**Summary:** Replaced VP PA (plate appearances vs probable pitcher) column with VP AB (at-bats). Data fix — AB is not the same as PA (PA includes walks, HBP, SF, SH, CI; AB excludes them). The MLB pipeline now computes `vp_ab` from `batter_pitches.events` (see BMLBv3.36.0). FE reads the new `vp_ab` field.
+
+| File | Change |
+|---|---|
+| `src/pages/PlayerProjectionsPage.jsx` | Column key `vp_pa`→`vp_ab`, label `vP PA`→`VP AB`; cellValue switch case updated; td render updated; footer Key text: `vP AVG/xwOBA` → `VP AB/H/HR/xwOBA — career at-bats and performance vs. today's probable pitcher` |
+
+**Version:** BFEv0.3.4 → **BFEv0.3.5** (PATCH — label + field key change, new data field from pipeline)

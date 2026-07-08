@@ -103,7 +103,7 @@ export default function PlayerProjectionsPage() {
     { key: 'proj_bb', label: 'Proj BB', type: 'num', align: 'center' },
     { key: 'proj_hrrbi', label: 'H+R+RBI', type: 'num', align: 'center' },
     { key: 'l10_hit_pct', label: 'L10 Hit%', type: 'num', align: 'center' },
-    { key: 'vp_pa', label: 'vP PA', type: 'num', align: 'center' },
+    { key: 'vp_ab', label: 'VP AB', type: 'num', align: 'center' },
     { key: 'vp_h', label: 'vP H', type: 'num', align: 'center' },
     { key: 'vp_hr', label: 'vP HR', type: 'num', align: 'center' },
     { key: 'vp_xwoba', label: 'vP xwOBA', type: 'num', align: 'center' },
@@ -123,7 +123,7 @@ export default function PlayerProjectionsPage() {
       case 'proj_bb': return fmt(r.proj_bb, 2);
       case 'proj_hrrbi': return fmt(r.proj_hrrbi, 2);
       case 'l10_hit_pct': return fmtPct(r.l10_hit_pct);
-      case 'vp_pa': return fmtInt(r.vp_pa);
+      case 'vp_ab': return fmtInt(r.vp_ab);
       case 'vp_h': return fmtInt(r.vp_h);
       case 'vp_hr': return fmtInt(r.vp_hr);
       case 'vp_xwoba': return fmt3(r.vp_xwoba);
@@ -240,7 +240,7 @@ export default function PlayerProjectionsPage() {
                 <td style={{ padding: '9px 11px', textAlign: 'center' }}>{cellValue(r, 'proj_bb')}</td>
                 <td style={{ padding: '9px 11px', textAlign: 'center', fontWeight: 600, color: colors.navy }}>{cellValue(r, 'proj_hrrbi')}</td>
                 <td style={{ padding: '9px 11px', textAlign: 'center' }}>{cellValue(r, 'l10_hit_pct')}</td>
-                <td style={{ padding: '9px 11px', textAlign: 'center', color: '#5a6b76' }}>{cellValue(r, 'vp_pa')}</td>
+                <td style={{ padding: '9px 11px', textAlign: 'center', color: '#5a6b76' }}>{cellValue(r, 'vp_ab')}</td>
                 <td style={{ padding: '9px 11px', textAlign: 'center', color: '#5a6b76' }}>{cellValue(r, 'vp_h')}</td>
                 <td style={{ padding: '9px 11px', textAlign: 'center', color: '#5a6b76' }}>{cellValue(r, 'vp_hr')}</td>
                 <td style={{ padding: '9px 11px', textAlign: 'center', color: '#5a6b76' }}>{cellValue(r, 'vp_xwoba')}</td>
@@ -252,7 +252,7 @@ export default function PlayerProjectionsPage() {
         {filteredRows.length === 0 && <div style={{ padding: '24px', textAlign: 'center', color: colors.textMuted }}>No batters match those filters.</div>}
       </div>
       <div style={{ marginTop: '10px', padding: '12px 14px', background: '#f4f7f9', borderRadius: '8px', fontSize: '12px', color: '#5a6b76', lineHeight: 1.6 }}>
-        <strong style={{ color: colors.navy }}>Key:</strong> Model projections for today's slate. <strong>Proj H/TB/HR/BB</strong> — projected hits, total bases, home runs, walks. <strong>H+R+RBI</strong> — projected combo (hits + runs + RBIs); shown for batters with full matchup data. <strong>vP AVG/xwOBA</strong> — career performance vs. today's probable pitcher. <strong>H Streak</strong> — current games with a hit. Green shading marks projected hits ≥ 0.75. {filteredRows.length} batters{isAllGames ? ` across ${games.length} games` : ''}.
+        <strong style={{ color: colors.navy }}>Key:</strong> Model projections for today's slate. <strong>Proj H/TB/HR/BB</strong> — projected hits, total bases, home runs, walks. <strong>H+R+RBI</strong> — projected combo (hits + runs + RBIs); shown for batters with full matchup data. <strong>VP AB/H/HR/xwOBA</strong> — career at-bats and performance vs. today's probable pitcher. <strong>H Streak</strong> — current games with a hit. Green shading marks projected hits ≥ 0.75. {filteredRows.length} batters{isAllGames ? ` across ${games.length} games` : ''}.
       </div>
     </div>
   );
