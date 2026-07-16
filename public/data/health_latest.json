@@ -1,8 +1,8 @@
 {
   "verdict": "ALL GOOD",
-  "headline": "All steps passed.",
-  "checked_at": "2026-07-05T06:08:45",
-  "run_date": "2026-07-05",
+  "headline": "Core run OK. Optional step warnings: Validation metrics",
+  "checked_at": "2026-07-16T07:00:20",
+  "run_date": "2026-07-16",
   "required_ok": true,
   "steps": {
     "Pipeline generation": "OK",
@@ -19,7 +19,7 @@
     "Caption generation": "OK",
     "GitHub image upload": "OK",
     "Buffer posting (IG + Threads + X)": "OK",
-    "Validation metrics": "OK",
+    "Validation metrics": "FAIL",
     "Database backup": "OK"
   }
 }
