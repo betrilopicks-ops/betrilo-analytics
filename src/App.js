@@ -16,6 +16,7 @@ import BatterSplitsPage from './pages/BatterSplitsPage';
 import ResultsPage from './pages/ResultsPage';
 import StartingLineupsPage from './pages/StartingLineupsPage';
 import NotFoundPage from './pages/NotFoundPage';
+import StatusPage from './pages/StatusPage';
 
 function AppContent() {
   const location = useLocation();
@@ -38,6 +39,7 @@ function AppContent() {
           <Route path="/mlb/best-bets" element={<BestBetsPage />} />
           <Route path="/mlb/leaderboards/:board" element={<LeaderboardsPage />} />
           <Route path="/mlb/leaderboards" element={<LeaderboardsPage />} />
+          <Route path="/status" element={<StatusPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
