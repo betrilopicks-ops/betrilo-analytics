@@ -20,29 +20,31 @@ const SURFACES = [
     label: 'Best Bets',
     file: '/data/best_bets_latest.json',
     getFreshness: d => parseSlateDateHuman(d.slate_date),
-    getGames: d => d.blocks?.per_game?.length ?? 0,
+    getGames: () => null,
     getRecords: d => {
       const b = d.blocks ?? {};
       const n = (b.top8?.length ?? 0) + (b.per_game?.length ?? 0) + (b.top_hit?.length ?? 0);
       return { count: n, label: 'picks' };
     },
+    noGameCount: true, // games with qualifying bets ≤ total games — not a mismatch signal
   },
   {
     key: 'edge_report',
     label: 'Edge Report',
     file: '/data/edge_report_latest.json',
     getFreshness: d => d.slate_date ? d.slate_date + 'T06:00:00-04:00' : null,
-    getGames: d => new Set(d.picks?.map(p => `${p.team}-${p.opp}`)).size || 0,
+    getGames: () => null,
     getRecords: d => ({ count: d.count ?? d.picks?.length ?? 0, label: 'picks' }),
+    noGameCount: true, // pick count ≠ game count — freshness-only health
   },
   {
     key: 'batter_splits',
     label: 'Batter Splits',
     file: '/data/batter_splits_latest.json',
     getFreshness: d => d.generated ? d.generated + 'T06:00:00-04:00' : null,
-    getGames: d => new Set(d.players?.map(p => p.team)).size || 0,
+    getGames: () => null,
     getRecords: d => ({ count: d.count ?? d.players?.length ?? 0, label: 'players' }),
-    gamesLabel: 'teams',
+    noGameCount: true, // team count ≠ game count — freshness-only health
   },
   {
     key: 'game_matchups',
