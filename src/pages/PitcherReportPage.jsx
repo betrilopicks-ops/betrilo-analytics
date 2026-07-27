@@ -87,7 +87,7 @@ function ArsenalRow({ pitch, usage_pct, velo }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
       <span style={{ width: '70px', fontSize: '12px', fontWeight: 600, color: colors.text, textAlign: 'right' }}>{pitch}</span>
-      <div style={{ flex: 1, height: '14px', background: 'rgba(255,255,255,0.04)', borderRadius: '3px', overflow: 'hidden', position: 'relative' }}>
+      <div style={{ flex: 1, height: '14px', background: 'rgba(255,255,255,0.06)', borderRadius: '3px', overflow: 'hidden', position: 'relative' }}>
         <div style={{ width: `${Math.min(usage_pct, maxW)}%`, height: '100%', background: `linear-gradient(90deg, ${colors.green}88, ${colors.green}cc)`, borderRadius: '3px' }} />
       </div>
       <span style={{ width: '40px', fontSize: '12px', color: colors.textMuted, textAlign: 'right' }}>{usage_pct}%</span>
@@ -102,7 +102,7 @@ function SplitsTable({ splits }) {
   if (!splits || (!splits.vs_lhb && !splits.vs_rhb)) {
     return <div style={{ color: colors.textMuted, fontSize: '12px', fontStyle: 'italic' }}>No split data available</div>;
   }
-  const cellStyle = { padding: '4px 10px', fontSize: '13px', textAlign: 'center', borderBottom: '1px solid rgba(255,255,255,0.04)', color: colors.text };
+  const cellStyle = { padding: '4px 10px', fontSize: '13px', textAlign: 'center', borderBottom: '1px solid rgba(0,0,0,0.25)', color: colors.text };
   const headStyle = { ...cellStyle, fontWeight: 700, color: colors.textMuted, fontSize: '11px', textTransform: 'uppercase' };
   return (
     <table style={{ width: '100%', borderCollapse: 'collapse' }}>
@@ -146,7 +146,7 @@ function PitcherCard({ p, open, onToggle }) {
       <div style={{
         flex: '1 1 0', minWidth: '260px', padding: '16px',
         background: colors.navyLight,
-        borderLeft: '1px solid rgba(255,255,255,0.04)',
+        borderLeft: '1px solid rgba(0,0,0,0.25)',
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           <span style={{ fontSize: '16px', fontWeight: 700, color: colors.textMuted }}>{p.team}</span>
@@ -163,7 +163,7 @@ function PitcherCard({ p, open, onToggle }) {
     <div style={{
       flex: '1 1 0', minWidth: '260px',
       background: colors.navyLight,
-      borderLeft: '1px solid rgba(255,255,255,0.04)',
+      borderLeft: '1px solid rgba(0,0,0,0.25)',
     }}>
       {/* ── Collapsed header ──────────────────────────────────────────── */}
       <button
@@ -207,7 +207,7 @@ function PitcherCard({ p, open, onToggle }) {
 
       {/* ── Expanded detail ───────────────────────────────────────────── */}
       {open && !isThin && (
-        <div style={{ padding: '0 16px 16px', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
+        <div style={{ padding: '0 16px 16px', borderTop: '1px solid rgba(0,0,0,0.25)' }}>
           {p.stuff && Object.keys(p.stuff).length > 1 && (
             <>
               <SectionHead title="Performance" vintage={p.stuff.vintage} />
@@ -304,7 +304,7 @@ function GameMatchup({ game }) {
       <div style={{
         background: colors.navyLight, color: colors.textMuted,
         textAlign: 'center', fontSize: '12px', padding: '6px 0 4px',
-        borderBottom: '1px solid rgba(255,255,255,0.04)',
+        borderBottom: '1px solid rgba(0,0,0,0.25)',
       }}>
         {gameTime(game.start_time)}
       </div>
