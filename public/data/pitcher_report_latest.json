@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-07-27",
-  "last_refreshed": "2026-07-27T16:01:33-04:00",
+  "last_refreshed": "2026-07-27T17:31:32-04:00",
   "games": 12,
-  "pitchers": 23,
+  "pitchers": 24,
   "coverage": {
-    "full_2026": 21,
+    "full_2026": 22,
     "fallback_2025": 0,
     "thin_no_data": 2
   },
@@ -24,9 +24,9 @@
           "pitcher_id": 677958,
           "hand": "R",
           "season": {
-            "w": 3,
+            "w": 4,
             "l": 8,
-            "era": "4.10",
+            "era": "4.03",
             "whip": "1.29"
           },
           "stuff": {
@@ -91,7 +91,7 @@
           "hand": "R",
           "season": {
             "w": 8,
-            "l": 8,
+            "l": 9,
             "era": "3.98",
             "whip": "1.30"
           },
@@ -1080,20 +1080,66 @@
           "side": "home",
           "team": "STL",
           "opponent": "CHC",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Matthew Liberatore",
+          "pitcher_id": 669461,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 5,
+            "l": 7,
+            "era": "5.18",
+            "whip": "1.52"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.205,
+            "whiff_rate": 0.2,
+            "bb_rate": 0.088,
+            "xwoba_against": 0.369,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 33.3,
+              "velo": 94.5
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 22.4,
+              "velo": 86.6
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 16.7,
+              "velo": 79.4
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.277,
+              "ops_against": 0.866
+            },
+            "vs_rhb": {
+              "k_rate": 0.18,
+              "ops_against": 0.851
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.222,
+              "whiff_rate": 0.207,
+              "xwoba": 0.387,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.205,
+              "whiff_rate": 0.2,
+              "xwoba": 0.369
+            },
+            "trend": "steady",
+            "note": "K% up 1.7pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
