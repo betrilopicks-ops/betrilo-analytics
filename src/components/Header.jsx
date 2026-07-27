@@ -5,6 +5,7 @@ import { colors } from '../theme';
 
 const navItems = [
   { to: '/mlb/starting-lineups', label: 'Starting Lineups' },
+  { to: '/mlb/pitcher-report', label: 'Pitcher Report' },
   { to: '/mlb/matchups', label: 'Batter vs. Pitcher' },
   { to: '/mlb/batter-splits', label: 'Batter Splits' },
   { to: '/mlb/best-bets', label: 'Best Bets' },
