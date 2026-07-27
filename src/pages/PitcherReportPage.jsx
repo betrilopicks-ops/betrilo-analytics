@@ -283,7 +283,7 @@ function GameMatchup({ game }) {
         borderBottom: '1px solid rgba(25,201,62,0.15)',
         fontSize: '15px', fontWeight: 800, color: '#ffffff',
       }}>
-        {awayLabel + ' @ ' + homeLabel}
+        <span>{awayLabel + ' @ ' + homeLabel}</span>
         <span style={{ fontSize: '12px', fontWeight: 400, color: colors.textMuted }}>{gameTime(game.start_time)}</span>
       </h3>
       <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
