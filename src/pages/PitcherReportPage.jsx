@@ -288,22 +288,21 @@ function GameMatchup({ game }) {
   const awayP = game.pitchers.find(p => p.side === 'away') || game.pitchers[0];
   const homeP = game.pitchers.find(p => p.side === 'home') || game.pitchers[1];
 
-  const awayAbbr = game.away_team || (awayP ? awayP.team : '?');
-  const homeAbbr = game.home_team || (homeP ? homeP.team : '?');
-  const matchupText = teamName(awayAbbr) + ' @ ' + teamName(homeAbbr);
+  // Use game-level fields (proven working in debug build)
+  const awayFull = teamName(game.away_team) || game.away_team || '?';
+  const homeFull = teamName(game.home_team) || game.home_team || '?';
 
   return (
     <div style={{ marginBottom: '20px' }}>
+      {/* Matchup header — same <div> structure as the working debug build */}
       <div style={{
-        textAlign: 'center', padding: '10px 6px 8px',
-        margin: '0 0 8px 0',
-        borderBottom: '1px solid rgba(25,201,62,0.15)',
+        background: colors.navyLight, color: '#ffffff', fontSize: '16px', fontWeight: 800,
+        textAlign: 'center', padding: '10px 12px 6px', marginBottom: '8px',
+        borderBottom: '2px solid rgba(25,201,62,0.15)', borderRadius: '6px 6px 0 0',
       }}>
-        <div style={{ fontSize: '16px', fontWeight: 800, color: '#ffffff', marginBottom: '2px' }}>
-          <span>{matchupText}</span>
-        </div>
-        <div style={{ fontSize: '12px', color: colors.textMuted }}>
-          <span>{gameTime(game.start_time)}</span>
+        {awayFull + ' @ ' + homeFull}
+        <div style={{ fontSize: '12px', fontWeight: 400, color: colors.textMuted, marginTop: '2px' }}>
+          {gameTime(game.start_time)}
         </div>
       </div>
       <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
