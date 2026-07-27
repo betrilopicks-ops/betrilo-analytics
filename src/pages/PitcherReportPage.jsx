@@ -262,6 +262,23 @@ function PitcherCard({ p, open, onToggle }) {
   );
 }
 
+/* ── team abbreviation → nickname map ─────────────────────────────────────── */
+
+const TEAM_NAMES = {
+  AZ: 'Diamondbacks', ATL: 'Braves', BAL: 'Orioles', BOS: 'Red Sox',
+  CHC: 'Cubs', CWS: 'White Sox', CIN: 'Reds', CLE: 'Guardians',
+  COL: 'Rockies', DET: 'Tigers', HOU: 'Astros', KC: 'Royals',
+  LAA: 'Angels', LAD: 'Dodgers', MIA: 'Marlins', MIL: 'Brewers',
+  MIN: 'Twins', NYM: 'Mets', NYY: 'Yankees', ATH: 'Athletics',
+  PHI: 'Phillies', PIT: 'Pirates', SD: 'Padres', SF: 'Giants',
+  SEA: 'Mariners', STL: 'Cardinals', TB: 'Rays', TEX: 'Rangers',
+  TOR: 'Blue Jays', WSH: 'Nationals',
+};
+
+function teamName(abbr) {
+  return TEAM_NAMES[abbr] || abbr;
+}
+
 /* ── game matchup row (owns expand state for both pitchers) ──────────────── */
 
 function GameMatchup({ game }) {
@@ -271,43 +288,24 @@ function GameMatchup({ game }) {
   const awayP = game.pitchers.find(p => p.side === 'away') || game.pitchers[0];
   const homeP = game.pitchers.find(p => p.side === 'home') || game.pitchers[1];
 
-  const awayLabel = awayP ? awayP.team : '?';
-  const homeLabel = homeP ? homeP.team : '?';
-  const matchupText = awayLabel + ' @ ' + homeLabel;
-
-  // DEBUG — remove after confirming
-  console.log('[HEADER DEBUG]', {
-    game_pk: game.game_pk,
-    awayP_exists: !!awayP,
-    homeP_exists: !!homeP,
-    awayP_team: awayP?.team,
-    homeP_team: homeP?.team,
-    awayLabel,
-    homeLabel,
-    matchupText,
-    pitchers_count: game.pitchers?.length,
-    pitchers_sides: game.pitchers?.map(p => p.side),
-  });
+  const awayAbbr = game.away_team || (awayP ? awayP.team : '?');
+  const homeAbbr = game.home_team || (homeP ? homeP.team : '?');
+  const matchupText = teamName(awayAbbr) + ' @ ' + teamName(homeAbbr);
 
   return (
     <div style={{ marginBottom: '20px' }}>
-      {/* DEBUG: impossible-to-miss red-on-yellow header */}
       <div style={{
-        background: 'yellow', color: 'red', fontSize: '20px', fontWeight: 900,
-        padding: '10px', marginBottom: '4px', border: '3px solid red',
-        minWidth: '200px', minHeight: '30px',
-      }}>
-        DEBUG: {matchupText}
-      </div>
-      <h3 style={{
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        padding: '8px 6px', margin: '0 0 8px 0',
+        textAlign: 'center', padding: '10px 6px 8px',
+        margin: '0 0 8px 0',
         borderBottom: '1px solid rgba(25,201,62,0.15)',
-        fontSize: '15px', fontWeight: 800, color: '#ffffff',
       }}>
-        <span>{matchupText}</span>
-        <span style={{ fontSize: '12px', fontWeight: 400, color: colors.textMuted }}>{gameTime(game.start_time)}</span>
-      </h3>
+        <div style={{ fontSize: '16px', fontWeight: 800, color: '#ffffff', marginBottom: '2px' }}>
+          <span>{matchupText}</span>
+        </div>
+        <div style={{ fontSize: '12px', color: colors.textMuted }}>
+          <span>{gameTime(game.start_time)}</span>
+        </div>
+      </div>
       <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
         {awayP && <PitcherCard p={awayP} open={open} onToggle={toggle} />}
         {homeP && <PitcherCard p={homeP} open={open} onToggle={toggle} />}
