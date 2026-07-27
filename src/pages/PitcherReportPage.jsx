@@ -272,19 +272,23 @@ function PitcherCard({ p }) {
 function GameMatchup({ game }) {
   const awayP = game.pitchers.find(p => p.side === 'away') || game.pitchers[0];
   const homeP = game.pitchers.find(p => p.side === 'home') || game.pitchers[1];
+
+  // Derive teams from pitcher objects (reliable — cards already display these)
+  const awayTeam = awayP?.team || game.away_team || '?';
+  const homeTeam = homeP?.team || game.home_team || '?';
+  const headerText = awayTeam + ' @ ' + homeTeam;
+
   return (
     <div style={{ marginBottom: '20px' }}>
       <div style={{
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         padding: '8px 6px', marginBottom: '8px',
-        borderBottom: `1px solid rgba(25,201,62,0.15)`,
+        borderBottom: '1px solid rgba(25,201,62,0.15)',
       }}>
-        <span style={{ fontSize: '15px', fontWeight: 800 }}>
-          <span style={{ color: '#fff' }}>{game.away_team}</span>
-          <span style={{ color: colors.textMuted, fontWeight: 400 }}>{' '}@{' '}</span>
-          <span style={{ color: '#fff' }}>{game.home_team}</span>
-        </span>
-        <span style={{ fontSize: '12px', color: colors.textMuted }}>{gameTime(game.start_time)}</span>
+        <div style={{ fontSize: '15px', fontWeight: 800, color: '#fff' }}>
+          {headerText}
+        </div>
+        <div style={{ fontSize: '12px', color: colors.textMuted }}>{gameTime(game.start_time)}</div>
       </div>
       <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
         {awayP && <PitcherCard p={awayP} />}
