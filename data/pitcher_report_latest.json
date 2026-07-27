@@ -1,12 +1,12 @@
 {
   "slate_date": "2026-07-27",
-  "last_refreshed": "2026-07-27T10:10:43-04:00",
+  "last_refreshed": "2026-07-27T14:05:05-04:00",
   "games": 12,
   "pitchers": 23,
   "coverage": {
-    "full_2026": 22,
+    "full_2026": 21,
     "fallback_2025": 0,
-    "thin_no_data": 1
+    "thin_no_data": 2
   },
   "hot_cold_rule": "hot = L5 K% >= 3pts above season AND L5 xwOBA <= season; cold = L5 K% >= 3pts below season OR L5 xwOBA >= 3pts above season; else steady",
   "matchups": [
@@ -580,66 +580,36 @@
           "side": "home",
           "team": "WSH",
           "opponent": "TOR",
-          "pitcher_name": "Andrew Alvarez",
-          "pitcher_id": 674841,
-          "hand": "L",
+          "pitcher_name": "Eddy Yean",
+          "pitcher_id": 678868,
+          "hand": "R",
           "season": {
-            "w": 2,
-            "l": 3,
-            "era": "4.22",
-            "whip": "1.50"
+            "w": 0,
+            "l": 0,
+            "era": "0.00",
+            "whip": "0.56"
           },
-          "stuff": {
-            "k_rate": 0.277,
-            "whiff_rate": 0.263,
-            "bb_rate": 0.085,
-            "xwoba_against": 0.305,
-            "vintage": "2026"
-          },
+          "stuff": {},
           "arsenal": [
             {
-              "pitch": "Curve",
-              "usage_pct": 29.8,
-              "velo": 82.8
+              "pitch": "Sinker",
+              "usage_pct": 63.3,
+              "velo": 97.3
             },
             {
-              "pitch": "4-Seam",
-              "usage_pct": 27.3,
-              "velo": 92.5
+              "pitch": "Changeup",
+              "usage_pct": 30.0,
+              "velo": 90.5
             },
             {
               "pitch": "Slider",
-              "usage_pct": 25.9,
-              "velo": 83.8
+              "usage_pct": 6.7,
+              "velo": 89.9
             }
           ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.182,
-              "ops_against": 0.707
-            },
-            "vs_rhb": {
-              "k_rate": 0.302,
-              "ops_against": 0.724
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.289,
-              "whiff_rate": 0.259,
-              "xwoba": 0.282,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.277,
-              "whiff_rate": 0.263,
-              "xwoba": 0.305
-            },
-            "trend": "steady",
-            "note": "K% up 1.2pts over L5"
-          },
-          "sample_flag": null,
+          "splits": {},
+          "recent_form": {},
+          "sample_flag": "thin_2026",
           "scratched": false
         },
         {
