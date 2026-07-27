@@ -46,10 +46,9 @@ const CARDS = [
     to: '/mlb/results',
   },
   {
-    name: 'Leaderboards',
-    desc: 'Hit streaks and home run leaders across the league.',
-    to: '/mlb/leaderboards/streaks',
-    comingSoon: true,
+    name: 'Pitcher Report',
+    desc: "Today's starting pitchers — performance, splits, and recent form for every matchup.",
+    to: '/mlb/pitcher-report',
   },
 ];
 

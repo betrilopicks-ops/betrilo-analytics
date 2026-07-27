@@ -13,7 +13,6 @@ const navItems = [
   { to: '/mlb/edge-report', label: 'Edge Report' },
   { to: '/mlb/results', label: 'Results' },
   { to: '/mlb/track-record', label: 'Track Record' },
-  { to: '/mlb/leaderboards/streaks', label: 'Leaderboards' },
 ];
 
 export default function Header() {

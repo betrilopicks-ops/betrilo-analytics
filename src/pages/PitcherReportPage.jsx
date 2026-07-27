@@ -102,7 +102,7 @@ function SplitsTable({ splits }) {
   if (!splits || (!splits.vs_lhb && !splits.vs_rhb)) {
     return <div style={{ color: colors.textMuted, fontSize: '12px', fontStyle: 'italic' }}>No split data available</div>;
   }
-  const cellStyle = { padding: '4px 10px', fontSize: '13px', textAlign: 'center', borderBottom: '1px solid rgba(255,255,255,0.04)' };
+  const cellStyle = { padding: '4px 10px', fontSize: '13px', textAlign: 'center', borderBottom: '1px solid rgba(255,255,255,0.04)', color: colors.text };
   const headStyle = { ...cellStyle, fontWeight: 700, color: colors.textMuted, fontSize: '11px', textTransform: 'uppercase' };
   return (
     <table style={{ width: '100%', borderCollapse: 'collapse' }}>
@@ -116,14 +116,14 @@ function SplitsTable({ splits }) {
       <tbody>
         {splits.vs_lhb && (
           <tr>
-            <td style={{ ...cellStyle, textAlign: 'left', fontWeight: 600 }}>LHB</td>
+            <td style={{ ...cellStyle, textAlign: 'left', fontWeight: 600, color: colors.text }}>LHB</td>
             <td style={cellStyle}>{pct(splits.vs_lhb.k_rate)}</td>
             <td style={cellStyle}>{fmt(splits.vs_lhb.ops_against)}</td>
           </tr>
         )}
         {splits.vs_rhb && (
           <tr>
-            <td style={{ ...cellStyle, textAlign: 'left', fontWeight: 600 }}>RHB</td>
+            <td style={{ ...cellStyle, textAlign: 'left', fontWeight: 600, color: colors.text }}>RHB</td>
             <td style={cellStyle}>{pct(splits.vs_rhb.k_rate)}</td>
             <td style={cellStyle}>{fmt(splits.vs_rhb.ops_against)}</td>
           </tr>
@@ -211,7 +211,7 @@ function PitcherCard({ p }) {
           {/* Stuff Profile */}
           {p.stuff && Object.keys(p.stuff).length > 1 && (
             <>
-              <SectionHead title="Stuff Profile" vintage={p.stuff.vintage} />
+              <SectionHead title="Performance" vintage={p.stuff.vintage} />
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                 <StatPill label="K%" value={pct(p.stuff.k_rate)} />
                 <StatPill label="Whiff%" value={pct(p.stuff.whiff_rate)} />
@@ -276,10 +276,11 @@ function GameMatchup({ game }) {
     <div style={{ marginBottom: '20px' }}>
       <div style={{
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        padding: '6px 4px', marginBottom: '8px',
+        padding: '8px 6px', marginBottom: '8px',
+        borderBottom: `1px solid rgba(25,201,62,0.15)`,
       }}>
-        <span style={{ fontSize: '14px', fontWeight: 700, color: colors.text }}>
-          {game.away_team} @ {game.home_team}
+        <span style={{ fontSize: '15px', fontWeight: 800, color: '#fff' }}>
+          {game.away_team} <span style={{ color: colors.textMuted, fontWeight: 400 }}>@</span> {game.home_team}
         </span>
         <span style={{ fontSize: '12px', color: colors.textMuted }}>{gameTime(game.start_time)}</span>
       </div>
@@ -309,7 +310,7 @@ export default function PitcherReportPage() {
     <div style={{ maxWidth: '960px', margin: '0 auto', padding: '24px 16px' }}>
       <Helmet>
         <title>Pitcher Report Card | @betrilopicks</title>
-        <meta name="description" content="Starting pitcher report cards for today's MLB games — stuff profile, pitch arsenal, platoon splits, and recent form." />
+        <meta name="description" content="Starting pitcher report cards for today's MLB games — performance, pitch arsenal, platoon splits, and recent form." />
         <link rel="canonical" href="https://betrilopicks.com/mlb/pitcher-report" />
       </Helmet>
 
