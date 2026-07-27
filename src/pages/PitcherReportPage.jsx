@@ -145,6 +145,7 @@ function PitcherCard({ p, open, onToggle }) {
     return (
       <div style={{
         flex: '1 1 0', minWidth: '260px', padding: '16px',
+        background: colors.navyLight,
         borderLeft: '1px solid rgba(255,255,255,0.04)',
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -161,9 +162,8 @@ function PitcherCard({ p, open, onToggle }) {
   return (
     <div style={{
       flex: '1 1 0', minWidth: '260px',
+      background: colors.navyLight,
       borderLeft: '1px solid rgba(255,255,255,0.04)',
-      transition: 'background 0.2s',
-      background: open ? 'rgba(25,201,62,0.03)' : 'transparent',
     }}>
       {/* ── Collapsed header ──────────────────────────────────────────── */}
       <button
