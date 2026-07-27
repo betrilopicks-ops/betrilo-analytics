@@ -1,6 +1,6 @@
 # @betrilopicks Frontend (betrilo.com) — Technical Project Book
 
-**Version:** BFEv0.6.7 | **Last Updated:** July 27, 2026 | **Includes:** /status false-alarm fix (Best Bets, Edge Report, Batter Splits switched to freshness-only health — these surfaces don't count raw games, so their record counts falsely mismatched the MLB schedule, producing spurious yellow flags on healthy days; now noGameCount: healthy = updated today, no game-count comparison; operator sees all-green banner when pipeline is clean); System Status page (/status — public but unlisted, not in nav/sitemap; pipeline health + data freshness dashboard for remote monitoring during travel; per-surface cards showing last_refreshed timestamp (absolute + relative ET), health color (green/yellow/red based on today-freshness + game-count cross-check vs MLB Stats API schedule), game count vs expected, record counts; top-line banner summarizes all-healthy vs attention-needed; pipeline health_latest.json verdict + step-level status surfaced; schedule cross-check: MLB Stats API primary with starting-lineups fallback; auto-refresh every 5 min + manual refresh button; mobile-friendly; per-surface error isolation; noindex/nofollow meta; built for 7/29-8/3 travel window); VP AB column on Player Projections page (column relabeled VP AB, reads vp_ab from JSON instead of vp_pa; cellValue switch and td render updated; footer Key text updated to "VP AB/H/HR/xwOBA — career at-bats and performance vs. today's probable pitcher"); H+R+RBI column on Player Projections page (proj_hrrbi passthrough from DB — same value as Results page; sortable; 327/520 batters covered; footer Key corrected); Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema; BvP guide: crawlable static HTML at /mlb/batter-vs-pitcher-guide (~800 words, content in served HTML pre-JS); Footer support mailto (support@betrilo.com; green on navy; legible contrast); Game dropdown chronological sort (PlayerProjections + StartingLineups)
+**Version:** BFEv0.6.8 | **Last Updated:** July 27, 2026 | **Includes:** /status false-alarm fix (Best Bets, Edge Report, Batter Splits switched to freshness-only health — these surfaces don't count raw games, so their record counts falsely mismatched the MLB schedule, producing spurious yellow flags on healthy days; now noGameCount: healthy = updated today, no game-count comparison; operator sees all-green banner when pipeline is clean); System Status page (/status — public but unlisted, not in nav/sitemap; pipeline health + data freshness dashboard for remote monitoring during travel; per-surface cards showing last_refreshed timestamp (absolute + relative ET), health color (green/yellow/red based on today-freshness + game-count cross-check vs MLB Stats API schedule), game count vs expected, record counts; top-line banner summarizes all-healthy vs attention-needed; pipeline health_latest.json verdict + step-level status surfaced; schedule cross-check: MLB Stats API primary with starting-lineups fallback; auto-refresh every 5 min + manual refresh button; mobile-friendly; per-surface error isolation; noindex/nofollow meta; built for 7/29-8/3 travel window); VP AB column on Player Projections page (column relabeled VP AB, reads vp_ab from JSON instead of vp_pa; cellValue switch and td render updated; footer Key text updated to "VP AB/H/HR/xwOBA — career at-bats and performance vs. today's probable pitcher"); H+R+RBI column on Player Projections page (proj_hrrbi passthrough from DB — same value as Results page; sortable; 327/520 batters covered; footer Key corrected); Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema; BvP guide: crawlable static HTML at /mlb/batter-vs-pitcher-guide (~800 words, content in served HTML pre-JS); Footer support mailto (support@betrilo.com; green on navy; legible contrast); Game dropdown chronological sort (PlayerProjections + StartingLineups)
 
 ---
 
@@ -434,3 +434,31 @@ BMLBv3.28.0). Data-source: Branch B — new JSON required. Pending preview revie
 | `src/pages/PitcherReportPage.jsx` | `GameMatchup` header rebuilt as single div with background, mirroring working debug structure |
 
 **Version:** BFEv0.6.6 → **BFEv0.6.7** (PATCH — header rebuilt from working debug pattern)
+
+---
+
+### Session: July 27, 2026 — BFEv0.6.7 → BFEv0.6.8 — Per-Column Team Labels + Bordered Game Units
+
+**Per-column team labels:** Split the single "Mariners @ Rangers" header into two team names, each centered above its own pitcher card column. Away team (left) above the away pitcher, home team (right) above the home pitcher. "@" between them as a separator. Verified: "Mariners" sits above Kirby (SEA/away), "Rangers" above Rocker (TEX/home) — labels match cards.
+
+**Bordered game units:** Each game is now a distinct bordered container (`border: 1px solid rgba(25,201,62,0.12)`, `borderRadius: 10px`, `overflow: hidden`). The header area (time strip + team labels) uses `background: colors.navyLight` as a shaded strip. Pitcher cards sit below with a subtle left-border divider between them. Cards get a slight green-tinted background when expanded.
+
+**Layout:**
+```
+┌─────────────────────────────────┐
+│          2:35 PM ET             │  ← time strip (shaded)
+│   Mariners    @    Rangers      │  ← per-column labels (shaded)
+├────────────────┬────────────────┤
+│ George Kirby   │ Kumar Rocker   │  ← pitcher cards
+│ SEA · RHP      │ TEX · RHP      │
+│ 8-8 · 3.57 ERA │ 3-8 · 4.13 ERA│
+└────────────────┴────────────────┘
+```
+
+**Mobile:** Cards wrap (flex-wrap) and stack vertically. Team labels stay in the flex row but collapse naturally.
+
+| File | Change |
+|---|---|
+| `src/pages/PitcherReportPage.jsx` | `GameMatchup`: bordered container + time strip + per-column labels. `PitcherCard`: removed individual border/borderRadius, uses left-border divider. |
+
+**Version:** BFEv0.6.7 → **BFEv0.6.8** (PATCH — per-column labels + bordered game units)

@@ -144,8 +144,8 @@ function PitcherCard({ p, open, onToggle }) {
   if (isTbd) {
     return (
       <div style={{
-        flex: '1 1 0', minWidth: '260px', background: colors.navyLight, borderRadius: '10px',
-        border: '1px solid rgba(255,255,255,0.06)', padding: '16px',
+        flex: '1 1 0', minWidth: '260px', padding: '16px',
+        borderLeft: '1px solid rgba(255,255,255,0.04)',
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           <span style={{ fontSize: '16px', fontWeight: 700, color: colors.textMuted }}>{p.team}</span>
@@ -160,9 +160,10 @@ function PitcherCard({ p, open, onToggle }) {
 
   return (
     <div style={{
-      flex: '1 1 0', minWidth: '260px', background: colors.navyLight, borderRadius: '10px',
-      border: '1px solid ' + (open ? 'rgba(25,201,62,0.20)' : 'rgba(255,255,255,0.06)'),
-      transition: 'border-color 0.2s',
+      flex: '1 1 0', minWidth: '260px',
+      borderLeft: '1px solid rgba(255,255,255,0.04)',
+      transition: 'background 0.2s',
+      background: open ? 'rgba(25,201,62,0.03)' : 'transparent',
     }}>
       {/* ── Collapsed header ──────────────────────────────────────────── */}
       <button
@@ -288,24 +289,50 @@ function GameMatchup({ game }) {
   const awayP = game.pitchers.find(p => p.side === 'away') || game.pitchers[0];
   const homeP = game.pitchers.find(p => p.side === 'home') || game.pitchers[1];
 
-  // Use game-level fields (proven working in debug build)
+  // Game-level fields (proven working) → full names via map
   const awayFull = teamName(game.away_team) || game.away_team || '?';
   const homeFull = teamName(game.home_team) || game.home_team || '?';
 
   return (
-    <div style={{ marginBottom: '20px' }}>
-      {/* Matchup header — same <div> structure as the working debug build */}
+    <div style={{
+      marginBottom: '16px',
+      border: '1px solid rgba(25,201,62,0.12)',
+      borderRadius: '10px',
+      overflow: 'hidden',
+    }}>
+      {/* Game-level time strip */}
       <div style={{
-        background: colors.navyLight, color: '#ffffff', fontSize: '16px', fontWeight: 800,
-        textAlign: 'center', padding: '10px 12px 6px', marginBottom: '8px',
-        borderBottom: '2px solid rgba(25,201,62,0.15)', borderRadius: '6px 6px 0 0',
+        background: colors.navyLight, color: colors.textMuted,
+        textAlign: 'center', fontSize: '12px', padding: '6px 0 4px',
+        borderBottom: '1px solid rgba(255,255,255,0.04)',
       }}>
-        {awayFull + ' @ ' + homeFull}
-        <div style={{ fontSize: '12px', fontWeight: 400, color: colors.textMuted, marginTop: '2px' }}>
-          {gameTime(game.start_time)}
+        {gameTime(game.start_time)}
+      </div>
+      {/* Per-column team labels — each uses proven pattern: background + color + direct text */}
+      <div style={{ display: 'flex', background: colors.navyLight }}>
+        <div style={{
+          flex: '1 1 0', background: colors.navyLight, color: '#ffffff',
+          fontSize: '15px', fontWeight: 800, textAlign: 'center',
+          padding: '8px 4px',
+        }}>
+          {awayFull}
+        </div>
+        <div style={{
+          display: 'flex', alignItems: 'center', color: colors.textMuted,
+          fontSize: '13px', fontWeight: 400, padding: '0 4px',
+        }}>
+          {'@'}
+        </div>
+        <div style={{
+          flex: '1 1 0', background: colors.navyLight, color: '#ffffff',
+          fontSize: '15px', fontWeight: 800, textAlign: 'center',
+          padding: '8px 4px',
+        }}>
+          {homeFull}
         </div>
       </div>
-      <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+      {/* Pitcher cards */}
+      <div style={{ display: 'flex', gap: '0px', flexWrap: 'wrap' }}>
         {awayP && <PitcherCard p={awayP} open={open} onToggle={toggle} />}
         {homeP && <PitcherCard p={homeP} open={open} onToggle={toggle} />}
       </div>
