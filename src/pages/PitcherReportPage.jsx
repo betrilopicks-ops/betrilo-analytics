@@ -279,8 +279,10 @@ function GameMatchup({ game }) {
         padding: '8px 6px', marginBottom: '8px',
         borderBottom: `1px solid rgba(25,201,62,0.15)`,
       }}>
-        <span style={{ fontSize: '15px', fontWeight: 800, color: '#fff' }}>
-          {game.away_team} <span style={{ color: colors.textMuted, fontWeight: 400 }}>@</span> {game.home_team}
+        <span style={{ fontSize: '15px', fontWeight: 800 }}>
+          <span style={{ color: '#fff' }}>{game.away_team}</span>
+          <span style={{ color: colors.textMuted, fontWeight: 400 }}>{' '}@{' '}</span>
+          <span style={{ color: '#fff' }}>{game.home_team}</span>
         </span>
         <span style={{ fontSize: '12px', color: colors.textMuted }}>{gameTime(game.start_time)}</span>
       </div>

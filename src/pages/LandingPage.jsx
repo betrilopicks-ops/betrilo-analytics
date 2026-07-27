@@ -8,12 +8,17 @@ const NAVY = '#0B2331';
 const GREEN = '#19C93E';
 const HOVER_CYAN = '#C5F2F0';
 
-// Canonical grid order — 8 cards, Track Record is NOT here (it's the hero banner)
+// Canonical grid order — matches nav order, 8 cards (Track Record is the hero banner)
 const CARDS = [
   {
     name: 'Starting Lineups',
     desc: 'Confirmed batting orders and probable pitchers for every game today.',
     to: '/mlb/starting-lineups',
+  },
+  {
+    name: 'Pitcher Report',
+    desc: "Today's starting pitchers — performance, splits, and recent form for every matchup.",
+    to: '/mlb/pitcher-report',
   },
   {
     name: 'Batter vs Pitcher',
@@ -44,11 +49,6 @@ const CARDS = [
     name: 'Results',
     desc: 'Day-by-day pick results — every pick graded against actuals.',
     to: '/mlb/results',
-  },
-  {
-    name: 'Pitcher Report',
-    desc: "Today's starting pitchers — performance, splits, and recent form for every matchup.",
-    to: '/mlb/pitcher-report',
   },
 ];
 
