@@ -271,19 +271,41 @@ function GameMatchup({ game }) {
   const awayP = game.pitchers.find(p => p.side === 'away') || game.pitchers[0];
   const homeP = game.pitchers.find(p => p.side === 'home') || game.pitchers[1];
 
-  // Build header from pitcher objects — these are the same fields the cards render
   const awayLabel = awayP ? awayP.team : '?';
   const homeLabel = homeP ? homeP.team : '?';
+  const matchupText = awayLabel + ' @ ' + homeLabel;
+
+  // DEBUG — remove after confirming
+  console.log('[HEADER DEBUG]', {
+    game_pk: game.game_pk,
+    awayP_exists: !!awayP,
+    homeP_exists: !!homeP,
+    awayP_team: awayP?.team,
+    homeP_team: homeP?.team,
+    awayLabel,
+    homeLabel,
+    matchupText,
+    pitchers_count: game.pitchers?.length,
+    pitchers_sides: game.pitchers?.map(p => p.side),
+  });
 
   return (
     <div style={{ marginBottom: '20px' }}>
+      {/* DEBUG: impossible-to-miss red-on-yellow header */}
+      <div style={{
+        background: 'yellow', color: 'red', fontSize: '20px', fontWeight: 900,
+        padding: '10px', marginBottom: '4px', border: '3px solid red',
+        minWidth: '200px', minHeight: '30px',
+      }}>
+        DEBUG: {matchupText}
+      </div>
       <h3 style={{
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         padding: '8px 6px', margin: '0 0 8px 0',
         borderBottom: '1px solid rgba(25,201,62,0.15)',
         fontSize: '15px', fontWeight: 800, color: '#ffffff',
       }}>
-        <span>{awayLabel + ' @ ' + homeLabel}</span>
+        <span>{matchupText}</span>
         <span style={{ fontSize: '12px', fontWeight: 400, color: colors.textMuted }}>{gameTime(game.start_time)}</span>
       </h3>
       <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
