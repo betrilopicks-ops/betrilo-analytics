@@ -133,10 +133,9 @@ function SplitsTable({ splits }) {
   );
 }
 
-/* ── single pitcher card ─────────────────────────────────────────────────── */
+/* ── single pitcher card (expand state controlled by parent) ──────────────── */
 
-function PitcherCard({ p }) {
-  const [open, setOpen] = useState(false);
+function PitcherCard({ p, open, onToggle }) {
   const isTbd = p.pitcher_name === 'TBD';
   const isThin = p.sample_flag === 'thin_2026' || (!p.stuff || Object.keys(p.stuff).length === 0);
   const trend = p.recent_form?.trend;
@@ -162,12 +161,12 @@ function PitcherCard({ p }) {
   return (
     <div style={{
       flex: '1 1 0', minWidth: '260px', background: colors.navyLight, borderRadius: '10px',
-      border: `1px solid ${open ? 'rgba(25,201,62,0.20)' : 'rgba(255,255,255,0.06)'}`,
+      border: '1px solid ' + (open ? 'rgba(25,201,62,0.20)' : 'rgba(255,255,255,0.06)'),
       transition: 'border-color 0.2s',
     }}>
       {/* ── Collapsed header ──────────────────────────────────────────── */}
       <button
-        onClick={() => setOpen(!open)}
+        onClick={onToggle}
         style={{
           width: '100%', background: 'none', border: 'none', cursor: 'pointer',
           padding: '14px 16px', display: 'flex', alignItems: 'center', gap: '10px',
@@ -208,7 +207,6 @@ function PitcherCard({ p }) {
       {/* ── Expanded detail ───────────────────────────────────────────── */}
       {open && !isThin && (
         <div style={{ padding: '0 16px 16px', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
-          {/* Stuff Profile */}
           {p.stuff && Object.keys(p.stuff).length > 1 && (
             <>
               <SectionHead title="Performance" vintage={p.stuff.vintage} />
@@ -221,7 +219,6 @@ function PitcherCard({ p }) {
             </>
           )}
 
-          {/* Arsenal */}
           {p.arsenal && p.arsenal.length > 0 && (
             <>
               <SectionHead title="Pitch Arsenal" />
@@ -231,7 +228,6 @@ function PitcherCard({ p }) {
             </>
           )}
 
-          {/* Splits */}
           {p.splits && Object.keys(p.splits).length > 0 && (
             <>
               <SectionHead title="Platoon Splits" vintage={p.splits.vintage} />
@@ -239,7 +235,6 @@ function PitcherCard({ p }) {
             </>
           )}
 
-          {/* Recent Form */}
           {p.recent_form && p.recent_form.last5 && (
             <>
               <SectionHead title="Recent Form (L5)" />
@@ -267,32 +262,33 @@ function PitcherCard({ p }) {
   );
 }
 
-/* ── game matchup row ────────────────────────────────────────────────────── */
+/* ── game matchup row (owns expand state for both pitchers) ──────────────── */
 
 function GameMatchup({ game }) {
+  const [open, setOpen] = useState(false);
+  const toggle = () => setOpen(prev => !prev);
+
   const awayP = game.pitchers.find(p => p.side === 'away') || game.pitchers[0];
   const homeP = game.pitchers.find(p => p.side === 'home') || game.pitchers[1];
 
-  // Derive teams from pitcher objects (reliable — cards already display these)
-  const awayTeam = awayP?.team || game.away_team || '?';
-  const homeTeam = homeP?.team || game.home_team || '?';
-  const headerText = awayTeam + ' @ ' + homeTeam;
+  // Build header from pitcher objects — these are the same fields the cards render
+  const awayLabel = awayP ? awayP.team : '?';
+  const homeLabel = homeP ? homeP.team : '?';
 
   return (
     <div style={{ marginBottom: '20px' }}>
-      <div style={{
+      <h3 style={{
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        padding: '8px 6px', marginBottom: '8px',
+        padding: '8px 6px', margin: '0 0 8px 0',
         borderBottom: '1px solid rgba(25,201,62,0.15)',
+        fontSize: '15px', fontWeight: 800, color: '#ffffff',
       }}>
-        <div style={{ fontSize: '15px', fontWeight: 800, color: '#fff' }}>
-          {headerText}
-        </div>
-        <div style={{ fontSize: '12px', color: colors.textMuted }}>{gameTime(game.start_time)}</div>
-      </div>
+        {awayLabel + ' @ ' + homeLabel}
+        <span style={{ fontSize: '12px', fontWeight: 400, color: colors.textMuted }}>{gameTime(game.start_time)}</span>
+      </h3>
       <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-        {awayP && <PitcherCard p={awayP} />}
-        {homeP && <PitcherCard p={homeP} />}
+        {awayP && <PitcherCard p={awayP} open={open} onToggle={toggle} />}
+        {homeP && <PitcherCard p={homeP} open={open} onToggle={toggle} />}
       </div>
     </div>
   );
