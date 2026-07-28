@@ -1,6 +1,6 @@
 {
   "slate_date": "2026-07-28",
-  "last_refreshed": "2026-07-28T11:02:16-04:00",
+  "last_refreshed": "2026-07-28T15:02:15-04:00",
   "games": 16,
   "pitchers": 28,
   "coverage": {
@@ -26,8 +26,8 @@
           "season": {
             "w": 12,
             "l": 1,
-            "era": "2.42",
-            "whip": "1.11"
+            "era": "2.34",
+            "whip": "1.12"
           },
           "stuff": {
             "k_rate": 0.282,
@@ -92,8 +92,8 @@
           "season": {
             "w": 4,
             "l": 7,
-            "era": "4.60",
-            "whip": "1.45"
+            "era": "4.56",
+            "whip": "1.46"
           },
           "stuff": {
             "k_rate": 0.188,
@@ -860,146 +860,6 @@
           "splits": {},
           "recent_form": {},
           "sample_flag": "2025_fallback",
-          "scratched": false
-        }
-      ]
-    },
-    {
-      "game_pk": 823598,
-      "start_time": "2026-07-28T23:10:00Z",
-      "home_team": "NYM",
-      "away_team": "ATL",
-      "pitchers": [
-        {
-          "side": "home",
-          "team": "NYM",
-          "opponent": "ATL",
-          "pitcher_name": "Christian Scott",
-          "pitcher_id": 681035,
-          "hand": "R",
-          "season": {
-            "w": 3,
-            "l": 2,
-            "era": "3.13",
-            "whip": "1.26"
-          },
-          "stuff": {
-            "k_rate": 0.265,
-            "whiff_rate": 0.215,
-            "bb_rate": 0.133,
-            "xwoba_against": 0.326,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 51.1,
-              "velo": 95.4
-            },
-            {
-              "pitch": "Sweeper",
-              "usage_pct": 22.1,
-              "velo": 81.3
-            },
-            {
-              "pitch": "Cutter",
-              "usage_pct": 17.2,
-              "velo": 89.1
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.265,
-              "ops_against": 0.628
-            },
-            "vs_rhb": {
-              "k_rate": 0.278,
-              "ops_against": 0.849
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.268,
-              "whiff_rate": 0.234,
-              "xwoba": 0.316,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.265,
-              "whiff_rate": 0.215,
-              "xwoba": 0.326
-            },
-            "trend": "steady",
-            "note": "K% steady over L5"
-          },
-          "sample_flag": null,
-          "scratched": false
-        },
-        {
-          "side": "away",
-          "team": "ATL",
-          "opponent": "NYM",
-          "pitcher_name": "Chris Sale",
-          "pitcher_id": 519242,
-          "hand": "L",
-          "season": {
-            "w": 11,
-            "l": 6,
-            "era": "2.19",
-            "whip": "1.05"
-          },
-          "stuff": {
-            "k_rate": 0.283,
-            "whiff_rate": 0.261,
-            "bb_rate": 0.065,
-            "xwoba_against": 0.291,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 39.9,
-              "velo": 96.0
-            },
-            {
-              "pitch": "Slider",
-              "usage_pct": 38.8,
-              "velo": 79.4
-            },
-            {
-              "pitch": "Changeup",
-              "usage_pct": 12.0,
-              "velo": 88.4
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.312,
-              "ops_against": 0.588
-            },
-            "vs_rhb": {
-              "k_rate": 0.273,
-              "ops_against": 0.658
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.252,
-              "whiff_rate": 0.243,
-              "xwoba": 0.301,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.283,
-              "whiff_rate": 0.261,
-              "xwoba": 0.291
-            },
-            "trend": "cold",
-            "note": "K% down 3.1pts over L5"
-          },
-          "sample_flag": null,
           "scratched": false
         }
       ]
@@ -2016,6 +1876,146 @@
             },
             "trend": "steady",
             "note": "K% down 2.6pts over L5"
+          },
+          "sample_flag": null,
+          "scratched": false
+        }
+      ]
+    },
+    {
+      "game_pk": 823598,
+      "start_time": "2026-07-28T23:10:00Z",
+      "home_team": "NYM",
+      "away_team": "ATL",
+      "pitchers": [
+        {
+          "side": "home",
+          "team": "NYM",
+          "opponent": "ATL",
+          "pitcher_name": "Christian Scott",
+          "pitcher_id": 681035,
+          "hand": "R",
+          "season": {
+            "w": 3,
+            "l": 2,
+            "era": "3.13",
+            "whip": "1.26"
+          },
+          "stuff": {
+            "k_rate": 0.265,
+            "whiff_rate": 0.215,
+            "bb_rate": 0.133,
+            "xwoba_against": 0.326,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 51.1,
+              "velo": 95.4
+            },
+            {
+              "pitch": "Sweeper",
+              "usage_pct": 22.1,
+              "velo": 81.3
+            },
+            {
+              "pitch": "Cutter",
+              "usage_pct": 17.2,
+              "velo": 89.1
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.265,
+              "ops_against": 0.628
+            },
+            "vs_rhb": {
+              "k_rate": 0.278,
+              "ops_against": 0.849
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.268,
+              "whiff_rate": 0.234,
+              "xwoba": 0.316,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.265,
+              "whiff_rate": 0.215,
+              "xwoba": 0.326
+            },
+            "trend": "steady",
+            "note": "K% steady over L5"
+          },
+          "sample_flag": null,
+          "scratched": false
+        },
+        {
+          "side": "away",
+          "team": "ATL",
+          "opponent": "NYM",
+          "pitcher_name": "Chris Sale",
+          "pitcher_id": 519242,
+          "hand": "L",
+          "season": {
+            "w": 11,
+            "l": 6,
+            "era": "2.19",
+            "whip": "1.05"
+          },
+          "stuff": {
+            "k_rate": 0.283,
+            "whiff_rate": 0.261,
+            "bb_rate": 0.065,
+            "xwoba_against": 0.291,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 39.9,
+              "velo": 96.0
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 38.8,
+              "velo": 79.4
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 12.0,
+              "velo": 88.4
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.312,
+              "ops_against": 0.588
+            },
+            "vs_rhb": {
+              "k_rate": 0.273,
+              "ops_against": 0.658
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.252,
+              "whiff_rate": 0.243,
+              "xwoba": 0.301,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.283,
+              "whiff_rate": 0.261,
+              "xwoba": 0.291
+            },
+            "trend": "cold",
+            "note": "K% down 3.1pts over L5"
           },
           "sample_flag": null,
           "scratched": false
