@@ -52,14 +52,14 @@ export default function BatterSplitsPage() {
 
   const teams = useMemo(() => {
     if (!data) return [];
-    const set = new Set(data.players.map((p) => p.team).filter(Boolean));
+    const set = new Set(data.players.map((p) => p.team_abbr || p.team).filter(Boolean));
     return Array.from(set).sort();
   }, [data]);
 
   const rows = useMemo(() => {
     if (!data) return [];
     let r = data.players.slice();
-    if (teamFilter !== 'all') r = r.filter((p) => p.team === teamFilter);
+    if (teamFilter !== 'all') r = r.filter((p) => (p.team_abbr || p.team) === teamFilter);
     if (search.trim()) {
       const q = search.trim().toLowerCase();
       r = r.filter((p) => p.player.toLowerCase().includes(q)
@@ -208,6 +208,7 @@ export default function BatterSplitsPage() {
                     position: 'sticky', left: 0, zIndex: 1, background: rowBg, borderRight: '2px solid #e3e9ed' }}>
                     {p.player}
                     {p.bats ? <span style={{ marginLeft: '5px', color: '#8a99a3', fontWeight: 500, fontSize: '12px' }}>({p.bats})</span> : null}
+                    {p.game_label ? <span style={{ marginLeft: '5px', color: '#ffb74d', fontWeight: 700, fontSize: '11px' }}>{p.game_label}</span> : null}
                   </td>
                   <td style={{ padding: '8px 12px', textAlign: 'left', color: '#5a6b76', whiteSpace: 'nowrap',
                     borderRight: '2px solid #e3e9ed' }}>{p.vs_pitcher || '—'}</td>

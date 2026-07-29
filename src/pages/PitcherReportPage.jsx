@@ -395,9 +395,12 @@ export default function PitcherReportPage() {
         </div>
       )}
 
-      {!loading && !error && data && data.matchups && data.matchups.map(game => (
-        <GameMatchup key={game.game_pk} game={game} />
-      ))}
+      {!loading && !error && data && data.matchups && data.matchups
+        .slice()
+        .sort((a, b) => (a.start_time || '').localeCompare(b.start_time || ''))
+        .map(game => (
+          <GameMatchup key={game.game_pk} game={game} />
+        ))}
     </div>
   );
 }
