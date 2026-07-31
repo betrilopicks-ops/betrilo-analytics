@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-07-31",
-  "last_refreshed": "2026-07-31T11:01:59-04:00",
+  "last_refreshed": "2026-07-31T12:01:46-04:00",
   "games": 15,
-  "pitchers": 29,
+  "pitchers": 28,
   "coverage": {
-    "full_2026": 26,
+    "full_2026": 25,
     "fallback_2025": 2,
     "thin_no_data": 1
   },
@@ -1526,66 +1526,20 @@
           "side": "away",
           "team": "DET",
           "opponent": "ATH",
-          "pitcher_name": "Casey Mize",
-          "pitcher_id": 663554,
-          "hand": "R",
+          "pitcher_name": "TBD",
+          "pitcher_id": null,
+          "hand": null,
           "season": {
-            "w": 4,
-            "l": 6,
-            "era": "2.70",
-            "whip": "0.99"
+            "w": null,
+            "l": null,
+            "era": null,
+            "whip": null
           },
-          "stuff": {
-            "k_rate": 0.249,
-            "whiff_rate": 0.254,
-            "bb_rate": 0.063,
-            "xwoba_against": 0.288,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 33.0,
-              "velo": 93.4
-            },
-            {
-              "pitch": "Slider",
-              "usage_pct": 27.2,
-              "velo": 87.8
-            },
-            {
-              "pitch": "Sinker",
-              "usage_pct": 11.0,
-              "velo": 93.3
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.261,
-              "ops_against": 0.462
-            },
-            "vs_rhb": {
-              "k_rate": 0.226,
-              "ops_against": 0.862
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.221,
-              "whiff_rate": 0.252,
-              "xwoba": 0.288,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.249,
-              "whiff_rate": 0.254,
-              "xwoba": 0.288
-            },
-            "trend": "steady",
-            "note": "K% down 2.8pts over L5"
-          },
-          "sample_flag": null,
+          "stuff": {},
+          "arsenal": [],
+          "splits": {},
+          "recent_form": {},
+          "sample_flag": "tbd",
           "scratched": false
         }
       ]
