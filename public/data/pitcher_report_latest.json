@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-07-31",
-  "last_refreshed": "2026-07-31T18:01:42-04:00",
+  "last_refreshed": "2026-07-31T18:31:48-04:00",
   "games": 15,
-  "pitchers": 29,
+  "pitchers": 30,
   "coverage": {
-    "full_2026": 26,
+    "full_2026": 27,
     "fallback_2025": 2,
     "thin_no_data": 1
   },
@@ -166,8 +166,8 @@
           "season": {
             "w": 2,
             "l": 2,
-            "era": "7.06",
-            "whip": "1.34"
+            "era": "7.54",
+            "whip": "1.46"
           },
           "stuff": {
             "k_rate": 0.316,
@@ -208,7 +208,7 @@
           "season": {
             "w": 9,
             "l": 9,
-            "era": "3.65",
+            "era": "3.63",
             "whip": "1.06"
           },
           "stuff": {
@@ -1572,20 +1572,66 @@
           "side": "away",
           "team": "DET",
           "opponent": "ATH",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Tyler Holton",
+          "pitcher_id": 663947,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 1,
+            "l": 4,
+            "era": "3.04",
+            "whip": "1.33"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.222,
+            "whiff_rate": 0.236,
+            "bb_rate": 0.056,
+            "xwoba_against": 0.31,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Cutter",
+              "usage_pct": 32.2,
+              "velo": 87.5
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 19.7,
+              "velo": 91.0
+            },
+            {
+              "pitch": "Sweeper",
+              "usage_pct": 17.1,
+              "velo": 79.8
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.22,
+              "ops_against": 0.76
+            },
+            "vs_rhb": {
+              "k_rate": 0.146,
+              "ops_against": 0.739
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.183,
+              "whiff_rate": 0.156,
+              "xwoba": 0.259,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.222,
+              "whiff_rate": 0.236,
+              "xwoba": 0.31
+            },
+            "trend": "cold",
+            "note": "K% down 3.9pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         }
       ]
