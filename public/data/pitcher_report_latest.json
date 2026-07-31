@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-07-31",
-  "last_refreshed": "2026-07-31T14:01:53-04:00",
+  "last_refreshed": "2026-07-31T15:01:42-04:00",
   "games": 15,
-  "pitchers": 28,
+  "pitchers": 27,
   "coverage": {
-    "full_2026": 25,
+    "full_2026": 24,
     "fallback_2025": 2,
     "thin_no_data": 1
   },
@@ -26,8 +26,8 @@
           "season": {
             "w": 7,
             "l": 8,
-            "era": "3.72",
-            "whip": "1.10"
+            "era": "3.63",
+            "whip": "1.07"
           },
           "stuff": {
             "k_rate": 0.261,
@@ -92,8 +92,8 @@
           "season": {
             "w": 7,
             "l": 5,
-            "era": "4.41",
-            "whip": "1.41"
+            "era": "4.33",
+            "whip": "1.39"
           },
           "stuff": {
             "k_rate": 0.237,
@@ -760,66 +760,20 @@
           "side": "home",
           "team": "NYM",
           "opponent": "MIA",
-          "pitcher_name": "Freddy Peralta",
-          "pitcher_id": 642547,
-          "hand": "R",
+          "pitcher_name": "TBD",
+          "pitcher_id": null,
+          "hand": null,
           "season": {
-            "w": 5,
-            "l": 9,
-            "era": "4.99",
-            "whip": "1.48"
+            "w": null,
+            "l": null,
+            "era": null,
+            "whip": null
           },
-          "stuff": {
-            "k_rate": 0.224,
-            "whiff_rate": 0.243,
-            "bb_rate": 0.089,
-            "xwoba_against": 0.301,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 52.2,
-              "velo": 94.2
-            },
-            {
-              "pitch": "Changeup",
-              "usage_pct": 22.6,
-              "velo": 87.3
-            },
-            {
-              "pitch": "Curve",
-              "usage_pct": 12.4,
-              "velo": 79.0
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.234,
-              "ops_against": 0.817
-            },
-            "vs_rhb": {
-              "k_rate": 0.214,
-              "ops_against": 0.665
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.155,
-              "whiff_rate": 0.196,
-              "xwoba": 0.291,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.224,
-              "whiff_rate": 0.243,
-              "xwoba": 0.301
-            },
-            "trend": "cold",
-            "note": "K% down 6.9pts over L5"
-          },
-          "sample_flag": null,
+          "stuff": {},
+          "arsenal": [],
+          "splits": {},
+          "recent_form": {},
+          "sample_flag": "tbd",
           "scratched": false
         },
         {
