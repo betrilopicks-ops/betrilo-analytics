@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-07-31",
-  "last_refreshed": "2026-07-31T16:01:42-04:00",
+  "last_refreshed": "2026-07-31T16:31:53-04:00",
   "games": 15,
-  "pitchers": 28,
+  "pitchers": 29,
   "coverage": {
-    "full_2026": 25,
+    "full_2026": 26,
     "fallback_2025": 2,
     "thin_no_data": 1
   },
@@ -92,8 +92,8 @@
           "season": {
             "w": 7,
             "l": 5,
-            "era": "4.17",
-            "whip": "1.35"
+            "era": "4.14",
+            "whip": "1.36"
           },
           "stuff": {
             "k_rate": 0.237,
@@ -342,20 +342,66 @@
           "side": "away",
           "team": "PHI",
           "opponent": "BAL",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Andrew Painter",
+          "pitcher_id": 691725,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 1,
+            "l": 8,
+            "era": "7.06",
+            "whip": "1.66"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.183,
+            "whiff_rate": 0.207,
+            "bb_rate": 0.08,
+            "xwoba_against": 0.351,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 32.7,
+              "velo": 96.5
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 22.0,
+              "velo": 88.1
+            },
+            {
+              "pitch": "Sweeper",
+              "usage_pct": 11.5,
+              "velo": 83.0
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.184,
+              "ops_against": 0.89
+            },
+            "vs_rhb": {
+              "k_rate": 0.167,
+              "ops_against": 0.891
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.158,
+              "whiff_rate": 0.228,
+              "xwoba": 0.379,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.183,
+              "whiff_rate": 0.207,
+              "xwoba": 0.351
+            },
+            "trend": "steady",
+            "note": "K% down 2.5pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         }
       ]
