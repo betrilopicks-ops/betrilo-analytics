@@ -16,6 +16,7 @@ import ResultsPage from './pages/ResultsPage';
 import StartingLineupsPage from './pages/StartingLineupsPage';
 import NotFoundPage from './pages/NotFoundPage';
 import PitcherReportPage from './pages/PitcherReportPage';
+import GameLogsPage from './pages/GameLogsPage';
 import StatusPage from './pages/StatusPage';
 
 function AppContent() {
@@ -38,6 +39,7 @@ function AppContent() {
           <Route path="/mlb/edge-report" element={<EdgeReportPage />} />
           <Route path="/mlb/best-bets" element={<BestBetsPage />} />
 <Route path="/mlb/pitcher-report" element={<PitcherReportPage />} />
+          <Route path="/mlb/game-logs" element={<GameLogsPage />} />
           <Route path="/status" element={<StatusPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

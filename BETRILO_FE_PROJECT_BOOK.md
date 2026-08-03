@@ -1,6 +1,6 @@
 # @betrilopicks Frontend (betrilo.com) — Technical Project Book
 
-**Version:** BFEv0.7.1 | **Last Updated:** August 3, 2026 | **Includes:** Pitcher Report sort by start time (games now render earliest→latest); Batter Splits doubleheader fix (DH players appear twice with G1/G2 labels and correct per-game opposing pitcher; team filter uses team_abbr for clean DH grouping); /status false-alarm fix (Best Bets, Edge Report, Batter Splits switched to freshness-only health — these surfaces don't count raw games, so their record counts falsely mismatched the MLB schedule, producing spurious yellow flags on healthy days; now noGameCount: healthy = updated today, no game-count comparison; operator sees all-green banner when pipeline is clean); System Status page (/status — public but unlisted, not in nav/sitemap; pipeline health + data freshness dashboard for remote monitoring during travel; per-surface cards showing last_refreshed timestamp (absolute + relative ET), health color (green/yellow/red based on today-freshness + game-count cross-check vs MLB Stats API schedule), game count vs expected, record counts; top-line banner summarizes all-healthy vs attention-needed; pipeline health_latest.json verdict + step-level status surfaced; schedule cross-check: MLB Stats API primary with starting-lineups fallback; auto-refresh every 5 min + manual refresh button; mobile-friendly; per-surface error isolation; noindex/nofollow meta; built for 7/29-8/3 travel window); VP AB column on Player Projections page (column relabeled VP AB, reads vp_ab from JSON instead of vp_pa; cellValue switch and td render updated; footer Key text updated to "VP AB/H/HR/xwOBA — career at-bats and performance vs. today's probable pitcher"); H+R+RBI column on Player Projections page (proj_hrrbi passthrough from DB — same value as Results page; sortable; 327/520 batters covered; footer Key corrected); Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema; BvP guide: crawlable static HTML at /mlb/batter-vs-pitcher-guide (~800 words, content in served HTML pre-JS); Footer support mailto (support@betrilo.com; green on navy; legible contrast); Game dropdown chronological sort (PlayerProjections + StartingLineups)
+**Version:** BFEv0.8.0 | **Last Updated:** August 3, 2026 | **Includes:** Pitcher Report sort by start time (games now render earliest→latest); Batter Splits doubleheader fix (DH players appear twice with G1/G2 labels and correct per-game opposing pitcher; team filter uses team_abbr for clean DH grouping); /status false-alarm fix (Best Bets, Edge Report, Batter Splits switched to freshness-only health — these surfaces don't count raw games, so their record counts falsely mismatched the MLB schedule, producing spurious yellow flags on healthy days; now noGameCount: healthy = updated today, no game-count comparison; operator sees all-green banner when pipeline is clean); System Status page (/status — public but unlisted, not in nav/sitemap; pipeline health + data freshness dashboard for remote monitoring during travel; per-surface cards showing last_refreshed timestamp (absolute + relative ET), health color (green/yellow/red based on today-freshness + game-count cross-check vs MLB Stats API schedule), game count vs expected, record counts; top-line banner summarizes all-healthy vs attention-needed; pipeline health_latest.json verdict + step-level status surfaced; schedule cross-check: MLB Stats API primary with starting-lineups fallback; auto-refresh every 5 min + manual refresh button; mobile-friendly; per-surface error isolation; noindex/nofollow meta; built for 7/29-8/3 travel window); VP AB column on Player Projections page (column relabeled VP AB, reads vp_ab from JSON instead of vp_pa; cellValue switch and td render updated; footer Key text updated to "VP AB/H/HR/xwOBA — career at-bats and performance vs. today's probable pitcher"); H+R+RBI column on Player Projections page (proj_hrrbi passthrough from DB — same value as Results page; sortable; 327/520 batters covered; footer Key corrected); Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema; BvP guide: crawlable static HTML at /mlb/batter-vs-pitcher-guide (~800 words, content in served HTML pre-JS); Footer support mailto (support@betrilo.com; green on navy; legible contrast); Game dropdown chronological sort (PlayerProjections + StartingLineups)
 
 ---
 
@@ -555,4 +555,30 @@ BMLBv3.28.0). Data-source: Branch B — new JSON required. Pending preview revie
 
 **Version:** BFEv0.7.0 → **BFEv0.7.1** (PATCH — game-log table polish)
 
-**Status:** Branch `feature/player-game-log` — preview only, pending operator verify + merge.
+**Status:** LIVE — merged to main 2026-08-03 (branch `feature/player-game-log`). BFEv0.7.1 shipped.
+
+---
+
+### Session: August 3, 2026 — BFEv0.7.1 → BFEv0.8.0 — Game Logs Page (/mlb/game-logs)
+
+**Summary:** New dedicated page at `/mlb/game-logs` with Batters | Pitchers toggle. Full-season (2026) game-by-game stats with comprehensive filtering. Load-per-toggle architecture: batter JSON (~697 KB gz) loads on mount; pitcher JSON (~394 KB gz) fetched on first toggle to Pitchers tab (cached after).
+
+**Batter view:** 33,878 rows. Filters: player search, team, opponent, home/away, vs LHP/RHP (opposing pitcher hand), bat side (L/R/S), stat presets (multi-hit, HR, 3+K, 0-fer). Sort by any column. Default: Recent 10 (not a 34K dump). View controls: 10 / 25 / Full Season.
+
+**Pitcher view:** 14,156 rows. Filters: pitcher search, team, opponent, home/away, pitch hand (L/R), starter/reliever, presets (quality start IP>=6 ER<=3, 10+K, CGSO). Sort by any column. Statcast columns (Whiff%, K%, xwOBA, Velo) show "—" for unenriched rows. Same 10/25/Full controls.
+
+**Mobile:** Wide tables (15-16 cols) use position:sticky frozen Date + Player/Pitcher columns with solid backgrounds + right-border divider. Stat columns scroll underneath.
+
+**Edge cases:** Empty filter result → "No games match those filters." Pitcher loading state while fetch in progress. Pitcher unavailable → graceful fallback. Filters combine (AND). Clear button resets all. Result count shown.
+
+| File | Change |
+|---|---|
+| `src/pages/GameLogsPage.jsx` | New file — full page with BatterView + PitcherView components |
+| `src/App.js` | Import GameLogsPage + route `/mlb/game-logs` |
+| `src/components/Header.jsx` | "Game Logs" nav item added |
+
+**Build:** `CI=true npm run build` — "Compiled successfully." Zero warnings.
+
+**Version:** BFEv0.7.1 → **BFEv0.8.0** (MINOR — new page)
+
+**Status:** Branch `feature/game-logs-page` — preview only, pending operator verify + merge.

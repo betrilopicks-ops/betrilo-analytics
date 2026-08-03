@@ -10,6 +10,7 @@ const navItems = [
   { to: '/mlb/batter-splits', label: 'Batter Splits' },
   { to: '/mlb/best-bets', label: 'Best Bets' },
   { to: '/mlb/player-projections', label: 'Player Projections' },
+  { to: '/mlb/game-logs', label: 'Game Logs' },
   { to: '/mlb/edge-report', label: 'Edge Report' },
   { to: '/mlb/results', label: 'Results' },
   { to: '/mlb/track-record', label: 'Track Record' },
