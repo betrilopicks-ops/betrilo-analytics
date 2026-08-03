@@ -36,12 +36,21 @@ function GameLogPanel({ gameLog }) {
 
   const fmtBa = (v) => (typeof v === 'number' ? v.toFixed(3).replace(/^0/, '') : '—');
 
+  // Shared styles for frozen (sticky) Date + Opp columns
+  const expandBg = '#f0f6fa';
+  const stickyDate = { position: 'sticky', left: 0, zIndex: 2, background: expandBg };
+  const stickyOpp = { position: 'sticky', left: 42, zIndex: 2, background: expandBg, borderRight: '2px solid #d9e2e8' };
+  const stickyDateHead = { ...stickyDate, background: expandBg };
+  const stickyOppHead = { ...stickyOpp, background: expandBg };
+
   return (
     <div style={{ padding: '6px 0 10px', overflowX: 'auto' }}>
       <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '12px', minWidth: '340px' }}>
         <thead>
-          <tr style={{ borderBottom: '1px solid #d9e2e8' }}>
-            {cols.map(c => (
+          <tr style={{ borderBottom: '2px solid #d0dae2' }}>
+            <th style={{ padding: '4px 6px', textAlign: 'left', fontWeight: 700, color: colors.navy, fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.3px', whiteSpace: 'nowrap', ...stickyDateHead }}>Date</th>
+            <th style={{ padding: '4px 6px', textAlign: 'left', fontWeight: 700, color: colors.navy, fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.3px', whiteSpace: 'nowrap', ...stickyOppHead }}>Opp</th>
+            {cols.slice(2).map(c => (
               <th key={c.key} style={{
                 padding: '4px 6px', textAlign: c.align, fontWeight: 700,
                 color: colors.navy, fontSize: '10px', textTransform: 'uppercase',
@@ -52,9 +61,9 @@ function GameLogPanel({ gameLog }) {
         </thead>
         <tbody>
           {games.map((g, i) => (
-            <tr key={i} style={{ borderBottom: i < games.length - 1 ? '1px solid #eef2f5' : 'none' }}>
-              <td style={{ padding: '3px 6px', textAlign: 'left', color: '#5a6b76', whiteSpace: 'nowrap' }}>{fmtDate(g.date)}</td>
-              <td style={{ padding: '3px 6px', textAlign: 'left', color: '#5a6b76', fontWeight: 600 }}>{g.opp || '—'}</td>
+            <tr key={i} style={{ borderBottom: '1px solid #dce4ea' }}>
+              <td style={{ padding: '3px 6px', textAlign: 'left', color: '#5a6b76', whiteSpace: 'nowrap', ...stickyDate }}>{fmtDate(g.date)}</td>
+              <td style={{ padding: '3px 6px', textAlign: 'left', color: '#5a6b76', fontWeight: 600, ...stickyOpp }}>{g.opp || '—'}</td>
               <td style={{ padding: '3px 6px', textAlign: 'center', color: colors.navy }}>{g.ab ?? '—'}</td>
               <td style={{ padding: '3px 6px', textAlign: 'center', color: colors.navy, fontWeight: g.h > 0 ? 700 : 400 }}>{g.h ?? '—'}</td>
               <td style={{ padding: '3px 6px', textAlign: 'center', color: '#5a6b76' }}>{g.r ?? '—'}</td>
