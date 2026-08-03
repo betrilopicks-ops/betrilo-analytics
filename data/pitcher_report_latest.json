@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-08-03",
-  "last_refreshed": "2026-08-03T15:01:04-04:00",
+  "last_refreshed": "2026-08-03T16:01:16-04:00",
   "games": 8,
-  "pitchers": 14,
+  "pitchers": 15,
   "coverage": {
-    "full_2026": 13,
+    "full_2026": 14,
     "fallback_2025": 1,
     "thin_no_data": 0
   },
@@ -534,20 +534,66 @@
           "side": "home",
           "team": "TEX",
           "opponent": "SF",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Cal Quantrill",
+          "pitcher_id": 615698,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 4,
+            "l": 3,
+            "era": "3.84",
+            "whip": "1.24"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.144,
+            "whiff_rate": 0.145,
+            "bb_rate": 0.087,
+            "xwoba_against": 0.38,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Cutter",
+              "usage_pct": 35.5,
+              "velo": 88.3
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 30.9,
+              "velo": 94.0
+            },
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 15.4,
+              "velo": 93.8
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.184,
+              "ops_against": 0.74
+            },
+            "vs_rhb": {
+              "k_rate": 0.09,
+              "ops_against": 0.513
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.115,
+              "whiff_rate": 0.11,
+              "xwoba": 0.386,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.144,
+              "whiff_rate": 0.145,
+              "xwoba": 0.38
+            },
+            "trend": "steady",
+            "note": "K% down 2.9pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
