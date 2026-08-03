@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-08-03",
-  "last_refreshed": "2026-08-03T11:00:59-04:00",
+  "last_refreshed": "2026-08-03T15:01:04-04:00",
   "games": 8,
-  "pitchers": 13,
+  "pitchers": 14,
   "coverage": {
-    "full_2026": 12,
+    "full_2026": 13,
     "fallback_2025": 1,
     "thin_no_data": 0
   },
@@ -86,20 +86,66 @@
           "side": "away",
           "team": "WSH",
           "opponent": "PHI",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Andrew Alvarez",
+          "pitcher_id": 674841,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 2,
+            "l": 3,
+            "era": "4.06",
+            "whip": "1.51"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.277,
+            "whiff_rate": 0.263,
+            "bb_rate": 0.085,
+            "xwoba_against": 0.305,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Curve",
+              "usage_pct": 29.8,
+              "velo": 82.8
+            },
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 27.3,
+              "velo": 92.5
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 25.9,
+              "velo": 83.8
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.182,
+              "ops_against": 0.707
+            },
+            "vs_rhb": {
+              "k_rate": 0.302,
+              "ops_against": 0.724
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.289,
+              "whiff_rate": 0.259,
+              "xwoba": 0.282,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.277,
+              "whiff_rate": 0.263,
+              "xwoba": 0.305
+            },
+            "trend": "steady",
+            "note": "K% up 1.2pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         }
       ]
