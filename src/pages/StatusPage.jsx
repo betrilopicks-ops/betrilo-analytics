@@ -437,6 +437,18 @@ export default function StatusPage() {
             );
           })}
 
+          {/* Team-drop guard warning */}
+          {!loading && surfaces.player_projections?.data?.team_drop_guard && (
+            <div style={{ ...bannerBase, background: 'rgba(239,68,68,0.10)', border: '1px solid #ef4444', marginTop: 14 }}>
+              <strong style={{ color: '#ef4444' }}>TEAM-DROP GUARD FIRED</strong>
+              <div style={{ fontSize: 13, fontWeight: 400, marginTop: 4, color: colors.textMuted }}>
+                {surfaces.player_projections.data.team_drop_guard.map((w, i) => (
+                  <div key={i}>{w}</div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Footer metadata */}
           <div style={footerMetaStyle}>
             Schedule source: {scheduleSource ?? 'unavailable'} •
