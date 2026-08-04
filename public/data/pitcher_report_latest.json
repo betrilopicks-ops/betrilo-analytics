@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-08-04",
-  "last_refreshed": "2026-08-04T13:16:45-04:00",
+  "last_refreshed": "2026-08-04T15:01:44-04:00",
   "games": 15,
-  "pitchers": 29,
+  "pitchers": 30,
   "coverage": {
-    "full_2026": 24,
+    "full_2026": 25,
     "fallback_2025": 3,
     "thin_no_data": 2
   },
@@ -20,20 +20,66 @@
           "side": "home",
           "team": "BAL",
           "opponent": "LAA",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Cade Povich",
+          "pitcher_id": 700249,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 1,
+            "l": 1,
+            "era": "5.12",
+            "whip": "1.34"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.141,
+            "whiff_rate": 0.219,
+            "bb_rate": 0.092,
+            "xwoba_against": 0.362,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 46.6,
+              "velo": 91.9
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 21.5,
+              "velo": 76.1
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 11.3,
+              "velo": 86.4
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.129,
+              "ops_against": 1.146
+            },
+            "vs_rhb": {
+              "k_rate": 0.157,
+              "ops_against": 0.583
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.141,
+              "whiff_rate": 0.219,
+              "xwoba": 0.362,
+              "starts": 4
+            },
+            "season_avg": {
+              "k_rate": 0.141,
+              "whiff_rate": 0.219,
+              "xwoba": 0.362
+            },
+            "trend": "steady",
+            "note": "K% steady over L4"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
