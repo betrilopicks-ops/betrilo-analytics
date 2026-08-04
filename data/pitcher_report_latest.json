@@ -1,11 +1,11 @@
 {
   "slate_date": "2026-08-04",
-  "last_refreshed": "2026-08-04T13:01:47-04:00",
+  "last_refreshed": "2026-08-04T13:16:45-04:00",
   "games": 15,
   "pitchers": 29,
   "coverage": {
-    "full_2026": 25,
-    "fallback_2025": 2,
+    "full_2026": 24,
+    "fallback_2025": 3,
     "thin_no_data": 2
   },
   "hot_cold_rule": "hot = L5 K% >= 3pts above season AND L5 xwOBA <= season; cold = L5 K% >= 3pts below season OR L5 xwOBA >= 3pts above season; else steady",
@@ -182,7 +182,7 @@
           "opponent": "CLE",
           "pitcher_name": "Sean Manaea",
           "pitcher_id": 640455,
-          "hand": "L",
+          "hand": "?",
           "season": {
             "w": 2,
             "l": 5,
@@ -460,66 +460,42 @@
           "side": "away",
           "team": "WSH",
           "opponent": "PHI",
-          "pitcher_name": "Zack Littell",
-          "pitcher_id": 641793,
-          "hand": "R",
+          "pitcher_name": "Carson Palmquist",
+          "pitcher_id": 687223,
+          "hand": "L",
           "season": {
-            "w": 7,
-            "l": 8,
-            "era": "4.94",
-            "whip": "1.34"
+            "w": 0,
+            "l": 1,
+            "era": "7.31",
+            "whip": "1.63"
           },
           "stuff": {
-            "k_rate": 0.125,
-            "whiff_rate": 0.147,
-            "bb_rate": 0.079,
-            "xwoba_against": 0.396,
-            "vintage": "2026"
+            "k_rate": 0.157,
+            "whiff_rate": 0.186,
+            "bb_rate": 0.148,
+            "xwoba_against": 0.377,
+            "vintage": "2025"
           },
           "arsenal": [
             {
-              "pitch": "Slider",
-              "usage_pct": 29.3,
-              "velo": 88.1
+              "pitch": "Sinker",
+              "usage_pct": 39.9,
+              "velo": 90.9
+            },
+            {
+              "pitch": "Sweeper",
+              "usage_pct": 29.7,
+              "velo": 74.1
             },
             {
               "pitch": "4-Seam",
-              "usage_pct": 27.3,
-              "velo": 91.7
-            },
-            {
-              "pitch": "Sinker",
-              "usage_pct": 14.6,
-              "velo": 91.3
+              "usage_pct": 15.9,
+              "velo": 91.4
             }
           ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.108,
-              "ops_against": 0.925
-            },
-            "vs_rhb": {
-              "k_rate": 0.162,
-              "ops_against": 0.667
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.117,
-              "whiff_rate": 0.193,
-              "xwoba": 0.423,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.125,
-              "whiff_rate": 0.147,
-              "xwoba": 0.396
-            },
-            "trend": "steady",
-            "note": "K% steady over L5"
-          },
-          "sample_flag": null,
+          "splits": {},
+          "recent_form": {},
+          "sample_flag": "2025_fallback",
           "scratched": false
         }
       ]

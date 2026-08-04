@@ -71,23 +71,6 @@
           "slg": 0.2
         },
         {
-          "batter_id": 671218,
-          "batter_name": "Heliot Ramos",
-          "position": "OF",
-          "bats": "R",
-          "ab": 9,
-          "h": 3,
-          "b1": 2,
-          "b2": 0,
-          "b3": 0,
-          "hr": 1,
-          "bb": 0,
-          "so": 3,
-          "avg": 0.333,
-          "obp": 0.333,
-          "slg": 0.667
-        },
-        {
           "batter_id": 808982,
           "batter_name": "Jung Hoo Lee",
           "position": "OF",
@@ -103,23 +86,6 @@
           "avg": 0.25,
           "obp": 0.4,
           "slg": 0.25
-        },
-        {
-          "batter_id": 650333,
-          "batter_name": "Luis Arraez",
-          "position": "2B",
-          "bats": "L",
-          "ab": 11,
-          "h": 5,
-          "b1": 4,
-          "b2": 0,
-          "b3": 1,
-          "hr": 0,
-          "bb": 0,
-          "so": 0,
-          "avg": 0.455,
-          "obp": 0.455,
-          "slg": 0.636
         },
         {
           "batter_id": 656305,
@@ -188,7 +154,25 @@
         "pitcher_id": 675512,
         "pitcher_name": "Troy Melton"
       },
-      "home_batters": [],
+      "home_batters": [
+        {
+          "batter_id": 621493,
+          "batter_name": "Taylor Ward",
+          "position": "OF",
+          "bats": "R",
+          "ab": 5,
+          "h": 0,
+          "b1": 0,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 1,
+          "avg": 0.0,
+          "obp": 0.0,
+          "slg": 0.0
+        }
+      ],
       "away_batters": [
         {
           "batter_id": 690993,
@@ -514,21 +498,21 @@
           "slg": 1.333
         },
         {
-          "batter_id": 668721,
-          "batter_name": "Payton Henry",
-          "position": "C",
-          "bats": "R",
-          "ab": 1,
-          "h": 0,
-          "b1": 0,
+          "batter_id": 650333,
+          "batter_name": "Luis Arraez",
+          "position": "2B",
+          "bats": "L",
+          "ab": 3,
+          "h": 1,
+          "b1": 1,
           "b2": 0,
           "b3": 0,
           "hr": 0,
           "bb": 0,
           "so": 0,
-          "avg": 0.0,
-          "obp": 0.0,
-          "slg": 0.0
+          "avg": 0.333,
+          "obp": 0.333,
+          "slg": 0.333
         },
         {
           "batter_id": 607208,
@@ -633,74 +617,6 @@
           "avg": 0.4,
           "obp": 0.5,
           "slg": 1.0
-        },
-        {
-          "batter_id": 695578,
-          "batter_name": "James Wood",
-          "position": "OF",
-          "bats": "L",
-          "ab": 6,
-          "h": 3,
-          "b1": 2,
-          "b2": 1,
-          "b3": 0,
-          "hr": 0,
-          "bb": 0,
-          "so": 3,
-          "avg": 0.5,
-          "obp": 0.5,
-          "slg": 0.667
-        },
-        {
-          "batter_id": 686894,
-          "batter_name": "Joey Wiemer",
-          "position": "OF",
-          "bats": "R",
-          "ab": 8,
-          "h": 1,
-          "b1": 0,
-          "b2": 1,
-          "b3": 0,
-          "hr": 0,
-          "bb": 0,
-          "so": 7,
-          "avg": 0.125,
-          "obp": 0.125,
-          "slg": 0.25
-        },
-        {
-          "batter_id": 677588,
-          "batter_name": "José Tena",
-          "position": "DH",
-          "bats": "L",
-          "ab": 2,
-          "h": 0,
-          "b1": 0,
-          "b2": 0,
-          "b3": 0,
-          "hr": 0,
-          "bb": 0,
-          "so": 0,
-          "avg": 0.0,
-          "obp": 0.0,
-          "slg": 0.0
-        },
-        {
-          "batter_id": 660688,
-          "batter_name": "Keibert Ruiz",
-          "position": "C",
-          "bats": "S",
-          "ab": 14,
-          "h": 6,
-          "b1": 4,
-          "b2": 1,
-          "b3": 0,
-          "hr": 1,
-          "bb": 0,
-          "so": 2,
-          "avg": 0.429,
-          "obp": 0.429,
-          "slg": 0.714
         }
       ]
     },
@@ -803,6 +719,23 @@
           "avg": 0.0,
           "obp": 0.0,
           "slg": 0.0
+        },
+        {
+          "batter_id": 671218,
+          "batter_name": "Heliot Ramos",
+          "position": "OF",
+          "bats": "R",
+          "ab": 3,
+          "h": 1,
+          "b1": 1,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 1,
+          "avg": 0.333,
+          "obp": 0.333,
+          "slg": 0.333
         },
         {
           "batter_id": 641555,
@@ -1680,23 +1613,6 @@
           "slg": 0.5
         },
         {
-          "batter_id": 662139,
-          "batter_name": "Daulton Varsho",
-          "position": "OF",
-          "bats": "L",
-          "ab": 1,
-          "h": 1,
-          "b1": 1,
-          "b2": 0,
-          "b3": 0,
-          "hr": 0,
-          "bb": 0,
-          "so": 0,
-          "avg": 1.0,
-          "obp": 1.0,
-          "slg": 1.0
-        },
-        {
           "batter_id": 543807,
           "batter_name": "George Springer",
           "position": "DH",
@@ -1799,21 +1715,21 @@
       },
       "home_batters": [
         {
-          "batter_id": 686668,
-          "batter_name": "Brenton Doyle",
-          "position": "OF",
+          "batter_id": 681393,
+          "batter_name": "Connor Norby",
+          "position": "1B",
           "bats": "R",
-          "ab": 10,
+          "ab": 5,
           "h": 2,
-          "b1": 1,
+          "b1": 2,
           "b2": 0,
           "b3": 0,
-          "hr": 1,
-          "bb": 1,
-          "so": 6,
-          "avg": 0.2,
-          "obp": 0.273,
-          "slg": 0.5
+          "hr": 0,
+          "bb": 0,
+          "so": 3,
+          "avg": 0.4,
+          "obp": 0.4,
+          "slg": 0.4
         },
         {
           "batter_id": 666397,
@@ -2157,6 +2073,23 @@
           "slg": 0.8
         },
         {
+          "batter_id": 666176,
+          "batter_name": "Jo Adell",
+          "position": "OF",
+          "bats": "R",
+          "ab": 2,
+          "h": 1,
+          "b1": 1,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 1,
+          "so": 0,
+          "avg": 0.5,
+          "obp": 0.667,
+          "slg": 0.5
+        },
+        {
           "batter_id": 608070,
           "batter_name": "José Ramírez",
           "position": "3B",
@@ -2172,6 +2105,23 @@
           "avg": 0.167,
           "obp": 0.25,
           "slg": 0.167
+        },
+        {
+          "batter_id": 663993,
+          "batter_name": "Nathaniel Lowe",
+          "position": "DH",
+          "bats": "L",
+          "ab": 8,
+          "h": 1,
+          "b1": 0,
+          "b2": 0,
+          "b3": 0,
+          "hr": 1,
+          "bb": 0,
+          "so": 3,
+          "avg": 0.125,
+          "obp": 0.125,
+          "slg": 0.5
         },
         {
           "batter_id": 672275,
@@ -2225,42 +2175,7 @@
           "slg": 0.2
         }
       ],
-      "away_batters": [
-        {
-          "batter_id": 665742,
-          "batter_name": "Juan Soto",
-          "position": "OF",
-          "bats": "L",
-          "ab": 2,
-          "h": 2,
-          "b1": 0,
-          "b2": 1,
-          "b3": 0,
-          "hr": 1,
-          "bb": 1,
-          "so": 0,
-          "avg": 1.0,
-          "obp": 1.0,
-          "slg": 3.0
-        },
-        {
-          "batter_id": 673357,
-          "batter_name": "Luis Robert Jr.",
-          "position": "OF",
-          "bats": "R",
-          "ab": 8,
-          "h": 0,
-          "b1": 0,
-          "b2": 0,
-          "b3": 0,
-          "hr": 0,
-          "bb": 0,
-          "so": 2,
-          "avg": 0.0,
-          "obp": 0.0,
-          "slg": 0.0
-        }
-      ]
+      "away_batters": []
     },
     {
       "game_pk": 824484,
@@ -2327,23 +2242,6 @@
           "avg": 0.0,
           "obp": 0.0,
           "slg": 0.0
-        },
-        {
-          "batter_id": 663993,
-          "batter_name": "Nathaniel Lowe",
-          "position": "DH",
-          "bats": "L",
-          "ab": 5,
-          "h": 2,
-          "b1": 2,
-          "b2": 0,
-          "b3": 0,
-          "hr": 0,
-          "bb": 0,
-          "so": 0,
-          "avg": 0.4,
-          "obp": 0.4,
-          "slg": 0.4
         },
         {
           "batter_id": 668715,
@@ -2452,7 +2350,7 @@
         {
           "batter_id": 622268,
           "batter_name": "Donovan Walton",
-          "position": "3B",
+          "position": "2B",
           "bats": "L",
           "ab": 4,
           "h": 0,
@@ -2843,6 +2741,23 @@
           "slg": 1.5
         },
         {
+          "batter_id": 642020,
+          "batter_name": "Chuckie Robinson",
+          "position": "C",
+          "bats": "R",
+          "ab": 4,
+          "h": 1,
+          "b1": 1,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 0,
+          "avg": 0.25,
+          "obp": 0.25,
+          "slg": 0.25
+        },
+        {
           "batter_id": 687221,
           "batter_name": "Dalton Rushing",
           "position": "C",
@@ -2979,6 +2894,23 @@
       },
       "home_batters": [
         {
+          "batter_id": 668939,
+          "batter_name": "Adley Rutschman",
+          "position": "C",
+          "bats": "S",
+          "ab": 3,
+          "h": 0,
+          "b1": 0,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 0,
+          "avg": 0.0,
+          "obp": 0.0,
+          "slg": 0.0
+        },
+        {
           "batter_id": 678882,
           "batter_name": "Ceddanne Rafaela",
           "position": "OF",
@@ -3011,6 +2943,23 @@
           "avg": 0.0,
           "obp": 0.0,
           "slg": 0.0
+        },
+        {
+          "batter_id": 668670,
+          "batter_name": "Jake Rogers",
+          "position": "C",
+          "bats": "R",
+          "ab": 5,
+          "h": 1,
+          "b1": 1,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 1,
+          "avg": 0.2,
+          "obp": 0.2,
+          "slg": 0.2
         },
         {
           "batter_id": 680776,
@@ -3185,6 +3134,23 @@
           "slg": 0.545
         },
         {
+          "batter_id": 686668,
+          "batter_name": "Brenton Doyle",
+          "position": "OF",
+          "bats": "R",
+          "ab": 2,
+          "h": 0,
+          "b1": 0,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 1,
+          "avg": 0.0,
+          "obp": 0.0,
+          "slg": 0.0
+        },
+        {
           "batter_id": 678246,
           "batter_name": "Miguel Vargas",
           "position": "3B",
@@ -3236,23 +3202,6 @@
       },
       "home_batters": [
         {
-          "batter_id": 668670,
-          "batter_name": "Jake Rogers",
-          "position": "C",
-          "bats": "R",
-          "ab": 2,
-          "h": 0,
-          "b1": 0,
-          "b2": 0,
-          "b3": 0,
-          "hr": 0,
-          "bb": 2,
-          "so": 1,
-          "avg": 0.0,
-          "obp": 0.5,
-          "slg": 0.0
-        },
-        {
           "batter_id": 665750,
           "batter_name": "Leody Taveras",
           "position": "OF",
@@ -3268,23 +3217,6 @@
           "avg": 0.5,
           "obp": 0.75,
           "slg": 2.0
-        },
-        {
-          "batter_id": 621493,
-          "batter_name": "Taylor Ward",
-          "position": "OF",
-          "bats": "R",
-          "ab": 8,
-          "h": 3,
-          "b1": 1,
-          "b2": 1,
-          "b3": 0,
-          "hr": 1,
-          "bb": 1,
-          "so": 2,
-          "avg": 0.375,
-          "obp": 0.444,
-          "slg": 0.875
         },
         {
           "batter_id": 641933,
@@ -3339,23 +3271,6 @@
           "slg": 0.2
         },
         {
-          "batter_id": 642201,
-          "batter_name": "Eli White",
-          "position": "OF",
-          "bats": "R",
-          "ab": 2,
-          "h": 0,
-          "b1": 0,
-          "b2": 0,
-          "b3": 0,
-          "hr": 0,
-          "bb": 0,
-          "so": 0,
-          "avg": 0.0,
-          "obp": 0.0,
-          "slg": 0.0
-        },
-        {
           "batter_id": 621566,
           "batter_name": "Matt Olson",
           "position": "1B",
@@ -3402,23 +3317,6 @@
           "hr": 0,
           "bb": 0,
           "so": 0,
-          "avg": 0.0,
-          "obp": 0.0,
-          "slg": 0.0
-        },
-        {
-          "batter_id": 805373,
-          "batter_name": "Nacho Alvarez Jr.",
-          "position": "SS",
-          "bats": "R",
-          "ab": 5,
-          "h": 0,
-          "b1": 0,
-          "b2": 0,
-          "b3": 0,
-          "hr": 0,
-          "bb": 0,
-          "so": 3,
           "avg": 0.0,
           "obp": 0.0,
           "slg": 0.0
@@ -3492,23 +3390,6 @@
           "avg": 0.0,
           "obp": 0.2,
           "slg": 0.0
-        },
-        {
-          "batter_id": 681393,
-          "batter_name": "Connor Norby",
-          "position": "1B",
-          "bats": "R",
-          "ab": 6,
-          "h": 1,
-          "b1": 1,
-          "b2": 0,
-          "b3": 0,
-          "hr": 0,
-          "bb": 0,
-          "so": 4,
-          "avg": 0.167,
-          "obp": 0.167,
-          "slg": 0.167
         },
         {
           "batter_id": 688363,
@@ -3596,23 +3477,6 @@
           "slg": 0.0
         },
         {
-          "batter_id": 689414,
-          "batter_name": "Liam Hicks",
-          "position": "C",
-          "bats": "L",
-          "ab": 3,
-          "h": 1,
-          "b1": 1,
-          "b2": 0,
-          "b3": 0,
-          "hr": 0,
-          "bb": 1,
-          "so": 0,
-          "avg": 0.333,
-          "obp": 0.4,
-          "slg": 0.333
-        },
-        {
           "batter_id": 672640,
           "batter_name": "Otto Lopez",
           "position": "SS",
@@ -3642,23 +3506,6 @@
           "hr": 0,
           "bb": 0,
           "so": 0,
-          "avg": 0.0,
-          "obp": 0.0,
-          "slg": 0.0
-        },
-        {
-          "batter_id": 677956,
-          "batter_name": "Rece Hinds",
-          "position": "OF",
-          "bats": "R",
-          "ab": 4,
-          "h": 0,
-          "b1": 0,
-          "b2": 0,
-          "b3": 0,
-          "hr": 0,
-          "bb": 0,
-          "so": 2,
           "avg": 0.0,
           "obp": 0.0,
           "slg": 0.0
@@ -3815,6 +3662,23 @@
           "avg": 0.273,
           "obp": 0.333,
           "slg": 0.364
+        },
+        {
+          "batter_id": 663457,
+          "batter_name": "Lars Nootbaar",
+          "position": "OF",
+          "bats": "L",
+          "ab": 5,
+          "h": 1,
+          "b1": 1,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 0,
+          "avg": 0.2,
+          "obp": 0.2,
+          "slg": 0.2
         },
         {
           "batter_id": 666971,
