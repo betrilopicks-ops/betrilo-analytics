@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-08-07",
-  "last_refreshed": "2026-08-07T16:01:52-04:00",
+  "last_refreshed": "2026-08-07T16:31:51-04:00",
   "games": 15,
-  "pitchers": 29,
+  "pitchers": 30,
   "coverage": {
-    "full_2026": 26,
+    "full_2026": 27,
     "fallback_2025": 1,
     "thin_no_data": 2
   },
@@ -1146,20 +1146,61 @@
           "side": "away",
           "team": "CHC",
           "opponent": "KC",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Kevin Gausman",
+          "pitcher_id": 592332,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 5,
+            "l": 10,
+            "era": "4.38",
+            "whip": "1.29"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.24,
+            "whiff_rate": 0.259,
+            "bb_rate": 0.056,
+            "xwoba_against": 0.3,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 51.1,
+              "velo": 93.9
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 9.8,
+              "velo": 84.3
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.209,
+              "ops_against": 0.686
+            },
+            "vs_rhb": {
+              "k_rate": 0.272,
+              "ops_against": 0.753
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.21,
+              "whiff_rate": 0.284,
+              "xwoba": 0.333,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.24,
+              "whiff_rate": 0.259,
+              "xwoba": 0.3
+            },
+            "trend": "cold",
+            "note": "K% down 3.0pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         }
       ]
