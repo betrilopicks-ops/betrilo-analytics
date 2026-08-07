@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-08-07",
-  "last_refreshed": "2026-08-07T11:02:17-04:00",
+  "last_refreshed": "2026-08-07T15:01:50-04:00",
   "games": 15,
-  "pitchers": 28,
+  "pitchers": 29,
   "coverage": {
-    "full_2026": 25,
+    "full_2026": 26,
     "fallback_2025": 1,
     "thin_no_data": 2
   },
@@ -1845,20 +1845,66 @@
           "side": "home",
           "team": "SF",
           "opponent": "DET",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "JT Brubaker",
+          "pitcher_id": 664141,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 0,
+            "l": 0,
+            "era": "3.17",
+            "whip": "1.17"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.17,
+            "whiff_rate": 0.213,
+            "bb_rate": 0.121,
+            "xwoba_against": 0.35,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Sinker",
+              "usage_pct": 51.0,
+              "velo": 93.7
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 25.2,
+              "velo": 87.2
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 11.1,
+              "velo": 88.6
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.16,
+              "ops_against": 0.527
+            },
+            "vs_rhb": {
+              "k_rate": 0.174,
+              "ops_against": 0.654
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.195,
+              "whiff_rate": 0.169,
+              "xwoba": 0.31,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.17,
+              "whiff_rate": 0.213,
+              "xwoba": 0.35
+            },
+            "trend": "steady",
+            "note": "K% up 2.5pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
