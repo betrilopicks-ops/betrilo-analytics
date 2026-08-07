@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-08-07",
-  "last_refreshed": "2026-08-07T06:07:54-04:00",
+  "last_refreshed": "2026-08-07T11:02:17-04:00",
   "games": 15,
-  "pitchers": 27,
+  "pitchers": 28,
   "coverage": {
-    "full_2026": 24,
+    "full_2026": 25,
     "fallback_2025": 1,
     "thin_no_data": 2
   },
@@ -336,20 +336,66 @@
           "side": "away",
           "team": "CIN",
           "opponent": "WSH",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Chase Petty",
+          "pitcher_id": 695534,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 1,
+            "l": 2,
+            "era": "4.50",
+            "whip": "1.23"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.121,
+            "whiff_rate": 0.219,
+            "bb_rate": 0.026,
+            "xwoba_against": 0.28,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Sinker",
+              "usage_pct": 25.9,
+              "velo": 96.7
+            },
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 25.7,
+              "velo": 97.2
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 23.4,
+              "velo": 87.6
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.121,
+              "ops_against": 0.37
+            },
+            "vs_rhb": {
+              "k_rate": 0.029,
+              "ops_against": 1.043
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.121,
+              "whiff_rate": 0.219,
+              "xwoba": 0.28,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.121,
+              "whiff_rate": 0.219,
+              "xwoba": 0.28
+            },
+            "trend": "steady",
+            "note": "K% steady over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         }
       ]
