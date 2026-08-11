@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-08-11",
-  "last_refreshed": "2026-08-11T11:01:46-04:00",
+  "last_refreshed": "2026-08-11T15:01:47-04:00",
   "games": 15,
-  "pitchers": 28,
+  "pitchers": 30,
   "coverage": {
-    "full_2026": 25,
+    "full_2026": 27,
     "fallback_2025": 1,
     "thin_no_data": 2
   },
@@ -300,20 +300,66 @@
           "side": "home",
           "team": "WSH",
           "opponent": "CHC",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Jake Irvin",
+          "pitcher_id": 663623,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 2,
+            "l": 5,
+            "era": "5.37",
+            "whip": "1.29"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.251,
+            "whiff_rate": 0.224,
+            "bb_rate": 0.095,
+            "xwoba_against": 0.343,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 27.3,
+              "velo": 92.8
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 25.0,
+              "velo": 77.5
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 23.0,
+              "velo": 91.9
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.255,
+              "ops_against": 0.701
+            },
+            "vs_rhb": {
+              "k_rate": 0.231,
+              "ops_against": 0.729
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.247,
+              "whiff_rate": 0.22,
+              "xwoba": 0.339,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.251,
+              "whiff_rate": 0.224,
+              "xwoba": 0.343
+            },
+            "trend": "steady",
+            "note": "K% steady over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
@@ -1724,20 +1770,56 @@
           "side": "home",
           "team": "SF",
           "opponent": "HOU",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Carson Whisenhunt",
+          "pitcher_id": 687931,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 2,
+            "l": 3,
+            "era": "7.25",
+            "whip": "1.84"
           },
-          "stuff": {},
-          "arsenal": [],
+          "stuff": {
+            "k_rate": 0.153,
+            "whiff_rate": 0.226,
+            "bb_rate": 0.151,
+            "xwoba_against": 0.388,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 37.5,
+              "velo": 92.6
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 37.5,
+              "velo": 83.3
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 22.7,
+              "velo": 84.3
+            }
+          ],
           "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.153,
+              "whiff_rate": 0.226,
+              "xwoba": 0.388,
+              "starts": 3
+            },
+            "season_avg": {
+              "k_rate": 0.153,
+              "whiff_rate": 0.226,
+              "xwoba": 0.388
+            },
+            "trend": "steady",
+            "note": "K% steady over L3"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
