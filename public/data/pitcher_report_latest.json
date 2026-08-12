@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-08-12",
-  "last_refreshed": "2026-08-12T11:01:44-04:00",
+  "last_refreshed": "2026-08-12T11:31:46-04:00",
   "games": 15,
-  "pitchers": 29,
+  "pitchers": 30,
   "coverage": {
-    "full_2026": 28,
+    "full_2026": 29,
     "fallback_2025": 0,
     "thin_no_data": 1
   },
@@ -580,20 +580,66 @@
           "side": "home",
           "team": "SF",
           "opponent": "HOU",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Adrian Houser",
+          "pitcher_id": 605288,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 3,
+            "l": 7,
+            "era": "4.55",
+            "whip": "1.37"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.15,
+            "whiff_rate": 0.161,
+            "bb_rate": 0.071,
+            "xwoba_against": 0.351,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Sinker",
+              "usage_pct": 45.4,
+              "velo": 94.9
+            },
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 20.7,
+              "velo": 95.6
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 16.7,
+              "velo": 85.3
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.164,
+              "ops_against": 0.947
+            },
+            "vs_rhb": {
+              "k_rate": 0.12,
+              "ops_against": 0.652
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.116,
+              "whiff_rate": 0.121,
+              "xwoba": 0.322,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.15,
+              "whiff_rate": 0.161,
+              "xwoba": 0.351
+            },
+            "trend": "cold",
+            "note": "K% down 3.4pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
