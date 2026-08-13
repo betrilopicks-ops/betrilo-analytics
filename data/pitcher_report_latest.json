@@ -1,6 +1,6 @@
 {
   "slate_date": "2026-08-13",
-  "last_refreshed": "2026-08-13T11:01:16-04:00",
+  "last_refreshed": "2026-08-13T12:01:15-04:00",
   "games": 9,
   "pitchers": 18,
   "coverage": {
@@ -144,6 +144,146 @@
             },
             "trend": "steady",
             "note": "K% down 1.1pts over L5"
+          },
+          "sample_flag": null,
+          "scratched": false
+        }
+      ]
+    },
+    {
+      "game_pk": 824561,
+      "start_time": "2026-08-13T17:10:00Z",
+      "home_team": "CWS",
+      "away_team": "CIN",
+      "pitchers": [
+        {
+          "side": "home",
+          "team": "CWS",
+          "opponent": "CIN",
+          "pitcher_name": "Davis Martin",
+          "pitcher_id": 663436,
+          "hand": "R",
+          "season": {
+            "w": 9,
+            "l": 6,
+            "era": "4.17",
+            "whip": "1.33"
+          },
+          "stuff": {
+            "k_rate": 0.23,
+            "whiff_rate": 0.245,
+            "bb_rate": 0.068,
+            "xwoba_against": 0.32,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 27.7,
+              "velo": 94.1
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 17.3,
+              "velo": 92.8
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 15.3,
+              "velo": 90.0
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.213,
+              "ops_against": 0.659
+            },
+            "vs_rhb": {
+              "k_rate": 0.257,
+              "ops_against": 0.709
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.139,
+              "whiff_rate": 0.207,
+              "xwoba": 0.391,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.23,
+              "whiff_rate": 0.245,
+              "xwoba": 0.32
+            },
+            "trend": "cold",
+            "note": "K% down 9.1pts over L5"
+          },
+          "sample_flag": null,
+          "scratched": false
+        },
+        {
+          "side": "away",
+          "team": "CIN",
+          "opponent": "CWS",
+          "pitcher_name": "Andrew Abbott",
+          "pitcher_id": 671096,
+          "hand": "L",
+          "season": {
+            "w": 6,
+            "l": 7,
+            "era": "3.92",
+            "whip": "1.39"
+          },
+          "stuff": {
+            "k_rate": 0.169,
+            "whiff_rate": 0.204,
+            "bb_rate": 0.114,
+            "xwoba_against": 0.336,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 44.2,
+              "velo": 92.5
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 19.2,
+              "velo": 86.0
+            },
+            {
+              "pitch": "Sweeper",
+              "usage_pct": 17.8,
+              "velo": 82.2
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.272,
+              "ops_against": 0.677
+            },
+            "vs_rhb": {
+              "k_rate": 0.136,
+              "ops_against": 0.733
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.164,
+              "whiff_rate": 0.223,
+              "xwoba": 0.335,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.169,
+              "whiff_rate": 0.204,
+              "xwoba": 0.336
+            },
+            "trend": "steady",
+            "note": "K% steady over L5"
           },
           "sample_flag": null,
           "scratched": false
@@ -424,146 +564,6 @@
             },
             "trend": "hot",
             "note": "K% up 3.6pts over L5"
-          },
-          "sample_flag": null,
-          "scratched": false
-        }
-      ]
-    },
-    {
-      "game_pk": 824561,
-      "start_time": "2026-08-13T18:10:00Z",
-      "home_team": "CWS",
-      "away_team": "CIN",
-      "pitchers": [
-        {
-          "side": "home",
-          "team": "CWS",
-          "opponent": "CIN",
-          "pitcher_name": "Davis Martin",
-          "pitcher_id": 663436,
-          "hand": "R",
-          "season": {
-            "w": 9,
-            "l": 6,
-            "era": "4.17",
-            "whip": "1.33"
-          },
-          "stuff": {
-            "k_rate": 0.23,
-            "whiff_rate": 0.245,
-            "bb_rate": 0.068,
-            "xwoba_against": 0.32,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 27.7,
-              "velo": 94.1
-            },
-            {
-              "pitch": "Sinker",
-              "usage_pct": 17.3,
-              "velo": 92.8
-            },
-            {
-              "pitch": "Changeup",
-              "usage_pct": 15.3,
-              "velo": 90.0
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.213,
-              "ops_against": 0.659
-            },
-            "vs_rhb": {
-              "k_rate": 0.257,
-              "ops_against": 0.709
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.139,
-              "whiff_rate": 0.207,
-              "xwoba": 0.391,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.23,
-              "whiff_rate": 0.245,
-              "xwoba": 0.32
-            },
-            "trend": "cold",
-            "note": "K% down 9.1pts over L5"
-          },
-          "sample_flag": null,
-          "scratched": false
-        },
-        {
-          "side": "away",
-          "team": "CIN",
-          "opponent": "CWS",
-          "pitcher_name": "Andrew Abbott",
-          "pitcher_id": 671096,
-          "hand": "L",
-          "season": {
-            "w": 6,
-            "l": 7,
-            "era": "3.92",
-            "whip": "1.39"
-          },
-          "stuff": {
-            "k_rate": 0.169,
-            "whiff_rate": 0.204,
-            "bb_rate": 0.114,
-            "xwoba_against": 0.336,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 44.2,
-              "velo": 92.5
-            },
-            {
-              "pitch": "Changeup",
-              "usage_pct": 19.2,
-              "velo": 86.0
-            },
-            {
-              "pitch": "Sweeper",
-              "usage_pct": 17.8,
-              "velo": 82.2
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.272,
-              "ops_against": 0.677
-            },
-            "vs_rhb": {
-              "k_rate": 0.136,
-              "ops_against": 0.733
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.164,
-              "whiff_rate": 0.223,
-              "xwoba": 0.335,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.169,
-              "whiff_rate": 0.204,
-              "xwoba": 0.336
-            },
-            "trend": "steady",
-            "note": "K% steady over L5"
           },
           "sample_flag": null,
           "scratched": false
