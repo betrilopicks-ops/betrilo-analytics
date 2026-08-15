@@ -1,8 +1,8 @@
 {
   "verdict": "ALL GOOD",
-  "headline": "All steps passed.",
-  "checked_at": "2026-08-14T06:09:03",
-  "run_date": "2026-08-14",
+  "headline": "Core run OK. Optional step warnings: Buffer posting (IG + Threads + X)",
+  "checked_at": "2026-08-15T06:11:19",
+  "run_date": "2026-08-15",
   "required_ok": true,
   "steps": {
     "Pipeline generation": "OK",
@@ -22,7 +22,7 @@
     "Push site data to GitHub": "OK",
     "Caption generation": "OK",
     "GitHub image upload": "OK",
-    "Buffer posting (IG + Threads + X)": "OK",
+    "Buffer posting (IG + Threads + X)": "FAIL",
     "Validation metrics": "OK",
     "Database backup": "OK"
   }
