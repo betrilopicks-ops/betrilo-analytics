@@ -1,12 +1,12 @@
 {
   "slate_date": "2026-08-17",
-  "last_refreshed": "2026-08-17T11:01:41-04:00",
+  "last_refreshed": "2026-08-17T15:01:34-04:00",
   "games": 11,
-  "pitchers": 21,
+  "pitchers": 22,
   "coverage": {
     "full_2026": 18,
     "fallback_2025": 1,
-    "thin_no_data": 2
+    "thin_no_data": 3
   },
   "hot_cold_rule": "hot = L5 K% >= 3pts above season AND L5 xwOBA <= season; cold = L5 K% >= 3pts below season OR L5 xwOBA >= 3pts above season; else steady",
   "matchups": [
@@ -24,10 +24,10 @@
           "pitcher_id": 592288,
           "hand": "?",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 0,
+            "l": 0,
+            "era": "4.50",
+            "whip": "1.75"
           },
           "stuff": {},
           "arsenal": [],
@@ -46,8 +46,8 @@
           "season": {
             "w": 0,
             "l": 1,
-            "era": "3.60",
-            "whip": "1.80"
+            "era": "3.12",
+            "whip": "1.62"
           },
           "stuff": {},
           "arsenal": [
@@ -644,20 +644,36 @@
           "side": "home",
           "team": "BOS",
           "opponent": "AZ",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Alec Gamboa",
+          "pitcher_id": 687941,
+          "hand": "?",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 0,
+            "l": 0,
+            "era": "1.59",
+            "whip": "1.12"
           },
           "stuff": {},
-          "arsenal": [],
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 51.5,
+              "velo": 95.7
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 33.0,
+              "velo": 88.8
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 13.0,
+              "velo": 95.1
+            }
+          ],
           "splits": {},
           "recent_form": {},
-          "sample_flag": "tbd",
+          "sample_flag": "thin_2026",
           "scratched": false
         },
         {
