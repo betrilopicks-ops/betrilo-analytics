@@ -1,12 +1,12 @@
 {
   "slate_date": "2026-08-17",
-  "last_refreshed": "2026-08-17T06:06:59-04:00",
+  "last_refreshed": "2026-08-17T11:01:41-04:00",
   "games": 11,
-  "pitchers": 18,
+  "pitchers": 21,
   "coverage": {
-    "full_2026": 17,
+    "full_2026": 18,
     "fallback_2025": 1,
-    "thin_no_data": 0
+    "thin_no_data": 2
   },
   "hot_cold_rule": "hot = L5 K% >= 3pts above season AND L5 xwOBA <= season; cold = L5 K% >= 3pts below season OR L5 xwOBA >= 3pts above season; else steady",
   "matchups": [
@@ -20,9 +20,9 @@
           "side": "home",
           "team": "CIN",
           "opponent": "STL",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Kent Emanuel",
+          "pitcher_id": 592288,
+          "hand": "?",
           "season": {
             "w": null,
             "l": null,
@@ -33,27 +33,43 @@
           "arsenal": [],
           "splits": {},
           "recent_form": {},
-          "sample_flag": "tbd",
+          "sample_flag": "thin_2026",
           "scratched": false
         },
         {
           "side": "away",
           "team": "STL",
           "opponent": "CIN",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Quinn Mathews",
+          "pitcher_id": 687273,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 0,
+            "l": 1,
+            "era": "3.60",
+            "whip": "1.80"
           },
           "stuff": {},
-          "arsenal": [],
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 41.2,
+              "velo": 94.3
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 23.7,
+              "velo": 86.2
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 17.5,
+              "velo": 83.4
+            }
+          ],
           "splits": {},
           "recent_form": {},
-          "sample_flag": "tbd",
+          "sample_flag": "thin_2026",
           "scratched": false
         }
       ]
@@ -134,20 +150,66 @@
           "side": "away",
           "team": "STL",
           "opponent": "CIN",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Andre Pallante",
+          "pitcher_id": 669467,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 12,
+            "l": 6,
+            "era": "3.46",
+            "whip": "1.22"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.177,
+            "whiff_rate": 0.208,
+            "bb_rate": 0.089,
+            "xwoba_against": 0.31,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 33.3,
+              "velo": 95.1
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 28.6,
+              "velo": 87.6
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 17.5,
+              "velo": 95.3
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.167,
+              "ops_against": 0.651
+            },
+            "vs_rhb": {
+              "k_rate": 0.192,
+              "ops_against": 0.662
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.142,
+              "whiff_rate": 0.173,
+              "xwoba": 0.315,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.177,
+              "whiff_rate": 0.208,
+              "xwoba": 0.31
+            },
+            "trend": "cold",
+            "note": "K% down 3.5pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         }
       ]
