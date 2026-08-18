@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-08-18",
-  "last_refreshed": "2026-08-18T15:32:05-04:00",
+  "last_refreshed": "2026-08-18T16:02:10-04:00",
   "games": 15,
-  "pitchers": 28,
+  "pitchers": 30,
   "coverage": {
-    "full_2026": 27,
+    "full_2026": 29,
     "fallback_2025": 0,
     "thin_no_data": 1
   },
@@ -1120,20 +1120,66 @@
           "side": "home",
           "team": "KC",
           "opponent": "ATH",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Daniel Lynch IV",
+          "pitcher_id": 663738,
+          "hand": "?",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 4,
+            "l": 4,
+            "era": "2.88",
+            "whip": "1.02"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.256,
+            "whiff_rate": 0.278,
+            "bb_rate": 0.122,
+            "xwoba_against": 0.309,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Sinker",
+              "usage_pct": 28.1,
+              "velo": 94.5
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 25.8,
+              "velo": 87.2
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 25.3,
+              "velo": 85.9
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.21,
+              "ops_against": 0.349
+            },
+            "vs_rhb": {
+              "k_rate": 0.244,
+              "ops_against": 0.615
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.273,
+              "whiff_rate": 0.289,
+              "xwoba": 0.334,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.256,
+              "whiff_rate": 0.278,
+              "xwoba": 0.309
+            },
+            "trend": "steady",
+            "note": "K% up 1.7pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
@@ -1649,20 +1695,66 @@
           "side": "away",
           "team": "CWS",
           "opponent": "CHC",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Bryan Hudson",
+          "pitcher_id": 663542,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 3,
+            "l": 4,
+            "era": "3.14",
+            "whip": "1.28"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.343,
+            "whiff_rate": 0.217,
+            "bb_rate": 0.139,
+            "xwoba_against": 0.278,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 70.5,
+              "velo": 91.9
+            },
+            {
+              "pitch": "Sweeper",
+              "usage_pct": 23.1,
+              "velo": 80.4
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 4.1,
+              "velo": 89.9
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.256,
+              "ops_against": 0.705
+            },
+            "vs_rhb": {
+              "k_rate": 0.196,
+              "ops_against": 0.557
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.267,
+              "whiff_rate": 0.212,
+              "xwoba": 0.306,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.343,
+              "whiff_rate": 0.217,
+              "xwoba": 0.278
+            },
+            "trend": "cold",
+            "note": "K% down 7.6pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         }
       ]
