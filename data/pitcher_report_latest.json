@@ -1,6 +1,6 @@
 {
   "slate_date": "2026-08-18",
-  "last_refreshed": "2026-08-18T16:32:05-04:00",
+  "last_refreshed": "2026-08-18T17:32:00-04:00",
   "games": 15,
   "pitchers": 30,
   "coverage": {
@@ -1186,64 +1186,54 @@
           "side": "away",
           "team": "ATH",
           "opponent": "KC",
-          "pitcher_name": "Jack Perkins",
-          "pitcher_id": 678022,
-          "hand": "R",
+          "pitcher_name": "Brady Basso",
+          "pitcher_id": 669620,
+          "hand": "L",
           "season": {
-            "w": 2,
-            "l": 9,
-            "era": "7.27",
-            "whip": "1.52"
+            "w": 0,
+            "l": 0,
+            "era": "4.35",
+            "whip": "1.40"
           },
           "stuff": {
-            "k_rate": 0.289,
-            "whiff_rate": 0.288,
-            "bb_rate": 0.099,
-            "xwoba_against": 0.299,
+            "k_rate": 0.224,
+            "whiff_rate": 0.183,
+            "bb_rate": 0.046,
+            "xwoba_against": 0.285,
             "vintage": "2026"
           },
           "arsenal": [
             {
               "pitch": "4-Seam",
-              "usage_pct": 38.3,
-              "velo": 96.0
+              "usage_pct": 39.9,
+              "velo": 93.1
             },
             {
-              "pitch": "Sweeper",
-              "usage_pct": 29.7,
-              "velo": 86.2
+              "pitch": "Curve",
+              "usage_pct": 22.8,
+              "velo": 77.4
             },
             {
-              "pitch": "Changeup",
-              "usage_pct": 17.1,
-              "velo": 89.5
+              "pitch": "Cutter",
+              "usage_pct": 17.0,
+              "velo": 87.7
             }
           ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.32,
-              "ops_against": 0.878
-            },
-            "vs_rhb": {
-              "k_rate": 0.255,
-              "ops_against": 0.82
-            },
-            "vintage": "2026"
-          },
+          "splits": {},
           "recent_form": {
             "last5": {
-              "k_rate": 0.284,
-              "whiff_rate": 0.271,
-              "xwoba": 0.323,
+              "k_rate": 0.236,
+              "whiff_rate": 0.177,
+              "xwoba": 0.254,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.289,
-              "whiff_rate": 0.288,
-              "xwoba": 0.299
+              "k_rate": 0.224,
+              "whiff_rate": 0.183,
+              "xwoba": 0.285
             },
             "trend": "steady",
-            "note": "K% steady over L5"
+            "note": "K% up 1.2pts over L5"
           },
           "sample_flag": null,
           "scratched": false
