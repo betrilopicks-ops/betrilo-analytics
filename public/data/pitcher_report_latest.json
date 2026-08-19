@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-08-19",
-  "last_refreshed": "2026-08-19T14:32:01-04:00",
+  "last_refreshed": "2026-08-19T15:02:10-04:00",
   "games": 15,
-  "pitchers": 28,
+  "pitchers": 29,
   "coverage": {
-    "full_2026": 24,
+    "full_2026": 25,
     "fallback_2025": 2,
     "thin_no_data": 2
   },
@@ -198,8 +198,8 @@
           "season": {
             "w": 8,
             "l": 8,
-            "era": "3.44",
-            "whip": "1.18"
+            "era": "3.40",
+            "whip": "1.17"
           },
           "stuff": {
             "k_rate": 0.225,
@@ -272,7 +272,7 @@
           "season": {
             "w": 9,
             "l": 5,
-            "era": "3.89",
+            "era": "3.90",
             "whip": "1.28"
           },
           "stuff": {
@@ -338,8 +338,8 @@
           "season": {
             "w": 0,
             "l": 0,
-            "era": "3.68",
-            "whip": "1.23"
+            "era": "3.12",
+            "whip": "1.15"
           },
           "stuff": {
             "k_rate": 0.211,
@@ -372,8 +372,8 @@
           "season": {
             "w": 5,
             "l": 5,
-            "era": "2.52",
-            "whip": "1.06"
+            "era": "2.45",
+            "whip": "1.09"
           },
           "stuff": {
             "k_rate": 0.191,
@@ -438,8 +438,8 @@
           "season": {
             "w": 1,
             "l": 3,
-            "era": "2.50",
-            "whip": "1.11"
+            "era": "2.44",
+            "whip": "1.10"
           },
           "stuff": {
             "k_rate": 0.289,
@@ -1300,20 +1300,66 @@
           "side": "home",
           "team": "KC",
           "opponent": "ATH",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Seth Lugo",
+          "pitcher_id": 607625,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 5,
+            "l": 7,
+            "era": "4.59",
+            "whip": "1.38"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.187,
+            "whiff_rate": 0.165,
+            "bb_rate": 0.077,
+            "xwoba_against": 0.344,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Sinker",
+              "usage_pct": 19.8,
+              "velo": 91.4
+            },
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 16.7,
+              "velo": 91.7
+            },
+            {
+              "pitch": "Cutter",
+              "usage_pct": 15.6,
+              "velo": 89.7
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.181,
+              "ops_against": 0.793
+            },
+            "vs_rhb": {
+              "k_rate": 0.192,
+              "ops_against": 0.74
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.196,
+              "whiff_rate": 0.175,
+              "xwoba": 0.32,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.187,
+              "whiff_rate": 0.165,
+              "xwoba": 0.344
+            },
+            "trend": "steady",
+            "note": "K% steady over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
