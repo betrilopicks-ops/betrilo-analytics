@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-08-19",
-  "last_refreshed": "2026-08-19T15:32:00-04:00",
+  "last_refreshed": "2026-08-19T16:02:08-04:00",
   "games": 15,
-  "pitchers": 29,
+  "pitchers": 30,
   "coverage": {
-    "full_2026": 25,
+    "full_2026": 26,
     "fallback_2025": 2,
     "thin_no_data": 2
   },
@@ -372,8 +372,8 @@
           "season": {
             "w": 5,
             "l": 5,
-            "era": "2.37",
-            "whip": "1.08"
+            "era": "2.49",
+            "whip": "1.11"
           },
           "stuff": {
             "k_rate": 0.191,
@@ -1366,20 +1366,66 @@
           "side": "away",
           "team": "ATH",
           "opponent": "KC",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Jeffrey Springs",
+          "pitcher_id": 605488,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 3,
+            "l": 11,
+            "era": "6.17",
+            "whip": "1.48"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.19,
+            "whiff_rate": 0.212,
+            "bb_rate": 0.098,
+            "xwoba_against": 0.332,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 44.4,
+              "velo": 91.4
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 24.8,
+              "velo": 83.9
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 23.1,
+              "velo": 79.5
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.173,
+              "ops_against": 0.756
+            },
+            "vs_rhb": {
+              "k_rate": 0.192,
+              "ops_against": 0.874
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.186,
+              "whiff_rate": 0.252,
+              "xwoba": 0.358,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.19,
+              "whiff_rate": 0.212,
+              "xwoba": 0.332
+            },
+            "trend": "steady",
+            "note": "K% steady over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         }
       ]
