@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-08-21",
-  "last_refreshed": "2026-08-21T17:32:08-04:00",
+  "last_refreshed": "2026-08-21T18:02:08-04:00",
   "games": 15,
-  "pitchers": 29,
+  "pitchers": 30,
   "coverage": {
-    "full_2026": 28,
+    "full_2026": 29,
     "fallback_2025": 1,
     "thin_no_data": 0
   },
@@ -26,7 +26,7 @@
           "season": {
             "w": 12,
             "l": 5,
-            "era": "1.69",
+            "era": "1.68",
             "whip": "0.76"
           },
           "stuff": {
@@ -92,7 +92,7 @@
           "season": {
             "w": 12,
             "l": 8,
-            "era": "2.22",
+            "era": "2.20",
             "whip": "1.03"
           },
           "stuff": {
@@ -1676,20 +1676,66 @@
           "side": "home",
           "team": "SD",
           "opponent": "MIN",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Randy Vásquez",
+          "pitcher_id": 681190,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 8,
+            "l": 6,
+            "era": "4.30",
+            "whip": "1.38"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.18,
+            "whiff_rate": 0.191,
+            "bb_rate": 0.065,
+            "xwoba_against": 0.34,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 30.3,
+              "velo": 95.0
+            },
+            {
+              "pitch": "Cutter",
+              "usage_pct": 23.2,
+              "velo": 90.7
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 16.3,
+              "velo": 95.1
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.184,
+              "ops_against": 0.765
+            },
+            "vs_rhb": {
+              "k_rate": 0.179,
+              "ops_against": 0.726
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.111,
+              "whiff_rate": 0.144,
+              "xwoba": 0.283,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.18,
+              "whiff_rate": 0.191,
+              "xwoba": 0.34
+            },
+            "trend": "cold",
+            "note": "K% down 6.9pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
