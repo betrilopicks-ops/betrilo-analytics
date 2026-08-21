@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-08-21",
-  "last_refreshed": "2026-08-21T06:08:18-04:00",
+  "last_refreshed": "2026-08-21T11:01:58-04:00",
   "games": 15,
-  "pitchers": 27,
+  "pitchers": 28,
   "coverage": {
-    "full_2026": 26,
+    "full_2026": 27,
     "fallback_2025": 1,
     "thin_no_data": 0
   },
@@ -320,20 +320,66 @@
           "side": "away",
           "team": "TOR",
           "opponent": "NYY",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Mason Fluharty",
+          "pitcher_id": 689254,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 5,
+            "l": 1,
+            "era": "3.71",
+            "whip": "1.24"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.261,
+            "whiff_rate": 0.246,
+            "bb_rate": 0.125,
+            "xwoba_against": 0.344,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Cutter",
+              "usage_pct": 49.8,
+              "velo": 90.9
+            },
+            {
+              "pitch": "Sweeper",
+              "usage_pct": 40.0,
+              "velo": 82.1
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 9.6,
+              "velo": 87.1
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.301,
+              "ops_against": 0.409
+            },
+            "vs_rhb": {
+              "k_rate": 0.25,
+              "ops_against": 0.859
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.303,
+              "whiff_rate": 0.246,
+              "xwoba": 0.343,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.261,
+              "whiff_rate": 0.246,
+              "xwoba": 0.344
+            },
+            "trend": "hot",
+            "note": "K% up 4.2pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         }
       ]
