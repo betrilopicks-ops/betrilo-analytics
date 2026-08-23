@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-08-23",
-  "last_refreshed": "2026-08-23T06:08:43-04:00",
+  "last_refreshed": "2026-08-23T11:02:00-04:00",
   "games": 15,
-  "pitchers": 29,
+  "pitchers": 30,
   "coverage": {
-    "full_2026": 27,
+    "full_2026": 28,
     "fallback_2025": 0,
     "thin_no_data": 2
   },
@@ -600,20 +600,66 @@
           "side": "away",
           "team": "DET",
           "opponent": "KC",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Jacob Waguespack",
+          "pitcher_id": 621097,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 1,
+            "l": 1,
+            "era": "1.95",
+            "whip": "0.83"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.188,
+            "whiff_rate": 0.268,
+            "bb_rate": 0.052,
+            "xwoba_against": 0.231,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 42.6,
+              "velo": 92.9
+            },
+            {
+              "pitch": "Cutter",
+              "usage_pct": 36.6,
+              "velo": 86.8
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 17.7,
+              "velo": 84.5
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.129,
+              "ops_against": 0.398
+            },
+            "vs_rhb": {
+              "k_rate": 0.194,
+              "ops_against": 0.746
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.186,
+              "whiff_rate": 0.288,
+              "xwoba": 0.203,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.188,
+              "whiff_rate": 0.268,
+              "xwoba": 0.231
+            },
+            "trend": "steady",
+            "note": "K% steady over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         }
       ]
