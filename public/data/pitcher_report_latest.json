@@ -1,12 +1,12 @@
 {
   "slate_date": "2026-08-25",
-  "last_refreshed": "2026-08-25T16:02:04-04:00",
+  "last_refreshed": "2026-08-25T16:31:59-04:00",
   "games": 15,
-  "pitchers": 29,
+  "pitchers": 30,
   "coverage": {
     "full_2026": 28,
     "fallback_2025": 0,
-    "thin_no_data": 1
+    "thin_no_data": 2
   },
   "hot_cold_rule": "hot = L5 K% >= 3pts above season AND L5 xwOBA <= season; cold = L5 K% >= 3pts below season OR L5 xwOBA >= 3pts above season; else steady",
   "matchups": [
@@ -76,64 +76,64 @@
           "side": "away",
           "team": "TB",
           "opponent": "DET",
-          "pitcher_name": "Ian Seymour",
-          "pitcher_id": 693855,
-          "hand": "L",
+          "pitcher_name": "Casey Legumina",
+          "pitcher_id": 668984,
+          "hand": "R",
           "season": {
-            "w": 9,
-            "l": 4,
-            "era": "4.17",
-            "whip": "1.14"
+            "w": 2,
+            "l": 2,
+            "era": "3.99",
+            "whip": "1.26"
           },
           "stuff": {
-            "k_rate": 0.278,
-            "whiff_rate": 0.286,
-            "bb_rate": 0.099,
-            "xwoba_against": 0.311,
+            "k_rate": 0.237,
+            "whiff_rate": 0.187,
+            "bb_rate": 0.034,
+            "xwoba_against": 0.327,
             "vintage": "2026"
           },
           "arsenal": [
             {
-              "pitch": "Changeup",
-              "usage_pct": 32.1,
-              "velo": 83.3
+              "pitch": "4-Seam",
+              "usage_pct": 40.6,
+              "velo": 93.2
             },
             {
-              "pitch": "4-Seam",
-              "usage_pct": 22.5,
-              "velo": 91.4
+              "pitch": "Sinker",
+              "usage_pct": 23.8,
+              "velo": 93.2
             },
             {
               "pitch": "Sweeper",
-              "usage_pct": 20.8,
-              "velo": 81.7
+              "usage_pct": 12.9,
+              "velo": 79.8
             }
           ],
           "splits": {
             "vs_lhb": {
-              "k_rate": 0.306,
-              "ops_against": 0.802
+              "k_rate": 0.211,
+              "ops_against": 0.63
             },
             "vs_rhb": {
-              "k_rate": 0.268,
-              "ops_against": 0.727
+              "k_rate": 0.157,
+              "ops_against": 0.865
             },
             "vintage": "2026"
           },
           "recent_form": {
             "last5": {
-              "k_rate": 0.337,
-              "whiff_rate": 0.248,
-              "xwoba": 0.295,
+              "k_rate": 0.255,
+              "whiff_rate": 0.172,
+              "xwoba": 0.303,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.278,
-              "whiff_rate": 0.286,
-              "xwoba": 0.311
+              "k_rate": 0.237,
+              "whiff_rate": 0.187,
+              "xwoba": 0.327
             },
-            "trend": "hot",
-            "note": "K% up 5.9pts over L5"
+            "trend": "steady",
+            "note": "K% up 1.8pts over L5"
           },
           "sample_flag": null,
           "scratched": false
@@ -356,9 +356,9 @@
           "side": "away",
           "team": "COL",
           "opponent": "WSH",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Mason Adams",
+          "pitcher_id": 690279,
+          "hand": "?",
           "season": {
             "w": null,
             "l": null,
@@ -369,7 +369,7 @@
           "arsenal": [],
           "splits": {},
           "recent_form": {},
-          "sample_flag": "tbd",
+          "sample_flag": "thin_2026",
           "scratched": false
         }
       ]

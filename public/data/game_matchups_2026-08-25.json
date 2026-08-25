@@ -14,8 +14,8 @@
         "pitcher_name": "Andrew Alvarez"
       },
       "away_pitcher": {
-        "pitcher_id": null,
-        "pitcher_name": "TBD"
+        "pitcher_id": 690279,
+        "pitcher_name": "Mason Adams"
       },
       "home_batters": [],
       "away_batters": [
@@ -2750,8 +2750,8 @@
         "pitcher_name": "Jackson Jobe"
       },
       "away_pitcher": {
-        "pitcher_id": 693855,
-        "pitcher_name": "Ian Seymour"
+        "pitcher_id": 668984,
+        "pitcher_name": "Casey Legumina"
       },
       "home_batters": [
         {
@@ -2772,18 +2772,35 @@
           "slg": 0.0
         },
         {
-          "batter_id": 663837,
-          "batter_name": "Matt Vierling",
-          "position": "OF",
+          "batter_id": 595879,
+          "batter_name": "Javier Báez",
+          "position": "SS",
           "bats": "R",
-          "ab": 0,
+          "ab": 1,
+          "h": 1,
+          "b1": 1,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 0,
+          "avg": 1.0,
+          "obp": 1.0,
+          "slg": 1.0
+        },
+        {
+          "batter_id": 678009,
+          "batter_name": "Parker Meadows",
+          "position": "OF",
+          "bats": "L",
+          "ab": 1,
           "h": 0,
           "b1": 0,
           "b2": 0,
           "b3": 0,
           "hr": 0,
           "bb": 0,
-          "so": 0,
+          "so": 1,
           "avg": 0.0,
           "obp": 0.0,
           "slg": 0.0
@@ -2794,16 +2811,16 @@
           "position": "OF",
           "bats": "L",
           "ab": 1,
-          "h": 1,
+          "h": 0,
           "b1": 0,
           "b2": 0,
           "b3": 0,
-          "hr": 1,
+          "hr": 0,
           "bb": 0,
-          "so": 0,
-          "avg": 1.0,
-          "obp": 1.0,
-          "slg": 4.0
+          "so": 1,
+          "avg": 0.0,
+          "obp": 0.0,
+          "slg": 0.0
         },
         {
           "batter_id": 679529,
@@ -2811,23 +2828,6 @@
           "position": "1B",
           "bats": "R",
           "ab": 1,
-          "h": 0,
-          "b1": 0,
-          "b2": 0,
-          "b3": 0,
-          "hr": 0,
-          "bb": 1,
-          "so": 1,
-          "avg": 0.0,
-          "obp": 0.5,
-          "slg": 0.0
-        },
-        {
-          "batter_id": 672761,
-          "batter_name": "Wenceel Pérez",
-          "position": "OF",
-          "bats": "S",
-          "ab": 2,
           "h": 1,
           "b1": 1,
           "b2": 0,
@@ -2835,25 +2835,25 @@
           "hr": 0,
           "bb": 0,
           "so": 0,
-          "avg": 0.5,
-          "obp": 0.5,
-          "slg": 0.5
+          "avg": 1.0,
+          "obp": 1.0,
+          "slg": 1.0
         },
         {
-          "batter_id": 656716,
-          "batter_name": "Zach McKinstry",
-          "position": "2B",
-          "bats": "L",
-          "ab": 0,
+          "batter_id": 672761,
+          "batter_name": "Wenceel Pérez",
+          "position": "OF",
+          "bats": "S",
+          "ab": 2,
           "h": 0,
           "b1": 0,
           "b2": 0,
           "b3": 0,
           "hr": 0,
-          "bb": 1,
+          "bb": 0,
           "so": 0,
           "avg": 0.0,
-          "obp": 1.0,
+          "obp": 0.0,
           "slg": 0.0
         }
       ],
