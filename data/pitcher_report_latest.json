@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-08-25",
-  "last_refreshed": "2026-08-25T15:32:09-04:00",
+  "last_refreshed": "2026-08-25T16:02:04-04:00",
   "games": 15,
-  "pitchers": 28,
+  "pitchers": 29,
   "coverage": {
-    "full_2026": 27,
+    "full_2026": 28,
     "fallback_2025": 0,
     "thin_no_data": 1
   },
@@ -1044,20 +1044,66 @@
           "side": "home",
           "team": "STL",
           "opponent": "BAL",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Matthew Liberatore",
+          "pitcher_id": 669461,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 5,
+            "l": 11,
+            "era": "5.04",
+            "whip": "1.44"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.224,
+            "whiff_rate": 0.204,
+            "bb_rate": 0.079,
+            "xwoba_against": 0.349,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 32.4,
+              "velo": 94.5
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 23.4,
+              "velo": 86.3
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 17.2,
+              "velo": 79.4
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.26,
+              "ops_against": 0.843
+            },
+            "vs_rhb": {
+              "k_rate": 0.21,
+              "ops_against": 0.78
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.326,
+              "whiff_rate": 0.244,
+              "xwoba": 0.269,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.224,
+              "whiff_rate": 0.204,
+              "xwoba": 0.349
+            },
+            "trend": "hot",
+            "note": "K% up 10.2pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
