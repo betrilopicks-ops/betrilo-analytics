@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-08-25",
-  "last_refreshed": "2026-08-25T11:02:08-04:00",
+  "last_refreshed": "2026-08-25T15:02:10-04:00",
   "games": 15,
-  "pitchers": 27,
+  "pitchers": 28,
   "coverage": {
-    "full_2026": 26,
+    "full_2026": 27,
     "fallback_2025": 0,
     "thin_no_data": 1
   },
@@ -150,20 +150,66 @@
           "side": "home",
           "team": "MIA",
           "opponent": "BOS",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Tyler Phillips",
+          "pitcher_id": 663969,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 3,
+            "l": 6,
+            "era": "3.67",
+            "whip": "1.37"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.194,
+            "whiff_rate": 0.275,
+            "bb_rate": 0.113,
+            "xwoba_against": 0.34,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Sinker",
+              "usage_pct": 26.9,
+              "velo": 95.7
+            },
+            {
+              "pitch": "Sweeper",
+              "usage_pct": 23.5,
+              "velo": 84.2
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 16.1,
+              "velo": 83.5
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.196,
+              "ops_against": 0.649
+            },
+            "vs_rhb": {
+              "k_rate": 0.164,
+              "ops_against": 0.668
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.166,
+              "whiff_rate": 0.195,
+              "xwoba": 0.361,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.194,
+              "whiff_rate": 0.275,
+              "xwoba": 0.34
+            },
+            "trend": "steady",
+            "note": "K% down 2.8pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
