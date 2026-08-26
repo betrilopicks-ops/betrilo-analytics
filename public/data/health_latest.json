@@ -1,29 +1,10 @@
 {
-  "verdict": "ALL GOOD",
-  "headline": "All steps passed.",
-  "checked_at": "2026-08-25T06:09:53",
-  "run_date": "2026-08-25",
-  "required_ok": true,
+  "verdict": "NEEDS ATTENTION",
+  "headline": "Required step(s) failed: GitHub image upload, Pipeline generation, Caption generation",
+  "checked_at": "2026-08-26T06:42:57",
+  "run_date": "2026-08-26",
+  "required_ok": false,
   "steps": {
-    "Pipeline generation": "OK",
-    "Sync publish worktree to main": "OK",
-    "BvP matchup export": "OK",
-    "Edge report JSON export": "OK",
-    "Best bets JSON export": "OK",
-    "Player projections JSON export": "OK",
-    "Starting lineups JSON export": "OK",
-    "Batter splits JSON export": "OK",
-    "Track record JSON export": "OK",
-    "Results by date JSON export": "OK",
-    "Pitcher logs 2026 enrichment": "OK",
-    "Pitcher report JSON export": "OK",
-    "Batter game logs JSON export": "OK",
-    "Pitcher game logs JSON export": "OK",
-    "Push site data to GitHub": "OK",
-    "Caption generation": "OK",
-    "GitHub image upload": "OK",
-    "Buffer posting (IG + Threads + X)": "OK",
-    "Validation metrics": "OK",
-    "Database backup": "OK"
+    "Pipeline generation": "FAIL"
   }
 }
