@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-08-26",
-  "last_refreshed": "2026-08-26T11:02:13-04:00",
+  "last_refreshed": "2026-08-26T12:32:06-04:00",
   "games": 15,
-  "pitchers": 29,
+  "pitchers": 30,
   "coverage": {
-    "full_2026": 28,
+    "full_2026": 29,
     "fallback_2025": 1,
     "thin_no_data": 0
   },
@@ -1140,20 +1140,66 @@
           "side": "home",
           "team": "NYY",
           "opponent": "HOU",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Elmer Rodríguez",
+          "pitcher_id": 695684,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 0,
+            "l": 2,
+            "era": "4.76",
+            "whip": "1.76"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.123,
+            "whiff_rate": 0.234,
+            "bb_rate": 0.13,
+            "xwoba_against": 0.363,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Sinker",
+              "usage_pct": 40.1,
+              "velo": 95.1
+            },
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 21.8,
+              "velo": 95.2
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 10.6,
+              "velo": 77.4
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.077,
+              "ops_against": 0.599
+            },
+            "vs_rhb": {
+              "k_rate": 0.159,
+              "ops_against": 0.859
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.123,
+              "whiff_rate": 0.234,
+              "xwoba": 0.363,
+              "starts": 4
+            },
+            "season_avg": {
+              "k_rate": 0.123,
+              "whiff_rate": 0.234,
+              "xwoba": 0.363
+            },
+            "trend": "steady",
+            "note": "K% steady over L4"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
