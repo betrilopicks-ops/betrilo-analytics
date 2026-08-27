@@ -728,8 +728,8 @@
       "home_team": "STL",
       "away_team": "BAL",
       "home_pitcher": {
-        "pitcher_id": null,
-        "pitcher_name": "TBD"
+        "pitcher_id": 700669,
+        "pitcher_name": "Gordon Graceffo"
       },
       "away_pitcher": {
         "pitcher_id": 669432,
@@ -856,7 +856,59 @@
           "slg": 0.0
         }
       ],
-      "away_batters": []
+      "away_batters": [
+        {
+          "batter_id": 677942,
+          "batter_name": "Blaze Alexander",
+          "position": "3B",
+          "bats": "R",
+          "ab": 0,
+          "h": 0,
+          "b1": 0,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 0,
+          "avg": 0.0,
+          "obp": 1.0,
+          "slg": 0.0
+        },
+        {
+          "batter_id": 665966,
+          "batter_name": "Carlos Narváez",
+          "position": "C",
+          "bats": "R",
+          "ab": 3,
+          "h": 2,
+          "b1": 1,
+          "b2": 1,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 0,
+          "avg": 0.667,
+          "obp": 0.667,
+          "slg": 1.0
+        },
+        {
+          "batter_id": 677008,
+          "batter_name": "Heston Kjerstad",
+          "position": "OF",
+          "bats": "L",
+          "ab": 1,
+          "h": 0,
+          "b1": 0,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 1,
+          "avg": 0.0,
+          "obp": 0.0,
+          "slg": 0.0
+        }
+      ]
     },
     {
       "game_pk": 823179,

@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-08-27",
-  "last_refreshed": "2026-08-27T11:01:02-04:00",
+  "last_refreshed": "2026-08-27T11:31:03-04:00",
   "games": 7,
-  "pitchers": 13,
+  "pitchers": 14,
   "coverage": {
-    "full_2026": 12,
+    "full_2026": 13,
     "fallback_2025": 0,
     "thin_no_data": 1
   },
@@ -150,20 +150,66 @@
           "side": "home",
           "team": "STL",
           "opponent": "BAL",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Gordon Graceffo",
+          "pitcher_id": 700669,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 7,
+            "l": 1,
+            "era": "3.13",
+            "whip": "1.12"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.176,
+            "whiff_rate": 0.166,
+            "bb_rate": 0.091,
+            "xwoba_against": 0.357,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 38.3,
+              "velo": 95.5
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 28.5,
+              "velo": 88.8
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 15.4,
+              "velo": 83.2
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.067,
+              "ops_against": 0.584
+            },
+            "vs_rhb": {
+              "k_rate": 0.147,
+              "ops_against": 0.745
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.1,
+              "whiff_rate": 0.201,
+              "xwoba": 0.392,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.176,
+              "whiff_rate": 0.166,
+              "xwoba": 0.357
+            },
+            "trend": "cold",
+            "note": "K% down 7.6pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
