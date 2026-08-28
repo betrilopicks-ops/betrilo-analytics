@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-08-28",
-  "last_refreshed": "2026-08-28T11:32:07-04:00",
+  "last_refreshed": "2026-08-28T14:32:09-04:00",
   "games": 15,
-  "pitchers": 28,
+  "pitchers": 29,
   "coverage": {
-    "full_2026": 26,
+    "full_2026": 27,
     "fallback_2025": 0,
     "thin_no_data": 2
   },
@@ -26,8 +26,8 @@
           "season": {
             "w": 7,
             "l": 7,
-            "era": "5.17",
-            "whip": "1.50"
+            "era": "5.14",
+            "whip": "1.51"
           },
           "stuff": {
             "k_rate": 0.209,
@@ -1734,20 +1734,66 @@
           "side": "home",
           "team": "ATH",
           "opponent": "BAL",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Jacob Lopez",
+          "pitcher_id": 682052,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 5,
+            "l": 4,
+            "era": "4.98",
+            "whip": "1.48"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.229,
+            "whiff_rate": 0.222,
+            "bb_rate": 0.129,
+            "xwoba_against": 0.29,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Slider",
+              "usage_pct": 34.4,
+              "velo": 76.4
+            },
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 33.6,
+              "velo": 90.4
+            },
+            {
+              "pitch": "Cutter",
+              "usage_pct": 18.7,
+              "velo": 86.1
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.266,
+              "ops_against": 0.632
+            },
+            "vs_rhb": {
+              "k_rate": 0.216,
+              "ops_against": 0.824
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.332,
+              "whiff_rate": 0.29,
+              "xwoba": 0.255,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.229,
+              "whiff_rate": 0.222,
+              "xwoba": 0.29
+            },
+            "trend": "hot",
+            "note": "K% up 10.3pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
