@@ -1,12 +1,12 @@
 {
   "slate_date": "2026-08-29",
-  "last_refreshed": "2026-08-29T18:02:12-04:00",
+  "last_refreshed": "2026-08-29T19:32:13-04:00",
   "games": 17,
-  "pitchers": 33,
+  "pitchers": 34,
   "coverage": {
     "full_2026": 31,
     "fallback_2025": 0,
-    "thin_no_data": 2
+    "thin_no_data": 3
   },
   "hot_cold_rule": "hot = L5 K% >= 3pts above season AND L5 xwOBA <= season; cold = L5 K% >= 3pts below season OR L5 xwOBA >= 3pts above season; else steady",
   "matchups": [
@@ -166,8 +166,8 @@
           "season": {
             "w": 4,
             "l": 4,
-            "era": "2.81",
-            "whip": "1.00"
+            "era": "2.78",
+            "whip": "0.98"
           },
           "stuff": {
             "k_rate": 0.24,
@@ -232,8 +232,8 @@
           "season": {
             "w": 1,
             "l": 0,
-            "era": "1.31",
-            "whip": "0.97"
+            "era": "1.25",
+            "whip": "0.92"
           },
           "stuff": {
             "k_rate": 0.026,
@@ -849,7 +849,7 @@
           "pitcher_id": 667755,
           "hand": "R",
           "season": {
-            "w": 10,
+            "w": 11,
             "l": 7,
             "era": "3.45",
             "whip": "1.28"
@@ -960,7 +960,7 @@
           "hand": "L",
           "season": {
             "w": 0,
-            "l": 1,
+            "l": 2,
             "era": "4.63",
             "whip": "1.11"
           },
@@ -995,10 +995,10 @@
           "pitcher_id": 518876,
           "hand": "R",
           "season": {
-            "w": 8,
+            "w": 9,
             "l": 12,
-            "era": "5.09",
-            "whip": "1.49"
+            "era": "5.08",
+            "whip": "1.48"
           },
           "stuff": {
             "k_rate": 0.142,
@@ -1065,9 +1065,9 @@
           "side": "home",
           "team": "SF",
           "opponent": "AZ",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Yunior Marte",
+          "pitcher_id": 805074,
+          "hand": "?",
           "season": {
             "w": null,
             "l": null,
@@ -1078,7 +1078,7 @@
           "arsenal": [],
           "splits": {},
           "recent_form": {},
-          "sample_flag": "tbd",
+          "sample_flag": "thin_2026",
           "scratched": false
         },
         {
@@ -1433,10 +1433,10 @@
           "pitcher_id": 690997,
           "hand": "R",
           "season": {
-            "w": 9,
+            "w": 10,
             "l": 8,
-            "era": "3.08",
-            "whip": "1.13"
+            "era": "3.06",
+            "whip": "1.12"
           },
           "stuff": {
             "k_rate": 0.281,
@@ -1855,7 +1855,7 @@
           "season": {
             "w": 6,
             "l": 5,
-            "era": "3.84",
+            "era": "3.81",
             "whip": "1.29"
           },
           "stuff": {
