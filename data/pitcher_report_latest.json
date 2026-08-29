@@ -1,12 +1,12 @@
 {
   "slate_date": "2026-08-29",
-  "last_refreshed": "2026-08-29T13:32:10-04:00",
+  "last_refreshed": "2026-08-29T16:02:12-04:00",
   "games": 17,
-  "pitchers": 31,
+  "pitchers": 32,
   "coverage": {
     "full_2026": 30,
     "fallback_2025": 0,
-    "thin_no_data": 1
+    "thin_no_data": 2
   },
   "hot_cold_rule": "hot = L5 K% >= 3pts above season AND L5 xwOBA <= season; cold = L5 K% >= 3pts below season OR L5 xwOBA >= 3pts above season; else steady",
   "matchups": [
@@ -92,8 +92,8 @@
           "season": {
             "w": 8,
             "l": 6,
-            "era": "3.45",
-            "whip": "1.06"
+            "era": "3.27",
+            "whip": "1.04"
           },
           "stuff": {
             "k_rate": 0.211,
@@ -260,7 +260,7 @@
           "season": {
             "w": 9,
             "l": 8,
-            "era": "3.26",
+            "era": "3.24",
             "whip": "0.99"
           },
           "stuff": {
@@ -326,8 +326,8 @@
           "season": {
             "w": 2,
             "l": 1,
-            "era": "2.45",
-            "whip": "1.00"
+            "era": "2.42",
+            "whip": "1.08"
           },
           "stuff": {
             "k_rate": 0.3,
@@ -400,8 +400,8 @@
           "season": {
             "w": 7,
             "l": 4,
-            "era": "4.49",
-            "whip": "1.26"
+            "era": "4.37",
+            "whip": "1.24"
           },
           "stuff": {
             "k_rate": 0.147,
@@ -466,8 +466,8 @@
           "season": {
             "w": 6,
             "l": 8,
-            "era": "4.18",
-            "whip": "1.39"
+            "era": "4.16",
+            "whip": "1.37"
           },
           "stuff": {
             "k_rate": 0.153,
@@ -541,7 +541,7 @@
             "w": 10,
             "l": 4,
             "era": "3.13",
-            "whip": "1.30"
+            "whip": "1.31"
           },
           "stuff": {
             "k_rate": 0.206,
@@ -607,7 +607,7 @@
             "w": 1,
             "l": 3,
             "era": "3.70",
-            "whip": "1.11"
+            "whip": "1.09"
           },
           "stuff": {
             "k_rate": 0.291,
@@ -680,8 +680,8 @@
           "season": {
             "w": 7,
             "l": 11,
-            "era": "4.37",
-            "whip": "1.26"
+            "era": "4.52",
+            "whip": "1.27"
           },
           "stuff": {
             "k_rate": 0.24,
@@ -741,8 +741,8 @@
           "season": {
             "w": 6,
             "l": 9,
-            "era": "4.15",
-            "whip": "1.40"
+            "era": "4.49",
+            "whip": "1.44"
           },
           "stuff": {
             "k_rate": 0.17,
@@ -815,8 +815,8 @@
           "season": {
             "w": 10,
             "l": 7,
-            "era": "3.43",
-            "whip": "1.29"
+            "era": "3.41",
+            "whip": "1.28"
           },
           "stuff": {
             "k_rate": 0.262,
@@ -881,8 +881,8 @@
           "season": {
             "w": 0,
             "l": 0,
-            "era": "4.76",
-            "whip": "1.24"
+            "era": "4.05",
+            "whip": "1.05"
           },
           "stuff": {},
           "arsenal": [
@@ -919,20 +919,36 @@
           "side": "home",
           "team": "SF",
           "opponent": "AZ",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Matt Wilkinson",
+          "pitcher_id": 683363,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 0,
+            "l": 1,
+            "era": "6.35",
+            "whip": "1.41"
           },
           "stuff": {},
-          "arsenal": [],
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 65.6,
+              "velo": 90.4
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 18.9,
+              "velo": 83.5
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 12.0,
+              "velo": 79.6
+            }
+          ],
           "splits": {},
           "recent_form": {},
-          "sample_flag": "tbd",
+          "sample_flag": "thin_2026",
           "scratched": false
         },
         {
@@ -1723,64 +1739,64 @@
           "side": "away",
           "team": "COL",
           "opponent": "ATL",
-          "pitcher_name": "Ryan Feltner",
-          "pitcher_id": 663372,
+          "pitcher_name": "Zach Agnos",
+          "pitcher_id": 688642,
           "hand": "R",
           "season": {
-            "w": 5,
-            "l": 8,
-            "era": "6.08",
-            "whip": "1.55"
+            "w": 0,
+            "l": 2,
+            "era": "5.68",
+            "whip": "1.43"
           },
           "stuff": {
-            "k_rate": 0.16,
-            "whiff_rate": 0.202,
-            "bb_rate": 0.1,
-            "xwoba_against": 0.348,
+            "k_rate": 0.192,
+            "whiff_rate": 0.231,
+            "bb_rate": 0.096,
+            "xwoba_against": 0.327,
             "vintage": "2026"
           },
           "arsenal": [
             {
               "pitch": "4-Seam",
-              "usage_pct": 26.8,
-              "velo": 94.8
+              "usage_pct": 23.5,
+              "velo": 94.7
+            },
+            {
+              "pitch": "Cutter",
+              "usage_pct": 23.2,
+              "velo": 92.4
             },
             {
               "pitch": "Slider",
-              "usage_pct": 23.2,
-              "velo": 89.2
-            },
-            {
-              "pitch": "Changeup",
-              "usage_pct": 16.8,
+              "usage_pct": 14.4,
               "velo": 85.1
             }
           ],
           "splits": {
             "vs_lhb": {
-              "k_rate": 0.164,
-              "ops_against": 0.727
+              "k_rate": 0.198,
+              "ops_against": 0.826
             },
             "vs_rhb": {
-              "k_rate": 0.121,
-              "ops_against": 0.91
+              "k_rate": 0.155,
+              "ops_against": 0.823
             },
             "vintage": "2026"
           },
           "recent_form": {
             "last5": {
-              "k_rate": 0.116,
-              "whiff_rate": 0.184,
-              "xwoba": 0.363,
+              "k_rate": 0.241,
+              "whiff_rate": 0.214,
+              "xwoba": 0.285,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.16,
-              "whiff_rate": 0.202,
-              "xwoba": 0.348
+              "k_rate": 0.192,
+              "whiff_rate": 0.231,
+              "xwoba": 0.327
             },
-            "trend": "cold",
-            "note": "K% down 4.4pts over L5"
+            "trend": "hot",
+            "note": "K% up 4.9pts over L5"
           },
           "sample_flag": null,
           "scratched": false
