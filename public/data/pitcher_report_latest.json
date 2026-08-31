@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-08-31",
-  "last_refreshed": "2026-08-31T11:01:53-04:00",
+  "last_refreshed": "2026-08-31T14:31:40-04:00",
   "games": 12,
-  "pitchers": 22,
+  "pitchers": 23,
   "coverage": {
-    "full_2026": 22,
+    "full_2026": 23,
     "fallback_2025": 0,
     "thin_no_data": 0
   },
@@ -1494,20 +1494,66 @@
           "side": "home",
           "team": "AZ",
           "opponent": "PHI",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Brandon Pfaadt",
+          "pitcher_id": 694297,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 7,
+            "l": 1,
+            "era": "3.51",
+            "whip": "1.14"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.188,
+            "whiff_rate": 0.215,
+            "bb_rate": 0.078,
+            "xwoba_against": 0.323,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 26.7,
+              "velo": 93.3
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 17.5,
+              "velo": 93.2
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 17.4,
+              "velo": 82.1
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.162,
+              "ops_against": 0.84
+            },
+            "vs_rhb": {
+              "k_rate": 0.204,
+              "ops_against": 0.551
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.19,
+              "whiff_rate": 0.21,
+              "xwoba": 0.269,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.188,
+              "whiff_rate": 0.215,
+              "xwoba": 0.323
+            },
+            "trend": "steady",
+            "note": "K% steady over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
