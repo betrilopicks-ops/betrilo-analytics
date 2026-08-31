@@ -1384,10 +1384,45 @@
         "pitcher_name": "Tanner Gordon"
       },
       "away_pitcher": {
-        "pitcher_id": null,
-        "pitcher_name": "TBD"
+        "pitcher_id": 700249,
+        "pitcher_name": "Cade Povich"
       },
-      "home_batters": [],
+      "home_batters": [
+        {
+          "batter_id": 681393,
+          "batter_name": "Connor Norby",
+          "position": "2B",
+          "bats": "R",
+          "ab": 1,
+          "h": 1,
+          "b1": 1,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 1,
+          "so": 0,
+          "avg": 1.0,
+          "obp": 1.0,
+          "slg": 1.0
+        },
+        {
+          "batter_id": 650489,
+          "batter_name": "Willi Castro",
+          "position": "2B",
+          "bats": "S",
+          "ab": 4,
+          "h": 1,
+          "b1": 1,
+          "b2": 0,
+          "b3": 0,
+          "hr": 0,
+          "bb": 0,
+          "so": 1,
+          "avg": 0.25,
+          "obp": 0.25,
+          "slg": 0.25
+        }
+      ],
       "away_batters": [
         {
           "batter_id": 677942,
