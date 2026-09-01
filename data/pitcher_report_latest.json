@@ -1,12 +1,12 @@
 {
   "slate_date": "2026-09-01",
-  "last_refreshed": "2026-09-01T11:02:13-04:00",
+  "last_refreshed": "2026-09-01T15:02:06-04:00",
   "games": 15,
-  "pitchers": 29,
+  "pitchers": 30,
   "coverage": {
     "full_2026": 28,
     "fallback_2025": 1,
-    "thin_no_data": 0
+    "thin_no_data": 1
   },
   "hot_cold_rule": "hot = L5 K% >= 3pts above season AND L5 xwOBA <= season; cold = L5 K% >= 3pts below season OR L5 xwOBA >= 3pts above season; else steady",
   "matchups": [
@@ -580,20 +580,36 @@
           "side": "home",
           "team": "BOS",
           "opponent": "SEA",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Jedixson Paez",
+          "pitcher_id": 699151,
+          "hand": "?",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 0,
+            "l": 0,
+            "era": "18.00",
+            "whip": "2.33"
           },
           "stuff": {},
-          "arsenal": [],
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 55.3,
+              "velo": 91.9
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 14.7,
+              "velo": 84.3
+            },
+            {
+              "pitch": "Cutter",
+              "usage_pct": 12.3,
+              "velo": 88.5
+            }
+          ],
           "splits": {},
           "recent_form": {},
-          "sample_flag": "tbd",
+          "sample_flag": "thin_2026",
           "scratched": false
         },
         {
