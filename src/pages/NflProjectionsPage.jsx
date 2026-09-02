@@ -116,8 +116,9 @@ export default function NflProjectionsPage() {
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '24px 16px' }}>
       <Helmet>
-        <title>{`NFL Player Projections — Week ${String(data?.week || '')} | Betrilo`}</title>
-        <meta name="description" content={`NFL Week ${String(data?.week || '')} player projections for QB, RB, WR, TE. Model in private validation, not published picks.`} />
+        <title>{data?.week ? `NFL Player Projections — Week ${data.week} | Betrilo` : 'NFL Player Projections | Betrilo'}</title>
+        <meta name="description" content="NFL player projections for QB, RB, WR, TE — passing, rushing, receiving yards and touchdowns. Model in private validation, not published picks." />
+        <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 
       <NflValidationBanner />

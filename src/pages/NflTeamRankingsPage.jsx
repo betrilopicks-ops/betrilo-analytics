@@ -89,6 +89,7 @@ export default function NflTeamRankingsPage() {
       <Helmet>
         <title>NFL Team Rankings (DvP) | Betrilo</title>
         <meta name="description" content="NFL defense-vs-position rankings — find easiest and toughest matchups for QB, RB, WR, TE. Model in private validation, not published picks." />
+        <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 
       <NflValidationBanner />
