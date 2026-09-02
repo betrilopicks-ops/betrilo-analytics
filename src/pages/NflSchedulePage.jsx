@@ -30,8 +30,9 @@ export default function NflSchedulePage() {
   return (
     <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '24px 16px' }}>
       <Helmet>
-        <title>{`NFL Schedule — Week ${String(data?.week || '')} | Betrilo`}</title>
-        <meta name="description" content={`NFL Week ${String(data?.week || '')} schedule with snap leaders, injuries, and game lines. Model in private validation, not published picks.`} />
+        <title>{data?.week ? `NFL Schedule — Week ${data.week} | Betrilo` : 'NFL Schedule | Betrilo'}</title>
+        <meta name="description" content={`NFL weekly schedule with snap leaders, injuries, and game lines. Model in private validation, not published picks.`} />
+        <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 
       <NflValidationBanner />

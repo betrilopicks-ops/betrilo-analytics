@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { colors } from '../theme';
 import NflValidationBanner from '../components/NflValidationBanner';
 
@@ -243,6 +244,11 @@ export default function NflMatchupsPage() {
         </div>
       ) : (
         <>
+          <Helmet>
+            <title>NFL Player vs Defense (DvP) Matchups | Betrilo</title>
+            <meta name="description" content="NFL player matchup data with defense-vs-position rankings and historical performance. Model in private validation, not published picks." />
+            <meta name="robots" content="noindex, nofollow" />
+          </Helmet>
           <NflValidationBanner />
           {/* Header */}
           <div style={{ marginBottom: '15px' }}>
