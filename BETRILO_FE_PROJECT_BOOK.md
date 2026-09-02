@@ -1,6 +1,6 @@
 # @betrilopicks Frontend (betrilo.com) — Technical Project Book
 
-**Version:** BFEv0.10.0 | **Last Updated:** September 2, 2026 | **Includes:** NFL freshness indicator; Validation banner + NFL /status surfaces; NFL Wave 1 pages + sport-scoped nav + shared SortableTable; NFL site spec (multi-sport extension); Pitcher Report sort by start time (games now render earliest→latest); Batter Splits doubleheader fix (DH players appear twice with G1/G2 labels and correct per-game opposing pitcher; team filter uses team_abbr for clean DH grouping); /status false-alarm fix (Best Bets, Edge Report, Batter Splits switched to freshness-only health — these surfaces don't count raw games, so their record counts falsely mismatched the MLB schedule, producing spurious yellow flags on healthy days; now noGameCount: healthy = updated today, no game-count comparison; operator sees all-green banner when pipeline is clean); System Status page (/status — public but unlisted, not in nav/sitemap; pipeline health + data freshness dashboard for remote monitoring during travel; per-surface cards showing last_refreshed timestamp (absolute + relative ET), health color (green/yellow/red based on today-freshness + game-count cross-check vs MLB Stats API schedule), game count vs expected, record counts; top-line banner summarizes all-healthy vs attention-needed; pipeline health_latest.json verdict + step-level status surfaced; schedule cross-check: MLB Stats API primary with starting-lineups fallback; auto-refresh every 5 min + manual refresh button; mobile-friendly; per-surface error isolation; noindex/nofollow meta; built for 7/29-8/3 travel window); VP AB column on Player Projections page (column relabeled VP AB, reads vp_ab from JSON instead of vp_pa; cellValue switch and td render updated; footer Key text updated to "VP AB/H/HR/xwOBA — career at-bats and performance vs. today's probable pitcher"); H+R+RBI column on Player Projections page (proj_hrrbi passthrough from DB — same value as Results page; sortable; 327/520 batters covered; footer Key corrected); Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema; BvP guide: crawlable static HTML at /mlb/batter-vs-pitcher-guide (~800 words, content in served HTML pre-JS); Footer support mailto (support@betrilo.com; green on navy; legible contrast); Game dropdown chronological sort (PlayerProjections + StartingLineups)
+**Version:** BFEv0.11.0 | **Last Updated:** September 2, 2026 | **Includes:** NFL preview branch + production gate; NFL freshness indicator; Validation banner + NFL /status surfaces; NFL Wave 1 pages + sport-scoped nav + shared SortableTable; NFL site spec (multi-sport extension); Pitcher Report sort by start time (games now render earliest→latest); Batter Splits doubleheader fix (DH players appear twice with G1/G2 labels and correct per-game opposing pitcher; team filter uses team_abbr for clean DH grouping); /status false-alarm fix (Best Bets, Edge Report, Batter Splits switched to freshness-only health — these surfaces don't count raw games, so their record counts falsely mismatched the MLB schedule, producing spurious yellow flags on healthy days; now noGameCount: healthy = updated today, no game-count comparison; operator sees all-green banner when pipeline is clean); System Status page (/status — public but unlisted, not in nav/sitemap; pipeline health + data freshness dashboard for remote monitoring during travel; per-surface cards showing last_refreshed timestamp (absolute + relative ET), health color (green/yellow/red based on today-freshness + game-count cross-check vs MLB Stats API schedule), game count vs expected, record counts; top-line banner summarizes all-healthy vs attention-needed; pipeline health_latest.json verdict + step-level status surfaced; schedule cross-check: MLB Stats API primary with starting-lineups fallback; auto-refresh every 5 min + manual refresh button; mobile-friendly; per-surface error isolation; noindex/nofollow meta; built for 7/29-8/3 travel window); VP AB column on Player Projections page (column relabeled VP AB, reads vp_ab from JSON instead of vp_pa; cellValue switch and td render updated; footer Key text updated to "VP AB/H/HR/xwOBA — career at-bats and performance vs. today's probable pitcher"); H+R+RBI column on Player Projections page (proj_hrrbi passthrough from DB — same value as Results page; sortable; 327/520 batters covered; footer Key corrected); Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema; BvP guide: crawlable static HTML at /mlb/batter-vs-pitcher-guide (~800 words, content in served HTML pre-JS); Footer support mailto (support@betrilo.com; green on navy; legible contrast); Game dropdown chronological sort (PlayerProjections + StartingLineups)
 
 ---
 
@@ -568,3 +568,35 @@ Built Wave 1 NFL pages, sport-scoped navigation, shared SortableTable component,
 **Build verified:** `CI=true npm run build` passes with zero warnings.
 
 **Version:** BFEv0.9.0 → **BFEv0.10.0** (MINOR — freshness display on NFL pages)
+
+---
+
+### Session: September 2, 2026 — BFEv0.10.0 → BFEv0.11.0 — NFL Preview Branch + Production Gate
+
+**NFL UI is NOT on production.** All NFL page code (BFEv0.7.0-0.10.0) lives on local `main` and was pushed to the `nfl-preview` branch. The publish worktree (`publish-main`) pushes data-only commits to `origin/main` — no page code ever reaches production. Production's JS bundle has zero NFL references (verified by searching the built JS).
+
+**Preview branch:** `nfl-preview` on `origin/nfl-preview`. Vercel auto-builds preview deployments. SSO-protected (Vercel Deployment Protection: `all_except_custom_domains`) — not publicly crawlable.
+
+**Preview URL:** `betrilo-analytics-git-nfl-preview-betrilo.vercel.app` (requires Vercel team auth)
+
+**Preview data freshness:** Manual. Before a review session, copy fresh data from the publish worktree into the preview branch:
+```bash
+cd E:\Betrilo\betrilo-analytics
+git checkout nfl-preview
+cp E:/Betrilo/betrilo-analytics-publish/public/data/nfl_*.json public/data/
+git add public/data/nfl_*.json && git commit -m "Update NFL data for preview" && git push origin nfl-preview
+git checkout main
+```
+The automated site refresh pushes to production only. Preview data refresh is manual — acceptable since preview review is infrequent.
+
+**Production gate (two separate gates, both must be met):**
+
+1. **Layout approval gate:** Operator reviews NFL pages on the preview URL and signs off on layout, data display, validation banner visibility, mobile behavior, and freshness indicator. Until sign-off, no NFL UI code is merged to the production build.
+
+2. **Shadow validation gate:** 3 shadow weeks graded, pooled STRONG hit rate ≥ 54%, operator publish decision recorded in NFL book. Until met, pick surfaces (Best Bets, Results, Track Record, Edge Report) are not built and the "In Validation" banner stays on all NFL pages.
+
+These are independent: layout approval does not unlock pick surfaces, and validation does not unlock a layout nobody reviewed.
+
+**Standing rule:** Local build success is not deploy verification. Verify against the served URL, not the local dev server. The SYSTEM-run git identity bug and the untracked-file deployment gap were both invisible locally.
+
+**Version:** BFEv0.10.0 → **BFEv0.11.0** (MINOR — preview branch + production gate documentation)
