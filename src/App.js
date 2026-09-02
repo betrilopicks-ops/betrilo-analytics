@@ -5,6 +5,7 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import PicksCTA from './components/PicksCTA';
+import PageErrorBoundary from './components/PageErrorBoundary';
 import LandingPage from './pages/LandingPage';
 import MatchupsPage from './pages/MatchupsPage';
 import TrackRecordPage from './pages/TrackRecordPage';
@@ -22,6 +23,9 @@ import NflTeamRankingsPage from './pages/NflTeamRankingsPage';
 import NflSchedulePage from './pages/NflSchedulePage';
 import NflProjectionsPage from './pages/NflProjectionsPage';
 
+/** Wrap a page component in an error boundary */
+const P = (Component) => <PageErrorBoundary><Component /></PageErrorBoundary>;
+
 function AppContent() {
   const location = useLocation();
   const isLanding = location.pathname === '/';
@@ -32,24 +36,24 @@ function AppContent() {
       {!isLanding && <PicksCTA />}
       <main>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={P(LandingPage)} />
           {/* MLB routes */}
-          <Route path="/mlb/matchups" element={<MatchupsPage />} />
-          <Route path="/mlb/starting-lineups" element={<StartingLineupsPage />} />
-          <Route path="/mlb/player-projections" element={<PlayerProjectionsPage />} />
-          <Route path="/mlb/batter-splits" element={<BatterSplitsPage />} />
-          <Route path="/mlb/track-record" element={<TrackRecordPage />} />
-          <Route path="/mlb/results" element={<ResultsPage />} />
-          <Route path="/mlb/edge-report" element={<EdgeReportPage />} />
-          <Route path="/mlb/best-bets" element={<BestBetsPage />} />
-          <Route path="/mlb/pitcher-report" element={<PitcherReportPage />} />
+          <Route path="/mlb/matchups" element={P(MatchupsPage)} />
+          <Route path="/mlb/starting-lineups" element={P(StartingLineupsPage)} />
+          <Route path="/mlb/player-projections" element={P(PlayerProjectionsPage)} />
+          <Route path="/mlb/batter-splits" element={P(BatterSplitsPage)} />
+          <Route path="/mlb/track-record" element={P(TrackRecordPage)} />
+          <Route path="/mlb/results" element={P(ResultsPage)} />
+          <Route path="/mlb/edge-report" element={P(EdgeReportPage)} />
+          <Route path="/mlb/best-bets" element={P(BestBetsPage)} />
+          <Route path="/mlb/pitcher-report" element={P(PitcherReportPage)} />
           {/* NFL routes */}
-          <Route path="/nfl/matchups" element={<NflMatchupsPage />} />
-          <Route path="/nfl/team-rankings" element={<NflTeamRankingsPage />} />
-          <Route path="/nfl/schedule" element={<NflSchedulePage />} />
-          <Route path="/nfl/projections" element={<NflProjectionsPage />} />
+          <Route path="/nfl/matchups" element={P(NflMatchupsPage)} />
+          <Route path="/nfl/team-rankings" element={P(NflTeamRankingsPage)} />
+          <Route path="/nfl/schedule" element={P(NflSchedulePage)} />
+          <Route path="/nfl/projections" element={P(NflProjectionsPage)} />
           {/* System */}
-          <Route path="/status" element={<StatusPage />} />
+          <Route path="/status" element={P(StatusPage)} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
