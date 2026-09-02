@@ -1,9 +1,9 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import symbol from '../assets/betrilo_symbol.png';
 import { colors } from '../theme';
 
-const navItems = [
+const mlbNavItems = [
   { to: '/mlb/starting-lineups', label: 'Starting Lineups' },
   { to: '/mlb/pitcher-report', label: 'Pitcher Report' },
   { to: '/mlb/matchups', label: 'Batter vs. Pitcher' },
@@ -15,7 +15,32 @@ const navItems = [
   { to: '/mlb/track-record', label: 'Track Record' },
 ];
 
+const nflNavItems = [
+  { to: '/nfl/matchups', label: 'Matchups' },
+  { to: '/nfl/schedule', label: 'Schedule' },
+  { to: '/nfl/projections', label: 'Projections' },
+  { to: '/nfl/team-rankings', label: 'Team Rankings' },
+];
+
 export default function Header() {
+  const location = useLocation();
+  const isNfl = location.pathname.startsWith('/nfl');
+  const activeSport = isNfl ? 'nfl' : 'mlb';
+  const navItems = activeSport === 'nfl' ? nflNavItems : mlbNavItems;
+
+  const sportToggleStyle = (sport) => ({
+    color: activeSport === sport ? colors.navy : colors.textMuted,
+    background: activeSport === sport ? colors.green : 'transparent',
+    border: activeSport === sport ? 'none' : `1px solid ${colors.textMuted}`,
+    padding: '5px 16px',
+    borderRadius: '4px',
+    fontSize: '13px',
+    fontWeight: 700,
+    textDecoration: 'none',
+    cursor: 'pointer',
+    letterSpacing: '0.5px',
+  });
+
   return (
     <header style={{ position: 'sticky', top: 0, zIndex: 100, background: colors.navy, borderBottom: `3px solid ${colors.green}` }}>
       <div style={{ padding: '12px 24px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '14px' }}>
@@ -27,6 +52,14 @@ export default function Header() {
           </div>
         </NavLink>
       </div>
+
+      {/* Sport toggle */}
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', padding: '0 12px 8px' }}>
+        <NavLink to="/mlb/starting-lineups" style={sportToggleStyle('mlb')}>MLB</NavLink>
+        <NavLink to="/nfl/matchups" style={sportToggleStyle('nfl')}>NFL</NavLink>
+      </div>
+
+      {/* Per-sport nav */}
       <nav style={{ display: 'flex', justifyContent: 'center', gap: '4px', flexWrap: 'wrap', padding: '0 12px 10px' }}>
         {navItems.map(item => (
           <NavLink

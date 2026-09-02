@@ -8,48 +8,22 @@ const NAVY = '#0B2331';
 const GREEN = '#19C93E';
 const HOVER_CYAN = '#C5F2F0';
 
-// Canonical grid order — matches nav order, 8 cards (Track Record is the hero banner)
-const CARDS = [
-  {
-    name: 'Starting Lineups',
-    desc: 'Confirmed batting orders and probable pitchers for every game today.',
-    to: '/mlb/starting-lineups',
-  },
-  {
-    name: 'Pitcher Report',
-    desc: "Today's starting pitchers — performance, splits, and recent form for every matchup.",
-    to: '/mlb/pitcher-report',
-  },
-  {
-    name: 'Batter vs Pitcher',
-    desc: 'Career batting stats for every matchup on today\'s slate.',
-    to: '/mlb/matchups',
-  },
-  {
-    name: 'Batter Splits',
-    desc: 'Platoon splits and vs-pitcher performance for every batter.',
-    to: '/mlb/batter-splits',
-  },
-  {
-    name: 'Best Bets',
-    desc: 'Today\'s highest-confidence picks ranked by the model.',
-    to: '/mlb/best-bets',
-  },
-  {
-    name: 'Player Projections',
-    desc: 'Per-player stat projections for hits, total bases, HR, and walks.',
-    to: '/mlb/player-projections',
-  },
-  {
-    name: 'Edge Report',
-    desc: 'Model-identified edges with EV and direction on every prop.',
-    to: '/mlb/edge-report',
-  },
-  {
-    name: 'Results',
-    desc: 'Day-by-day pick results — every pick graded against actuals.',
-    to: '/mlb/results',
-  },
+const MLB_CARDS = [
+  { name: 'Starting Lineups', desc: 'Confirmed batting orders and probable pitchers for every game today.', to: '/mlb/starting-lineups' },
+  { name: 'Pitcher Report', desc: "Today's starting pitchers — performance, splits, and recent form.", to: '/mlb/pitcher-report' },
+  { name: 'Batter vs Pitcher', desc: 'Career batting stats for every matchup on today\'s slate.', to: '/mlb/matchups' },
+  { name: 'Batter Splits', desc: 'Platoon splits and vs-pitcher performance for every batter.', to: '/mlb/batter-splits' },
+  { name: 'Best Bets', desc: 'Today\'s highest-confidence picks ranked by the model.', to: '/mlb/best-bets' },
+  { name: 'Player Projections', desc: 'Per-player stat projections for hits, total bases, HR, and walks.', to: '/mlb/player-projections' },
+  { name: 'Edge Report', desc: 'Model-identified edges with EV and direction on every prop.', to: '/mlb/edge-report' },
+  { name: 'Results', desc: 'Day-by-day pick results — every pick graded against actuals.', to: '/mlb/results' },
+];
+
+const NFL_CARDS = [
+  { name: 'Matchups', desc: 'Player vs defense matchup data with DvP rankings and history.', to: '/nfl/matchups' },
+  { name: 'Schedule', desc: 'Weekly games with snap leaders, injuries, and game lines.', to: '/nfl/schedule' },
+  { name: 'Player Projections', desc: 'Per-player stat projections for passing, rushing, and receiving.', to: '/nfl/projections' },
+  { name: 'Team Rankings', desc: 'Defense vs Position (DvP) — find the easiest and toughest matchups.', to: '/nfl/team-rankings' },
 ];
 
 function Card({ name, desc, to, comingSoon }) {
@@ -198,9 +172,28 @@ function TrackRecordBanner() {
   );
 }
 
+function SportSection({ title, subtitle, cards, children }) {
+  return (
+    <div style={{ marginBottom: '40px' }}>
+      <h2 style={{ color: '#fff', fontSize: '22px', fontWeight: 800, marginBottom: '4px' }}>{title}</h2>
+      {subtitle && <p style={{ color: colors.subtitleOnWhite, fontSize: '14px', marginBottom: '16px' }}>{subtitle}</p>}
+      {children}
+      <div className="landing-grid" style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(4, 1fr)',
+        gap: '14px',
+      }}>
+        {cards.map((card) => (
+          <Card key={card.to} {...card} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function LandingPage() {
-  const title = 'Betrilo — MLB Betting Projections & Tracked Record';
-  const desc = 'Model-driven MLB hit projections with a publicly tracked pick record. Batter vs pitcher splits, best bets, and daily results.';
+  const title = 'Betrilo — MLB & NFL Betting Projections';
+  const desc = 'Model-driven MLB and NFL projections with a publicly tracked pick record. Batter vs pitcher, DvP rankings, best bets, and daily results.';
   const url = 'https://betrilo.com/';
   return (
     <div style={{ maxWidth: 960, margin: '0 auto', padding: '40px 16px 60px' }}>
@@ -219,7 +212,7 @@ export default function LandingPage() {
               '@type': 'WebSite',
               'name': 'Betrilo',
               'url': 'https://betrilo.com',
-              'description': 'Model-driven MLB betting projections with a publicly tracked record.'
+              'description': 'Model-driven MLB and NFL betting projections with a publicly tracked record.'
             },
             {
               '@type': 'Organization',
@@ -230,39 +223,70 @@ export default function LandingPage() {
           ]
         })}</script>
       </Helmet>
+
       {/* Logo + tagline */}
       <div style={{ textAlign: 'center', marginBottom: '36px' }}>
         <img src={logo} alt="Betrilo" style={{ width: 'clamp(160px, 40vw, 280px)', height: 'auto', marginBottom: '14px' }} />
         <p style={{ color: colors.subtitleOnWhite, fontSize: '16px', margin: 0, lineHeight: 1.5 }}>
-          Data-driven MLB picks with a publicly tracked record.
+          Data-driven sports projections with a publicly tracked record.
         </p>
       </div>
 
-      {/* Hero banner — full width above grid */}
-      <TrackRecordBanner />
+      {/* MLB section with track record banner */}
+      <SportSection title="MLB" subtitle="162-game season — daily projections, picks, and results" cards={MLB_CARDS}>
+        <TrackRecordBanner />
+      </SportSection>
 
-      {/* Card grid — 4 columns × 2 rows, equal height */}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(4, 1fr)',
-        gap: '14px',
-      }}>
-        {CARDS.map((card) => (
-          <Card key={card.to} {...card} />
-        ))}
-      </div>
+      {/* NFL section */}
+      <SportSection title="NFL" subtitle="Weekly projections, DvP matchup rankings, and schedule analysis" cards={NFL_CARDS}>
+        <div style={{
+          background: NAVY,
+          borderTop: `3px solid ${GREEN}`,
+          borderBottom: `3px solid ${GREEN}`,
+          borderRadius: '12px',
+          padding: '20px 28px',
+          marginBottom: '16px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: '16px',
+          flexWrap: 'wrap',
+        }}>
+          <div>
+            <span style={{
+              display: 'inline-block',
+              background: colors.navyLight,
+              color: '#e8a838',
+              fontSize: '11px',
+              fontWeight: 700,
+              letterSpacing: '1.5px',
+              textTransform: 'uppercase',
+              padding: '4px 12px',
+              borderRadius: '999px',
+              marginBottom: '8px',
+            }}>
+              In Validation
+            </span>
+            <p style={{ color: '#9fb3c0', fontSize: '14px', margin: '6px 0 0' }}>
+              NFL model accuracy is being validated privately. Pick surfaces will launch after three graded shadow weeks.
+            </p>
+          </div>
+          <Link to="/nfl/team-rankings" style={{
+            display: 'inline-block', background: GREEN, color: NAVY,
+            fontWeight: 800, fontSize: '14px', padding: '10px 20px',
+            borderRadius: '8px', textDecoration: 'none', whiteSpace: 'nowrap', flexShrink: 0,
+          }}>
+            Explore NFL tools
+          </Link>
+        </div>
+      </SportSection>
 
-      {/* Responsive: 2-col on tablet, 1-col on phone */}
       <style>{`
         @media (max-width: 800px) {
-          div[style*="grid-template-columns: repeat(4"] {
-            grid-template-columns: repeat(2, 1fr) !important;
-          }
+          .landing-grid { grid-template-columns: repeat(2, 1fr) !important; }
         }
         @media (max-width: 480px) {
-          div[style*="grid-template-columns: repeat(4"] {
-            grid-template-columns: 1fr !important;
-          }
+          .landing-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </div>

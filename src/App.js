@@ -17,6 +17,10 @@ import StartingLineupsPage from './pages/StartingLineupsPage';
 import NotFoundPage from './pages/NotFoundPage';
 import PitcherReportPage from './pages/PitcherReportPage';
 import StatusPage from './pages/StatusPage';
+import NflMatchupsPage from './pages/NflMatchupsPage';
+import NflTeamRankingsPage from './pages/NflTeamRankingsPage';
+import NflSchedulePage from './pages/NflSchedulePage';
+import NflProjectionsPage from './pages/NflProjectionsPage';
 
 function AppContent() {
   const location = useLocation();
@@ -29,6 +33,7 @@ function AppContent() {
       <main>
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          {/* MLB routes */}
           <Route path="/mlb/matchups" element={<MatchupsPage />} />
           <Route path="/mlb/starting-lineups" element={<StartingLineupsPage />} />
           <Route path="/mlb/player-projections" element={<PlayerProjectionsPage />} />
@@ -37,7 +42,13 @@ function AppContent() {
           <Route path="/mlb/results" element={<ResultsPage />} />
           <Route path="/mlb/edge-report" element={<EdgeReportPage />} />
           <Route path="/mlb/best-bets" element={<BestBetsPage />} />
-<Route path="/mlb/pitcher-report" element={<PitcherReportPage />} />
+          <Route path="/mlb/pitcher-report" element={<PitcherReportPage />} />
+          {/* NFL routes */}
+          <Route path="/nfl/matchups" element={<NflMatchupsPage />} />
+          <Route path="/nfl/team-rankings" element={<NflTeamRankingsPage />} />
+          <Route path="/nfl/schedule" element={<NflSchedulePage />} />
+          <Route path="/nfl/projections" element={<NflProjectionsPage />} />
+          {/* System */}
           <Route path="/status" element={<StatusPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

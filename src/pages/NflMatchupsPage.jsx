@@ -177,7 +177,7 @@ export default function NflMatchupsPage() {
     return labels[pos]?.[stat] || stat;
   };
 
-  const getStatVal = (p, stat) => {
+  const _getStatVal = (p, stat) => { // eslint-disable-line no-unused-vars
     const ss = p.season_stats;
     if (!ss) return null;
     const pos = p.position;
@@ -198,7 +198,7 @@ export default function NflMatchupsPage() {
     }
   };
 
-  const getDvpYpg = (p) => {
+  const _getDvpYpg = (p) => { // eslint-disable-line no-unused-vars
     if (!p.dvp) return null;
     const pos = p.position;
     if (pos === 'QB') return p.dvp.pass_yds_per_game;
