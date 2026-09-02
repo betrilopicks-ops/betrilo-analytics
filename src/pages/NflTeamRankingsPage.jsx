@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { colors } from '../theme';
 import SortableTable from '../components/SortableTable';
 import NflValidationBanner from '../components/NflValidationBanner';
+import NflFreshness from '../components/NflFreshness';
 
 const DVP_COLORS = {
   Smash: '#19C93E', Favorable: '#7dd87d', Neutral: '#aaa',
@@ -91,6 +92,7 @@ export default function NflTeamRankingsPage() {
       </Helmet>
 
       <NflValidationBanner />
+      <NflFreshness generatedAt={data?.generated_at} label={`${data?.season || ''} Season`} />
 
       <h1 style={{ color: colors.text, fontSize: '24px', marginBottom: '4px' }}>
         NFL Team Rankings

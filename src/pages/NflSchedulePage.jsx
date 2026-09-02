@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { colors } from '../theme';
 import NflValidationBanner from '../components/NflValidationBanner';
+import NflFreshness from '../components/NflFreshness';
 
 const STATUS_COLORS = {
   Out: '#e05555', Doubtful: '#e05555', Questionable: '#e8a838',
@@ -34,6 +35,7 @@ export default function NflSchedulePage() {
       </Helmet>
 
       <NflValidationBanner />
+      <NflFreshness generatedAt={data?.generated_at} label={`Week ${data?.week || ''}`} />
 
       <h1 style={{ color: colors.text, fontSize: '24px', marginBottom: '4px' }}>
         NFL Week {data?.week} Schedule
