@@ -1,12 +1,12 @@
 {
   "slate_date": "2026-09-02",
-  "last_refreshed": "2026-09-02T18:02:11-04:00",
+  "last_refreshed": "2026-09-02T19:02:12-04:00",
   "games": 15,
-  "pitchers": 29,
+  "pitchers": 30,
   "coverage": {
     "full_2026": 28,
     "fallback_2025": 1,
-    "thin_no_data": 0
+    "thin_no_data": 1
   },
   "hot_cold_rule": "hot = L5 K% >= 3pts above season AND L5 xwOBA <= season; cold = L5 K% >= 3pts below season OR L5 xwOBA >= 3pts above season; else steady",
   "matchups": [
@@ -715,7 +715,7 @@
           "hand": "L",
           "season": {
             "w": 1,
-            "l": 3,
+            "l": 4,
             "era": "4.41",
             "whip": "1.73"
           },
@@ -856,8 +856,8 @@
           "season": {
             "w": 6,
             "l": 9,
-            "era": "4.26",
-            "whip": "1.36"
+            "era": "4.27",
+            "whip": "1.35"
           },
           "stuff": {
             "k_rate": 0.216,
@@ -922,8 +922,8 @@
           "season": {
             "w": 8,
             "l": 13,
-            "era": "4.25",
-            "whip": "1.31"
+            "era": "4.22",
+            "whip": "1.30"
           },
           "stuff": {
             "k_rate": 0.243,
@@ -996,8 +996,8 @@
           "season": {
             "w": 6,
             "l": 9,
-            "era": "3.63",
-            "whip": "1.21"
+            "era": "3.88",
+            "whip": "1.24"
           },
           "stuff": {
             "k_rate": 0.22,
@@ -1060,10 +1060,10 @@
           "pitcher_id": 663795,
           "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 0,
+            "l": 0,
+            "era": "0.00",
+            "whip": "0.00"
           },
           "stuff": {
             "k_rate": 0.228,
@@ -1096,8 +1096,8 @@
           "season": {
             "w": 9,
             "l": 7,
-            "era": "3.70",
-            "whip": "1.45"
+            "era": "3.73",
+            "whip": "1.46"
           },
           "stuff": {
             "k_rate": 0.253,
@@ -1162,7 +1162,7 @@
           "season": {
             "w": 9,
             "l": 5,
-            "era": "2.33",
+            "era": "2.32",
             "whip": "1.05"
           },
           "stuff": {
@@ -1996,20 +1996,36 @@
           "side": "away",
           "team": "STL",
           "opponent": "LAD",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Brycen Mautz",
+          "pitcher_id": 802408,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 0,
+            "l": 1,
+            "era": "9.00",
+            "whip": "2.00"
           },
           "stuff": {},
-          "arsenal": [],
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 36.9,
+              "velo": 93.3
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 23.2,
+              "velo": 83.8
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 21.6,
+              "velo": 78.2
+            }
+          ],
           "splits": {},
           "recent_form": {},
-          "sample_flag": "tbd",
+          "sample_flag": "thin_2026",
           "scratched": false
         }
       ]
