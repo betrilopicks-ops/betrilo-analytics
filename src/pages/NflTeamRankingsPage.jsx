@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { colors } from '../theme';
 import SortableTable from '../components/SortableTable';
+import NflValidationBanner from '../components/NflValidationBanner';
 
 const DVP_COLORS = {
   Smash: '#19C93E', Favorable: '#7dd87d', Neutral: '#aaa',
@@ -86,8 +87,10 @@ export default function NflTeamRankingsPage() {
     <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '24px 16px' }}>
       <Helmet>
         <title>NFL Team Rankings (DvP) | Betrilo</title>
-        <meta name="description" content="NFL defense-vs-position rankings. Find the easiest and toughest matchups for QB, RB, WR, and TE." />
+        <meta name="description" content="NFL defense-vs-position rankings — find easiest and toughest matchups for QB, RB, WR, TE. Model in private validation, not published picks." />
       </Helmet>
+
+      <NflValidationBanner />
 
       <h1 style={{ color: colors.text, fontSize: '24px', marginBottom: '4px' }}>
         NFL Team Rankings

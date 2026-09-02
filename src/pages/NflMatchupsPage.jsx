@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { colors } from '../theme';
+import NflValidationBanner from '../components/NflValidationBanner';
 
 const DVP_COLORS = {
   'Smash': '#19C93E',
@@ -242,6 +243,7 @@ export default function NflMatchupsPage() {
         </div>
       ) : (
         <>
+          <NflValidationBanner />
           {/* Header */}
           <div style={{ marginBottom: '15px' }}>
             <h2 style={{ margin: '0 0 4px 0' }}>

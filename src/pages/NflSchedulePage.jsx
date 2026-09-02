@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { colors } from '../theme';
+import NflValidationBanner from '../components/NflValidationBanner';
 
 const STATUS_COLORS = {
   Out: '#e05555', Doubtful: '#e05555', Questionable: '#e8a838',
@@ -29,8 +30,10 @@ export default function NflSchedulePage() {
     <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '24px 16px' }}>
       <Helmet>
         <title>NFL Schedule — Week {data?.week} | Betrilo</title>
-        <meta name="description" content={`NFL Week ${data?.week} schedule with snap leaders, injuries, and game lines.`} />
+        <meta name="description" content={`NFL Week ${data?.week} schedule with snap leaders, injuries, and game lines. Model in private validation, not published picks.`} />
       </Helmet>
+
+      <NflValidationBanner />
 
       <h1 style={{ color: colors.text, fontSize: '24px', marginBottom: '4px' }}>
         NFL Week {data?.week} Schedule

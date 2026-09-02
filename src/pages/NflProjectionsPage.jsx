@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { colors } from '../theme';
 import SortableTable from '../components/SortableTable';
+import NflValidationBanner from '../components/NflValidationBanner';
 
 const DVP_COLORS = {
   Smash: '#19C93E', Favorable: '#7dd87d', Neutral: '#aaa',
@@ -115,8 +116,10 @@ export default function NflProjectionsPage() {
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '24px 16px' }}>
       <Helmet>
         <title>NFL Player Projections — Week {data?.week} | Betrilo</title>
-        <meta name="description" content={`NFL Week ${data?.week} player projections for QB, RB, WR, and TE.`} />
+        <meta name="description" content={`NFL Week ${data?.week} player projections for QB, RB, WR, TE. Model in private validation, not published picks.`} />
       </Helmet>
+
+      <NflValidationBanner />
 
       <h1 style={{ color: colors.text, fontSize: '24px', marginBottom: '4px' }}>
         NFL Player Projections

@@ -107,6 +107,51 @@ const SURFACES = [
     noGameCount: true,
     getVerdict: d => d.verdict,
   },
+  // ── NFL surfaces (weekly cadence — no games most days is normal) ──
+  {
+    key: 'nfl_health',
+    label: 'NFL Pipeline',
+    file: '/data/nfl_health_latest.json',
+    getFreshness: d => d.checked_at,
+    getGames: () => null,
+    getRecords: d => {
+      const surfaces = d.surfaces ?? [];
+      const ok = surfaces.filter(s => s.status === 'OK').length;
+      return { count: ok, label: `of ${surfaces.length} surfaces OK` };
+    },
+    noGameCount: true,
+    getVerdict: d => d.verdict,
+  },
+  {
+    key: 'nfl_team_rankings',
+    label: 'NFL Team Rankings',
+    file: '/data/nfl_team_rankings_latest.json',
+    getFreshness: d => d.generated_at,
+    getGames: () => null,
+    getRecords: d => {
+      const groups = d.position_groups ?? {};
+      return { count: Object.keys(groups).length, label: 'position groups' };
+    },
+    noGameCount: true,
+  },
+  {
+    key: 'nfl_schedule',
+    label: 'NFL Schedule',
+    file: '/data/nfl_schedule_latest.json',
+    getFreshness: d => d.generated_at,
+    getGames: d => d.games_count ?? 0,
+    getRecords: d => ({ count: d.games_count ?? 0, label: 'games' }),
+    noGameCount: true,
+  },
+  {
+    key: 'nfl_projections',
+    label: 'NFL Projections',
+    file: '/data/nfl_player_projections_latest.json',
+    getFreshness: d => d.generated_at,
+    getGames: () => null,
+    getRecords: d => ({ count: d.player_count ?? 0, label: 'players' }),
+    noGameCount: true,
+  },
 ];
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
