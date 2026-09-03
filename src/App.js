@@ -29,11 +29,12 @@ const P = (Component) => <PageErrorBoundary><Component /></PageErrorBoundary>;
 function AppContent() {
   const location = useLocation();
   const isLanding = location.pathname === '/';
+  const isNfl = location.pathname.startsWith('/nfl');
 
   return (
     <div className="App">
       <Header />
-      {!isLanding && <PicksCTA />}
+      {!isLanding && !isNfl && <PicksCTA />}
       <main>
         <Routes>
           <Route path="/" element={P(LandingPage)} />

@@ -165,8 +165,10 @@ export default function SortableTable({
                       borderBottom: `2px solid ${colors.green}`,
                       position: stickyFirst && i === 0 ? 'sticky' : undefined,
                       left: stickyFirst && i === 0 ? 0 : undefined,
-                      zIndex: stickyFirst && i === 0 ? 1 : undefined,
+                      zIndex: stickyFirst && i === 0 ? 2 : undefined,
                       minWidth: col.width,
+                      maxWidth: stickyFirst && i === 0 ? '140px' : undefined,
+                      borderRight: stickyFirst && i === 0 ? `2px solid ${colors.green}` : undefined,
                     }}
                   >
                     {col.label}
@@ -196,6 +198,10 @@ export default function SortableTable({
                             ? (ri % 2 === 0 ? colors.navy : colors.navyLight)
                             : undefined,
                           zIndex: stickyFirst && ci === 0 ? 1 : undefined,
+                          maxWidth: stickyFirst && ci === 0 ? '140px' : undefined,
+                          overflow: stickyFirst && ci === 0 ? 'hidden' : undefined,
+                          textOverflow: stickyFirst && ci === 0 ? 'ellipsis' : undefined,
+                          borderRight: stickyFirst && ci === 0 ? `2px solid ${colors.green}` : undefined,
                         }}
                       >
                         {display}

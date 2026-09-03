@@ -252,9 +252,9 @@ export default function NflMatchupsPage() {
           <NflValidationBanner />
           {/* Header */}
           <div style={{ marginBottom: '15px' }}>
-            <h2 style={{ margin: '0 0 4px 0' }}>
+            <h1 style={{ margin: '0 0 4px 0', fontSize: '30px', fontWeight: 800 }}>
               Player vs. Defense (DvP){meta.week ? ` — Week ${meta.week}` : ''}
-            </h2>
+            </h1>
             {prettyDate && (
               <div style={{ color: '#666', fontSize: '14px' }}>
                 Showing matchups for {prettyDate}

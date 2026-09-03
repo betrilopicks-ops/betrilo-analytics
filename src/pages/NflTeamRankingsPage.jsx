@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { colors } from '../theme';
 import SortableTable from '../components/SortableTable';
-import NflValidationBanner from '../components/NflValidationBanner';
-import NflFreshness from '../components/NflFreshness';
+import NflPageWrapper from '../components/NflPageWrapper';
 
 const DVP_COLORS = {
   Smash: '#19C93E', Favorable: '#7dd87d', Neutral: '#aaa',
@@ -14,8 +13,8 @@ const POS_TABS = ['QB', 'RB', 'WR', 'TE'];
 
 const COLUMNS = {
   QB: [
-    { key: 'rank', label: 'Rank', sortable: true, align: 'center', width: '50px' },
     { key: 'team', label: 'Defense', sortable: true, width: '70px' },
+    { key: 'rank', label: 'Rank', sortable: true, align: 'center', width: '50px' },
     { key: 'label', label: 'Rating', sortable: true, format: (v) => (
       <span style={{ color: DVP_COLORS[v] || '#aaa', fontWeight: 700 }}>{v}</span>
     )},
@@ -26,8 +25,8 @@ const COLUMNS = {
     { key: 'games', label: 'Games', sortable: true, align: 'center' },
   ],
   RB: [
-    { key: 'rank', label: 'Rank', sortable: true, align: 'center', width: '50px' },
     { key: 'team', label: 'Defense', sortable: true, width: '70px' },
+    { key: 'rank', label: 'Rank', sortable: true, align: 'center', width: '50px' },
     { key: 'label', label: 'Rating', sortable: true, format: (v) => (
       <span style={{ color: DVP_COLORS[v] || '#aaa', fontWeight: 700 }}>{v}</span>
     )},
@@ -38,8 +37,8 @@ const COLUMNS = {
     { key: 'games', label: 'Games', sortable: true, align: 'center' },
   ],
   WR: [
-    { key: 'rank', label: 'Rank', sortable: true, align: 'center', width: '50px' },
     { key: 'team', label: 'Defense', sortable: true, width: '70px' },
+    { key: 'rank', label: 'Rank', sortable: true, align: 'center', width: '50px' },
     { key: 'label', label: 'Rating', sortable: true, format: (v) => (
       <span style={{ color: DVP_COLORS[v] || '#aaa', fontWeight: 700 }}>{v}</span>
     )},
@@ -50,8 +49,8 @@ const COLUMNS = {
     { key: 'games', label: 'Games', sortable: true, align: 'center' },
   ],
   TE: [
-    { key: 'rank', label: 'Rank', sortable: true, align: 'center', width: '50px' },
     { key: 'team', label: 'Defense', sortable: true, width: '70px' },
+    { key: 'rank', label: 'Rank', sortable: true, align: 'center', width: '50px' },
     { key: 'label', label: 'Rating', sortable: true, format: (v) => (
       <span style={{ color: DVP_COLORS[v] || '#aaa', fontWeight: 700 }}>{v}</span>
     )},
@@ -85,52 +84,52 @@ export default function NflTeamRankingsPage() {
   const teams = data?.position_groups?.[activePos] || [];
 
   return (
-    <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '24px 16px' }}>
+    <>
       <Helmet>
         <title>NFL Team Rankings (DvP) | Betrilo</title>
         <meta name="description" content="NFL defense-vs-position rankings — find easiest and toughest matchups for QB, RB, WR, TE. Model in private validation, not published picks." />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 
-      <NflValidationBanner />
-      <NflFreshness generatedAt={data?.generated_at} label={`${data?.season || ''} Season`} />
+      <NflPageWrapper generatedAt={data?.generated_at} freshLabel={`${data?.season || ''} Season`} maxWidth="1100px">
+        <h1 style={{ color: colors.text, fontSize: '30px', fontWeight: 800, marginBottom: '4px' }}>
+          NFL Team Rankings
+        </h1>
+        <p style={{ color: colors.textMuted, fontSize: '14px', marginBottom: '20px' }}>
+          Defense vs Position (DvP) — Rank 1 = most stats allowed = easiest matchup.
+          {data?.dvp_method && <><br /><span style={{ fontSize: '12px' }}>{data.dvp_method}</span></>}
+          {data?.games_note && <><br /><span style={{ fontSize: '11px' }}>{data.games_note}</span></>}
+        </p>
 
-      <h1 style={{ color: colors.text, fontSize: '24px', marginBottom: '4px' }}>
-        NFL Team Rankings
-      </h1>
-      <p style={{ color: colors.textMuted, fontSize: '14px', marginBottom: '20px' }}>
-        Defense vs Position (DvP) — Rank 1 = most stats allowed = easiest matchup.
-        {data?.dvp_method && <><br /><span style={{ fontSize: '12px' }}>{data.dvp_method}</span></>}
-      </p>
+        {/* Position tabs */}
+        <div style={{ display: 'flex', gap: '6px', marginBottom: '16px', flexWrap: 'wrap' }}>
+          {POS_TABS.map(pos => (
+            <button
+              key={pos}
+              onClick={() => setActivePos(pos)}
+              style={{
+                background: activePos === pos ? colors.green : 'transparent',
+                color: activePos === pos ? colors.navy : colors.text,
+                border: activePos === pos ? 'none' : `1px solid ${colors.textMuted}`,
+                padding: '8px 20px', borderRadius: '6px', fontSize: '14px',
+                fontWeight: 700, cursor: 'pointer',
+              }}
+            >
+              {pos}
+            </button>
+          ))}
+        </div>
 
-      {/* Position tabs */}
-      <div style={{ display: 'flex', gap: '6px', marginBottom: '16px' }}>
-        {POS_TABS.map(pos => (
-          <button
-            key={pos}
-            onClick={() => setActivePos(pos)}
-            style={{
-              background: activePos === pos ? colors.green : 'transparent',
-              color: activePos === pos ? colors.navy : colors.text,
-              border: activePos === pos ? 'none' : `1px solid ${colors.textMuted}`,
-              padding: '8px 20px', borderRadius: '6px', fontSize: '14px',
-              fontWeight: 700, cursor: 'pointer',
-            }}
-          >
-            {pos}
-          </button>
-        ))}
-      </div>
-
-      <SortableTable
-        columns={COLUMNS[activePos]}
-        data={teams}
-        defaultSort={{ key: 'rank', order: 'asc' }}
-        loading={loading}
-        lastRefreshed={data?.generated_at ? new Date(data.generated_at).toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' }) : null}
-        emptyMessage="No rankings data available"
-        stickyFirst={false}
-      />
-    </div>
+        <SortableTable
+          columns={COLUMNS[activePos]}
+          data={teams}
+          defaultSort={{ key: 'rank', order: 'asc' }}
+          loading={loading}
+          lastRefreshed={data?.generated_at ? new Date(data.generated_at).toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' }) : null}
+          emptyMessage="No rankings data available"
+          stickyFirst={true}
+        />
+      </NflPageWrapper>
+    </>
   );
 }
