@@ -58,7 +58,7 @@ export default function NflProjectionsPage() {
     return rows;
   }, [data, activePos]);
 
-  if (error) return <div style={{ textAlign: 'center', padding: '60px', color: colors.textMuted }}>Projections data is unavailable right now.</div>;
+  if (error) return <div style={{ textAlign: 'center', padding: '60px', color: '#666' }}>Projections data is unavailable right now.</div>;
 
   const injuryFormat = (v) => {
     if (!v) return null;
@@ -174,11 +174,11 @@ export default function NflProjectionsPage() {
           DC = Depth Chart rank (1 = starter) |{' '}
           Inj = Injury status |{' '}
           Tgt% = Target share (% of team targets) |{' '}
-          <span style={{ color: DVP_COLORS.Smash }}>Smash</span>{' / '}
-          <span style={{ color: DVP_COLORS.Favorable }}>Favorable</span>{' / '}
-          <span style={{ color: DVP_COLORS.Neutral }}>Neutral</span>{' / '}
-          <span style={{ color: DVP_COLORS.Tough }}>Tough</span>{' / '}
-          <span style={{ color: DVP_COLORS.Avoid }}>Avoid</span>
+          <span style={{ color: '#0d8a2a', fontWeight: 700 }}>Smash</span>{' / '}
+          <span style={{ color: '#3d8a3d', fontWeight: 700 }}>Favorable</span>{' / '}
+          <span style={{ color: '#666', fontWeight: 700 }}>Neutral</span>{' / '}
+          <span style={{ color: '#b8860b', fontWeight: 700 }}>Tough</span>{' / '}
+          <span style={{ color: '#c03030', fontWeight: 700 }}>Avoid</span>
         </div>
       </NflPageWrapper>
     </>

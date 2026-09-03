@@ -20,8 +20,8 @@ export default function NflSchedulePage() {
       .catch(() => { setError(true); setLoading(false); });
   }, []);
 
-  if (loading) return <div style={{ textAlign: 'center', padding: '60px', color: colors.textMuted }}>Loading...</div>;
-  if (error) return <div style={{ textAlign: 'center', padding: '60px', color: colors.textMuted }}>Schedule data is unavailable right now.</div>;
+  if (loading) return <div style={{ textAlign: 'center', padding: '60px', color: '#666' }}>Loading...</div>;
+  if (error) return <div style={{ textAlign: 'center', padding: '60px', color: '#666' }}>Schedule data is unavailable right now.</div>;
 
   const games = data?.games || [];
   const byeTeams = data?.bye_teams || [];
