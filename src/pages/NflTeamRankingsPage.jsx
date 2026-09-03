@@ -76,7 +76,7 @@ export default function NflTeamRankingsPage() {
   }, []);
 
   if (error) {
-    return <div style={{ textAlign: 'center', padding: '60px', color: colors.textMuted }}>
+    return <div style={{ textAlign: 'center', padding: '60px', color: '#666' }}>
       Team rankings data is unavailable right now.
     </div>;
   }
