@@ -22,7 +22,7 @@ export const dark = {
   // Text
   textPrimary: '#e8eef2',      // headings, primary content — 13.2:1 on pageBg
   textSecondary: '#9fb3c0',    // subtitles, timestamps — 6.3:1 on pageBg
-  textMuted: '#6b8a9e',        // placeholders, tertiary — 3.7:1 on pageBg (large text only)
+  textMuted: '#7e9fb4',        // placeholders, tertiary — 4.62:1 on surfaceBg, 5.78:1 on pageBg
   textOnAccent: '#0B2331',     // text on green accent bg — 6.7:1
 
   // Interactive
@@ -36,29 +36,29 @@ export const dark = {
   inputBg: '#0B2331',
   inputText: '#e8eef2',
   inputBorder: '#19C93E',
-  inputPlaceholder: '#6b8a9e',
+  inputPlaceholder: '#7e9fb4',
 
   // Status colors (tuned for dark bg)
   statusGreen: '#19C93E',      // Smash, healthy — 7.5:1 on pageBg
   statusGreenLight: '#7dd87d', // Favorable — 5.2:1 on pageBg
   statusNeutral: '#9fb3c0',    // Neutral — 6.3:1 on pageBg
   statusAmber: '#e8a838',      // Tough, Questionable — 5.8:1 on pageBg
-  statusRed: '#e05555',        // Avoid, IR, Out — 4.5:1 on pageBg
+  statusRed: '#f27272',        // Avoid, IR, Out — 4.57:1 on surfaceBg, 5.72:1 on pageBg
 
   // DvP rating colors (same as status, named for clarity)
   dvpSmash: '#19C93E',
   dvpFavorable: '#7dd87d',
   dvpNeutral: '#9fb3c0',
   dvpTough: '#e8a838',
-  dvpAvoid: '#e05555',
+  dvpAvoid: '#f27272',
 
   // Injury status
   injQuestionable: '#e8a838',
-  injOut: '#e05555',
-  injIR: '#e05555',
-  injPUP: '#e05555',
-  injSuspended: '#e05555',
-  injUnknown: '#6b8a9e',
+  injOut: '#f27272',
+  injIR: '#f27272',
+  injPUP: '#f27272',
+  injSuspended: '#f27272',
+  injUnknown: '#7e9fb4',
 
   // Banner (validation disclosure)
   bannerBg: '#1a2d3d',
