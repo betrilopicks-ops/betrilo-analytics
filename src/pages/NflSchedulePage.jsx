@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { colors } from '../theme';
-import NflValidationBanner from '../components/NflValidationBanner';
-import NflFreshness from '../components/NflFreshness';
+import NflPageWrapper from '../components/NflPageWrapper';
 
 const STATUS_COLORS = {
   Out: '#e05555', Doubtful: '#e05555', Questionable: '#e8a838',
@@ -28,17 +27,15 @@ export default function NflSchedulePage() {
   const byeTeams = data?.bye_teams || [];
 
   return (
-    <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '24px 16px' }}>
+    <>
       <Helmet>
         <title>{data?.week ? `NFL Schedule — Week ${data.week} | Betrilo` : 'NFL Schedule | Betrilo'}</title>
-        <meta name="description" content={`NFL weekly schedule with snap leaders, injuries, and game lines. Model in private validation, not published picks.`} />
+        <meta name="description" content="NFL weekly schedule with snap leaders, injuries, and game lines. Model in private validation, not published picks." />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 
-      <NflValidationBanner />
-      <NflFreshness generatedAt={data?.generated_at} label={`Week ${data?.week || ''}`} />
-
-      <h1 style={{ color: colors.text, fontSize: '24px', marginBottom: '4px' }}>
+      <NflPageWrapper generatedAt={data?.generated_at} freshLabel={`Week ${data?.week || ''}`} maxWidth="1100px">
+      <h1 style={{ color: colors.text, fontSize: '30px', fontWeight: 800, marginBottom: '4px' }}>
         NFL Week {data?.week} Schedule
       </h1>
       <p style={{ color: colors.textMuted, fontSize: '13px', marginBottom: '20px' }}>
@@ -107,10 +104,10 @@ export default function NflSchedulePage() {
                     )}
 
                     {/* Injuries */}
-                    {side.injuries && side.injuries.length > 0 && (
-                      <div>
-                        <div style={{ color: colors.textMuted, fontSize: '11px', textTransform: 'uppercase', marginBottom: '4px' }}>Injuries</div>
-                        {side.injuries.map((inj, i) => (
+                    <div>
+                      <div style={{ color: colors.textMuted, fontSize: '11px', textTransform: 'uppercase', marginBottom: '4px' }}>Injuries</div>
+                      {side.injuries && side.injuries.length > 0 ? (
+                        side.injuries.map((inj, i) => (
                           <div key={i} style={{ fontSize: '12px', padding: '2px 0' }}>
                             <span style={{ color: STATUS_COLORS[inj.status] || colors.textMuted, fontWeight: 600 }}>
                               {inj.status}
@@ -118,9 +115,13 @@ export default function NflSchedulePage() {
                             <span style={{ color: colors.text, marginLeft: '6px' }}>{inj.player}</span>
                             {inj.body_part && <span style={{ color: colors.textMuted, marginLeft: '4px' }}>({inj.body_part})</span>}
                           </div>
-                        ))}
-                      </div>
-                    )}
+                        ))
+                      ) : (
+                        <div style={{ fontSize: '12px', color: colors.textMuted, fontStyle: 'italic' }}>
+                          No injuries reported
+                        </div>
+                      )}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -128,6 +129,7 @@ export default function NflSchedulePage() {
           ))}
         </div>
       )}
-    </div>
+      </NflPageWrapper>
+    </>
   );
 }

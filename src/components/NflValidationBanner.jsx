@@ -1,18 +1,16 @@
 import React from 'react';
-import { colors } from '../theme';
 
 /**
  * Persistent validation disclosure for all NFL pages.
- * Shown on every NFL route until the shadow validation gate is passed.
+ * Shows at the top of every NFL route until shadow validation gate is met.
  *
- * Solid background, full-contrast text — never invisible against dark backgrounds.
- * Follows the projected-lineups note pattern from StartingLineupsPage.
+ * One component, one treatment — used identically on all NFL pages.
  */
 export default function NflValidationBanner() {
   return (
     <div style={{
       background: '#1a2d3d',
-      border: `1px solid #e8a838`,
+      border: '1px solid #e8a838',
       borderRadius: '8px',
       padding: '12px 18px',
       marginBottom: '20px',
@@ -32,16 +30,15 @@ export default function NflValidationBanner() {
         whiteSpace: 'nowrap',
         marginTop: '1px',
       }}>
-        In Validation
+        No Track Record
       </span>
       <span style={{
-        color: colors.text,
+        color: '#e8eef2',
         fontSize: '13px',
         lineHeight: 1.45,
       }}>
-        These projections come from a model with no graded track record. The NFL system is
-        in private validation — results are being tracked but not yet published. This is not
-        a picks surface.
+        Not picks — this model has no track record yet. Projections are from an unvalidated
+        system in private testing and are not published recommendations.
       </span>
     </div>
   );
