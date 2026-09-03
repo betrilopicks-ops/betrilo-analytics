@@ -255,9 +255,10 @@ export default function NflMatchupsPage() {
             <h1 style={{ margin: '0 0 4px 0', fontSize: '30px', fontWeight: 800 }}>
               Player vs. Defense (DvP){meta.week ? ` — Week ${meta.week}` : ''}
             </h1>
-            {prettyDate && (
+            {meta.week && (
               <div style={{ color: '#666', fontSize: '14px' }}>
-                Showing matchups for {prettyDate}
+                {meta.season} Season — Week {meta.week}
+                {prettyDate && <span style={{ color: '#999', marginLeft: '8px' }}>(data updated {prettyDate})</span>}
               </div>
             )}
             <div style={{ color: '#999', fontSize: '12px', marginTop: '4px' }}>

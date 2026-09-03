@@ -1,6 +1,6 @@
 # @betrilopicks Frontend (betrilo.com) — Technical Project Book
 
-**Version:** BFEv0.13.0 | **Last Updated:** September 3, 2026 | **Includes:** NFL FE fixes from preview review; NFL meta cleanup + noindex; Helmet title fix + error boundary; NFL preview branch + production gate; NFL freshness indicator; Validation banner + NFL /status surfaces; NFL Wave 1 pages + sport-scoped nav + shared SortableTable; NFL site spec (multi-sport extension); Pitcher Report sort by start time (games now render earliest→latest); Batter Splits doubleheader fix (DH players appear twice with G1/G2 labels and correct per-game opposing pitcher; team filter uses team_abbr for clean DH grouping); /status false-alarm fix (Best Bets, Edge Report, Batter Splits switched to freshness-only health — these surfaces don't count raw games, so their record counts falsely mismatched the MLB schedule, producing spurious yellow flags on healthy days; now noGameCount: healthy = updated today, no game-count comparison; operator sees all-green banner when pipeline is clean); System Status page (/status — public but unlisted, not in nav/sitemap; pipeline health + data freshness dashboard for remote monitoring during travel; per-surface cards showing last_refreshed timestamp (absolute + relative ET), health color (green/yellow/red based on today-freshness + game-count cross-check vs MLB Stats API schedule), game count vs expected, record counts; top-line banner summarizes all-healthy vs attention-needed; pipeline health_latest.json verdict + step-level status surfaced; schedule cross-check: MLB Stats API primary with starting-lineups fallback; auto-refresh every 5 min + manual refresh button; mobile-friendly; per-surface error isolation; noindex/nofollow meta; built for 7/29-8/3 travel window); VP AB column on Player Projections page (column relabeled VP AB, reads vp_ab from JSON instead of vp_pa; cellValue switch and td render updated; footer Key text updated to "VP AB/H/HR/xwOBA — career at-bats and performance vs. today's probable pitcher"); H+R+RBI column on Player Projections page (proj_hrrbi passthrough from DB — same value as Results page; sortable; 327/520 batters covered; footer Key corrected); Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema; BvP guide: crawlable static HTML at /mlb/batter-vs-pitcher-guide (~800 words, content in served HTML pre-JS); Footer support mailto (support@betrilo.com; green on navy; legible contrast); Game dropdown chronological sort (PlayerProjections + StartingLineups)
+**Version:** BFEv0.14.0 | **Last Updated:** September 3, 2026 | **Includes:** Light color scheme (site-wide); NFL FE fixes from preview review; NFL meta cleanup + noindex; Helmet title fix + error boundary; NFL preview branch + production gate; NFL freshness indicator; Validation banner + NFL /status surfaces; NFL Wave 1 pages + sport-scoped nav + shared SortableTable; NFL site spec (multi-sport extension); Pitcher Report sort by start time (games now render earliest→latest); Batter Splits doubleheader fix (DH players appear twice with G1/G2 labels and correct per-game opposing pitcher; team filter uses team_abbr for clean DH grouping); /status false-alarm fix (Best Bets, Edge Report, Batter Splits switched to freshness-only health — these surfaces don't count raw games, so their record counts falsely mismatched the MLB schedule, producing spurious yellow flags on healthy days; now noGameCount: healthy = updated today, no game-count comparison; operator sees all-green banner when pipeline is clean); System Status page (/status — public but unlisted, not in nav/sitemap; pipeline health + data freshness dashboard for remote monitoring during travel; per-surface cards showing last_refreshed timestamp (absolute + relative ET), health color (green/yellow/red based on today-freshness + game-count cross-check vs MLB Stats API schedule), game count vs expected, record counts; top-line banner summarizes all-healthy vs attention-needed; pipeline health_latest.json verdict + step-level status surfaced; schedule cross-check: MLB Stats API primary with starting-lineups fallback; auto-refresh every 5 min + manual refresh button; mobile-friendly; per-surface error isolation; noindex/nofollow meta; built for 7/29-8/3 travel window); VP AB column on Player Projections page (column relabeled VP AB, reads vp_ab from JSON instead of vp_pa; cellValue switch and td render updated; footer Key text updated to "VP AB/H/HR/xwOBA — career at-bats and performance vs. today's probable pitcher"); H+R+RBI column on Player Projections page (proj_hrrbi passthrough from DB — same value as Results page; sortable; 327/520 batters covered; footer Key corrected); Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema; BvP guide: crawlable static HTML at /mlb/batter-vs-pitcher-guide (~800 words, content in served HTML pre-JS); Footer support mailto (support@betrilo.com; green on navy; legible contrast); Game dropdown chronological sort (PlayerProjections + StartingLineups)
 
 ---
 
@@ -670,3 +670,37 @@ NflTeamRankingsPage and NflMatchupsPage were unaffected (static title / no Helme
 **New components:** NflPageWrapper.jsx — unified dark-bg wrapper with validation banner + freshness indicator.
 
 **Version:** BFEv0.12.1 → **BFEv0.13.0** (MINOR — preview review fixes, visual + behavioral changes)
+
+---
+
+### Session: September 3, 2026 — BFEv0.13.0 → BFEv0.14.0 — Light Color Scheme (Site-Wide)
+
+BFEv0.13.0 fixed the invisible-text bug backwards: instead of making text dark on a light page, it made the page dark. This split the site: MLB pages white, NFL pages navy (plus matchups still white). This session reverts to light, site-wide.
+
+**NflPageWrapper reverted:** Background override removed. Wrapper is now layout-only (max-width, validation banner, freshness). No background.
+
+**Text tokens fixed for light background:** Every on-navy token (`colors.text` = #E8EEF2, `colors.textMuted` = #9FB3C0) used against the page background → swapped to on-light equivalents:
+- h1: `colors.text` → `colors.navy` (#0B2331) — 16.75:1 contrast
+- Subtitles: `colors.textMuted` → `colors.subtitleOnWhite` (#586771) — 5.84:1
+- Tab text (inactive): `colors.text` → `colors.navy` — 15.49:1
+- Tab background (inactive): transparent → #f0f0f0 with #ccc border
+- Legend: navyLight bg → #f0f4f7 bg, text → #586771
+- Freshness indicator: textMuted → #586771, stale amber → #b8860b (4.56:1)
+- Loading/empty states: textMuted → #666 (5.74:1)
+
+**SortableTable unchanged:** Table internals (control bar, headers, cell rows) use navy-chrome styling — dark bg with light text. This is correct: the table is an encapsulated navy-chrome component, not page-level content.
+
+**Matchups date bug fixed:** "Showing matchups for Thursday, September 3" was displaying the export date, not the game dates. Now shows "2026 Season — Week 1 (data updated Thursday, September 3)".
+
+**Color Token Rule (standing, applies to all sports including NBA):**
+
+| Context | Background | Text tokens | Examples |
+|---------|-----------|-------------|---------|
+| **Page content** | White / #f9f9f9 | On-light: `colors.navy` (#0B2331), `colors.subtitleOnWhite` (#586771), #666, #333 | h1, subtitles, filter labels, legends, empty states |
+| **Navy chrome** | `colors.navy` (#0B2331), `colors.navyLight` (#16344A) | On-navy: `colors.text` (#E8EEF2), `colors.textMuted` (#9FB3C0) | Header, footer, table headers, table rows, control bars, banners |
+| **Green accent** | `colors.green` (#19C93E) | `colors.navy` (#0B2331) | Active tabs, CTA buttons, active nav links |
+| **Social cards** | Navy + green full-bleed | On-navy tokens | Instagram/Threads cards only — NOT the site |
+
+**Rule:** On-navy tokens (#E8EEF2, #9FB3C0) are ONLY valid inside navy-chrome containers. Using them against the page background produces invisible text (1.17:1 contrast). This applies to every current and future sport.
+
+**Version:** BFEv0.13.0 → **BFEv0.14.0** (MINOR — reverts and replaces the 0.13.0 approach)

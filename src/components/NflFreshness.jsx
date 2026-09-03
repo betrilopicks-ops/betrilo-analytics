@@ -48,7 +48,7 @@ export default function NflFreshness({ generatedAt, label }) {
       alignItems: 'center',
       gap: '8px',
       fontSize: '12px',
-      color: isStale ? '#e8a838' : colors.textMuted,
+      color: isStale ? '#b8860b' : '#586771',  // on-light: dark amber / subtitleOnWhite
       marginBottom: '12px',
     }}>
       <span style={{

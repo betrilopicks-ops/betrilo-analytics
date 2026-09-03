@@ -86,7 +86,7 @@ export default function SortableTable({
 
   if (loading) {
     return (
-      <div style={{ textAlign: 'center', padding: '60px 20px', color: colors.textMuted }}>
+      <div style={{ textAlign: 'center', padding: '60px 20px', color: '#666' }}>
         Loading...
       </div>
     );
@@ -139,7 +139,7 @@ export default function SortableTable({
 
       {/* Table */}
       {filtered.length === 0 ? (
-        <div style={{ textAlign: 'center', padding: '40px 20px', color: colors.textMuted }}>
+        <div style={{ textAlign: 'center', padding: '40px 20px', color: '#666' }}>
           {emptyMessage}
         </div>
       ) : (
