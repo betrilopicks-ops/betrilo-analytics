@@ -1,7 +1,8 @@
 {
   "season": 2026,
-  "generated_at": "2026-09-02T15:00:10.516368-04:00",
-  "dvp_method": "recency-weighted (2026=1.0x, 2025=0.6x, 2024=0.3x)",
+  "generated_at": "2026-09-03T06:56:27.393959-04:00",
+  "dvp_method": "Based on 2025 (0.6x), 2024 (0.3x)",
+  "games_note": "Games column shows total games across all weighted seasons (e.g., 34 = 17 per season x 2 seasons)",
   "rank_note": "Rank 1 = most yards/stats allowed to this position = easiest matchup for offense",
   "position_groups": {
     "QB": [
@@ -568,24 +569,24 @@
         "receiving_yards_per_game": 26.3
       },
       {
-        "team": "DET",
-        "rank": 25,
-        "label": "Tough",
-        "games": 34,
-        "rushing_yards_per_game": 82.3,
-        "carries_per_game": 19.3,
-        "receptions_per_game": 3.5,
-        "receiving_yards_per_game": 28.0
-      },
-      {
         "team": "SEA",
-        "rank": 26,
+        "rank": 25,
         "label": "Tough",
         "games": 34,
         "rushing_yards_per_game": 82.3,
         "carries_per_game": 21.0,
         "receptions_per_game": 5.4,
         "receiving_yards_per_game": 37.6
+      },
+      {
+        "team": "DET",
+        "rank": 26,
+        "label": "Tough",
+        "games": 34,
+        "rushing_yards_per_game": 82.3,
+        "carries_per_game": 19.3,
+        "receptions_per_game": 3.5,
+        "receiving_yards_per_game": 28.0
       },
       {
         "team": "JAX",
