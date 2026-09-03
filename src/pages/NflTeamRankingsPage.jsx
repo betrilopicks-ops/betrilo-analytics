@@ -92,10 +92,10 @@ export default function NflTeamRankingsPage() {
       </Helmet>
 
       <NflPageWrapper generatedAt={data?.generated_at} freshLabel={`${data?.season || ''} Season`} maxWidth="1100px">
-        <h1 style={{ color: colors.text, fontSize: '30px', fontWeight: 800, marginBottom: '4px' }}>
+        <h1 style={{ color: colors.navy, fontSize: '30px', fontWeight: 800, marginBottom: '4px' }}>
           NFL Team Rankings
         </h1>
-        <p style={{ color: colors.textMuted, fontSize: '14px', marginBottom: '20px' }}>
+        <p style={{ color: colors.subtitleOnWhite, fontSize: '14px', marginBottom: '20px' }}>
           Defense vs Position (DvP) — Rank 1 = most stats allowed = easiest matchup.
           {data?.dvp_method && <><br /><span style={{ fontSize: '12px' }}>{data.dvp_method}</span></>}
           {data?.games_note && <><br /><span style={{ fontSize: '11px' }}>{data.games_note}</span></>}
@@ -108,9 +108,9 @@ export default function NflTeamRankingsPage() {
               key={pos}
               onClick={() => setActivePos(pos)}
               style={{
-                background: activePos === pos ? colors.green : 'transparent',
-                color: activePos === pos ? colors.navy : colors.text,
-                border: activePos === pos ? 'none' : `1px solid ${colors.textMuted}`,
+                background: activePos === pos ? colors.green : '#f0f0f0',
+                color: activePos === pos ? colors.navy : colors.navy,
+                border: activePos === pos ? 'none' : '1px solid #ccc',
                 padding: '8px 20px', borderRadius: '6px', fontSize: '14px',
                 fontWeight: 700, cursor: 'pointer',
               }}

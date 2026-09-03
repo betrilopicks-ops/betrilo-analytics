@@ -35,17 +35,17 @@ export default function NflSchedulePage() {
       </Helmet>
 
       <NflPageWrapper generatedAt={data?.generated_at} freshLabel={`Week ${data?.week || ''}`} maxWidth="1100px">
-      <h1 style={{ color: colors.text, fontSize: '30px', fontWeight: 800, marginBottom: '4px' }}>
+      <h1 style={{ color: colors.navy, fontSize: '30px', fontWeight: 800, marginBottom: '4px' }}>
         NFL Week {data?.week} Schedule
       </h1>
-      <p style={{ color: colors.textMuted, fontSize: '13px', marginBottom: '20px' }}>
+      <p style={{ color: colors.subtitleOnWhite, fontSize: '13px', marginBottom: '20px' }}>
         {data?.season} Season
         {data?.generated_at && ` | Updated ${new Date(data.generated_at).toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}`}
         {byeTeams.length > 0 && ` | Bye: ${byeTeams.join(', ')}`}
       </p>
 
       {games.length === 0 ? (
-        <div style={{ textAlign: 'center', padding: '40px', color: colors.textMuted }}>
+        <div style={{ textAlign: 'center', padding: '40px', color: colors.subtitleOnWhite }}>
           No games scheduled for this week.
         </div>
       ) : (

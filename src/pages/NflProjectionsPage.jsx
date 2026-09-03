@@ -125,10 +125,10 @@ export default function NflProjectionsPage() {
       </Helmet>
 
       <NflPageWrapper generatedAt={data?.generated_at} freshLabel={data?.week1_mode ? 'Prior-season projections' : `Week ${data?.week || ''}`}>
-        <h1 style={{ color: colors.text, fontSize: '30px', fontWeight: 800, marginBottom: '4px' }}>
+        <h1 style={{ color: colors.navy, fontSize: '30px', fontWeight: 800, marginBottom: '4px' }}>
           NFL Player Projections
         </h1>
-        <p style={{ color: colors.textMuted, fontSize: '13px', marginBottom: '16px' }}>
+        <p style={{ color: colors.subtitleOnWhite, fontSize: '13px', marginBottom: '16px' }}>
           {data?.week ? `Week ${data.week} ${data.season}` : ''}
           {data?.week1_mode && ' — Prior-season projections (no 2026 game data yet)'}
         </p>
@@ -140,9 +140,9 @@ export default function NflProjectionsPage() {
               key={pos}
               onClick={() => setActivePos(pos)}
               style={{
-                background: activePos === pos ? colors.green : 'transparent',
-                color: activePos === pos ? colors.navy : colors.text,
-                border: activePos === pos ? 'none' : `1px solid ${colors.textMuted}`,
+                background: activePos === pos ? colors.green : '#f0f0f0',
+                color: activePos === pos ? colors.navy : colors.navy,
+                border: activePos === pos ? 'none' : '1px solid #ccc',
                 padding: '7px 16px', borderRadius: '6px', fontSize: '13px',
                 fontWeight: 700, cursor: 'pointer',
               }}
@@ -168,8 +168,8 @@ export default function NflProjectionsPage() {
         />
 
         {/* Legend */}
-        <div style={{ marginTop: '16px', padding: '12px 16px', background: colors.navyLight, borderRadius: '8px', fontSize: '12px', color: colors.textMuted, lineHeight: 1.6 }}>
-          <strong style={{ color: colors.text }}>Key:</strong>{' '}
+        <div style={{ marginTop: '16px', padding: '12px 16px', background: '#f0f4f7', borderRadius: '8px', fontSize: '12px', color: colors.subtitleOnWhite, lineHeight: 1.6 }}>
+          <strong style={{ color: colors.navy }}>Key:</strong>{' '}
           DvP = Defense vs Position (Rank 1 = easiest matchup) |{' '}
           DC = Depth Chart rank (1 = starter) |{' '}
           Inj = Injury status |{' '}
