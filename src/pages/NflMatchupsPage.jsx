@@ -1,14 +1,14 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { colors } from '../theme';
-import NflValidationBanner from '../components/NflValidationBanner';
+import { dark } from '../theme';
+import NflPageWrapper from '../components/NflPageWrapper';
 
 const DVP_COLORS = {
-  'Smash': '#19C93E',
-  'Favorable': '#7dd87d',
-  'Neutral': '#aaa',
-  'Tough': '#e8a838',
-  'Avoid': '#e05555',
+  'Smash': dark.dvpSmash,
+  'Favorable': dark.dvpFavorable,
+  'Neutral': dark.dvpNeutral,
+  'Tough': dark.dvpTough,
+  'Avoid': dark.dvpAvoid,
 };
 
 export default function NflMatchupsPage() {
@@ -230,50 +230,49 @@ export default function NflMatchupsPage() {
   };
 
   const stickyStyle = {
-    position: 'sticky', left: 0, zIndex: 3, background: '#fff',
-    borderRight: `2px solid ${colors.navyLight}`,
+    position: 'sticky', left: 0, zIndex: 3, background: dark.surfaceBg,
+    borderRight: `2px solid ${dark.borderAccent}`,
   };
 
   return (
-    <div style={{ padding: '20px', background: '#f9f9f9', minHeight: '100vh' }}>
+    <>
+      <Helmet>
+        <title>NFL Player vs Defense (DvP) Matchups | Betrilo</title>
+        <meta name="description" content="NFL player matchup data with defense-vs-position rankings and historical performance. Model in private validation, not published picks." />
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       {dataLoading ? (
-        <div style={{ textAlign: 'center', color: '#666' }}>Loading NFL matchups...</div>
+        <div style={{ textAlign: 'center', padding: '60px', color: dark.textSecondary, background: dark.pageBg, minHeight: '100vh' }}>Loading NFL matchups...</div>
       ) : dataError ? (
-        <div style={{ textAlign: 'center', padding: '60px', color: '#666' }}>
+        <div style={{ textAlign: 'center', padding: '60px', color: dark.textSecondary, background: dark.pageBg, minHeight: '100vh' }}>
           NFL matchups unavailable right now. Check back when the weekly slate posts.
         </div>
       ) : (
-        <>
-          <Helmet>
-            <title>NFL Player vs Defense (DvP) Matchups | Betrilo</title>
-            <meta name="description" content="NFL player matchup data with defense-vs-position rankings and historical performance. Model in private validation, not published picks." />
-            <meta name="robots" content="noindex, nofollow" />
-          </Helmet>
-          <NflValidationBanner />
+        <NflPageWrapper>
           {/* Header */}
           <div style={{ marginBottom: '15px' }}>
             <h1 style={{ margin: '0 0 4px 0', fontSize: '30px', fontWeight: 800 }}>
               Player vs. Defense (DvP){meta.week ? ` — Week ${meta.week}` : ''}
             </h1>
             {meta.week && (
-              <div style={{ color: '#666', fontSize: '14px' }}>
+              <div style={{ color: dark.textSecondary, fontSize: '14px' }}>
                 {meta.season} Season — Week {meta.week}
-                {prettyDate && <span style={{ color: '#999', marginLeft: '8px' }}>(data updated {prettyDate})</span>}
+                {prettyDate && <span style={{ color: dark.textMuted, marginLeft: '8px' }}>(data updated {prettyDate})</span>}
               </div>
             )}
-            <div style={{ color: '#999', fontSize: '12px', marginTop: '4px' }}>
+            <div style={{ color: dark.textMuted, fontSize: '12px', marginTop: '4px' }}>
               DvP rankings: recency-weighted ({meta.dvpMethod?.weights || 'current + prior season'}).
               {' '}Player stats: {statSeasons.length === 1 ? `${statSeasons[0]} season` : `${statSeasons.join(' & ')} seasons (per-player)`}.
             </div>
           </div>
 
           {/* Game Selector */}
-          <div style={{ marginBottom: '20px', background: 'white', padding: '15px', borderRadius: '8px' }}>
-            <label style={{ fontWeight: 'bold', marginRight: '10px' }}>Game:</label>
+          <div style={{ marginBottom: '20px', background: dark.surfaceBg, padding: '15px', borderRadius: '8px' }}>
+            <label style={{ fontWeight: 'bold', marginRight: '10px', color: dark.textPrimary }}>Game:</label>
             <select
               value={selectedGame}
               onChange={e => setSelectedGame(e.target.value)}
-              style={{ padding: '8px', fontSize: '16px', borderRadius: '4px', border: '1px solid #ddd', minWidth: '320px' }}
+              style={{ padding: '8px', fontSize: '16px', borderRadius: '4px', border: `1px solid ${dark.inputBorder}`, minWidth: '320px', background: dark.inputBg, color: dark.inputText }}
             >
               <option value="all">All Games</option>
               {games.map((game, idx) => (
@@ -292,9 +291,10 @@ export default function NflMatchupsPage() {
                 onClick={() => setSelectedPosition(pos)}
                 style={{
                   padding: '8px 16px',
-                  background: selectedPosition === pos ? colors.green : '#f0f0f0',
-                  color: selectedPosition === pos ? colors.navy : 'black',
-                  border: 'none', borderRadius: '4px', cursor: 'pointer',
+                  background: selectedPosition === pos ? dark.accentBg : dark.inactiveBg,
+                  color: selectedPosition === pos ? dark.accentText : dark.inactiveText,
+                  border: selectedPosition === pos ? 'none' : `1px solid ${dark.inactiveBorder}`,
+                  borderRadius: '4px', cursor: 'pointer',
                   fontWeight: selectedPosition === pos ? 'bold' : 'normal',
                 }}
               >
@@ -310,14 +310,14 @@ export default function NflMatchupsPage() {
               placeholder="Search player or team..."
               value={searchText}
               onChange={e => setSearchText(e.target.value)}
-              style={{ width: '100%', maxWidth: '400px', padding: '10px', fontSize: '16px', borderRadius: '4px', border: '1px solid #ddd' }}
+              style={{ width: '100%', maxWidth: '400px', padding: '10px', fontSize: '16px', borderRadius: '4px', border: `1px solid ${dark.inputBorder}`, background: dark.inputBg, color: dark.inputText }}
             />
           </div>
 
           {/* Table */}
-          <div style={{ background: 'white', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
-            <div style={{ padding: '15px', borderBottom: '2px solid #ddd' }}>
-              <p style={{ margin: 0, color: '#666', fontSize: '14px' }}>
+          <div style={{ background: dark.surfaceBg, borderRadius: '8px', overflow: 'hidden', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
+            <div style={{ padding: '15px', borderBottom: `2px solid ${dark.borderAccent}` }}>
+              <p style={{ margin: 0, color: dark.textSecondary, fontSize: '14px' }}>
                 {filteredRows.length} players{isAllGames ? ` across ${games.length} games` : ''}
               </p>
             </div>
@@ -325,7 +325,7 @@ export default function NflMatchupsPage() {
             <div style={{ overflowX: 'auto' }}>
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px', minWidth: '1100px' }}>
                 <thead>
-                  <tr style={{ background: '#f5f5f5', borderBottom: '2px solid #ddd' }}>
+                  <tr style={{ background: dark.surfaceBg, borderBottom: `2px solid ${dark.borderAccent}` }}>
                     {[
                       { key: 'player_name', label: 'Player', type: 'text', align: 'left', sticky: true },
                       ...(isAllGames ? [{ key: 'matchup', label: 'Matchup', type: 'text', align: 'left' }] : []),
@@ -346,10 +346,13 @@ export default function NflMatchupsPage() {
                           cursor: 'pointer',
                           userSelect: 'none',
                           whiteSpace: 'nowrap',
-                          background: sortBy === col.key ? '#e6e6e6' : '#f5f5f5',
+                          background: dark.surfaceBg,
+                          color: sortBy === col.key ? dark.borderAccent : dark.textPrimary,
                           fontWeight: 'bold',
                           fontSize: '12px',
-                          ...(col.sticky ? { ...stickyStyle, background: sortBy === col.key ? '#e6e6e6' : '#f5f5f5' } : {}),
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.5px',
+                          ...(col.sticky ? { ...stickyStyle, background: dark.surfaceBg } : {}),
                         }}
                       >
                         {col.label}
@@ -360,31 +363,32 @@ export default function NflMatchupsPage() {
                 </thead>
                 <tbody>
                   {filteredRows.map((r, idx) => {
-                    const dvpColor = r.dvp ? (DVP_COLORS[r.dvp.label] || '#aaa') : '#ddd';
+                    const dvpColor = r.dvp ? (DVP_COLORS[r.dvp.label] || dark.dvpNeutral) : dark.border;
+                    const rowBg = idx % 2 === 0 ? dark.surfaceBgAlt : dark.surfaceBg;
                     const vsYpg = getVsYpg(r);
                     const isSmall = r.vs_opponent?.small_sample;
 
                     return (
-                      <tr key={idx} style={{ borderBottom: '1px solid #eee' }}>
-                        <td style={{ padding: '10px 8px', textAlign: 'left', fontWeight: 'bold', ...stickyStyle }}>
+                      <tr key={idx} style={{ background: rowBg, borderBottom: `1px solid ${dark.border}`, color: dark.textPrimary }}>
+                        <td style={{ padding: '10px 8px', textAlign: 'left', fontWeight: 'bold', ...stickyStyle, background: rowBg }}>
                           {r.player_name}
-                          <span style={{ marginLeft: '6px', color: '#888', fontSize: '11px', fontWeight: 'normal' }}>
+                          <span style={{ marginLeft: '6px', color: dark.textSecondary, fontSize: '11px', fontWeight: 'normal' }}>
                             {r.team}
                           </span>
                           {r.injury?.injury_status && (
-                            <span style={{ marginLeft: '6px', color: '#e05555', fontSize: '11px', fontWeight: 'normal' }}>
+                            <span style={{ marginLeft: '6px', color: dark.statusRed, fontSize: '11px', fontWeight: 'normal' }}>
                               {r.injury.injury_status}
                             </span>
                           )}
                         </td>
                         {isAllGames && (
-                          <td style={{ padding: '10px 8px', textAlign: 'left', color: '#555', fontSize: '12px' }}>{r.matchup}</td>
+                          <td style={{ padding: '10px 8px', textAlign: 'left', color: dark.textSecondary, fontSize: '12px' }}>{r.matchup}</td>
                         )}
                         <td style={{ padding: '10px 8px', textAlign: 'center', fontWeight: 600, fontSize: '12px' }}>{r.position}</td>
                         <td style={{ padding: '10px 8px', textAlign: 'center' }}>
                           {r.season_stats?.games || '—'}
                           {r.season_stats?.stat_season && r.season_stats.stat_season !== meta.season && (
-                            <span style={{ color: '#bbb', fontSize: '10px', marginLeft: '2px' }}>
+                            <span style={{ color: dark.textMuted, fontSize: '10px', marginLeft: '2px' }}>
                               '{String(r.season_stats.stat_season).slice(2)}
                             </span>
                           )}
@@ -396,7 +400,7 @@ export default function NflMatchupsPage() {
                           {r.dvp ? (
                             <span style={{
                               display: 'inline-block', padding: '2px 8px', borderRadius: '4px',
-                              background: dvpColor, color: ['Smash', 'Avoid'].includes(r.dvp.label) ? '#fff' : '#222',
+                              background: dvpColor, color: dark.pageBg,
                               fontWeight: 700, fontSize: '12px', minWidth: '70px',
                             }}>
                               #{r.dvp.rank} {r.dvp.label}
@@ -405,7 +409,7 @@ export default function NflMatchupsPage() {
                         </td>
                         <td style={{ padding: '10px 8px', textAlign: 'center', color: isSmall ? '#bbb' : '#333' }}>
                           {r.vs_opponent ? r.vs_opponent.games : '—'}
-                          {isSmall && <span style={{ color: '#e8a838', marginLeft: '2px' }} title="Small sample (<3 games)">*</span>}
+                          {isSmall && <span style={{ color: dark.statusAmber, marginLeft: '2px' }} title="Small sample (<3 games)">*</span>}
                         </td>
                         <td style={{ padding: '10px 8px', textAlign: 'center', color: isSmall ? '#bbb' : '#333' }}>
                           {vsYpg > 0 ? vsYpg.toFixed(1) : '—'}
@@ -416,12 +420,12 @@ export default function NflMatchupsPage() {
                 </tbody>
               </table>
               {filteredRows.length === 0 && (
-                <div style={{ padding: '20px', textAlign: 'center', color: '#666' }}>
+                <div style={{ padding: '20px', textAlign: 'center', color: dark.textSecondary }}>
                   No matchups found.
                 </div>
               )}
-              <div style={{ marginTop: '12px', padding: '12px 14px', background: '#f4f7f9', borderRadius: '8px', fontSize: '12px', color: '#5a6b76', lineHeight: 1.6 }}>
-                <strong style={{ color: colors.navy }}>Key:</strong>{' '}
+              <div style={{ marginTop: '12px', padding: '12px 14px', background: dark.surfaceBg, borderRadius: '8px', fontSize: '12px', color: dark.textSecondary, lineHeight: 1.6 }}>
+                <strong style={{ color: dark.textPrimary }}>Key:</strong>{' '}
                 <strong>DvP</strong> = Defense vs Position ranking (1 = most yards allowed to this position = easiest matchup).{' '}
                 <strong>GP</strong> games played.{' '}
                 <strong>Yds/G</strong> primary yards per game (pass for QB, rush for RB, receiving for WR/TE).{' '}
@@ -431,8 +435,8 @@ export default function NflMatchupsPage() {
               </div>
             </div>
           </div>
-        </>
+        </NflPageWrapper>
       )}
-    </div>
+    </>
   );
 }
