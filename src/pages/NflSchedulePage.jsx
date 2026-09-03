@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { colors } from '../theme';
+import { dark } from '../theme';
 import NflPageWrapper from '../components/NflPageWrapper';
 
 const STATUS_COLORS = {
-  Out: '#e05555', Doubtful: '#e05555', Questionable: '#e8a838',
-  IR: '#e05555', PUP: '#e05555', Sus: '#e05555',
+  Out: dark.injOut, Doubtful: dark.injOut, Questionable: dark.injQuestionable,
+  IR: dark.injIR, PUP: dark.injPUP, Suspended: dark.injSuspended,
+  'Did Not Report': dark.injIR, Unknown: dark.injUnknown,
 };
 
 export default function NflSchedulePage() {
@@ -35,40 +36,40 @@ export default function NflSchedulePage() {
       </Helmet>
 
       <NflPageWrapper generatedAt={data?.generated_at} freshLabel={`Week ${data?.week || ''}`} maxWidth="1100px">
-      <h1 style={{ color: colors.navy, fontSize: '30px', fontWeight: 800, marginBottom: '4px' }}>
+      <h1 style={{ color: dark.pageBg, fontSize: '30px', fontWeight: 800, marginBottom: '4px' }}>
         NFL Week {data?.week} Schedule
       </h1>
-      <p style={{ color: colors.subtitleOnWhite, fontSize: '13px', marginBottom: '20px' }}>
+      <p style={{ color: dark.textSecondary, fontSize: '13px', marginBottom: '20px' }}>
         {data?.season} Season
         {data?.generated_at && ` | Updated ${new Date(data.generated_at).toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}`}
         {byeTeams.length > 0 && ` | Bye: ${byeTeams.join(', ')}`}
       </p>
 
       {games.length === 0 ? (
-        <div style={{ textAlign: 'center', padding: '40px', color: colors.subtitleOnWhite }}>
+        <div style={{ textAlign: 'center', padding: '40px', color: dark.textSecondary }}>
           No games scheduled for this week.
         </div>
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
           {games.map(game => (
             <div key={game.game_id} style={{
-              background: colors.navyLight, borderRadius: '10px',
-              border: `1px solid ${colors.navy}`, overflow: 'hidden',
+              background: dark.pageBgLight, borderRadius: '10px',
+              border: `1px solid ${dark.pageBg}`, overflow: 'hidden',
             }}>
               {/* Game header */}
               <div style={{
                 display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-                padding: '14px 20px', borderBottom: `2px solid ${colors.green}`,
+                padding: '14px 20px', borderBottom: `2px solid ${dark.borderAccent}`,
               }}>
                 <div style={{ display: 'flex', gap: '12px', alignItems: 'baseline' }}>
-                  <span style={{ color: colors.text, fontSize: '18px', fontWeight: 700 }}>
+                  <span style={{ color: dark.textPrimary, fontSize: '18px', fontWeight: 700 }}>
                     {game.away_team} @ {game.home_team}
                   </span>
-                  <span style={{ color: colors.textMuted, fontSize: '13px' }}>
+                  <span style={{ color: dark.textPrimaryMuted, fontSize: '13px' }}>
                     {game.gameday} {game.gametime}
                   </span>
                 </div>
-                <div style={{ display: 'flex', gap: '16px', fontSize: '13px', color: colors.textMuted }}>
+                <div style={{ display: 'flex', gap: '16px', fontSize: '13px', color: dark.textPrimaryMuted }}>
                   {game.spread_line != null && <span>Spread: {game.spread_line > 0 ? '+' : ''}{game.spread_line}</span>}
                   {game.total_line != null && <span>O/U: {game.total_line}</span>}
                   {game.roof && <span>{game.roof}</span>}
@@ -83,21 +84,21 @@ export default function NflSchedulePage() {
                 ].map((side, idx) => (
                   <div key={idx} style={{
                     padding: '12px 16px',
-                    borderLeft: idx === 1 ? `1px solid ${colors.navy}` : 'none',
+                    borderLeft: idx === 1 ? `1px solid ${dark.pageBg}` : 'none',
                   }}>
-                    <div style={{ color: colors.green, fontWeight: 700, fontSize: '13px', marginBottom: '8px' }}>
+                    <div style={{ color: dark.borderAccent, fontWeight: 700, fontSize: '13px', marginBottom: '8px' }}>
                       {side.label} {idx === 1 ? '(Home)' : '(Away)'}
                     </div>
 
                     {/* Snap leaders */}
                     {side.leaders && side.leaders.length > 0 && (
                       <div style={{ marginBottom: '8px' }}>
-                        <div style={{ color: colors.textMuted, fontSize: '11px', textTransform: 'uppercase', marginBottom: '4px' }}>Snap Leaders</div>
+                        <div style={{ color: dark.textPrimaryMuted, fontSize: '11px', textTransform: 'uppercase', marginBottom: '4px' }}>Snap Leaders</div>
                         {side.leaders.slice(0, 6).map((p, i) => (
-                          <div key={i} style={{ color: colors.text, fontSize: '12px', padding: '2px 0' }}>
-                            <span style={{ color: colors.textMuted, width: '28px', display: 'inline-block' }}>{p.position}</span>
+                          <div key={i} style={{ color: dark.textPrimary, fontSize: '12px', padding: '2px 0' }}>
+                            <span style={{ color: dark.textPrimaryMuted, width: '28px', display: 'inline-block' }}>{p.position}</span>
                             {p.player}
-                            <span style={{ color: colors.textMuted, marginLeft: '6px' }}>{Math.round(p.snap_pct * 100)}%</span>
+                            <span style={{ color: dark.textPrimaryMuted, marginLeft: '6px' }}>{Math.round(p.snap_pct * 100)}%</span>
                           </div>
                         ))}
                       </div>
@@ -105,19 +106,19 @@ export default function NflSchedulePage() {
 
                     {/* Injuries */}
                     <div>
-                      <div style={{ color: colors.textMuted, fontSize: '11px', textTransform: 'uppercase', marginBottom: '4px' }}>Injuries</div>
+                      <div style={{ color: dark.textPrimaryMuted, fontSize: '11px', textTransform: 'uppercase', marginBottom: '4px' }}>Injuries</div>
                       {side.injuries && side.injuries.length > 0 ? (
                         side.injuries.map((inj, i) => (
                           <div key={i} style={{ fontSize: '12px', padding: '2px 0' }}>
-                            <span style={{ color: STATUS_COLORS[inj.status] || colors.textMuted, fontWeight: 600 }}>
+                            <span style={{ color: STATUS_COLORS[inj.status] || dark.textPrimaryMuted, fontWeight: 600 }}>
                               {inj.status}
                             </span>
-                            <span style={{ color: colors.text, marginLeft: '6px' }}>{inj.player}</span>
-                            {inj.body_part && <span style={{ color: colors.textMuted, marginLeft: '4px' }}>({inj.body_part})</span>}
+                            <span style={{ color: dark.textPrimary, marginLeft: '6px' }}>{inj.player}</span>
+                            {inj.body_part && <span style={{ color: dark.textPrimaryMuted, marginLeft: '4px' }}>({inj.body_part})</span>}
                           </div>
                         ))
                       ) : (
-                        <div style={{ fontSize: '12px', color: colors.textMuted, fontStyle: 'italic' }}>
+                        <div style={{ fontSize: '12px', color: dark.textPrimaryMuted, fontStyle: 'italic' }}>
                           No injuries reported
                         </div>
                       )}
