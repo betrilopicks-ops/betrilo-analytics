@@ -21,8 +21,8 @@ export default function NflSchedulePage() {
       .catch(() => { setError(true); setLoading(false); });
   }, []);
 
-  if (loading) return <div style={{ textAlign: 'center', padding: '60px', color: '#666' }}>Loading...</div>;
-  if (error) return <div style={{ textAlign: 'center', padding: '60px', color: '#666' }}>Schedule data is unavailable right now.</div>;
+  if (loading) return <div style={{ textAlign: 'center', padding: '60px', color: dark.textSecondary, background: dark.pageBg, minHeight: '100vh' }}>Loading...</div>;
+  if (error) return <div style={{ textAlign: 'center', padding: '60px', color: dark.textSecondary, background: dark.pageBg, minHeight: '100vh' }}>Schedule data is unavailable right now.</div>;
 
   const games = data?.games || [];
   const byeTeams = data?.bye_teams || [];
@@ -36,7 +36,7 @@ export default function NflSchedulePage() {
       </Helmet>
 
       <NflPageWrapper generatedAt={data?.generated_at} freshLabel={`Week ${data?.week || ''}`} maxWidth="1100px">
-      <h1 style={{ color: dark.pageBg, fontSize: '30px', fontWeight: 800, marginBottom: '4px' }}>
+      <h1 style={{ color: dark.textPrimary, fontSize: '30px', fontWeight: 800, marginBottom: '4px' }}>
         NFL Week {data?.week} Schedule
       </h1>
       <p style={{ color: dark.textSecondary, fontSize: '13px', marginBottom: '20px' }}>
@@ -65,11 +65,11 @@ export default function NflSchedulePage() {
                   <span style={{ color: dark.textPrimary, fontSize: '18px', fontWeight: 700 }}>
                     {game.away_team} @ {game.home_team}
                   </span>
-                  <span style={{ color: dark.textPrimaryMuted, fontSize: '13px' }}>
+                  <span style={{ color: dark.textSecondary, fontSize: '13px' }}>
                     {game.gameday} {game.gametime}
                   </span>
                 </div>
-                <div style={{ display: 'flex', gap: '16px', fontSize: '13px', color: dark.textPrimaryMuted }}>
+                <div style={{ display: 'flex', gap: '16px', fontSize: '13px', color: dark.textSecondary }}>
                   {game.spread_line != null && <span>Spread: {game.spread_line > 0 ? '+' : ''}{game.spread_line}</span>}
                   {game.total_line != null && <span>O/U: {game.total_line}</span>}
                   {game.roof && <span>{game.roof}</span>}
@@ -93,12 +93,12 @@ export default function NflSchedulePage() {
                     {/* Snap leaders */}
                     {side.leaders && side.leaders.length > 0 && (
                       <div style={{ marginBottom: '8px' }}>
-                        <div style={{ color: dark.textPrimaryMuted, fontSize: '11px', textTransform: 'uppercase', marginBottom: '4px' }}>Snap Leaders</div>
+                        <div style={{ color: dark.textSecondary, fontSize: '11px', textTransform: 'uppercase', marginBottom: '4px' }}>Snap Leaders</div>
                         {side.leaders.slice(0, 6).map((p, i) => (
                           <div key={i} style={{ color: dark.textPrimary, fontSize: '12px', padding: '2px 0' }}>
-                            <span style={{ color: dark.textPrimaryMuted, width: '28px', display: 'inline-block' }}>{p.position}</span>
+                            <span style={{ color: dark.textSecondary, width: '28px', display: 'inline-block' }}>{p.position}</span>
                             {p.player}
-                            <span style={{ color: dark.textPrimaryMuted, marginLeft: '6px' }}>{Math.round(p.snap_pct * 100)}%</span>
+                            <span style={{ color: dark.textSecondary, marginLeft: '6px' }}>{Math.round(p.snap_pct * 100)}%</span>
                           </div>
                         ))}
                       </div>
@@ -106,19 +106,19 @@ export default function NflSchedulePage() {
 
                     {/* Injuries */}
                     <div>
-                      <div style={{ color: dark.textPrimaryMuted, fontSize: '11px', textTransform: 'uppercase', marginBottom: '4px' }}>Injuries</div>
+                      <div style={{ color: dark.textSecondary, fontSize: '11px', textTransform: 'uppercase', marginBottom: '4px' }}>Injuries</div>
                       {side.injuries && side.injuries.length > 0 ? (
                         side.injuries.map((inj, i) => (
                           <div key={i} style={{ fontSize: '12px', padding: '2px 0' }}>
-                            <span style={{ color: STATUS_COLORS[inj.status] || dark.textPrimaryMuted, fontWeight: 600 }}>
+                            <span style={{ color: STATUS_COLORS[inj.status] || dark.textSecondary, fontWeight: 600 }}>
                               {inj.status}
                             </span>
                             <span style={{ color: dark.textPrimary, marginLeft: '6px' }}>{inj.player}</span>
-                            {inj.body_part && <span style={{ color: dark.textPrimaryMuted, marginLeft: '4px' }}>({inj.body_part})</span>}
+                            {inj.body_part && <span style={{ color: dark.textSecondary, marginLeft: '4px' }}>({inj.body_part})</span>}
                           </div>
                         ))
                       ) : (
-                        <div style={{ fontSize: '12px', color: dark.textPrimaryMuted, fontStyle: 'italic' }}>
+                        <div style={{ fontSize: '12px', color: dark.textSecondary, fontStyle: 'italic' }}>
                           No injuries reported
                         </div>
                       )}
