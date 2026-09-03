@@ -53,7 +53,7 @@ export default function NflSchedulePage() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
           {games.map(game => (
             <div key={game.game_id} style={{
-              background: dark.pageBgLight, borderRadius: '10px',
+              background: dark.surfaceBg, borderRadius: '10px',
               border: `1px solid ${dark.pageBg}`, overflow: 'hidden',
             }}>
               {/* Game header */}

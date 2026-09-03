@@ -407,11 +407,11 @@ export default function NflMatchupsPage() {
                             </span>
                           ) : '—'}
                         </td>
-                        <td style={{ padding: '10px 8px', textAlign: 'center', color: isSmall ? '#bbb' : '#333' }}>
+                        <td style={{ padding: '10px 8px', textAlign: 'center', color: isSmall ? dark.textMuted : dark.textPrimary }}>
                           {r.vs_opponent ? r.vs_opponent.games : '—'}
                           {isSmall && <span style={{ color: dark.statusAmber, marginLeft: '2px' }} title="Small sample (<3 games)">*</span>}
                         </td>
-                        <td style={{ padding: '10px 8px', textAlign: 'center', color: isSmall ? '#bbb' : '#333' }}>
+                        <td style={{ padding: '10px 8px', textAlign: 'center', color: isSmall ? dark.textMuted : dark.textPrimary }}>
                           {vsYpg > 0 ? vsYpg.toFixed(1) : '—'}
                         </td>
                       </tr>
