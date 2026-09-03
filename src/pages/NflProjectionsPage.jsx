@@ -1,18 +1,8 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { colors } from '../theme';
+import { dark } from '../theme';
 import SortableTable from '../components/SortableTable';
 import NflPageWrapper from '../components/NflPageWrapper';
-
-const DVP_COLORS = {
-  Smash: '#19C93E', Favorable: '#7dd87d', Neutral: '#aaa',
-  Tough: '#e8a838', Avoid: '#e05555',
-};
-
-const STATUS_COLORS = {
-  Questionable: '#e8a838', IR: '#e05555', PUP: '#e05555',
-  Suspended: '#e05555', 'Did Not Report': '#e05555', Unknown: '#888',
-};
 
 const POS_TABS = ['All', 'QB', 'RB', 'WR', 'TE'];
 
@@ -52,17 +42,20 @@ export default function NflProjectionsPage() {
       completions: p.projections?.completions,
       target_share: p.usage?.target_share,
     }));
-    if (activePos !== 'All') {
-      rows = rows.filter(r => r.position === activePos);
-    }
+    if (activePos !== 'All') rows = rows.filter(r => r.position === activePos);
     return rows;
   }, [data, activePos]);
 
-  if (error) return <div style={{ textAlign: 'center', padding: '60px', color: '#666' }}>Projections data is unavailable right now.</div>;
+  if (error) return <div style={{ textAlign: 'center', padding: '60px', color: dark.textSecondary, background: dark.pageBg, minHeight: '100vh' }}>Projections data is unavailable right now.</div>;
 
-  const injuryFormat = (v) => {
+  const dvpFormat = (v) => {
+    const c = { Smash: dark.dvpSmash, Favorable: dark.dvpFavorable, Neutral: dark.dvpNeutral, Tough: dark.dvpTough, Avoid: dark.dvpAvoid };
+    return <span style={{ color: c[v] || dark.textMuted, fontWeight: 600 }}>{v || '—'}</span>;
+  };
+  const injFormat = (v) => {
     if (!v) return null;
-    return <span style={{ color: STATUS_COLORS[v] || '#888', fontWeight: 600, fontSize: '11px' }}>{v}</span>;
+    const c = { Questionable: dark.injQuestionable, IR: dark.injIR, PUP: dark.injPUP, Suspended: dark.injSuspended, 'Did Not Report': dark.injIR, Unknown: dark.injUnknown };
+    return <span style={{ color: c[v] || dark.textMuted, fontWeight: 600, fontSize: '11px' }}>{v}</span>;
   };
 
   const baseColumns = [
@@ -70,10 +63,8 @@ export default function NflProjectionsPage() {
     { key: 'team', label: 'Team', sortable: true, width: '45px' },
     { key: 'position', label: 'Pos', sortable: true, align: 'center', width: '35px' },
     { key: 'opponent', label: 'Opp', sortable: true, width: '45px' },
-    { key: 'dvp_label', label: 'DvP', sortable: true, format: (v) => (
-      <span style={{ color: DVP_COLORS[v] || '#aaa', fontWeight: 600 }}>{v || '—'}</span>
-    )},
-    { key: 'injury_status', label: 'Inj', sortable: true, align: 'center', format: injuryFormat },
+    { key: 'dvp_label', label: 'DvP', sortable: true, format: dvpFormat },
+    { key: 'injury_status', label: 'Inj', sortable: true, align: 'center', format: injFormat },
   ];
 
   let statColumns = [];
@@ -125,60 +116,44 @@ export default function NflProjectionsPage() {
       </Helmet>
 
       <NflPageWrapper generatedAt={data?.generated_at} freshLabel={data?.week1_mode ? 'Prior-season projections' : `Week ${data?.week || ''}`}>
-        <h1 style={{ color: colors.navy, fontSize: '30px', fontWeight: 800, marginBottom: '4px' }}>
+        <h1 style={{ color: dark.textPrimary, fontSize: '30px', fontWeight: 800, marginBottom: '4px' }}>
           NFL Player Projections
         </h1>
-        <p style={{ color: colors.subtitleOnWhite, fontSize: '13px', marginBottom: '16px' }}>
+        <p style={{ color: dark.textSecondary, fontSize: '13px', marginBottom: '16px' }}>
           {data?.week ? `Week ${data.week} ${data.season}` : ''}
           {data?.week1_mode && ' — Prior-season projections (no 2026 game data yet)'}
         </p>
 
-        {/* Position tabs */}
         <div style={{ display: 'flex', gap: '6px', marginBottom: '12px', flexWrap: 'wrap' }}>
           {POS_TABS.map(pos => (
-            <button
-              key={pos}
-              onClick={() => setActivePos(pos)}
-              style={{
-                background: activePos === pos ? colors.green : '#f0f0f0',
-                color: activePos === pos ? colors.navy : colors.navy,
-                border: activePos === pos ? 'none' : '1px solid #ccc',
-                padding: '7px 16px', borderRadius: '6px', fontSize: '13px',
-                fontWeight: 700, cursor: 'pointer',
-              }}
-            >
-              {pos}
-            </button>
+            <button key={pos} onClick={() => setActivePos(pos)} style={{
+              background: activePos === pos ? dark.accentBg : dark.inactiveBg,
+              color: activePos === pos ? dark.accentText : dark.inactiveText,
+              border: activePos === pos ? 'none' : `1px solid ${dark.inactiveBorder}`,
+              padding: '7px 16px', borderRadius: '6px', fontSize: '13px', fontWeight: 700, cursor: 'pointer',
+            }}>{pos}</button>
           ))}
         </div>
 
         <SortableTable
-          columns={columns}
-          data={players}
+          columns={columns} data={players}
           defaultSort={{ key: defaultSortKey, order: 'desc' }}
-          filters={[{
-            key: 'team', label: 'Team',
-            options: teams.map(t => ({ value: t, label: t })),
-          }]}
-          searchKey="player_name"
-          searchPlaceholder="Search players..."
+          filters={[{ key: 'team', label: 'Team', options: teams.map(t => ({ value: t, label: t })) }]}
+          searchKey="player_name" searchPlaceholder="Search players..."
           loading={loading}
           lastRefreshed={data?.generated_at ? new Date(data.generated_at).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' }) : null}
           emptyMessage="No players match your filters"
         />
 
-        {/* Legend */}
-        <div style={{ marginTop: '16px', padding: '12px 16px', background: '#f0f4f7', borderRadius: '8px', fontSize: '12px', color: colors.subtitleOnWhite, lineHeight: 1.6 }}>
-          <strong style={{ color: colors.navy }}>Key:</strong>{' '}
+        <div style={{ marginTop: '16px', padding: '12px 16px', background: dark.surfaceBg, borderRadius: '8px', fontSize: '12px', color: dark.textSecondary, lineHeight: 1.6 }}>
+          <strong style={{ color: dark.textPrimary }}>Key:</strong>{' '}
           DvP = Defense vs Position (Rank 1 = easiest matchup) |{' '}
-          DC = Depth Chart rank (1 = starter) |{' '}
-          Inj = Injury status |{' '}
-          Tgt% = Target share (% of team targets) |{' '}
-          <span style={{ color: '#0d8a2a', fontWeight: 700 }}>Smash</span>{' / '}
-          <span style={{ color: '#3d8a3d', fontWeight: 700 }}>Favorable</span>{' / '}
-          <span style={{ color: '#666', fontWeight: 700 }}>Neutral</span>{' / '}
-          <span style={{ color: '#b8860b', fontWeight: 700 }}>Tough</span>{' / '}
-          <span style={{ color: '#c03030', fontWeight: 700 }}>Avoid</span>
+          DC = Depth Chart rank (1 = starter) | Inj = Injury status | Tgt% = Target share |{' '}
+          <span style={{ color: dark.dvpSmash }}>Smash</span>{' / '}
+          <span style={{ color: dark.dvpFavorable }}>Favorable</span>{' / '}
+          <span style={{ color: dark.dvpNeutral }}>Neutral</span>{' / '}
+          <span style={{ color: dark.dvpTough }}>Tough</span>{' / '}
+          <span style={{ color: dark.dvpAvoid }}>Avoid</span>
         </div>
       </NflPageWrapper>
     </>

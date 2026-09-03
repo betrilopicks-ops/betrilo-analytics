@@ -1,16 +1,17 @@
 import React from 'react';
+import { dark } from '../theme';
 
 /**
  * Persistent validation disclosure for all NFL pages.
- * Shows at the top of every NFL route until shadow validation gate is met.
- *
- * One component, one treatment — used identically on all NFL pages.
+ * Visually distinct from the navy page background — slightly lighter
+ * surface with amber accent border, not blending into the page.
  */
 export default function NflValidationBanner() {
   return (
     <div style={{
-      background: '#1a2d3d',
-      border: '1px solid #e8a838',
+      background: dark.bannerBg,
+      border: `1px solid ${dark.bannerBorder}`,
+      borderLeft: `4px solid ${dark.bannerBorder}`,
       borderRadius: '8px',
       padding: '12px 18px',
       marginBottom: '20px',
@@ -19,8 +20,8 @@ export default function NflValidationBanner() {
       gap: '10px',
     }}>
       <span style={{
-        background: '#e8a838',
-        color: '#1a2d3d',
+        background: dark.bannerBadgeBg,
+        color: dark.bannerBadgeText,
         fontSize: '10px',
         fontWeight: 800,
         padding: '3px 8px',
@@ -33,7 +34,7 @@ export default function NflValidationBanner() {
         No Track Record
       </span>
       <span style={{
-        color: '#e8eef2',
+        color: dark.bannerText,
         fontSize: '13px',
         lineHeight: 1.45,
       }}>
