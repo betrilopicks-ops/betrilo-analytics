@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generated_at": "2026-09-03T06:56:27.393959-04:00",
+  "generated_at": "2026-09-04T17:00:09.520162-04:00",
   "dvp_method": "Based on 2025 (0.6x), 2024 (0.3x)",
   "games_note": "Games column shows total games across all weighted seasons (e.g., 34 = 17 per season x 2 seasons)",
   "rank_note": "Rank 1 = most yards/stats allowed to this position = easiest matchup for offense",
@@ -851,24 +851,24 @@
         "receiving_tds_per_game": 0.9
       },
       {
-        "team": "GB",
-        "rank": 21,
-        "label": "Tough",
-        "games": 34,
-        "receiving_yards_per_game": 135.2,
-        "receptions_per_game": 11.2,
-        "targets_per_game": 17.0,
-        "receiving_tds_per_game": 1.0
-      },
-      {
         "team": "HOU",
-        "rank": 22,
+        "rank": 21,
         "label": "Tough",
         "games": 34,
         "receiving_yards_per_game": 135.2,
         "receptions_per_game": 9.9,
         "targets_per_game": 17.9,
         "receiving_tds_per_game": 0.8
+      },
+      {
+        "team": "GB",
+        "rank": 22,
+        "label": "Tough",
+        "games": 34,
+        "receiving_yards_per_game": 135.2,
+        "receptions_per_game": 11.2,
+        "targets_per_game": 17.0,
+        "receiving_tds_per_game": 1.0
       },
       {
         "team": "PHI",
@@ -1173,23 +1173,23 @@
         "receiving_tds_per_game": 0.3
       },
       {
-        "team": "TEN",
-        "rank": 21,
-        "label": "Tough",
-        "games": 34,
-        "receiving_yards_per_game": 49.6,
-        "receptions_per_game": 5.0,
-        "targets_per_game": 6.6,
-        "receiving_tds_per_game": 0.4
-      },
-      {
         "team": "DET",
-        "rank": 22,
+        "rank": 21,
         "label": "Tough",
         "games": 34,
         "receiving_yards_per_game": 49.6,
         "receptions_per_game": 4.8,
         "targets_per_game": 7.2,
+        "receiving_tds_per_game": 0.4
+      },
+      {
+        "team": "TEN",
+        "rank": 22,
+        "label": "Tough",
+        "games": 34,
+        "receiving_yards_per_game": 49.6,
+        "receptions_per_game": 5.0,
+        "targets_per_game": 6.6,
         "receiving_tds_per_game": 0.4
       },
       {
