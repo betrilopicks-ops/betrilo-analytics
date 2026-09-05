@@ -1,818 +1,18 @@
 {
-  "slate_date": "2026-09-04",
-  "last_refreshed": "2026-09-04T18:32:13-04:00",
-  "games": 16,
-  "pitchers": 32,
+  "slate_date": "2026-09-05",
+  "last_refreshed": "2026-09-05T06:09:01-04:00",
+  "games": 15,
+  "pitchers": 30,
   "coverage": {
-    "full_2026": 30,
+    "full_2026": 29,
     "fallback_2025": 0,
-    "thin_no_data": 2
+    "thin_no_data": 1
   },
   "hot_cold_rule": "hot = L5 K% >= 3pts above season AND L5 xwOBA <= season; cold = L5 K% >= 3pts below season OR L5 xwOBA >= 3pts above season; else steady",
   "matchups": [
     {
-      "game_pk": 824424,
-      "start_time": "2026-09-04T18:10:00Z",
-      "home_team": "CLE",
-      "away_team": "DET",
-      "pitchers": [
-        {
-          "side": "home",
-          "team": "CLE",
-          "opponent": "DET",
-          "pitcher_name": "Logan Allen",
-          "pitcher_id": 671106,
-          "hand": "L",
-          "season": {
-            "w": 0,
-            "l": 0,
-            "era": "5.94",
-            "whip": "1.74"
-          },
-          "stuff": {
-            "k_rate": 0.248,
-            "whiff_rate": 0.227,
-            "bb_rate": 0.018,
-            "xwoba_against": 0.274,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "Cutter",
-              "usage_pct": 31.4,
-              "velo": 85.0
-            },
-            {
-              "pitch": "Sweeper",
-              "usage_pct": 23.8,
-              "velo": 78.0
-            },
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 22.2,
-              "velo": 91.2
-            }
-          ],
-          "splits": {},
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.248,
-              "whiff_rate": 0.227,
-              "xwoba": 0.274,
-              "starts": 3
-            },
-            "season_avg": {
-              "k_rate": 0.248,
-              "whiff_rate": 0.227,
-              "xwoba": 0.274
-            },
-            "trend": "steady",
-            "note": "K% steady over L3"
-          },
-          "sample_flag": null,
-          "scratched": false
-        },
-        {
-          "side": "away",
-          "team": "DET",
-          "opponent": "CLE",
-          "pitcher_name": "Keider Montero",
-          "pitcher_id": 672456,
-          "hand": "R",
-          "season": {
-            "w": 9,
-            "l": 8,
-            "era": "3.52",
-            "whip": "1.03"
-          },
-          "stuff": {
-            "k_rate": 0.167,
-            "whiff_rate": 0.155,
-            "bb_rate": 0.057,
-            "xwoba_against": 0.276,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 32.7,
-              "velo": 94.3
-            },
-            {
-              "pitch": "Sinker",
-              "usage_pct": 20.0,
-              "velo": 94.5
-            },
-            {
-              "pitch": "Slider",
-              "usage_pct": 19.0,
-              "velo": 85.7
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.142,
-              "ops_against": 0.537
-            },
-            "vs_rhb": {
-              "k_rate": 0.184,
-              "ops_against": 0.556
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.164,
-              "whiff_rate": 0.185,
-              "xwoba": 0.26,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.167,
-              "whiff_rate": 0.155,
-              "xwoba": 0.276
-            },
-            "trend": "steady",
-            "note": "K% steady over L5"
-          },
-          "sample_flag": null,
-          "scratched": false
-        }
-      ]
-    },
-    {
-      "game_pk": 824387,
-      "start_time": "2026-09-04T23:15:00Z",
-      "home_team": "CLE",
-      "away_team": "DET",
-      "pitchers": [
-        {
-          "side": "home",
-          "team": "CLE",
-          "opponent": "DET",
-          "pitcher_name": "Foster Griffin",
-          "pitcher_id": 656492,
-          "hand": "L",
-          "season": {
-            "w": 15,
-            "l": 4,
-            "era": "3.21",
-            "whip": "1.12"
-          },
-          "stuff": {
-            "k_rate": 0.226,
-            "whiff_rate": 0.196,
-            "bb_rate": 0.07,
-            "xwoba_against": 0.325,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "Cutter",
-              "usage_pct": 31.4,
-              "velo": 88.2
-            },
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 18.1,
-              "velo": 91.4
-            },
-            {
-              "pitch": "Sweeper",
-              "usage_pct": 13.7,
-              "velo": 80.1
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.264,
-              "ops_against": 0.638
-            },
-            "vs_rhb": {
-              "k_rate": 0.211,
-              "ops_against": 0.734
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.174,
-              "whiff_rate": 0.127,
-              "xwoba": 0.344,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.226,
-              "whiff_rate": 0.196,
-              "xwoba": 0.325
-            },
-            "trend": "cold",
-            "note": "K% down 5.2pts over L5"
-          },
-          "sample_flag": null,
-          "scratched": false
-        },
-        {
-          "side": "away",
-          "team": "DET",
-          "opponent": "CLE",
-          "pitcher_name": "Andrew Sears",
-          "pitcher_id": 808825,
-          "hand": "L",
-          "season": {
-            "w": 0,
-            "l": 1,
-            "era": "6.75",
-            "whip": "1.35"
-          },
-          "stuff": {},
-          "arsenal": [
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 42.6,
-              "velo": 93.8
-            },
-            {
-              "pitch": "Slider",
-              "usage_pct": 34.2,
-              "velo": 81.9
-            },
-            {
-              "pitch": "Changeup",
-              "usage_pct": 12.9,
-              "velo": 86.4
-            }
-          ],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "thin_2026",
-          "scratched": false
-        }
-      ]
-    },
-    {
-      "game_pk": 824471,
-      "start_time": "2026-09-04T22:10:00Z",
-      "home_team": "CIN",
-      "away_team": "MIL",
-      "pitchers": [
-        {
-          "side": "home",
-          "team": "CIN",
-          "opponent": "MIL",
-          "pitcher_name": "Rhett Lowder",
-          "pitcher_id": 695076,
-          "hand": "R",
-          "season": {
-            "w": 6,
-            "l": 8,
-            "era": "5.14",
-            "whip": "1.46"
-          },
-          "stuff": {
-            "k_rate": 0.169,
-            "whiff_rate": 0.161,
-            "bb_rate": 0.113,
-            "xwoba_against": 0.357,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "Sinker",
-              "usage_pct": 29.1,
-              "velo": 92.9
-            },
-            {
-              "pitch": "Slider",
-              "usage_pct": 26.6,
-              "velo": 85.0
-            },
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 21.6,
-              "velo": 93.5
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.182,
-              "ops_against": 0.772
-            },
-            "vs_rhb": {
-              "k_rate": 0.166,
-              "ops_against": 0.747
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.115,
-              "whiff_rate": 0.117,
-              "xwoba": 0.332,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.169,
-              "whiff_rate": 0.161,
-              "xwoba": 0.357
-            },
-            "trend": "cold",
-            "note": "K% down 5.4pts over L5"
-          },
-          "sample_flag": null,
-          "scratched": false
-        },
-        {
-          "side": "away",
-          "team": "MIL",
-          "opponent": "CIN",
-          "pitcher_name": "Shane Drohan",
-          "pitcher_id": 675660,
-          "hand": "L",
-          "season": {
-            "w": 7,
-            "l": 5,
-            "era": "3.75",
-            "whip": "1.30"
-          },
-          "stuff": {
-            "k_rate": 0.243,
-            "whiff_rate": 0.246,
-            "bb_rate": 0.092,
-            "xwoba_against": 0.296,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 29.0,
-              "velo": 94.9
-            },
-            {
-              "pitch": "Slider",
-              "usage_pct": 21.0,
-              "velo": 86.2
-            },
-            {
-              "pitch": "Sinker",
-              "usage_pct": 19.0,
-              "velo": 94.7
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.213,
-              "ops_against": 0.672
-            },
-            "vs_rhb": {
-              "k_rate": 0.257,
-              "ops_against": 0.758
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.238,
-              "whiff_rate": 0.237,
-              "xwoba": 0.318,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.243,
-              "whiff_rate": 0.246,
-              "xwoba": 0.296
-            },
-            "trend": "steady",
-            "note": "K% steady over L5"
-          },
-          "sample_flag": null,
-          "scratched": false
-        }
-      ]
-    },
-    {
-      "game_pk": 823418,
-      "start_time": "2026-09-04T22:40:00Z",
-      "home_team": "PHI",
-      "away_team": "ATL",
-      "pitchers": [
-        {
-          "side": "home",
-          "team": "PHI",
-          "opponent": "ATL",
-          "pitcher_name": "Cristopher Sánchez",
-          "pitcher_id": 650911,
-          "hand": "L",
-          "season": {
-            "w": 16,
-            "l": 4,
-            "era": "2.52",
-            "whip": "1.19"
-          },
-          "stuff": {
-            "k_rate": 0.29,
-            "whiff_rate": 0.301,
-            "bb_rate": 0.057,
-            "xwoba_against": 0.264,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "Sinker",
-              "usage_pct": 43.9,
-              "velo": 95.0
-            },
-            {
-              "pitch": "Changeup",
-              "usage_pct": 37.7,
-              "velo": 86.9
-            },
-            {
-              "pitch": "Slider",
-              "usage_pct": 18.4,
-              "velo": 86.2
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.374,
-              "ops_against": 0.38
-            },
-            "vs_rhb": {
-              "k_rate": 0.265,
-              "ops_against": 0.666
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.281,
-              "whiff_rate": 0.303,
-              "xwoba": 0.261,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.29,
-              "whiff_rate": 0.301,
-              "xwoba": 0.264
-            },
-            "trend": "steady",
-            "note": "K% steady over L5"
-          },
-          "sample_flag": null,
-          "scratched": false
-        },
-        {
-          "side": "away",
-          "team": "ATL",
-          "opponent": "PHI",
-          "pitcher_name": "Chris Sale",
-          "pitcher_id": 519242,
-          "hand": "L",
-          "season": {
-            "w": 13,
-            "l": 9,
-            "era": "2.06",
-            "whip": "1.00"
-          },
-          "stuff": {
-            "k_rate": 0.292,
-            "whiff_rate": 0.258,
-            "bb_rate": 0.056,
-            "xwoba_against": 0.283,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 40.0,
-              "velo": 96.1
-            },
-            {
-              "pitch": "Slider",
-              "usage_pct": 39.3,
-              "velo": 79.6
-            },
-            {
-              "pitch": "Changeup",
-              "usage_pct": 11.2,
-              "velo": 88.5
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.325,
-              "ops_against": 0.633
-            },
-            "vs_rhb": {
-              "k_rate": 0.28,
-              "ops_against": 0.616
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.286,
-              "whiff_rate": 0.235,
-              "xwoba": 0.291,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.292,
-              "whiff_rate": 0.258,
-              "xwoba": 0.283
-            },
-            "trend": "steady",
-            "note": "K% steady over L5"
-          },
-          "sample_flag": null,
-          "scratched": false
-        }
-      ]
-    },
-    {
-      "game_pk": 823338,
-      "start_time": "2026-09-04T22:45:00Z",
-      "home_team": "PIT",
-      "away_team": "LAA",
-      "pitchers": [
-        {
-          "side": "home",
-          "team": "PIT",
-          "opponent": "LAA",
-          "pitcher_name": "Jared Jones",
-          "pitcher_id": 683003,
-          "hand": "R",
-          "season": {
-            "w": 2,
-            "l": 6,
-            "era": "4.83",
-            "whip": "1.28"
-          },
-          "stuff": {
-            "k_rate": 0.238,
-            "whiff_rate": 0.282,
-            "bb_rate": 0.106,
-            "xwoba_against": 0.349,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 43.3,
-              "velo": 98.3
-            },
-            {
-              "pitch": "Slider",
-              "usage_pct": 33.9,
-              "velo": 89.7
-            },
-            {
-              "pitch": "Changeup",
-              "usage_pct": 15.2,
-              "velo": 92.8
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.248,
-              "ops_against": 0.951
-            },
-            "vs_rhb": {
-              "k_rate": 0.221,
-              "ops_against": 0.843
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.24,
-              "whiff_rate": 0.277,
-              "xwoba": 0.364,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.238,
-              "whiff_rate": 0.282,
-              "xwoba": 0.349
-            },
-            "trend": "steady",
-            "note": "K% steady over L5"
-          },
-          "sample_flag": null,
-          "scratched": false
-        },
-        {
-          "side": "away",
-          "team": "LAA",
-          "opponent": "PIT",
-          "pitcher_name": "Ryan Johnson",
-          "pitcher_id": 696270,
-          "hand": "R",
-          "season": {
-            "w": 3,
-            "l": 7,
-            "era": "5.47",
-            "whip": "1.42"
-          },
-          "stuff": {
-            "k_rate": 0.154,
-            "whiff_rate": 0.218,
-            "bb_rate": 0.144,
-            "xwoba_against": 0.352,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "Cutter",
-              "usage_pct": 38.3,
-              "velo": 89.4
-            },
-            {
-              "pitch": "Sweeper",
-              "usage_pct": 21.2,
-              "velo": 80.7
-            },
-            {
-              "pitch": "Sinker",
-              "usage_pct": 17.2,
-              "velo": 92.4
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.146,
-              "ops_against": 0.731
-            },
-            "vs_rhb": {
-              "k_rate": 0.141,
-              "ops_against": 0.796
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.146,
-              "whiff_rate": 0.166,
-              "xwoba": 0.368,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.154,
-              "whiff_rate": 0.218,
-              "xwoba": 0.352
-            },
-            "trend": "steady",
-            "note": "K% steady over L5"
-          },
-          "sample_flag": null,
-          "scratched": false
-        }
-      ]
-    },
-    {
-      "game_pk": 824797,
-      "start_time": "2026-09-04T23:05:00Z",
-      "home_team": "BAL",
-      "away_team": "BOS",
-      "pitchers": [
-        {
-          "side": "home",
-          "team": "BAL",
-          "opponent": "BOS",
-          "pitcher_name": "Shane Baz",
-          "pitcher_id": 669358,
-          "hand": "R",
-          "season": {
-            "w": 5,
-            "l": 14,
-            "era": "4.01",
-            "whip": "1.35"
-          },
-          "stuff": {
-            "k_rate": 0.19,
-            "whiff_rate": 0.201,
-            "bb_rate": 0.087,
-            "xwoba_against": 0.328,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 33.2,
-              "velo": 96.0
-            },
-            {
-              "pitch": "Cutter",
-              "usage_pct": 16.7,
-              "velo": 89.7
-            },
-            {
-              "pitch": "Sinker",
-              "usage_pct": 9.1,
-              "velo": 95.3
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.182,
-              "ops_against": 0.778
-            },
-            "vs_rhb": {
-              "k_rate": 0.205,
-              "ops_against": 0.603
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.221,
-              "whiff_rate": 0.221,
-              "xwoba": 0.278,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.19,
-              "whiff_rate": 0.201,
-              "xwoba": 0.328
-            },
-            "trend": "hot",
-            "note": "K% up 3.1pts over L5"
-          },
-          "sample_flag": null,
-          "scratched": false
-        },
-        {
-          "side": "away",
-          "team": "BOS",
-          "opponent": "BAL",
-          "pitcher_name": "Ranger Suarez",
-          "pitcher_id": 624133,
-          "hand": "L",
-          "season": {
-            "w": 5,
-            "l": 4,
-            "era": "3.64",
-            "whip": "1.24"
-          },
-          "stuff": {
-            "k_rate": 0.229,
-            "whiff_rate": 0.209,
-            "bb_rate": 0.08,
-            "xwoba_against": 0.304,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "Sinker",
-              "usage_pct": 24.1,
-              "velo": 90.3
-            },
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 21.2,
-              "velo": 91.6
-            },
-            {
-              "pitch": "Cutter",
-              "usage_pct": 19.8,
-              "velo": 88.0
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.278,
-              "ops_against": 0.678
-            },
-            "vs_rhb": {
-              "k_rate": 0.217,
-              "ops_against": 0.599
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.178,
-              "whiff_rate": 0.159,
-              "xwoba": 0.351,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.229,
-              "whiff_rate": 0.209,
-              "xwoba": 0.304
-            },
-            "trend": "cold",
-            "note": "K% down 5.1pts over L5"
-          },
-          "sample_flag": null,
-          "scratched": false
-        }
-      ]
-    },
-    {
-      "game_pk": 823579,
-      "start_time": "2026-09-04T23:10:00Z",
+      "game_pk": 823577,
+      "start_time": "2026-09-05T20:10:00Z",
       "home_team": "NYM",
       "away_team": "SF",
       "pitchers": [
@@ -820,64 +20,64 @@
           "side": "home",
           "team": "NYM",
           "opponent": "SF",
-          "pitcher_name": "Nolan McLean",
-          "pitcher_id": 690997,
-          "hand": "R",
+          "pitcher_name": "Zac Thornton",
+          "pitcher_id": 804267,
+          "hand": "?",
           "season": {
-            "w": 10,
-            "l": 8,
-            "era": "3.06",
-            "whip": "1.12"
+            "w": 3,
+            "l": 4,
+            "era": "2.93",
+            "whip": "1.16"
           },
           "stuff": {
-            "k_rate": 0.275,
-            "whiff_rate": 0.223,
-            "bb_rate": 0.108,
-            "xwoba_against": 0.285,
+            "k_rate": 0.189,
+            "whiff_rate": 0.174,
+            "bb_rate": 0.055,
+            "xwoba_against": 0.307,
             "vintage": "2026"
           },
           "arsenal": [
             {
-              "pitch": "Sinker",
-              "usage_pct": 35.0,
-              "velo": 95.0
+              "pitch": "Cutter",
+              "usage_pct": 34.2,
+              "velo": 88.3
             },
             {
               "pitch": "4-Seam",
-              "usage_pct": 19.4,
-              "velo": 96.1
+              "usage_pct": 20.4,
+              "velo": 92.4
             },
             {
               "pitch": "Sweeper",
-              "usage_pct": 14.2,
-              "velo": 84.9
+              "usage_pct": 17.4,
+              "velo": 80.0
             }
           ],
           "splits": {
             "vs_lhb": {
-              "k_rate": 0.278,
-              "ops_against": 0.644
+              "k_rate": 0.152,
+              "ops_against": 0.536
             },
             "vs_rhb": {
-              "k_rate": 0.265,
-              "ops_against": 0.507
+              "k_rate": 0.205,
+              "ops_against": 0.764
             },
             "vintage": "2026"
           },
           "recent_form": {
             "last5": {
-              "k_rate": 0.195,
-              "whiff_rate": 0.188,
-              "xwoba": 0.287,
+              "k_rate": 0.189,
+              "whiff_rate": 0.174,
+              "xwoba": 0.307,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.275,
-              "whiff_rate": 0.223,
-              "xwoba": 0.285
+              "k_rate": 0.189,
+              "whiff_rate": 0.174,
+              "xwoba": 0.307
             },
-            "trend": "cold",
-            "note": "K% down 8.0pts over L5"
+            "trend": "steady",
+            "note": "K% steady over L5"
           },
           "sample_flag": null,
           "scratched": false
@@ -886,54 +86,54 @@
           "side": "away",
           "team": "SF",
           "opponent": "NYM",
-          "pitcher_name": "Matt Wilkinson",
-          "pitcher_id": 683363,
-          "hand": "L",
+          "pitcher_name": "Anthony Molina",
+          "pitcher_id": 683627,
+          "hand": "R",
           "season": {
-            "w": 0,
-            "l": 2,
-            "era": "4.63",
-            "whip": "1.11"
+            "w": 2,
+            "l": 0,
+            "era": "3.77",
+            "whip": "1.05"
           },
           "stuff": {
-            "k_rate": 0.098,
-            "whiff_rate": 0.103,
-            "bb_rate": 0.03,
-            "xwoba_against": 0.286,
+            "k_rate": 0.173,
+            "whiff_rate": 0.236,
+            "bb_rate": 0.059,
+            "xwoba_against": 0.318,
             "vintage": "2026"
           },
           "arsenal": [
             {
               "pitch": "4-Seam",
-              "usage_pct": 59.3,
-              "velo": 90.3
+              "usage_pct": 47.0,
+              "velo": 96.1
             },
             {
               "pitch": "Changeup",
-              "usage_pct": 21.5,
-              "velo": 83.6
+              "usage_pct": 25.6,
+              "velo": 86.9
             },
             {
-              "pitch": "Slider",
-              "usage_pct": 14.3,
-              "velo": 79.0
+              "pitch": "Curve",
+              "usage_pct": 18.7,
+              "velo": 84.7
             }
           ],
           "splits": {},
           "recent_form": {
             "last5": {
-              "k_rate": 0.098,
-              "whiff_rate": 0.103,
-              "xwoba": 0.286,
-              "starts": 3
+              "k_rate": 0.173,
+              "whiff_rate": 0.236,
+              "xwoba": 0.318,
+              "starts": 4
             },
             "season_avg": {
-              "k_rate": 0.098,
-              "whiff_rate": 0.103,
-              "xwoba": 0.286
+              "k_rate": 0.173,
+              "whiff_rate": 0.236,
+              "xwoba": 0.318
             },
             "trend": "steady",
-            "note": "K% steady over L3"
+            "note": "K% steady over L4"
           },
           "sample_flag": null,
           "scratched": false
@@ -941,8 +141,8 @@
       ]
     },
     {
-      "game_pk": 823824,
-      "start_time": "2026-09-04T23:10:00Z",
+      "game_pk": 823823,
+      "start_time": "2026-09-05T20:10:00Z",
       "home_team": "MIA",
       "away_team": "CHC",
       "pitchers": [
@@ -950,64 +150,64 @@
           "side": "home",
           "team": "MIA",
           "opponent": "CHC",
-          "pitcher_name": "Janson Junk",
-          "pitcher_id": 676083,
+          "pitcher_name": "Ryan Gusto",
+          "pitcher_id": 687473,
           "hand": "R",
           "season": {
-            "w": 6,
-            "l": 8,
-            "era": "4.11",
-            "whip": "1.30"
+            "w": 1,
+            "l": 3,
+            "era": "3.86",
+            "whip": "1.33"
           },
           "stuff": {
-            "k_rate": 0.155,
-            "whiff_rate": 0.136,
-            "bb_rate": 0.061,
-            "xwoba_against": 0.325,
+            "k_rate": 0.194,
+            "whiff_rate": 0.189,
+            "bb_rate": 0.067,
+            "xwoba_against": 0.328,
             "vintage": "2026"
           },
           "arsenal": [
             {
               "pitch": "4-Seam",
-              "usage_pct": 35.2,
-              "velo": 94.0
+              "usage_pct": 30.0,
+              "velo": 94.8
             },
             {
-              "pitch": "Slider",
-              "usage_pct": 22.8,
-              "velo": 86.3
+              "pitch": "Sinker",
+              "usage_pct": 13.2,
+              "velo": 93.2
             },
             {
               "pitch": "Changeup",
-              "usage_pct": 17.3,
-              "velo": 87.2
+              "usage_pct": 13.0,
+              "velo": 87.3
             }
           ],
           "splits": {
             "vs_lhb": {
-              "k_rate": 0.169,
-              "ops_against": 0.849
+              "k_rate": 0.168,
+              "ops_against": 0.643
             },
             "vs_rhb": {
-              "k_rate": 0.132,
-              "ops_against": 0.497
+              "k_rate": 0.216,
+              "ops_against": 0.829
             },
             "vintage": "2026"
           },
           "recent_form": {
             "last5": {
-              "k_rate": 0.115,
-              "whiff_rate": 0.107,
-              "xwoba": 0.358,
+              "k_rate": 0.184,
+              "whiff_rate": 0.198,
+              "xwoba": 0.322,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.155,
-              "whiff_rate": 0.136,
-              "xwoba": 0.325
+              "k_rate": 0.194,
+              "whiff_rate": 0.189,
+              "xwoba": 0.328
             },
-            "trend": "cold",
-            "note": "K% down 4.0pts over L5"
+            "trend": "steady",
+            "note": "K% down 1.0pts over L5"
           },
           "sample_flag": null,
           "scratched": false
@@ -1016,64 +216,64 @@
           "side": "away",
           "team": "CHC",
           "opponent": "MIA",
-          "pitcher_name": "Shota Imanaga",
-          "pitcher_id": 684007,
-          "hand": "L",
+          "pitcher_name": "Javier Assad",
+          "pitcher_id": 665871,
+          "hand": "R",
           "season": {
-            "w": 8,
-            "l": 10,
-            "era": "4.01",
-            "whip": "1.14"
+            "w": 6,
+            "l": 1,
+            "era": "3.46",
+            "whip": "1.10"
           },
           "stuff": {
-            "k_rate": 0.263,
-            "whiff_rate": 0.28,
-            "bb_rate": 0.064,
-            "xwoba_against": 0.306,
+            "k_rate": 0.144,
+            "whiff_rate": 0.128,
+            "bb_rate": 0.068,
+            "xwoba_against": 0.346,
             "vintage": "2026"
           },
           "arsenal": [
             {
-              "pitch": "4-Seam",
-              "usage_pct": 41.7,
-              "velo": 91.6
-            },
-            {
-              "pitch": "Sweeper",
-              "usage_pct": 15.2,
-              "velo": 80.9
-            },
-            {
               "pitch": "Sinker",
-              "usage_pct": 6.1,
-              "velo": 90.2
+              "usage_pct": 47.6,
+              "velo": 93.1
+            },
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 15.8,
+              "velo": 93.3
+            },
+            {
+              "pitch": "Cutter",
+              "usage_pct": 14.7,
+              "velo": 88.2
             }
           ],
           "splits": {
             "vs_lhb": {
-              "k_rate": 0.282,
-              "ops_against": 0.802
+              "k_rate": 0.165,
+              "ops_against": 0.867
             },
             "vs_rhb": {
-              "k_rate": 0.25,
-              "ops_against": 0.753
+              "k_rate": 0.127,
+              "ops_against": 0.52
             },
             "vintage": "2026"
           },
           "recent_form": {
             "last5": {
-              "k_rate": 0.274,
-              "whiff_rate": 0.28,
-              "xwoba": 0.317,
+              "k_rate": 0.147,
+              "whiff_rate": 0.123,
+              "xwoba": 0.348,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.263,
-              "whiff_rate": 0.28,
-              "xwoba": 0.306
+              "k_rate": 0.144,
+              "whiff_rate": 0.128,
+              "xwoba": 0.346
             },
             "trend": "steady",
-            "note": "K% up 1.1pts over L5"
+            "note": "K% steady over L5"
           },
           "sample_flag": null,
           "scratched": false
@@ -1081,265 +281,135 @@
       ]
     },
     {
-      "game_pk": 824554,
-      "start_time": "2026-09-04T23:40:00Z",
-      "home_team": "CWS",
-      "away_team": "MIN",
+      "game_pk": 823419,
+      "start_time": "2026-09-05T22:05:00Z",
+      "home_team": "PHI",
+      "away_team": "ATL",
       "pitchers": [
         {
           "side": "home",
-          "team": "CWS",
-          "opponent": "MIN",
-          "pitcher_name": "Erick Fedde",
-          "pitcher_id": 607200,
+          "team": "PHI",
+          "opponent": "ATL",
+          "pitcher_name": "Zack Wheeler",
+          "pitcher_id": 554430,
           "hand": "R",
           "season": {
-            "w": 7,
-            "l": 8,
-            "era": "4.16",
-            "whip": "1.37"
+            "w": 11,
+            "l": 5,
+            "era": "3.31",
+            "whip": "1.09"
           },
           "stuff": {
-            "k_rate": 0.155,
-            "whiff_rate": 0.164,
-            "bb_rate": 0.092,
-            "xwoba_against": 0.339,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "Sweeper",
-              "usage_pct": 37.8,
-              "velo": 82.0
-            },
-            {
-              "pitch": "Sinker",
-              "usage_pct": 28.5,
-              "velo": 93.8
-            },
-            {
-              "pitch": "Cutter",
-              "usage_pct": 17.9,
-              "velo": 90.8
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.152,
-              "ops_against": 0.706
-            },
-            "vs_rhb": {
-              "k_rate": 0.157,
-              "ops_against": 0.839
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.158,
-              "whiff_rate": 0.153,
-              "xwoba": 0.363,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.155,
-              "whiff_rate": 0.164,
-              "xwoba": 0.339
-            },
-            "trend": "steady",
-            "note": "K% steady over L5"
-          },
-          "sample_flag": null,
-          "scratched": false
-        },
-        {
-          "side": "away",
-          "team": "MIN",
-          "opponent": "CWS",
-          "pitcher_name": "Zebby Matthews",
-          "pitcher_id": 805673,
-          "hand": "R",
-          "season": {
-            "w": 9,
-            "l": 8,
-            "era": "4.58",
-            "whip": "1.26"
-          },
-          "stuff": {
-            "k_rate": 0.221,
-            "whiff_rate": 0.209,
-            "bb_rate": 0.082,
-            "xwoba_against": 0.331,
+            "k_rate": 0.269,
+            "whiff_rate": 0.255,
+            "bb_rate": 0.089,
+            "xwoba_against": 0.287,
             "vintage": "2026"
           },
           "arsenal": [
             {
               "pitch": "4-Seam",
-              "usage_pct": 37.2,
-              "velo": 95.2
+              "usage_pct": 36.1,
+              "velo": 95.3
             },
             {
-              "pitch": "Slider",
-              "usage_pct": 21.5,
-              "velo": 87.2
+              "pitch": "Sinker",
+              "usage_pct": 16.5,
+              "velo": 94.8
             },
             {
-              "pitch": "Changeup",
-              "usage_pct": 13.5,
-              "velo": 86.6
+              "pitch": "Sweeper",
+              "usage_pct": 14.3,
+              "velo": 81.5
             }
           ],
           "splits": {
             "vs_lhb": {
-              "k_rate": 0.212,
-              "ops_against": 0.829
+              "k_rate": 0.262,
+              "ops_against": 0.756
             },
             "vs_rhb": {
-              "k_rate": 0.22,
-              "ops_against": 0.734
+              "k_rate": 0.279,
+              "ops_against": 0.53
             },
             "vintage": "2026"
           },
           "recent_form": {
             "last5": {
               "k_rate": 0.246,
-              "whiff_rate": 0.22,
-              "xwoba": 0.33,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.221,
-              "whiff_rate": 0.209,
-              "xwoba": 0.331
-            },
-            "trend": "steady",
-            "note": "K% up 2.5pts over L5"
-          },
-          "sample_flag": null,
-          "scratched": false
-        }
-      ]
-    },
-    {
-      "game_pk": 822852,
-      "start_time": "2026-09-05T00:05:00Z",
-      "home_team": "TEX",
-      "away_team": "TB",
-      "pitchers": [
-        {
-          "side": "home",
-          "team": "TEX",
-          "opponent": "TB",
-          "pitcher_name": "Trevor Williams",
-          "pitcher_id": 592866,
-          "hand": "R",
-          "season": {
-            "w": 0,
-            "l": 0,
-            "era": "3.93",
-            "whip": "1.42"
-          },
-          "stuff": {
-            "k_rate": 0.269,
-            "whiff_rate": 0.206,
-            "bb_rate": 0.085,
-            "xwoba_against": 0.333,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 37.3,
-              "velo": 90.0
-            },
-            {
-              "pitch": "Sweeper",
-              "usage_pct": 24.3,
-              "velo": 78.2
-            },
-            {
-              "pitch": "Sinker",
-              "usage_pct": 20.3,
-              "velo": 88.6
-            }
-          ],
-          "splits": {},
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.269,
-              "whiff_rate": 0.206,
-              "xwoba": 0.333,
+              "whiff_rate": 0.289,
+              "xwoba": 0.315,
               "starts": 5
             },
             "season_avg": {
               "k_rate": 0.269,
-              "whiff_rate": 0.206,
-              "xwoba": 0.333
+              "whiff_rate": 0.255,
+              "xwoba": 0.287
             },
             "trend": "steady",
-            "note": "K% steady over L5"
+            "note": "K% down 2.3pts over L5"
           },
           "sample_flag": null,
           "scratched": false
         },
         {
           "side": "away",
-          "team": "TB",
-          "opponent": "TEX",
-          "pitcher_name": "Nick Martinez",
-          "pitcher_id": 607259,
-          "hand": "R",
+          "team": "ATL",
+          "opponent": "PHI",
+          "pitcher_name": "Martín Pérez",
+          "pitcher_id": 527048,
+          "hand": "L",
           "season": {
-            "w": 13,
-            "l": 4,
-            "era": "2.99",
-            "whip": "1.10"
+            "w": 8,
+            "l": 8,
+            "era": "3.05",
+            "whip": "1.21"
           },
           "stuff": {
-            "k_rate": 0.153,
-            "whiff_rate": 0.158,
-            "bb_rate": 0.034,
+            "k_rate": 0.175,
+            "whiff_rate": 0.203,
+            "bb_rate": 0.108,
             "xwoba_against": 0.323,
             "vintage": "2026"
           },
           "arsenal": [
             {
               "pitch": "Sinker",
-              "usage_pct": 30.6,
-              "velo": 92.5
+              "usage_pct": 34.5,
+              "velo": 89.3
             },
             {
               "pitch": "Changeup",
-              "usage_pct": 27.7,
-              "velo": 78.3
+              "usage_pct": 32.4,
+              "velo": 81.8
             },
             {
               "pitch": "Cutter",
-              "usage_pct": 20.3,
-              "velo": 89.3
+              "usage_pct": 22.3,
+              "velo": 85.1
             }
           ],
           "splits": {
             "vs_lhb": {
-              "k_rate": 0.148,
-              "ops_against": 0.669
+              "k_rate": 0.207,
+              "ops_against": 0.658
             },
             "vs_rhb": {
-              "k_rate": 0.155,
-              "ops_against": 0.691
+              "k_rate": 0.16,
+              "ops_against": 0.599
             },
             "vintage": "2026"
           },
           "recent_form": {
             "last5": {
-              "k_rate": 0.158,
-              "whiff_rate": 0.13,
-              "xwoba": 0.299,
+              "k_rate": 0.178,
+              "whiff_rate": 0.205,
+              "xwoba": 0.316,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.153,
-              "whiff_rate": 0.158,
+              "k_rate": 0.175,
+              "whiff_rate": 0.203,
               "xwoba": 0.323
             },
             "trend": "steady",
@@ -1351,139 +421,139 @@
       ]
     },
     {
-      "game_pk": 824146,
-      "start_time": "2026-09-05T00:10:00Z",
-      "home_team": "HOU",
-      "away_team": "AZ",
+      "game_pk": 824389,
+      "start_time": "2026-09-05T22:10:00Z",
+      "home_team": "CLE",
+      "away_team": "DET",
       "pitchers": [
         {
           "side": "home",
-          "team": "HOU",
-          "opponent": "AZ",
-          "pitcher_name": "Cristian Javier",
-          "pitcher_id": 664299,
-          "hand": "R",
+          "team": "CLE",
+          "opponent": "DET",
+          "pitcher_name": "Parker Messick",
+          "pitcher_id": 800048,
+          "hand": "L",
           "season": {
-            "w": 1,
-            "l": 5,
-            "era": "6.45",
-            "whip": "1.63"
+            "w": 11,
+            "l": 8,
+            "era": "2.46",
+            "whip": "1.02"
           },
           "stuff": {
-            "k_rate": 0.231,
-            "whiff_rate": 0.251,
-            "bb_rate": 0.077,
-            "xwoba_against": 0.353,
+            "k_rate": 0.262,
+            "whiff_rate": 0.235,
+            "bb_rate": 0.072,
+            "xwoba_against": 0.267,
             "vintage": "2026"
           },
           "arsenal": [
             {
               "pitch": "4-Seam",
-              "usage_pct": 50.9,
-              "velo": 93.2
-            },
-            {
-              "pitch": "Sweeper",
-              "usage_pct": 27.5,
-              "velo": 81.1
+              "usage_pct": 38.9,
+              "velo": 94.2
             },
             {
               "pitch": "Changeup",
-              "usage_pct": 13.6,
-              "velo": 85.6
+              "usage_pct": 23.6,
+              "velo": 85.8
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 15.6,
+              "velo": 92.7
             }
           ],
           "splits": {
             "vs_lhb": {
-              "k_rate": 0.154,
-              "ops_against": 0.816
+              "k_rate": 0.257,
+              "ops_against": 0.686
             },
             "vs_rhb": {
-              "k_rate": 0.198,
-              "ops_against": 0.98
+              "k_rate": 0.265,
+              "ops_against": 0.569
             },
             "vintage": "2026"
           },
           "recent_form": {
             "last5": {
-              "k_rate": 0.264,
-              "whiff_rate": 0.262,
-              "xwoba": 0.327,
+              "k_rate": 0.269,
+              "whiff_rate": 0.241,
+              "xwoba": 0.233,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.231,
-              "whiff_rate": 0.251,
-              "xwoba": 0.353
+              "k_rate": 0.262,
+              "whiff_rate": 0.235,
+              "xwoba": 0.267
             },
-            "trend": "hot",
-            "note": "K% up 3.3pts over L5"
+            "trend": "steady",
+            "note": "K% steady over L5"
           },
           "sample_flag": null,
           "scratched": false
         },
         {
           "side": "away",
-          "team": "AZ",
-          "opponent": "HOU",
-          "pitcher_name": "Merrill Kelly",
-          "pitcher_id": 518876,
-          "hand": "R",
+          "team": "DET",
+          "opponent": "CLE",
+          "pitcher_name": "Framber Valdez",
+          "pitcher_id": 664285,
+          "hand": "?",
           "season": {
-            "w": 9,
-            "l": 12,
-            "era": "5.08",
-            "whip": "1.48"
+            "w": 8,
+            "l": 10,
+            "era": "4.36",
+            "whip": "1.40"
           },
           "stuff": {
-            "k_rate": 0.149,
-            "whiff_rate": 0.202,
-            "bb_rate": 0.113,
-            "xwoba_against": 0.371,
+            "k_rate": 0.183,
+            "whiff_rate": 0.178,
+            "bb_rate": 0.086,
+            "xwoba_against": 0.336,
             "vintage": "2026"
           },
           "arsenal": [
             {
+              "pitch": "Sinker",
+              "usage_pct": 44.9,
+              "velo": 93.9
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 28.5,
+              "velo": 78.4
+            },
+            {
               "pitch": "Changeup",
-              "usage_pct": 27.0,
-              "velo": 88.5
-            },
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 26.4,
-              "velo": 92.0
-            },
-            {
-              "pitch": "Cutter",
-              "usage_pct": 14.1,
-              "velo": 91.2
+              "usage_pct": 19.2,
+              "velo": 89.1
             }
           ],
           "splits": {
             "vs_lhb": {
-              "k_rate": 0.119,
-              "ops_against": 0.871
+              "k_rate": 0.283,
+              "ops_against": 0.675
             },
             "vs_rhb": {
-              "k_rate": 0.199,
-              "ops_against": 0.6
+              "k_rate": 0.146,
+              "ops_against": 0.706
             },
             "vintage": "2026"
           },
           "recent_form": {
             "last5": {
-              "k_rate": 0.195,
-              "whiff_rate": 0.231,
-              "xwoba": 0.317,
+              "k_rate": 0.158,
+              "whiff_rate": 0.146,
+              "xwoba": 0.345,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.149,
-              "whiff_rate": 0.202,
-              "xwoba": 0.371
+              "k_rate": 0.183,
+              "whiff_rate": 0.178,
+              "xwoba": 0.336
             },
-            "trend": "hot",
-            "note": "K% up 4.6pts over L5"
+            "trend": "steady",
+            "note": "K% down 2.5pts over L5"
           },
           "sample_flag": null,
           "scratched": false
@@ -1491,8 +561,568 @@
       ]
     },
     {
-      "game_pk": 824067,
-      "start_time": "2026-09-05T00:10:00Z",
+      "game_pk": 823335,
+      "start_time": "2026-09-05T22:40:00Z",
+      "home_team": "PIT",
+      "away_team": "LAA",
+      "pitchers": [
+        {
+          "side": "home",
+          "team": "PIT",
+          "opponent": "LAA",
+          "pitcher_name": "Braxton Ashcraft",
+          "pitcher_id": 677952,
+          "hand": "R",
+          "season": {
+            "w": 14,
+            "l": 5,
+            "era": "3.59",
+            "whip": "1.08"
+          },
+          "stuff": {
+            "k_rate": 0.272,
+            "whiff_rate": 0.243,
+            "bb_rate": 0.056,
+            "xwoba_against": 0.27,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 30.4,
+              "velo": 97.2
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 26.1,
+              "velo": 85.0
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 21.7,
+              "velo": 92.0
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.295,
+              "ops_against": 0.652
+            },
+            "vs_rhb": {
+              "k_rate": 0.24,
+              "ops_against": 0.568
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.22,
+              "whiff_rate": 0.202,
+              "xwoba": 0.275,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.272,
+              "whiff_rate": 0.243,
+              "xwoba": 0.27
+            },
+            "trend": "cold",
+            "note": "K% down 5.2pts over L5"
+          },
+          "sample_flag": null,
+          "scratched": false
+        },
+        {
+          "side": "away",
+          "team": "LAA",
+          "opponent": "PIT",
+          "pitcher_name": "Yusei Kikuchi",
+          "pitcher_id": 579328,
+          "hand": "L",
+          "season": {
+            "w": 0,
+            "l": 5,
+            "era": "5.65",
+            "whip": "1.49"
+          },
+          "stuff": {
+            "k_rate": 0.216,
+            "whiff_rate": 0.197,
+            "bb_rate": 0.087,
+            "xwoba_against": 0.349,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 37.1,
+              "velo": 95.5
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 20.3,
+              "velo": 86.3
+            },
+            {
+              "pitch": "Cutter",
+              "usage_pct": 13.1,
+              "velo": 90.3
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.25,
+              "ops_against": 0.796
+            },
+            "vs_rhb": {
+              "k_rate": 0.215,
+              "ops_against": 0.852
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.22,
+              "whiff_rate": 0.164,
+              "xwoba": 0.312,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.216,
+              "whiff_rate": 0.197,
+              "xwoba": 0.349
+            },
+            "trend": "steady",
+            "note": "K% steady over L5"
+          },
+          "sample_flag": null,
+          "scratched": false
+        }
+      ]
+    },
+    {
+      "game_pk": 824468,
+      "start_time": "2026-09-05T22:40:00Z",
+      "home_team": "CIN",
+      "away_team": "MIL",
+      "pitchers": [
+        {
+          "side": "home",
+          "team": "CIN",
+          "opponent": "MIL",
+          "pitcher_name": "Andrew Abbott",
+          "pitcher_id": 671096,
+          "hand": "L",
+          "season": {
+            "w": 6,
+            "l": 10,
+            "era": "4.49",
+            "whip": "1.44"
+          },
+          "stuff": {
+            "k_rate": 0.165,
+            "whiff_rate": 0.192,
+            "bb_rate": 0.113,
+            "xwoba_against": 0.349,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 43.8,
+              "velo": 92.5
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 19.8,
+              "velo": 86.1
+            },
+            {
+              "pitch": "Sweeper",
+              "usage_pct": 17.2,
+              "velo": 82.2
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.261,
+              "ops_against": 0.797
+            },
+            "vs_rhb": {
+              "k_rate": 0.137,
+              "ops_against": 0.764
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.121,
+              "whiff_rate": 0.147,
+              "xwoba": 0.388,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.165,
+              "whiff_rate": 0.192,
+              "xwoba": 0.349
+            },
+            "trend": "cold",
+            "note": "K% down 4.4pts over L5"
+          },
+          "sample_flag": null,
+          "scratched": false
+        },
+        {
+          "side": "away",
+          "team": "MIL",
+          "opponent": "CIN",
+          "pitcher_name": "Dustin May",
+          "pitcher_id": 669160,
+          "hand": "R",
+          "season": {
+            "w": 6,
+            "l": 9,
+            "era": "4.69",
+            "whip": "1.32"
+          },
+          "stuff": {
+            "k_rate": 0.198,
+            "whiff_rate": 0.182,
+            "bb_rate": 0.08,
+            "xwoba_against": 0.335,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Sinker",
+              "usage_pct": 23.8,
+              "velo": 96.5
+            },
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 23.6,
+              "velo": 96.9
+            },
+            {
+              "pitch": "Cutter",
+              "usage_pct": 21.2,
+              "velo": 93.2
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.202,
+              "ops_against": 0.82
+            },
+            "vs_rhb": {
+              "k_rate": 0.207,
+              "ops_against": 0.656
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.186,
+              "whiff_rate": 0.164,
+              "xwoba": 0.396,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.198,
+              "whiff_rate": 0.182,
+              "xwoba": 0.335
+            },
+            "trend": "cold",
+            "note": "K% down 1.2pts over L5"
+          },
+          "sample_flag": null,
+          "scratched": false
+        }
+      ]
+    },
+    {
+      "game_pk": 824795,
+      "start_time": "2026-09-05T23:05:00Z",
+      "home_team": "BAL",
+      "away_team": "BOS",
+      "pitchers": [
+        {
+          "side": "home",
+          "team": "BAL",
+          "opponent": "BOS",
+          "pitcher_name": "Chris Bassitt",
+          "pitcher_id": 605135,
+          "hand": "R",
+          "season": {
+            "w": 6,
+            "l": 4,
+            "era": "4.97",
+            "whip": "1.58"
+          },
+          "stuff": {
+            "k_rate": 0.146,
+            "whiff_rate": 0.179,
+            "bb_rate": 0.082,
+            "xwoba_against": 0.351,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Sinker",
+              "usage_pct": 37.3,
+              "velo": 92.1
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 22.4,
+              "velo": 71.2
+            },
+            {
+              "pitch": "Cutter",
+              "usage_pct": 18.3,
+              "velo": 89.6
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.143,
+              "ops_against": 0.917
+            },
+            "vs_rhb": {
+              "k_rate": 0.166,
+              "ops_against": 0.669
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.156,
+              "whiff_rate": 0.148,
+              "xwoba": 0.365,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.146,
+              "whiff_rate": 0.179,
+              "xwoba": 0.351
+            },
+            "trend": "steady",
+            "note": "K% up 1.0pts over L5"
+          },
+          "sample_flag": null,
+          "scratched": false
+        },
+        {
+          "side": "away",
+          "team": "BOS",
+          "opponent": "BAL",
+          "pitcher_name": "Sonny Gray",
+          "pitcher_id": 543243,
+          "hand": "R",
+          "season": {
+            "w": 16,
+            "l": 4,
+            "era": "2.82",
+            "whip": "1.18"
+          },
+          "stuff": {
+            "k_rate": 0.23,
+            "whiff_rate": 0.219,
+            "bb_rate": 0.065,
+            "xwoba_against": 0.304,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Sweeper",
+              "usage_pct": 19.6,
+              "velo": 84.8
+            },
+            {
+              "pitch": "Cutter",
+              "usage_pct": 19.4,
+              "velo": 88.3
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 19.1,
+              "velo": 92.1
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.255,
+              "ops_against": 0.655
+            },
+            "vs_rhb": {
+              "k_rate": 0.186,
+              "ops_against": 0.696
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.25,
+              "whiff_rate": 0.269,
+              "xwoba": 0.289,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.23,
+              "whiff_rate": 0.219,
+              "xwoba": 0.304
+            },
+            "trend": "steady",
+            "note": "K% up 2.0pts over L5"
+          },
+          "sample_flag": null,
+          "scratched": false
+        }
+      ]
+    },
+    {
+      "game_pk": 822850,
+      "start_time": "2026-09-05T23:05:00Z",
+      "home_team": "TEX",
+      "away_team": "TB",
+      "pitchers": [
+        {
+          "side": "home",
+          "team": "TEX",
+          "opponent": "TB",
+          "pitcher_name": "Jacob deGrom",
+          "pitcher_id": 594798,
+          "hand": "R",
+          "season": {
+            "w": 10,
+            "l": 9,
+            "era": "4.00",
+            "whip": "1.13"
+          },
+          "stuff": {
+            "k_rate": 0.304,
+            "whiff_rate": 0.317,
+            "bb_rate": 0.069,
+            "xwoba_against": 0.292,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 42.1,
+              "velo": 97.3
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 35.2,
+              "velo": 91.3
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 14.1,
+              "velo": 89.7
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.304,
+              "ops_against": 0.587
+            },
+            "vs_rhb": {
+              "k_rate": 0.307,
+              "ops_against": 0.691
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.344,
+              "whiff_rate": 0.326,
+              "xwoba": 0.287,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.304,
+              "whiff_rate": 0.317,
+              "xwoba": 0.292
+            },
+            "trend": "hot",
+            "note": "K% up 4.0pts over L5"
+          },
+          "sample_flag": null,
+          "scratched": false
+        },
+        {
+          "side": "away",
+          "team": "TB",
+          "opponent": "TEX",
+          "pitcher_name": "Drew Rasmussen",
+          "pitcher_id": 656876,
+          "hand": "R",
+          "season": {
+            "w": 14,
+            "l": 5,
+            "era": "2.95",
+            "whip": "0.93"
+          },
+          "stuff": {
+            "k_rate": 0.264,
+            "whiff_rate": 0.217,
+            "bb_rate": 0.052,
+            "xwoba_against": 0.277,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Cutter",
+              "usage_pct": 30.1,
+              "velo": 90.1
+            },
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 27.8,
+              "velo": 95.9
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 22.9,
+              "velo": 95.4
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.27,
+              "ops_against": 0.569
+            },
+            "vs_rhb": {
+              "k_rate": 0.255,
+              "ops_against": 0.485
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.299,
+              "whiff_rate": 0.23,
+              "xwoba": 0.27,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.264,
+              "whiff_rate": 0.217,
+              "xwoba": 0.277
+            },
+            "trend": "hot",
+            "note": "K% up 3.5pts over L5"
+          },
+          "sample_flag": null,
+          "scratched": false
+        }
+      ]
+    },
+    {
+      "game_pk": 824066,
+      "start_time": "2026-09-05T23:10:00Z",
       "home_team": "KC",
       "away_team": "TOR",
       "pitchers": [
@@ -1500,64 +1130,64 @@
           "side": "home",
           "team": "KC",
           "opponent": "TOR",
-          "pitcher_name": "Daniel Lynch IV",
-          "pitcher_id": 663738,
-          "hand": "L",
+          "pitcher_name": "Seth Lugo",
+          "pitcher_id": 607625,
+          "hand": "?",
           "season": {
-            "w": 4,
-            "l": 4,
-            "era": "3.06",
-            "whip": "1.05"
+            "w": 6,
+            "l": 8,
+            "era": "5.03",
+            "whip": "1.42"
           },
           "stuff": {
-            "k_rate": 0.236,
-            "whiff_rate": 0.242,
-            "bb_rate": 0.117,
-            "xwoba_against": 0.327,
+            "k_rate": 0.182,
+            "whiff_rate": 0.166,
+            "bb_rate": 0.073,
+            "xwoba_against": 0.342,
             "vintage": "2026"
           },
           "arsenal": [
             {
               "pitch": "Sinker",
-              "usage_pct": 28.6,
-              "velo": 94.2
+              "usage_pct": 19.0,
+              "velo": 91.5
             },
             {
-              "pitch": "Changeup",
-              "usage_pct": 25.2,
-              "velo": 85.8
+              "pitch": "4-Seam",
+              "usage_pct": 16.7,
+              "velo": 91.8
             },
             {
-              "pitch": "Slider",
-              "usage_pct": 25.1,
-              "velo": 87.2
+              "pitch": "Cutter",
+              "usage_pct": 15.7,
+              "velo": 89.9
             }
           ],
           "splits": {
             "vs_lhb": {
-              "k_rate": 0.214,
-              "ops_against": 0.429
+              "k_rate": 0.173,
+              "ops_against": 0.83
             },
             "vs_rhb": {
-              "k_rate": 0.216,
-              "ops_against": 0.616
+              "k_rate": 0.193,
+              "ops_against": 0.736
             },
             "vintage": "2026"
           },
           "recent_form": {
             "last5": {
-              "k_rate": 0.217,
-              "whiff_rate": 0.246,
-              "xwoba": 0.333,
+              "k_rate": 0.168,
+              "whiff_rate": 0.162,
+              "xwoba": 0.316,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.236,
-              "whiff_rate": 0.242,
-              "xwoba": 0.327
+              "k_rate": 0.182,
+              "whiff_rate": 0.166,
+              "xwoba": 0.342
             },
             "trend": "steady",
-            "note": "K% down 1.9pts over L5"
+            "note": "K% down 1.4pts over L5"
           },
           "sample_flag": null,
           "scratched": false
@@ -1566,64 +1196,64 @@
           "side": "away",
           "team": "TOR",
           "opponent": "KC",
-          "pitcher_name": "Jameson Taillon",
-          "pitcher_id": 592791,
+          "pitcher_name": "Max Scherzer",
+          "pitcher_id": 453286,
           "hand": "R",
           "season": {
             "w": 2,
-            "l": 6,
-            "era": "5.68",
-            "whip": "1.37"
+            "l": 7,
+            "era": "6.16",
+            "whip": "1.39"
           },
           "stuff": {
-            "k_rate": 0.208,
-            "whiff_rate": 0.253,
-            "bb_rate": 0.094,
-            "xwoba_against": 0.369,
+            "k_rate": 0.178,
+            "whiff_rate": 0.182,
+            "bb_rate": 0.103,
+            "xwoba_against": 0.333,
             "vintage": "2026"
           },
           "arsenal": [
             {
               "pitch": "4-Seam",
-              "usage_pct": 28.2,
-              "velo": 91.8
+              "usage_pct": 47.3,
+              "velo": 93.2
             },
             {
-              "pitch": "Cutter",
-              "usage_pct": 19.8,
-              "velo": 86.1
+              "pitch": "Slider",
+              "usage_pct": 19.6,
+              "velo": 85.9
             },
             {
-              "pitch": "Sweeper",
-              "usage_pct": 16.2,
-              "velo": 80.0
+              "pitch": "Curve",
+              "usage_pct": 14.4,
+              "velo": 75.2
             }
           ],
           "splits": {
             "vs_lhb": {
-              "k_rate": 0.193,
-              "ops_against": 0.896
+              "k_rate": 0.142,
+              "ops_against": 0.806
             },
             "vs_rhb": {
-              "k_rate": 0.219,
-              "ops_against": 0.752
+              "k_rate": 0.247,
+              "ops_against": 0.677
             },
             "vintage": "2026"
           },
           "recent_form": {
             "last5": {
-              "k_rate": 0.203,
-              "whiff_rate": 0.274,
-              "xwoba": 0.434,
+              "k_rate": 0.209,
+              "whiff_rate": 0.214,
+              "xwoba": 0.265,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.208,
-              "whiff_rate": 0.253,
-              "xwoba": 0.369
+              "k_rate": 0.178,
+              "whiff_rate": 0.182,
+              "xwoba": 0.333
             },
-            "trend": "cold",
-            "note": "K% steady over L5"
+            "trend": "hot",
+            "note": "K% up 3.1pts over L5"
           },
           "sample_flag": null,
           "scratched": false
@@ -1631,139 +1261,139 @@
       ]
     },
     {
-      "game_pk": 824311,
-      "start_time": "2026-09-05T00:40:00Z",
-      "home_team": "COL",
-      "away_team": "STL",
+      "game_pk": 824553,
+      "start_time": "2026-09-05T23:10:00Z",
+      "home_team": "CWS",
+      "away_team": "MIN",
       "pitchers": [
         {
           "side": "home",
-          "team": "COL",
-          "opponent": "STL",
-          "pitcher_name": "Ryan Feltner",
-          "pitcher_id": 663372,
-          "hand": "R",
+          "team": "CWS",
+          "opponent": "MIN",
+          "pitcher_name": "Anthony Kay",
+          "pitcher_id": 641743,
+          "hand": "L",
           "season": {
-            "w": 5,
-            "l": 9,
-            "era": "5.84",
-            "whip": "1.55"
+            "w": 9,
+            "l": 7,
+            "era": "4.28",
+            "whip": "1.35"
           },
           "stuff": {
-            "k_rate": 0.17,
-            "whiff_rate": 0.207,
-            "bb_rate": 0.1,
-            "xwoba_against": 0.342,
+            "k_rate": 0.173,
+            "whiff_rate": 0.212,
+            "bb_rate": 0.075,
+            "xwoba_against": 0.348,
             "vintage": "2026"
           },
           "arsenal": [
             {
               "pitch": "4-Seam",
-              "usage_pct": 26.7,
-              "velo": 94.9
+              "usage_pct": 23.0,
+              "velo": 95.8
             },
             {
-              "pitch": "Slider",
-              "usage_pct": 22.8,
-              "velo": 89.2
+              "pitch": "Sweeper",
+              "usage_pct": 22.6,
+              "velo": 82.7
             },
             {
-              "pitch": "Changeup",
-              "usage_pct": 18.0,
-              "velo": 85.1
+              "pitch": "Sinker",
+              "usage_pct": 16.5,
+              "velo": 95.3
             }
           ],
           "splits": {
             "vs_lhb": {
-              "k_rate": 0.179,
-              "ops_against": 0.731
+              "k_rate": 0.285,
+              "ops_against": 0.551
             },
             "vs_rhb": {
-              "k_rate": 0.127,
-              "ops_against": 0.888
+              "k_rate": 0.136,
+              "ops_against": 0.894
             },
             "vintage": "2026"
           },
           "recent_form": {
             "last5": {
-              "k_rate": 0.179,
-              "whiff_rate": 0.206,
-              "xwoba": 0.355,
+              "k_rate": 0.197,
+              "whiff_rate": 0.245,
+              "xwoba": 0.321,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.17,
-              "whiff_rate": 0.207,
-              "xwoba": 0.342
+              "k_rate": 0.173,
+              "whiff_rate": 0.212,
+              "xwoba": 0.348
             },
             "trend": "steady",
-            "note": "K% steady over L5"
+            "note": "K% up 2.4pts over L5"
           },
           "sample_flag": null,
           "scratched": false
         },
         {
           "side": "away",
-          "team": "STL",
-          "opponent": "COL",
-          "pitcher_name": "Andre Pallante",
-          "pitcher_id": 669467,
+          "team": "MIN",
+          "opponent": "CWS",
+          "pitcher_name": "Taj Bradley",
+          "pitcher_id": 671737,
           "hand": "R",
           "season": {
-            "w": 12,
+            "w": 10,
             "l": 6,
-            "era": "3.57",
-            "whip": "1.24"
+            "era": "3.85",
+            "whip": "1.26"
           },
           "stuff": {
-            "k_rate": 0.179,
-            "whiff_rate": 0.209,
-            "bb_rate": 0.086,
-            "xwoba_against": 0.312,
+            "k_rate": 0.273,
+            "whiff_rate": 0.227,
+            "bb_rate": 0.107,
+            "xwoba_against": 0.309,
             "vintage": "2026"
           },
           "arsenal": [
             {
               "pitch": "4-Seam",
-              "usage_pct": 33.2,
-              "velo": 95.2
+              "usage_pct": 47.8,
+              "velo": 97.1
             },
             {
-              "pitch": "Slider",
-              "usage_pct": 28.6,
-              "velo": 87.6
+              "pitch": "Cutter",
+              "usage_pct": 23.8,
+              "velo": 89.7
             },
             {
-              "pitch": "Sinker",
-              "usage_pct": 17.3,
-              "velo": 95.3
+              "pitch": "Curve",
+              "usage_pct": 9.2,
+              "velo": 82.3
             }
           ],
           "splits": {
             "vs_lhb": {
-              "k_rate": 0.17,
-              "ops_against": 0.676
+              "k_rate": 0.273,
+              "ops_against": 0.726
             },
             "vs_rhb": {
-              "k_rate": 0.192,
-              "ops_against": 0.668
+              "k_rate": 0.258,
+              "ops_against": 0.672
             },
             "vintage": "2026"
           },
           "recent_form": {
             "last5": {
-              "k_rate": 0.14,
-              "whiff_rate": 0.178,
-              "xwoba": 0.33,
+              "k_rate": 0.302,
+              "whiff_rate": 0.228,
+              "xwoba": 0.301,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.179,
-              "whiff_rate": 0.209,
-              "xwoba": 0.312
+              "k_rate": 0.273,
+              "whiff_rate": 0.227,
+              "xwoba": 0.309
             },
-            "trend": "cold",
-            "note": "K% down 3.9pts over L5"
+            "trend": "steady",
+            "note": "K% up 2.9pts over L5"
           },
           "sample_flag": null,
           "scratched": false
@@ -1771,8 +1401,138 @@
       ]
     },
     {
-      "game_pk": 823256,
-      "start_time": "2026-09-05T01:40:00Z",
+      "game_pk": 824145,
+      "start_time": "2026-09-05T23:15:00Z",
+      "home_team": "HOU",
+      "away_team": "AZ",
+      "pitchers": [
+        {
+          "side": "home",
+          "team": "HOU",
+          "opponent": "AZ",
+          "pitcher_name": "Ethan Pecko",
+          "pitcher_id": 814490,
+          "hand": "?",
+          "season": {
+            "w": 1,
+            "l": 0,
+            "era": "6.23",
+            "whip": "1.54"
+          },
+          "stuff": {
+            "k_rate": 0.16,
+            "whiff_rate": 0.242,
+            "bb_rate": 0.154,
+            "xwoba_against": 0.393,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Sinker",
+              "usage_pct": 28.0,
+              "velo": 93.0
+            },
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 22.9,
+              "velo": 93.7
+            },
+            {
+              "pitch": "Sweeper",
+              "usage_pct": 16.9,
+              "velo": 83.2
+            }
+          ],
+          "splits": {},
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.16,
+              "whiff_rate": 0.242,
+              "xwoba": 0.393,
+              "starts": 3
+            },
+            "season_avg": {
+              "k_rate": 0.16,
+              "whiff_rate": 0.242,
+              "xwoba": 0.393
+            },
+            "trend": "steady",
+            "note": "K% steady over L3"
+          },
+          "sample_flag": null,
+          "scratched": false
+        },
+        {
+          "side": "away",
+          "team": "AZ",
+          "opponent": "HOU",
+          "pitcher_name": "Brandon Pfaadt",
+          "pitcher_id": 694297,
+          "hand": "R",
+          "season": {
+            "w": 7,
+            "l": 2,
+            "era": "3.49",
+            "whip": "1.14"
+          },
+          "stuff": {
+            "k_rate": 0.18,
+            "whiff_rate": 0.209,
+            "bb_rate": 0.076,
+            "xwoba_against": 0.322,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 26.9,
+              "velo": 93.2
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 17.3,
+              "velo": 93.2
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 17.2,
+              "velo": 82.2
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.147,
+              "ops_against": 0.842
+            },
+            "vs_rhb": {
+              "k_rate": 0.203,
+              "ops_against": 0.527
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.175,
+              "whiff_rate": 0.201,
+              "xwoba": 0.29,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.18,
+              "whiff_rate": 0.209,
+              "xwoba": 0.322
+            },
+            "trend": "steady",
+            "note": "K% steady over L5"
+          },
+          "sample_flag": null,
+          "scratched": false
+        }
+      ]
+    },
+    {
+      "game_pk": 823257,
+      "start_time": "2026-09-05T23:15:00Z",
       "home_team": "SD",
       "away_team": "NYY",
       "pitchers": [
@@ -1780,64 +1540,64 @@
           "side": "home",
           "team": "SD",
           "opponent": "NYY",
-          "pitcher_name": "Walker Buehler",
-          "pitcher_id": 621111,
-          "hand": "R",
+          "pitcher_name": "Robbie Ray",
+          "pitcher_id": 592662,
+          "hand": "L",
           "season": {
-            "w": 8,
-            "l": 6,
-            "era": "4.66",
-            "whip": "1.36"
+            "w": 11,
+            "l": 7,
+            "era": "3.14",
+            "whip": "1.30"
           },
           "stuff": {
-            "k_rate": 0.205,
-            "whiff_rate": 0.181,
-            "bb_rate": 0.082,
-            "xwoba_against": 0.31,
+            "k_rate": 0.199,
+            "whiff_rate": 0.225,
+            "bb_rate": 0.117,
+            "xwoba_against": 0.346,
             "vintage": "2026"
           },
           "arsenal": [
             {
-              "pitch": "Cutter",
-              "usage_pct": 24.9,
-              "velo": 90.4
-            },
-            {
               "pitch": "4-Seam",
-              "usage_pct": 19.4,
-              "velo": 94.1
+              "usage_pct": 36.0,
+              "velo": 93.2
             },
             {
-              "pitch": "Sinker",
-              "usage_pct": 18.8,
-              "velo": 94.2
+              "pitch": "Slider",
+              "usage_pct": 24.8,
+              "velo": 85.8
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 19.7,
+              "velo": 86.0
             }
           ],
           "splits": {
             "vs_lhb": {
-              "k_rate": 0.217,
-              "ops_against": 0.704
+              "k_rate": 0.2,
+              "ops_against": 0.686
             },
             "vs_rhb": {
-              "k_rate": 0.191,
+              "k_rate": 0.192,
               "ops_against": 0.767
             },
             "vintage": "2026"
           },
           "recent_form": {
             "last5": {
-              "k_rate": 0.182,
-              "whiff_rate": 0.135,
-              "xwoba": 0.257,
+              "k_rate": 0.186,
+              "whiff_rate": 0.235,
+              "xwoba": 0.345,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.205,
-              "whiff_rate": 0.181,
-              "xwoba": 0.31
+              "k_rate": 0.199,
+              "whiff_rate": 0.225,
+              "xwoba": 0.346
             },
             "trend": "steady",
-            "note": "K% down 2.3pts over L5"
+            "note": "K% down 1.3pts over L5"
           },
           "sample_flag": null,
           "scratched": false
@@ -1846,64 +1606,64 @@
           "side": "away",
           "team": "NYY",
           "opponent": "SD",
-          "pitcher_name": "Max Fried",
-          "pitcher_id": 608331,
+          "pitcher_name": "Carlos Rodón",
+          "pitcher_id": 607074,
           "hand": "L",
           "season": {
             "w": 4,
-            "l": 4,
-            "era": "2.80",
-            "whip": "1.00"
+            "l": 3,
+            "era": "3.20",
+            "whip": "1.19"
           },
           "stuff": {
-            "k_rate": 0.242,
-            "whiff_rate": 0.224,
-            "bb_rate": 0.079,
-            "xwoba_against": 0.246,
+            "k_rate": 0.258,
+            "whiff_rate": 0.252,
+            "bb_rate": 0.13,
+            "xwoba_against": 0.304,
             "vintage": "2026"
           },
           "arsenal": [
             {
-              "pitch": "Cutter",
-              "usage_pct": 22.4,
-              "velo": 92.0
-            },
-            {
-              "pitch": "Sinker",
-              "usage_pct": 20.9,
-              "velo": 93.3
-            },
-            {
               "pitch": "4-Seam",
-              "usage_pct": 19.6,
-              "velo": 94.9
+              "usage_pct": 45.5,
+              "velo": 94.4
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 24.2,
+              "velo": 86.3
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 14.9,
+              "velo": 85.4
             }
           ],
           "splits": {
             "vs_lhb": {
-              "k_rate": 0.237,
-              "ops_against": 0.335
+              "k_rate": 0.25,
+              "ops_against": 0.862
             },
             "vs_rhb": {
-              "k_rate": 0.238,
-              "ops_against": 0.561
+              "k_rate": 0.263,
+              "ops_against": 0.505
             },
             "vintage": "2026"
           },
           "recent_form": {
             "last5": {
-              "k_rate": 0.318,
-              "whiff_rate": 0.234,
-              "xwoba": 0.221,
+              "k_rate": 0.253,
+              "whiff_rate": 0.261,
+              "xwoba": 0.329,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.242,
-              "whiff_rate": 0.224,
-              "xwoba": 0.246
+              "k_rate": 0.258,
+              "whiff_rate": 0.252,
+              "xwoba": 0.304
             },
-            "trend": "hot",
-            "note": "K% up 7.6pts over L5"
+            "trend": "steady",
+            "note": "K% steady over L5"
           },
           "sample_flag": null,
           "scratched": false
@@ -1911,8 +1671,118 @@
       ]
     },
     {
-      "game_pk": 823905,
-      "start_time": "2026-09-05T02:10:00Z",
+      "game_pk": 824310,
+      "start_time": "2026-09-06T00:10:00Z",
+      "home_team": "COL",
+      "away_team": "STL",
+      "pitchers": [
+        {
+          "side": "home",
+          "team": "COL",
+          "opponent": "STL",
+          "pitcher_name": "Mason Adams",
+          "pitcher_id": 690279,
+          "hand": "?",
+          "season": {
+            "w": 0,
+            "l": 0,
+            "era": "3.00",
+            "whip": "1.44"
+          },
+          "stuff": {},
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 30.8,
+              "velo": 93.2
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 28.2,
+              "velo": 92.1
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 16.8,
+              "velo": 82.0
+            }
+          ],
+          "splits": {},
+          "recent_form": {},
+          "sample_flag": "thin_2026",
+          "scratched": false
+        },
+        {
+          "side": "away",
+          "team": "STL",
+          "opponent": "COL",
+          "pitcher_name": "Matthew Liberatore",
+          "pitcher_id": 669461,
+          "hand": "L",
+          "season": {
+            "w": 5,
+            "l": 13,
+            "era": "5.41",
+            "whip": "1.47"
+          },
+          "stuff": {
+            "k_rate": 0.234,
+            "whiff_rate": 0.213,
+            "bb_rate": 0.078,
+            "xwoba_against": 0.352,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 31.6,
+              "velo": 94.4
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 25.0,
+              "velo": 86.1
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 17.3,
+              "velo": 79.4
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.252,
+              "ops_against": 0.816
+            },
+            "vs_rhb": {
+              "k_rate": 0.226,
+              "ops_against": 0.813
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.303,
+              "whiff_rate": 0.254,
+              "xwoba": 0.339,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.234,
+              "whiff_rate": 0.213,
+              "xwoba": 0.352
+            },
+            "trend": "hot",
+            "note": "K% up 6.9pts over L5"
+          },
+          "sample_flag": null,
+          "scratched": false
+        }
+      ]
+    },
+    {
+      "game_pk": 823904,
+      "start_time": "2026-09-06T01:10:00Z",
       "home_team": "LAD",
       "away_team": "WSH",
       "pitchers": [
@@ -1920,61 +1790,61 @@
           "side": "home",
           "team": "LAD",
           "opponent": "WSH",
-          "pitcher_name": "Blake Snell",
-          "pitcher_id": 605483,
-          "hand": "L",
+          "pitcher_name": "Tyler Glasnow",
+          "pitcher_id": 607192,
+          "hand": "?",
           "season": {
-            "w": 2,
-            "l": 1,
-            "era": "2.42",
-            "whip": "1.08"
+            "w": 4,
+            "l": 0,
+            "era": "2.79",
+            "whip": "0.81"
           },
           "stuff": {
-            "k_rate": 0.331,
-            "whiff_rate": 0.337,
-            "bb_rate": 0.109,
-            "xwoba_against": 0.227,
+            "k_rate": 0.319,
+            "whiff_rate": 0.278,
+            "bb_rate": 0.073,
+            "xwoba_against": 0.241,
             "vintage": "2026"
           },
           "arsenal": [
             {
               "pitch": "4-Seam",
-              "usage_pct": 49.1,
-              "velo": 96.0
+              "usage_pct": 33.6,
+              "velo": 95.4
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 22.4,
+              "velo": 95.8
             },
             {
               "pitch": "Curve",
-              "usage_pct": 21.1,
-              "velo": 80.1
-            },
-            {
-              "pitch": "Changeup",
-              "usage_pct": 17.7,
-              "velo": 84.6
+              "usage_pct": 17.3,
+              "velo": 81.2
             }
           ],
           "splits": {
             "vs_lhb": {
-              "k_rate": 0.314,
-              "ops_against": 0.63
+              "k_rate": 0.277,
+              "ops_against": 0.499
             },
             "vs_rhb": {
-              "k_rate": 0.338,
-              "ops_against": 0.395
+              "k_rate": 0.391,
+              "ops_against": 0.461
             },
             "vintage": "2026"
           },
           "recent_form": {
             "last5": {
-              "k_rate": 0.331,
-              "whiff_rate": 0.337,
-              "xwoba": 0.227,
+              "k_rate": 0.324,
+              "whiff_rate": 0.281,
+              "xwoba": 0.229,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.331,
-              "whiff_rate": 0.337,
-              "xwoba": 0.227
+              "k_rate": 0.319,
+              "whiff_rate": 0.278,
+              "xwoba": 0.241
             },
             "trend": "steady",
             "note": "K% steady over L5"
@@ -1986,43 +1856,73 @@
           "side": "away",
           "team": "WSH",
           "opponent": "LAD",
-          "pitcher_name": "Jackson Kent",
-          "pitcher_id": 800600,
-          "hand": "L",
+          "pitcher_name": "Cade Cavalli",
+          "pitcher_id": 676917,
+          "hand": "?",
           "season": {
-            "w": 1,
-            "l": 2,
-            "era": "5.59",
-            "whip": "1.71"
+            "w": 12,
+            "l": 5,
+            "era": "3.12",
+            "whip": "1.20"
           },
-          "stuff": {},
+          "stuff": {
+            "k_rate": 0.277,
+            "whiff_rate": 0.244,
+            "bb_rate": 0.081,
+            "xwoba_against": 0.305,
+            "vintage": "2026"
+          },
           "arsenal": [
             {
               "pitch": "4-Seam",
-              "usage_pct": 26.9,
-              "velo": 93.3
+              "usage_pct": 33.4,
+              "velo": 96.8
             },
             {
-              "pitch": "Changeup",
-              "usage_pct": 22.0,
-              "velo": 85.4
+              "pitch": "Sweeper",
+              "usage_pct": 14.8,
+              "velo": 86.2
             },
             {
               "pitch": "Sinker",
-              "usage_pct": 20.9,
-              "velo": 92.8
+              "usage_pct": 13.2,
+              "velo": 96.1
             }
           ],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "thin_2026",
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.271,
+              "ops_against": 0.717
+            },
+            "vs_rhb": {
+              "k_rate": 0.296,
+              "ops_against": 0.606
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.397,
+              "whiff_rate": 0.341,
+              "xwoba": 0.259,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.277,
+              "whiff_rate": 0.244,
+              "xwoba": 0.305
+            },
+            "trend": "hot",
+            "note": "K% up 12.0pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         }
       ]
     },
     {
-      "game_pk": 823093,
-      "start_time": "2026-09-05T02:10:00Z",
+      "game_pk": 823094,
+      "start_time": "2026-09-06T01:40:00Z",
       "home_team": "SEA",
       "away_team": "ATH",
       "pitchers": [
@@ -2030,64 +1930,64 @@
           "side": "home",
           "team": "SEA",
           "opponent": "ATH",
-          "pitcher_name": "Logan Gilbert",
-          "pitcher_id": 669302,
+          "pitcher_name": "George Kirby",
+          "pitcher_id": 669923,
           "hand": "R",
           "season": {
-            "w": 11,
-            "l": 8,
-            "era": "3.42",
-            "whip": "1.04"
+            "w": 9,
+            "l": 10,
+            "era": "4.19",
+            "whip": "1.35"
           },
           "stuff": {
-            "k_rate": 0.268,
-            "whiff_rate": 0.271,
+            "k_rate": 0.191,
+            "whiff_rate": 0.2,
             "bb_rate": 0.064,
-            "xwoba_against": 0.293,
+            "xwoba_against": 0.305,
             "vintage": "2026"
           },
           "arsenal": [
             {
               "pitch": "4-Seam",
-              "usage_pct": 38.6,
-              "velo": 96.2
+              "usage_pct": 30.4,
+              "velo": 96.7
             },
             {
-              "pitch": "Slider",
-              "usage_pct": 24.3,
-              "velo": 86.7
+              "pitch": "Sweeper",
+              "usage_pct": 20.8,
+              "velo": 87.4
             },
             {
-              "pitch": "Changeup",
-              "usage_pct": 7.6,
-              "velo": 85.7
+              "pitch": "Sinker",
+              "usage_pct": 19.8,
+              "velo": 96.8
             }
           ],
           "splits": {
             "vs_lhb": {
-              "k_rate": 0.312,
-              "ops_against": 0.646
+              "k_rate": 0.18,
+              "ops_against": 0.766
             },
             "vs_rhb": {
-              "k_rate": 0.206,
-              "ops_against": 0.701
+              "k_rate": 0.209,
+              "ops_against": 0.725
             },
             "vintage": "2026"
           },
           "recent_form": {
             "last5": {
-              "k_rate": 0.233,
-              "whiff_rate": 0.237,
-              "xwoba": 0.289,
+              "k_rate": 0.144,
+              "whiff_rate": 0.195,
+              "xwoba": 0.328,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.268,
-              "whiff_rate": 0.271,
-              "xwoba": 0.293
+              "k_rate": 0.191,
+              "whiff_rate": 0.2,
+              "xwoba": 0.305
             },
             "trend": "cold",
-            "note": "K% down 3.5pts over L5"
+            "note": "K% down 4.7pts over L5"
           },
           "sample_flag": null,
           "scratched": false
@@ -2096,54 +1996,64 @@
           "side": "away",
           "team": "ATH",
           "opponent": "SEA",
-          "pitcher_name": "Kade Morris",
-          "pitcher_id": 695034,
-          "hand": "R",
+          "pitcher_name": "Jeffrey Springs",
+          "pitcher_id": 605488,
+          "hand": "L",
           "season": {
-            "w": 0,
-            "l": 1,
-            "era": "9.82",
-            "whip": "2.11"
+            "w": 3,
+            "l": 13,
+            "era": "6.37",
+            "whip": "1.50"
           },
           "stuff": {
-            "k_rate": 0.144,
-            "whiff_rate": 0.152,
-            "bb_rate": 0.062,
+            "k_rate": 0.184,
+            "whiff_rate": 0.206,
+            "bb_rate": 0.096,
             "xwoba_against": 0.331,
             "vintage": "2026"
           },
           "arsenal": [
             {
-              "pitch": "Sinker",
-              "usage_pct": 39.2,
-              "velo": 93.6
+              "pitch": "4-Seam",
+              "usage_pct": 43.9,
+              "velo": 91.4
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 24.3,
+              "velo": 79.5
             },
             {
               "pitch": "Slider",
-              "usage_pct": 17.5,
-              "velo": 87.9
-            },
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 16.1,
-              "velo": 94.1
+              "usage_pct": 23.4,
+              "velo": 84.0
             }
           ],
-          "splits": {},
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.178,
+              "ops_against": 0.884
+            },
+            "vs_rhb": {
+              "k_rate": 0.181,
+              "ops_against": 0.845
+            },
+            "vintage": "2026"
+          },
           "recent_form": {
             "last5": {
-              "k_rate": 0.144,
-              "whiff_rate": 0.152,
-              "xwoba": 0.331,
-              "starts": 4
+              "k_rate": 0.125,
+              "whiff_rate": 0.175,
+              "xwoba": 0.355,
+              "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.144,
-              "whiff_rate": 0.152,
+              "k_rate": 0.184,
+              "whiff_rate": 0.206,
               "xwoba": 0.331
             },
-            "trend": "steady",
-            "note": "K% steady over L4"
+            "trend": "cold",
+            "note": "K% down 5.9pts over L5"
           },
           "sample_flag": null,
           "scratched": false
