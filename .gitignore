@@ -23,3 +23,18 @@ yarn-debug.log*
 yarn-error.log*
 
 .vercel
+
+# Data archive mirror — pages only fetch public/data/; data/ is unnecessary duplication
+# Removed in BMLBv3.50.0 / BFEv0.19.0 to reduce Vercel deployment storage
+/data/
+
+# Date-stamped data files — accumulate and bloat deployments
+# Only *_latest.json is served by pages; date-stamped copies stay local only
+public/data/game_matchups_20[0-9][0-9]-*.json
+public/data/matchups_20[0-9][0-9]-*.json
+public/data/nfl_game_matchups_20[0-9][0-9]-*.json
+
+# Game log exports — consumed only by unreleased feature/game-logs-page branch.
+# Removed from staging in BMLBv3.51.0 / BFEv0.20.0. Re-enable when branch merges.
+public/data/batter_game_logs_latest.json
+public/data/pitcher_game_logs_latest.json

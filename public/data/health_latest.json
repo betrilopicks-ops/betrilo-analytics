@@ -1,8 +1,8 @@
 {
   "verdict": "ALL GOOD",
   "headline": "All steps passed.",
-  "checked_at": "2026-07-29T06:09:12",
-  "run_date": "2026-07-29",
+  "checked_at": "2026-09-08T06:09:59",
+  "run_date": "2026-09-08",
   "required_ok": true,
   "steps": {
     "Pipeline generation": "OK",
@@ -17,6 +17,8 @@
     "Results by date JSON export": "OK",
     "Pitcher logs 2026 enrichment": "OK",
     "Pitcher report JSON export": "OK",
+    "Batter game logs JSON export": "OK",
+    "Pitcher game logs JSON export": "OK",
     "Push site data to GitHub": "OK",
     "Caption generation": "OK",
     "GitHub image upload": "OK",
