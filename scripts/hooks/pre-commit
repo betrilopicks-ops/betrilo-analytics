@@ -1,0 +1,79 @@
+#!/bin/bash
+#
+# Pre-commit hook for the publish worktree.
+#
+# This worktree exists for data-only pushes to origin/main. Source code
+# (src/, scripts/, package.json, etc.) goes through the main repo at
+# E:/Betrilo/betrilo-analytics, not here.
+#
+# Blocks any commit that stages files outside public/data/ or the
+# infrastructure allowlist. Prevents accidental `git add -A` from
+# shipping source code through the data pipeline.
+#
+# Override (rare — e.g., .env or .gitignore change):
+#   PUBLISH_ALLOW_ALL=1 git commit -m "..."
+#
+# BFEv0.25.0 (September 8, 2026)
+
+# Files outside public/data/ that are legitimately committed here
+INFRA_ALLOWLIST=(
+    ".env"
+    ".gitignore"
+    "scripts/hooks/pre-commit"
+)
+
+# Check for override
+if [ "$PUBLISH_ALLOW_ALL" = "1" ]; then
+    echo "[pre-commit] PUBLISH_ALLOW_ALL=1 — override accepted."
+    exit 0
+fi
+
+# Get staged files
+staged=$(git diff --cached --name-only --diff-filter=ACMR)
+
+if [ -z "$staged" ]; then
+    exit 0
+fi
+
+blocked=""
+while IFS= read -r file; do
+    # Allow public/data/*
+    if [[ "$file" == public/data/* ]]; then
+        continue
+    fi
+
+    # Allow infrastructure files
+    allowed=false
+    for pattern in "${INFRA_ALLOWLIST[@]}"; do
+        if [ "$file" = "$pattern" ]; then
+            allowed=true
+            break
+        fi
+    done
+    if [ "$allowed" = true ]; then
+        continue
+    fi
+
+    # This file is outside the allowed paths
+    blocked="$blocked\n    $file"
+done <<< "$staged"
+
+if [ -n "$blocked" ]; then
+    echo ""
+    echo "============================================================"
+    echo "  BLOCKED: staged file(s) outside public/data/"
+    echo "============================================================"
+    echo ""
+    echo "  This is the publish worktree — data-only pushes."
+    echo "  Source code goes through the main repo, not here."
+    echo ""
+    echo -e "  Blocked files:$blocked"
+    echo ""
+    echo "  To unstage: git reset HEAD <file>"
+    echo "  To override: PUBLISH_ALLOW_ALL=1 git commit -m '...'"
+    echo ""
+    echo "============================================================"
+    exit 1
+fi
+
+exit 0
