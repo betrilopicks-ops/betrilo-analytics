@@ -24,8 +24,29 @@ while read local_ref local_sha remote_ref remote_sha; do
         # Block if pushing LOCAL main (refs/heads/main) to origin/main,
         # regardless of which branch is currently checked out.
         if [ "$local_ref" = "refs/heads/main" ]; then
-            # Allow override — but show what's about to ship
+            # Allow override — but require a terminal so someone sees the summary.
+            # NFL_GATE_MET=1 in a non-interactive shell (background, pipe, etc.)
+            # is blocked — an override nobody can see is not an approved push.
+            # Use NFL_GATE_MET_UNATTENDED=1 for genuinely automated pushes.
             if [ "$NFL_GATE_MET" = "1" ]; then
+                if [ ! -t 1 ] && [ "$NFL_GATE_MET_UNATTENDED" != "1" ]; then
+                    echo ""
+                    echo "============================================================"
+                    echo "  BLOCKED: override in non-interactive shell"
+                    echo "============================================================"
+                    echo ""
+                    echo "  NFL_GATE_MET=1 requires an interactive terminal so the"
+                    echo "  operator can review the diff summary before it ships."
+                    echo ""
+                    echo "  Run this in a terminal, not a background process:"
+                    echo "    NFL_GATE_MET=1 git push origin main"
+                    echo ""
+                    echo "  For genuinely automated pushes (rare):"
+                    echo "    NFL_GATE_MET_UNATTENDED=1 NFL_GATE_MET=1 git push origin main"
+                    echo ""
+                    echo "============================================================"
+                    exit 1
+                fi
                 echo ""
                 echo "[pre-push] NFL_GATE_MET=1 — override accepted."
                 echo ""

@@ -1,6 +1,6 @@
 # @betrilopicks Frontend (betrilo.com) — Technical Project Book
 
-**Version:** BFEv0.28.0 | **Last Updated:** September 8, 2026 | **Includes:** Game Logs 404 removed from production + weekly cleanup automated (Task Scheduler) + pipeline directory guards verified live; Hook file tracked + game_logs breadcrumb on feature branch + NFL version trace; Tracked pre-push hook (scripts/hooks/) + branch-check fix (local_ref not current_branch); Pre-push hook blocks accidental NFL deploy + source map .env on origin/main + book reconciliation; Preview branch game_logs impact documented; Remove game_logs from deploys (11.9 MB → 0; per-deploy 19 MB → 6.5 MB) + weekly cleanup script; Phase 3 deployment cleanup (324 old deployments deleted, ~6 GB reclaimed); Vercel storage fix (sourcemap + data prune + deployment cleanup); Theme guard in CI; Contrast failures fixed + theme token guard; Dark theme secondary-text fix; Dark theme (NFL, via theme layer); Light color scheme (MLB, pending migration); NFL FE fixes from preview review; NFL meta cleanup + noindex; Helmet title fix + error boundary; NFL preview branch + production gate; NFL freshness indicator; Validation banner + NFL /status surfaces; NFL Wave 1 pages + sport-scoped nav + shared SortableTable; NFL site spec (multi-sport extension); Pitcher Report sort by start time (games now render earliest→latest); Batter Splits doubleheader fix (DH players appear twice with G1/G2 labels and correct per-game opposing pitcher; team filter uses team_abbr for clean DH grouping); /status false-alarm fix (Best Bets, Edge Report, Batter Splits switched to freshness-only health — these surfaces don't count raw games, so their record counts falsely mismatched the MLB schedule, producing spurious yellow flags on healthy days; now noGameCount: healthy = updated today, no game-count comparison; operator sees all-green banner when pipeline is clean); System Status page (/status — public but unlisted, not in nav/sitemap; pipeline health + data freshness dashboard for remote monitoring during travel; per-surface cards showing last_refreshed timestamp (absolute + relative ET), health color (green/yellow/red based on today-freshness + game-count cross-check vs MLB Stats API schedule), game count vs expected, record counts; top-line banner summarizes all-healthy vs attention-needed; pipeline health_latest.json verdict + step-level status surfaced; schedule cross-check: MLB Stats API primary with starting-lineups fallback; auto-refresh every 5 min + manual refresh button; mobile-friendly; per-surface error isolation; noindex/nofollow meta; built for 7/29-8/3 travel window); VP AB column on Player Projections page (column relabeled VP AB, reads vp_ab from JSON instead of vp_pa; cellValue switch and td render updated; footer Key text updated to "VP AB/H/HR/xwOBA — career at-bats and performance vs. today's probable pitcher"); H+R+RBI column on Player Projections page (proj_hrrbi passthrough from DB — same value as Results page; sortable; 327/520 batters covered; footer Key corrected); Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema; BvP guide: crawlable static HTML at /mlb/batter-vs-pitcher-guide (~800 words, content in served HTML pre-JS); Footer support mailto (support@betrilo.com; green on navy; legible contrast); Game dropdown chronological sort (PlayerProjections + StartingLineups)
+**Version:** BFEv0.30.0 | **Last Updated:** September 8, 2026 | **Includes:** /best-bets 404 incident report (73 days) + override requires TTY + credential stall documented; Route consistency check (build-time) + pre-push override summary + /best-bets 404 fix; Game Logs 404 removed from production + weekly cleanup automated (Task Scheduler) + pipeline directory guards verified live; Hook file tracked + game_logs breadcrumb on feature branch + NFL version trace; Tracked pre-push hook (scripts/hooks/) + branch-check fix (local_ref not current_branch); Pre-push hook blocks accidental NFL deploy + source map .env on origin/main + book reconciliation; Preview branch game_logs impact documented; Remove game_logs from deploys (11.9 MB → 0; per-deploy 19 MB → 6.5 MB) + weekly cleanup script; Phase 3 deployment cleanup (324 old deployments deleted, ~6 GB reclaimed); Vercel storage fix (sourcemap + data prune + deployment cleanup); Theme guard in CI; Contrast failures fixed + theme token guard; Dark theme secondary-text fix; Dark theme (NFL, via theme layer); Light color scheme (MLB, pending migration); NFL FE fixes from preview review; NFL meta cleanup + noindex; Helmet title fix + error boundary; NFL preview branch + production gate; NFL freshness indicator; Validation banner + NFL /status surfaces; NFL Wave 1 pages + sport-scoped nav + shared SortableTable; NFL site spec (multi-sport extension); Pitcher Report sort by start time (games now render earliest→latest); Batter Splits doubleheader fix (DH players appear twice with G1/G2 labels and correct per-game opposing pitcher; team filter uses team_abbr for clean DH grouping); /status false-alarm fix (Best Bets, Edge Report, Batter Splits switched to freshness-only health — these surfaces don't count raw games, so their record counts falsely mismatched the MLB schedule, producing spurious yellow flags on healthy days; now noGameCount: healthy = updated today, no game-count comparison; operator sees all-green banner when pipeline is clean); System Status page (/status — public but unlisted, not in nav/sitemap; pipeline health + data freshness dashboard for remote monitoring during travel; per-surface cards showing last_refreshed timestamp (absolute + relative ET), health color (green/yellow/red based on today-freshness + game-count cross-check vs MLB Stats API schedule), game count vs expected, record counts; top-line banner summarizes all-healthy vs attention-needed; pipeline health_latest.json verdict + step-level status surfaced; schedule cross-check: MLB Stats API primary with starting-lineups fallback; auto-refresh every 5 min + manual refresh button; mobile-friendly; per-surface error isolation; noindex/nofollow meta; built for 7/29-8/3 travel window); VP AB column on Player Projections page (column relabeled VP AB, reads vp_ab from JSON instead of vp_pa; cellValue switch and td render updated; footer Key text updated to "VP AB/H/HR/xwOBA — career at-bats and performance vs. today's probable pitcher"); H+R+RBI column on Player Projections page (proj_hrrbi passthrough from DB — same value as Results page; sortable; 327/520 batters covered; footer Key corrected); Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema; BvP guide: crawlable static HTML at /mlb/batter-vs-pitcher-guide (~800 words, content in served HTML pre-JS); Footer support mailto (support@betrilo.com; green on navy; legible contrast); Game dropdown chronological sort (PlayerProjections + StartingLineups)
 
 ---
 
@@ -1127,6 +1127,97 @@ Installed `.git/hooks/pre-push` that blocks pushes from local `main` to `origin/
 - **Current storage:** 20 deployments, ~130 MB (0.1 GB of 10 GB). Burn rate ~2.1 GB/month. Weekly cleanup keeps it under 500 MB.
 
 **Version progression:** BFEv0.22.1 → **BFEv0.28.0** (MINOR — production fix + automated cleanup)
+
+---
+
+### Session: September 8, 2026 — BFEv0.28.0 → BFEv0.29.0 — Route Consistency Check + Override Summary
+
+**Item 1 — Route-vs-nav consistency check (`scripts/check-routes.js`):**
+Wired into the build pipeline (`package.json`). Runs before `react-scripts build`. Extracts all `<Route path=...>` from App.js, then checks every nav link (`Header.jsx` `to:` paths) and every in-page internal link (`<Link to=...>` and `<a href="/...">` across all `.jsx`/`.js` files). A link with no matching route fails the build.
+
+On first run, found **one additional live bug:** `PlayerProjectionsPage.jsx:282` links to `/best-bets` (no `/mlb/` prefix) — 404 on production. Fixed to `/mlb/best-bets`. This link was live since the page was first deployed.
+
+**Item 2 — Override diff summary:**
+When `NFL_GATE_MET=1` is set, the pre-push hook now prints: commit count, changed file list (first 15), and any route additions/removals in App.js. Non-blocking — informs the operator before the push proceeds, giving a chance to Ctrl+C.
+
+**Bug found by pre-commit hook wiring:** The publish worktree pre-commit hook (BFEv0.25.0) fired on the main repo because `core.hooksPath` is shared config. Fixed: hook now checks `current_branch == "publish-main"` and exits 0 on any other branch.
+
+**Item 3 — Cleanup failure detection (report only):**
+Recommended option (a): add a `"Vercel cleanup (weekly)"` step to `health_latest.json`. Reads cleanup log mtime; stale >10 days = STALE status. StatusPage already renders step-level health — a yellow flag appears automatically. Cost: ~15 lines in the health check writer, no FE changes. Not built.
+
+**Version progression:** BFEv0.28.0 → **BFEv0.29.0** (MINOR — route check + override summary + bug fix)
+
+---
+
+### Session: September 8, 2026 — BFEv0.29.0 → BFEv0.30.0 — Incident Reports + TTY Guard + Credential Stall
+
+#### Incident: Two production 404s from nav links (September 8, 2026)
+
+**Game Logs 404 (BFEv0.28.0 incident report):**
+- **What:** "Game Logs" nav link in Header.jsx pointed to `/mlb/game-logs`, a route with no page component. CRA catch-all rendered NotFoundPage.
+- **Window:** 09:51 AM to 12:35 PM ET (~2h 44min). Arrived via the `NFL_GATE_MET=1` override merge that brought local main to origin/main. The nav link was on local main (from `7d59451`, Aug 3) but never on origin/main until the merge.
+- **Fix:** `8371c9d` removed the nav link.
+
+**`/best-bets` 404 (BFEv0.29.0 incident report):**
+- **What:** In-page `<a href="/best-bets">` in PlayerProjectionsPage.jsx, line 282. Missing `/mlb/` prefix — should be `/mlb/best-bets`. Not a nav link, not in Header.jsx. An inline text link in the "last refreshed" subtitle.
+- **Window:** **73 days** (June 27, BFEv0.1.2 → September 8, BFEv0.29.0). Commit `6123b63` was pushed directly to origin/main on June 27. The link was live from day one of the Player Projections page.
+- **Fix:** `5ca8fef` corrected to `/mlb/best-bets`.
+
+**Common cause:** Both are nav/link targets that point to paths with no matching `<Route>` in App.js. Neither was caught because no check existed to verify internal links against routes. The route consistency check (`scripts/check-routes.js`, BFEv0.29.0) now catches both patterns at build time.
+
+**Route check coverage (20 links, zero failures):**
+- MLB nav (9 items in Header.jsx `mlbNavItems`)
+- NFL nav (4 items in Header.jsx `nflNavItems`)
+- Sport toggle links (2: `/mlb/starting-lineups`, `/nfl/matchups`)
+- In-page `<Link to=...>` and `<a href="/...">` across all `.jsx`/`.js` (5: landing page track record + NFL tools, 404 page matchups, results methodology, player projections best-bets)
+- **Not covered:** External URLs (https://...) and non-path links (#anchors, mailto:). These are not internal route targets.
+
+#### Override TTY guard (item 2)
+
+The `NFL_GATE_MET=1` push in the BFEv0.29.0 session ran in a background shell with no terminal attached. The diff summary printed into a void — nobody saw it. The push carried the broken `/best-bets` link alongside the intended fixes.
+
+**Fix:** When `NFL_GATE_MET=1` is set and stdout is not a TTY (`! -t 1`), the hook now **blocks** with a message saying to run it in a terminal. Override for genuinely automated pushes: `NFL_GATE_MET_UNATTENDED=1`.
+
+**Tested:**
+- Override piped (non-interactive) → **BLOCKED** (exit 1)
+- Override with `NFL_GATE_MET_UNATTENDED=1` → ALLOWED (exit 0, summary shown)
+- Interactive override → ALLOWED (summary shown)
+
+#### Credential stall (item 3, report only)
+
+**What happens:** `git push` spawns `git-remote-https.exe` which spawns `git-credential-manager.exe`. The credential manager either prompts for interactive auth (OAuth flow) or hangs waiting for a token refresh. In a non-interactive shell (Claude Code's `Bash` tool), the prompt has nowhere to go. The process stalls indefinitely.
+
+**Why it's silent:** The push command returns no output while waiting. Multiple retry attempts spawn additional stalled processes. Eventually one succeeds (likely when a cached credential refreshes), returning `exit 0`. The others time out or are killed. Which attempt landed is unknowable from the output alone.
+
+**What a durable fix looks like:**
+- **Option A:** Configure `git-credential-manager` to use a long-lived token or PAT instead of OAuth. Set `credential.helper` to `store` with a PAT in `~/.git-credentials`. Eliminates interactive prompts. Downside: PATs expire and must be rotated manually.
+- **Option B:** Set `GCM_INTERACTIVE=never` in the environment. Forces the credential manager to fail fast instead of hanging. Pushes from non-interactive shells would fail immediately rather than stalling, making the failure visible. The operator would then push from a terminal.
+- **Recommendation:** Option B (`GCM_INTERACTIVE=never` as a Machine-level env var). It matches the TTY guard philosophy — non-interactive pushes should fail fast, not silently stall.
+
+#### Production verification (item 4)
+
+All 14 production nav links verified via Playwright (betrilo.com, loaded live):
+
+| Path | Status |
+|------|--------|
+| / | 200 OK |
+| /mlb/starting-lineups | 200 OK |
+| /mlb/pitcher-report | 200 OK |
+| /mlb/matchups | 200 OK |
+| /mlb/batter-splits | 200 OK |
+| /mlb/best-bets | 200 OK |
+| /mlb/player-projections | 200 OK |
+| /mlb/edge-report | 200 OK |
+| /mlb/results | 200 OK |
+| /mlb/track-record | 200 OK |
+| /nfl/matchups | 200 OK |
+| /nfl/projections | 200 OK |
+| /nfl/schedule | 200 OK |
+| /nfl/team-rankings | 200 OK |
+
+Zero 404s. Route check passes with 20 links, zero findings.
+
+**Version progression:** BFEv0.29.0 → **BFEv0.30.0** (MINOR — incident reports + TTY guard)
 
 ---
 
