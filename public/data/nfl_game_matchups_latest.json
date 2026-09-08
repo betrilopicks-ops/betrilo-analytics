@@ -1,6 +1,6 @@
 {
-  "exported_date": "2026-09-04",
-  "generated_at": "2026-09-04T17:00:29.163589-04:00",
+  "exported_date": "2026-09-08",
+  "generated_at": "2026-09-08T07:00:28.838028-04:00",
   "season": 2026,
   "week": 1,
   "dvp_method": {
@@ -23,7 +23,7 @@
       "gametime": "20:20",
       "roof": "outdoors",
       "stadium": "Lumen Field",
-      "spread_line": 3.5,
+      "spread_line": 3.0,
       "total_line": 44.5,
       "home_players": [
         {
@@ -338,8 +338,8 @@
           },
           "vs_opponent": null,
           "injury": {
-            "injury_status": "Questionable",
-            "injury_body_part": "Hamstring",
+            "injury_status": null,
+            "injury_body_part": null,
             "practice_participation": null
           }
         },
@@ -721,7 +721,7 @@
           "opponent": "SEA",
           "season_stats": null,
           "dvp": {
-            "rank": 26,
+            "rank": 25,
             "label": "Tough",
             "games_in_sample": 34,
             "rush_yds_per_game": 82.3,
@@ -755,7 +755,7 @@
             "rush_yds_per_game": 43.1
           },
           "dvp": {
-            "rank": 26,
+            "rank": 25,
             "label": "Tough",
             "games_in_sample": 34,
             "rush_yds_per_game": 82.3,
@@ -962,7 +962,7 @@
           "opponent": "SEA",
           "season_stats": null,
           "dvp": {
-            "rank": 26,
+            "rank": 25,
             "label": "Tough",
             "games_in_sample": 34,
             "rush_yds_per_game": 82.3,
@@ -1025,7 +1025,7 @@
             "rush_yds_per_game": 53.6
           },
           "dvp": {
-            "rank": 26,
+            "rank": 25,
             "label": "Tough",
             "games_in_sample": 34,
             "rush_yds_per_game": 82.3,
@@ -2200,50 +2200,6 @@
           }
         },
         {
-          "player_name": "Brayden Willis",
-          "player_id": "00-0038643",
-          "gsis_id": "00-0038643",
-          "team": "SF",
-          "position": "TE",
-          "opponent": "LA",
-          "season_stats": {
-            "stat_season": 2025,
-            "games": 6,
-            "fpts_ppr_per_game": 0.0,
-            "receptions": 0,
-            "targets": 1,
-            "rec_yds": 0,
-            "rec_tds": 0,
-            "rec_yds_per_game": 0.0
-          },
-          "dvp": {
-            "rank": 16,
-            "label": "Neutral",
-            "games_in_sample": 34,
-            "rec_yds_per_game": 52.0,
-            "rec_per_game": 5.7,
-            "targets_per_game": 7.8,
-            "rec_tds_per_game": 0.4
-          },
-          "vs_opponent": {
-            "games": 2,
-            "first_season": 2024,
-            "last_season": 2025,
-            "fpts_per_game": 0.0,
-            "small_sample": true,
-            "receptions": 0,
-            "targets": 0,
-            "rec_yds": 0,
-            "rec_tds": 0,
-            "rec_yds_per_game": 0.0
-          },
-          "injury": {
-            "injury_status": "Questionable",
-            "injury_body_part": "Concussion",
-            "practice_participation": null
-          }
-        },
-        {
           "player_name": "Jacob Cowing",
           "player_id": "00-0039365",
           "gsis_id": "00-0039365",
@@ -2416,7 +2372,7 @@
       "gametime": "13:00",
       "roof": "outdoors",
       "stadium": "Bank of America Stadium",
-      "spread_line": -2.5,
+      "spread_line": -3.0,
       "total_line": 47.5,
       "home_players": [
         {
@@ -3089,7 +3045,7 @@
           },
           "injury": {
             "injury_status": "Questionable",
-            "injury_body_part": "Undisclosed",
+            "injury_body_part": "Abdomen",
             "practice_participation": null
           }
         },
@@ -3509,7 +3465,7 @@
       "roof": "outdoors",
       "stadium": "Paycor Stadium",
       "spread_line": 3.5,
-      "total_line": 51.5,
+      "total_line": 50.5,
       "home_players": [
         {
           "player_name": "Joe Flacco",
@@ -5033,7 +4989,7 @@
             "rush_yds_per_game": 42.8
           },
           "dvp": {
-            "rank": 25,
+            "rank": 26,
             "label": "Tough",
             "games_in_sample": 34,
             "rush_yds_per_game": 82.3,
@@ -5137,7 +5093,7 @@
           "opponent": "DET",
           "season_stats": null,
           "dvp": {
-            "rank": 25,
+            "rank": 26,
             "label": "Tough",
             "games_in_sample": 34,
             "rush_yds_per_game": 82.3,
@@ -5238,7 +5194,7 @@
             "rush_yds_per_game": 27.6
           },
           "dvp": {
-            "rank": 25,
+            "rank": 26,
             "label": "Tough",
             "games_in_sample": 34,
             "rush_yds_per_game": 82.3,
@@ -5272,7 +5228,7 @@
             "rush_yds_per_game": 39.6
           },
           "dvp": {
-            "rank": 25,
+            "rank": 26,
             "label": "Tough",
             "games_in_sample": 34,
             "rush_yds_per_game": 82.3,
@@ -6073,7 +6029,7 @@
           "opponent": "HOU",
           "season_stats": null,
           "dvp": {
-            "rank": 22,
+            "rank": 21,
             "label": "Tough",
             "games_in_sample": 34,
             "rec_yds_per_game": 135.2,
@@ -6243,7 +6199,7 @@
             "rec_yds_per_game": 25.2
           },
           "dvp": {
-            "rank": 22,
+            "rank": 21,
             "label": "Tough",
             "games_in_sample": 34,
             "rec_yds_per_game": 135.2,
@@ -6329,7 +6285,7 @@
             "rec_yds_per_game": 44.9
           },
           "dvp": {
-            "rank": 22,
+            "rank": 21,
             "label": "Tough",
             "games_in_sample": 34,
             "rec_yds_per_game": 135.2,
@@ -6463,7 +6419,7 @@
             "rec_yds_per_game": 33.7
           },
           "dvp": {
-            "rank": 22,
+            "rank": 21,
             "label": "Tough",
             "games_in_sample": 34,
             "rec_yds_per_game": 135.2,
@@ -6575,7 +6531,7 @@
           "opponent": "HOU",
           "season_stats": null,
           "dvp": {
-            "rank": 22,
+            "rank": 21,
             "label": "Tough",
             "games_in_sample": 34,
             "rec_yds_per_game": 135.2,
@@ -6601,7 +6557,7 @@
       "roof": null,
       "stadium": "Lucas Oil Stadium",
       "spread_line": -3.5,
-      "total_line": 48.5,
+      "total_line": 47.5,
       "home_players": [
         {
           "player_name": "Keenan Allen",
@@ -7721,7 +7677,7 @@
       "gametime": "13:00",
       "roof": "outdoors",
       "stadium": "EverBank Stadium",
-      "spread_line": 7.5,
+      "spread_line": 8.5,
       "total_line": 40.5,
       "home_players": [
         {
@@ -8091,11 +8047,7 @@
             "rec_tds_per_game": 1.1
           },
           "vs_opponent": null,
-          "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
-            "practice_participation": null
-          }
+          "injury": null
         },
         {
           "player_name": "Bhayshul Tuten",
@@ -8578,8 +8530,8 @@
           },
           "vs_opponent": null,
           "injury": {
-            "injury_status": "Questionable",
-            "injury_body_part": "Concussion",
+            "injury_status": null,
+            "injury_body_part": null,
             "practice_participation": null
           }
         },
@@ -9738,7 +9690,7 @@
       "roof": "outdoors",
       "stadium": "Nissan Stadium",
       "spread_line": 1.5,
-      "total_line": 38.5,
+      "total_line": 39.5,
       "home_players": [
         {
           "player_name": "Mitchell Trubisky",
@@ -10837,8 +10789,8 @@
       "gametime": "16:25",
       "roof": "dome",
       "stadium": "SoFi Stadium",
-      "spread_line": 10.5,
-      "total_line": 46.5,
+      "spread_line": 10.0,
+      "total_line": 47.5,
       "home_players": [
         {
           "player_name": "David Njoku",
@@ -11853,7 +11805,7 @@
       "roof": "dome",
       "stadium": "Allegiant Stadium",
       "spread_line": 3.5,
-      "total_line": 40.5,
+      "total_line": 41.5,
       "home_players": [
         {
           "player_name": "Kirk Cousins",
@@ -12757,8 +12709,8 @@
           },
           "vs_opponent": null,
           "injury": {
-            "injury_status": "Questionable",
-            "injury_body_part": "Undisclosed",
+            "injury_status": null,
+            "injury_body_part": null,
             "practice_participation": null
           }
         },
@@ -12841,7 +12793,7 @@
       "roof": "dome",
       "stadium": "U.S. Bank Stadium",
       "spread_line": 1.5,
-      "total_line": 45.5,
+      "total_line": 46.5,
       "home_players": [
         {
           "player_name": "Carson Wentz",
@@ -13056,7 +13008,7 @@
           "opponent": "GB",
           "season_stats": null,
           "dvp": {
-            "rank": 21,
+            "rank": 22,
             "label": "Tough",
             "games_in_sample": 34,
             "rec_yds_per_game": 135.2,
@@ -13089,7 +13041,7 @@
             "rec_yds_per_game": 61.6
           },
           "dvp": {
-            "rank": 21,
+            "rank": 22,
             "label": "Tough",
             "games_in_sample": 34,
             "rec_yds_per_game": 135.2,
@@ -13179,7 +13131,7 @@
             "rec_yds_per_game": 43.6
           },
           "dvp": {
-            "rank": 21,
+            "rank": 22,
             "label": "Tough",
             "games_in_sample": 34,
             "rec_yds_per_game": 135.2,
@@ -13270,7 +13222,7 @@
             "rec_yds_per_game": 2.1
           },
           "dvp": {
-            "rank": 21,
+            "rank": 22,
             "label": "Tough",
             "games_in_sample": 34,
             "rec_yds_per_game": 135.2,
@@ -13338,7 +13290,7 @@
             "rec_yds_per_game": 0.0
           },
           "dvp": {
-            "rank": 21,
+            "rank": 22,
             "label": "Tough",
             "games_in_sample": 34,
             "rec_yds_per_game": 135.2,
@@ -15218,7 +15170,7 @@
       "gametime": "20:20",
       "roof": "outdoors",
       "stadium": "MetLife Stadium",
-      "spread_line": -2.5,
+      "spread_line": -3.0,
       "total_line": 48.5,
       "home_players": [
         {
@@ -16390,7 +16342,7 @@
       "roof": "outdoors",
       "stadium": "GEHA Field at Arrowhead Stadium",
       "spread_line": 3.0,
-      "total_line": 42.5,
+      "total_line": 43.5,
       "home_players": [
         {
           "player_name": "Travis Kelce",
