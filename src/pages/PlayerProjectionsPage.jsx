@@ -1,13 +1,13 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { colors } from '../theme';
+import { dark, mlbDark } from '../theme';
 
 /* ── Game Log inline expansion ─────────────────────────────────────────────── */
 
 function GameLogPanel({ gameLog }) {
   if (!gameLog || !gameLog.games || gameLog.games.length === 0) {
     return (
-      <div style={{ padding: '10px 14px', fontSize: '12px', color: '#8a9ba8', fontStyle: 'italic' }}>
+      <div style={{ padding: '10px 14px', fontSize: '12px', color: dark.textMuted, fontStyle: 'italic' }}>
         No recent game log available.
       </div>
     );
@@ -37,9 +37,9 @@ function GameLogPanel({ gameLog }) {
   const fmtBa = (v) => (typeof v === 'number' ? v.toFixed(3).replace(/^0/, '') : '—');
 
   // Shared styles for frozen (sticky) Date + Opp columns
-  const expandBg = '#f0f6fa';
+  const expandBg = dark.surfaceBg;
   const stickyDate = { position: 'sticky', left: 0, zIndex: 2, background: expandBg };
-  const stickyOpp = { position: 'sticky', left: 42, zIndex: 2, background: expandBg, borderRight: '2px solid #d9e2e8' };
+  const stickyOpp = { position: 'sticky', left: 42, zIndex: 2, background: expandBg, borderRight: `2px solid ${dark.border}` };
   const stickyDateHead = { ...stickyDate, background: expandBg };
   const stickyOppHead = { ...stickyOpp, background: expandBg };
 
@@ -47,13 +47,13 @@ function GameLogPanel({ gameLog }) {
     <div style={{ padding: '6px 0 10px', overflowX: 'auto' }}>
       <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '12px', minWidth: '340px' }}>
         <thead>
-          <tr style={{ borderBottom: '2px solid #d0dae2' }}>
-            <th style={{ padding: '4px 6px', textAlign: 'left', fontWeight: 700, color: colors.navy, fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.3px', whiteSpace: 'nowrap', ...stickyDateHead }}>Date</th>
-            <th style={{ padding: '4px 6px', textAlign: 'left', fontWeight: 700, color: colors.navy, fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.3px', whiteSpace: 'nowrap', ...stickyOppHead }}>Opp</th>
+          <tr style={{ borderBottom: `2px solid ${dark.border}` }}>
+            <th style={{ padding: '4px 6px', textAlign: 'left', fontWeight: 700, color: dark.textPrimary, fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.3px', whiteSpace: 'nowrap', ...stickyDateHead }}>Date</th>
+            <th style={{ padding: '4px 6px', textAlign: 'left', fontWeight: 700, color: dark.textPrimary, fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.3px', whiteSpace: 'nowrap', ...stickyOppHead }}>Opp</th>
             {cols.slice(2).map(c => (
               <th key={c.key} style={{
                 padding: '4px 6px', textAlign: c.align, fontWeight: 700,
-                color: colors.navy, fontSize: '10px', textTransform: 'uppercase',
+                color: dark.textPrimary, fontSize: '10px', textTransform: 'uppercase',
                 letterSpacing: '0.3px', whiteSpace: 'nowrap',
               }}>{c.label}</th>
             ))}
@@ -61,23 +61,23 @@ function GameLogPanel({ gameLog }) {
         </thead>
         <tbody>
           {games.map((g, i) => (
-            <tr key={i} style={{ borderBottom: '1px solid #dce4ea' }}>
-              <td style={{ padding: '3px 6px', textAlign: 'left', color: '#5a6b76', whiteSpace: 'nowrap', ...stickyDate }}>{fmtDate(g.date)}</td>
-              <td style={{ padding: '3px 6px', textAlign: 'left', color: '#5a6b76', fontWeight: 600, ...stickyOpp }}>{g.opp || '—'}</td>
-              <td style={{ padding: '3px 6px', textAlign: 'center', color: colors.navy }}>{g.ab ?? '—'}</td>
-              <td style={{ padding: '3px 6px', textAlign: 'center', color: colors.navy, fontWeight: g.h > 0 ? 700 : 400 }}>{g.h ?? '—'}</td>
-              <td style={{ padding: '3px 6px', textAlign: 'center', color: '#5a6b76' }}>{g.r ?? '—'}</td>
-              <td style={{ padding: '3px 6px', textAlign: 'center', color: '#5a6b76' }}>{g.rbi ?? '—'}</td>
-              <td style={{ padding: '3px 6px', textAlign: 'center', color: '#5a6b76' }}>{g.k ?? '—'}</td>
-              <td style={{ padding: '3px 6px', textAlign: 'center', color: '#5a6b76' }}>{g.bb ?? '—'}</td>
-              <td style={{ padding: '3px 6px', textAlign: 'center', color: colors.navy, fontWeight: g.tb >= 3 ? 700 : 400 }}>{g.tb ?? '—'}</td>
+            <tr key={i} style={{ borderBottom: `1px solid ${dark.border}` }}>
+              <td style={{ padding: '3px 6px', textAlign: 'left', color: dark.textSecondary, whiteSpace: 'nowrap', ...stickyDate }}>{fmtDate(g.date)}</td>
+              <td style={{ padding: '3px 6px', textAlign: 'left', color: dark.textSecondary, fontWeight: 600, ...stickyOpp }}>{g.opp || '—'}</td>
+              <td style={{ padding: '3px 6px', textAlign: 'center', color: dark.textPrimary }}>{g.ab ?? '—'}</td>
+              <td style={{ padding: '3px 6px', textAlign: 'center', color: dark.textPrimary, fontWeight: g.h > 0 ? 700 : 400 }}>{g.h ?? '—'}</td>
+              <td style={{ padding: '3px 6px', textAlign: 'center', color: dark.textSecondary }}>{g.r ?? '—'}</td>
+              <td style={{ padding: '3px 6px', textAlign: 'center', color: dark.textSecondary }}>{g.rbi ?? '—'}</td>
+              <td style={{ padding: '3px 6px', textAlign: 'center', color: dark.textSecondary }}>{g.k ?? '—'}</td>
+              <td style={{ padding: '3px 6px', textAlign: 'center', color: dark.textSecondary }}>{g.bb ?? '—'}</td>
+              <td style={{ padding: '3px 6px', textAlign: 'center', color: dark.textPrimary, fontWeight: g.tb >= 3 ? 700 : 400 }}>{g.tb ?? '—'}</td>
             </tr>
           ))}
         </tbody>
       </table>
       <div style={{
-        padding: '6px 6px 0', fontSize: '12px', color: colors.navy, fontWeight: 600,
-        borderTop: '1px solid #d9e2e8', marginTop: '2px',
+        padding: '6px 6px 0', fontSize: '12px', color: dark.textPrimary, fontWeight: 600,
+        borderTop: `1px solid ${dark.border}`, marginTop: '2px',
       }}>
         L{games.length}: {fmtBa(l10_ba)} BA · {fmtBa(l10_obp)} OBP
       </div>
@@ -230,9 +230,9 @@ export default function PlayerProjectionsPage() {
     }
   };
 
-  if (loading) return <div style={{ textAlign: 'center', padding: '60px', color: colors.textMuted }}>Loading player projections…</div>;
+  if (loading) return <div style={{ textAlign: 'center', padding: '60px', color: dark.textMuted }}>Loading player projections…</div>;
   if (error) return (
-    <div style={{ textAlign: 'center', padding: '60px', color: colors.textMuted }}>
+    <div style={{ textAlign: 'center', padding: '60px', color: dark.textMuted }}>
       Player projections unavailable right now. Check back after today's slate posts.
     </div>
   );
@@ -269,51 +269,51 @@ export default function PlayerProjectionsPage() {
         <link rel="canonical" href={url} />
       </Helmet>
       <div style={{ textAlign: 'center', marginBottom: '18px' }}>
-        <h1 style={{ color: colors.navy, fontSize: '30px', fontWeight: 800, margin: 0 }}>Player Projections</h1>
-        <p style={{ color: '#5a6b76', fontSize: '14px', margin: '6px 0 0' }}>
+        <h1 style={{ color: dark.textPrimary, fontSize: '30px', fontWeight: 800, margin: 0 }}>Player Projections</h1>
+        <p style={{ color: dark.textSecondary, fontSize: '14px', margin: '6px 0 0' }}>
           Full projections, matchup splits, and streaks for every batter. {niceDate && `Slate: ${niceDate}.`}
         </p>
         {niceRefreshed && (
-          <p style={{ color: '#5a6b76', fontSize: '13px', margin: '6px 0 0' }}>
+          <p style={{ color: dark.textSecondary, fontSize: '13px', margin: '6px 0 0' }}>
             {lineupStatus === 'confirmed' ? 'Lineups & projections' : 'Projections'} last refreshed {niceRefreshed}
             {' — '}
-            <span style={{ color: '#8a9ba8' }}>
+            <span style={{ color: dark.textMuted }}>
               updates on confirmed lineups throughout the day.{' '}
-              <a href="/best-bets" style={{ color: colors.navy, textDecoration: 'underline' }}>Best Bets</a>
+              <a href="/best-bets" style={{ color: dark.textPrimary, textDecoration: 'underline' }}>Best Bets</a>
               {' '}shows today's locked morning picks.
             </span>
           </p>
         )}
-        <p style={{ color: '#8a9ba8', fontSize: '12px', margin: '6px 0 0' }}>
+        <p style={{ color: dark.textMuted, fontSize: '12px', margin: '6px 0 0' }}>
           Tap any player row to see their last 10 game log.
         </p>
       </div>
 
       <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', marginBottom: '18px' }}>
         <select value={selectedGame} onChange={(e) => setSelectedGame(e.target.value)}
-          style={{ padding: '8px 12px', fontSize: '14px', borderRadius: '6px', border: '1px solid #cdd8e0', minWidth: '260px' }}>
+          style={{ padding: '8px 12px', fontSize: '14px', borderRadius: '6px', border: `1px solid ${dark.border}`, minWidth: '260px', background: dark.inputBg, color: dark.inputText }}>
           <option value="all">All Games</option>
           {games.map((g, idx) => (
             <option key={idx} value={idx}>{g.time ? `${g.time} - ` : ''}{g.away_team} @ {g.home_team}</option>
           ))}
         </select>
         <input value={searchText} onChange={(e) => setSearchText(e.target.value)} placeholder="Search player or team"
-          style={{ padding: '8px 12px', fontSize: '14px', borderRadius: '6px', border: '1px solid #cdd8e0', minWidth: '200px' }} />
+          style={{ padding: '8px 12px', fontSize: '14px', borderRadius: '6px', border: `1px solid ${dark.border}`, minWidth: '200px', background: dark.inputBg, color: dark.inputText }} />
       </div>
 
       {!isAllGames && games[parseInt(selectedGame, 10)] && (() => {
         const g = games[parseInt(selectedGame, 10)];
         return (
-          <div style={{ textAlign: 'center', marginBottom: '14px', color: colors.navy, fontSize: '15px', fontWeight: 600 }}>
+          <div style={{ textAlign: 'center', marginBottom: '14px', color: dark.textPrimary, fontSize: '15px', fontWeight: 600 }}>
             Projected: {g.away_team} {g.away_score ?? '—'} – {g.home_team} {g.home_score ?? '—'}
-            {g.winner && <span style={{ color: colors.green }}>  ·  Lean: {g.winner}</span>}
+            {g.winner && <span style={{ color: dark.statusGreen }}>  ·  Lean: {g.winner}</span>}
           </div>
         );
       })()}
 
       <div style={{ overflowX: 'auto', borderRadius: '10px', boxShadow: '0 1px 4px rgba(0,0,0,0.08)' }}>
-        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px', background: '#fff' }}>
-          <thead style={{ background: colors.navy }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px', background: dark.surfaceBg }}>
+          <thead style={{ background: dark.pageBg }}>
             <tr>
               {columns.map((col) => {
                 const sticky = col.key === 'player';
@@ -321,9 +321,9 @@ export default function PlayerProjectionsPage() {
                 <th key={col.key} onClick={() => handleSort(col.key, col.type)} scope="col"
                   aria-sort={sortBy === col.key ? (sortOrder === 'asc' ? 'ascending' : 'descending') : 'none'}
                   style={{ padding: '10px 11px', textAlign: col.align, cursor: 'pointer', userSelect: 'none', whiteSpace: 'nowrap',
-                    color: sortBy === col.key ? colors.green : '#fff', fontSize: '11px', fontWeight: 700,
+                    color: sortBy === col.key ? dark.statusGreen : dark.textPrimary, fontSize: '11px', fontWeight: 700,
                     textTransform: 'uppercase', letterSpacing: '0.4px',
-                    ...(sticky ? { position: 'sticky', left: 0, zIndex: 3, background: colors.navy } : {}) }}>
+                    ...(sticky ? { position: 'sticky', left: 0, zIndex: 3, background: dark.pageBg } : {}) }}>
                   {col.label}{sortBy === col.key ? (sortOrder === 'asc' ? ' ▲' : ' ▼') : ''}
                 </th>
               );})}
@@ -332,41 +332,41 @@ export default function PlayerProjectionsPage() {
           <tbody>
             {filteredRows.map((r, idx) => {
               const isExpanded = expandedRows.has(idx);
-              const rowBg = idx % 2 ? '#fafcfd' : '#fff';
+              const rowBg = idx % 2 ? mlbDark.rowStripe : dark.surfaceBg;
               const hasGameLog = r.game_log && r.game_log.games && r.game_log.games.length > 0;
               return (
               <React.Fragment key={idx}>
               <tr onClick={() => toggleRow(idx)}
                 style={{
-                  borderTop: '1px solid #eef2f5', background: isExpanded ? '#f0f6fa' : rowBg,
+                  borderTop: `1px solid ${dark.border}`, background: isExpanded ? dark.pageBg : rowBg,
                   cursor: hasGameLog ? 'pointer' : 'default',
                   transition: 'background 0.15s',
                 }}
                 title={hasGameLog ? 'Tap to view game log' : ''}
               >
-                <td style={{ padding: '9px 11px', textAlign: 'left', fontWeight: 600, color: colors.navy, whiteSpace: 'nowrap', position: 'sticky', left: 0, zIndex: 1, background: isExpanded ? '#f0f6fa' : rowBg, borderRight: '2px solid #e3e9ed' }}>
-                  <span style={{ marginRight: '6px', fontSize: '10px', color: '#9fb3c0', display: 'inline-block', width: '10px' }}>
+                <td style={{ padding: '9px 11px', textAlign: 'left', fontWeight: 600, color: dark.textPrimary, whiteSpace: 'nowrap', position: 'sticky', left: 0, zIndex: 1, background: isExpanded ? dark.pageBg : rowBg, borderRight: `2px solid ${mlbDark.stickyBorder}` }}>
+                  <span style={{ marginRight: '6px', fontSize: '10px', color: dark.textSecondary, display: 'inline-block', width: '10px' }}>
                     {hasGameLog ? (isExpanded ? '▾' : '▸') : ''}
                   </span>
                   {r.player}
                 </td>
-                <td style={{ padding: '9px 11px', textAlign: 'left', color: '#5a6b76' }}>{r.team}</td>
-                {isAllGames && <td style={{ padding: '9px 11px', textAlign: 'left', color: '#5a6b76' }}>{r.matchup}</td>}
-                <td style={{ padding: '9px 11px', textAlign: 'center', fontWeight: 700, color: colors.navy, background: projHitsColor(r.proj_hits) }}>{cellValue(r, 'proj_hits')}</td>
+                <td style={{ padding: '9px 11px', textAlign: 'left', color: dark.textSecondary }}>{r.team}</td>
+                {isAllGames && <td style={{ padding: '9px 11px', textAlign: 'left', color: dark.textSecondary }}>{r.matchup}</td>}
+                <td style={{ padding: '9px 11px', textAlign: 'center', fontWeight: 700, color: dark.textPrimary, background: projHitsColor(r.proj_hits) }}>{cellValue(r, 'proj_hits')}</td>
                 <td style={{ padding: '9px 11px', textAlign: 'center' }}>{cellValue(r, 'proj_tb')}</td>
                 <td style={{ padding: '9px 11px', textAlign: 'center' }}>{cellValue(r, 'proj_hr')}</td>
                 <td style={{ padding: '9px 11px', textAlign: 'center' }}>{cellValue(r, 'proj_bb')}</td>
-                <td style={{ padding: '9px 11px', textAlign: 'center', fontWeight: 600, color: colors.navy }}>{cellValue(r, 'proj_hrrbi')}</td>
+                <td style={{ padding: '9px 11px', textAlign: 'center', fontWeight: 600, color: dark.textPrimary }}>{cellValue(r, 'proj_hrrbi')}</td>
                 <td style={{ padding: '9px 11px', textAlign: 'center' }}>{cellValue(r, 'l10_hit_pct')}</td>
-                <td style={{ padding: '9px 11px', textAlign: 'center', color: '#5a6b76' }}>{cellValue(r, 'vp_ab')}</td>
-                <td style={{ padding: '9px 11px', textAlign: 'center', color: '#5a6b76' }}>{cellValue(r, 'vp_h')}</td>
-                <td style={{ padding: '9px 11px', textAlign: 'center', color: '#5a6b76' }}>{cellValue(r, 'vp_hr')}</td>
-                <td style={{ padding: '9px 11px', textAlign: 'center', color: '#5a6b76' }}>{cellValue(r, 'vp_xwoba')}</td>
+                <td style={{ padding: '9px 11px', textAlign: 'center', color: dark.textSecondary }}>{cellValue(r, 'vp_ab')}</td>
+                <td style={{ padding: '9px 11px', textAlign: 'center', color: dark.textSecondary }}>{cellValue(r, 'vp_h')}</td>
+                <td style={{ padding: '9px 11px', textAlign: 'center', color: dark.textSecondary }}>{cellValue(r, 'vp_hr')}</td>
+                <td style={{ padding: '9px 11px', textAlign: 'center', color: dark.textSecondary }}>{cellValue(r, 'vp_xwoba')}</td>
                 <td style={{ padding: '9px 11px', textAlign: 'center' }}>{cellValue(r, 'h_streak')}</td>
               </tr>
               {isExpanded && (
                 <tr>
-                  <td colSpan={colCount} style={{ padding: '0 16px 8px', background: '#f0f6fa', borderBottom: '2px solid #d9e2e8' }}>
+                  <td colSpan={colCount} style={{ padding: '0 16px 8px', background: dark.surfaceBg, borderBottom: `2px solid ${dark.border}` }}>
                     <GameLogPanel gameLog={r.game_log} />
                   </td>
                 </tr>
@@ -375,10 +375,10 @@ export default function PlayerProjectionsPage() {
             );})}
           </tbody>
         </table>
-        {filteredRows.length === 0 && <div style={{ padding: '24px', textAlign: 'center', color: colors.textMuted }}>No batters match those filters.</div>}
+        {filteredRows.length === 0 && <div style={{ padding: '24px', textAlign: 'center', color: dark.textMuted }}>No batters match those filters.</div>}
       </div>
-      <div style={{ marginTop: '10px', padding: '12px 14px', background: '#f4f7f9', borderRadius: '8px', fontSize: '12px', color: '#5a6b76', lineHeight: 1.6 }}>
-        <strong style={{ color: colors.navy }}>Key:</strong> Model projections for today's slate. <strong>Proj H/TB/HR/BB</strong> — projected hits, total bases, home runs, walks. <strong>H+R+RBI</strong> — projected combo (hits + runs + RBIs); shown for batters with full matchup data. <strong>VP AB/H/HR/xwOBA</strong> — career at-bats and performance vs. today's probable pitcher. <strong>H Streak</strong> — current games with a hit. Green shading marks projected hits ≥ 0.75. Tap any row to expand their last 10 game log. {filteredRows.length} batters{isAllGames ? ` across ${games.length} games` : ''}.
+      <div style={{ marginTop: '10px', padding: '12px 14px', background: mlbDark.footnoteBlockBg, borderRadius: '8px', fontSize: '12px', color: dark.textSecondary, lineHeight: 1.6 }}>
+        <strong style={{ color: dark.textPrimary }}>Key:</strong> Model projections for today's slate. <strong>Proj H/TB/HR/BB</strong> — projected hits, total bases, home runs, walks. <strong>H+R+RBI</strong> — projected combo (hits + runs + RBIs); shown for batters with full matchup data. <strong>VP AB/H/HR/xwOBA</strong> — career at-bats and performance vs. today's probable pitcher. <strong>H Streak</strong> — current games with a hit. Green shading marks projected hits ≥ 0.75. Tap any row to expand their last 10 game log. {filteredRows.length} batters{isAllGames ? ` across ${games.length} games` : ''}.
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { colors } from '../theme';
+import { dark, mlbDark } from '../theme';
 
 const PROP_LABELS = {
   hits: 'Hits',
@@ -107,9 +107,9 @@ export default function EdgeReportPage() {
     else { setSortKey(key); setSortDir(['player', 'team', 'opp', 'pitcher', 'prop', 'book'].includes(key) ? 'asc' : 'desc'); }
   };
 
-  if (loading) return <div style={{ textAlign: 'center', padding: '60px', color: colors.textMuted }}>Loading edge report…</div>;
+  if (loading) return <div style={{ textAlign: 'center', padding: '60px', color: dark.textMuted }}>Loading edge report…</div>;
   if (error || !data) return (
-    <div style={{ textAlign: 'center', padding: '60px', color: colors.textMuted }}>
+    <div style={{ textAlign: 'center', padding: '60px', color: dark.textMuted }}>
       Edge report unavailable right now. Check back after today's slate posts.
     </div>
   );
@@ -121,11 +121,11 @@ export default function EdgeReportPage() {
   return (
     <div style={{ maxWidth: 1500, margin: '0 auto', padding: '24px 16px 60px' }}>
       <div style={{ textAlign: 'center', marginBottom: '6px' }}>
-        <h1 style={{ color: colors.navy, fontSize: '30px', fontWeight: 800, margin: 0 }}>Edge Report</h1>
-        <p style={{ color: '#5a6b76', fontSize: '14px', margin: '6px 0 2px' }}>
+        <h1 style={{ color: dark.textPrimary, fontSize: '30px', fontWeight: 800, margin: 0 }}>Edge Report</h1>
+        <p style={{ color: dark.textSecondary, fontSize: '14px', margin: '6px 0 2px' }}>
           Today's model picks by prop. {niceDate && `Slate: ${niceDate}.`}
         </p>
-        <p style={{ color: colors.subtitleOnWhite, fontSize: '12px', margin: 0 }}>
+        <p style={{ color: dark.textSecondary, fontSize: '12px', margin: 0 }}>
           {data.count} props. Odds (~) are indicative, captured when the slate was generated — lines move by game time. Edge/EV shown only where a real market line exists.
         </p>
       </div>
@@ -135,7 +135,7 @@ export default function EdgeReportPage() {
           {PROP_FILTERS.map((p) => (
             <button key={p} onClick={() => setPropFilter(p)}
               style={{ padding: '6px 12px', borderRadius: '6px', border: 'none', cursor: 'pointer', fontSize: '13px', fontWeight: 600,
-                background: propFilter === p ? colors.blue : '#e8eef2', color: propFilter === p ? '#fff' : colors.navy }}>
+                background: propFilter === p ? dark.accentBg : dark.inactiveBg, color: propFilter === p ? dark.accentText : dark.inactiveText }}>
               {p === 'All' ? 'All Props' : PROP_LABELS[p]}
             </button>
           ))}
@@ -144,31 +144,31 @@ export default function EdgeReportPage() {
           {['All', 'OVER', 'UNDER'].map((d) => (
             <button key={d} onClick={() => setDirFilter(d)}
               style={{ padding: '6px 12px', borderRadius: '6px', border: 'none', cursor: 'pointer', fontSize: '13px', fontWeight: 600,
-                background: dirFilter === d ? colors.blue : '#e8eef2', color: dirFilter === d ? '#fff' : colors.navy }}>
+                background: dirFilter === d ? dark.accentBg : dark.inactiveBg, color: dirFilter === d ? dark.accentText : dark.inactiveText }}>
               {d === 'All' ? 'O/U' : d}
             </button>
           ))}
         </div>
         <select value={teamFilter} onChange={(e) => setTeamFilter(e.target.value)}
-          style={{ padding: '6px 10px', borderRadius: '6px', border: '1px solid #cdd8e0', fontSize: '13px', color: colors.navy, background: '#fff', cursor: 'pointer' }}>
+          style={{ padding: '6px 10px', borderRadius: '6px', border: `1px solid ${dark.border}`, fontSize: '13px', color: dark.textPrimary, background: dark.inputBg, cursor: 'pointer' }}>
           <option value="All">All Teams</option>
           {teams.map((t) => <option key={t} value={t}>{t}</option>)}
         </select>
         <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search player or team"
-          style={{ padding: '7px 12px', borderRadius: '6px', border: '1px solid #cdd8e0', fontSize: '13px', minWidth: '180px' }} />
+          style={{ padding: '7px 12px', borderRadius: '6px', border: `1px solid ${dark.border}`, fontSize: '13px', minWidth: '180px', background: dark.inputBg, color: dark.inputText }} />
       </div>
 
       <div style={{ overflowX: 'auto', borderRadius: '10px', boxShadow: '0 1px 4px rgba(0,0,0,0.08)' }}>
-        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px', background: '#fff' }}>
-          <thead style={{ background: colors.navy }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px', background: dark.surfaceBg }}>
+          <thead style={{ background: dark.pageBg }}>
             <tr>
               {COLUMNS.map((c) => (
                 <th key={c.key} onClick={() => setSort(c.key)} scope="col"
                   aria-sort={sortKey === c.key ? (sortDir === 'asc' ? 'ascending' : 'descending') : 'none'}
                   style={{ textAlign: c.align, padding: '10px 12px', cursor: 'pointer', userSelect: 'none', whiteSpace: 'nowrap',
-                    color: sortKey === c.key ? colors.green : '#fff', fontSize: '12px', fontWeight: 700,
+                    color: sortKey === c.key ? dark.statusGreen : dark.textPrimary, fontSize: '12px', fontWeight: 700,
                     textTransform: 'uppercase', letterSpacing: '0.5px',
-                    ...(c.key === 'player' ? { position: 'sticky', left: 0, zIndex: 3, background: colors.navy } : {}) }}>
+                    ...(c.key === 'player' ? { position: 'sticky', left: 0, zIndex: 3, background: dark.pageBg } : {}) }}>
                   {c.label}{sortKey === c.key ? (sortDir === 'asc' ? ' ▲' : ' ▼') : ''}
                 </th>
               ))}
@@ -177,32 +177,32 @@ export default function EdgeReportPage() {
           <tbody>
             {rows.map((r, i) => {
               const strong = (r.label || '').startsWith('STRONG');
-              const rowBg = i % 2 ? '#fafcfd' : '#fff';
+              const rowBg = i % 2 ? mlbDark.rowStripe : dark.surfaceBg;
               return (
-                <tr key={i} style={{ borderTop: '1px solid #eef2f5', background: rowBg }}>
-                  <td style={{ padding: '9px 12px', textAlign: 'left', fontWeight: 600, color: colors.navy, whiteSpace: 'nowrap', position: 'sticky', left: 0, zIndex: 1, background: rowBg, borderRight: '2px solid #e3e9ed' }}>{flipName(r.player)}</td>
-                  <td style={{ padding: '9px 12px', textAlign: 'left', color: '#5a6b76' }}>{r.team || '—'}</td>
-                  <td style={{ padding: '9px 12px', textAlign: 'left', color: '#5a6b76' }}>{r.opp}</td>
-                  <td style={{ padding: '9px 12px', textAlign: 'left', color: '#5a6b76', whiteSpace: 'nowrap' }}>{r.pitcher}{r.hand ? ` (${r.hand})` : ''}</td>
-                  <td style={{ padding: '9px 12px', textAlign: 'left', color: '#5a6b76' }}>{PROP_LABELS[r.prop] || r.prop}</td>
+                <tr key={i} style={{ borderTop: `1px solid ${dark.border}`, background: rowBg }}>
+                  <td style={{ padding: '9px 12px', textAlign: 'left', fontWeight: 600, color: dark.textPrimary, whiteSpace: 'nowrap', position: 'sticky', left: 0, zIndex: 1, background: rowBg, borderRight: `2px solid ${mlbDark.stickyBorder}` }}>{flipName(r.player)}</td>
+                  <td style={{ padding: '9px 12px', textAlign: 'left', color: dark.textSecondary }}>{r.team || '—'}</td>
+                  <td style={{ padding: '9px 12px', textAlign: 'left', color: dark.textSecondary }}>{r.opp}</td>
+                  <td style={{ padding: '9px 12px', textAlign: 'left', color: dark.textSecondary, whiteSpace: 'nowrap' }}>{r.pitcher}{r.hand ? ` (${r.hand})` : ''}</td>
+                  <td style={{ padding: '9px 12px', textAlign: 'left', color: dark.textSecondary }}>{PROP_LABELS[r.prop] || r.prop}</td>
                   <td style={{ padding: '9px 12px', textAlign: 'center' }}>{r.line ?? '—'}</td>
                   <td style={{ padding: '9px 12px', textAlign: 'center', whiteSpace: 'nowrap' }}>
-                    <span style={{ fontWeight: 700, color: r.dir === 'OVER' ? colors.green : '#c0392b' }}>{r.dir}</span>
-                    {strong && <span style={{ marginLeft: '5px', fontSize: '10px', fontWeight: 700, color: colors.navy, background: colors.green, padding: '1px 5px', borderRadius: '3px' }}>STRONG</span>}
+                    <span style={{ fontWeight: 700, color: r.dir === 'OVER' ? mlbDark.overText : mlbDark.underText }}>{r.dir}</span>
+                    {strong && <span style={{ marginLeft: '5px', fontSize: '10px', fontWeight: 700, color: dark.accentText, background: dark.accentBg, padding: '1px 5px', borderRadius: '3px' }}>STRONG</span>}
                   </td>
-                  <td style={{ padding: '9px 12px', textAlign: 'left', color: r.odds_source === 'derived' ? colors.subtitleOnWhite : '#5a6b76', fontStyle: r.odds_source === 'derived' ? 'italic' : 'normal' }}>{titleBook(r)}</td>
+                  <td style={{ padding: '9px 12px', textAlign: 'left', color: r.odds_source === 'derived' ? dark.textMuted : dark.textSecondary, fontStyle: r.odds_source === 'derived' ? 'italic' : 'normal' }}>{titleBook(r)}</td>
                   <td style={{ padding: '9px 12px', textAlign: 'right', fontVariantNumeric: 'tabular-nums' }}>{fmtOdds(r)}</td>
-                  <td style={{ padding: '9px 12px', textAlign: 'right', fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: (r.edge > 0 && r.odds_source === 'book') ? colors.green : '#5a6b76' }}>{fmtPct(r)}</td>
-                  <td style={{ padding: '9px 12px', textAlign: 'right', fontVariantNumeric: 'tabular-nums', color: (r.ev > 0 && r.odds_source === 'book') ? colors.navy : '#5a6b76' }}>{fmtEv(r)}</td>
+                  <td style={{ padding: '9px 12px', textAlign: 'right', fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: (r.edge > 0 && r.odds_source === 'book') ? dark.statusGreen : dark.textSecondary }}>{fmtPct(r)}</td>
+                  <td style={{ padding: '9px 12px', textAlign: 'right', fontVariantNumeric: 'tabular-nums', color: (r.ev > 0 && r.odds_source === 'book') ? dark.textPrimary : dark.textSecondary }}>{fmtEv(r)}</td>
                 </tr>
               );
             })}
           </tbody>
         </table>
       </div>
-      {rows.length === 0 && <p style={{ textAlign: 'center', color: colors.textMuted, marginTop: '24px' }}>No props match those filters.</p>}
-      <div style={{ marginTop: '16px', padding: '12px 14px', background: '#f4f7f9', borderRadius: '8px', fontSize: '12px', color: '#5a6b76', lineHeight: 1.6 }}>
-        <strong style={{ color: colors.navy }}>Key:</strong> <strong>Line</strong> — the prop threshold (e.g. 0.5 = "to record a hit"). <strong>Pick</strong> — model's side (Over/Under); STRONG = highest conviction. <strong>Book</strong> — sportsbook offering the odds; "derived" = laddered from the 1.5 line for elite hitters with no 0.5 market. <strong>Odds</strong> — American odds, ~ indicates indicative (captured at generation). <strong>Edge</strong> — model probability minus the market's. <strong>EV/Unit</strong> — expected return per unit staked. Edge/EV show "—" for derived odds since they aren't a true market line.
+      {rows.length === 0 && <p style={{ textAlign: 'center', color: dark.textMuted, marginTop: '24px' }}>No props match those filters.</p>}
+      <div style={{ marginTop: '16px', padding: '12px 14px', background: mlbDark.footnoteBlockBg, borderRadius: '8px', fontSize: '12px', color: dark.textSecondary, lineHeight: 1.6 }}>
+        <strong style={{ color: dark.textPrimary }}>Key:</strong> <strong>Line</strong> — the prop threshold (e.g. 0.5 = "to record a hit"). <strong>Pick</strong> — model's side (Over/Under); STRONG = highest conviction. <strong>Book</strong> — sportsbook offering the odds; "derived" = laddered from the 1.5 line for elite hitters with no 0.5 market. <strong>Odds</strong> — American odds, ~ indicates indicative (captured at generation). <strong>Edge</strong> — model probability minus the market's. <strong>EV/Unit</strong> — expected return per unit staked. Edge/EV show "—" for derived odds since they aren't a true market line.
       </div>
     </div>
   );

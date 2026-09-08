@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { colors } from '../theme';
+import { dark, mlbDark } from '../theme';
 
 const PROP_LABELS = {
   hits: 'Hits', rbis: 'RBIs', hits_runs_rbis: 'H+R+RBI', walks: 'Walks',
@@ -22,11 +22,11 @@ function fmtConf(c) {
 }
 function DirBadge({ dir }) {
   if (!dir) return null;
-  return <span style={{ fontWeight: 700, color: dir === 'OVER' ? colors.green : '#c0392b' }}>{dir}</span>;
+  return <span style={{ fontWeight: 700, color: dir === 'OVER' ? mlbDark.overText : mlbDark.underText }}>{dir}</span>;
 }
 
 const thStyle = (align = 'left') => ({
-  textAlign: align, padding: '9px 12px', color: '#fff', fontSize: '11px',
+  textAlign: align, padding: '9px 12px', color: dark.textPrimary, fontSize: '11px',
   fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', whiteSpace: 'nowrap',
 });
 const tdStyle = (align = 'left', extra = {}) => ({
@@ -36,19 +36,19 @@ const tdStyle = (align = 'left', extra = {}) => ({
 function SectionTable({ title, blurb, columns, rows, emptyMsg }) {
   return (
     <section style={{ marginBottom: '40px' }}>
-      <h2 style={{ color: colors.navy, fontSize: '20px', fontWeight: 800, margin: '0 0 2px' }}>{title}</h2>
-      {blurb && <p style={{ color: colors.subtitleOnWhite, fontSize: '13px', margin: '0 0 12px' }}>{blurb}</p>}
+      <h2 style={{ color: dark.textPrimary, fontSize: '20px', fontWeight: 800, margin: '0 0 2px' }}>{title}</h2>
+      {blurb && <p style={{ color: dark.textSecondary, fontSize: '13px', margin: '0 0 12px' }}>{blurb}</p>}
       {(!rows || rows.length === 0) ? (
-        <p style={{ color: colors.textMuted, fontSize: '14px' }}>{emptyMsg || 'No picks today.'}</p>
+        <p style={{ color: dark.textMuted, fontSize: '14px' }}>{emptyMsg || 'No picks today.'}</p>
       ) : (
         <div style={{ overflowX: 'auto', borderRadius: '10px', boxShadow: '0 1px 4px rgba(0,0,0,0.08)' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px', background: '#fff' }}>
-            <thead style={{ background: colors.navy }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px', background: dark.surfaceBg }}>
+            <thead style={{ background: dark.pageBg }}>
               <tr>{columns.map((c, i) => <th key={i} scope="col" style={thStyle(c.align)}>{c.label}</th>)}</tr>
             </thead>
             <tbody>
               {rows.map((r, i) => (
-                <tr key={i} style={{ borderTop: '1px solid #eef2f5', background: i % 2 ? '#fafcfd' : '#fff' }}>
+                <tr key={i} style={{ borderTop: `1px solid ${dark.border}`, background: i % 2 ? mlbDark.rowStripe : dark.surfaceBg }}>
                   {columns.map((c, j) => <td key={j} style={tdStyle(c.align, c.cellStyle)}>{c.render(r)}</td>)}
                 </tr>
               ))}
@@ -72,9 +72,9 @@ export default function BestBetsPage() {
       .catch(() => { setError(true); setLoading(false); });
   }, []);
 
-  if (loading) return <div style={{ textAlign: 'center', padding: '60px', color: colors.textMuted }}>Loading best bets…</div>;
+  if (loading) return <div style={{ textAlign: 'center', padding: '60px', color: dark.textMuted }}>Loading best bets…</div>;
   if (error || !data) return (
-    <div style={{ textAlign: 'center', padding: '60px', color: colors.textMuted }}>
+    <div style={{ textAlign: 'center', padding: '60px', color: dark.textMuted }}>
       Best bets unavailable right now. Check back after today's slate posts.
     </div>
   );
@@ -88,8 +88,8 @@ export default function BestBetsPage() {
     return s;
   })();
 
-  const navyBold = { fontWeight: 600, color: colors.navy, whiteSpace: 'nowrap' };
-  const muted = { color: '#5a6b76' };
+  const navyBold = { fontWeight: 600, color: dark.textPrimary, whiteSpace: 'nowrap' };
+  const muted = { color: dark.textSecondary };
 
   const top8Cols = [
     { label: 'Player', align: 'left', cellStyle: navyBold, render: (r) => r.player },
@@ -99,7 +99,7 @@ export default function BestBetsPage() {
     { label: 'Proj', align: 'center', render: (r) => (r.proj ?? '—') },
     { label: 'Line', align: 'center', render: (r) => (r.line ?? '—') },
     { label: 'Pick', align: 'center', render: (r) => <DirBadge dir={r.dir} /> },
-    { label: 'Conf', align: 'right', cellStyle: { fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: colors.navy }, render: (r) => fmtConf(r.conf) },
+    { label: 'Conf', align: 'right', cellStyle: { fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: dark.textPrimary }, render: (r) => fmtConf(r.conf) },
     { label: 'L10', align: 'right', cellStyle: muted, render: (r) => r.l10 || '—' },
     { label: 'Odds (~)', align: 'right', cellStyle: { ...muted, fontVariantNumeric: 'tabular-nums' }, render: (r) => fmtOdds(r.odds) },
   ];
@@ -107,21 +107,21 @@ export default function BestBetsPage() {
   const perGameCols = [
     { label: 'Game', align: 'left', cellStyle: navyBold, render: (r) => r.game },
     { label: 'Time', align: 'left', cellStyle: muted, render: (r) => r.time || '—' },
-    { label: 'Player', align: 'left', cellStyle: { fontWeight: 600, color: colors.navy }, render: (r) => r.player },
+    { label: 'Player', align: 'left', cellStyle: { fontWeight: 600, color: dark.textPrimary }, render: (r) => r.player },
     { label: 'Prop', align: 'left', cellStyle: muted, render: (r) => propLabel(r.prop) },
     { label: 'Line', align: 'center', render: (r) => (r.line ?? '—') },
     { label: 'Pick', align: 'center', render: (r) => <DirBadge dir={r.dir} /> },
-    { label: 'Conf', align: 'right', cellStyle: { fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: colors.navy }, render: (r) => fmtConf(r.conf) },
+    { label: 'Conf', align: 'right', cellStyle: { fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: dark.textPrimary }, render: (r) => fmtConf(r.conf) },
     { label: 'Odds (~)', align: 'right', cellStyle: { ...muted, fontVariantNumeric: 'tabular-nums' }, render: (r) => fmtOdds(r.odds) },
   ];
 
   const topHitCols = [
     { label: 'Game', align: 'left', cellStyle: navyBold, render: (r) => r.game },
     { label: 'Time', align: 'left', cellStyle: muted, render: (r) => r.time || '—' },
-    { label: 'Player', align: 'left', cellStyle: { fontWeight: 600, color: colors.navy }, render: (r) => r.player },
+    { label: 'Player', align: 'left', cellStyle: { fontWeight: 600, color: dark.textPrimary }, render: (r) => r.player },
     { label: 'Team', align: 'left', cellStyle: muted, render: (r) => r.team || '—' },
     { label: 'Proj Hits', align: 'center', render: (r) => (r.proj_hits ?? '—') },
-    { label: 'Conf', align: 'right', cellStyle: { fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: colors.navy }, render: (r) => fmtConf(r.conf) },
+    { label: 'Conf', align: 'right', cellStyle: { fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: dark.textPrimary }, render: (r) => fmtConf(r.conf) },
     { label: 'L10', align: 'right', cellStyle: muted, render: (r) => r.l10 || '—' },
     { label: 'Streak', align: 'right', cellStyle: muted, render: (r) => (r.streak ?? '—') },
   ];
@@ -141,8 +141,8 @@ export default function BestBetsPage() {
         <link rel="canonical" href={url} />
       </Helmet>
       <div style={{ textAlign: 'center', marginBottom: '28px' }}>
-        <h1 style={{ color: colors.navy, fontSize: '30px', fontWeight: 800, margin: 0 }}>Best Bets</h1>
-        <p style={{ color: '#5a6b76', fontSize: '14px', margin: '6px 0 0' }}>
+        <h1 style={{ color: dark.textPrimary, fontSize: '30px', fontWeight: 800, margin: 0 }}>Best Bets</h1>
+        <p style={{ color: dark.textSecondary, fontSize: '14px', margin: '6px 0 0' }}>
           Today's sharpest Hits and H+R+RBI picks, ranked by model confidence. {niceDate && `Slate: ${niceDate}.`}
         </p>
       </div>
@@ -165,8 +165,8 @@ export default function BestBetsPage() {
         columns={topHitCols}
         rows={blocks.top_hit}
       />
-      <div style={{ marginTop: '8px', padding: '12px 14px', background: '#f4f7f9', borderRadius: '8px', fontSize: '12px', color: '#5a6b76', lineHeight: 1.6 }}>
-        <strong style={{ color: colors.navy }}>Key:</strong> <strong>Proj</strong> — model's projected stat value. <strong>Line</strong> — the betting threshold. <strong>Pick</strong> — model's side (Over/Under). <strong>Conf</strong> — confidence score (5.0–9.85). <strong>L10</strong> — hit rate over the player's last 10 games. <strong>Streak</strong> — current games with a hit. <strong>Odds</strong> — American odds; ~ means indicative, captured at generation (lines move by game time). Best Bets show only Hits and H+R+RBI props.
+      <div style={{ marginTop: '8px', padding: '12px 14px', background: mlbDark.footnoteBlockBg, borderRadius: '8px', fontSize: '12px', color: dark.textSecondary, lineHeight: 1.6 }}>
+        <strong style={{ color: dark.textPrimary }}>Key:</strong> <strong>Proj</strong> — model's projected stat value. <strong>Line</strong> — the betting threshold. <strong>Pick</strong> — model's side (Over/Under). <strong>Conf</strong> — confidence score (5.0–9.85). <strong>L10</strong> — hit rate over the player's last 10 games. <strong>Streak</strong> — current games with a hit. <strong>Odds</strong> — American odds; ~ means indicative, captured at generation (lines move by game time). Best Bets show only Hits and H+R+RBI props.
       </div>
     </div>
   );
