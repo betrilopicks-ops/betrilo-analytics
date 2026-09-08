@@ -24,9 +24,32 @@ while read local_ref local_sha remote_ref remote_sha; do
         # Block if pushing LOCAL main (refs/heads/main) to origin/main,
         # regardless of which branch is currently checked out.
         if [ "$local_ref" = "refs/heads/main" ]; then
-            # Allow override
+            # Allow override — but show what's about to ship
             if [ "$NFL_GATE_MET" = "1" ]; then
-                echo "[pre-push] NFL_GATE_MET=1 — override accepted. Pushing local main to origin/main."
+                echo ""
+                echo "[pre-push] NFL_GATE_MET=1 — override accepted."
+                echo ""
+                # Show diff summary so operator can abort if needed
+                if [ "$remote_sha" != "0000000000000000000000000000000000000000" ]; then
+                    commit_count=$(git rev-list --count "$remote_sha".."$local_sha" 2>/dev/null)
+                    echo "  Pushing $commit_count commit(s) to origin/main."
+                    echo ""
+                    changed=$(git diff --name-only "$remote_sha".."$local_sha" 2>/dev/null)
+                    file_count=$(echo "$changed" | grep -c . 2>/dev/null)
+                    echo "  Changed files ($file_count):"
+                    echo "$changed" | head -15 | while IFS= read -r f; do echo "    $f"; done
+                    [ "$file_count" -gt 15 ] && echo "    ... and $((file_count - 15)) more"
+                    echo ""
+                    # Show route changes
+                    route_changes=$(git diff "$remote_sha".."$local_sha" -- src/App.js 2>/dev/null | grep '^[+-].*path=' | grep -v '^[+-][+-][+-]' || true)
+                    if [ -n "$route_changes" ]; then
+                        echo "  Route changes in App.js:"
+                        echo "$route_changes" | while IFS= read -r line; do echo "    $line"; done
+                        echo ""
+                    fi
+                fi
+                echo "  Ctrl+C now to abort, or wait for push to proceed."
+                echo ""
                 exit 0
             fi
 

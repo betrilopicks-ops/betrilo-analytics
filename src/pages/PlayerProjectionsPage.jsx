@@ -279,7 +279,7 @@ export default function PlayerProjectionsPage() {
             {' — '}
             <span style={{ color: '#8a9ba8' }}>
               updates on confirmed lineups throughout the day.{' '}
-              <a href="/best-bets" style={{ color: colors.navy, textDecoration: 'underline' }}>Best Bets</a>
+              <a href="/mlb/best-bets" style={{ color: colors.navy, textDecoration: 'underline' }}>Best Bets</a>
               {' '}shows today's locked morning picks.
             </span>
           </p>
