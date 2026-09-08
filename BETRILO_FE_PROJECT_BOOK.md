@@ -1,6 +1,6 @@
 # @betrilopicks Frontend (betrilo.com) — Technical Project Book
 
-**Version:** BFEv0.18.0 | **Last Updated:** September 3, 2026 | **Includes:** Theme guard in CI; Contrast failures fixed + theme token guard; Dark theme secondary-text fix; Dark theme (NFL, via theme layer); Light color scheme (MLB, pending migration); NFL FE fixes from preview review; NFL meta cleanup + noindex; Helmet title fix + error boundary; NFL preview branch + production gate; NFL freshness indicator; Validation banner + NFL /status surfaces; NFL Wave 1 pages + sport-scoped nav + shared SortableTable; NFL site spec (multi-sport extension); Pitcher Report sort by start time (games now render earliest→latest); Batter Splits doubleheader fix (DH players appear twice with G1/G2 labels and correct per-game opposing pitcher; team filter uses team_abbr for clean DH grouping); /status false-alarm fix (Best Bets, Edge Report, Batter Splits switched to freshness-only health — these surfaces don't count raw games, so their record counts falsely mismatched the MLB schedule, producing spurious yellow flags on healthy days; now noGameCount: healthy = updated today, no game-count comparison; operator sees all-green banner when pipeline is clean); System Status page (/status — public but unlisted, not in nav/sitemap; pipeline health + data freshness dashboard for remote monitoring during travel; per-surface cards showing last_refreshed timestamp (absolute + relative ET), health color (green/yellow/red based on today-freshness + game-count cross-check vs MLB Stats API schedule), game count vs expected, record counts; top-line banner summarizes all-healthy vs attention-needed; pipeline health_latest.json verdict + step-level status surfaced; schedule cross-check: MLB Stats API primary with starting-lineups fallback; auto-refresh every 5 min + manual refresh button; mobile-friendly; per-surface error isolation; noindex/nofollow meta; built for 7/29-8/3 travel window); VP AB column on Player Projections page (column relabeled VP AB, reads vp_ab from JSON instead of vp_pa; cellValue switch and td render updated; footer Key text updated to "VP AB/H/HR/xwOBA — career at-bats and performance vs. today's probable pitcher"); H+R+RBI column on Player Projections page (proj_hrrbi passthrough from DB — same value as Results page; sortable; 327/520 batters covered; footer Key corrected); Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema; BvP guide: crawlable static HTML at /mlb/batter-vs-pitcher-guide (~800 words, content in served HTML pre-JS); Footer support mailto (support@betrilo.com; green on navy; legible contrast); Game dropdown chronological sort (PlayerProjections + StartingLineups)
+**Version:** BFEv0.19.0 | **Last Updated:** September 8, 2026 | **Includes:** Vercel storage fix (sourcemap + data prune + deployment cleanup); Theme guard in CI; Contrast failures fixed + theme token guard; Dark theme secondary-text fix; Dark theme (NFL, via theme layer); Light color scheme (MLB, pending migration); NFL FE fixes from preview review; NFL meta cleanup + noindex; Helmet title fix + error boundary; NFL preview branch + production gate; NFL freshness indicator; Validation banner + NFL /status surfaces; NFL Wave 1 pages + sport-scoped nav + shared SortableTable; NFL site spec (multi-sport extension); Pitcher Report sort by start time (games now render earliest→latest); Batter Splits doubleheader fix (DH players appear twice with G1/G2 labels and correct per-game opposing pitcher; team filter uses team_abbr for clean DH grouping); /status false-alarm fix (Best Bets, Edge Report, Batter Splits switched to freshness-only health — these surfaces don't count raw games, so their record counts falsely mismatched the MLB schedule, producing spurious yellow flags on healthy days; now noGameCount: healthy = updated today, no game-count comparison; operator sees all-green banner when pipeline is clean); System Status page (/status — public but unlisted, not in nav/sitemap; pipeline health + data freshness dashboard for remote monitoring during travel; per-surface cards showing last_refreshed timestamp (absolute + relative ET), health color (green/yellow/red based on today-freshness + game-count cross-check vs MLB Stats API schedule), game count vs expected, record counts; top-line banner summarizes all-healthy vs attention-needed; pipeline health_latest.json verdict + step-level status surfaced; schedule cross-check: MLB Stats API primary with starting-lineups fallback; auto-refresh every 5 min + manual refresh button; mobile-friendly; per-surface error isolation; noindex/nofollow meta; built for 7/29-8/3 travel window); VP AB column on Player Projections page (column relabeled VP AB, reads vp_ab from JSON instead of vp_pa; cellValue switch and td render updated; footer Key text updated to "VP AB/H/HR/xwOBA — career at-bats and performance vs. today's probable pitcher"); H+R+RBI column on Player Projections page (proj_hrrbi passthrough from DB — same value as Results page; sortable; 327/520 batters covered; footer Key corrected); Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema; BvP guide: crawlable static HTML at /mlb/batter-vs-pitcher-guide (~800 words, content in served HTML pre-JS); Footer support mailto (support@betrilo.com; green on navy; legible contrast); Game dropdown chronological sort (PlayerProjections + StartingLineups)
 
 ---
 
@@ -853,3 +853,39 @@ Exits with code 1 on failure. Can run in CI alongside the build. Found and fixed
 **Standing rule (Step 4):** Four consecutive sessions shipped pages with book-recorded migrations that weren't actually applied. Root cause: batch find-and-replace creating tokens that don't exist (dark.textPrimaryMuted, dark.pageBgLight, dark.pageBg as text color), which CSS drops silently with no error. The theme token guard is now in the build pipeline and must not be removed to make a build pass. If it blocks, fix the code, not the guard.
 
 **Version:** BFEv0.17.0 → **BFEv0.18.0** (MINOR — CI infrastructure)
+
+---
+
+### Session: September 8, 2026 — BFEv0.18.0 → BFEv0.19.0 — Vercel Storage Fix
+
+Vercel Deployment Storage hit 100% of the 10 GB Hobby tier. Root cause: ~318 deployments/month (~10.6/day from 30-min lineup refresh) × 22 MB each.
+
+**Source maps disabled:** `GENERATE_SOURCEMAP=false` in committed `.env`. Also set as Vercel project env var (Production + Preview). JS bundle: 2.3 MB → 420 KB. No error-reporting service consumes maps. Saves ~600 MB/month.
+
+**Data pruned from publish worktree:**
+- `data/` archive mirror removed entirely (37 MB duplicate of `public/data/`). `export_paths.py` `publish_targets()` now returns `[public/data/]` only.
+- `matchups_2026-06-19.json` (11 MB June artifact) deleted — no page reads it.
+- 80 date-stamped `game_matchups_2026-*.json` files (3.5 MB) deleted — pages only fetch `*_latest.json`.
+- 4 NFL date-stamped matchup files deleted.
+- All verified by Phase 0 durability check: every fetch() path across 15 pages + StatusPage reads `*_latest.json` only. No page reads date-stamped files.
+
+**Durability (gitignore):** Added patterns to publish worktree `.gitignore`:
+- `/data/` — prevents archive mirror re-creation
+- `public/data/game_matchups_20*-*.json` — prevents date-stamped accumulation
+- `public/data/matchups_20*-*.json` — prevents stale artifacts
+
+**MLB pipeline writers fixed (BMLBv3.50.0):**
+- `push_matchup_data.py`: staging narrowed to `*_latest.json` only, no `data/` paths
+- `afternoon_refresh.py`: removed `data/` mirror + date-stamped staging
+- `export_matchups.py`: date-stamped files written locally only, not to publish worktree
+- `export_paths.py`: `publish_targets()` returns `[public/data/]` only
+
+**Repo repacked:** 133.56 MB loose objects → 12.17 MB packed (for clone/build time).
+
+**Deployment cleanup:** Old deployments (>7 days) to be bulk-deleted via Vercel API (Phase 3, pending production verification). On Hobby plan, no configurable retention — must be done manually or automated. Recommended: weekly cleanup script (not built this session).
+
+**Per-deploy size:** 22 MB → ~19 MB (source maps -1.9 MB, data mirror gone).
+**Projected monthly burn:** ~19 MB × 318 deploys = ~6 GB/month. With deployment cleanup keeping only 7 days of history (~70 deploys × 19 MB = ~1.3 GB retained), well under 10 GB cap.
+**Item 4 (lineup cadence 30→60 min):** Not needed if deployment cleanup runs weekly.
+
+**Version progression:** BFEv0.18.0 → **BFEv0.19.0** (MINOR — changes what gets deployed)
