@@ -1,0 +1,64 @@
+#!/bin/bash
+#
+# Pre-push hook: blocks pushes of local main to origin/main while
+# the NFL production gate is unmet (layout approval + shadow validation,
+# §BFEv0.11.0). Local main contains unreleased NFL page code that would
+# auto-deploy to production via Vercel.
+#
+# This hook does NOT block the publish-main worktree's data pushes —
+# those push HEAD:main from the publish-main branch, so local_ref is
+# refs/heads/publish-main, not refs/heads/main.
+#
+# Override: NFL_GATE_MET=1 git push origin main
+# Note: --no-verify bypasses all hooks including this one.
+#
+# Wire: git config core.hooksPath scripts/hooks
+# Tracked: BFEv0.22.0 (September 8, 2026)
+
+remote="$1"
+url="$2"
+
+while read local_ref local_sha remote_ref remote_sha; do
+    # Only care about pushes TO refs/heads/main on origin
+    if [ "$remote_ref" = "refs/heads/main" ]; then
+        # Block if pushing LOCAL main (refs/heads/main) to origin/main,
+        # regardless of which branch is currently checked out.
+        if [ "$local_ref" = "refs/heads/main" ]; then
+            # Allow override
+            if [ "$NFL_GATE_MET" = "1" ]; then
+                echo "[pre-push] NFL_GATE_MET=1 — override accepted. Pushing local main to origin/main."
+                exit 0
+            fi
+
+            echo ""
+            echo "============================================================"
+            echo "  BLOCKED: push of local main to origin/main"
+            echo "============================================================"
+            echo ""
+            echo "  Local main contains unreleased NFL page code (BFEv0.7.0+)"
+            echo "  that would auto-deploy to production via Vercel."
+            echo ""
+            echo "  The NFL production gate is NOT yet met:"
+            echo "    - Layout approval (operator review of nfl-preview)"
+            echo "    - Shadow validation (3 weeks graded, STRONG >= 54%)"
+            echo "  See §BFEv0.11.0 in BETRILO_FE_PROJECT_BOOK.md"
+            echo ""
+            echo "  To push data-only from the publish worktree:"
+            echo "    cd E:/Betrilo/betrilo-analytics-publish"
+            echo "    git push origin HEAD:main"
+            echo ""
+            echo "  To override (NFL gate met, operator approved):"
+            echo "    NFL_GATE_MET=1 git push origin main"
+            echo ""
+            echo "  Note: --no-verify bypasses all git hooks including this one."
+            echo ""
+            echo "============================================================"
+            exit 1
+        fi
+
+        # local_ref is NOT refs/heads/main — e.g. refs/heads/publish-main
+        # via HEAD:main. These are data-only pushes. Allow.
+    fi
+done
+
+exit 0
