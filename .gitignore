@@ -33,3 +33,8 @@ yarn-error.log*
 public/data/game_matchups_20[0-9][0-9]-*.json
 public/data/matchups_20[0-9][0-9]-*.json
 public/data/nfl_game_matchups_20[0-9][0-9]-*.json
+
+# Game log exports — consumed only by unreleased feature/game-logs-page branch.
+# Removed from staging in BMLBv3.51.0 / BFEv0.20.0. Re-enable when branch merges.
+public/data/batter_game_logs_latest.json
+public/data/pitcher_game_logs_latest.json
