@@ -10,7 +10,8 @@ const mlbNavItems = [
   { to: '/mlb/batter-splits', label: 'Batter Splits' },
   { to: '/mlb/best-bets', label: 'Best Bets' },
   { to: '/mlb/player-projections', label: 'Player Projections' },
-  { to: '/mlb/game-logs', label: 'Game Logs' },
+  // Game Logs removed — page on feature/game-logs-page, data unpublished (BFEv0.20.0).
+  // Re-add when branch merges and staging lines are restored.
   { to: '/mlb/edge-report', label: 'Edge Report' },
   { to: '/mlb/results', label: 'Results' },
   { to: '/mlb/track-record', label: 'Track Record' },
