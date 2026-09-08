@@ -224,7 +224,7 @@ export default function MatchupsPage() {
                 Showing matchups for {prettyDate}
               </div>
             )}
-            <div style={{ color: '#999', fontSize: '12px', marginTop: '4px' }}>
+            <div style={{ color: '#586771', fontSize: '12px', marginTop: '4px' }}>
               Batter vs Pitcher stats cover {statsMinYear || '2021'} to present.
             </div>
           </div>

@@ -68,6 +68,72 @@ export const dark = {
   bannerText: '#e8eef2',
 };
 
+// ── MLB data-viz tokens (dark bg — used during MLB dark migration) ────────
+// Conditional colors for data visualization, badges, and status indicators.
+// Each is verified against dark.pageBg (#0B2331) in check-contrast.js.
+// Values tuned for dark backgrounds — some differ from current light-theme values.
+export const mlbDark = {
+  // Result badges
+  hitBg: '#19C93E',              // HIT badge bg — 7.3:1 on pageBg
+  hitText: '#0B2331',            // HIT badge text
+  missBg: '#f27272',             // MISS badge bg — was #c0392b (3.0:1 FAIL), now matches dark.statusRed (5.7:1)
+  missText: '#0B2331',           // MISS badge text
+  pushBg: '#16344a',             // PUSH badge bg
+  pushText: '#9fb3c0',           // PUSH badge text
+
+  // Calendar heat grid (TrackRecord)
+  heatHigh: '#19C93E',           // >= 75% — 7.3:1 on pageBg
+  heatGood: '#4eca6a',           // >= 65% — was #1a8a3a (3.6:1 FAIL), brightened to 6.0:1
+  heatMid: '#16344a',            // >= 55% — surface bg with text accent
+  heatMidText: '#19C93E',        // text on heatMid
+  heatLow: '#16344a',            // >= 45%
+  heatLowText: '#9fb3c0',        // text on heatLow
+  heatBad: '#1a2a38',            // < 45%
+  heatBadText: '#f27272',        // red text on heatBad
+  heatAllStar: '#1e4460',        // all-star break
+  heatNoData: '#16344a',         // no-data day
+  heatNoDataText: '#7e9fb4',     // text on no-data
+  heatFuture: '#0B2331',         // future day
+  heatFutureText: '#3a5060',     // text on future
+
+  // Pitcher Report badges
+  hotBadgeBg: 'rgba(255,90,50,0.18)',
+  hotBadgeText: '#ff7043',       // 5.9:1 on pageBg
+  hotBadgeBorder: 'rgba(255,112,67,0.35)',
+  coldBadgeBg: 'rgba(66,165,245,0.15)',
+  coldBadgeText: '#64b5f6',      // 7.3:1 on pageBg
+  coldBadgeBorder: 'rgba(100,181,246,0.30)',
+  steadyBg: 'rgba(255,255,255,0.06)',
+  steadyText: '#7e9fb4',         // matches dark.textMuted
+  steadyBorder: 'rgba(255,255,255,0.08)',
+  scratchedText: '#f27272',      // was #ef5350 (4.6:1), now matches statusRed (5.7:1)
+  scratchedBg: 'rgba(242,114,114,0.12)',
+  vintageText: '#ffb74d',        // 9.3:1 on pageBg
+  vintageBg: 'rgba(255,183,77,0.12)',
+
+  // Direction badges (Best Bets, Edge Report)
+  overText: '#19C93E',           // OVER direction
+  underText: '#f27272',          // UNDER — was #c0392b (3.0:1 FAIL), now 5.7:1
+
+  // Status (StatusPage)
+  statusHealthy: '#19C93E',
+  statusAttention: '#e8a838',    // was #eab308 (similar), unified to dark.statusAmber
+  statusError: '#f27272',        // was #ef4444, unified to dark.statusRed
+
+  // Projected/Confirmed (StartingLineups)
+  confirmedBg: '#19C93E',
+  confirmedText: '#0B2331',
+  projectedBg: 'rgba(159,179,192,0.15)',
+  projectedText: '#9fb3c0',
+
+  // Table stripes and surfaces
+  rowStripe: '#16344a',          // alternating row (was #fafcfd)
+  rowStripeBorder: '#1e4460',    // row border (was #eef2f5)
+  footnoteBlockBg: '#16344a',   // footer/key block (was #f4f7f9)
+  stickyBorder: '#1e4460',       // sticky column border (was #e3e9ed)
+  disabledBg: '#1e4460',         // disabled button (was #d4e1ea)
+};
+
 // ── Semantic tokens: LIGHT theme (MLB pages, current production) ───────────
 // MLB pages continue using inline colors from the `colors` export until
 // migrated. This object exists so the migration has a target, not because
@@ -77,7 +143,7 @@ export const light = {
   surfaceBg: '#f0f4f7',
   textPrimary: '#0B2331',
   textSecondary: '#586771',
-  textMuted: '#999',
+  textMuted: '#586771',          // was #999 (2.8:1 FAIL) — fixed to 5.8:1 on white
   accentBg: '#19C93E',
   accentText: '#0B2331',
 };
