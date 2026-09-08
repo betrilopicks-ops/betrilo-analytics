@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-09-08",
-  "last_refreshed": "2026-09-08T17:32:06-04:00",
+  "last_refreshed": "2026-09-08T18:32:05-04:00",
   "games": 15,
-  "pitchers": 29,
+  "pitchers": 30,
   "coverage": {
-    "full_2026": 28,
+    "full_2026": 29,
     "fallback_2025": 1,
     "thin_no_data": 0
   },
@@ -1510,20 +1510,66 @@
           "side": "home",
           "team": "SEA",
           "opponent": "TEX",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Bryce Miller",
+          "pitcher_id": 682243,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 4,
+            "l": 8,
+            "era": "4.01",
+            "whip": "1.11"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.282,
+            "whiff_rate": 0.216,
+            "bb_rate": 0.069,
+            "xwoba_against": 0.267,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 40.4,
+              "velo": 96.2
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 13.3,
+              "velo": 88.1
+            },
+            {
+              "pitch": "Sweeper",
+              "usage_pct": 6.7,
+              "velo": 84.0
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.287,
+              "ops_against": 0.657
+            },
+            "vs_rhb": {
+              "k_rate": 0.262,
+              "ops_against": 0.67
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.249,
+              "whiff_rate": 0.191,
+              "xwoba": 0.316,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.282,
+              "whiff_rate": 0.216,
+              "xwoba": 0.267
+            },
+            "trend": "cold",
+            "note": "K% down 3.3pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
