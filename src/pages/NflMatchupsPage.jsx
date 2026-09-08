@@ -251,7 +251,7 @@ export default function NflMatchupsPage() {
         <NflPageWrapper>
           {/* Header */}
           <div style={{ marginBottom: '15px' }}>
-            <h1 style={{ margin: '0 0 4px 0', fontSize: '30px', fontWeight: 800 }}>
+            <h1 style={{ color: dark.textPrimary, margin: '0 0 4px 0', fontSize: '30px', fontWeight: 800 }}>
               Player vs. Defense (DvP){meta.week ? ` — Week ${meta.week}` : ''}
             </h1>
             {meta.week && (

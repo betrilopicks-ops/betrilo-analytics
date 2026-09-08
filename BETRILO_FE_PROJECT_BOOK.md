@@ -1,6 +1,6 @@
 # @betrilopicks Frontend (betrilo.com) — Technical Project Book
 
-**Version:** BFEv0.19.0 | **Last Updated:** September 8, 2026 | **Includes:** Vercel storage fix (sourcemap + data prune + deployment cleanup); Theme guard in CI; Contrast failures fixed + theme token guard; Dark theme secondary-text fix; Dark theme (NFL, via theme layer); Light color scheme (MLB, pending migration); NFL FE fixes from preview review; NFL meta cleanup + noindex; Helmet title fix + error boundary; NFL preview branch + production gate; NFL freshness indicator; Validation banner + NFL /status surfaces; NFL Wave 1 pages + sport-scoped nav + shared SortableTable; NFL site spec (multi-sport extension); Pitcher Report sort by start time (games now render earliest→latest); Batter Splits doubleheader fix (DH players appear twice with G1/G2 labels and correct per-game opposing pitcher; team filter uses team_abbr for clean DH grouping); /status false-alarm fix (Best Bets, Edge Report, Batter Splits switched to freshness-only health — these surfaces don't count raw games, so their record counts falsely mismatched the MLB schedule, producing spurious yellow flags on healthy days; now noGameCount: healthy = updated today, no game-count comparison; operator sees all-green banner when pipeline is clean); System Status page (/status — public but unlisted, not in nav/sitemap; pipeline health + data freshness dashboard for remote monitoring during travel; per-surface cards showing last_refreshed timestamp (absolute + relative ET), health color (green/yellow/red based on today-freshness + game-count cross-check vs MLB Stats API schedule), game count vs expected, record counts; top-line banner summarizes all-healthy vs attention-needed; pipeline health_latest.json verdict + step-level status surfaced; schedule cross-check: MLB Stats API primary with starting-lineups fallback; auto-refresh every 5 min + manual refresh button; mobile-friendly; per-surface error isolation; noindex/nofollow meta; built for 7/29-8/3 travel window); VP AB column on Player Projections page (column relabeled VP AB, reads vp_ab from JSON instead of vp_pa; cellValue switch and td render updated; footer Key text updated to "VP AB/H/HR/xwOBA — career at-bats and performance vs. today's probable pitcher"); H+R+RBI column on Player Projections page (proj_hrrbi passthrough from DB — same value as Results page; sortable; 327/520 batters covered; footer Key corrected); Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema; BvP guide: crawlable static HTML at /mlb/batter-vs-pitcher-guide (~800 words, content in served HTML pre-JS); Footer support mailto (support@betrilo.com; green on navy; legible contrast); Game dropdown chronological sort (PlayerProjections + StartingLineups)
+**Version:** BFEv0.22.1 | **Last Updated:** September 8, 2026 | **Includes:** Hook file tracked + game_logs breadcrumb on feature branch + NFL version trace; Tracked pre-push hook (scripts/hooks/) + branch-check fix (local_ref not current_branch); Pre-push hook blocks accidental NFL deploy + source map .env on origin/main + book reconciliation; Preview branch game_logs impact documented; Remove game_logs from deploys (11.9 MB → 0; per-deploy 19 MB → 6.5 MB) + weekly cleanup script; Phase 3 deployment cleanup (324 old deployments deleted, ~6 GB reclaimed); Vercel storage fix (sourcemap + data prune + deployment cleanup); Theme guard in CI; Contrast failures fixed + theme token guard; Dark theme secondary-text fix; Dark theme (NFL, via theme layer); Light color scheme (MLB, pending migration); NFL FE fixes from preview review; NFL meta cleanup + noindex; Helmet title fix + error boundary; NFL preview branch + production gate; NFL freshness indicator; Validation banner + NFL /status surfaces; NFL Wave 1 pages + sport-scoped nav + shared SortableTable; NFL site spec (multi-sport extension); Pitcher Report sort by start time (games now render earliest→latest); Batter Splits doubleheader fix (DH players appear twice with G1/G2 labels and correct per-game opposing pitcher; team filter uses team_abbr for clean DH grouping); /status false-alarm fix (Best Bets, Edge Report, Batter Splits switched to freshness-only health — these surfaces don't count raw games, so their record counts falsely mismatched the MLB schedule, producing spurious yellow flags on healthy days; now noGameCount: healthy = updated today, no game-count comparison; operator sees all-green banner when pipeline is clean); System Status page (/status — public but unlisted, not in nav/sitemap; pipeline health + data freshness dashboard for remote monitoring during travel; per-surface cards showing last_refreshed timestamp (absolute + relative ET), health color (green/yellow/red based on today-freshness + game-count cross-check vs MLB Stats API schedule), game count vs expected, record counts; top-line banner summarizes all-healthy vs attention-needed; pipeline health_latest.json verdict + step-level status surfaced; schedule cross-check: MLB Stats API primary with starting-lineups fallback; auto-refresh every 5 min + manual refresh button; mobile-friendly; per-surface error isolation; noindex/nofollow meta; built for 7/29-8/3 travel window); VP AB column on Player Projections page (column relabeled VP AB, reads vp_ab from JSON instead of vp_pa; cellValue switch and td render updated; footer Key text updated to "VP AB/H/HR/xwOBA — career at-bats and performance vs. today's probable pitcher"); H+R+RBI column on Player Projections page (proj_hrrbi passthrough from DB — same value as Results page; sortable; 327/520 batters covered; footer Key corrected); Footer tagline fix, Player Projections last-refreshed timestamp + lineup status display, Starting Lineups page (/mlb/starting-lineups; LIVE — merged to main 2026-06-27), Projected-lineups note bugfix (text color contrast; forceProjected test param), Lineups polish: projected-note solid bg + updated wording; TWP→P/DH position display; SEO foundation: react-helmet-async per-page meta + OG + canonical; sitemap.xml; robots.txt; JSON-LD homepage schema; BvP guide: crawlable static HTML at /mlb/batter-vs-pitcher-guide (~800 words, content in served HTML pre-JS); Footer support mailto (support@betrilo.com; green on navy; legible contrast); Game dropdown chronological sort (PlayerProjections + StartingLineups)
 
 ---
 
@@ -274,6 +274,26 @@ BMLBv3.28.0). Data-source: Branch B — new JSON required. Pending preview revie
 | `src/pages/PlayerProjectionsPage.jsx` | Column key `vp_pa`→`vp_ab`, label `vP PA`→`VP AB`; cellValue switch case updated; td render updated; footer Key text: `vP AVG/xwOBA` → `VP AB/H/HR/xwOBA — career at-bats and performance vs. today's probable pitcher` |
 
 **Version:** BFEv0.3.4 → **BFEv0.3.5** (PATCH — label + field key change, new data field from pipeline)
+
+---
+
+### Session: July 22, 2026 — BFEv0.3.5 → BFEv0.4.0 — System Status Page (/status)
+
+*Reconstructed from git history (SHA `207c164`, `3b5c88a`). Original session not logged.*
+
+Public but unlisted pipeline health dashboard at `/status`. Per-surface cards showing last_refreshed timestamp (absolute + relative ET), health color (green/yellow/red based on today-freshness + game-count cross-check vs MLB Stats API schedule), game count vs expected, record counts. Top-line banner summarizes all-healthy vs attention-needed. Pipeline health_latest.json verdict + step-level status surfaced. Schedule cross-check: MLB Stats API primary with starting-lineups fallback. Auto-refresh every 5 min + manual refresh button. Mobile-friendly. Per-surface error isolation. noindex/nofollow meta. Built for 7/29-8/3 travel window.
+
+**Version:** BFEv0.3.5 → **BFEv0.4.0** (MINOR — new page)
+
+---
+
+### Session: July 22, 2026 — BFEv0.4.0 → BFEv0.4.1 — /status False-Alarm Fix
+
+*Reconstructed from git history (SHA `6e8c713`). Original session not logged.*
+
+Best Bets, Edge Report, Batter Splits switched to freshness-only health — these surfaces don't count raw games, so their record counts falsely mismatched the MLB schedule, producing spurious yellow flags on healthy days. Now noGameCount: healthy = updated today, no game-count comparison. Operator sees all-green banner when pipeline is clean.
+
+**Version:** BFEv0.4.0 → **BFEv0.4.1** (PATCH — health check fix)
 
 ---
 
@@ -850,7 +870,7 @@ Exits with code 1 on failure. Can run in CI alongside the build. Found and fixed
 
 **Contrast check feasibility (Step 3):** Feasible without DOM rendering. The theme module has hex values; a pairing table (~20 rows) of which foreground tokens render against which backgrounds is the only manual input. Pure luminance computation, no browser needed. Would have caught both #e05555 and #6b8a9e failures automatically. Recommended as a follow-up script.
 
-**Standing rule (Step 4):** Four consecutive sessions shipped pages with book-recorded migrations that weren't actually applied. Root cause: batch find-and-replace creating tokens that don't exist (dark.textPrimaryMuted, dark.pageBgLight, dark.pageBg as text color), which CSS drops silently with no error. The theme token guard is now in the build pipeline and must not be removed to make a build pass. If it blocks, fix the code, not the guard.
+**Standing rule (Step 4):** Four consecutive sessions committed pages with book-recorded migrations that weren't actually applied. Root cause: batch find-and-replace creating tokens that don't exist (dark.textPrimaryMuted, dark.pageBgLight, dark.pageBg as text color), which CSS drops silently with no error. The theme token guard is now in the build pipeline and must not be removed to make a build pass. If it blocks, fix the code, not the guard.
 
 **Version:** BFEv0.17.0 → **BFEv0.18.0** (MINOR — CI infrastructure)
 
@@ -889,3 +909,230 @@ Vercel Deployment Storage hit 100% of the 10 GB Hobby tier. Root cause: ~318 dep
 **Item 4 (lineup cadence 30→60 min):** Not needed if deployment cleanup runs weekly.
 
 **Version progression:** BFEv0.18.0 → **BFEv0.19.0** (MINOR — changes what gets deployed)
+
+---
+
+### Session: September 8, 2026 — BFEv0.19.0 → BFEv0.19.1 — Phase 3 Deployment Cleanup + Verification
+
+**Phase 3 executed:** Bulk-deleted 324 old Vercel deployments via REST API (`DELETE /v6/deployments/{id}`). Batched at 10/min with 429 retry. Script: `C:/Users/MattMaurer/vercel_cleanup.py`.
+
+**Keep-list (12 deployments):**
+- `dpl_Bdv3a6j8MsdYYc3KdKLfiGcSTj12` — current production (Sep 8, "Remove tracked NFL date-stamped matchup files")
+- `dpl_AV1jw4HSaC9bqeUyfd7Axdze4Qqy` — rollback candidate #2 (Sep 8, "Update NFL site data 2026-09-08 07:00")
+- 10 `nfl-preview` branch deployments (Sep 2–3, preview review cycle)
+
+**Delete-list:** 324 deployments spanning Jun 20 – Sep 8. All main-branch pipeline commits (afternoon refreshes, health checks, site data updates) plus old feature branches (pitcher-report, vp-ab-column, vercel-speed-insights).
+
+**Estimated storage reclaimed:** ~6.0 GB (324 × ~19 MB).
+
+**C-gap verification (completed before deletion):**
+1. `/mlb/batter-vs-pitcher-guide` — returns static HTML with actual prose content. Vercel rewrite intact.
+2. `/data/starting_lineups_latest.json` — valid JSON, 2026-09-08, 16 games, 288 batters.
+3. `/status` — logic trace against health_latest.json + nfl_health_latest.json: all surfaces GREEN (20/20 MLB steps OK, 4/4 NFL surfaces OK, all dated today).
+4. `CI=true npm run build` — "Compiled successfully." 195 MLB warnings (pre-migration allowlist). Zero errors.
+
+**Production verified:** All 8 data endpoints return valid, today-dated JSON. All page routes return 200 with React app shell. Pipeline health ALL GOOD.
+
+**Investigation — unused game_logs files (11.9 MB / 63% of per-deploy data):**
+- `batter_game_logs_latest.json` (7.9 MB) and `pitcher_game_logs_latest.json` (4.0 MB) are fetched by ZERO frontend pages. Built for unreleased `/mlb/game-logs` page on `feature/game-logs-page` branch.
+- Leak path: `push_matchup_data.py` lines 72–73 unconditionally stage both files.
+- `results_by_date.json` (3.2 MB) is actively used by ResultsPage.jsx (full-season date picker). Cannot easily window.
+- Removing game_logs from staging would drop per-deploy from 19 MB → 7.1 MB. Monthly burn at 318 deploys: 6 GB → 2.3 GB. With weekly cleanup: 1.3 GB → 497 MB retained. Item 4 (cadence reduction) becomes unnecessary.
+- **Open item — not implemented this session.**
+
+**Recurrence plan (not built, recommendation only):**
+- Weekly scheduled task running `vercel_cleanup.py` (keep production + 2 rollback + nfl-preview + <48h).
+- Requires: Vercel API token (project-scoped, read+delete), Windows Task Scheduler or pipeline cron.
+- Location: `E:/Betrilo/MLB/scripts/vercel_cleanup.py`.
+- If game_logs are removed from deploys, weekly cleanup alone keeps retained storage under 500 MB — cadence reduction (item 4) unnecessary.
+
+**Version progression:** BFEv0.19.0 → **BFEv0.19.1** (PATCH — deployment cleanup executed, no code change)
+
+---
+
+### Session: September 8, 2026 — BFEv0.19.1 → BFEv0.20.0 — Remove Game Logs from Deploys + Cleanup Script
+
+**Game logs removed from deployed data:**
+- `batter_game_logs_latest.json` (7.9 MB) and `pitcher_game_logs_latest.json` (4.0 MB) were shipping in every Vercel deployment but consumed by ZERO frontend pages on main. They exist for the unreleased `feature/game-logs-page` branch.
+- FE source grep: zero references to `batter_game_logs`, `pitcher_game_logs`, or `game_logs` anywhere in `src/`.
+- Fix: `push_matchup_data.py` lines 72–73 commented out (stop staging). Files `git rm --cached` from publish worktree. Gitignore patterns added. Pipeline still generates them locally — only the publish staging is removed.
+- Feature branch impact: `feature/game-logs-page` fetches both files. When that branch is revived, re-enable staging and re-track the files. Same manual data pattern as NFL preview.
+
+**Per-deploy data: 18 MB → 5.4 MB** (70% reduction). Total deploy: ~19 MB → ~6.5 MB.
+**Monthly burn at 318 deploys:** 6 GB → 2.1 GB. With weekly cleanup: 1.3 GB → ~455 MB retained.
+
+**Weekly cleanup script:** `E:/Betrilo/MLB/scripts/vercel_cleanup.py`
+- Defaults to DRY RUN (`--execute` to delete)
+- Keep-list: current production + rollback candidates + all preview branches + anything < 7 days old
+- Token from `VERCEL_TOKEN` environment variable — never hardcoded
+- Logs to `outputs/vercel_cleanup.log`
+- Rate-limited at 10/min with 429 retry
+- Schedule: Windows Task Scheduler, weekly Sunday 2 AM ET
+
+**Production verified (Playwright, not WebFetch):**
+
+| Page | Status | Content |
+|------|--------|---------|
+| Player Projections | 200 | 595 elements, "MLB Player Projections" title |
+| Starting Lineups | 200 | 298 elements, confirmed/projected lineups |
+| Batter Splits | 200 | 345 elements, platoon data |
+| Best Bets | 200 | 36 elements, model-ranked picks |
+| Edge Report | 200 | 442 elements, edge picks |
+| Results | 200 | 132 elements, daily graded history |
+| Pitcher Report | 200 | Pitcher matchup cards rendered |
+| /status | 200 | **Banner: "All systems healthy"**, all 9 surfaces GREEN HEALTHY, Pipeline 20/20 OK, Verdict ALL GOOD |
+| BvP Guide | 200 | Static HTML with prose content |
+
+**Version progression:** BFEv0.19.1 → **BFEv0.20.0** (MINOR — changes what gets deployed + cleanup script)
+
+---
+
+### Session: September 8, 2026 — BFEv0.20.0 → BFEv0.20.1 — Staging Durability + Preview Branch Impact
+
+**Staging comment cleanup (BMLBv3.51.1):** Deleted the commented-out `batter_game_logs_latest.json` and `pitcher_game_logs_latest.json` lines from `push_matchup_data.py`. Replaced with a single explanatory comment stating what isn't published, why (11.9 MB, unused on main), and the book version that decided it. Grepping for either filename now finds the reason.
+
+**Preview branch impact analysis:**
+- Branch: `feature/game-logs-page`. Page: `GameLogsPage.jsx`.
+- Lines 406, 417: `fetch('/data/batter_game_logs_latest.json')` and `fetch('/data/pitcher_game_logs_latest.json')`.
+- **Previews are broken** as of BFEv0.20.0. Both files are absent from the deployed build. The fetch calls receive the CRA catch-all HTML instead of JSON, triggering the error handler. The page shows an error/empty state.
+- All existing preview deployments for this branch were deleted in Phase 3 (BFEv0.19.1). The branch is dormant (last commit Aug 3, 2026).
+- **Resolution: Option B (re-enable on merge)** — when the branch becomes active again, re-add the two staging lines to `push_matchup_data.py` and re-track the files. No work now. See open item #4 below.
+
+**Version progression:** BFEv0.20.0 → **BFEv0.20.1** (PATCH — comment cleanup + documented preview impact)
+
+---
+
+### Session: September 8, 2026 — BFEv0.20.1 → BFEv0.21.0 — Deploy Guard + Source Maps + Reconciliation
+
+**Priority 1 — Pre-push hook (structural deploy guard):**
+Installed `.git/hooks/pre-push` that blocks pushes from local `main` to `origin/main` while the NFL production gate is unmet. Local main is 15 commits ahead of origin/main with unreleased NFL page code. Pushing would auto-deploy to production via Vercel (no branch protection on Hobby plan).
+
+- **Blocks:** `git push origin main` from local main branch → exit 1, clear message naming the gate (layout approval + shadow validation, §BFEv0.11.0)
+- **Allows:** `git push origin HEAD:main` from publish-main worktree → exit 0, data pushes unaffected
+- **Override:** `NFL_GATE_MET=1 git push origin main` → exit 0, logged
+- **Tested:** all three paths verified (block, allow, override)
+- **Limitation:** local hook only protects this machine. See Vercel section below.
+
+**Vercel deploy gate assessment:** Vercel Hobby plan does not offer branch protection, deploy gates, or conditional deploy rules. The only options are: (a) don't push to the watched branch (current strategy), (b) Vercel's `ignoreCommand` in vercel.json (blocks ALL deploys including data updates — too blunt), (c) upgrade to Pro for deployment protection options. **Recommendation: the local pre-push hook is the right guard for this setup.** SSO protection is already enabled for `all_except_custom_domains` (preview deploys require Vercel team auth).
+
+**Priority 2 — Source maps confirmed off, .env pushed:**
+- `.env` with `GENERATE_SOURCEMAP=false` was on local main but NOT on `origin/main` (committed in BFEv0.19.0 session, never pushed because it's part of the 15 local-only commits).
+- Vercel dashboard env var `GENERATE_SOURCEMAP` IS set for both Production and Preview (confirmed via API — `createdAt` Sep 8, targets `['preview', 'production']`).
+- Production bundle: `//# sourceMappingURL=main.2d5baa7e.js.map` comment present (CRA terser residual) but `.map` file returns 403 (not served). Source maps are effectively off.
+- **Fix:** `.env` pushed to `origin/main` via publish worktree as defense-in-depth (pending operator push if credential manager stalled). Belt-and-suspenders: both `.env` file AND Vercel env var active.
+
+**Priority 3 — NFL book path:**
+- Single authoritative copy: `E:/Betrilo/NFL/docs/BETRILO_NFL_PROJECT_BOOK.md` (108 KB, 1,752 lines, modified Sep 8, 2026)
+- Line 3: `BNFLv0.32.0`
+- VERSION.md: `E:/Betrilo/NFL/VERSION.md` → `NFL book: BNFLv0.32.0` — matches
+- No duplicates found on E:/Betrilo/
+- NFL can be given a canonical pointer: `BNFLv0.32.0`
+
+**Priority 4 — Book reconciliation (BFEv0.7.0–0.19.0):**
+- The Deploy Status Summary (added by operator) correctly marks BFEv0.7.0–0.19.0 as "Pending-Verification — committed locally, not on origin/main, not serving."
+- No `**Status:** LIVE` or `**Status:** SHIPPED` lines exist in any BFEv0.7.0+ session entry. All status lines are in BFEv0.1.x–0.6.x (which ARE on production).
+- One misleading word fixed: BFEv0.18.0 entry "Four consecutive sessions shipped pages" → "committed pages" (line 873). These commits are on local main, not production.
+- BFEv0.11.0 entry explicitly states "NFL UI is NOT on production" — correct.
+- **No other entries assert a state that isn't true.**
+
+**Version progression:** BFEv0.20.1 → **BFEv0.21.0** (MINOR — structural deploy guard + source map fix)
+
+---
+
+### Session: September 8, 2026 — BFEv0.21.0 → BFEv0.22.0 — Tracked Hook + Branch-Check Fix
+
+**Hook moved to tracked location (item 1):**
+- Moved from `.git/hooks/pre-push` (untracked, lost on re-clone) to `scripts/hooks/pre-push` (tracked, versioned).
+- Wired via `git config core.hooksPath scripts/hooks`. No other hooks in use — `check-theme-tokens.js` runs via `package.json` build script, not git hooks.
+- Old `.git/hooks/pre-push` deleted.
+
+**Branch-check fix (item 2):**
+- Old logic: checked `current_branch == "main"` (which branch is checked out). Flaw: `git push origin main` from another branch bypasses the guard because `current_branch` is not "main" — but `local_ref` IS `refs/heads/main` and local main still deploys.
+- New logic: checks `local_ref == "refs/heads/main"`. Blocks any push of local main to origin/main regardless of checkout state.
+- Added `--no-verify` notice to the block message.
+
+**All four paths tested:**
+
+| Test | Scenario | Result |
+|------|----------|--------|
+| (a) | `git push origin main` on main | **BLOCKED** (exit 1) |
+| (b) | `git push origin main` on another branch | **BLOCKED** (exit 1) |
+| (c) | `git push origin HEAD:main` from publish-main | **ALLOWED** (exit 0) |
+| (d) | `NFL_GATE_MET=1 git push origin main` | **ALLOWED** (exit 0) |
+
+**Item 3 (.env push verification):**
+- `git log origin/main -5`: clean, no duplicate commits from the 6 background push retries.
+- `.env` contains only `GENERATE_SOURCEMAP=false` + comments. No secrets.
+- Vercel production deploy `dpl_67GuXm5MW1hHpktJf53USLoPAwwX` built READY. betrilo.com serving, /status ALL GOOD.
+
+**Item 4 (open item #3 reword):** Already resolved by operator edit — reads "RESOLVED (September 8, 2026)" with ownership boundary settled.
+
+**Item 5 (FE ownership rule):** Already answered in operator's item #3 resolution. Rule: the FE book owns all page code for all sports; sport-specific backend books own pipeline, data exports, card generation, and scoring — and cross-reference FE entries for page work.
+
+**Version progression:** BFEv0.21.0 → **BFEv0.22.0** (MINOR — tracked hook + branch-check fix)
+
+---
+
+### Session: September 8, 2026 — BFEv0.22.0 → BFEv0.22.1 — Hook Tracking Fix + Breadcrumb + NFL Trace
+
+**Hook tracking fix:** `scripts/hooks/pre-push` was created in BFEv0.22.0 but never staged. `git ls-files` returned empty. Fixed: `git add` + commit. Now tracked and survives merge/rebase.
+
+**Guard re-verification (post-move, post-.env):** All four paths re-tested in the final repo state with `core.hooksPath=scripts/hooks` and the hook tracked:
+
+| Test | Result |
+|------|--------|
+| (a) `git push origin main` from main | BLOCKED (exit 1) |
+| (b) `git push origin main` from another branch | BLOCKED (exit 1) |
+| (c) `git push origin HEAD:main` from publish-main | ALLOWED (exit 0) |
+| (d) `NFL_GATE_MET=1 git push origin main` | ALLOWED (exit 0) |
+
+**.env push verification:** `git log origin/main -5` clean — no duplicate commits from retries. `.env` contains only `GENERATE_SOURCEMAP=false`. Vercel deploy READY, production serving, /status ALL GOOD.
+
+**NFL version trace:** NFL book moved BNFLv0.32.0 → 0.33.0 → 0.34.0 in two operator sessions today (Anytime TD Phase 1 at §13.33, Phase 2 at §13.34). Both bumps have proper session log entries — no Rule 1 violation. The discrepancy was a pointer-sync lag, not an unbooked bump. Correct pointer: BNFLv0.34.0.
+
+**Breadcrumb on feature/game-logs-page:** Added 10-line comment above the fetch calls in `GameLogsPage.jsx` (lines 404–413) explaining that the data files were removed from deploys in BFEv0.20.0, and listing the 3 steps to restore them before review. Committed directly to the feature branch.
+
+**Weekly cleanup recommendation (item 3, report only):**
+- **Token:** Set `VERCEL_TOKEN` as a Machine-level environment variable (same pattern as `BDL_API_KEY` — see `scripts/env.ps1`). Never in code, never committed.
+- **Schedule:** Windows Task Scheduler action: `python E:/Betrilo/MLB/scripts/vercel_cleanup.py --execute`. Trigger: weekly Sunday 2:00 AM ET. Run whether logged in or not.
+- **Logging:** Script appends to `outputs/vercel_cleanup.log` with timestamped entries. Each run logs keep/delete counts and any failures.
+- **Silent failure surfacing:** If the script fails (bad token, network, crash), the log file's last entry will be stale. Add a staleness check to the morning pipeline: if `vercel_cleanup.log` last modified >10 days ago, emit a warning in the pipeline output. Alternatively, the `/status` page could monitor it — but that's a code change for a future session.
+- **Without automation:** Storage climbs ~2.1 GB/month (post-game_logs removal). Cap hit in ~5 weeks from empty. Manual weekly run is the interim.
+
+**Version progression:** BFEv0.22.0 → **BFEv0.22.1** (PATCH — tracking fix + breadcrumb + trace)
+
+---
+
+### Deployment Model (documented September 8, 2026)
+
+- **local `main`** → development branch. Contains all source code including NFL pages. Does NOT auto-deploy.
+- **`origin/main`** → production branch. Vercel auto-deploys from this. Currently contains MLB source code (pre-BFEv0.7.0) + automated data commits.
+- **`publish-main` worktree** → data-only commits pushed to `origin/main`. Source code is NOT updated here. Deploys data to production.
+- **`nfl-preview` branch** → Vercel preview deployments. SSO-gated. NFL pages reviewable here but not public.
+
+**Path to production for source code:** local `main` → push to `origin/main` → Vercel auto-deploys. This push is gated on NFL production approval (layout + shadow validation). Until that gate is met, NFL feature code stays on local `main` only.
+
+### Deploy Status Summary (audited September 8, 2026)
+
+| Version Range | Location | Production Status |
+|---|---|---|
+| BFEv0.1.0 – BFEv0.6.11 | `origin/main` | **Resolved-Shipped** — serving on betrilo.com |
+| BFEv0.7.0 – BFEv0.19.0 | local `main` only | **Pending-Verification** — committed locally, not on `origin/main`, not serving. NFL feature code blocked by production gate (§BFEv0.11.0). No MLB-affecting code in this range (verified by `git diff origin/main..main` — all 15 commits are NFL-scoped). |
+| BFEv0.19.1 | local `main` only | **Pending-Verification** — deployment cleanup executed via Vercel API, no code change. Effect is live (deployments deleted) but the code commit is local-only. |
+| BFEv0.20.0 – BFEv0.20.1 | `publish-main` / `origin/main` | **Resolved-Shipped** — data-only changes (game_logs removal, comment cleanup) pushed via publish worktree. |
+| BFEv0.21.0 | `origin/main` (.env only) + local `main` (hook, book) | **Resolved-Shipped** (.env defense-in-depth). Hook + book changes are local-only (not deployed, infrastructure). |
+| BFEv0.22.0 | local `main` | **Pending-Verification** — tracked hook at scripts/hooks/pre-push, hooksPath wired. Local infrastructure, not deployed. |
+
+**MLB-affecting code stranded: NONE.** All 15 local-only commits (BFEv0.7.0–0.19.0) are NFL-scoped. No MLB page, component, or shared-component file differs between local `main` and `origin/main`. Production MLB pages are running the correct code.
+
+### Open Items (recorded, not fixed)
+
+**1. Rule 3 violation (BFEv0.19.0 session):** Session started with the canonical pointer in project custom-instructions referencing BFEv0.6.11. The book was at BFEv0.18.0 and VERSION.md matched the book (BFEv0.18.0). The handshake found internal consistency (book ↔ VERSION.md) but the pointer was 12 minor versions behind. The session proceeded instead of stopping — this is the failure mode Rule 3 is designed to catch: two stale sources agreeing doesn't mean the pointer is correct. The pointer was updated to BFEv0.19.1 after that session, and the BFEv0.20.0 session handshake passed cleanly.
+
+**2. Session-log gaps: CLOSED (September 8, 2026).** BFEv0.4.0 and BFEv0.4.1 entries reconstructed from git history (SHAs `207c164`, `6e8c713`) and written. BFEv0.6.5 is accounted for in the BFEv0.6.4 → 0.6.6 entry ("0.6.5 was debug instrumentation"). No remaining gaps.
+
+**3. NFL unbooked drift: RESOLVED (September 8, 2026).** Ownership boundary settled: the FE book owns ALL page code regardless of sport (option a). The NFL book owns pipeline, data exports, card generator, and scoring contract. NFL book cross-references FE page entries rather than duplicating them. Data dependency: NFL pipeline writes `nfl_*.json` into the FE repo's publish worktree. NFL page work (BFEv0.7.0–0.19.0) is correctly logged in this FE book. The NFL book at §13.12 has a cross-reference to FE BFEv0.7.0–0.8.0 for the page build.
+
+**4. Push recommendation for local main → origin/main (September 8, 2026 audit):** Local `main` is 15 commits ahead and 419 behind `origin/main`. The 419-behind are automated data commits (safe to merge). The 15-ahead are NFL feature code. Pushing local `main` to `origin/main` WOULD deploy NFL pages to production because Vercel auto-deploys from `origin/main` (no branch protection, no deploy gate in Vercel config). **Recommendation: DO NOT push until the NFL production gate is met** (layout approval + shadow validation per §BFEv0.11.0). When ready, the merge should be: `git fetch origin && git merge origin/main` (to absorb 419 data commits) then `git push origin main`. The 15 feature commits and 419 data commits will converge.
+
+**5. feature/game-logs-page preview broken (BFEv0.20.1):** The `GameLogsPage.jsx` on `feature/game-logs-page` fetches `batter_game_logs_latest.json` and `pitcher_game_logs_latest.json`, which are no longer in the deployed build. If this branch is redeployed as a preview, the page will show an error/empty state. Resolution plan: re-add staging lines to `push_matchup_data.py` and re-track the files when the branch is revived for merge. Branch is dormant (last commit 2026-08-03).
