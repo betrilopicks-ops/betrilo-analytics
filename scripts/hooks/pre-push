@@ -1,63 +1,110 @@
 #!/bin/bash
 #
-# Pre-push hook: blocks pushes of local main to origin/main while
-# the NFL production gate is unmet (layout approval + shadow validation,
-# §BFEv0.11.0). Local main contains unreleased NFL page code that would
-# auto-deploy to production via Vercel.
+# Pre-push hook: Gate 2 guard (validation-gated NFL surfaces).
 #
-# This hook does NOT block the publish-main worktree's data pushes —
-# those push HEAD:main from the publish-main branch, so local_ref is
-# refs/heads/publish-main, not refs/heads/main.
+# Gate 1 (pages) is MET — NFL informational pages are live (BFEv0.23.0).
+# This hook guards Gate 2: pick surfaces, card/social wiring, and any
+# new NFL page not on the approved allowlist.
 #
-# Override: NFL_GATE_MET=1 git push origin main
+# ALLOWLIST approach — fails CLOSED. Unknown NFL files are blocked.
+# Known limitation: pick behavior added to an already-approved page is
+# NOT caught by this hook — that is covered by review only. Neither are
+# pick surfaces named without an Nfl prefix.
+#
+# Override: NFL_VALIDATION_GATE_MET=1 git push origin main
 # Note: --no-verify bypasses all hooks including this one.
 #
 # Wire: git config core.hooksPath scripts/hooks
-# Tracked: BFEv0.22.0 (September 8, 2026)
+# BFEv0.25.0 (September 8, 2026)
 
 remote="$1"
 url="$2"
 
-while read local_ref local_sha remote_ref remote_sha; do
-    # Only care about pushes TO refs/heads/main on origin
-    if [ "$remote_ref" = "refs/heads/main" ]; then
-        # Block if pushing LOCAL main (refs/heads/main) to origin/main,
-        # regardless of which branch is currently checked out.
-        if [ "$local_ref" = "refs/heads/main" ]; then
-            # Allow override
-            if [ "$NFL_GATE_MET" = "1" ]; then
-                echo "[pre-push] NFL_GATE_MET=1 — override accepted. Pushing local main to origin/main."
-                exit 0
-            fi
+# Approved NFL page/component files (Gate 1 — already on production)
+APPROVED_NFL_FILES=(
+    "src/pages/NflMatchupsPage.jsx"
+    "src/pages/NflProjectionsPage.jsx"
+    "src/pages/NflSchedulePage.jsx"
+    "src/pages/NflTeamRankingsPage.jsx"
+    "src/components/NflPageWrapper.jsx"
+    "src/components/NflValidationBanner.jsx"
+    "src/components/NflFreshness.jsx"
+)
 
-            echo ""
-            echo "============================================================"
-            echo "  BLOCKED: push of local main to origin/main"
-            echo "============================================================"
-            echo ""
-            echo "  Local main contains unreleased NFL page code (BFEv0.7.0+)"
-            echo "  that would auto-deploy to production via Vercel."
-            echo ""
-            echo "  The NFL production gate is NOT yet met:"
-            echo "    - Layout approval (operator review of nfl-preview)"
-            echo "    - Shadow validation (3 weeks graded, STRONG >= 54%)"
-            echo "  See §BFEv0.11.0 in BETRILO_FE_PROJECT_BOOK.md"
-            echo ""
-            echo "  To push data-only from the publish worktree:"
-            echo "    cd E:/Betrilo/betrilo-analytics-publish"
-            echo "    git push origin HEAD:main"
-            echo ""
-            echo "  To override (NFL gate met, operator approved):"
-            echo "    NFL_GATE_MET=1 git push origin main"
-            echo ""
-            echo "  Note: --no-verify bypasses all git hooks including this one."
-            echo ""
-            echo "============================================================"
-            exit 1
+is_approved() {
+    local file="$1"
+    for approved in "${APPROVED_NFL_FILES[@]}"; do
+        if [ "$file" = "$approved" ]; then
+            return 0
         fi
+    done
+    return 1
+}
 
-        # local_ref is NOT refs/heads/main — e.g. refs/heads/publish-main
-        # via HEAD:main. These are data-only pushes. Allow.
+while read local_ref local_sha remote_ref remote_sha; do
+    if [ "$remote_ref" != "refs/heads/main" ]; then
+        continue
+    fi
+    if [ "$local_ref" != "refs/heads/main" ]; then
+        continue
+    fi
+    if [ "$NFL_VALIDATION_GATE_MET" = "1" ]; then
+        echo "[pre-push] NFL_VALIDATION_GATE_MET=1 — override accepted."
+        exit 0
+    fi
+    if [ "$remote_sha" = "0000000000000000000000000000000000000000" ]; then
+        continue
+    fi
+
+    changed=$(git diff --name-only --diff-filter=ACMR "$remote_sha".."$local_sha" 2>/dev/null)
+    [ -z "$changed" ] && continue
+
+    blocked=""
+    while IFS= read -r file; do
+        if [[ "$file" == src/pages/Nfl*.jsx ]] || [[ "$file" == src/components/Nfl*.jsx ]]; then
+            if ! is_approved "$file"; then
+                blocked="$blocked\n    $file (new NFL file, not on Gate 1 allowlist)"
+            fi
+        fi
+    done <<< "$changed"
+
+    if echo "$changed" | grep -q "src/App.js"; then
+        new_routes=$(git diff "$remote_sha".."$local_sha" -- src/App.js 2>/dev/null \
+            | grep '^+[^+]' | grep '/nfl/' || true)
+        if [ -n "$new_routes" ]; then
+            while IFS= read -r route_line; do
+                # Extract /nfl/<path> using sed (POSIX-compatible, no -oP)
+                route_path=$(echo "$route_line" | sed -n 's|.*\(/nfl/[a-z-]*\).*|\1|p')
+                if [ -n "$route_path" ]; then
+                    case "$route_path" in
+                        /nfl/matchups|/nfl/projections|/nfl/schedule|/nfl/team-rankings) ;;
+                        *) blocked="$blocked\n    App.js: new route $route_path" ;;
+                    esac
+                fi
+            done <<< "$new_routes"
+        fi
+    fi
+
+    if [ -n "$blocked" ]; then
+        echo ""
+        echo "============================================================"
+        echo "  BLOCKED: push contains unapproved NFL surface code"
+        echo "============================================================"
+        echo -e "\n  Blocked:$blocked"
+        echo ""
+        echo "  Gate 2 (validation) is not yet met. Blocked:"
+        echo "    - New NFL pages/components not on the Gate 1 allowlist"
+        echo "    - New /nfl/ routes in App.js"
+        echo ""
+        echo "  What this hook does NOT catch:"
+        echo "    - Pick behavior added to an already-approved page"
+        echo "    - Pick surfaces without an Nfl prefix"
+        echo "    These are covered by review, not automation."
+        echo ""
+        echo "  Override: NFL_VALIDATION_GATE_MET=1 git push origin main"
+        echo "  Note: --no-verify bypasses all hooks."
+        echo "============================================================"
+        exit 1
     fi
 done
 
