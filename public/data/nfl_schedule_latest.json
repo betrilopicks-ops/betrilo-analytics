@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "generated_at": "2026-09-08T07:00:11.124122-04:00",
+  "generated_at": "2026-09-09T07:11:48.979718-04:00",
   "bye_teams": [],
   "games_count": 16,
   "games": [
@@ -103,23 +103,30 @@
           "prior_season_games": 9
         },
         {
-          "player": "Elijah Arroyo",
+          "player": "Nick Kallerup",
           "position": "TE",
           "snap_pct": 0.42,
-          "prior_season_games": 12
+          "prior_season_games": 3
         }
       ],
       "away_injuries": [
         {
           "player": "TreVeyon Henderson",
           "position": "RB",
-          "status": "Questionable",
-          "body_part": "Leg",
+          "status": "Out",
+          "body_part": "Ankle",
           "practice": null
         },
         {
           "player": "Bryce Baringer",
           "position": "P",
+          "status": "IR",
+          "body_part": "Undisclosed",
+          "practice": null
+        },
+        {
+          "player": "Myles Montgomery",
+          "position": "RB",
           "status": "IR",
           "body_part": "Undisclosed",
           "practice": null
@@ -290,45 +297,10 @@
       ],
       "away_injuries": [
         {
-          "player": "Jacob Cowing",
-          "position": "WR",
-          "status": "Questionable",
-          "body_part": "Groin",
-          "practice": null
-        },
-        {
-          "player": "Mike Evans",
-          "position": "WR",
-          "status": "Questionable",
-          "body_part": "Foot",
-          "practice": null
-        },
-        {
-          "player": "De'Zhaun Stribling",
-          "position": "WR",
-          "status": "Questionable",
-          "body_part": "Shoulder",
-          "practice": null
-        },
-        {
-          "player": "Christian McCaffrey",
-          "position": "RB",
-          "status": "Questionable",
-          "body_part": "Undisclosed",
-          "practice": null
-        },
-        {
           "player": "George Kittle",
           "position": "TE",
           "status": "Questionable",
           "body_part": "Achilles",
-          "practice": null
-        },
-        {
-          "player": "Kurtis Rourke",
-          "position": "QB",
-          "status": "Questionable",
-          "body_part": "Ribs",
           "practice": null
         },
         {
@@ -377,7 +349,7 @@
       "gameday": "2026-09-13",
       "gametime": "13:00",
       "spread_line": -3.0,
-      "total_line": 47.5,
+      "total_line": 46.5,
       "roof": "outdoors",
       "stadium": "Bank of America Stadium",
       "away_snap_leaders": [
@@ -1232,6 +1204,13 @@
       ],
       "away_injuries": [
         {
+          "player": "Devontez Walker",
+          "position": "WR",
+          "status": "Questionable",
+          "body_part": "Undisclosed",
+          "practice": null
+        },
+        {
           "player": "Zay Flowers",
           "position": "WR",
           "status": "Questionable",
@@ -1280,13 +1259,6 @@
           "position": "TE",
           "status": "IR",
           "body_part": "Thumb",
-          "practice": null
-        },
-        {
-          "player": "Coleman Owen",
-          "position": "WR",
-          "status": "IR",
-          "body_part": "Concussion",
           "practice": null
         },
         {
@@ -1454,13 +1426,6 @@
           "status": "Questionable",
           "body_part": "Undisclosed",
           "practice": null
-        },
-        {
-          "player": "Carter Bradley",
-          "position": "QB",
-          "status": "IR",
-          "body_part": "Thumb",
-          "practice": null
         }
       ],
       "inactives": null
@@ -1587,13 +1552,6 @@
           "player": "DK Metcalf",
           "position": "WR",
           "status": "Questionable",
-          "body_part": "Undisclosed",
-          "practice": null
-        },
-        {
-          "player": "Cole Burgess",
-          "position": "WR",
-          "status": "IR",
           "body_part": "Undisclosed",
           "practice": null
         }
@@ -1784,7 +1742,7 @@
       "home_team": "LAC",
       "gameday": "2026-09-13",
       "gametime": "16:25",
-      "spread_line": 10.0,
+      "spread_line": 9.5,
       "total_line": 47.5,
       "roof": "dome",
       "stadium": "SoFi Stadium",
@@ -1966,7 +1924,7 @@
       "gameday": "2026-09-13",
       "gametime": "16:25",
       "spread_line": 3.5,
-      "total_line": 41.5,
+      "total_line": 40.5,
       "roof": "dome",
       "stadium": "Allegiant Stadium",
       "away_snap_leaders": [
@@ -2279,6 +2237,13 @@
           "practice": null
         },
         {
+          "player": "Ben Yurosek",
+          "position": "TE",
+          "status": "IR",
+          "body_part": "Undisclosed",
+          "practice": null
+        },
+        {
           "player": "Jeshaun Jones",
           "position": "WR",
           "status": "Suspended",
@@ -2452,20 +2417,6 @@
           "position": "RB",
           "status": "IR",
           "body_part": "Quadriceps",
-          "practice": null
-        },
-        {
-          "player": "Jacoby Jones",
-          "position": "WR",
-          "status": "IR",
-          "body_part": "Undisclosed",
-          "practice": null
-        },
-        {
-          "player": "Quentin Moore",
-          "position": "TE",
-          "status": "IR",
-          "body_part": "Undisclosed",
           "practice": null
         }
       ],
@@ -2684,7 +2635,7 @@
       "home_team": "KC",
       "gameday": "2026-09-14",
       "gametime": "20:15",
-      "spread_line": 3.0,
+      "spread_line": 2.5,
       "total_line": 43.5,
       "roof": "outdoors",
       "stadium": "GEHA Field at Arrowhead Stadium",
@@ -2794,13 +2745,6 @@
           "position": "WR",
           "status": "Questionable",
           "body_part": "Foot",
-          "practice": null
-        },
-        {
-          "player": "Michael Woods",
-          "position": "WR",
-          "status": "Questionable",
-          "body_part": "Leg",
           "practice": null
         },
         {
