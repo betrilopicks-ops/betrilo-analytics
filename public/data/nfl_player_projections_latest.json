@@ -1,10 +1,10 @@
 {
   "season": 2026,
   "week": 1,
-  "generated_at": "2026-09-09T15:00:25.331838-04:00",
+  "generated_at": "2026-09-11T17:00:16.455239-04:00",
   "week1_mode": true,
   "data_note": "Projections based on 2024-2025 season data (no 2026 game data yet)",
-  "player_count": 456,
+  "player_count": 449,
   "players": [
     {
       "player_name": "Eric Saubert",
@@ -79,7 +79,11 @@
         "rank": 26,
         "label": "Tough"
       },
-      "injury": null
+      "injury": {
+        "status": "Out",
+        "body_part": "Hip",
+        "practice": null
+      }
     },
     {
       "player_name": "Drew Lock",
@@ -125,6 +129,29 @@
         "rec_tds": 0.25,
         "receptions": 3.0,
         "targets": 5.2
+      },
+      "dvp": {
+        "rank": 28,
+        "label": "Avoid"
+      },
+      "injury": null
+    },
+    {
+      "player_name": "Velus Jones Jr.",
+      "player_id": "00-0037745",
+      "team": "SEA",
+      "position": "WR",
+      "opponent": "NE",
+      "game_id": "2026_01_NE_SEA",
+      "is_home": true,
+      "depth_chart_rank": 99,
+      "usage": {
+        "blend_source": "prior_season (7 games)"
+      },
+      "projections": {
+        "rec_yds": 1.1,
+        "receptions": 0.1,
+        "targets": 0.1
       },
       "dvp": {
         "rank": 28,
@@ -257,74 +284,6 @@
       "injury": null
     },
     {
-      "player_name": "Nick Kallerup",
-      "player_id": "00-0040058",
-      "team": "SEA",
-      "position": "TE",
-      "opponent": "NE",
-      "game_id": "2026_01_NE_SEA",
-      "is_home": true,
-      "depth_chart_rank": 4,
-      "usage": {
-        "blend_source": "prior_season (4 games)"
-      },
-      "projections": {
-        "targets": 0.2
-      },
-      "dvp": {
-        "rank": 10,
-        "label": "Favorable"
-      },
-      "injury": null
-    },
-    {
-      "player_name": "Tory Horton",
-      "player_id": "00-0040648",
-      "team": "SEA",
-      "position": "WR",
-      "opponent": "NE",
-      "game_id": "2026_01_NE_SEA",
-      "is_home": true,
-      "depth_chart_rank": 4,
-      "usage": {
-        "blend_source": "prior_season (8 games)"
-      },
-      "projections": {
-        "rec_yds": 12.5,
-        "rec_tds": 0.48,
-        "receptions": 1.1,
-        "targets": 1.8
-      },
-      "dvp": {
-        "rank": 28,
-        "label": "Avoid"
-      },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Undisclosed",
-        "practice": null
-      }
-    },
-    {
-      "player_name": "Jalen Milroe",
-      "player_id": "00-0040673",
-      "team": "SEA",
-      "position": "QB",
-      "opponent": "NE",
-      "game_id": "2026_01_NE_SEA",
-      "is_home": true,
-      "depth_chart_rank": 3,
-      "usage": {
-        "blend_source": "positional_prior (dc_rank=3)"
-      },
-      "projections": {},
-      "dvp": {
-        "rank": 26,
-        "label": "Tough"
-      },
-      "injury": null
-    },
-    {
       "player_name": "Elijah Arroyo",
       "player_id": "00-0040739",
       "team": "SEA",
@@ -437,7 +396,11 @@
         "rank": 32,
         "label": "Avoid"
       },
-      "injury": null
+      "injury": {
+        "status": "IR",
+        "body_part": "Ankle",
+        "practice": null
+      }
     },
     {
       "player_name": "Reggie Gilliam",
@@ -460,7 +423,7 @@
         "rush_rec_yds": 2.2
       },
       "dvp": {
-        "rank": 26,
+        "rank": 25,
         "label": "Tough"
       },
       "injury": null
@@ -488,7 +451,7 @@
         "rush_rec_yds": 60.8
       },
       "dvp": {
-        "rank": 26,
+        "rank": 25,
         "label": "Tough"
       },
       "injury": null
@@ -651,82 +614,7 @@
         "rush_rec_yds": 11.2
       },
       "dvp": {
-        "rank": 26,
-        "label": "Tough"
-      },
-      "injury": null
-    },
-    {
-      "player_name": "Efton Chism III",
-      "player_id": "00-0040563",
-      "team": "NE",
-      "position": "WR",
-      "opponent": "SEA",
-      "game_id": "2026_01_NE_SEA",
-      "is_home": false,
-      "depth_chart_rank": 6,
-      "usage": {
-        "blend_source": "prior_season (8 games)"
-      },
-      "projections": {
-        "rec_yds": 5.3,
-        "rec_tds": 0.07,
-        "receptions": 0.2,
-        "targets": 0.3
-      },
-      "dvp": {
-        "rank": 32,
-        "label": "Avoid"
-      },
-      "injury": null
-    },
-    {
-      "player_name": "TreVeyon Henderson",
-      "player_id": "00-0040734",
-      "team": "NE",
-      "position": "RB",
-      "opponent": "SEA",
-      "game_id": "2026_01_NE_SEA",
-      "is_home": false,
-      "depth_chart_rank": 2,
-      "usage": {
-        "blend_source": "prior_season (17 games)"
-      },
-      "projections": {
-        "rush_yds": 30.8,
-        "rush_tds": 0.35,
-        "carries": 6.8,
-        "rec_yds": 10.1,
-        "rec_tds": 0.04,
-        "receptions": 1.7,
-        "targets": 1.6,
-        "rush_rec_yds": 40.9
-      },
-      "dvp": {
-        "rank": 26,
-        "label": "Tough"
-      },
-      "injury": {
-        "status": "Out",
-        "body_part": "Ankle",
-        "practice": null
-      }
-    },
-    {
-      "player_name": "Behren Morton",
-      "player_id": "00-0041123",
-      "team": "NE",
-      "position": "QB",
-      "opponent": "SEA",
-      "game_id": "2026_01_NE_SEA",
-      "is_home": false,
-      "depth_chart_rank": 3,
-      "usage": {
-        "blend_source": "positional_prior (dc_rank=3)"
-      },
-      "projections": {},
-      "dvp": {
-        "rank": 22,
+        "rank": 25,
         "label": "Tough"
       },
       "injury": null
@@ -782,10 +670,10 @@
         "blend_source": "prior_season (33 games)"
       },
       "projections": {
-        "pass_yds": 286.5,
-        "pass_tds": 2.6,
-        "completions": 25.7,
-        "pass_att": 36.9,
+        "pass_yds": 280.6,
+        "pass_tds": 2.55,
+        "completions": 25.1,
+        "pass_att": 36.1,
         "interceptions": 1.13,
         "rush_yds": 0.7
       },
@@ -808,10 +696,10 @@
         "blend_source": "prior_season (28 games)"
       },
       "projections": {
-        "rec_yds": 65.7,
-        "rec_tds": 0.94,
-        "receptions": 5.2,
-        "targets": 9.1
+        "rec_yds": 64.4,
+        "rec_tds": 0.92,
+        "receptions": 5.1,
+        "targets": 8.9
       },
       "dvp": {
         "rank": 16,
@@ -832,10 +720,10 @@
         "blend_source": "prior_season (13 games)"
       },
       "projections": {
-        "rec_yds": 27.6,
-        "rec_tds": 0.55,
+        "rec_yds": 27.0,
+        "rec_tds": 0.54,
         "receptions": 2.8,
-        "targets": 4.3
+        "targets": 4.2
       },
       "dvp": {
         "rank": 18,
@@ -856,37 +744,13 @@
         "blend_source": "prior_season (30 games)"
       },
       "projections": {
-        "rec_yds": 27.2,
-        "rec_tds": 0.56,
+        "rec_yds": 26.7,
+        "rec_tds": 0.55,
         "receptions": 3.0,
-        "targets": 4.3
+        "targets": 4.2
       },
       "dvp": {
         "rank": 18,
-        "label": "Neutral"
-      },
-      "injury": null
-    },
-    {
-      "player_name": "Tutu Atwell",
-      "player_id": "00-0036849",
-      "team": "LA",
-      "position": "WR",
-      "opponent": "SF",
-      "game_id": "2026_01_SF_LA",
-      "is_home": true,
-      "depth_chart_rank": 5,
-      "usage": {
-        "blend_source": "prior_season (23 games)"
-      },
-      "projections": {
-        "rec_yds": 29.6,
-        "rec_tds": 0.09,
-        "receptions": 1.5,
-        "targets": 2.7
-      },
-      "dvp": {
-        "rank": 16,
         "label": "Neutral"
       },
       "injury": null
@@ -904,12 +768,12 @@
         "blend_source": "prior_season (12 games)"
       },
       "projections": {
-        "rush_yds": 11.2,
+        "rush_yds": 11.0,
         "carries": 2.3,
         "rec_yds": 2.0,
         "receptions": 0.3,
         "targets": 0.3,
-        "rush_rec_yds": 13.2
+        "rush_rec_yds": 13.0
       },
       "dvp": {
         "rank": 13,
@@ -930,14 +794,14 @@
         "blend_source": "prior_season (33 games)"
       },
       "projections": {
-        "rush_yds": 82.8,
-        "rush_tds": 0.73,
-        "carries": 17.8,
-        "rec_yds": 18.0,
+        "rush_yds": 81.0,
+        "rush_tds": 0.71,
+        "carries": 17.5,
+        "rec_yds": 17.6,
         "rec_tds": 0.17,
         "receptions": 2.8,
         "targets": 3.0,
-        "rush_rec_yds": 100.8
+        "rush_rec_yds": 98.6
       },
       "dvp": {
         "rank": 13,
@@ -953,12 +817,12 @@
       "opponent": "SF",
       "game_id": "2026_01_SF_LA",
       "is_home": true,
-      "depth_chart_rank": 6,
+      "depth_chart_rank": 5,
       "usage": {
         "blend_source": "prior_season (30 games)"
       },
       "projections": {
-        "rec_yds": 14.1,
+        "rec_yds": 13.9,
         "receptions": 0.9,
         "targets": 1.1
       },
@@ -976,13 +840,13 @@
       "opponent": "SF",
       "game_id": "2026_01_SF_LA",
       "is_home": true,
-      "depth_chart_rank": 5,
+      "depth_chart_rank": 4,
       "usage": {
         "blend_source": "prior_season (22 games)"
       },
       "projections": {
-        "rec_yds": 12.0,
-        "rec_tds": 0.19,
+        "rec_yds": 11.7,
+        "rec_tds": 0.18,
         "receptions": 1.5,
         "targets": 2.4
       },
@@ -1005,10 +869,10 @@
         "blend_source": "prior_season (27 games)"
       },
       "projections": {
-        "rec_yds": 107.8,
-        "rec_tds": 0.56,
-        "receptions": 8.5,
-        "targets": 10.6
+        "rec_yds": 105.6,
+        "rec_tds": 0.55,
+        "receptions": 8.3,
+        "targets": 10.4
       },
       "dvp": {
         "rank": 16,
@@ -1048,13 +912,13 @@
         "blend_source": "prior_season (32 games)"
       },
       "projections": {
-        "rush_yds": 38.0,
-        "rush_tds": 0.27,
-        "carries": 7.7,
-        "rec_yds": 3.2,
+        "rush_yds": 37.2,
+        "rush_tds": 0.26,
+        "carries": 7.5,
+        "rec_yds": 3.1,
         "receptions": 0.6,
         "targets": 0.8,
-        "rush_rec_yds": 41.2
+        "rush_rec_yds": 40.3
       },
       "dvp": {
         "rank": 13,
@@ -1075,7 +939,7 @@
         "blend_source": "prior_season (29 games)"
       },
       "projections": {
-        "rec_yds": 15.1,
+        "rec_yds": 14.8,
         "receptions": 1.4,
         "targets": 1.8
       },
@@ -1098,10 +962,10 @@
         "blend_source": "prior_season (10 games)"
       },
       "projections": {
-        "rec_yds": 6.8,
-        "rec_tds": 0.08,
-        "receptions": 0.8,
-        "targets": 1.7
+        "rec_yds": 6.7,
+        "rec_tds": 0.07,
+        "receptions": 0.7,
+        "targets": 1.6
       },
       "dvp": {
         "rank": 16,
@@ -1122,33 +986,14 @@
         "blend_source": "prior_season (11 games)"
       },
       "projections": {
-        "rec_yds": 15.4,
-        "rec_tds": 0.26,
+        "rec_yds": 15.1,
+        "rec_tds": 0.25,
         "receptions": 0.8,
-        "targets": 1.9
+        "targets": 1.8
       },
       "dvp": {
         "rank": 18,
         "label": "Neutral"
-      },
-      "injury": null
-    },
-    {
-      "player_name": "Ty Simpson",
-      "player_id": "00-0041568",
-      "team": "LA",
-      "position": "QB",
-      "opponent": "SF",
-      "game_id": "2026_01_SF_LA",
-      "is_home": true,
-      "depth_chart_rank": 3,
-      "usage": {
-        "blend_source": "positional_prior (dc_rank=3)"
-      },
-      "projections": {},
-      "dvp": {
-        "rank": 13,
-        "label": "Favorable"
       },
       "injury": null
     },
@@ -1168,21 +1013,17 @@
         "rush_yds": 0.4,
         "rush_tds": 0.02,
         "carries": 0.2,
-        "rec_yds": 16.1,
+        "rec_yds": 15.8,
         "rec_tds": 0.13,
         "receptions": 1.6,
-        "targets": 2.0,
-        "rush_rec_yds": 16.5
+        "targets": 1.9,
+        "rush_rec_yds": 16.2
       },
       "dvp": {
         "rank": 20,
         "label": "Tough"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Finger",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Mike Evans",
@@ -1197,10 +1038,10 @@
         "blend_source": "prior_season (22 games)"
       },
       "projections": {
-        "rec_yds": 56.0,
-        "rec_tds": 0.57,
-        "receptions": 4.3,
-        "targets": 8.0
+        "rec_yds": 54.9,
+        "rec_tds": 0.56,
+        "receptions": 4.2,
+        "targets": 7.9
       },
       "dvp": {
         "rank": 14,
@@ -1221,10 +1062,10 @@
         "blend_source": "prior_season (31 games)"
       },
       "projections": {
-        "rec_yds": 23.7,
+        "rec_yds": 23.2,
         "rec_tds": 0.2,
-        "receptions": 1.7,
-        "targets": 3.0
+        "receptions": 1.6,
+        "targets": 2.9
       },
       "dvp": {
         "rank": 14,
@@ -1245,14 +1086,14 @@
         "blend_source": "prior_season (21 games)"
       },
       "projections": {
-        "rush_yds": 65.3,
-        "rush_tds": 0.43,
-        "carries": 16.9,
-        "rec_yds": 58.0,
-        "rec_tds": 0.3,
-        "receptions": 5.9,
-        "targets": 7.0,
-        "rush_rec_yds": 123.3
+        "rush_yds": 64.0,
+        "rush_tds": 0.42,
+        "carries": 16.5,
+        "rec_yds": 56.8,
+        "rec_tds": 0.29,
+        "receptions": 5.8,
+        "targets": 6.8,
+        "rush_rec_yds": 120.8
       },
       "dvp": {
         "rank": 20,
@@ -1273,20 +1114,40 @@
         "blend_source": "prior_season (26 games)"
       },
       "projections": {
-        "rec_yds": 63.3,
-        "rec_tds": 0.63,
-        "receptions": 5.9,
-        "targets": 7.0
+        "rec_yds": 62.0,
+        "rec_tds": 0.61,
+        "receptions": 5.8,
+        "targets": 6.9
       },
       "dvp": {
         "rank": 16,
         "label": "Neutral"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Achilles",
-        "practice": null
-      }
+      "injury": null
+    },
+    {
+      "player_name": "KhaDarel Hodge",
+      "player_id": "00-0034854",
+      "team": "SF",
+      "position": "WR",
+      "opponent": "LA",
+      "game_id": "2026_01_SF_LA",
+      "is_home": false,
+      "depth_chart_rank": 6,
+      "usage": {
+        "blend_source": "prior_season (19 games)"
+      },
+      "projections": {
+        "rec_yds": 6.4,
+        "rec_tds": 0.03,
+        "receptions": 0.5,
+        "targets": 1.2
+      },
+      "dvp": {
+        "rank": 14,
+        "label": "Neutral"
+      },
+      "injury": null
     },
     {
       "player_name": "Deebo Samuel Sr.",
@@ -1301,10 +1162,10 @@
         "blend_source": "prior_season (31 games)"
       },
       "projections": {
-        "rec_yds": 47.2,
-        "rec_tds": 0.32,
-        "receptions": 4.2,
-        "targets": 6.1
+        "rec_yds": 46.2,
+        "rec_tds": 0.31,
+        "receptions": 4.1,
+        "targets": 6.0
       },
       "dvp": {
         "rank": 14,
@@ -1325,7 +1186,7 @@
         "blend_source": "prior_season (25 games)"
       },
       "projections": {
-        "rec_yds": 6.4,
+        "rec_yds": 6.2,
         "rec_tds": 0.11,
         "receptions": 1.0,
         "targets": 1.3
@@ -1349,10 +1210,10 @@
         "blend_source": "prior_season (21 games)"
       },
       "projections": {
-        "pass_yds": 200.2,
-        "pass_tds": 1.18,
-        "completions": 19.3,
-        "pass_att": 27.1,
+        "pass_yds": 196.1,
+        "pass_tds": 1.15,
+        "completions": 18.9,
+        "pass_att": 26.6,
         "interceptions": 0.53,
         "rush_yds": 5.9,
         "rush_tds": 0.03
@@ -1376,16 +1237,20 @@
         "blend_source": "prior_season (12 games)"
       },
       "projections": {
-        "rec_yds": 20.9,
-        "rec_tds": 0.36,
-        "receptions": 2.7,
-        "targets": 3.6
+        "rec_yds": 20.5,
+        "rec_tds": 0.35,
+        "receptions": 2.6,
+        "targets": 3.5
       },
       "dvp": {
         "rank": 16,
         "label": "Neutral"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Knee",
+        "practice": null
+      }
     },
     {
       "player_name": "Brock Purdy",
@@ -1400,10 +1265,10 @@
         "blend_source": "prior_season (24 games)"
       },
       "projections": {
-        "pass_yds": 263.2,
-        "pass_tds": 2.16,
-        "completions": 23.0,
-        "pass_att": 32.2,
+        "pass_yds": 257.7,
+        "pass_tds": 2.11,
+        "completions": 22.5,
+        "pass_att": 31.6,
         "interceptions": 0.98,
         "rush_yds": 16.0,
         "rush_tds": 0.33
@@ -1422,56 +1287,18 @@
       "opponent": "LA",
       "game_id": "2026_01_SF_LA",
       "is_home": false,
-      "depth_chart_rank": 6,
+      "depth_chart_rank": 5,
       "usage": {
         "blend_source": "prior_season (15 games)"
       },
       "projections": {
-        "rec_yds": 1.7,
+        "rec_yds": 1.6,
         "receptions": 0.1,
         "targets": 0.1
       },
       "dvp": {
         "rank": 14,
         "label": "Neutral"
-      },
-      "injury": null
-    },
-    {
-      "player_name": "Jordan James",
-      "player_id": "00-0040177",
-      "team": "SF",
-      "position": "RB",
-      "opponent": "LA",
-      "game_id": "2026_01_SF_LA",
-      "is_home": false,
-      "depth_chart_rank": 3,
-      "usage": {
-        "blend_source": "positional_prior (dc_rank=3)"
-      },
-      "projections": {},
-      "dvp": {
-        "rank": 20,
-        "label": "Tough"
-      },
-      "injury": null
-    },
-    {
-      "player_name": "Kurtis Rourke",
-      "player_id": "00-0040589",
-      "team": "SF",
-      "position": "QB",
-      "opponent": "LA",
-      "game_id": "2026_01_SF_LA",
-      "is_home": false,
-      "depth_chart_rank": 3,
-      "usage": {
-        "blend_source": "positional_prior (dc_rank=3)"
-      },
-      "projections": {},
-      "dvp": {
-        "rank": 12,
-        "label": "Favorable"
       },
       "injury": null
     },
@@ -1492,7 +1319,11 @@
         "rank": 14,
         "label": "Neutral"
       },
-      "injury": null
+      "injury": {
+        "status": "Out",
+        "body_part": "Ankle",
+        "practice": null
+      }
     },
     {
       "player_name": "Kaelon Black",
@@ -1526,9 +1357,9 @@
         "blend_source": "prior_season (9 games)"
       },
       "projections": {
-        "rec_yds": 23.3,
-        "rec_tds": 0.38,
-        "receptions": 2.0,
+        "rec_yds": 23.8,
+        "rec_tds": 0.39,
+        "receptions": 2.1,
         "targets": 2.8
       },
       "dvp": {
@@ -1550,12 +1381,12 @@
         "blend_source": "prior_season (6 games)"
       },
       "projections": {
-        "rush_yds": 8.3,
+        "rush_yds": 8.5,
         "carries": 1.5,
         "rec_yds": 2.3,
-        "receptions": 0.3,
+        "receptions": 0.4,
         "targets": 0.4,
-        "rush_rec_yds": 10.6
+        "rush_rec_yds": 10.8
       },
       "dvp": {
         "rank": 6,
@@ -1576,24 +1407,20 @@
         "blend_source": "prior_season (30 games)"
       },
       "projections": {
-        "rush_yds": 56.8,
-        "rush_tds": 0.25,
-        "carries": 12.0,
-        "rec_yds": 12.9,
-        "rec_tds": 0.16,
-        "receptions": 2.2,
-        "targets": 3.0,
-        "rush_rec_yds": 69.7
+        "rush_yds": 58.0,
+        "rush_tds": 0.26,
+        "carries": 12.2,
+        "rec_yds": 13.2,
+        "rec_tds": 0.17,
+        "receptions": 2.3,
+        "targets": 3.1,
+        "rush_rec_yds": 71.2
       },
       "dvp": {
         "rank": 6,
         "label": "Smash"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Hamstring",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Feleipe Franks",
@@ -1630,10 +1457,10 @@
         "blend_source": "prior_season (25 games)"
       },
       "projections": {
-        "rec_yds": 19.8,
+        "rec_yds": 20.2,
         "rec_tds": 0.13,
-        "receptions": 2.1,
-        "targets": 2.8
+        "receptions": 2.2,
+        "targets": 2.9
       },
       "dvp": {
         "rank": 13,
@@ -1654,10 +1481,10 @@
         "blend_source": "prior_season (23 games)"
       },
       "projections": {
-        "rec_yds": 24.9,
-        "rec_tds": 0.17,
-        "receptions": 2.4,
-        "targets": 3.5
+        "rec_yds": 25.4,
+        "rec_tds": 0.18,
+        "receptions": 2.5,
+        "targets": 3.6
       },
       "dvp": {
         "rank": 7,
@@ -1678,10 +1505,10 @@
         "blend_source": "prior_season (11 games)"
       },
       "projections": {
-        "pass_yds": 42.3,
-        "pass_tds": 0.26,
-        "completions": 4.8,
-        "pass_att": 8.0,
+        "pass_yds": 43.2,
+        "pass_tds": 0.27,
+        "completions": 4.9,
+        "pass_att": 8.2,
         "interceptions": 0.12,
         "rush_yds": 3.8,
         "rush_tds": 0.06
@@ -1705,9 +1532,9 @@
         "blend_source": "prior_season (17 games)"
       },
       "projections": {
-        "rec_yds": 8.0,
+        "rec_yds": 8.1,
         "receptions": 0.8,
-        "targets": 0.9
+        "targets": 1.0
       },
       "dvp": {
         "rank": 7,
@@ -1728,10 +1555,10 @@
         "blend_source": "prior_season (30 games)"
       },
       "projections": {
-        "pass_yds": 196.9,
-        "pass_tds": 1.46,
-        "completions": 18.4,
-        "pass_att": 30.0,
+        "pass_yds": 201.1,
+        "pass_tds": 1.49,
+        "completions": 18.8,
+        "pass_att": 30.7,
         "interceptions": 0.66,
         "rush_yds": 16.1,
         "rush_tds": 0.22
@@ -1755,20 +1582,16 @@
         "blend_source": "prior_season (30 games)"
       },
       "projections": {
-        "rec_yds": 29.9,
+        "rec_yds": 30.6,
         "rec_tds": 0.28,
         "receptions": 2.6,
-        "targets": 4.5
+        "targets": 4.6
       },
       "dvp": {
         "rank": 7,
         "label": "Favorable"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Lower Body",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Jonathon Brooks",
@@ -1787,11 +1610,7 @@
         "rank": 6,
         "label": "Smash"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Undisclosed",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Ja'Tavion Sanders",
@@ -1806,8 +1625,8 @@
         "blend_source": "prior_season (27 games)"
       },
       "projections": {
-        "rec_yds": 19.0,
-        "rec_tds": 0.06,
+        "rec_yds": 19.4,
+        "rec_tds": 0.07,
         "receptions": 2.6,
         "targets": 3.0
       },
@@ -1830,10 +1649,10 @@
         "blend_source": "prior_season (22 games)"
       },
       "projections": {
-        "rec_yds": 42.4,
-        "rec_tds": 0.31,
-        "receptions": 2.9,
-        "targets": 3.8
+        "rec_yds": 43.3,
+        "rec_tds": 0.32,
+        "receptions": 3.0,
+        "targets": 3.9
       },
       "dvp": {
         "rank": 7,
@@ -1854,10 +1673,10 @@
         "blend_source": "prior_season (17 games)"
       },
       "projections": {
-        "rec_yds": 46.5,
-        "rec_tds": 0.36,
-        "receptions": 2.8,
-        "targets": 4.8
+        "rec_yds": 47.5,
+        "rec_tds": 0.37,
+        "receptions": 2.9,
+        "targets": 4.9
       },
       "dvp": {
         "rank": 7,
@@ -1878,9 +1697,9 @@
         "blend_source": "prior_season (14 games)"
       },
       "projections": {
-        "rec_yds": 9.1,
+        "rec_yds": 9.3,
         "rec_tds": 0.08,
-        "receptions": 1.0,
+        "receptions": 1.1,
         "targets": 1.3
       },
       "dvp": {
@@ -1902,7 +1721,7 @@
         "blend_source": "prior_season (10 games)"
       },
       "projections": {
-        "rec_yds": 8.4,
+        "rec_yds": 8.6,
         "receptions": 0.8,
         "targets": 1.0
       },
@@ -1929,11 +1748,7 @@
         "rank": 11,
         "label": "Favorable"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Hamstring",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Case Keenum",
@@ -1967,9 +1782,9 @@
         "blend_source": "prior_season (27 games)"
       },
       "projections": {
-        "rec_yds": 17.4,
+        "rec_yds": 17.7,
         "rec_tds": 0.09,
-        "receptions": 1.4,
+        "receptions": 1.5,
         "targets": 1.8
       },
       "dvp": {
@@ -1991,24 +1806,20 @@
         "blend_source": "prior_season (33 games)"
       },
       "projections": {
-        "rush_yds": 79.8,
-        "rush_tds": 0.49,
-        "carries": 16.2,
-        "rec_yds": 19.0,
+        "rush_yds": 81.6,
+        "rush_tds": 0.51,
+        "carries": 16.5,
+        "rec_yds": 19.4,
         "rec_tds": 0.04,
         "receptions": 2.3,
-        "targets": 3.0,
-        "rush_rec_yds": 98.8
+        "targets": 3.1,
+        "rush_rec_yds": 101.0
       },
       "dvp": {
         "rank": 1,
         "label": "Smash"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Abdomen",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Cole Kmet",
@@ -2023,8 +1834,8 @@
         "blend_source": "prior_season (32 games)"
       },
       "projections": {
-        "rec_yds": 26.2,
-        "rec_tds": 0.2,
+        "rec_yds": 26.8,
+        "rec_tds": 0.21,
         "receptions": 2.1,
         "targets": 2.9
       },
@@ -2047,16 +1858,20 @@
         "blend_source": "prior_season (6 games)"
       },
       "projections": {
-        "pass_yds": 16.7,
+        "pass_yds": 17.1,
         "completions": 1.2,
-        "pass_att": 1.5,
+        "pass_att": 1.6,
         "rush_yds": 1.8
       },
       "dvp": {
         "rank": 18,
         "label": "Neutral"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Back",
+        "practice": null
+      }
     },
     {
       "player_name": "Roschon Johnson",
@@ -2071,13 +1886,13 @@
         "blend_source": "prior_season (19 games)"
       },
       "projections": {
-        "rush_yds": 6.7,
+        "rush_yds": 6.9,
         "rush_tds": 0.14,
         "carries": 1.7,
         "rec_yds": 2.3,
         "receptions": 0.4,
         "targets": 0.5,
-        "rush_rec_yds": 9.0
+        "rush_rec_yds": 9.2
       },
       "dvp": {
         "rank": 1,
@@ -2098,10 +1913,10 @@
         "blend_source": "prior_season (34 games)"
       },
       "projections": {
-        "pass_yds": 217.4,
-        "pass_tds": 1.45,
-        "completions": 19.0,
-        "pass_att": 33.0,
+        "pass_yds": 222.1,
+        "pass_tds": 1.48,
+        "completions": 19.4,
+        "pass_att": 33.7,
         "interceptions": 0.73,
         "rush_yds": 22.6,
         "rush_tds": 0.12
@@ -2125,10 +1940,10 @@
         "blend_source": "prior_season (29 games)"
       },
       "projections": {
-        "rec_yds": 47.4,
-        "rec_tds": 0.35,
+        "rec_yds": 48.4,
+        "rec_tds": 0.36,
         "receptions": 3.3,
-        "targets": 6.4
+        "targets": 6.6
       },
       "dvp": {
         "rank": 25,
@@ -2153,10 +1968,10 @@
         "blend_source": "prior_season (16 games)"
       },
       "projections": {
-        "rec_yds": 34.0,
+        "rec_yds": 34.7,
         "rec_tds": 0.33,
-        "receptions": 2.4,
-        "targets": 3.3
+        "receptions": 2.5,
+        "targets": 3.4
       },
       "dvp": {
         "rank": 8,
@@ -2177,23 +1992,19 @@
         "blend_source": "prior_season (17 games)"
       },
       "projections": {
-        "rush_yds": 39.9,
-        "rush_tds": 0.2,
-        "carries": 7.9,
-        "rec_yds": 6.4,
+        "rush_yds": 40.8,
+        "rush_tds": 0.21,
+        "carries": 8.1,
+        "rec_yds": 6.6,
         "receptions": 0.8,
-        "targets": 1.2,
-        "rush_rec_yds": 46.3
+        "targets": 1.3,
+        "rush_rec_yds": 47.4
       },
       "dvp": {
         "rank": 1,
         "label": "Smash"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Knee",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Jahdae Walker",
@@ -2208,7 +2019,7 @@
         "blend_source": "prior_season (6 games)"
       },
       "projections": {
-        "rec_yds": 9.3,
+        "rec_yds": 9.5,
         "rec_tds": 0.21,
         "receptions": 0.7,
         "targets": 1.1
@@ -2232,9 +2043,9 @@
         "blend_source": "prior_season (15 games)"
       },
       "projections": {
-        "rec_yds": 28.0,
+        "rec_yds": 28.6,
         "rec_tds": 0.08,
-        "receptions": 2.0,
+        "receptions": 2.1,
         "targets": 2.6
       },
       "dvp": {
@@ -2387,11 +2198,7 @@
         "rank": 10,
         "label": "Favorable"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Heel",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Joe Burrow",
@@ -2442,11 +2249,7 @@
         "rank": 10,
         "label": "Favorable"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Knee",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Chase Brown",
@@ -2721,8 +2524,8 @@
         "label": "Smash"
       },
       "injury": {
-        "status": "Questionable",
-        "body_part": "Undisclosed",
+        "status": "Doubtful",
+        "body_part": "Hamstring",
         "practice": null
       }
     },
@@ -2825,8 +2628,8 @@
         "label": "Avoid"
       },
       "injury": {
-        "status": "Questionable",
-        "body_part": "Calf",
+        "status": "Doubtful",
+        "body_part": "Knee",
         "practice": null
       }
     },
@@ -2852,11 +2655,7 @@
         "rank": 31,
         "label": "Avoid"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Undisclosed",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Tez Johnson",
@@ -2979,6 +2778,29 @@
       "injury": null
     },
     {
+      "player_name": "Tom Kennedy",
+      "player_id": "00-0035544",
+      "team": "DET",
+      "position": "WR",
+      "opponent": "NO",
+      "game_id": "2026_01_NO_DET",
+      "is_home": true,
+      "depth_chart_rank": 4,
+      "usage": {
+        "blend_source": "prior_season (9 games)"
+      },
+      "projections": {
+        "rec_yds": 4.4,
+        "receptions": 0.5,
+        "targets": 0.6
+      },
+      "dvp": {
+        "rank": 20,
+        "label": "Tough"
+      },
+      "injury": null
+    },
+    {
       "player_name": "Brock Wright",
       "player_id": "00-0036754",
       "team": "DET",
@@ -3095,11 +2917,7 @@
         "rank": 15,
         "label": "Neutral"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Hip",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Jahmyr Gibbs",
@@ -3202,7 +3020,7 @@
         "rush_rec_yds": 67.5
       },
       "dvp": {
-        "rank": 25,
+        "rank": 26,
         "label": "Tough"
       },
       "injury": {
@@ -3230,7 +3048,7 @@
         "targets": 3.8
       },
       "dvp": {
-        "rank": 21,
+        "rank": 22,
         "label": "Tough"
       },
       "injury": null
@@ -3254,7 +3072,7 @@
         "targets": 5.8
       },
       "dvp": {
-        "rank": 21,
+        "rank": 22,
         "label": "Tough"
       },
       "injury": null
@@ -3282,7 +3100,7 @@
         "rush_rec_yds": 67.6
       },
       "dvp": {
-        "rank": 25,
+        "rank": 26,
         "label": "Tough"
       },
       "injury": null
@@ -3357,14 +3175,10 @@
         "rush_rec_yds": 28.7
       },
       "dvp": {
-        "rank": 25,
+        "rank": 26,
         "label": "Tough"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Undisclosed",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Audric Estimé",
@@ -3388,7 +3202,7 @@
         "rush_rec_yds": 45.7
       },
       "dvp": {
-        "rank": 25,
+        "rank": 26,
         "label": "Tough"
       },
       "injury": null
@@ -3484,18 +3298,18 @@
       },
       "projections": {},
       "dvp": {
-        "rank": 21,
+        "rank": 22,
         "label": "Tough"
       },
       "injury": {
-        "status": "Questionable",
+        "status": "Out",
         "body_part": "Hamstring",
         "practice": null
       }
     },
     {
-      "player_name": "Bryce Lance",
-      "player_id": "00-0041067",
+      "player_name": "Barion Brown",
+      "player_id": "00-0041099",
       "team": "NO",
       "position": "WR",
       "opponent": "DET",
@@ -3758,11 +3572,7 @@
         "rank": 9,
         "label": "Favorable"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Hand",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Jaylin Noel",
@@ -3786,11 +3596,7 @@
         "rank": 29,
         "label": "Avoid"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Hamstring",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Woody Marks",
@@ -3877,7 +3683,7 @@
         "targets": 5.6
       },
       "dvp": {
-        "rank": 21,
+        "rank": 22,
         "label": "Tough"
       },
       "injury": null
@@ -3984,7 +3790,7 @@
         "targets": 3.3
       },
       "dvp": {
-        "rank": 21,
+        "rank": 22,
         "label": "Tough"
       },
       "injury": null
@@ -4036,14 +3842,10 @@
         "targets": 5.8
       },
       "dvp": {
-        "rank": 21,
+        "rank": 22,
         "label": "Tough"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Undisclosed",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Dalton Kincaid",
@@ -4116,14 +3918,10 @@
         "targets": 4.5
       },
       "dvp": {
-        "rank": 21,
+        "rank": 22,
         "label": "Tough"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Foot",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Jackson Hawes",
@@ -4365,11 +4163,7 @@
         "rank": 1,
         "label": "Smash"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Undisclosed",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Anthony Richardson",
@@ -4420,11 +4214,7 @@
         "rank": 20,
         "label": "Tough"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Groin",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "DJ Giddens",
@@ -4699,11 +4489,7 @@
         "rank": 4,
         "label": "Smash"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Undisclosed",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Devontez Walker",
@@ -4849,14 +4635,14 @@
         "blend_source": "prior_season (28 games)"
       },
       "projections": {
-        "rush_yds": 8.4,
+        "rush_yds": 8.2,
         "rush_tds": 0.08,
         "carries": 1.9,
-        "rec_yds": 8.0,
+        "rec_yds": 7.8,
         "rec_tds": 0.05,
         "receptions": 1.3,
-        "targets": 1.7,
-        "rush_rec_yds": 16.4
+        "targets": 1.6,
+        "rush_rec_yds": 16.0
       },
       "dvp": {
         "rank": 18,
@@ -4877,20 +4663,16 @@
         "blend_source": "prior_season (31 games)"
       },
       "projections": {
-        "rec_yds": 44.8,
+        "rec_yds": 43.7,
         "rec_tds": 0.23,
-        "receptions": 3.8,
-        "targets": 5.7
+        "receptions": 3.7,
+        "targets": 5.6
       },
       "dvp": {
         "rank": 30,
         "label": "Avoid"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Hand",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Quintin Morris",
@@ -4907,7 +4689,7 @@
       "projections": {
         "rec_yds": 3.9,
         "rec_tds": 0.07,
-        "receptions": 0.5,
+        "receptions": 0.4,
         "targets": 0.7
       },
       "dvp": {
@@ -4929,10 +4711,10 @@
         "blend_source": "prior_season (27 games)"
       },
       "projections": {
-        "pass_yds": 179.3,
-        "pass_tds": 1.37,
-        "completions": 15.1,
-        "pass_att": 28.4,
+        "pass_yds": 174.9,
+        "pass_tds": 1.33,
+        "completions": 14.7,
+        "pass_att": 27.7,
         "interceptions": 0.76,
         "rush_yds": 16.8,
         "rush_tds": 0.47
@@ -4956,10 +4738,10 @@
         "blend_source": "prior_season (30 games)"
       },
       "projections": {
-        "rec_yds": 35.6,
-        "rec_tds": 0.31,
+        "rec_yds": 34.8,
+        "rec_tds": 0.3,
         "receptions": 2.4,
-        "targets": 4.1
+        "targets": 4.0
       },
       "dvp": {
         "rank": 30,
@@ -4980,13 +4762,13 @@
         "blend_source": "prior_season (19 games)"
       },
       "projections": {
-        "rush_yds": 32.6,
-        "rush_tds": 0.39,
-        "carries": 7.4,
+        "rush_yds": 31.8,
+        "rush_tds": 0.38,
+        "carries": 7.2,
         "rec_yds": 1.7,
         "receptions": 0.2,
         "targets": 0.2,
-        "rush_rec_yds": 34.3
+        "rush_rec_yds": 33.5
       },
       "dvp": {
         "rank": 18,
@@ -5007,10 +4789,10 @@
         "blend_source": "prior_season (26 games)"
       },
       "projections": {
-        "rec_yds": 34.8,
-        "rec_tds": 0.16,
-        "receptions": 3.1,
-        "targets": 4.1
+        "rec_yds": 33.9,
+        "rec_tds": 0.15,
+        "receptions": 3.0,
+        "targets": 4.0
       },
       "dvp": {
         "rank": 19,
@@ -5031,10 +4813,10 @@
         "blend_source": "prior_season (31 games)"
       },
       "projections": {
-        "rec_yds": 45.5,
+        "rec_yds": 44.4,
         "rec_tds": 0.3,
-        "receptions": 3.0,
-        "targets": 5.3
+        "receptions": 2.9,
+        "targets": 5.2
       },
       "dvp": {
         "rank": 30,
@@ -5055,10 +4837,10 @@
         "blend_source": "prior_season (4 games)"
       },
       "projections": {
-        "pass_yds": 86.2,
-        "pass_tds": 0.47,
-        "completions": 7.6,
-        "pass_att": 13.0,
+        "pass_yds": 84.1,
+        "pass_tds": 0.46,
+        "completions": 7.4,
+        "pass_att": 12.7,
         "interceptions": 0.26,
         "rush_yds": 3.0
       },
@@ -5081,12 +4863,12 @@
         "blend_source": "prior_season (16 games)"
       },
       "projections": {
-        "rush_yds": 3.7,
+        "rush_yds": 3.6,
         "carries": 0.9,
-        "rec_yds": 1.8,
+        "rec_yds": 1.7,
         "receptions": 0.3,
         "targets": 0.4,
-        "rush_rec_yds": 5.5
+        "rush_rec_yds": 5.3
       },
       "dvp": {
         "rank": 18,
@@ -5107,10 +4889,10 @@
         "blend_source": "prior_season (7 games)"
       },
       "projections": {
-        "rec_yds": 23.4,
+        "rec_yds": 22.8,
         "rec_tds": 0.11,
         "receptions": 2.1,
-        "targets": 3.5
+        "targets": 3.4
       },
       "dvp": {
         "rank": 30,
@@ -5131,24 +4913,20 @@
         "blend_source": "prior_season (15 games)"
       },
       "projections": {
-        "rush_yds": 12.8,
-        "rush_tds": 0.21,
-        "carries": 3.6,
-        "rec_yds": 2.8,
+        "rush_yds": 12.5,
+        "rush_tds": 0.2,
+        "carries": 3.5,
+        "rec_yds": 2.7,
         "rec_tds": 0.08,
         "receptions": 0.4,
         "targets": 0.6,
-        "rush_rec_yds": 15.6
+        "rush_rec_yds": 15.2
       },
       "dvp": {
         "rank": 18,
         "label": "Neutral"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Illness",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Nate Boerkircher",
@@ -5187,7 +4965,7 @@
         "carries": 0.1,
         "rec_yds": 1.6,
         "rec_tds": 0.02,
-        "receptions": 0.3,
+        "receptions": 0.2,
         "targets": 0.2,
         "rush_rec_yds": 1.7
       },
@@ -5210,10 +4988,10 @@
         "blend_source": "prior_season (7 games)"
       },
       "projections": {
-        "pass_yds": 45.5,
+        "pass_yds": 44.4,
         "pass_tds": 0.18,
-        "completions": 5.6,
-        "pass_att": 8.0,
+        "completions": 5.5,
+        "pass_att": 7.8,
         "interceptions": 0.11,
         "rush_yds": 6.4,
         "rush_tds": 0.04
@@ -5237,10 +5015,10 @@
         "blend_source": "prior_season (34 games)"
       },
       "projections": {
-        "rec_yds": 42.3,
+        "rec_yds": 41.2,
         "rec_tds": 0.13,
-        "receptions": 3.5,
-        "targets": 6.8
+        "receptions": 3.4,
+        "targets": 6.6
       },
       "dvp": {
         "rank": 11,
@@ -5261,8 +5039,8 @@
         "blend_source": "prior_season (23 games)"
       },
       "projections": {
-        "rec_yds": 7.0,
-        "rec_tds": 0.08,
+        "rec_yds": 6.8,
+        "rec_tds": 0.07,
         "receptions": 0.5,
         "targets": 0.8
       },
@@ -5285,7 +5063,7 @@
         "blend_source": "prior_season (16 games)"
       },
       "projections": {
-        "rec_yds": 2.4,
+        "rec_yds": 2.3,
         "rec_tds": 0.05,
         "receptions": 0.4,
         "targets": 0.8
@@ -5309,9 +5087,9 @@
         "blend_source": "prior_season (17 games)"
       },
       "projections": {
-        "rec_yds": 5.1,
+        "rec_yds": 4.9,
         "receptions": 0.8,
-        "targets": 1.2
+        "targets": 1.1
       },
       "dvp": {
         "rank": 11,
@@ -5332,13 +5110,13 @@
         "blend_source": "prior_season (15 games)"
       },
       "projections": {
-        "rush_yds": 6.0,
-        "carries": 2.4,
-        "rec_yds": 12.4,
+        "rush_yds": 5.8,
+        "carries": 2.3,
+        "rec_yds": 12.1,
         "rec_tds": 0.08,
         "receptions": 1.5,
         "targets": 1.6,
-        "rush_rec_yds": 18.4
+        "rush_rec_yds": 17.9
       },
       "dvp": {
         "rank": 27,
@@ -5359,13 +5137,13 @@
         "blend_source": "prior_season (4 games)"
       },
       "projections": {
-        "rush_yds": 11.7,
+        "rush_yds": 11.4,
         "rush_tds": 0.15,
-        "carries": 3.7,
-        "rec_yds": 3.6,
+        "carries": 3.6,
+        "rec_yds": 3.5,
         "receptions": 0.5,
         "targets": 0.6,
-        "rush_rec_yds": 15.3
+        "rush_rec_yds": 14.9
       },
       "dvp": {
         "rank": 27,
@@ -5386,10 +5164,10 @@
         "blend_source": "prior_season (16 games)"
       },
       "projections": {
-        "rec_yds": 30.2,
+        "rec_yds": 29.5,
         "rec_tds": 0.28,
         "receptions": 3.0,
-        "targets": 4.6
+        "targets": 4.5
       },
       "dvp": {
         "rank": 9,
@@ -5410,10 +5188,10 @@
         "blend_source": "prior_season (8 games)"
       },
       "projections": {
-        "pass_yds": 113.4,
-        "pass_tds": 0.53,
-        "completions": 10.1,
-        "pass_att": 16.0,
+        "pass_yds": 110.6,
+        "pass_tds": 0.52,
+        "completions": 9.8,
+        "pass_att": 15.6,
         "interceptions": 0.31,
         "rush_yds": 15.0,
         "rush_tds": 0.09
@@ -5437,7 +5215,7 @@
         "blend_source": "prior_season (15 games)"
       },
       "projections": {
-        "rec_yds": 14.3,
+        "rec_yds": 14.0,
         "receptions": 0.8,
         "targets": 2.0
       },
@@ -5460,13 +5238,13 @@
         "blend_source": "prior_season (14 games)"
       },
       "projections": {
-        "rush_yds": 30.2,
-        "rush_tds": 0.3,
-        "carries": 9.0,
-        "rec_yds": 8.4,
+        "rush_yds": 29.4,
+        "rush_tds": 0.29,
+        "carries": 8.7,
+        "rec_yds": 8.2,
         "receptions": 1.3,
-        "targets": 1.6,
-        "rush_rec_yds": 38.6
+        "targets": 1.5,
+        "rush_rec_yds": 37.6
       },
       "dvp": {
         "rank": 27,
@@ -5563,10 +5341,10 @@
         "blend_source": "prior_season (33 games)"
       },
       "projections": {
-        "pass_yds": 199.9,
-        "pass_tds": 1.65,
-        "completions": 19.6,
-        "pass_att": 30.2,
+        "pass_yds": 195.2,
+        "pass_tds": 1.61,
+        "completions": 19.1,
+        "pass_att": 29.5,
         "interceptions": 0.77,
         "rush_yds": 5.8,
         "rush_tds": 0.04
@@ -5609,10 +5387,10 @@
         "blend_source": "prior_season (13 games)"
       },
       "projections": {
-        "pass_yds": 94.1,
-        "pass_tds": 0.66,
-        "completions": 10.2,
-        "pass_att": 14.9,
+        "pass_yds": 91.9,
+        "pass_tds": 0.64,
+        "completions": 9.9,
+        "pass_att": 14.6,
         "interceptions": 0.31,
         "rush_yds": 6.1,
         "rush_tds": 0.04
@@ -5636,20 +5414,16 @@
         "blend_source": "prior_season (30 games)"
       },
       "projections": {
-        "rec_yds": 57.6,
-        "rec_tds": 0.45,
-        "receptions": 4.0,
-        "targets": 6.6
+        "rec_yds": 56.3,
+        "rec_tds": 0.44,
+        "receptions": 3.9,
+        "targets": 6.4
       },
       "dvp": {
         "rank": 12,
         "label": "Favorable"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Undisclosed",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Rico Dowdle",
@@ -5664,14 +5438,14 @@
         "blend_source": "prior_season (33 games)"
       },
       "projections": {
-        "rush_yds": 60.8,
-        "rush_tds": 0.27,
-        "carries": 13.0,
-        "rec_yds": 15.8,
+        "rush_yds": 59.3,
+        "rush_tds": 0.26,
+        "carries": 12.7,
+        "rec_yds": 15.4,
         "rec_tds": 0.09,
-        "receptions": 2.4,
-        "targets": 2.8,
-        "rush_rec_yds": 76.6
+        "receptions": 2.3,
+        "targets": 2.7,
+        "rush_rec_yds": 74.7
       },
       "dvp": {
         "rank": 16,
@@ -5692,20 +5466,16 @@
         "blend_source": "prior_season (33 games)"
       },
       "projections": {
-        "rec_yds": 45.9,
-        "rec_tds": 0.41,
-        "receptions": 4.6,
-        "targets": 6.5
+        "rec_yds": 44.8,
+        "rec_tds": 0.4,
+        "receptions": 4.4,
+        "targets": 6.3
       },
       "dvp": {
         "rank": 12,
         "label": "Favorable"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Leg",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Ben Skowronek",
@@ -5720,7 +5490,7 @@
         "blend_source": "prior_season (25 games)"
       },
       "projections": {
-        "rec_yds": 5.1,
+        "rec_yds": 5.0,
         "rec_tds": 0.05,
         "receptions": 0.3,
         "targets": 0.4
@@ -5729,11 +5499,7 @@
         "rank": 12,
         "label": "Favorable"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Concussion",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Pat Freiermuth",
@@ -5748,10 +5514,10 @@
         "blend_source": "prior_season (32 games)"
       },
       "projections": {
-        "rec_yds": 29.5,
+        "rec_yds": 28.8,
         "rec_tds": 0.23,
-        "receptions": 2.4,
-        "targets": 3.2
+        "receptions": 2.3,
+        "targets": 3.1
       },
       "dvp": {
         "rank": 24,
@@ -5772,14 +5538,14 @@
         "blend_source": "prior_season (31 games)"
       },
       "projections": {
-        "rush_yds": 49.1,
-        "rush_tds": 0.27,
-        "carries": 10.7,
-        "rec_yds": 19.4,
+        "rush_yds": 47.9,
+        "rush_tds": 0.26,
+        "carries": 10.5,
+        "rec_yds": 18.9,
         "rec_tds": 0.08,
         "receptions": 2.5,
         "targets": 2.7,
-        "rush_rec_yds": 68.5
+        "rush_rec_yds": 66.8
       },
       "dvp": {
         "rank": 16,
@@ -5800,10 +5566,10 @@
         "blend_source": "prior_season (26 games)"
       },
       "projections": {
-        "rec_yds": 20.9,
+        "rec_yds": 20.4,
         "rec_tds": 0.06,
         "receptions": 1.6,
-        "targets": 2.4
+        "targets": 2.3
       },
       "dvp": {
         "rank": 24,
@@ -5824,7 +5590,7 @@
         "blend_source": "prior_season (9 games)"
       },
       "projections": {
-        "rec_yds": 12.5,
+        "rec_yds": 12.2,
         "rec_tds": 0.18,
         "receptions": 0.9,
         "targets": 1.6
@@ -5905,10 +5671,10 @@
         "blend_source": "prior_season (30 games)"
       },
       "projections": {
-        "rec_yds": 24.3,
+        "rec_yds": 23.8,
         "rec_tds": 0.18,
-        "receptions": 2.1,
-        "targets": 2.6
+        "receptions": 2.0,
+        "targets": 2.5
       },
       "dvp": {
         "rank": 4,
@@ -5929,10 +5695,10 @@
         "blend_source": "prior_season (16 games)"
       },
       "projections": {
-        "pass_yds": 100.8,
-        "pass_tds": 0.29,
-        "completions": 10.6,
-        "pass_att": 15.2,
+        "pass_yds": 98.4,
+        "pass_tds": 0.28,
+        "completions": 10.4,
+        "pass_att": 14.9,
         "interceptions": 0.15
       },
       "dvp": {
@@ -5954,10 +5720,10 @@
         "blend_source": "prior_season (30 games)"
       },
       "projections": {
-        "rec_yds": 25.7,
-        "rec_tds": 0.16,
-        "receptions": 2.8,
-        "targets": 4.4
+        "rec_yds": 25.1,
+        "rec_tds": 0.15,
+        "receptions": 2.7,
+        "targets": 4.3
       },
       "dvp": {
         "rank": 5,
@@ -5978,10 +5744,10 @@
         "blend_source": "prior_season (25 games)"
       },
       "projections": {
-        "pass_yds": 214.7,
-        "pass_tds": 1.47,
-        "completions": 21.0,
-        "pass_att": 27.2,
+        "pass_yds": 209.6,
+        "pass_tds": 1.43,
+        "completions": 20.5,
+        "pass_att": 26.6,
         "interceptions": 0.76,
         "rush_yds": 2.7
       },
@@ -5989,7 +5755,11 @@
         "rank": 5,
         "label": "Smash"
       },
-      "injury": null
+      "injury": {
+        "status": "Out",
+        "body_part": "Oblique",
+        "practice": null
+      }
     },
     {
       "player_name": "Charlie Woerner",
@@ -6004,8 +5774,8 @@
         "blend_source": "prior_season (19 games)"
       },
       "projections": {
-        "rec_yds": 6.4,
-        "receptions": 1.1,
+        "rec_yds": 6.3,
+        "receptions": 1.0,
         "targets": 1.3
       },
       "dvp": {
@@ -6027,10 +5797,10 @@
         "blend_source": "prior_season (34 games)"
       },
       "projections": {
-        "rec_yds": 52.7,
+        "rec_yds": 51.5,
         "rec_tds": 0.31,
-        "receptions": 4.8,
-        "targets": 6.6
+        "receptions": 4.7,
+        "targets": 6.4
       },
       "dvp": {
         "rank": 4,
@@ -6051,10 +5821,10 @@
         "blend_source": "prior_season (29 games)"
       },
       "projections": {
-        "rec_yds": 77.7,
-        "rec_tds": 0.57,
-        "receptions": 5.6,
-        "targets": 9.2
+        "rec_yds": 75.9,
+        "rec_tds": 0.56,
+        "receptions": 5.5,
+        "targets": 9.0
       },
       "dvp": {
         "rank": 5,
@@ -6075,10 +5845,10 @@
         "blend_source": "prior_season (29 games)"
       },
       "projections": {
-        "rec_yds": 17.2,
+        "rec_yds": 16.8,
         "rec_tds": 0.05,
         "receptions": 1.2,
-        "targets": 2.4
+        "targets": 2.3
       },
       "dvp": {
         "rank": 5,
@@ -6099,13 +5869,13 @@
         "blend_source": "prior_season (31 games)"
       },
       "projections": {
-        "rush_yds": 29.5,
-        "rush_tds": 0.23,
-        "carries": 7.0,
-        "rec_yds": 4.0,
+        "rush_yds": 28.8,
+        "rush_tds": 0.22,
+        "carries": 6.9,
+        "rec_yds": 3.9,
         "receptions": 0.7,
         "targets": 0.9,
-        "rush_rec_yds": 33.5
+        "rush_rec_yds": 32.7
       },
       "dvp": {
         "rank": 21,
@@ -6126,14 +5896,14 @@
         "blend_source": "prior_season (34 games)"
       },
       "projections": {
-        "rush_yds": 76.1,
-        "rush_tds": 0.48,
-        "carries": 15.5,
-        "rec_yds": 37.1,
-        "rec_tds": 0.17,
-        "receptions": 4.1,
-        "targets": 5.0,
-        "rush_rec_yds": 113.2
+        "rush_yds": 74.3,
+        "rush_tds": 0.47,
+        "carries": 15.1,
+        "rec_yds": 36.2,
+        "rec_tds": 0.16,
+        "receptions": 4.0,
+        "targets": 4.9,
+        "rush_rec_yds": 110.5
       },
       "dvp": {
         "rank": 21,
@@ -6154,10 +5924,10 @@
         "blend_source": "prior_season (14 games)"
       },
       "projections": {
-        "pass_yds": 204.0,
-        "pass_tds": 0.85,
-        "completions": 16.6,
-        "pass_att": 25.1,
+        "pass_yds": 199.2,
+        "pass_tds": 0.83,
+        "completions": 16.2,
+        "pass_att": 24.5,
         "interceptions": 0.44,
         "rush_yds": 4.8,
         "rush_tds": 0.14
@@ -6192,11 +5962,7 @@
         "rank": 21,
         "label": "Tough"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Biceps",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Calvin Ridley",
@@ -6343,11 +6109,7 @@
         "rank": 19,
         "label": "Neutral"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Head",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Tyjae Spears",
@@ -6536,11 +6298,7 @@
         "rank": 19,
         "label": "Neutral"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Undisclosed",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Geno Smith",
@@ -6591,7 +6349,11 @@
         "rank": 8,
         "label": "Favorable"
       },
-      "injury": null
+      "injury": {
+        "status": "Out",
+        "body_part": "Groin",
+        "practice": null
+      }
     },
     {
       "player_name": "Andrew Beck",
@@ -6642,7 +6404,11 @@
         "rank": 14,
         "label": "Neutral"
       },
-      "injury": null
+      "injury": {
+        "status": "Doubtful",
+        "body_part": "Back",
+        "practice": null
+      }
     },
     {
       "player_name": "Garrett Wilson",
@@ -6687,7 +6453,7 @@
         "targets": 1.5
       },
       "dvp": {
-        "rank": 22,
+        "rank": 21,
         "label": "Tough"
       },
       "injury": null
@@ -6718,11 +6484,7 @@
         "rank": 14,
         "label": "Neutral"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Thigh",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Isaiah Williams",
@@ -6801,11 +6563,7 @@
         "rank": 14,
         "label": "Neutral"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Knee",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Adonai Mitchell",
@@ -6873,7 +6631,7 @@
         "targets": 2.6
       },
       "dvp": {
-        "rank": 22,
+        "rank": 21,
         "label": "Tough"
       },
       "injury": null
@@ -6892,14 +6650,10 @@
       },
       "projections": {},
       "dvp": {
-        "rank": 22,
+        "rank": 21,
         "label": "Tough"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Abdomen",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Cade Klubnik",
@@ -7673,10 +7427,10 @@
         "blend_source": "prior_season (24 games)"
       },
       "projections": {
-        "pass_yds": 181.1,
-        "pass_tds": 1.07,
-        "completions": 17.4,
-        "pass_att": 26.3,
+        "pass_yds": 176.7,
+        "pass_tds": 1.04,
+        "completions": 17.0,
+        "pass_att": 25.6,
         "interceptions": 0.54,
         "rush_yds": 0.5,
         "rush_tds": 0.07
@@ -7700,7 +7454,7 @@
         "blend_source": "prior_season (12 games)"
       },
       "projections": {
-        "rec_yds": 10.5,
+        "rec_yds": 10.3,
         "receptions": 1.4,
         "targets": 1.7
       },
@@ -7723,9 +7477,9 @@
         "blend_source": "prior_season (15 games)"
       },
       "projections": {
-        "rec_yds": 3.5,
+        "rec_yds": 3.4,
         "receptions": 0.2,
-        "targets": 0.3
+        "targets": 0.2
       },
       "dvp": {
         "rank": 26,
@@ -7746,10 +7500,10 @@
         "blend_source": "prior_season (32 games)"
       },
       "projections": {
-        "rec_yds": 22.3,
+        "rec_yds": 21.8,
         "rec_tds": 0.26,
-        "receptions": 1.6,
-        "targets": 2.5
+        "receptions": 1.5,
+        "targets": 2.4
       },
       "dvp": {
         "rank": 26,
@@ -7770,14 +7524,14 @@
         "blend_source": "prior_season (26 games)"
       },
       "projections": {
-        "rush_yds": 2.1,
+        "rush_yds": 2.0,
         "rush_tds": 0.09,
         "carries": 0.7,
-        "rec_yds": 2.1,
+        "rec_yds": 2.0,
         "rec_tds": 0.07,
         "receptions": 0.3,
         "targets": 0.4,
-        "rush_rec_yds": 4.2
+        "rush_rec_yds": 4.0
       },
       "dvp": {
         "rank": 10,
@@ -7798,10 +7552,10 @@
         "blend_source": "prior_season (34 games)"
       },
       "projections": {
-        "rec_yds": 32.1,
-        "rec_tds": 0.24,
+        "rec_yds": 31.3,
+        "rec_tds": 0.23,
         "receptions": 2.8,
-        "targets": 4.3
+        "targets": 4.2
       },
       "dvp": {
         "rank": 26,
@@ -7822,10 +7576,10 @@
         "blend_source": "prior_season (10 games)"
       },
       "projections": {
-        "pass_yds": 115.8,
+        "pass_yds": 113.0,
         "pass_tds": 0.26,
-        "completions": 11.6,
-        "pass_att": 21.6,
+        "completions": 11.4,
+        "pass_att": 21.1,
         "interceptions": 0.13,
         "rush_yds": 5.7,
         "rush_tds": 0.03
@@ -7849,10 +7603,10 @@
         "blend_source": "prior_season (24 games)"
       },
       "projections": {
-        "rec_yds": 24.1,
+        "rec_yds": 23.6,
         "rec_tds": 0.05,
-        "receptions": 2.7,
-        "targets": 3.8
+        "receptions": 2.6,
+        "targets": 3.7
       },
       "dvp": {
         "rank": 3,
@@ -7873,16 +7627,20 @@
         "blend_source": "prior_season (29 games)"
       },
       "projections": {
-        "rec_yds": 66.9,
-        "rec_tds": 0.46,
-        "receptions": 6.3,
-        "targets": 8.2
+        "rec_yds": 65.3,
+        "rec_tds": 0.45,
+        "receptions": 6.1,
+        "targets": 8.0
       },
       "dvp": {
         "rank": 3,
         "label": "Smash"
       },
-      "injury": null
+      "injury": {
+        "status": "Out",
+        "body_part": "Knee - Meniscus",
+        "practice": null
+      }
     },
     {
       "player_name": "Dylan Laube",
@@ -7899,10 +7657,10 @@
       "projections": {
         "rush_yds": 0.4,
         "carries": 0.3,
-        "rec_yds": 0.8,
+        "rec_yds": 0.7,
         "receptions": 0.1,
-        "targets": 0.2,
-        "rush_rec_yds": 1.2
+        "targets": 0.1,
+        "rush_rec_yds": 1.1
       },
       "dvp": {
         "rank": 10,
@@ -7923,24 +7681,20 @@
         "blend_source": "prior_season (17 games)"
       },
       "projections": {
-        "rush_yds": 39.1,
-        "rush_tds": 0.19,
-        "carries": 10.0,
-        "rec_yds": 14.5,
-        "rec_tds": 0.19,
+        "rush_yds": 38.1,
+        "rush_tds": 0.18,
+        "carries": 9.7,
+        "rec_yds": 14.1,
+        "rec_tds": 0.18,
         "receptions": 2.2,
-        "targets": 2.8,
-        "rush_rec_yds": 53.6
+        "targets": 2.7,
+        "rush_rec_yds": 52.2
       },
       "dvp": {
         "rank": 10,
         "label": "Favorable"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Knee",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Jack Bech",
@@ -7955,7 +7709,7 @@
         "blend_source": "prior_season (14 games)"
       },
       "projections": {
-        "rec_yds": 9.4,
+        "rec_yds": 9.2,
         "receptions": 0.9,
         "targets": 1.2
       },
@@ -8016,10 +7770,10 @@
         "blend_source": "prior_season (13 games)"
       },
       "projections": {
-        "rec_yds": 22.3,
+        "rec_yds": 21.8,
         "rec_tds": 0.07,
         "receptions": 1.9,
-        "targets": 2.8
+        "targets": 2.7
       },
       "dvp": {
         "rank": 26,
@@ -8040,10 +7794,10 @@
         "blend_source": "prior_season (29 games)"
       },
       "projections": {
-        "rec_yds": 20.4,
+        "rec_yds": 19.9,
         "rec_tds": 0.16,
         "receptions": 1.8,
-        "targets": 3.0
+        "targets": 2.9
       },
       "dvp": {
         "rank": 13,
@@ -8064,10 +7818,10 @@
         "blend_source": "prior_season (10 games)"
       },
       "projections": {
-        "pass_yds": 87.1,
-        "pass_tds": 0.6,
-        "completions": 6.6,
-        "pass_att": 7.8,
+        "pass_yds": 85.0,
+        "pass_tds": 0.58,
+        "completions": 6.4,
+        "pass_att": 7.6,
         "interceptions": 0.34,
         "rush_yds": 24.0,
         "rush_tds": 0.39
@@ -8091,10 +7845,10 @@
         "blend_source": "prior_season (18 games)"
       },
       "projections": {
-        "rec_yds": 6.2,
-        "rec_tds": 0.13,
+        "rec_yds": 6.1,
+        "rec_tds": 0.12,
         "receptions": 0.5,
-        "targets": 0.9
+        "targets": 0.8
       },
       "dvp": {
         "rank": 13,
@@ -8115,14 +7869,14 @@
         "blend_source": "prior_season (33 games)"
       },
       "projections": {
-        "rush_yds": 68.7,
-        "rush_tds": 0.4,
-        "carries": 13.5,
-        "rec_yds": 24.4,
-        "rec_tds": 0.25,
-        "receptions": 4.0,
-        "targets": 4.6,
-        "rush_rec_yds": 93.1
+        "rush_yds": 67.0,
+        "rush_tds": 0.39,
+        "carries": 13.1,
+        "rec_yds": 23.9,
+        "rec_tds": 0.24,
+        "receptions": 3.9,
+        "targets": 4.5,
+        "rush_rec_yds": 90.9
       },
       "dvp": {
         "rank": 11,
@@ -8143,13 +7897,13 @@
         "blend_source": "prior_season (22 games)"
       },
       "projections": {
-        "rush_yds": 25.8,
-        "rush_tds": 0.14,
-        "carries": 6.7,
-        "rec_yds": 2.8,
+        "rush_yds": 25.1,
+        "rush_tds": 0.13,
+        "carries": 6.6,
+        "rec_yds": 2.7,
         "receptions": 0.4,
         "targets": 0.7,
-        "rush_rec_yds": 28.6
+        "rush_rec_yds": 27.8
       },
       "dvp": {
         "rank": 11,
@@ -8170,10 +7924,10 @@
         "blend_source": "prior_season (31 games)"
       },
       "projections": {
-        "rec_yds": 16.1,
+        "rec_yds": 15.7,
         "rec_tds": 0.11,
         "receptions": 2.3,
-        "targets": 3.1
+        "targets": 3.0
       },
       "dvp": {
         "rank": 13,
@@ -8213,14 +7967,14 @@
         "blend_source": "prior_season (17 games)"
       },
       "projections": {
-        "rush_yds": 7.5,
+        "rush_yds": 7.3,
         "rush_tds": 0.11,
-        "carries": 2.8,
+        "carries": 2.7,
         "rec_yds": 1.0,
         "rec_tds": 0.04,
         "receptions": 0.3,
         "targets": 0.3,
-        "rush_rec_yds": 8.5
+        "rush_rec_yds": 8.3
       },
       "dvp": {
         "rank": 11,
@@ -8241,10 +7995,10 @@
         "blend_source": "prior_season (5 games)"
       },
       "projections": {
-        "pass_yds": 88.9,
-        "pass_tds": 0.25,
-        "completions": 11.2,
-        "pass_att": 18.9,
+        "pass_yds": 86.8,
+        "pass_tds": 0.24,
+        "completions": 10.9,
+        "pass_att": 18.5,
         "interceptions": 0.14,
         "rush_yds": 5.8
       },
@@ -8357,7 +8111,7 @@
       "opponent": "GB",
       "game_id": "2026_01_GB_MIN",
       "is_home": true,
-      "depth_chart_rank": 3,
+      "depth_chart_rank": 2,
       "usage": {
         "blend_source": "prior_season (7 games)"
       },
@@ -8497,7 +8251,7 @@
         "targets": 6.3
       },
       "dvp": {
-        "rank": 22,
+        "rank": 21,
         "label": "Tough"
       },
       "injury": null
@@ -8521,7 +8275,7 @@
         "targets": 8.3
       },
       "dvp": {
-        "rank": 22,
+        "rank": 21,
         "label": "Tough"
       },
       "injury": null
@@ -8572,7 +8326,7 @@
         "targets": 5.8
       },
       "dvp": {
-        "rank": 22,
+        "rank": 21,
         "label": "Tough"
       },
       "injury": null
@@ -8585,7 +8339,7 @@
       "opponent": "GB",
       "game_id": "2026_01_GB_MIN",
       "is_home": true,
-      "depth_chart_rank": 2,
+      "depth_chart_rank": 3,
       "usage": {
         "blend_source": "prior_season (10 games)"
       },
@@ -8622,7 +8376,26 @@
         "targets": 0.2
       },
       "dvp": {
-        "rank": 22,
+        "rank": 21,
+        "label": "Tough"
+      },
+      "injury": null
+    },
+    {
+      "player_name": "Gavin Bartholomew",
+      "player_id": "00-0040215",
+      "team": "MIN",
+      "position": "TE",
+      "opponent": "GB",
+      "game_id": "2026_01_GB_MIN",
+      "is_home": true,
+      "depth_chart_rank": 3,
+      "usage": {
+        "blend_source": "positional_prior (dc_rank=3)"
+      },
+      "projections": {},
+      "dvp": {
+        "rank": 23,
         "label": "Tough"
       },
       "injury": null
@@ -8641,37 +8414,10 @@
       },
       "projections": {},
       "dvp": {
-        "rank": 22,
+        "rank": 21,
         "label": "Tough"
       },
       "injury": null
-    },
-    {
-      "player_name": "Ben Yurosek",
-      "player_id": "00-0040509",
-      "team": "MIN",
-      "position": "TE",
-      "opponent": "GB",
-      "game_id": "2026_01_GB_MIN",
-      "is_home": true,
-      "depth_chart_rank": 3,
-      "usage": {
-        "blend_source": "prior_season (6 games)"
-      },
-      "projections": {
-        "rec_yds": 1.6,
-        "receptions": 0.3,
-        "targets": 0.4
-      },
-      "dvp": {
-        "rank": 23,
-        "label": "Tough"
-      },
-      "injury": {
-        "status": "IR",
-        "body_part": "Undisclosed",
-        "practice": null
-      }
     },
     {
       "player_name": "Max Bredeson",
@@ -8933,11 +8679,7 @@
         "rank": 27,
         "label": "Avoid"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Knee - ACL",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Jayden Reed",
@@ -9449,11 +9191,7 @@
         "rank": 31,
         "label": "Avoid"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Knee",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Terry McLaurin",
@@ -9525,11 +9263,7 @@
         "rank": 32,
         "label": "Avoid"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Hamstring",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Rachaad White",
@@ -9557,11 +9291,7 @@
         "rank": 22,
         "label": "Tough"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Undisclosed",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Treylon Burks",
@@ -9707,11 +9437,7 @@
         "rank": 32,
         "label": "Avoid"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Oblique",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Jaylin Lane",
@@ -9761,11 +9487,7 @@
         "rank": 22,
         "label": "Tough"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Undisclosed",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Antonio Williams",
@@ -10129,11 +9851,7 @@
         "rank": 25,
         "label": "Tough"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Undisclosed",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Jaxson Dart",
@@ -10356,7 +10074,11 @@
         "rank": 3,
         "label": "Smash"
       },
-      "injury": null
+      "injury": {
+        "status": "Out",
+        "body_part": "Hip",
+        "practice": null
+      }
     },
     {
       "player_name": "KaVontae Turpin",
@@ -10605,11 +10327,7 @@
         "rank": 19,
         "label": "Neutral"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Knee - ACL",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Noah Gray",
@@ -11112,7 +10830,7 @@
       "opponent": "KC",
       "game_id": "2026_01_DEN_KC",
       "is_home": false,
-      "depth_chart_rank": 4,
+      "depth_chart_rank": 3,
       "usage": {
         "blend_source": "prior_season (32 games)"
       },
@@ -11163,7 +10881,7 @@
       "opponent": "KC",
       "game_id": "2026_01_DEN_KC",
       "is_home": false,
-      "depth_chart_rank": 3,
+      "depth_chart_rank": 5,
       "usage": {
         "blend_source": "prior_season (33 games)"
       },
@@ -11187,7 +10905,7 @@
       "opponent": "KC",
       "game_id": "2026_01_DEN_KC",
       "is_home": false,
-      "depth_chart_rank": 5,
+      "depth_chart_rank": 4,
       "usage": {
         "blend_source": "prior_season (13 games)"
       },
