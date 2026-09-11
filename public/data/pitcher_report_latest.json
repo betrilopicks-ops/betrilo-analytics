@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-09-11",
-  "last_refreshed": "2026-09-11T16:02:17-04:00",
+  "last_refreshed": "2026-09-11T16:32:16-04:00",
   "games": 15,
-  "pitchers": 28,
+  "pitchers": 29,
   "coverage": {
-    "full_2026": 27,
+    "full_2026": 28,
     "fallback_2025": 0,
     "thin_no_data": 1
   },
@@ -26,7 +26,7 @@
           "season": {
             "w": 9,
             "l": 10,
-            "era": "3.85",
+            "era": "3.88",
             "whip": "1.12"
           },
           "stuff": {
@@ -1754,20 +1754,66 @@
           "side": "home",
           "team": "AZ",
           "opponent": "TEX",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Merrill Kelly",
+          "pitcher_id": 518876,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 9,
+            "l": 13,
+            "era": "5.06",
+            "whip": "1.47"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.15,
+            "whiff_rate": 0.2,
+            "bb_rate": 0.107,
+            "xwoba_against": 0.365,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Changeup",
+              "usage_pct": 27.1,
+              "velo": 88.6
+            },
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 26.3,
+              "velo": 92.0
+            },
+            {
+              "pitch": "Cutter",
+              "usage_pct": 13.7,
+              "velo": 91.2
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.122,
+              "ops_against": 0.849
+            },
+            "vs_rhb": {
+              "k_rate": 0.194,
+              "ops_against": 0.637
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.196,
+              "whiff_rate": 0.235,
+              "xwoba": 0.312,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.15,
+              "whiff_rate": 0.2,
+              "xwoba": 0.365
+            },
+            "trend": "hot",
+            "note": "K% up 4.6pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
