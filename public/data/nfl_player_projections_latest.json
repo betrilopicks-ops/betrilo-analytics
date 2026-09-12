@@ -1,10 +1,124 @@
 {
   "season": 2026,
   "week": 1,
-  "generated_at": "2026-09-11T17:00:16.455239-04:00",
+  "generated_at": "2026-09-12T10:48:39.385977-04:00",
   "week1_mode": true,
   "data_note": "Projections based on 2024-2025 season data (no 2026 game data yet)",
   "player_count": 449,
+  "games": [
+    {
+      "game_id": "2026_01_NE_SEA",
+      "away_team": "NE",
+      "home_team": "SEA",
+      "gameday": "2026-09-09",
+      "gametime": "20:20"
+    },
+    {
+      "game_id": "2026_01_SF_LA",
+      "away_team": "SF",
+      "home_team": "LA",
+      "gameday": "2026-09-10",
+      "gametime": "20:35"
+    },
+    {
+      "game_id": "2026_01_CHI_CAR",
+      "away_team": "CHI",
+      "home_team": "CAR",
+      "gameday": "2026-09-13",
+      "gametime": "13:00"
+    },
+    {
+      "game_id": "2026_01_TB_CIN",
+      "away_team": "TB",
+      "home_team": "CIN",
+      "gameday": "2026-09-13",
+      "gametime": "13:00"
+    },
+    {
+      "game_id": "2026_01_NO_DET",
+      "away_team": "NO",
+      "home_team": "DET",
+      "gameday": "2026-09-13",
+      "gametime": "13:00"
+    },
+    {
+      "game_id": "2026_01_BUF_HOU",
+      "away_team": "BUF",
+      "home_team": "HOU",
+      "gameday": "2026-09-13",
+      "gametime": "13:00"
+    },
+    {
+      "game_id": "2026_01_BAL_IND",
+      "away_team": "BAL",
+      "home_team": "IND",
+      "gameday": "2026-09-13",
+      "gametime": "13:00"
+    },
+    {
+      "game_id": "2026_01_CLE_JAX",
+      "away_team": "CLE",
+      "home_team": "JAX",
+      "gameday": "2026-09-13",
+      "gametime": "13:00"
+    },
+    {
+      "game_id": "2026_01_ATL_PIT",
+      "away_team": "ATL",
+      "home_team": "PIT",
+      "gameday": "2026-09-13",
+      "gametime": "13:00"
+    },
+    {
+      "game_id": "2026_01_NYJ_TEN",
+      "away_team": "NYJ",
+      "home_team": "TEN",
+      "gameday": "2026-09-13",
+      "gametime": "13:00"
+    },
+    {
+      "game_id": "2026_01_ARI_LAC",
+      "away_team": "ARI",
+      "home_team": "LAC",
+      "gameday": "2026-09-13",
+      "gametime": "16:25"
+    },
+    {
+      "game_id": "2026_01_MIA_LV",
+      "away_team": "MIA",
+      "home_team": "LV",
+      "gameday": "2026-09-13",
+      "gametime": "16:25"
+    },
+    {
+      "game_id": "2026_01_GB_MIN",
+      "away_team": "GB",
+      "home_team": "MIN",
+      "gameday": "2026-09-13",
+      "gametime": "16:25"
+    },
+    {
+      "game_id": "2026_01_WAS_PHI",
+      "away_team": "WAS",
+      "home_team": "PHI",
+      "gameday": "2026-09-13",
+      "gametime": "16:25"
+    },
+    {
+      "game_id": "2026_01_DAL_NYG",
+      "away_team": "DAL",
+      "home_team": "NYG",
+      "gameday": "2026-09-13",
+      "gametime": "20:20"
+    },
+    {
+      "game_id": "2026_01_DEN_KC",
+      "away_team": "DEN",
+      "home_team": "KC",
+      "gameday": "2026-09-14",
+      "gametime": "20:15"
+    }
+  ],
   "players": [
     {
       "player_name": "Eric Saubert",
@@ -3048,7 +3162,7 @@
         "targets": 3.8
       },
       "dvp": {
-        "rank": 22,
+        "rank": 21,
         "label": "Tough"
       },
       "injury": null
@@ -3072,7 +3186,7 @@
         "targets": 5.8
       },
       "dvp": {
-        "rank": 22,
+        "rank": 21,
         "label": "Tough"
       },
       "injury": null
@@ -3298,7 +3412,7 @@
       },
       "projections": {},
       "dvp": {
-        "rank": 22,
+        "rank": 21,
         "label": "Tough"
       },
       "injury": {
@@ -3683,7 +3797,7 @@
         "targets": 5.6
       },
       "dvp": {
-        "rank": 22,
+        "rank": 21,
         "label": "Tough"
       },
       "injury": null
@@ -3790,7 +3904,7 @@
         "targets": 3.3
       },
       "dvp": {
-        "rank": 22,
+        "rank": 21,
         "label": "Tough"
       },
       "injury": null
@@ -3842,7 +3956,7 @@
         "targets": 5.8
       },
       "dvp": {
-        "rank": 22,
+        "rank": 21,
         "label": "Tough"
       },
       "injury": null
@@ -3918,7 +4032,7 @@
         "targets": 4.5
       },
       "dvp": {
-        "rank": 22,
+        "rank": 21,
         "label": "Tough"
       },
       "injury": null
@@ -6453,7 +6567,7 @@
         "targets": 1.5
       },
       "dvp": {
-        "rank": 21,
+        "rank": 22,
         "label": "Tough"
       },
       "injury": null
@@ -6631,7 +6745,7 @@
         "targets": 2.6
       },
       "dvp": {
-        "rank": 21,
+        "rank": 22,
         "label": "Tough"
       },
       "injury": null
@@ -6650,7 +6764,7 @@
       },
       "projections": {},
       "dvp": {
-        "rank": 21,
+        "rank": 22,
         "label": "Tough"
       },
       "injury": null
@@ -8251,7 +8365,7 @@
         "targets": 6.3
       },
       "dvp": {
-        "rank": 21,
+        "rank": 22,
         "label": "Tough"
       },
       "injury": null
@@ -8275,7 +8389,7 @@
         "targets": 8.3
       },
       "dvp": {
-        "rank": 21,
+        "rank": 22,
         "label": "Tough"
       },
       "injury": null
@@ -8326,7 +8440,7 @@
         "targets": 5.8
       },
       "dvp": {
-        "rank": 21,
+        "rank": 22,
         "label": "Tough"
       },
       "injury": null
@@ -8376,7 +8490,7 @@
         "targets": 0.2
       },
       "dvp": {
-        "rank": 21,
+        "rank": 22,
         "label": "Tough"
       },
       "injury": null
@@ -8414,7 +8528,7 @@
       },
       "projections": {},
       "dvp": {
-        "rank": 21,
+        "rank": 22,
         "label": "Tough"
       },
       "injury": null
