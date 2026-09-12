@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { dark } from '../theme';
 import SortableTable from '../components/SortableTable';
 import NflPageWrapper from '../components/NflPageWrapper';
+import fmtTime from '../utils/fmtTime';
 
 const POS_TABS = ['All', 'QB', 'RB', 'WR', 'TE'];
 
@@ -26,6 +27,7 @@ export default function NflProjectionsPage() {
       team: p.team,
       position: p.position,
       opponent: p.opponent,
+      game_id: p.game_id || '',
       dc: p.depth_chart_rank,
       dvp_rank: p.dvp?.rank,
       dvp_label: p.dvp?.label,
@@ -45,6 +47,15 @@ export default function NflProjectionsPage() {
     if (activePos !== 'All') rows = rows.filter(r => r.position === activePos);
     return rows;
   }, [data, activePos]);
+
+  // Build matchup dropdown options from games array, sorted by kickoff
+  const matchupOptions = useMemo(() => {
+    if (!data?.games) return [];
+    return data.games.map(g => ({
+      value: g.game_id,
+      label: `${fmtTime(g.gameday, g.gametime)} — ${g.away_team} @ ${g.home_team}`,
+    }));
+  }, [data]);
 
   if (error) return <div style={{ textAlign: 'center', padding: '60px', color: dark.textSecondary, background: dark.pageBg, minHeight: '100vh' }}>Projections data is unavailable right now.</div>;
 
@@ -104,7 +115,6 @@ export default function NflProjectionsPage() {
     { key: 'dc', label: 'DC', sortable: true, align: 'center', format: v => v <= 3 ? v : '—' },
   ];
 
-  const teams = [...new Set(players.map(p => p.team))].sort();
   const defaultSortKey = activePos === 'QB' ? 'pass_yds' : activePos === 'RB' ? 'rush_yds' : 'rec_yds';
 
   return (
@@ -138,7 +148,7 @@ export default function NflProjectionsPage() {
         <SortableTable
           columns={columns} data={players}
           defaultSort={{ key: defaultSortKey, order: 'desc' }}
-          filters={[{ key: 'team', label: 'Team', options: teams.map(t => ({ value: t, label: t })) }]}
+          filters={[{ key: 'game_id', label: 'Matchup', options: matchupOptions }]}
           searchKey="player_name" searchPlaceholder="Search players..."
           loading={loading}
           lastRefreshed={data?.generated_at ? new Date(data.generated_at).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' }) : null}

@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { dark } from '../theme';
 import NflPageWrapper from '../components/NflPageWrapper';
+import fmtTime from '../utils/fmtTime';
 
 const DVP_COLORS = {
   'Smash': dark.dvpSmash,
@@ -149,16 +150,6 @@ export default function NflMatchupsPage() {
   };
 
   const positions = ['All', 'QB', 'RB', 'WR', 'TE'];
-
-  const fmtTime = (gameday, gametime) => {
-    if (!gameday || !gametime) return 'TBD';
-    try {
-      const dt = new Date(`${gameday}T${gametime}:00-04:00`);
-      const day = dt.toLocaleDateString('en-US', { weekday: 'short', timeZone: 'America/New_York' });
-      const time = dt.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: 'America/New_York' });
-      return `${day} ${time}`;
-    } catch { return gametime; }
-  };
 
   const getVsYpg = (p) => {
     if (!p.vs_opponent) return -Infinity;
