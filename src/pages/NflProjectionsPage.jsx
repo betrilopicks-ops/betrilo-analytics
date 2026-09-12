@@ -6,12 +6,20 @@ import NflPageWrapper from '../components/NflPageWrapper';
 import fmtTime from '../utils/fmtTime';
 
 const POS_TABS = ['All', 'QB', 'RB', 'WR', 'TE'];
+const DVP_LEVELS = ['Smash', 'Favorable', 'Neutral', 'Tough', 'Avoid'];
+const DVP_COLORS = {
+  Smash: dark.dvpSmash, Favorable: dark.dvpFavorable,
+  Neutral: dark.dvpNeutral, Tough: dark.dvpTough, Avoid: dark.dvpAvoid,
+};
 
 export default function NflProjectionsPage() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [activePos, setActivePos] = useState('All');
+  const [selectedGame, setSelectedGame] = useState('all');
+  const [injuryFilter, setInjuryFilter] = useState('all');
+  const [selectedDvp, setSelectedDvp] = useState(new Set());
 
   useEffect(() => {
     fetch('/data/nfl_player_projections_latest.json')
@@ -19,6 +27,21 @@ export default function NflProjectionsPage() {
       .then(d => { setData(d); setLoading(false); })
       .catch(() => { setError(true); setLoading(false); });
   }, []);
+
+  const toggleDvp = (level) => {
+    setSelectedDvp(prev => {
+      const next = new Set(prev);
+      if (next.has(level)) next.delete(level); else next.add(level);
+      return next;
+    });
+  };
+
+  const hasActiveFilters = selectedGame !== 'all' || injuryFilter !== 'all' || selectedDvp.size > 0;
+  const clearFilters = () => {
+    setSelectedGame('all');
+    setInjuryFilter('all');
+    setSelectedDvp(new Set());
+  };
 
   const players = useMemo(() => {
     if (!data?.players) return [];
@@ -44,9 +67,17 @@ export default function NflProjectionsPage() {
       completions: p.projections?.completions,
       target_share: p.usage?.target_share,
     }));
+    // Position filter
     if (activePos !== 'All') rows = rows.filter(r => r.position === activePos);
+    // Matchup filter
+    if (selectedGame !== 'all') rows = rows.filter(r => r.game_id === selectedGame);
+    // Injury filter
+    if (injuryFilter === 'healthy') rows = rows.filter(r => !r.injury_status);
+    else if (injuryFilter === 'designated') rows = rows.filter(r => !!r.injury_status);
+    // DvP filter (multi-select — empty set = all)
+    if (selectedDvp.size > 0) rows = rows.filter(r => r.dvp_label && selectedDvp.has(r.dvp_label));
     return rows;
-  }, [data, activePos]);
+  }, [data, activePos, selectedGame, injuryFilter, selectedDvp]);
 
   // Build matchup dropdown options from games array, sorted by kickoff
   const matchupOptions = useMemo(() => {
@@ -60,12 +91,12 @@ export default function NflProjectionsPage() {
   if (error) return <div style={{ textAlign: 'center', padding: '60px', color: dark.textSecondary, background: dark.pageBg, minHeight: '100vh' }}>Projections data is unavailable right now.</div>;
 
   const dvpFormat = (v) => {
-    const c = { Smash: dark.dvpSmash, Favorable: dark.dvpFavorable, Neutral: dark.dvpNeutral, Tough: dark.dvpTough, Avoid: dark.dvpAvoid };
+    const c = DVP_COLORS;
     return <span style={{ color: c[v] || dark.textMuted, fontWeight: 600 }}>{v || '—'}</span>;
   };
   const injFormat = (v) => {
     if (!v) return null;
-    const c = { Questionable: dark.injQuestionable, IR: dark.injIR, PUP: dark.injPUP, Suspended: dark.injSuspended, 'Did Not Report': dark.injIR, Unknown: dark.injUnknown };
+    const c = { Questionable: dark.injQuestionable, IR: dark.injIR, PUP: dark.injPUP, Suspended: dark.injSuspended, 'Did Not Report': dark.injIR, Out: dark.injIR, Doubtful: dark.injQuestionable, Unknown: dark.injUnknown };
     return <span style={{ color: c[v] || dark.textMuted, fontWeight: 600, fontSize: '11px' }}>{v}</span>;
   };
 
@@ -134,7 +165,8 @@ export default function NflProjectionsPage() {
           {data?.week1_mode && ' — Prior-season projections (no 2026 game data yet)'}
         </p>
 
-        <div style={{ display: 'flex', gap: '6px', marginBottom: '12px', flexWrap: 'wrap' }}>
+        {/* Position tabs */}
+        <div style={{ display: 'flex', gap: '6px', marginBottom: '10px', flexWrap: 'wrap' }}>
           {POS_TABS.map(pos => (
             <button key={pos} onClick={() => setActivePos(pos)} style={{
               background: activePos === pos ? dark.accentBg : dark.inactiveBg,
@@ -145,10 +177,76 @@ export default function NflProjectionsPage() {
           ))}
         </div>
 
+        {/* Filter bar: matchup + injury + DvP + clear */}
+        <div style={{
+          display: 'flex', flexWrap: 'wrap', gap: '8px', alignItems: 'center',
+          padding: '10px 14px', background: dark.surfaceBg, borderRadius: '8px', marginBottom: '12px',
+        }}>
+          {/* Matchup dropdown */}
+          <select
+            value={selectedGame}
+            onChange={e => setSelectedGame(e.target.value)}
+            style={{
+              background: dark.inputBg, color: dark.inputText, border: `1px solid ${dark.inputBorder}`,
+              padding: '6px 10px', borderRadius: '4px', fontSize: '13px', maxWidth: '280px',
+            }}
+          >
+            <option value="all">Matchup: All</option>
+            {matchupOptions.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
+          </select>
+
+          {/* Injury dropdown */}
+          <select
+            value={injuryFilter}
+            onChange={e => setInjuryFilter(e.target.value)}
+            style={{
+              background: dark.inputBg, color: dark.inputText, border: `1px solid ${dark.inputBorder}`,
+              padding: '6px 10px', borderRadius: '4px', fontSize: '13px',
+            }}
+          >
+            <option value="all">Injury: All</option>
+            <option value="healthy">Healthy Only</option>
+            <option value="designated">Has Designation</option>
+          </select>
+
+          {/* DvP toggle pills */}
+          <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap', alignItems: 'center' }}>
+            <span style={{ color: dark.textSecondary, fontSize: '12px', marginRight: '2px' }}>DvP:</span>
+            {DVP_LEVELS.map(level => {
+              const active = selectedDvp.has(level);
+              return (
+                <button
+                  key={level}
+                  onClick={() => toggleDvp(level)}
+                  style={{
+                    background: active ? DVP_COLORS[level] : dark.inactiveBg,
+                    color: active ? dark.pageBg : dark.textMuted,
+                    border: active ? 'none' : `1px solid ${dark.inactiveBorder}`,
+                    padding: '3px 8px', borderRadius: '4px', fontSize: '11px',
+                    fontWeight: active ? 700 : 500, cursor: 'pointer',
+                  }}
+                >{level}</button>
+              );
+            })}
+          </div>
+
+          {/* Clear all */}
+          {hasActiveFilters && (
+            <button
+              onClick={clearFilters}
+              style={{
+                background: 'none', border: 'none', color: dark.textSecondary,
+                fontSize: '11px', cursor: 'pointer', textDecoration: 'underline',
+                marginLeft: 'auto', padding: '4px',
+              }}
+            >Clear filters</button>
+          )}
+        </div>
+
         <SortableTable
           columns={columns} data={players}
           defaultSort={{ key: defaultSortKey, order: 'desc' }}
-          filters={[{ key: 'game_id', label: 'Matchup', options: matchupOptions }]}
+          filters={[]}
           searchKey="player_name" searchPlaceholder="Search players..."
           loading={loading}
           lastRefreshed={data?.generated_at ? new Date(data.generated_at).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' }) : null}
