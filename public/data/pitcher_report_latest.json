@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-09-12",
-  "last_refreshed": "2026-09-12T13:32:03-04:00",
+  "last_refreshed": "2026-09-12T15:02:05-04:00",
   "games": 15,
-  "pitchers": 28,
+  "pitchers": 29,
   "coverage": {
-    "full_2026": 27,
+    "full_2026": 28,
     "fallback_2025": 0,
     "thin_no_data": 1
   },
@@ -26,8 +26,8 @@
           "season": {
             "w": 0,
             "l": 1,
-            "era": "3.95",
-            "whip": "1.24"
+            "era": "5.40",
+            "whip": "1.38"
           },
           "stuff": {
             "k_rate": 0.147,
@@ -82,8 +82,8 @@
           "season": {
             "w": 1,
             "l": 4,
-            "era": "5.34",
-            "whip": "1.42"
+            "era": "5.55",
+            "whip": "1.48"
           },
           "stuff": {
             "k_rate": 0.199,
@@ -156,8 +156,8 @@
           "season": {
             "w": 8,
             "l": 8,
-            "era": "3.41",
-            "whip": "1.09"
+            "era": "3.67",
+            "whip": "1.13"
           },
           "stuff": {
             "k_rate": 0.219,
@@ -222,8 +222,8 @@
           "season": {
             "w": 3,
             "l": 5,
-            "era": "3.53",
-            "whip": "1.19"
+            "era": "3.41",
+            "whip": "1.15"
           },
           "stuff": {
             "k_rate": 0.203,
@@ -296,8 +296,8 @@
           "season": {
             "w": 6,
             "l": 7,
-            "era": "2.83",
-            "whip": "1.12"
+            "era": "2.73",
+            "whip": "1.11"
           },
           "stuff": {
             "k_rate": 0.185,
@@ -362,8 +362,8 @@
           "season": {
             "w": 10,
             "l": 11,
-            "era": "3.83",
-            "whip": "1.15"
+            "era": "3.89",
+            "whip": "1.14"
           },
           "stuff": {
             "k_rate": 0.274,
@@ -1370,20 +1370,66 @@
           "side": "home",
           "team": "MIL",
           "opponent": "CIN",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Shane Drohan",
+          "pitcher_id": 675660,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 7,
+            "l": 5,
+            "era": "4.09",
+            "whip": "1.31"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.245,
+            "whiff_rate": 0.247,
+            "bb_rate": 0.093,
+            "xwoba_against": 0.299,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 28.6,
+              "velo": 94.9
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 21.3,
+              "velo": 86.3
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 19.3,
+              "velo": 94.7
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.232,
+              "ops_against": 0.647
+            },
+            "vs_rhb": {
+              "k_rate": 0.251,
+              "ops_against": 0.793
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.23,
+              "whiff_rate": 0.233,
+              "xwoba": 0.334,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.245,
+              "whiff_rate": 0.247,
+              "xwoba": 0.299
+            },
+            "trend": "cold",
+            "note": "K% down 1.5pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
