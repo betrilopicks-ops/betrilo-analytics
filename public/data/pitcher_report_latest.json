@@ -1,6 +1,6 @@
 {
   "slate_date": "2026-09-13",
-  "last_refreshed": "2026-09-13T11:32:04-04:00",
+  "last_refreshed": "2026-09-13T12:02:04-04:00",
   "games": 15,
   "pitchers": 30,
   "coverage": {
@@ -160,64 +160,64 @@
           "side": "home",
           "team": "WSH",
           "opponent": "LAA",
-          "pitcher_name": "Jake Irvin",
-          "pitcher_id": 663623,
+          "pitcher_name": "Riley Cornelio",
+          "pitcher_id": 683000,
           "hand": "R",
           "season": {
             "w": 2,
-            "l": 9,
-            "era": "5.52",
-            "whip": "1.42"
+            "l": 2,
+            "era": "5.26",
+            "whip": "1.60"
           },
           "stuff": {
-            "k_rate": 0.237,
-            "whiff_rate": 0.213,
-            "bb_rate": 0.102,
-            "xwoba_against": 0.344,
+            "k_rate": 0.217,
+            "whiff_rate": 0.307,
+            "bb_rate": 0.205,
+            "xwoba_against": 0.325,
             "vintage": "2026"
           },
           "arsenal": [
             {
+              "pitch": "Slider",
+              "usage_pct": 49.4,
+              "velo": 84.7
+            },
+            {
               "pitch": "4-Seam",
-              "usage_pct": 30.2,
-              "velo": 93.1
+              "usage_pct": 42.7,
+              "velo": 96.3
             },
             {
-              "pitch": "Curve",
-              "usage_pct": 23.2,
-              "velo": 77.7
-            },
-            {
-              "pitch": "Sinker",
-              "usage_pct": 19.6,
-              "velo": 92.1
+              "pitch": "Cutter",
+              "usage_pct": 7.0,
+              "velo": 90.3
             }
           ],
           "splits": {
             "vs_lhb": {
-              "k_rate": 0.23,
-              "ops_against": 0.732
+              "k_rate": 0.156,
+              "ops_against": 0.521
             },
             "vs_rhb": {
-              "k_rate": 0.232,
-              "ops_against": 0.808
+              "k_rate": 0.256,
+              "ops_against": 0.874
             },
             "vintage": "2026"
           },
           "recent_form": {
             "last5": {
-              "k_rate": 0.206,
-              "whiff_rate": 0.198,
-              "xwoba": 0.346,
+              "k_rate": 0.289,
+              "whiff_rate": 0.355,
+              "xwoba": 0.3,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.237,
-              "whiff_rate": 0.213,
-              "xwoba": 0.344
+              "k_rate": 0.217,
+              "whiff_rate": 0.307,
+              "xwoba": 0.325
             },
-            "trend": "cold",
-            "note": "K% down 3.1pts over L5"
+            "trend": "hot",
+            "note": "K% up 7.2pts over L5"
           },
           "sample_flag": null,
           "scratched": false
