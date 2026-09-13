@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-09-13",
-  "last_refreshed": "2026-09-13T11:02:05-04:00",
+  "last_refreshed": "2026-09-13T11:32:04-04:00",
   "games": 15,
-  "pitchers": 29,
+  "pitchers": 30,
   "coverage": {
-    "full_2026": 29,
+    "full_2026": 30,
     "fallback_2025": 0,
     "thin_no_data": 0
   },
@@ -1346,20 +1346,66 @@
           "side": "away",
           "team": "CWS",
           "opponent": "STL",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "David Sandlin",
+          "pitcher_id": 689818,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 2,
+            "l": 1,
+            "era": "6.93",
+            "whip": "1.38"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.244,
+            "whiff_rate": 0.213,
+            "bb_rate": 0.144,
+            "xwoba_against": 0.344,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 35.2,
+              "velo": 96.3
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 25.4,
+              "velo": 83.1
+            },
+            {
+              "pitch": "Cutter",
+              "usage_pct": 16.6,
+              "velo": 90.7
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.145,
+              "ops_against": 1.205
+            },
+            "vs_rhb": {
+              "k_rate": 0.375,
+              "ops_against": 0.396
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.244,
+              "whiff_rate": 0.213,
+              "xwoba": 0.344,
+              "starts": 4
+            },
+            "season_avg": {
+              "k_rate": 0.244,
+              "whiff_rate": 0.213,
+              "xwoba": 0.344
+            },
+            "trend": "steady",
+            "note": "K% steady over L4"
+          },
+          "sample_flag": null,
           "scratched": false
         }
       ]
