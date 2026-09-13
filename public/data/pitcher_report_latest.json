@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-09-13",
-  "last_refreshed": "2026-09-13T06:08:42-04:00",
+  "last_refreshed": "2026-09-13T11:02:05-04:00",
   "games": 15,
-  "pitchers": 28,
+  "pitchers": 29,
   "coverage": {
-    "full_2026": 28,
+    "full_2026": 29,
     "fallback_2025": 0,
     "thin_no_data": 0
   },
@@ -1000,20 +1000,66 @@
           "side": "home",
           "team": "MIN",
           "opponent": "CLE",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Joe Ryan",
+          "pitcher_id": 657746,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 6,
+            "l": 9,
+            "era": "3.68",
+            "whip": "1.13"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.269,
+            "whiff_rate": 0.224,
+            "bb_rate": 0.063,
+            "xwoba_against": 0.29,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 44.9,
+              "velo": 93.3
+            },
+            {
+              "pitch": "Sweeper",
+              "usage_pct": 13.6,
+              "velo": 80.2
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 10.3,
+              "velo": 93.1
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.273,
+              "ops_against": 0.705
+            },
+            "vs_rhb": {
+              "k_rate": 0.261,
+              "ops_against": 0.626
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.282,
+              "whiff_rate": 0.249,
+              "xwoba": 0.285,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.269,
+              "whiff_rate": 0.224,
+              "xwoba": 0.29
+            },
+            "trend": "steady",
+            "note": "K% up 1.3pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
