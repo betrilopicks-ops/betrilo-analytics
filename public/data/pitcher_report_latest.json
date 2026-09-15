@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-09-15",
-  "last_refreshed": "2026-09-15T11:02:11-04:00",
+  "last_refreshed": "2026-09-15T15:02:13-04:00",
   "games": 15,
-  "pitchers": 29,
+  "pitchers": 30,
   "coverage": {
-    "full_2026": 29,
+    "full_2026": 30,
     "fallback_2025": 0,
     "thin_no_data": 0
   },
@@ -366,64 +366,64 @@
           "side": "away",
           "team": "CWS",
           "opponent": "CLE",
-          "pitcher_name": "Davis Martin",
-          "pitcher_id": 663436,
-          "hand": "R",
+          "pitcher_name": "Chris Murphy",
+          "pitcher_id": 669684,
+          "hand": "L",
           "season": {
-            "w": 9,
-            "l": 7,
-            "era": "4.05",
-            "whip": "1.31"
+            "w": 3,
+            "l": 0,
+            "era": "3.94",
+            "whip": "1.34"
           },
           "stuff": {
-            "k_rate": 0.217,
-            "whiff_rate": 0.236,
-            "bb_rate": 0.07,
-            "xwoba_against": 0.329,
+            "k_rate": 0.383,
+            "whiff_rate": 0.296,
+            "bb_rate": 0.158,
+            "xwoba_against": 0.276,
             "vintage": "2026"
           },
           "arsenal": [
             {
               "pitch": "4-Seam",
+              "usage_pct": 33.0,
+              "velo": 95.9
+            },
+            {
+              "pitch": "Slider",
               "usage_pct": 27.6,
-              "velo": 94.0
+              "velo": 89.8
             },
             {
-              "pitch": "Sinker",
-              "usage_pct": 18.7,
-              "velo": 92.8
-            },
-            {
-              "pitch": "Changeup",
-              "usage_pct": 15.2,
-              "velo": 90.0
+              "pitch": "Curve",
+              "usage_pct": 23.4,
+              "velo": 78.0
             }
           ],
           "splits": {
             "vs_lhb": {
               "k_rate": 0.212,
-              "ops_against": 0.649
+              "ops_against": 0.808
             },
             "vs_rhb": {
-              "k_rate": 0.227,
-              "ops_against": 0.745
+              "k_rate": 0.292,
+              "ops_against": 0.622
             },
             "vintage": "2026"
           },
           "recent_form": {
             "last5": {
-              "k_rate": 0.133,
-              "whiff_rate": 0.197,
-              "xwoba": 0.41,
+              "k_rate": 0.4,
+              "whiff_rate": 0.305,
+              "xwoba": 0.266,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.217,
-              "whiff_rate": 0.236,
-              "xwoba": 0.329
+              "k_rate": 0.383,
+              "whiff_rate": 0.296,
+              "xwoba": 0.276
             },
-            "trend": "cold",
-            "note": "K% down 8.4pts over L5"
+            "trend": "steady",
+            "note": "K% up 1.7pts over L5"
           },
           "sample_flag": null,
           "scratched": false
@@ -1405,20 +1405,66 @@
           "side": "home",
           "team": "TEX",
           "opponent": "BOS",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Jacob deGrom",
+          "pitcher_id": 594798,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 10,
+            "l": 9,
+            "era": "3.80",
+            "whip": "1.08"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.319,
+            "whiff_rate": 0.318,
+            "bb_rate": 0.066,
+            "xwoba_against": 0.284,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 42.2,
+              "velo": 97.4
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 34.4,
+              "velo": 91.3
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 14.4,
+              "velo": 89.7
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.323,
+              "ops_against": 0.568
+            },
+            "vs_rhb": {
+              "k_rate": 0.312,
+              "ops_against": 0.682
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.387,
+              "whiff_rate": 0.337,
+              "xwoba": 0.219,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.319,
+              "whiff_rate": 0.318,
+              "xwoba": 0.284
+            },
+            "trend": "hot",
+            "note": "K% up 6.8pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
