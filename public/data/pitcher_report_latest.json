@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-09-18",
-  "last_refreshed": "2026-09-18T15:32:17-04:00",
+  "last_refreshed": "2026-09-18T16:02:19-04:00",
   "games": 15,
-  "pitchers": 29,
+  "pitchers": 30,
   "coverage": {
-    "full_2026": 29,
+    "full_2026": 30,
     "fallback_2025": 0,
     "thin_no_data": 0
   },
@@ -776,20 +776,66 @@
           "side": "away",
           "team": "PHI",
           "opponent": "NYM",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Tim Mayza",
+          "pitcher_id": 641835,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 3,
+            "l": 3,
+            "era": "3.06",
+            "whip": "1.05"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.222,
+            "whiff_rate": 0.18,
+            "bb_rate": 0.075,
+            "xwoba_against": 0.249,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Sinker",
+              "usage_pct": 61.0,
+              "velo": 94.2
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 27.3,
+              "velo": 87.3
+            },
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 10.0,
+              "velo": 94.5
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.233,
+              "ops_against": 0.515
+            },
+            "vs_rhb": {
+              "k_rate": 0.248,
+              "ops_against": 0.569
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.156,
+              "whiff_rate": 0.152,
+              "xwoba": 0.272,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.222,
+              "whiff_rate": 0.18,
+              "xwoba": 0.249
+            },
+            "trend": "cold",
+            "note": "K% down 6.6pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         }
       ]
