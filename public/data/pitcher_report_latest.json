@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-09-18",
-  "last_refreshed": "2026-09-18T11:02:05-04:00",
+  "last_refreshed": "2026-09-18T15:02:17-04:00",
   "games": 15,
-  "pitchers": 28,
+  "pitchers": 29,
   "coverage": {
-    "full_2026": 28,
+    "full_2026": 29,
     "fallback_2025": 0,
     "thin_no_data": 0
   },
@@ -300,20 +300,66 @@
           "side": "home",
           "team": "BAL",
           "opponent": "MIL",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Cade Povich",
+          "pitcher_id": 700249,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 2,
+            "l": 1,
+            "era": "4.05",
+            "whip": "1.44"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.169,
+            "whiff_rate": 0.191,
+            "bb_rate": 0.097,
+            "xwoba_against": 0.342,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 47.5,
+              "velo": 91.8
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 22.1,
+              "velo": 76.3
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 10.3,
+              "velo": 86.4
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.115,
+              "ops_against": 1.092
+            },
+            "vs_rhb": {
+              "k_rate": 0.211,
+              "ops_against": 0.598
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.178,
+              "whiff_rate": 0.16,
+              "xwoba": 0.357,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.169,
+              "whiff_rate": 0.191,
+              "xwoba": 0.342
+            },
+            "trend": "steady",
+            "note": "K% steady over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
@@ -730,66 +776,20 @@
           "side": "away",
           "team": "PHI",
           "opponent": "NYM",
-          "pitcher_name": "Andrew Painter",
-          "pitcher_id": 691725,
-          "hand": "R",
+          "pitcher_name": "TBD",
+          "pitcher_id": null,
+          "hand": null,
           "season": {
-            "w": 3,
-            "l": 9,
-            "era": "5.54",
-            "whip": "1.44"
+            "w": null,
+            "l": null,
+            "era": null,
+            "whip": null
           },
-          "stuff": {
-            "k_rate": 0.196,
-            "whiff_rate": 0.222,
-            "bb_rate": 0.083,
-            "xwoba_against": 0.333,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 32.4,
-              "velo": 96.6
-            },
-            {
-              "pitch": "Slider",
-              "usage_pct": 18.8,
-              "velo": 88.1
-            },
-            {
-              "pitch": "Sweeper",
-              "usage_pct": 16.1,
-              "velo": 82.7
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.175,
-              "ops_against": 0.808
-            },
-            "vs_rhb": {
-              "k_rate": 0.218,
-              "ops_against": 0.764
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.233,
-              "whiff_rate": 0.254,
-              "xwoba": 0.269,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.196,
-              "whiff_rate": 0.222,
-              "xwoba": 0.333
-            },
-            "trend": "hot",
-            "note": "K% up 3.7pts over L5"
-          },
-          "sample_flag": null,
+          "stuff": {},
+          "arsenal": [],
+          "splits": {},
+          "recent_form": {},
+          "sample_flag": "tbd",
           "scratched": false
         }
       ]
@@ -1074,20 +1074,66 @@
           "side": "home",
           "team": "COL",
           "opponent": "SEA",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Gabriel Hughes",
+          "pitcher_id": 687312,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 0,
+            "l": 8,
+            "era": "6.37",
+            "whip": "1.45"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.191,
+            "whiff_rate": 0.178,
+            "bb_rate": 0.086,
+            "xwoba_against": 0.309,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 46.6,
+              "velo": 92.5
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 14.2,
+              "velo": 87.8
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 13.8,
+              "velo": 78.8
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.151,
+              "ops_against": 0.786
+            },
+            "vs_rhb": {
+              "k_rate": 0.295,
+              "ops_against": 0.833
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.176,
+              "whiff_rate": 0.186,
+              "xwoba": 0.328,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.191,
+              "whiff_rate": 0.178,
+              "xwoba": 0.309
+            },
+            "trend": "steady",
+            "note": "K% down 1.5pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
