@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-09-19",
-  "last_refreshed": "2026-09-19T12:32:05-04:00",
+  "last_refreshed": "2026-09-19T13:32:09-04:00",
   "games": 15,
-  "pitchers": 29,
+  "pitchers": 30,
   "coverage": {
-    "full_2026": 29,
+    "full_2026": 30,
     "fallback_2025": 0,
     "thin_no_data": 0
   },
@@ -1906,20 +1906,56 @@
           "side": "away",
           "team": "SF",
           "opponent": "LAD",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Yunior Marte",
+          "pitcher_id": 805074,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 0,
+            "l": 0,
+            "era": "2.45",
+            "whip": "1.09"
           },
-          "stuff": {},
-          "arsenal": [],
+          "stuff": {
+            "k_rate": 0.154,
+            "whiff_rate": 0.202,
+            "bb_rate": 0.102,
+            "xwoba_against": 0.289,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 51.7,
+              "velo": 93.2
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 38.2,
+              "velo": 84.7
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 4.8,
+              "velo": 82.6
+            }
+          ],
           "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.154,
+              "whiff_rate": 0.202,
+              "xwoba": 0.289,
+              "starts": 3
+            },
+            "season_avg": {
+              "k_rate": 0.154,
+              "whiff_rate": 0.202,
+              "xwoba": 0.289
+            },
+            "trend": "steady",
+            "note": "K% steady over L3"
+          },
+          "sample_flag": null,
           "scratched": false
         }
       ]
