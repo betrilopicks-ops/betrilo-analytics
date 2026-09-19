@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-09-19",
-  "last_refreshed": "2026-09-19T11:32:07-04:00",
+  "last_refreshed": "2026-09-19T12:32:05-04:00",
   "games": 15,
-  "pitchers": 28,
+  "pitchers": 29,
   "coverage": {
-    "full_2026": 28,
+    "full_2026": 29,
     "fallback_2025": 0,
     "thin_no_data": 0
   },
@@ -366,20 +366,66 @@
           "side": "away",
           "team": "BOS",
           "opponent": "TB",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Brayan Bello",
+          "pitcher_id": 678394,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 6,
+            "l": 7,
+            "era": "4.74",
+            "whip": "1.43"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.164,
+            "whiff_rate": 0.227,
+            "bb_rate": 0.081,
+            "xwoba_against": 0.341,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Sinker",
+              "usage_pct": 38.9,
+              "velo": 95.2
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 19.7,
+              "velo": 88.9
+            },
+            {
+              "pitch": "Cutter",
+              "usage_pct": 15.4,
+              "velo": 87.5
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.115,
+              "ops_against": 0.808
+            },
+            "vs_rhb": {
+              "k_rate": 0.228,
+              "ops_against": 0.692
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.135,
+              "whiff_rate": 0.175,
+              "xwoba": 0.359,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.164,
+              "whiff_rate": 0.227,
+              "xwoba": 0.341
+            },
+            "trend": "steady",
+            "note": "K% down 2.9pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         }
       ]
