@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-09-20",
-  "last_refreshed": "2026-09-20T06:09:03-04:00",
+  "last_refreshed": "2026-09-20T11:02:15-04:00",
   "games": 15,
-  "pitchers": 28,
+  "pitchers": 29,
   "coverage": {
-    "full_2026": 27,
+    "full_2026": 28,
     "fallback_2025": 1,
     "thin_no_data": 0
   },
@@ -356,20 +356,66 @@
           "side": "away",
           "team": "CHC",
           "opponent": "CIN",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "David Peterson",
+          "pitcher_id": 656849,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 8,
+            "l": 8,
+            "era": "5.11",
+            "whip": "1.55"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.213,
+            "whiff_rate": 0.208,
+            "bb_rate": 0.103,
+            "xwoba_against": 0.328,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Sinker",
+              "usage_pct": 28.4,
+              "velo": 92.3
+            },
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 24.4,
+              "velo": 92.4
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 22.1,
+              "velo": 86.4
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.322,
+              "ops_against": 0.697
+            },
+            "vs_rhb": {
+              "k_rate": 0.169,
+              "ops_against": 0.766
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.25,
+              "whiff_rate": 0.237,
+              "xwoba": 0.321,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.213,
+              "whiff_rate": 0.208,
+              "xwoba": 0.328
+            },
+            "trend": "hot",
+            "note": "K% up 3.7pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         }
       ]
