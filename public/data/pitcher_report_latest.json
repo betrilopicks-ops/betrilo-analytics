@@ -1,6 +1,6 @@
 {
   "slate_date": "2026-09-22",
-  "last_refreshed": "2026-09-22T11:02:24-04:00",
+  "last_refreshed": "2026-09-22T14:32:13-04:00",
   "games": 16,
   "pitchers": 31,
   "coverage": {
@@ -26,8 +26,8 @@
           "season": {
             "w": 6,
             "l": 3,
-            "era": "2.95",
-            "whip": "1.13"
+            "era": "2.77",
+            "whip": "1.08"
           },
           "stuff": {
             "k_rate": 0.268,
@@ -92,7 +92,7 @@
           "season": {
             "w": 15,
             "l": 4,
-            "era": "2.94",
+            "era": "2.96",
             "whip": "1.07"
           },
           "stuff": {
@@ -291,146 +291,6 @@
       ]
     },
     {
-      "game_pk": 824785,
-      "start_time": "2026-09-22T22:35:00Z",
-      "home_team": "BAL",
-      "away_team": "TOR",
-      "pitchers": [
-        {
-          "side": "home",
-          "team": "BAL",
-          "opponent": "TOR",
-          "pitcher_name": "Chris Bassitt",
-          "pitcher_id": 605135,
-          "hand": "R",
-          "season": {
-            "w": 8,
-            "l": 5,
-            "era": "4.64",
-            "whip": "1.55"
-          },
-          "stuff": {
-            "k_rate": 0.158,
-            "whiff_rate": 0.187,
-            "bb_rate": 0.086,
-            "xwoba_against": 0.345,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "Sinker",
-              "usage_pct": 37.1,
-              "velo": 92.3
-            },
-            {
-              "pitch": "Curve",
-              "usage_pct": 21.9,
-              "velo": 71.4
-            },
-            {
-              "pitch": "Cutter",
-              "usage_pct": 17.8,
-              "velo": 89.9
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.158,
-              "ops_against": 0.853
-            },
-            "vs_rhb": {
-              "k_rate": 0.174,
-              "ops_against": 0.677
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.202,
-              "whiff_rate": 0.21,
-              "xwoba": 0.324,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.158,
-              "whiff_rate": 0.187,
-              "xwoba": 0.345
-            },
-            "trend": "hot",
-            "note": "K% up 4.4pts over L5"
-          },
-          "sample_flag": null,
-          "scratched": false
-        },
-        {
-          "side": "away",
-          "team": "TOR",
-          "opponent": "BAL",
-          "pitcher_name": "Max Scherzer",
-          "pitcher_id": 453286,
-          "hand": "R",
-          "season": {
-            "w": 3,
-            "l": 8,
-            "era": "6.07",
-            "whip": "1.36"
-          },
-          "stuff": {
-            "k_rate": 0.167,
-            "whiff_rate": 0.182,
-            "bb_rate": 0.098,
-            "xwoba_against": 0.332,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 47.8,
-              "velo": 93.0
-            },
-            {
-              "pitch": "Slider",
-              "usage_pct": 18.5,
-              "velo": 85.6
-            },
-            {
-              "pitch": "Curve",
-              "usage_pct": 14.8,
-              "velo": 74.8
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.121,
-              "ops_against": 0.837
-            },
-            "vs_rhb": {
-              "k_rate": 0.245,
-              "ops_against": 0.595
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.194,
-              "whiff_rate": 0.217,
-              "xwoba": 0.296,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.167,
-              "whiff_rate": 0.182,
-              "xwoba": 0.332
-            },
-            "trend": "steady",
-            "note": "K% up 2.7pts over L5"
-          },
-          "sample_flag": null,
-          "scratched": false
-        }
-      ]
-    },
-    {
       "game_pk": 824222,
       "start_time": "2026-09-22T22:40:00Z",
       "home_team": "DET",
@@ -506,54 +366,64 @@
           "side": "away",
           "team": "WSH",
           "opponent": "DET",
-          "pitcher_name": "Jackson Kent",
-          "pitcher_id": 800600,
-          "hand": "L",
+          "pitcher_name": "Riley Cornelio",
+          "pitcher_id": 683000,
+          "hand": "R",
           "season": {
-            "w": 1,
-            "l": 4,
-            "era": "6.40",
-            "whip": "1.76"
+            "w": 3,
+            "l": 2,
+            "era": "4.22",
+            "whip": "1.53"
           },
           "stuff": {
-            "k_rate": 0.166,
-            "whiff_rate": 0.236,
-            "bb_rate": 0.132,
-            "xwoba_against": 0.346,
+            "k_rate": 0.235,
+            "whiff_rate": 0.327,
+            "bb_rate": 0.19,
+            "xwoba_against": 0.304,
             "vintage": "2026"
           },
           "arsenal": [
             {
+              "pitch": "Slider",
+              "usage_pct": 48.1,
+              "velo": 84.9
+            },
+            {
               "pitch": "4-Seam",
-              "usage_pct": 25.9,
-              "velo": 93.2
+              "usage_pct": 36.2,
+              "velo": 96.3
             },
             {
-              "pitch": "Changeup",
-              "usage_pct": 21.2,
-              "velo": 85.2
-            },
-            {
-              "pitch": "Sinker",
-              "usage_pct": 17.8,
-              "velo": 92.9
+              "pitch": "Cutter",
+              "usage_pct": 15.1,
+              "velo": 90.3
             }
           ],
-          "splits": {},
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.123,
+              "ops_against": 0.523
+            },
+            "vs_rhb": {
+              "k_rate": 0.321,
+              "ops_against": 0.782
+            },
+            "vintage": "2026"
+          },
           "recent_form": {
             "last5": {
-              "k_rate": 0.166,
-              "whiff_rate": 0.236,
-              "xwoba": 0.346,
+              "k_rate": 0.313,
+              "whiff_rate": 0.413,
+              "xwoba": 0.251,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.166,
-              "whiff_rate": 0.236,
-              "xwoba": 0.346
+              "k_rate": 0.235,
+              "whiff_rate": 0.327,
+              "xwoba": 0.304
             },
-            "trend": "steady",
-            "note": "K% steady over L5"
+            "trend": "hot",
+            "note": "K% up 7.8pts over L5"
           },
           "sample_flag": null,
           "scratched": false
@@ -2188,6 +2058,146 @@
             },
             "trend": "steady",
             "note": "K% down 1.4pts over L5"
+          },
+          "sample_flag": null,
+          "scratched": false
+        }
+      ]
+    },
+    {
+      "game_pk": 824785,
+      "start_time": "2026-09-22T22:35:00Z",
+      "home_team": "BAL",
+      "away_team": "TOR",
+      "pitchers": [
+        {
+          "side": "home",
+          "team": "BAL",
+          "opponent": "TOR",
+          "pitcher_name": "Chris Bassitt",
+          "pitcher_id": 605135,
+          "hand": "R",
+          "season": {
+            "w": 8,
+            "l": 5,
+            "era": "4.64",
+            "whip": "1.55"
+          },
+          "stuff": {
+            "k_rate": 0.158,
+            "whiff_rate": 0.187,
+            "bb_rate": 0.086,
+            "xwoba_against": 0.345,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Sinker",
+              "usage_pct": 37.1,
+              "velo": 92.3
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 21.9,
+              "velo": 71.4
+            },
+            {
+              "pitch": "Cutter",
+              "usage_pct": 17.8,
+              "velo": 89.9
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.158,
+              "ops_against": 0.853
+            },
+            "vs_rhb": {
+              "k_rate": 0.174,
+              "ops_against": 0.677
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.202,
+              "whiff_rate": 0.21,
+              "xwoba": 0.324,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.158,
+              "whiff_rate": 0.187,
+              "xwoba": 0.345
+            },
+            "trend": "hot",
+            "note": "K% up 4.4pts over L5"
+          },
+          "sample_flag": null,
+          "scratched": false
+        },
+        {
+          "side": "away",
+          "team": "TOR",
+          "opponent": "BAL",
+          "pitcher_name": "Max Scherzer",
+          "pitcher_id": 453286,
+          "hand": "R",
+          "season": {
+            "w": 3,
+            "l": 8,
+            "era": "6.07",
+            "whip": "1.36"
+          },
+          "stuff": {
+            "k_rate": 0.167,
+            "whiff_rate": 0.182,
+            "bb_rate": 0.098,
+            "xwoba_against": 0.332,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 47.8,
+              "velo": 93.0
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 18.5,
+              "velo": 85.6
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 14.8,
+              "velo": 74.8
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.121,
+              "ops_against": 0.837
+            },
+            "vs_rhb": {
+              "k_rate": 0.245,
+              "ops_against": 0.595
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.194,
+              "whiff_rate": 0.217,
+              "xwoba": 0.296,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.167,
+              "whiff_rate": 0.182,
+              "xwoba": 0.332
+            },
+            "trend": "steady",
+            "note": "K% up 2.7pts over L5"
           },
           "sample_flag": null,
           "scratched": false
