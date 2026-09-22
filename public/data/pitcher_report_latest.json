@@ -1,11 +1,11 @@
 {
   "slate_date": "2026-09-22",
-  "last_refreshed": "2026-09-22T18:02:21-04:00",
+  "last_refreshed": "2026-09-22T18:32:23-04:00",
   "games": 16,
-  "pitchers": 31,
+  "pitchers": 32,
   "coverage": {
     "full_2026": 31,
-    "fallback_2025": 0,
+    "fallback_2025": 1,
     "thin_no_data": 0
   },
   "hot_cold_rule": "hot = L5 K% >= 3pts above season AND L5 xwOBA <= season; cold = L5 K% >= 3pts below season OR L5 xwOBA >= 3pts above season; else steady",
@@ -1980,20 +1980,42 @@
           "side": "home",
           "team": "LAD",
           "opponent": "SD",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Brock Stewart",
+          "pitcher_id": 592779,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 1,
+            "l": 2,
+            "era": "2.55",
+            "whip": "0.97"
           },
-          "stuff": {},
-          "arsenal": [],
+          "stuff": {
+            "k_rate": 0.263,
+            "whiff_rate": 0.258,
+            "bb_rate": 0.229,
+            "xwoba_against": 0.367,
+            "vintage": "2025"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 37.1,
+              "velo": 96.0
+            },
+            {
+              "pitch": "Sweeper",
+              "usage_pct": 24.6,
+              "velo": 83.9
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 14.9,
+              "velo": 89.5
+            }
+          ],
           "splits": {},
           "recent_form": {},
-          "sample_flag": "tbd",
+          "sample_flag": "2025_fallback",
           "scratched": false
         },
         {
