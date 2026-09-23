@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-09-23",
-  "last_refreshed": "2026-09-23T06:09:31-04:00",
+  "last_refreshed": "2026-09-23T11:02:21-04:00",
   "games": 16,
-  "pitchers": 28,
+  "pitchers": 30,
   "coverage": {
-    "full_2026": 28,
+    "full_2026": 30,
     "fallback_2025": 0,
     "thin_no_data": 0
   },
@@ -160,20 +160,66 @@
           "side": "home",
           "team": "BAL",
           "opponent": "TOR",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Chris Bassitt",
+          "pitcher_id": 605135,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 8,
+            "l": 5,
+            "era": "4.64",
+            "whip": "1.55"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.158,
+            "whiff_rate": 0.187,
+            "bb_rate": 0.086,
+            "xwoba_against": 0.345,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Sinker",
+              "usage_pct": 37.1,
+              "velo": 92.3
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 21.9,
+              "velo": 71.4
+            },
+            {
+              "pitch": "Cutter",
+              "usage_pct": 17.8,
+              "velo": 89.9
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.158,
+              "ops_against": 0.853
+            },
+            "vs_rhb": {
+              "k_rate": 0.174,
+              "ops_against": 0.677
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.202,
+              "whiff_rate": 0.21,
+              "xwoba": 0.324,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.158,
+              "whiff_rate": 0.187,
+              "xwoba": 0.345
+            },
+            "trend": "hot",
+            "note": "K% up 4.4pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
@@ -1417,20 +1463,66 @@
           "side": "home",
           "team": "TEX",
           "opponent": "NYM",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Cody Bradford",
+          "pitcher_id": 674003,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 0,
+            "l": 5,
+            "era": "4.19",
+            "whip": "1.50"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.127,
+            "whiff_rate": 0.142,
+            "bb_rate": 0.061,
+            "xwoba_against": 0.345,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 52.6,
+              "velo": 88.5
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 31.4,
+              "velo": 81.0
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 10.3,
+              "velo": 80.8
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.065,
+              "ops_against": 0.919
+            },
+            "vs_rhb": {
+              "k_rate": 0.15,
+              "ops_against": 0.748
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.104,
+              "whiff_rate": 0.145,
+              "xwoba": 0.329,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.127,
+              "whiff_rate": 0.142,
+              "xwoba": 0.345
+            },
+            "trend": "steady",
+            "note": "K% down 2.3pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
