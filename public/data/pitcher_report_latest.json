@@ -1,6 +1,6 @@
 {
   "slate_date": "2026-09-23",
-  "last_refreshed": "2026-09-23T13:02:25-04:00",
+  "last_refreshed": "2026-09-23T14:32:20-04:00",
   "games": 16,
   "pitchers": 30,
   "coverage": {
@@ -26,8 +26,8 @@
           "season": {
             "w": 10,
             "l": 11,
-            "era": "4.06",
-            "whip": "1.36"
+            "era": "3.94",
+            "whip": "1.35"
           },
           "stuff": {
             "k_rate": 0.183,
@@ -92,8 +92,8 @@
           "season": {
             "w": 3,
             "l": 4,
-            "era": "3.86",
-            "whip": "1.84"
+            "era": "3.71",
+            "whip": "1.82"
           },
           "stuff": {
             "k_rate": 0.2,
@@ -166,8 +166,8 @@
           "season": {
             "w": 8,
             "l": 5,
-            "era": "4.64",
-            "whip": "1.55"
+            "era": "4.50",
+            "whip": "1.53"
           },
           "stuff": {
             "k_rate": 0.158,
@@ -232,8 +232,8 @@
           "season": {
             "w": 3,
             "l": 8,
-            "era": "6.07",
-            "whip": "1.36"
+            "era": "6.15",
+            "whip": "1.38"
           },
           "stuff": {
             "k_rate": 0.167,
@@ -834,64 +834,64 @@
           "side": "away",
           "team": "TB",
           "opponent": "NYY",
-          "pitcher_name": "Ian Seymour",
-          "pitcher_id": 693855,
-          "hand": "L",
+          "pitcher_name": "Mason Englert",
+          "pitcher_id": 669438,
+          "hand": "R",
           "season": {
-            "w": 9,
-            "l": 7,
-            "era": "4.38",
-            "whip": "1.17"
+            "w": 0,
+            "l": 3,
+            "era": "4.54",
+            "whip": "1.43"
           },
           "stuff": {
-            "k_rate": 0.277,
-            "whiff_rate": 0.28,
-            "bb_rate": 0.087,
-            "xwoba_against": 0.308,
+            "k_rate": 0.182,
+            "whiff_rate": 0.229,
+            "bb_rate": 0.058,
+            "xwoba_against": 0.42,
             "vintage": "2026"
           },
           "arsenal": [
             {
               "pitch": "Changeup",
-              "usage_pct": 31.0,
-              "velo": 83.4
+              "usage_pct": 31.3,
+              "velo": 86.6
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 19.0,
+              "velo": 91.8
             },
             {
               "pitch": "4-Seam",
-              "usage_pct": 23.1,
-              "velo": 91.4
-            },
-            {
-              "pitch": "Sweeper",
-              "usage_pct": 19.2,
-              "velo": 81.9
+              "usage_pct": 17.7,
+              "velo": 92.8
             }
           ],
           "splits": {
             "vs_lhb": {
-              "k_rate": 0.3,
-              "ops_against": 0.767
+              "k_rate": 0.156,
+              "ops_against": 0.833
             },
             "vs_rhb": {
-              "k_rate": 0.273,
-              "ops_against": 0.776
+              "k_rate": 0.185,
+              "ops_against": 0.806
             },
             "vintage": "2026"
           },
           "recent_form": {
             "last5": {
-              "k_rate": 0.275,
-              "whiff_rate": 0.255,
-              "xwoba": 0.299,
+              "k_rate": 0.2,
+              "whiff_rate": 0.223,
+              "xwoba": 0.378,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.277,
-              "whiff_rate": 0.28,
-              "xwoba": 0.308
+              "k_rate": 0.182,
+              "whiff_rate": 0.229,
+              "xwoba": 0.42
             },
             "trend": "steady",
-            "note": "K% steady over L5"
+            "note": "K% up 1.8pts over L5"
           },
           "sample_flag": null,
           "scratched": false
