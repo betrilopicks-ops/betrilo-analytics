@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-09-24",
-  "last_refreshed": "2026-09-24T12:31:44-04:00",
+  "last_refreshed": "2026-09-24T13:01:46-04:00",
   "games": 12,
-  "pitchers": 23,
+  "pitchers": 24,
   "coverage": {
-    "full_2026": 23,
+    "full_2026": 24,
     "fallback_2025": 0,
     "thin_no_data": 0
   },
@@ -26,7 +26,7 @@
           "season": {
             "w": 10,
             "l": 11,
-            "era": "3.91",
+            "era": "3.94",
             "whip": "1.13"
           },
           "stuff": {
@@ -92,8 +92,8 @@
           "season": {
             "w": 10,
             "l": 5,
-            "era": "3.65",
-            "whip": "1.34"
+            "era": "3.69",
+            "whip": "1.35"
           },
           "stuff": {
             "k_rate": 0.216,
@@ -786,20 +786,66 @@
           "side": "away",
           "team": "MIL",
           "opponent": "PHI",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Shane Drohan",
+          "pitcher_id": 675660,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 7,
+            "l": 5,
+            "era": "4.26",
+            "whip": "1.33"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.249,
+            "whiff_rate": 0.251,
+            "bb_rate": 0.097,
+            "xwoba_against": 0.306,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 26.7,
+              "velo": 94.9
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 23.5,
+              "velo": 86.4
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 20.3,
+              "velo": 94.8
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.231,
+              "ops_against": 0.658
+            },
+            "vs_rhb": {
+              "k_rate": 0.25,
+              "ops_against": 0.817
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.267,
+              "whiff_rate": 0.269,
+              "xwoba": 0.335,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.249,
+              "whiff_rate": 0.251,
+              "xwoba": 0.306
+            },
+            "trend": "steady",
+            "note": "K% up 1.8pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         }
       ]
