@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-09-25",
-  "last_refreshed": "2026-09-25T18:32:18-04:00",
+  "last_refreshed": "2026-09-25T19:02:20-04:00",
   "games": 17,
-  "pitchers": 32,
+  "pitchers": 33,
   "coverage": {
-    "full_2026": 31,
+    "full_2026": 32,
     "fallback_2025": 0,
     "thin_no_data": 1
   },
@@ -166,7 +166,7 @@
           "season": {
             "w": 6,
             "l": 7,
-            "era": "4.37",
+            "era": "4.33",
             "whip": "1.37"
           },
           "stuff": {
@@ -232,7 +232,7 @@
           "season": {
             "w": 9,
             "l": 8,
-            "era": "4.86",
+            "era": "4.83",
             "whip": "1.50"
           },
           "stuff": {
@@ -305,7 +305,7 @@
           "hand": "R",
           "season": {
             "w": 0,
-            "l": 1,
+            "l": 2,
             "era": "9.95",
             "whip": "1.66"
           },
@@ -650,8 +650,8 @@
           "season": {
             "w": 18,
             "l": 6,
-            "era": "2.93",
-            "whip": "1.22"
+            "era": "3.00",
+            "whip": "1.23"
           },
           "stuff": {
             "k_rate": 0.274,
@@ -716,8 +716,8 @@
           "season": {
             "w": 9,
             "l": 11,
-            "era": "4.56",
-            "whip": "1.33"
+            "era": "4.54",
+            "whip": "1.32"
           },
           "stuff": {
             "k_rate": 0.215,
@@ -790,8 +790,8 @@
           "season": {
             "w": 2,
             "l": 6,
-            "era": "3.17",
-            "whip": "1.26"
+            "era": "3.22",
+            "whip": "1.28"
           },
           "stuff": {
             "k_rate": 0.261,
@@ -1894,20 +1894,66 @@
           "side": "home",
           "team": "SD",
           "opponent": "AZ",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Casey Mize",
+          "pitcher_id": 663554,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 6,
+            "l": 9,
+            "era": "3.96",
+            "whip": "1.19"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.187,
+            "whiff_rate": 0.203,
+            "bb_rate": 0.077,
+            "xwoba_against": 0.316,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 34.5,
+              "velo": 93.2
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 28.5,
+              "velo": 87.4
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 8.8,
+              "velo": 93.3
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.196,
+              "ops_against": 0.616
+            },
+            "vs_rhb": {
+              "k_rate": 0.174,
+              "ops_against": 0.974
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.138,
+              "whiff_rate": 0.163,
+              "xwoba": 0.329,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.187,
+              "whiff_rate": 0.203,
+              "xwoba": 0.316
+            },
+            "trend": "cold",
+            "note": "K% down 4.9pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
