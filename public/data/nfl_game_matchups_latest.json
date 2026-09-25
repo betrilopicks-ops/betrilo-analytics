@@ -1,6 +1,6 @@
 {
-  "exported_date": "2026-09-23",
-  "generated_at": "2026-09-23T15:00:40.444009-04:00",
+  "exported_date": "2026-09-25",
+  "generated_at": "2026-09-25T17:00:34.452469-04:00",
   "season": 2026,
   "week": 3,
   "dvp_method": {
@@ -25,7 +25,7 @@
       "roof": "outdoors",
       "stadium": "Lambeau Field",
       "spread_line": 4.5,
-      "total_line": 42.5,
+      "total_line": 43.5,
       "home_players": [
         {
           "player_name": "Tyrod Taylor",
@@ -376,50 +376,6 @@
           }
         },
         {
-          "player_name": "Jayden Reed",
-          "player_id": "00-0039146",
-          "gsis_id": "00-0039146",
-          "team": "GB",
-          "position": "WR",
-          "opponent": "ATL",
-          "season_stats": {
-            "stat_season": 2026,
-            "games": 1,
-            "fpts_ppr_per_game": 5.0,
-            "receptions": 3,
-            "targets": 7,
-            "rec_yds": 20,
-            "rec_tds": 0,
-            "rec_yds_per_game": 20.0
-          },
-          "dvp": {
-            "rank": 14,
-            "label": "Neutral",
-            "games_in_sample": 35,
-            "rec_yds_per_game": 145.0,
-            "rec_per_game": 11.8,
-            "targets_per_game": 18.6,
-            "rec_tds_per_game": 1.1
-          },
-          "vs_opponent": {
-            "games": 1,
-            "first_season": 2023,
-            "last_season": 2023,
-            "fpts_per_game": 19.7,
-            "small_sample": true,
-            "receptions": 4,
-            "targets": 8,
-            "rec_yds": 37,
-            "rec_tds": 2,
-            "rec_yds_per_game": 37.0
-          },
-          "injury": {
-            "injury_status": "Doubtful",
-            "injury_body_part": "Neck",
-            "practice_participation": null
-          }
-        },
-        {
           "player_name": "MarShawn Lloyd",
           "player_id": "00-0039811",
           "gsis_id": "00-0039811",
@@ -615,40 +571,6 @@
           }
         },
         {
-          "player_name": "Cooper Rush",
-          "player_id": "00-0033662",
-          "gsis_id": "00-0033662",
-          "team": "ATL",
-          "position": "QB",
-          "opponent": "GB",
-          "season_stats": {
-            "stat_season": 2026,
-            "games": 1,
-            "fpts_ppr_per_game": 5.7,
-            "completions": 12,
-            "attempts": 22,
-            "pass_yds": 143,
-            "pass_tds": 1,
-            "interceptions": 2,
-            "rush_yds": 0,
-            "pass_yds_per_game": 143.0
-          },
-          "dvp": {
-            "rank": 26,
-            "label": "Tough",
-            "games_in_sample": 35,
-            "pass_yds_per_game": 211.6,
-            "pass_tds_per_game": 1.5,
-            "completions_per_game": 21.2
-          },
-          "vs_opponent": null,
-          "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
-            "practice_participation": null
-          }
-        },
-        {
           "player_name": "Olamide Zaccheaus",
           "player_id": "00-0035208",
           "gsis_id": "00-0035208",
@@ -666,7 +588,7 @@
             "rec_yds_per_game": 5.0
           },
           "dvp": {
-            "rank": 24,
+            "rank": 25,
             "label": "Tough",
             "games_in_sample": 35,
             "rec_yds_per_game": 132.5,
@@ -790,7 +712,7 @@
             "rec_yds_per_game": 0.0
           },
           "dvp": {
-            "rank": 24,
+            "rank": 25,
             "label": "Tough",
             "games_in_sample": 35,
             "rec_yds_per_game": 132.5,
@@ -867,7 +789,7 @@
             "rec_yds_per_game": 29.0
           },
           "dvp": {
-            "rank": 24,
+            "rank": 25,
             "label": "Tough",
             "games_in_sample": 35,
             "rec_yds_per_game": 132.5,
@@ -944,7 +866,7 @@
             "rec_yds_per_game": 19.0
           },
           "dvp": {
-            "rank": 24,
+            "rank": 25,
             "label": "Tough",
             "games_in_sample": 35,
             "rec_yds_per_game": 132.5,
@@ -989,7 +911,7 @@
             "rush_yds_per_game": 31.0
           },
           "dvp": {
-            "rank": 18,
+            "rank": 17,
             "label": "Neutral",
             "games_in_sample": 35,
             "rush_yds_per_game": 94.7,
@@ -1035,7 +957,7 @@
             "rush_yds_per_game": 83.0
           },
           "dvp": {
-            "rank": 18,
+            "rank": 17,
             "label": "Neutral",
             "games_in_sample": 35,
             "rush_yds_per_game": 94.7,
@@ -1110,36 +1032,13 @@
             "rec_yds_per_game": 0.0
           },
           "dvp": {
-            "rank": 24,
+            "rank": 25,
             "label": "Tough",
             "games_in_sample": 35,
             "rec_yds_per_game": 132.5,
             "rec_per_game": 11.0,
             "targets_per_game": 16.7,
             "rec_tds_per_game": 1.1
-          },
-          "vs_opponent": null,
-          "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
-            "practice_participation": null
-          }
-        },
-        {
-          "player_name": "Jack Strand",
-          "player_id": null,
-          "gsis_id": "00-0041194",
-          "team": "ATL",
-          "position": "QB",
-          "opponent": "GB",
-          "season_stats": null,
-          "dvp": {
-            "rank": 26,
-            "label": "Tough",
-            "games_in_sample": 35,
-            "pass_yds_per_game": 211.6,
-            "pass_tds_per_game": 1.5,
-            "completions_per_game": 21.2
           },
           "vs_opponent": null,
           "injury": {
@@ -1327,8 +1226,8 @@
             "rush_yds_per_game": 0.0
           },
           "injury": {
-            "injury_status": "Questionable",
-            "injury_body_part": "Hamstring",
+            "injury_status": null,
+            "injury_body_part": null,
             "practice_participation": null
           }
         },
@@ -1601,8 +1500,8 @@
           },
           "vs_opponent": null,
           "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
+            "injury_status": "Questionable",
+            "injury_body_part": "Ankle",
             "practice_participation": null
           }
         },
@@ -1699,46 +1598,46 @@
       ],
       "away_players": [
         {
-          "player_name": "David Njoku",
-          "player_id": "00-0033885",
-          "gsis_id": "00-0033885",
+          "player_name": "Marquez Valdes-Scantling",
+          "player_id": "00-0034272",
+          "gsis_id": "00-0034272",
           "team": "LAC",
-          "position": "TE",
+          "position": "WR",
           "opponent": "BUF",
           "season_stats": {
-            "stat_season": 2026,
-            "games": 1,
-            "fpts_ppr_per_game": 10.8,
-            "receptions": 5,
-            "targets": 5,
-            "rec_yds": 58,
-            "rec_tds": 0,
-            "rec_yds_per_game": 58.0
+            "stat_season": 2025,
+            "games": 9,
+            "fpts_ppr_per_game": 3.6,
+            "receptions": 14,
+            "targets": 29,
+            "rec_yds": 120,
+            "rec_tds": 1,
+            "rec_yds_per_game": 13.3
           },
           "dvp": {
-            "rank": 31,
-            "label": "Avoid",
-            "games_in_sample": 34,
-            "rec_yds_per_game": 38.9,
-            "rec_per_game": 4.0,
-            "targets_per_game": 6.1,
-            "rec_tds_per_game": 0.2
+            "rank": 26,
+            "label": "Tough",
+            "games_in_sample": 35,
+            "rec_yds_per_game": 130.5,
+            "rec_per_game": 10.8,
+            "targets_per_game": 16.7,
+            "rec_tds_per_game": 0.8
           },
           "vs_opponent": {
-            "games": 1,
+            "games": 2,
             "first_season": 2022,
-            "last_season": 2022,
-            "fpts_per_game": 3.7,
+            "last_season": 2023,
+            "fpts_per_game": 2.1,
             "small_sample": true,
             "receptions": 2,
-            "targets": 3,
-            "rec_yds": 17,
+            "targets": 7,
+            "rec_yds": 22,
             "rec_tds": 0,
-            "rec_yds_per_game": 17.0
+            "rec_yds_per_game": 11.0
           },
           "injury": {
-            "injury_status": "Out",
-            "injury_body_part": "Knee",
+            "injury_status": null,
+            "injury_body_part": null,
             "practice_participation": null
           }
         },
@@ -1864,8 +1763,8 @@
           },
           "vs_opponent": null,
           "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
+            "injury_status": "Questionable",
+            "injury_body_part": "Groin",
             "practice_participation": null
           }
         },
@@ -2246,8 +2145,8 @@
           },
           "vs_opponent": null,
           "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
+            "injury_status": "Out",
+            "injury_body_part": "Quadriceps",
             "practice_participation": null
           }
         }
@@ -3217,42 +3116,8 @@
           },
           "vs_opponent": null,
           "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
-            "practice_participation": null
-          }
-        },
-        {
-          "player_name": "Jonathon Brooks",
-          "player_id": "00-0039344",
-          "gsis_id": "00-0039344",
-          "team": "CAR",
-          "position": "RB",
-          "opponent": "CLE",
-          "season_stats": {
-            "stat_season": 2026,
-            "games": 1,
-            "fpts_ppr_per_game": 7.2,
-            "carries": 4,
-            "rush_yds": 14,
-            "rush_tds": 0,
-            "receptions": 1,
-            "rec_yds": 48,
-            "rush_yds_per_game": 14.0
-          },
-          "dvp": {
-            "rank": 15,
-            "label": "Neutral",
-            "games_in_sample": 35,
-            "rush_yds_per_game": 95.9,
-            "carries_per_game": 22.4,
-            "rec_per_game": 3.7,
-            "rec_yds_per_game": 26.9
-          },
-          "vs_opponent": null,
-          "injury": {
-            "injury_status": "IR",
-            "injury_body_part": "Abdomen",
+            "injury_status": "Questionable",
+            "injury_body_part": "Knee",
             "practice_participation": null
           }
         },
@@ -3317,8 +3182,8 @@
           },
           "vs_opponent": null,
           "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
+            "injury_status": "Questionable",
+            "injury_body_part": "Ankle",
             "practice_participation": null
           }
         },
@@ -3422,7 +3287,7 @@
       "roof": "dome",
       "stadium": "Ford Field",
       "spread_line": 6.5,
-      "total_line": 47.5,
+      "total_line": 48.5,
       "home_players": [
         {
           "player_name": "Jared Goff",
@@ -3536,7 +3401,7 @@
             "rec_yds_per_game": 16.8
           },
           "dvp": {
-            "rank": 18,
+            "rank": 17,
             "label": "Neutral",
             "games_in_sample": 35,
             "rec_yds_per_game": 50.7,
@@ -3602,7 +3467,7 @@
             "rec_yds_per_game": 5.0
           },
           "dvp": {
-            "rank": 18,
+            "rank": 17,
             "label": "Neutral",
             "games_in_sample": 35,
             "rec_yds_per_game": 50.7,
@@ -3801,7 +3666,7 @@
             "rec_yds_per_game": 48.0
           },
           "dvp": {
-            "rank": 18,
+            "rank": 17,
             "label": "Neutral",
             "games_in_sample": 35,
             "rec_yds_per_game": 50.7,
@@ -3893,7 +3758,7 @@
           "opponent": "NYJ",
           "season_stats": null,
           "dvp": {
-            "rank": 18,
+            "rank": 17,
             "label": "Neutral",
             "games_in_sample": 35,
             "rec_yds_per_game": 50.7,
@@ -4354,41 +4219,8 @@
             "rec_yds_per_game": 10.0
           },
           "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
-            "practice_participation": null
-          }
-        },
-        {
-          "player_name": "Arian Smith",
-          "player_id": "00-0040582",
-          "gsis_id": "00-0040582",
-          "team": "NYJ",
-          "position": "WR",
-          "opponent": "DET",
-          "season_stats": {
-            "stat_season": 2026,
-            "games": 1,
-            "fpts_ppr_per_game": 0.0,
-            "receptions": 0,
-            "targets": 1,
-            "rec_yds": 0,
-            "rec_tds": 0,
-            "rec_yds_per_game": 0.0
-          },
-          "dvp": {
-            "rank": 1,
-            "label": "Smash",
-            "games_in_sample": 35,
-            "rec_yds_per_game": 173.2,
-            "rec_per_game": 12.8,
-            "targets_per_game": 21.0,
-            "rec_tds_per_game": 1.1
-          },
-          "vs_opponent": null,
-          "injury": {
-            "injury_status": "IR",
-            "injury_body_part": "Knee",
+            "injury_status": "Questionable",
+            "injury_body_part": "Finger",
             "practice_participation": null
           }
         },
@@ -4420,7 +4252,7 @@
           },
           "vs_opponent": null,
           "injury": {
-            "injury_status": "Doubtful",
+            "injury_status": "Out",
             "injury_body_part": "Thumb",
             "practice_participation": null
           }
@@ -4480,6 +4312,30 @@
             "injury_body_part": null,
             "practice_participation": null
           }
+        },
+        {
+          "player_name": "Malik McClain",
+          "player_id": null,
+          "gsis_id": "00-0041267",
+          "team": "NYJ",
+          "position": "WR",
+          "opponent": "DET",
+          "season_stats": null,
+          "dvp": {
+            "rank": 1,
+            "label": "Smash",
+            "games_in_sample": 35,
+            "rec_yds_per_game": 173.2,
+            "rec_per_game": 12.8,
+            "targets_per_game": 21.0,
+            "rec_tds_per_game": 1.1
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
         }
       ]
     },
@@ -4491,7 +4347,7 @@
       "gametime": "13:00",
       "roof": null,
       "stadium": "Lucas Oil Stadium",
-      "spread_line": -2.5,
+      "spread_line": -1.5,
       "total_line": 42.5,
       "home_players": [
         {
@@ -4665,7 +4521,7 @@
             "rec_yds_per_game": 15.6
           },
           "injury": {
-            "injury_status": "Questionable",
+            "injury_status": "Out",
             "injury_body_part": "Ankle",
             "practice_participation": null
           }
@@ -5067,8 +4923,8 @@
             "rush_yds_per_game": 30.0
           },
           "injury": {
-            "injury_status": "Questionable",
-            "injury_body_part": "Knee",
+            "injury_status": null,
+            "injury_body_part": null,
             "practice_participation": null
           }
         },
@@ -5352,7 +5208,7 @@
             "rec_yds_per_game": 89.4
           },
           "injury": {
-            "injury_status": "Questionable",
+            "injury_status": "Out",
             "injury_body_part": "Hamstring",
             "practice_participation": null
           }
@@ -6523,7 +6379,7 @@
             "rush_yds_per_game": 0.4
           },
           "dvp": {
-            "rank": 29,
+            "rank": 30,
             "label": "Avoid",
             "games_in_sample": 35,
             "rush_yds_per_game": 77.4,
@@ -6545,8 +6401,8 @@
             "rush_yds_per_game": 0.0
           },
           "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
+            "injury_status": "Questionable",
+            "injury_body_part": "Knee",
             "practice_participation": null
           }
         },
@@ -6569,7 +6425,7 @@
             "rush_yds_per_game": 51.0
           },
           "dvp": {
-            "rank": 29,
+            "rank": 30,
             "label": "Avoid",
             "games_in_sample": 35,
             "rush_yds_per_game": 77.4,
@@ -6839,7 +6695,7 @@
             "rush_yds_per_game": 11.0
           },
           "dvp": {
-            "rank": 29,
+            "rank": 30,
             "label": "Avoid",
             "games_in_sample": 35,
             "rush_yds_per_game": 77.4,
@@ -6902,7 +6758,7 @@
             "rush_yds_per_game": 53.6
           },
           "dvp": {
-            "rank": 29,
+            "rank": 30,
             "label": "Avoid",
             "games_in_sample": 35,
             "rush_yds_per_game": 77.4,
@@ -7007,8 +6863,8 @@
       "gametime": "13:00",
       "roof": "outdoors",
       "stadium": "Hard Rock Stadium",
-      "spread_line": -11.5,
-      "total_line": 46.5,
+      "spread_line": -10.5,
+      "total_line": 45.5,
       "home_players": [
         {
           "player_name": "Greg Dulcich",
@@ -7184,8 +7040,8 @@
             "rec_yds_per_game": 1.0
           },
           "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
+            "injury_status": "Questionable",
+            "injury_body_part": "Hip",
             "practice_participation": null
           }
         },
@@ -7208,7 +7064,7 @@
             "rush_yds_per_game": 36.0
           },
           "dvp": {
-            "rank": 30,
+            "rank": 29,
             "label": "Avoid",
             "games_in_sample": 35,
             "rush_yds_per_game": 77.4,
@@ -7242,7 +7098,7 @@
             "rush_yds_per_game": -1.0
           },
           "dvp": {
-            "rank": 30,
+            "rank": 29,
             "label": "Avoid",
             "games_in_sample": 35,
             "rush_yds_per_game": 77.4,
@@ -7252,8 +7108,8 @@
           },
           "vs_opponent": null,
           "injury": {
-            "injury_status": "Questionable",
-            "injury_body_part": "Neck",
+            "injury_status": "Doubtful",
+            "injury_body_part": "Foot",
             "practice_participation": null
           }
         },
@@ -7332,7 +7188,7 @@
             "rush_yds_per_game": 11.7
           },
           "dvp": {
-            "rank": 30,
+            "rank": 29,
             "label": "Avoid",
             "games_in_sample": 35,
             "rush_yds_per_game": 77.4,
@@ -7410,7 +7266,7 @@
           "opponent": "KC",
           "season_stats": null,
           "dvp": {
-            "rank": 30,
+            "rank": 29,
             "label": "Avoid",
             "games_in_sample": 35,
             "rush_yds_per_game": 77.4,
@@ -7449,7 +7305,7 @@
           },
           "vs_opponent": null,
           "injury": {
-            "injury_status": "Questionable",
+            "injury_status": "Out",
             "injury_body_part": "Ankle",
             "practice_participation": null
           }
@@ -7515,8 +7371,8 @@
           },
           "vs_opponent": null,
           "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
+            "injury_status": "Questionable",
+            "injury_body_part": "Knee",
             "practice_participation": null
           }
         },
@@ -8209,7 +8065,7 @@
       "roof": "outdoors",
       "stadium": "MetLife Stadium",
       "spread_line": 2.5,
-      "total_line": 39.5,
+      "total_line": 38.5,
       "home_players": [
         {
           "player_name": "Odell Beckham Jr.",
@@ -8563,8 +8419,8 @@
           },
           "vs_opponent": null,
           "injury": {
-            "injury_status": "Questionable",
-            "injury_body_part": "Shoulder",
+            "injury_status": null,
+            "injury_body_part": null,
             "practice_participation": null
           }
         },
@@ -8659,40 +8515,6 @@
           },
           "vs_opponent": null,
           "injury": null
-        },
-        {
-          "player_name": "Jaxson Dart",
-          "player_id": "00-0040691",
-          "gsis_id": "00-0040691",
-          "team": "NYG",
-          "position": "QB",
-          "opponent": "TEN",
-          "season_stats": {
-            "stat_season": 2026,
-            "games": 1,
-            "fpts_ppr_per_game": 26.6,
-            "completions": 23,
-            "attempts": 29,
-            "pass_yds": 230,
-            "pass_tds": 3,
-            "interceptions": 0,
-            "rush_yds": 54,
-            "pass_yds_per_game": 230.0
-          },
-          "dvp": {
-            "rank": 13,
-            "label": "Favorable",
-            "games_in_sample": 35,
-            "pass_yds_per_game": 227.7,
-            "pass_tds_per_game": 1.6,
-            "completions_per_game": 20.0
-          },
-          "vs_opponent": null,
-          "injury": {
-            "injury_status": "Out",
-            "injury_body_part": "Knee - MCL",
-            "practice_participation": null
-          }
         },
         {
           "player_name": "Cam Skattebo",
@@ -8895,8 +8717,8 @@
             "rush_yds_per_game": 60.5
           },
           "injury": {
-            "injury_status": "Questionable",
-            "injury_body_part": "Undisclosed",
+            "injury_status": null,
+            "injury_body_part": null,
             "practice_participation": null
           }
         },
@@ -10581,7 +10403,7 @@
       "gametime": "13:00",
       "roof": "outdoors",
       "stadium": "Northwest Stadium",
-      "spread_line": -7.0,
+      "spread_line": -7.5,
       "total_line": 40.5,
       "home_players": [
         {
@@ -10936,7 +10758,7 @@
             "rec_yds_per_game": 51.5
           },
           "injury": {
-            "injury_status": "Questionable",
+            "injury_status": "Doubtful",
             "injury_body_part": "Hamstring",
             "practice_participation": null
           }
@@ -11137,8 +10959,8 @@
             "rec_yds_per_game": 29.0
           },
           "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
+            "injury_status": "Questionable",
+            "injury_body_part": "Groin",
             "practice_participation": null
           }
         },
@@ -11399,8 +11221,8 @@
             "pass_yds_per_game": 165.0
           },
           "injury": {
-            "injury_status": "Questionable",
-            "injury_body_part": "Lower Body",
+            "injury_status": null,
+            "injury_body_part": null,
             "practice_participation": null
           }
         },
@@ -11910,8 +11732,8 @@
           },
           "vs_opponent": null,
           "injury": {
-            "injury_status": "Questionable",
-            "injury_body_part": "Chest",
+            "injury_status": null,
+            "injury_body_part": null,
             "practice_participation": null
           }
         }
@@ -13328,7 +13150,7 @@
             "rush_yds_per_game": 15.0
           },
           "dvp": {
-            "rank": 17,
+            "rank": 18,
             "label": "Neutral",
             "games_in_sample": 35,
             "rush_yds_per_game": 94.7,
@@ -13462,7 +13284,7 @@
             "rush_yds_per_game": 18.8
           },
           "dvp": {
-            "rank": 17,
+            "rank": 18,
             "label": "Neutral",
             "games_in_sample": 35,
             "rush_yds_per_game": 94.7,
@@ -13541,7 +13363,7 @@
             "rush_yds_per_game": 45.0
           },
           "dvp": {
-            "rank": 17,
+            "rank": 18,
             "label": "Neutral",
             "games_in_sample": 35,
             "rush_yds_per_game": 94.7,
@@ -13863,8 +13685,8 @@
             "rush_yds_per_game": 34.7
           },
           "injury": {
-            "injury_status": "Questionable",
-            "injury_body_part": "Undisclosed",
+            "injury_status": null,
+            "injury_body_part": null,
             "practice_participation": null
           }
         },
@@ -14029,8 +13851,8 @@
             "rec_yds_per_game": 26.2
           },
           "injury": {
-            "injury_status": "Questionable",
-            "injury_body_part": "Personal",
+            "injury_status": null,
+            "injury_body_part": null,
             "practice_participation": null
           }
         },
@@ -14351,7 +14173,7 @@
       "roof": null,
       "stadium": "Maracana Stadium",
       "spread_line": -3.5,
-      "total_line": 52.5,
+      "total_line": 53.5,
       "home_players": [
         {
           "player_name": "Dak Prescott",
@@ -14990,8 +14812,8 @@
             "rec_yds_per_game": 66.0
           },
           "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
+            "injury_status": "Questionable",
+            "injury_body_part": "Ankle",
             "practice_participation": null
           }
         },
@@ -16117,8 +15939,8 @@
           },
           "vs_opponent": null,
           "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
+            "injury_status": "Out",
+            "injury_body_part": "Hamstring",
             "practice_participation": null
           }
         },
@@ -16288,8 +16110,8 @@
             "rec_yds_per_game": 12.0
           },
           "injury": {
-            "injury_status": "Questionable",
-            "injury_body_part": "Hamstring",
+            "injury_status": null,
+            "injury_body_part": null,
             "practice_participation": null
           }
         },
@@ -16772,7 +16594,7 @@
       "roof": "outdoors",
       "stadium": "Empower Field at Mile High",
       "spread_line": -2.5,
-      "total_line": 45.5,
+      "total_line": 43.5,
       "home_players": [
         {
           "player_name": "Evan Engram",
@@ -16792,7 +16614,7 @@
             "rec_yds_per_game": 43.0
           },
           "dvp": {
-            "rank": 17,
+            "rank": 18,
             "label": "Neutral",
             "games_in_sample": 35,
             "rec_yds_per_game": 50.7,
@@ -16971,8 +16793,8 @@
           },
           "vs_opponent": null,
           "injury": {
-            "injury_status": "Questionable",
-            "injury_body_part": "Hamstring",
+            "injury_status": null,
+            "injury_body_part": null,
             "practice_participation": null
           }
         },
@@ -16994,7 +16816,7 @@
             "rec_yds_per_game": 10.0
           },
           "dvp": {
-            "rank": 17,
+            "rank": 18,
             "label": "Neutral",
             "games_in_sample": 35,
             "rec_yds_per_game": 50.7,
@@ -17139,7 +16961,7 @@
             "rec_yds_per_game": 0.0
           },
           "dvp": {
-            "rank": 17,
+            "rank": 18,
             "label": "Neutral",
             "games_in_sample": 35,
             "rec_yds_per_game": 50.7,
@@ -17312,8 +17134,8 @@
           },
           "vs_opponent": null,
           "injury": {
-            "injury_status": "Questionable",
-            "injury_body_part": "Hamstring",
+            "injury_status": null,
+            "injury_body_part": null,
             "practice_participation": null
           }
         },
@@ -17326,7 +17148,7 @@
           "opponent": "LA",
           "season_stats": null,
           "dvp": {
-            "rank": 17,
+            "rank": 18,
             "label": "Neutral",
             "games_in_sample": 35,
             "rec_yds_per_game": 50.7,
@@ -17370,8 +17192,8 @@
           },
           "vs_opponent": null,
           "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
+            "injury_status": "Out",
+            "injury_body_part": "Ankle",
             "practice_participation": null
           }
         }
@@ -17425,7 +17247,7 @@
             "rec_yds_per_game": 26.0
           },
           "dvp": {
-            "rank": 25,
+            "rank": 24,
             "label": "Tough",
             "games_in_sample": 35,
             "rec_yds_per_game": 132.5,
@@ -17545,7 +17367,7 @@
             "rec_yds_per_game": 24.0
           },
           "dvp": {
-            "rank": 25,
+            "rank": 24,
             "label": "Tough",
             "games_in_sample": 35,
             "rec_yds_per_game": 132.5,
@@ -17565,36 +17387,6 @@
             "rec_tds": 0,
             "rec_yds_per_game": 14.0
           },
-          "injury": null
-        },
-        {
-          "player_name": "Ronnie Rivers",
-          "player_id": "00-0037557",
-          "gsis_id": "00-0037557",
-          "team": "LA",
-          "position": "RB",
-          "opponent": "DEN",
-          "season_stats": {
-            "stat_season": 2026,
-            "games": 1,
-            "fpts_ppr_per_game": 3.4,
-            "carries": 5,
-            "rush_yds": 19,
-            "rush_tds": 0,
-            "receptions": 1,
-            "rec_yds": 5,
-            "rush_yds_per_game": 19.0
-          },
-          "dvp": {
-            "rank": 26,
-            "label": "Tough",
-            "games_in_sample": 35,
-            "rush_yds_per_game": 81.5,
-            "carries_per_game": 19.9,
-            "rec_per_game": 3.7,
-            "rec_yds_per_game": 29.1
-          },
-          "vs_opponent": null,
           "injury": null
         },
         {
@@ -17657,7 +17449,7 @@
             "rec_yds_per_game": 0.0
           },
           "dvp": {
-            "rank": 25,
+            "rank": 24,
             "label": "Tough",
             "games_in_sample": 35,
             "rec_yds_per_game": 132.5,
@@ -17715,7 +17507,7 @@
             "rec_yds_per_game": 74.0
           },
           "dvp": {
-            "rank": 25,
+            "rank": 24,
             "label": "Tough",
             "games_in_sample": 35,
             "rec_yds_per_game": 132.5,
@@ -17804,7 +17596,7 @@
             "rec_yds_per_game": 8.0
           },
           "dvp": {
-            "rank": 25,
+            "rank": 24,
             "label": "Tough",
             "games_in_sample": 35,
             "rec_yds_per_game": 132.5,
@@ -17833,7 +17625,7 @@
             "rec_yds_per_game": 0.0
           },
           "dvp": {
-            "rank": 25,
+            "rank": 24,
             "label": "Tough",
             "games_in_sample": 35,
             "rec_yds_per_game": 132.5,
@@ -17882,7 +17674,7 @@
           "opponent": "DEN",
           "season_stats": null,
           "dvp": {
-            "rank": 25,
+            "rank": 24,
             "label": "Tough",
             "games_in_sample": 35,
             "rec_yds_per_game": 132.5,
@@ -18774,8 +18566,8 @@
             "rec_yds_per_game": 87.0
           },
           "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
+            "injury_status": "Questionable",
+            "injury_body_part": "Hamstring",
             "practice_participation": null
           }
         },
@@ -19019,8 +18811,8 @@
             "rush_yds_per_game": 24.0
           },
           "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
+            "injury_status": "Questionable",
+            "injury_body_part": "Abdomen",
             "practice_participation": null
           }
         },
@@ -19065,8 +18857,8 @@
             "rush_yds_per_game": 0.0
           },
           "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
+            "injury_status": "Questionable",
+            "injury_body_part": "Foot",
             "practice_participation": null
           }
         },
