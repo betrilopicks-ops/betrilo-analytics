@@ -1,6 +1,6 @@
 {
   "slate_date": "2026-09-25",
-  "last_refreshed": "2026-09-25T11:02:28-04:00",
+  "last_refreshed": "2026-09-25T13:02:15-04:00",
   "games": 17,
   "pitchers": 29,
   "coverage": {
@@ -300,100 +300,6 @@
           "side": "home",
           "team": "NYY",
           "opponent": "BAL",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
-          "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
-          },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
-          "scratched": false
-        },
-        {
-          "side": "away",
-          "team": "BAL",
-          "opponent": "NYY",
-          "pitcher_name": "Brandon Young",
-          "pitcher_id": 687064,
-          "hand": "R",
-          "season": {
-            "w": 9,
-            "l": 5,
-            "era": "3.62",
-            "whip": "1.36"
-          },
-          "stuff": {
-            "k_rate": 0.193,
-            "whiff_rate": 0.216,
-            "bb_rate": 0.09,
-            "xwoba_against": 0.331,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 40.1,
-              "velo": 94.3
-            },
-            {
-              "pitch": "Slider",
-              "usage_pct": 16.1,
-              "velo": 84.4
-            },
-            {
-              "pitch": "Sinker",
-              "usage_pct": 14.6,
-              "velo": 93.9
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.177,
-              "ops_against": 0.685
-            },
-            "vs_rhb": {
-              "k_rate": 0.215,
-              "ops_against": 0.847
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.235,
-              "whiff_rate": 0.256,
-              "xwoba": 0.306,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.193,
-              "whiff_rate": 0.216,
-              "xwoba": 0.331
-            },
-            "trend": "hot",
-            "note": "K% up 4.2pts over L5"
-          },
-          "sample_flag": null,
-          "scratched": false
-        }
-      ]
-    },
-    {
-      "game_pk": 823489,
-      "start_time": "2026-09-25T20:10:00Z",
-      "home_team": "NYY",
-      "away_team": "BAL",
-      "pitchers": [
-        {
-          "side": "home",
-          "team": "NYY",
-          "opponent": "BAL",
           "pitcher_name": "Brendan Beck",
           "pitcher_id": 694341,
           "hand": "R",
@@ -488,6 +394,100 @@
             },
             "trend": "hot",
             "note": "K% up 8.8pts over L5"
+          },
+          "sample_flag": null,
+          "scratched": false
+        }
+      ]
+    },
+    {
+      "game_pk": 823489,
+      "start_time": "2026-09-25T20:10:00Z",
+      "home_team": "NYY",
+      "away_team": "BAL",
+      "pitchers": [
+        {
+          "side": "home",
+          "team": "NYY",
+          "opponent": "BAL",
+          "pitcher_name": "TBD",
+          "pitcher_id": null,
+          "hand": null,
+          "season": {
+            "w": null,
+            "l": null,
+            "era": null,
+            "whip": null
+          },
+          "stuff": {},
+          "arsenal": [],
+          "splits": {},
+          "recent_form": {},
+          "sample_flag": "tbd",
+          "scratched": false
+        },
+        {
+          "side": "away",
+          "team": "BAL",
+          "opponent": "NYY",
+          "pitcher_name": "Brandon Young",
+          "pitcher_id": 687064,
+          "hand": "R",
+          "season": {
+            "w": 9,
+            "l": 5,
+            "era": "3.62",
+            "whip": "1.36"
+          },
+          "stuff": {
+            "k_rate": 0.193,
+            "whiff_rate": 0.216,
+            "bb_rate": 0.09,
+            "xwoba_against": 0.331,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 40.1,
+              "velo": 94.3
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 16.1,
+              "velo": 84.4
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 14.6,
+              "velo": 93.9
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.177,
+              "ops_against": 0.685
+            },
+            "vs_rhb": {
+              "k_rate": 0.215,
+              "ops_against": 0.847
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.235,
+              "whiff_rate": 0.256,
+              "xwoba": 0.306,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.193,
+              "whiff_rate": 0.216,
+              "xwoba": 0.331
+            },
+            "trend": "hot",
+            "note": "K% up 4.2pts over L5"
           },
           "sample_flag": null,
           "scratched": false
