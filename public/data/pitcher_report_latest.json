@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-09-25",
-  "last_refreshed": "2026-09-25T13:32:21-04:00",
+  "last_refreshed": "2026-09-25T15:02:17-04:00",
   "games": 17,
-  "pitchers": 29,
+  "pitchers": 30,
   "coverage": {
-    "full_2026": 28,
+    "full_2026": 29,
     "fallback_2025": 0,
     "thin_no_data": 1
   },
@@ -26,8 +26,8 @@
           "season": {
             "w": 1,
             "l": 0,
-            "era": "1.41",
-            "whip": "1.13"
+            "era": "1.91",
+            "whip": "1.15"
           },
           "stuff": {
             "k_rate": 0.106,
@@ -92,8 +92,8 @@
           "season": {
             "w": 6,
             "l": 8,
-            "era": "3.21",
-            "whip": "1.16"
+            "era": "3.29",
+            "whip": "1.19"
           },
           "stuff": {
             "k_rate": 0.186,
@@ -1038,20 +1038,56 @@
           "side": "away",
           "team": "ATL",
           "opponent": "MIA",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Ray Kerr",
+          "pitcher_id": 678061,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 0,
+            "l": 0,
+            "era": "1.76",
+            "whip": "0.52"
           },
-          "stuff": {},
-          "arsenal": [],
+          "stuff": {
+            "k_rate": 0.225,
+            "whiff_rate": 0.225,
+            "bb_rate": 0.0,
+            "xwoba_against": 0.249,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 37.1,
+              "velo": 95.0
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 33.0,
+              "velo": 81.0
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 20.9,
+              "velo": 94.6
+            }
+          ],
           "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.225,
+              "whiff_rate": 0.225,
+              "xwoba": 0.249,
+              "starts": 4
+            },
+            "season_avg": {
+              "k_rate": 0.225,
+              "whiff_rate": 0.225,
+              "xwoba": 0.249
+            },
+            "trend": "steady",
+            "note": "K% steady over L4"
+          },
+          "sample_flag": null,
           "scratched": false
         }
       ]
