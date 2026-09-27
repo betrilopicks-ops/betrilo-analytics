@@ -1,6 +1,6 @@
 {
   "slate_date": "2026-09-27",
-  "last_refreshed": "2026-09-27T11:32:04-04:00",
+  "last_refreshed": "2026-09-27T12:02:04-04:00",
   "games": 15,
   "pitchers": 28,
   "coverage": {
@@ -254,6 +254,146 @@
             },
             "trend": "cold",
             "note": "K% down 3.0pts over L5"
+          },
+          "sample_flag": null,
+          "scratched": false
+        }
+      ]
+    },
+    {
+      "game_pk": 823408,
+      "start_time": "2026-09-27T18:30:00Z",
+      "home_team": "PHI",
+      "away_team": "TB",
+      "pitchers": [
+        {
+          "side": "home",
+          "team": "PHI",
+          "opponent": "TB",
+          "pitcher_name": "Zack Wheeler",
+          "pitcher_id": 554430,
+          "hand": "R",
+          "season": {
+            "w": 13,
+            "l": 5,
+            "era": "3.06",
+            "whip": "1.06"
+          },
+          "stuff": {
+            "k_rate": 0.286,
+            "whiff_rate": 0.272,
+            "bb_rate": 0.083,
+            "xwoba_against": 0.275,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 36.5,
+              "velo": 95.4
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 16.1,
+              "velo": 94.9
+            },
+            {
+              "pitch": "Sweeper",
+              "usage_pct": 13.3,
+              "velo": 81.5
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.275,
+              "ops_against": 0.681
+            },
+            "vs_rhb": {
+              "k_rate": 0.301,
+              "ops_against": 0.536
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.328,
+              "whiff_rate": 0.323,
+              "xwoba": 0.239,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.286,
+              "whiff_rate": 0.272,
+              "xwoba": 0.275
+            },
+            "trend": "hot",
+            "note": "K% up 4.2pts over L5"
+          },
+          "sample_flag": null,
+          "scratched": false
+        },
+        {
+          "side": "away",
+          "team": "TB",
+          "opponent": "PHI",
+          "pitcher_name": "Nick Martinez",
+          "pitcher_id": 607259,
+          "hand": "R",
+          "season": {
+            "w": 15,
+            "l": 5,
+            "era": "2.94",
+            "whip": "1.07"
+          },
+          "stuff": {
+            "k_rate": 0.159,
+            "whiff_rate": 0.162,
+            "bb_rate": 0.034,
+            "xwoba_against": 0.304,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Sinker",
+              "usage_pct": 31.5,
+              "velo": 92.4
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 26.1,
+              "velo": 78.3
+            },
+            {
+              "pitch": "Cutter",
+              "usage_pct": 21.4,
+              "velo": 89.2
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.157,
+              "ops_against": 0.657
+            },
+            "vs_rhb": {
+              "k_rate": 0.158,
+              "ops_against": 0.672
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.184,
+              "whiff_rate": 0.174,
+              "xwoba": 0.226,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.159,
+              "whiff_rate": 0.162,
+              "xwoba": 0.304
+            },
+            "trend": "steady",
+            "note": "K% up 2.5pts over L5"
           },
           "sample_flag": null,
           "scratched": false
@@ -584,146 +724,6 @@
           "splits": {},
           "recent_form": {},
           "sample_flag": "tbd",
-          "scratched": false
-        }
-      ]
-    },
-    {
-      "game_pk": 823408,
-      "start_time": "2026-09-27T19:05:00Z",
-      "home_team": "PHI",
-      "away_team": "TB",
-      "pitchers": [
-        {
-          "side": "home",
-          "team": "PHI",
-          "opponent": "TB",
-          "pitcher_name": "Zack Wheeler",
-          "pitcher_id": 554430,
-          "hand": "R",
-          "season": {
-            "w": 13,
-            "l": 5,
-            "era": "3.06",
-            "whip": "1.06"
-          },
-          "stuff": {
-            "k_rate": 0.286,
-            "whiff_rate": 0.272,
-            "bb_rate": 0.083,
-            "xwoba_against": 0.275,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 36.5,
-              "velo": 95.4
-            },
-            {
-              "pitch": "Sinker",
-              "usage_pct": 16.1,
-              "velo": 94.9
-            },
-            {
-              "pitch": "Sweeper",
-              "usage_pct": 13.3,
-              "velo": 81.5
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.275,
-              "ops_against": 0.681
-            },
-            "vs_rhb": {
-              "k_rate": 0.301,
-              "ops_against": 0.536
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.328,
-              "whiff_rate": 0.323,
-              "xwoba": 0.239,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.286,
-              "whiff_rate": 0.272,
-              "xwoba": 0.275
-            },
-            "trend": "hot",
-            "note": "K% up 4.2pts over L5"
-          },
-          "sample_flag": null,
-          "scratched": false
-        },
-        {
-          "side": "away",
-          "team": "TB",
-          "opponent": "PHI",
-          "pitcher_name": "Nick Martinez",
-          "pitcher_id": 607259,
-          "hand": "R",
-          "season": {
-            "w": 15,
-            "l": 5,
-            "era": "2.94",
-            "whip": "1.07"
-          },
-          "stuff": {
-            "k_rate": 0.159,
-            "whiff_rate": 0.162,
-            "bb_rate": 0.034,
-            "xwoba_against": 0.304,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "Sinker",
-              "usage_pct": 31.5,
-              "velo": 92.4
-            },
-            {
-              "pitch": "Changeup",
-              "usage_pct": 26.1,
-              "velo": 78.3
-            },
-            {
-              "pitch": "Cutter",
-              "usage_pct": 21.4,
-              "velo": 89.2
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.157,
-              "ops_against": 0.657
-            },
-            "vs_rhb": {
-              "k_rate": 0.158,
-              "ops_against": 0.672
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.184,
-              "whiff_rate": 0.174,
-              "xwoba": 0.226,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.159,
-              "whiff_rate": 0.162,
-              "xwoba": 0.304
-            },
-            "trend": "steady",
-            "note": "K% up 2.5pts over L5"
-          },
-          "sample_flag": null,
           "scratched": false
         }
       ]
