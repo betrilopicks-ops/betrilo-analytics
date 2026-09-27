@@ -19,6 +19,7 @@ export default function SortableTable({
   emptyMessage = 'No data available',
   loading = false,
   stickyFirst = true,
+  onRowClick,
 }) {
   const [sortBy, setSortBy] = useState(defaultSort.key || '');
   const [sortOrder, setSortOrder] = useState(defaultSort.order || 'desc');
@@ -148,8 +149,16 @@ export default function SortableTable({
             <tbody>
               {filtered.map((row, ri) => {
                 const rowBg = ri % 2 === 0 ? dark.surfaceBgAlt : dark.surfaceBg;
+                const clickable = onRowClick && row._clickable !== false;
                 return (
-                  <tr key={ri} style={{ background: rowBg }}>
+                  <tr
+                    key={ri}
+                    onClick={clickable ? () => onRowClick(row) : undefined}
+                    style={{
+                      background: rowBg,
+                      cursor: clickable ? 'pointer' : 'default',
+                    }}
+                  >
                     {columns.map((col, ci) => {
                       const val = row[col.key];
                       const display = col.format ? col.format(val, row) : (val ?? '—');

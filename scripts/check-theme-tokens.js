@@ -28,6 +28,7 @@ const ENFORCED_FILES = [
   'src/components/NflValidationBanner.jsx',
   'src/components/NflFreshness.jsx',
   'src/components/SortableTable.jsx',
+  'src/components/NflGameLogModal.jsx',
 ].map(f => path.join(__dirname, '..', f));
 
 // MONITORED: raw hex = warning only (pre-migration allowlist)

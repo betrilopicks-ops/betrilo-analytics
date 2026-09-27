@@ -1,8 +1,9 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { dark } from '../theme';
 import SortableTable from '../components/SortableTable';
 import NflPageWrapper from '../components/NflPageWrapper';
+import NflGameLogModal from '../components/NflGameLogModal';
 import fmtTime from '../utils/fmtTime';
 
 const POS_TABS = ['All', 'QB', 'RB', 'WR', 'TE'];
@@ -14,18 +15,24 @@ const DVP_COLORS = {
 
 export default function NflProjectionsPage() {
   const [data, setData] = useState(null);
+  const [gameLogs, setGameLogs] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [activePos, setActivePos] = useState('All');
   const [selectedGame, setSelectedGame] = useState('all');
   const [injuryFilter, setInjuryFilter] = useState('all');
   const [selectedDvp, setSelectedDvp] = useState(new Set());
+  const [modalPlayer, setModalPlayer] = useState(null);
 
   useEffect(() => {
     fetch('/data/nfl_player_projections_latest.json')
       .then(r => r.json())
       .then(d => { setData(d); setLoading(false); })
       .catch(() => { setError(true); setLoading(false); });
+    fetch(`/data/nfl_game_logs_${new Date().getFullYear()}.json`)
+      .then(r => r.ok ? r.json() : null)
+      .then(d => setGameLogs(d))
+      .catch(() => {});
   }, []);
 
   const toggleDvp = (level) => {
@@ -45,28 +52,34 @@ export default function NflProjectionsPage() {
 
   const players = useMemo(() => {
     if (!data?.players) return [];
-    let rows = data.players.map(p => ({
-      player_name: p.player_name,
-      team: p.team,
-      position: p.position,
-      opponent: p.opponent,
-      game_id: p.game_id || '',
-      dc: p.depth_chart_rank,
-      dvp_rank: p.dvp?.rank,
-      dvp_label: p.dvp?.label,
-      injury_status: p.injury?.status || '',
-      rec_yds: p.projections?.rec_yds,
-      receptions: p.projections?.receptions,
-      targets: p.projections?.targets,
-      rec_tds: p.projections?.rec_tds,
-      rush_yds: p.projections?.rush_yds,
-      carries: p.projections?.carries,
-      rush_tds: p.projections?.rush_tds,
-      pass_yds: p.projections?.pass_yds,
-      pass_tds: p.projections?.pass_tds,
-      completions: p.projections?.completions,
-      target_share: p.usage?.target_share,
-    }));
+    const logPlayers = gameLogs?.players || {};
+    let rows = data.players.map(p => {
+      const hasLog = !!logPlayers[p.player_id];
+      return {
+        player_id: p.player_id,
+        player_name: p.player_name,
+        team: p.team,
+        position: p.position,
+        opponent: p.opponent,
+        game_id: p.game_id || '',
+        dc: p.depth_chart_rank,
+        dvp_rank: p.dvp?.rank,
+        dvp_label: p.dvp?.label,
+        injury_status: p.injury?.status || '',
+        rec_yds: p.projections?.rec_yds,
+        receptions: p.projections?.receptions,
+        targets: p.projections?.targets,
+        rec_tds: p.projections?.rec_tds,
+        rush_yds: p.projections?.rush_yds,
+        carries: p.projections?.carries,
+        rush_tds: p.projections?.rush_tds,
+        pass_yds: p.projections?.pass_yds,
+        pass_tds: p.projections?.pass_tds,
+        completions: p.projections?.completions,
+        target_share: p.usage?.target_share,
+        _clickable: hasLog,
+      };
+    });
     // Position filter
     if (activePos !== 'All') rows = rows.filter(r => r.position === activePos);
     // Matchup filter
@@ -77,7 +90,16 @@ export default function NflProjectionsPage() {
     // DvP filter (multi-select — empty set = all)
     if (selectedDvp.size > 0) rows = rows.filter(r => r.dvp_label && selectedDvp.has(r.dvp_label));
     return rows;
-  }, [data, activePos, selectedGame, injuryFilter, selectedDvp]);
+  }, [data, gameLogs, activePos, selectedGame, injuryFilter, selectedDvp]);
+
+  const handleRowClick = useCallback((row) => {
+    if (!gameLogs?.players?.[row.player_id]) return;
+    const log = gameLogs.players[row.player_id];
+    setModalPlayer({
+      ...log,
+      currentOpponent: row.opponent,
+    });
+  }, [gameLogs]);
 
   // Build matchup dropdown options from games array, sorted by kickoff
   const matchupOptions = useMemo(() => {
@@ -101,7 +123,8 @@ export default function NflProjectionsPage() {
   };
 
   const baseColumns = [
-    { key: 'player_name', label: 'Player', sortable: true, width: '140px' },
+    { key: 'player_name', label: 'Player', sortable: true, width: '140px',
+      format: (v, row) => row._clickable ? <span>{v} <span style={{ color: dark.textMuted, fontSize: '10px' }}>&#9656;</span></span> : v },
     { key: 'team', label: 'Team', sortable: true, width: '45px' },
     { key: 'position', label: 'Pos', sortable: true, align: 'center', width: '35px' },
     { key: 'opponent', label: 'Opp', sortable: true, width: '45px' },
@@ -251,6 +274,7 @@ export default function NflProjectionsPage() {
           loading={loading}
           lastRefreshed={data?.generated_at ? new Date(data.generated_at).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' }) : null}
           emptyMessage="No players match your filters"
+          onRowClick={handleRowClick}
         />
 
         <div style={{ marginTop: '16px', padding: '12px 16px', background: dark.surfaceBg, borderRadius: '8px', fontSize: '12px', color: dark.textSecondary, lineHeight: 1.6 }}>
@@ -264,6 +288,10 @@ export default function NflProjectionsPage() {
           <span style={{ color: dark.dvpAvoid }}>Avoid</span>
         </div>
       </NflPageWrapper>
+
+      {modalPlayer && (
+        <NflGameLogModal player={modalPlayer} onClose={() => setModalPlayer(null)} />
+      )}
     </>
   );
 }
