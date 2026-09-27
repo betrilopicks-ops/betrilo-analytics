@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-09-27",
-  "last_refreshed": "2026-09-27T06:09:21-04:00",
+  "last_refreshed": "2026-09-27T11:02:05-04:00",
   "games": 15,
-  "pitchers": 27,
+  "pitchers": 28,
   "coverage": {
-    "full_2026": 25,
+    "full_2026": 26,
     "fallback_2025": 0,
     "thin_no_data": 2
   },
@@ -290,20 +290,66 @@
           "side": "away",
           "team": "CHC",
           "opponent": "BOS",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Shota Imanaga",
+          "pitcher_id": 684007,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 11,
+            "l": 10,
+            "era": "3.74",
+            "whip": "1.10"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.265,
+            "whiff_rate": 0.282,
+            "bb_rate": 0.057,
+            "xwoba_against": 0.304,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 40.5,
+              "velo": 91.6
+            },
+            {
+              "pitch": "Sweeper",
+              "usage_pct": 14.8,
+              "velo": 81.0
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 5.8,
+              "velo": 90.3
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.263,
+              "ops_against": 0.798
+            },
+            "vs_rhb": {
+              "k_rate": 0.259,
+              "ops_against": 0.703
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.251,
+              "whiff_rate": 0.288,
+              "xwoba": 0.292,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.265,
+              "whiff_rate": 0.282,
+              "xwoba": 0.304
+            },
+            "trend": "steady",
+            "note": "K% down 1.4pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         }
       ]
