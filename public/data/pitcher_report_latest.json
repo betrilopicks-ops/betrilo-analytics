@@ -1,11 +1,11 @@
 {
   "slate_date": "2026-09-27",
-  "last_refreshed": "2026-09-27T12:02:04-04:00",
+  "last_refreshed": "2026-09-27T12:32:05-04:00",
   "games": 15,
-  "pitchers": 28,
+  "pitchers": 30,
   "coverage": {
-    "full_2026": 26,
-    "fallback_2025": 0,
+    "full_2026": 27,
+    "fallback_2025": 1,
     "thin_no_data": 2
   },
   "hot_cold_rule": "hot = L5 K% >= 3pts above season AND L5 xwOBA <= season; cold = L5 K% >= 3pts below season OR L5 xwOBA >= 3pts above season; else steady",
@@ -410,20 +410,26 @@
           "side": "home",
           "team": "BOS",
           "opponent": "CHC",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Tanner Houck",
+          "pitcher_id": 656557,
+          "hand": "R",
           "season": {
             "w": null,
             "l": null,
             "era": null,
             "whip": null
           },
-          "stuff": {},
+          "stuff": {
+            "k_rate": 0.157,
+            "whiff_rate": 0.199,
+            "bb_rate": 0.086,
+            "xwoba_against": 0.381,
+            "vintage": "2025"
+          },
           "arsenal": [],
           "splits": {},
           "recent_form": {},
-          "sample_flag": "tbd",
+          "sample_flag": "2025_fallback",
           "scratched": false
         },
         {
@@ -710,20 +716,66 @@
           "side": "away",
           "team": "LAD",
           "opponent": "SF",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Jack Dreyer",
+          "pitcher_id": 676263,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 5,
+            "l": 2,
+            "era": "3.16",
+            "whip": "1.10"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.276,
+            "whiff_rate": 0.248,
+            "bb_rate": 0.165,
+            "xwoba_against": 0.335,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 46.0,
+              "velo": 93.9
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 38.0,
+              "velo": 88.7
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 15.0,
+              "velo": 80.8
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.198,
+              "ops_against": 0.569
+            },
+            "vs_rhb": {
+              "k_rate": 0.352,
+              "ops_against": 0.711
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.17,
+              "whiff_rate": 0.236,
+              "xwoba": 0.466,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.276,
+              "whiff_rate": 0.248,
+              "xwoba": 0.335
+            },
+            "trend": "cold",
+            "note": "K% down 10.6pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         }
       ]
