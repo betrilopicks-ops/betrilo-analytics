@@ -109,6 +109,9 @@ export default function NflGameLogModal({ player, onClose }) {
             <div style={{ color: dark.textSecondary, fontSize: '13px', marginTop: '2px' }}>
               {position} — {team}
               {player.currentOpponent && ` | Next: vs ${player.currentOpponent}`}
+              {player.oppDefRank != null && (
+                <span style={{ color: dark.textMuted }}>{` | Opp Def #${player.oppDefRank}`}{player.oppDefYds != null && ` · ${Math.round(player.oppDefYds)} yd/g`}</span>
+              )}
             </div>
           </div>
           <button
