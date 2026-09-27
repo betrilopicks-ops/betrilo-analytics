@@ -13,18 +13,9 @@ const DVP_COLORS = {
   Neutral: dark.dvpNeutral, Tough: dark.dvpTough, Avoid: dark.dvpAvoid,
 };
 
-// Map position to the primary yards-allowed field in team rankings
-const POS_YDS_KEY = {
-  QB: 'passing_yards_per_game',
-  RB: 'rushing_yards_per_game',
-  WR: 'receiving_yards_per_game',
-  TE: 'receiving_yards_per_game',
-};
-
 export default function NflProjectionsPage() {
   const [data, setData] = useState(null);
   const [gameLogs, setGameLogs] = useState(null);
-  const [teamRankings, setTeamRankings] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [activePos, setActivePos] = useState('All');
@@ -42,28 +33,7 @@ export default function NflProjectionsPage() {
       .then(r => r.ok ? r.json() : null)
       .then(d => setGameLogs(d))
       .catch(() => {});
-    fetch('/data/nfl_team_rankings_latest.json')
-      .then(r => r.ok ? r.json() : null)
-      .then(d => setTeamRankings(d))
-      .catch(() => {});
   }, []);
-
-  // Build lookup: (opponent, position) → { rank, label, yds_per_game }
-  const defLookup = useMemo(() => {
-    if (!teamRankings?.position_groups) return {};
-    const map = {};
-    for (const [pos, teams] of Object.entries(teamRankings.position_groups)) {
-      for (const t of teams) {
-        const ydsKey = POS_YDS_KEY[pos];
-        map[`${t.team}|${pos}`] = {
-          rank: t.rank,
-          label: t.label,
-          yds: ydsKey ? t[ydsKey] : null,
-        };
-      }
-    }
-    return map;
-  }, [teamRankings]);
 
   const toggleDvp = (level) => {
     setSelectedDvp(prev => {
@@ -85,7 +55,6 @@ export default function NflProjectionsPage() {
     const logPlayers = gameLogs?.players || {};
     let rows = data.players.map(p => {
       const hasLog = !!logPlayers[p.player_id];
-      const def = defLookup[`${p.opponent}|${p.position}`];
       return {
         player_id: p.player_id,
         player_name: p.player_name,
@@ -96,8 +65,6 @@ export default function NflProjectionsPage() {
         dc: p.depth_chart_rank,
         dvp_rank: p.dvp?.rank,
         dvp_label: p.dvp?.label,
-        opp_yds: def?.yds ?? null,
-        opp_def_label: def?.label,
         injury_status: p.injury?.status || '',
         rec_yds: p.projections?.rec_yds,
         receptions: p.projections?.receptions,
@@ -123,7 +90,7 @@ export default function NflProjectionsPage() {
     // DvP filter (multi-select — empty set = all)
     if (selectedDvp.size > 0) rows = rows.filter(r => r.dvp_label && selectedDvp.has(r.dvp_label));
     return rows;
-  }, [data, gameLogs, defLookup, activePos, selectedGame, injuryFilter, selectedDvp]);
+  }, [data, gameLogs, activePos, selectedGame, injuryFilter, selectedDvp]);
 
   const handleRowClick = useCallback((row) => {
     if (!gameLogs?.players?.[row.player_id]) return;
@@ -131,9 +98,6 @@ export default function NflProjectionsPage() {
     setModalPlayer({
       ...log,
       currentOpponent: row.opponent,
-      oppDefLabel: row.opp_def_label,
-      oppDefYds: row.opp_yds,
-      oppDefRank: row.dvp_rank,
     });
   }, [gameLogs]);
 
@@ -152,18 +116,11 @@ export default function NflProjectionsPage() {
     const c = DVP_COLORS;
     return <span style={{ color: c[v] || dark.textMuted, fontWeight: 600 }}>{v || '—'}</span>;
   };
-  const oppYdsFormat = (v, row) => {
-    if (v == null) return <span style={{ color: dark.textMuted }}>—</span>;
-    const color = DVP_COLORS[row.opp_def_label] || dark.textMuted;
-    return <span style={{ color, fontWeight: 600 }}>{Math.round(v)}</span>;
-  };
   const injFormat = (v) => {
     if (!v) return null;
     const c = { Questionable: dark.injQuestionable, IR: dark.injIR, PUP: dark.injPUP, Suspended: dark.injSuspended, 'Did Not Report': dark.injIR, Out: dark.injIR, Doubtful: dark.injQuestionable, Unknown: dark.injUnknown };
     return <span style={{ color: c[v] || dark.textMuted, fontWeight: 600, fontSize: '11px' }}>{v}</span>;
   };
-
-  const oppYdsLabel = activePos === 'QB' ? 'P Yd/G' : activePos === 'RB' ? 'R Yd/G' : activePos === 'WR' || activePos === 'TE' ? 'Rc Yd/G' : 'Yd/G';
 
   const baseColumns = [
     { key: 'player_name', label: 'Player', sortable: true, width: '140px',
@@ -172,7 +129,6 @@ export default function NflProjectionsPage() {
     { key: 'position', label: 'Pos', sortable: true, align: 'center', width: '35px' },
     { key: 'opponent', label: 'Opp', sortable: true, width: '45px' },
     { key: 'dvp_label', label: 'DvP', sortable: true, format: dvpFormat },
-    { key: 'opp_yds', label: oppYdsLabel, sortable: true, align: 'right', format: oppYdsFormat },
     { key: 'injury_status', label: 'Inj', sortable: true, align: 'center', format: injFormat },
   ];
 
@@ -324,7 +280,6 @@ export default function NflProjectionsPage() {
         <div style={{ marginTop: '16px', padding: '12px 16px', background: dark.surfaceBg, borderRadius: '8px', fontSize: '12px', color: dark.textSecondary, lineHeight: 1.6 }}>
           <strong style={{ color: dark.textPrimary }}>Key:</strong>{' '}
           DvP = Defense vs Position (Rank 1 = easiest matchup) |{' '}
-          Yd/G = Opponent yards allowed per game to this position |{' '}
           DC = Depth Chart rank (1 = starter) | Inj = Injury status | Tgt% = Target share |{' '}
           <span style={{ color: dark.dvpSmash }}>Smash</span>{' / '}
           <span style={{ color: dark.dvpFavorable }}>Favorable</span>{' / '}
