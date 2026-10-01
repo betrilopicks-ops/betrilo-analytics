@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generated_at": "2026-10-01T07:14:07.949470-04:00",
+  "generated_at": "2026-10-01T07:29:18.504548-04:00",
   "dvp_method": "Based on 2026 (1.0x), 2025 (0.6x), 2024 (0.3x)",
   "games_note": "Games column shows total games across all weighted seasons (e.g., 34 = 17 per season x 2 seasons)",
   "rank_note": "Rank 1 = most yards/stats allowed to this position = easiest matchup for offense",
@@ -469,24 +469,24 @@
         "receiving_yards_per_game": 30.4
       },
       {
-        "team": "SF",
-        "rank": 15,
-        "label": "Neutral",
-        "games": 37,
-        "rushing_yards_per_game": 96.6,
-        "carries_per_game": 22.2,
-        "receptions_per_game": 5.3,
-        "receiving_yards_per_game": 35.3
-      },
-      {
         "team": "LV",
-        "rank": 16,
+        "rank": 15,
         "label": "Neutral",
         "games": 37,
         "rushing_yards_per_game": 96.6,
         "carries_per_game": 23.4,
         "receptions_per_game": 4.4,
         "receiving_yards_per_game": 28.3
+      },
+      {
+        "team": "SF",
+        "rank": 16,
+        "label": "Neutral",
+        "games": 37,
+        "rushing_yards_per_game": 96.6,
+        "carries_per_game": 22.2,
+        "receptions_per_game": 5.3,
+        "receiving_yards_per_game": 35.3
       },
       {
         "team": "CLE",
@@ -851,24 +851,24 @@
         "receiving_tds_per_game": 1.0
       },
       {
-        "team": "LAC",
-        "rank": 21,
-        "label": "Tough",
-        "games": 37,
-        "receiving_yards_per_game": 138.3,
-        "receptions_per_game": 10.8,
-        "targets_per_game": 17.4,
-        "receiving_tds_per_game": 0.8
-      },
-      {
         "team": "PHI",
-        "rank": 22,
+        "rank": 21,
         "label": "Tough",
         "games": 37,
         "receiving_yards_per_game": 138.3,
         "receptions_per_game": 11.0,
         "targets_per_game": 19.0,
         "receiving_tds_per_game": 0.7
+      },
+      {
+        "team": "LAC",
+        "rank": 22,
+        "label": "Tough",
+        "games": 37,
+        "receiving_yards_per_game": 138.3,
+        "receptions_per_game": 10.8,
+        "targets_per_game": 17.4,
+        "receiving_tds_per_game": 0.8
       },
       {
         "team": "BUF",
@@ -1183,22 +1183,22 @@
         "receiving_tds_per_game": 0.4
       },
       {
-        "team": "HOU",
+        "team": "NYJ",
         "rank": 22,
         "label": "Tough",
         "games": 37,
         "receiving_yards_per_game": 48.7,
-        "receptions_per_game": 5.0,
+        "receptions_per_game": 5.1,
         "targets_per_game": 7.0,
         "receiving_tds_per_game": 0.4
       },
       {
-        "team": "NYJ",
+        "team": "HOU",
         "rank": 23,
         "label": "Tough",
         "games": 37,
         "receiving_yards_per_game": 48.7,
-        "receptions_per_game": 5.1,
+        "receptions_per_game": 5.0,
         "targets_per_game": 7.0,
         "receiving_tds_per_game": 0.4
       },
