@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-10-01",
-  "last_refreshed": "2026-10-01T11:00:21-04:00",
+  "last_refreshed": "2026-10-01T16:30:23-04:00",
   "games": 1,
-  "pitchers": 0,
+  "pitchers": 2,
   "coverage": {
-    "full_2026": 0,
+    "full_2026": 2,
     "fallback_2025": 0,
     "thin_no_data": 0
   },
@@ -20,40 +20,122 @@
           "side": "home",
           "team": "ATL",
           "opponent": "PHI",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Ray Kerr",
+          "pitcher_id": 678061,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 0,
+            "l": 0,
+            "era": "1.47",
+            "whip": "0.60"
           },
-          "stuff": {},
-          "arsenal": [],
+          "stuff": {
+            "k_rate": 0.18,
+            "whiff_rate": 0.191,
+            "bb_rate": 0.018,
+            "xwoba_against": 0.269,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 37.1,
+              "velo": 94.9
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 31.7,
+              "velo": 81.0
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 22.4,
+              "velo": 94.6
+            }
+          ],
           "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.18,
+              "whiff_rate": 0.191,
+              "xwoba": 0.269,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.18,
+              "whiff_rate": 0.191,
+              "xwoba": 0.269
+            },
+            "trend": "steady",
+            "note": "K% steady over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
           "side": "away",
           "team": "PHI",
           "opponent": "ATL",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Aaron Nola",
+          "pitcher_id": 605400,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 7,
+            "l": 12,
+            "era": "4.67",
+            "whip": "1.35"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.231,
+            "whiff_rate": 0.226,
+            "bb_rate": 0.081,
+            "xwoba_against": 0.328,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 25.1,
+              "velo": 92.3
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 18.2,
+              "velo": 91.6
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 15.1,
+              "velo": 85.8
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.21,
+              "ops_against": 0.835
+            },
+            "vs_rhb": {
+              "k_rate": 0.279,
+              "ops_against": 0.76
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.165,
+              "whiff_rate": 0.177,
+              "xwoba": 0.365,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.231,
+              "whiff_rate": 0.226,
+              "xwoba": 0.328
+            },
+            "trend": "cold",
+            "note": "K% down 6.6pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         }
       ]
