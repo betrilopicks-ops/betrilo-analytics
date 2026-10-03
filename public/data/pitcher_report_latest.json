@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-10-03",
-  "last_refreshed": "2026-10-03T11:00:46-04:00",
+  "last_refreshed": "2026-10-03T14:00:49-04:00",
   "games": 4,
-  "pitchers": 7,
+  "pitchers": 8,
   "coverage": {
-    "full_2026": 7,
+    "full_2026": 8,
     "fallback_2025": 0,
     "thin_no_data": 0
   },
@@ -226,20 +226,66 @@
           "side": "away",
           "team": "ATL",
           "opponent": "LAD",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Dylan Dodd",
+          "pitcher_id": 689266,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 4,
+            "l": 1,
+            "era": "2.54",
+            "whip": "0.91"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.262,
+            "whiff_rate": 0.239,
+            "bb_rate": 0.088,
+            "xwoba_against": 0.357,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Sinker",
+              "usage_pct": 54.9,
+              "velo": 93.9
+            },
+            {
+              "pitch": "Cutter",
+              "usage_pct": 39.2,
+              "velo": 87.0
+            },
+            {
+              "pitch": "Slider",
+              "usage_pct": 5.8,
+              "velo": 82.8
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.321,
+              "ops_against": 0.55
+            },
+            "vs_rhb": {
+              "k_rate": 0.27,
+              "ops_against": 0.63
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.169,
+              "whiff_rate": 0.191,
+              "xwoba": 0.461,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.262,
+              "whiff_rate": 0.239,
+              "xwoba": 0.357
+            },
+            "trend": "cold",
+            "note": "K% down 9.3pts over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         }
       ]
