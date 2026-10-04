@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-10-04",
-  "last_refreshed": "2026-10-04T13:00:32-04:00",
+  "last_refreshed": "2026-10-04T16:30:31-04:00",
   "games": 2,
-  "pitchers": 3,
+  "pitchers": 4,
   "coverage": {
-    "full_2026": 3,
+    "full_2026": 4,
     "fallback_2025": 0,
     "thin_no_data": 0
   },
@@ -226,20 +226,56 @@
           "side": "away",
           "team": "ATL",
           "opponent": "LAD",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Ray Kerr",
+          "pitcher_id": 678061,
+          "hand": "L",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 0,
+            "l": 0,
+            "era": "1.47",
+            "whip": "0.60"
           },
-          "stuff": {},
-          "arsenal": [],
+          "stuff": {
+            "k_rate": 0.18,
+            "whiff_rate": 0.191,
+            "bb_rate": 0.018,
+            "xwoba_against": 0.269,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 37.1,
+              "velo": 94.9
+            },
+            {
+              "pitch": "Curve",
+              "usage_pct": 31.7,
+              "velo": 81.0
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 22.4,
+              "velo": 94.6
+            }
+          ],
           "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.18,
+              "whiff_rate": 0.191,
+              "xwoba": 0.269,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.18,
+              "whiff_rate": 0.191,
+              "xwoba": 0.269
+            },
+            "trend": "steady",
+            "note": "K% steady over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         }
       ]
