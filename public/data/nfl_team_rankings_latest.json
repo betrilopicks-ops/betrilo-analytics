@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generated_at": "2026-10-06T07:00:18.026141-04:00",
+  "generated_at": "2026-10-07T15:00:14.156678-04:00",
   "dvp_method": "Based on 2026 (1.0x), 2025 (0.6x), 2024 (0.3x)",
   "games_note": "Games column shows total games across all weighted seasons (e.g., 34 = 17 per season x 2 seasons)",
   "rank_note": "Rank 1 = most yards/stats allowed to this position = easiest matchup for offense",
@@ -147,14 +147,14 @@
         "rushing_yards_per_game": 20.8
       },
       {
-        "team": "CAR",
+        "team": "SF",
         "rank": 15,
         "label": "Neutral",
         "games": 38,
         "passing_yards_per_game": 226.3,
-        "passing_tds_per_game": 1.4,
-        "completions_per_game": 20.6,
-        "rushing_yards_per_game": 21.3
+        "passing_tds_per_game": 1.5,
+        "completions_per_game": 22.5,
+        "rushing_yards_per_game": 12.7
       },
       {
         "team": "DEN",
@@ -167,14 +167,14 @@
         "rushing_yards_per_game": 17.9
       },
       {
-        "team": "SF",
+        "team": "CAR",
         "rank": 17,
         "label": "Neutral",
         "games": 38,
         "passing_yards_per_game": 226.3,
-        "passing_tds_per_game": 1.5,
-        "completions_per_game": 22.5,
-        "rushing_yards_per_game": 12.7
+        "passing_tds_per_game": 1.4,
+        "completions_per_game": 20.6,
+        "rushing_yards_per_game": 21.3
       },
       {
         "team": "NYG",
@@ -701,24 +701,24 @@
         "receiving_tds_per_game": 0.8
       },
       {
-        "team": "WAS",
+        "team": "PIT",
         "rank": 6,
         "label": "Smash",
-        "games": 38,
-        "receiving_yards_per_game": 158.2,
-        "receptions_per_game": 12.4,
-        "targets_per_game": 18.9,
-        "receiving_tds_per_game": 1.1
-      },
-      {
-        "team": "PIT",
-        "rank": 7,
-        "label": "Favorable",
         "games": 38,
         "receiving_yards_per_game": 158.2,
         "receptions_per_game": 12.1,
         "targets_per_game": 18.9,
         "receiving_tds_per_game": 0.9
+      },
+      {
+        "team": "WAS",
+        "rank": 7,
+        "label": "Favorable",
+        "games": 38,
+        "receiving_yards_per_game": 158.2,
+        "receptions_per_game": 12.4,
+        "targets_per_game": 18.9,
+        "receiving_tds_per_game": 1.1
       },
       {
         "team": "ATL",
@@ -1133,24 +1133,24 @@
         "receiving_tds_per_game": 0.3
       },
       {
-        "team": "NYJ",
-        "rank": 17,
-        "label": "Neutral",
-        "games": 38,
-        "receiving_yards_per_game": 50.2,
-        "receptions_per_game": 5.3,
-        "targets_per_game": 7.2,
-        "receiving_tds_per_game": 0.4
-      },
-      {
         "team": "CHI",
-        "rank": 18,
+        "rank": 17,
         "label": "Neutral",
         "games": 38,
         "receiving_yards_per_game": 50.2,
         "receptions_per_game": 5.0,
         "targets_per_game": 6.9,
         "receiving_tds_per_game": 0.2
+      },
+      {
+        "team": "NYJ",
+        "rank": 18,
+        "label": "Neutral",
+        "games": 38,
+        "receiving_yards_per_game": 50.2,
+        "receptions_per_game": 5.3,
+        "targets_per_game": 7.2,
+        "receiving_tds_per_game": 0.4
       },
       {
         "team": "ATL",
