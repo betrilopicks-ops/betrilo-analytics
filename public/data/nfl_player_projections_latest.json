@@ -1,10 +1,10 @@
 {
   "season": 2026,
   "week": 5,
-  "generated_at": "2026-10-07T15:00:20.514300-04:00",
+  "generated_at": "2026-10-09T17:00:21.426103-04:00",
   "week1_mode": false,
   "data_note": "Projections based on 2026 Weeks 1-4 + prior season data",
-  "player_count": 452,
+  "player_count": 454,
   "games": [
     {
       "game_id": "2026_05_TB_DAL",
@@ -126,17 +126,17 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "pass_yds": 303.3,
-        "pass_tds": 2.18,
-        "completions": 28.6,
-        "pass_att": 38.4,
-        "interceptions": 0.91,
-        "rush_yds": 13.4,
+        "pass_yds": 326.3,
+        "pass_tds": 2.02,
+        "completions": 29.7,
+        "pass_att": 40.5,
+        "interceptions": 0.86,
+        "rush_yds": 11.2,
         "rush_tds": 0.06
       },
       "dvp": {
-        "rank": 8,
-        "label": "Favorable"
+        "rank": 5,
+        "label": "Smash"
       },
       "injury": null
     },
@@ -153,16 +153,20 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 107.7,
-        "rec_tds": 0.67,
-        "receptions": 8.3,
+        "rec_yds": 104.2,
+        "rec_tds": 0.59,
+        "receptions": 8.0,
         "targets": 11.3
       },
       "dvp": {
-        "rank": 15,
-        "label": "Neutral"
+        "rank": 13,
+        "label": "Favorable"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Quadriceps",
+        "practice": null
+      }
     },
     {
       "player_name": "Javonte Williams",
@@ -177,17 +181,17 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 50.3,
-        "rush_tds": 0.95,
+        "rush_yds": 51.3,
+        "rush_tds": 0.96,
         "carries": 12.7,
-        "rec_yds": 20.6,
-        "rec_tds": 0.18,
-        "receptions": 3.9,
+        "rec_yds": 21.2,
+        "rec_tds": 0.16,
+        "receptions": 3.7,
         "targets": 4.1,
-        "rush_rec_yds": 70.9
+        "rush_rec_yds": 72.5
       },
       "dvp": {
-        "rank": 31,
+        "rank": 32,
         "label": "Avoid"
       },
       "injury": null
@@ -205,14 +209,14 @@
         "blend_source": "prior_season_only"
       },
       "projections": {
-        "pass_yds": 8.3,
-        "completions": 1.7,
-        "pass_att": 4.4,
+        "pass_yds": 8.7,
+        "completions": 1.8,
+        "pass_att": 4.6,
         "rush_yds": 0.6
       },
       "dvp": {
-        "rank": 8,
-        "label": "Favorable"
+        "rank": 5,
+        "label": "Smash"
       },
       "injury": null
     },
@@ -229,16 +233,16 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 9.3,
+        "rush_yds": 9.6,
         "rush_tds": 0.01,
         "carries": 2.6,
         "rec_tds": 0.01,
         "receptions": 0.5,
         "targets": 0.8,
-        "rush_rec_yds": 8.9
+        "rush_rec_yds": 9.2
       },
       "dvp": {
-        "rank": 31,
+        "rank": 32,
         "label": "Avoid"
       },
       "injury": null
@@ -256,14 +260,14 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 70.1,
-        "rec_tds": 0.23,
-        "receptions": 5.2,
-        "targets": 8.0
+        "rec_yds": 84.8,
+        "rec_tds": 0.35,
+        "receptions": 6.1,
+        "targets": 9.3
       },
       "dvp": {
-        "rank": 15,
-        "label": "Neutral"
+        "rank": 13,
+        "label": "Favorable"
       },
       "injury": null
     },
@@ -280,14 +284,14 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 15.7,
+        "rec_yds": 19.2,
         "rec_tds": 0.07,
-        "receptions": 1.2,
-        "targets": 1.9
+        "receptions": 1.5,
+        "targets": 2.4
       },
       "dvp": {
-        "rank": 15,
-        "label": "Neutral"
+        "rank": 13,
+        "label": "Favorable"
       },
       "injury": null
     },
@@ -304,14 +308,14 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 34.8,
-        "rec_tds": 0.71,
-        "receptions": 4.6,
-        "targets": 5.7
+        "rec_yds": 35.0,
+        "rec_tds": 0.64,
+        "receptions": 4.8,
+        "targets": 6.2
       },
       "dvp": {
-        "rank": 4,
-        "label": "Smash"
+        "rank": 7,
+        "label": "Favorable"
       },
       "injury": null
     },
@@ -328,42 +332,14 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 14.4,
+        "rec_yds": 14.2,
         "rec_tds": 0.02,
-        "receptions": 1.4,
-        "targets": 1.8
+        "receptions": 1.5,
+        "targets": 1.9
       },
       "dvp": {
-        "rank": 4,
-        "label": "Smash"
-      },
-      "injury": null
-    },
-    {
-      "player_name": "Emari Demercado",
-      "player_id": "00-0038705",
-      "team": "DAL",
-      "position": "RB",
-      "opponent": "TB",
-      "game_id": "2026_05_TB_DAL",
-      "is_home": true,
-      "depth_chart_rank": 3,
-      "usage": {
-        "blend_source": "blended (cw=0.50, pw=0.50)"
-      },
-      "projections": {
-        "rush_yds": 13.0,
-        "rush_tds": 0.01,
-        "carries": 2.5,
-        "rec_yds": 5.5,
-        "rec_tds": 0.03,
-        "receptions": 0.7,
-        "targets": 0.9,
-        "rush_rec_yds": 18.5
-      },
-      "dvp": {
-        "rank": 31,
-        "label": "Avoid"
+        "rank": 7,
+        "label": "Favorable"
       },
       "injury": null
     },
@@ -380,16 +356,16 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 3.0,
+        "rush_yds": 3.3,
         "carries": 0.8,
-        "rec_yds": 5.6,
+        "rec_yds": 5.7,
         "rec_tds": 0.03,
-        "receptions": 0.8,
-        "targets": 0.8,
-        "rush_rec_yds": 8.6
+        "receptions": 0.7,
+        "targets": 0.7,
+        "rush_rec_yds": 9.0
       },
       "dvp": {
-        "rank": 31,
+        "rank": 32,
         "label": "Avoid"
       },
       "injury": null
@@ -407,13 +383,13 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 6.3,
-        "receptions": 0.5,
-        "targets": 1.7
+        "rec_yds": 9.7,
+        "receptions": 0.9,
+        "targets": 2.3
       },
       "dvp": {
-        "rank": 15,
-        "label": "Neutral"
+        "rank": 13,
+        "label": "Favorable"
       },
       "injury": null
     },
@@ -430,14 +406,14 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 26.9,
+        "rec_yds": 36.6,
         "rec_tds": 0.1,
-        "receptions": 2.9,
-        "targets": 4.8
+        "receptions": 3.1,
+        "targets": 4.9
       },
       "dvp": {
-        "rank": 15,
-        "label": "Neutral"
+        "rank": 13,
+        "label": "Favorable"
       },
       "injury": null
     },
@@ -454,14 +430,14 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 9.1,
+        "rec_yds": 8.1,
         "rec_tds": 0.03,
         "receptions": 0.8,
-        "targets": 1.1
+        "targets": 1.3
       },
       "dvp": {
-        "rank": 4,
-        "label": "Smash"
+        "rank": 7,
+        "label": "Favorable"
       },
       "injury": null
     },
@@ -478,10 +454,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 52.3,
-        "rec_tds": 0.23,
+        "rec_yds": 54.2,
+        "rec_tds": 0.24,
         "receptions": 4.8,
-        "targets": 5.7
+        "targets": 5.6
       },
       "dvp": {
         "rank": 3,
@@ -490,35 +466,23 @@
       "injury": null
     },
     {
-      "player_name": "Baker Mayfield",
-      "player_id": "00-0034855",
+      "player_name": "Easton Stick",
+      "player_id": "00-0035282",
       "team": "TB",
       "position": "QB",
       "opponent": "DAL",
       "game_id": "2026_05_TB_DAL",
       "is_home": false,
-      "depth_chart_rank": 1,
+      "depth_chart_rank": 3,
       "usage": {
-        "blend_source": "blended (cw=0.50, pw=0.50)"
+        "blend_source": "positional_prior (dc_rank=3)"
       },
-      "projections": {
-        "pass_yds": 246.3,
-        "pass_tds": 1.56,
-        "completions": 21.8,
-        "pass_att": 32.6,
-        "interceptions": 0.62,
-        "rush_yds": 27.0,
-        "rush_tds": 0.21
-      },
+      "projections": {},
       "dvp": {
-        "rank": 4,
+        "rank": 6,
         "label": "Smash"
       },
-      "injury": {
-        "status": "Out",
-        "body_part": "Thumb",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Kenny Gainwell",
@@ -533,18 +497,18 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 17.2,
-        "rush_tds": 0.11,
-        "carries": 4.6,
-        "rec_yds": 19.6,
-        "rec_tds": 0.19,
-        "receptions": 2.7,
-        "targets": 3.5,
-        "rush_rec_yds": 36.8
+        "rush_yds": 20.2,
+        "rush_tds": 0.12,
+        "carries": 5.0,
+        "rec_yds": 19.9,
+        "rec_tds": 0.17,
+        "receptions": 3.0,
+        "targets": 3.7,
+        "rush_rec_yds": 40.1
       },
       "dvp": {
-        "rank": 15,
-        "label": "Neutral"
+        "rank": 11,
+        "label": "Favorable"
       },
       "injury": null
     },
@@ -565,11 +529,7 @@
         "rank": 21,
         "label": "Tough"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Elbow",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Cade Otton",
@@ -584,9 +544,9 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 37.0,
+        "rec_yds": 36.5,
         "rec_tds": 0.07,
-        "receptions": 3.7,
+        "receptions": 3.8,
         "targets": 4.9
       },
       "dvp": {
@@ -608,18 +568,18 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 14.6,
-        "rush_tds": 0.67,
-        "carries": 3.7,
+        "rush_yds": 18.2,
+        "rush_tds": 0.43,
+        "carries": 4.4,
         "rec_yds": 2.0,
         "rec_tds": 0.03,
         "receptions": 0.3,
-        "targets": 0.3,
-        "rush_rec_yds": 16.6
+        "targets": 0.4,
+        "rush_rec_yds": 20.2
       },
       "dvp": {
-        "rank": 15,
-        "label": "Neutral"
+        "rank": 11,
+        "label": "Favorable"
       },
       "injury": null
     },
@@ -636,9 +596,9 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 2.5,
+        "rec_yds": 3.7,
         "rec_tds": 0.04,
-        "receptions": 0.2,
+        "receptions": 0.5,
         "targets": 0.8
       },
       "dvp": {
@@ -660,18 +620,18 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 61.7,
-        "rush_tds": 0.23,
-        "carries": 14.8,
-        "rec_yds": 24.7,
-        "rec_tds": 0.11,
+        "rush_yds": 79.5,
+        "rush_tds": 0.32,
+        "carries": 16.4,
+        "rec_yds": 24.5,
+        "rec_tds": 0.22,
         "receptions": 3.2,
-        "targets": 3.6,
-        "rush_rec_yds": 86.4
+        "targets": 3.7,
+        "rush_rec_yds": 104.0
       },
       "dvp": {
-        "rank": 15,
-        "label": "Neutral"
+        "rank": 11,
+        "label": "Favorable"
       },
       "injury": null
     },
@@ -712,10 +672,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 45.7,
-        "rec_tds": 0.31,
-        "receptions": 3.5,
-        "targets": 5.7
+        "rec_yds": 47.2,
+        "rec_tds": 0.29,
+        "receptions": 3.8,
+        "targets": 6.2
       },
       "dvp": {
         "rank": 3,
@@ -736,10 +696,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 19.9,
+        "rec_yds": 26.1,
         "rec_tds": 0.15,
         "receptions": 1.3,
-        "targets": 2.2
+        "targets": 2.1
       },
       "dvp": {
         "rank": 3,
@@ -760,10 +720,10 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "rec_yds": 38.0,
-        "rec_tds": 0.32,
-        "receptions": 2.2,
-        "targets": 4.1
+        "rec_yds": 39.2,
+        "rec_tds": 0.33,
+        "receptions": 2.3,
+        "targets": 4.2
       },
       "dvp": {
         "rank": 3,
@@ -803,15 +763,15 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "pass_yds": 83.5,
-        "pass_tds": 0.63,
-        "completions": 9.9,
-        "pass_att": 15.2,
-        "interceptions": 0.25,
-        "rush_yds": 39.2
+        "pass_yds": 130.4,
+        "pass_tds": 0.88,
+        "completions": 13.7,
+        "pass_att": 19.3,
+        "interceptions": 0.33,
+        "rush_yds": 35.5
       },
       "dvp": {
-        "rank": 4,
+        "rank": 6,
         "label": "Smash"
       },
       "injury": null
@@ -829,14 +789,14 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 9.7,
+        "rush_yds": 9.5,
         "rush_tds": 0.04,
         "carries": 2.2,
-        "rec_yds": 5.3,
+        "rec_yds": 5.2,
         "rec_tds": 0.03,
-        "receptions": 1.0,
+        "receptions": 0.9,
         "targets": 1.2,
-        "rush_rec_yds": 15.0
+        "rush_rec_yds": 14.7
       },
       "dvp": {
         "rank": 18,
@@ -857,10 +817,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 45.6,
-        "rec_tds": 0.27,
-        "receptions": 3.9,
-        "targets": 5.7
+        "rec_yds": 44.5,
+        "rec_tds": 0.26,
+        "receptions": 3.8,
+        "targets": 5.5
       },
       "dvp": {
         "rank": 17,
@@ -881,8 +841,8 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 2.6,
-        "rec_tds": 0.04,
+        "rec_yds": 2.5,
+        "rec_tds": 0.03,
         "receptions": 0.3,
         "targets": 0.6
       },
@@ -905,10 +865,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "pass_yds": 186.5,
-        "pass_tds": 1.33,
-        "completions": 16.3,
-        "pass_att": 27.1,
+        "pass_yds": 182.1,
+        "pass_tds": 1.3,
+        "completions": 16.0,
+        "pass_att": 26.5,
         "interceptions": 0.88,
         "rush_yds": 15.2,
         "rush_tds": 0.23
@@ -932,10 +892,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 47.5,
-        "rec_tds": 0.3,
-        "receptions": 3.4,
-        "targets": 6.0
+        "rec_yds": 46.4,
+        "rec_tds": 0.29,
+        "receptions": 3.3,
+        "targets": 5.8
       },
       "dvp": {
         "rank": 17,
@@ -956,13 +916,13 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 29.7,
-        "rush_tds": 0.44,
-        "carries": 7.1,
+        "rush_yds": 29.0,
+        "rush_tds": 0.43,
+        "carries": 7.0,
         "rec_yds": 1.1,
         "receptions": 0.1,
         "targets": 0.1,
-        "rush_rec_yds": 30.8
+        "rush_rec_yds": 30.1
       },
       "dvp": {
         "rank": 18,
@@ -983,9 +943,9 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 30.9,
-        "rec_tds": 0.18,
-        "receptions": 2.7,
+        "rec_yds": 30.2,
+        "rec_tds": 0.17,
+        "receptions": 2.6,
         "targets": 3.6
       },
       "dvp": {
@@ -1007,10 +967,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 39.1,
-        "rec_tds": 0.2,
-        "receptions": 2.9,
-        "targets": 5.3
+        "rec_yds": 38.2,
+        "rec_tds": 0.19,
+        "receptions": 2.8,
+        "targets": 5.2
       },
       "dvp": {
         "rank": 17,
@@ -1031,10 +991,10 @@
         "blend_source": "prior_season_only"
       },
       "projections": {
-        "pass_yds": 92.9,
-        "pass_tds": 0.4,
-        "completions": 8.5,
-        "pass_att": 13.7,
+        "pass_yds": 90.7,
+        "pass_tds": 0.39,
+        "completions": 8.3,
+        "pass_att": 13.4,
         "interceptions": 0.26,
         "rush_yds": 3.8
       },
@@ -1059,10 +1019,10 @@
       "projections": {
         "rush_yds": 1.9,
         "carries": 0.5,
-        "rec_yds": 2.6,
+        "rec_yds": 2.5,
         "receptions": 0.5,
         "targets": 0.7,
-        "rush_rec_yds": 4.5
+        "rush_rec_yds": 4.4
       },
       "dvp": {
         "rank": 18,
@@ -1083,7 +1043,7 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 14.8,
+        "rec_yds": 14.4,
         "rec_tds": 0.04,
         "receptions": 1.4,
         "targets": 2.4
@@ -1107,14 +1067,14 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 39.1,
-        "rush_tds": 0.35,
-        "carries": 9.3,
-        "rec_yds": 8.2,
+        "rush_yds": 38.2,
+        "rush_tds": 0.34,
+        "carries": 9.0,
+        "rec_yds": 8.0,
         "rec_tds": 0.04,
         "receptions": 1.0,
         "targets": 1.1,
-        "rush_rec_yds": 47.3
+        "rush_rec_yds": 46.2
       },
       "dvp": {
         "rank": 18,
@@ -1135,8 +1095,8 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "rec_yds": 17.2,
-        "rec_tds": 0.38,
+        "rec_yds": 16.8,
+        "rec_tds": 0.37,
         "receptions": 1.2,
         "targets": 1.5
       },
@@ -1159,9 +1119,9 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "rec_yds": 6.0,
+        "rec_yds": 5.9,
         "receptions": 0.5,
-        "targets": 1.1
+        "targets": 1.0
       },
       "dvp": {
         "rank": 32,
@@ -1182,15 +1142,15 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "pass_yds": 50.7,
+        "pass_yds": 49.5,
         "pass_tds": 0.22,
-        "completions": 4.9,
-        "pass_att": 7.0,
+        "completions": 4.8,
+        "pass_att": 6.8,
         "interceptions": 0.13,
         "rush_yds": 0.7
       },
       "dvp": {
-        "rank": 5,
+        "rank": 4,
         "label": "Smash"
       },
       "injury": null
@@ -1208,7 +1168,7 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 6.1,
+        "rec_yds": 6.0,
         "rec_tds": 0.02,
         "receptions": 0.9,
         "targets": 1.4
@@ -1232,17 +1192,17 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 37.4,
-        "rec_tds": 0.89,
-        "receptions": 3.0,
-        "targets": 4.1
+        "rec_yds": 36.5,
+        "rec_tds": 0.87,
+        "receptions": 2.9,
+        "targets": 4.0
       },
       "dvp": {
         "rank": 15,
         "label": "Neutral"
       },
       "injury": {
-        "status": "Doubtful",
+        "status": "Questionable",
         "body_part": "Knee - MCL",
         "practice": null
       }
@@ -1260,17 +1220,17 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 48.2,
-        "rush_tds": 0.25,
-        "carries": 11.0,
-        "rec_yds": 10.5,
+        "rush_yds": 47.0,
+        "rush_tds": 0.24,
+        "carries": 10.7,
+        "rec_yds": 10.3,
         "rec_tds": 0.06,
         "receptions": 1.8,
         "targets": 2.1,
-        "rush_rec_yds": 58.7
+        "rush_rec_yds": 57.3
       },
       "dvp": {
-        "rank": 32,
+        "rank": 31,
         "label": "Avoid"
       },
       "injury": {
@@ -1292,10 +1252,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 20.3,
+        "rec_yds": 19.9,
         "rec_tds": 0.09,
-        "receptions": 1.8,
-        "targets": 2.9
+        "receptions": 1.7,
+        "targets": 2.8
       },
       "dvp": {
         "rank": 5,
@@ -1320,16 +1280,16 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "pass_yds": 190.1,
-        "pass_tds": 1.35,
-        "completions": 17.6,
-        "pass_att": 25.2,
+        "pass_yds": 185.6,
+        "pass_tds": 1.32,
+        "completions": 17.2,
+        "pass_att": 24.6,
         "interceptions": 0.8,
         "rush_yds": 28.5,
         "rush_tds": 0.43
       },
       "dvp": {
-        "rank": 5,
+        "rank": 4,
         "label": "Smash"
       },
       "injury": null
@@ -1347,10 +1307,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 71.9,
+        "rec_yds": 70.2,
         "rec_tds": 0.27,
-        "receptions": 5.6,
-        "targets": 8.2
+        "receptions": 5.5,
+        "targets": 8.0
       },
       "dvp": {
         "rank": 5,
@@ -1375,10 +1335,10 @@
         "blend_source": "prior_season_only"
       },
       "projections": {
-        "rec_yds": 18.8,
+        "rec_yds": 18.4,
         "rec_tds": 0.01,
         "receptions": 1.8,
-        "targets": 3.3
+        "targets": 3.2
       },
       "dvp": {
         "rank": 5,
@@ -1399,13 +1359,40 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 2.3,
+        "rec_yds": 2.2,
         "receptions": 0.3,
         "targets": 0.5
       },
       "dvp": {
         "rank": 5,
         "label": "Smash"
+      },
+      "injury": null
+    },
+    {
+      "player_name": "Dameon Pierce",
+      "player_id": "00-0037258",
+      "team": "PHI",
+      "position": "RB",
+      "opponent": "JAX",
+      "game_id": "2026_05_PHI_JAX",
+      "is_home": false,
+      "depth_chart_rank": 3,
+      "usage": {
+        "blend_source": "prior_season_only"
+      },
+      "projections": {
+        "rush_yds": 9.8,
+        "rush_tds": 0.05,
+        "carries": 2.4,
+        "rec_yds": 0.1,
+        "receptions": 0.1,
+        "targets": 0.2,
+        "rush_rec_yds": 9.9
+      },
+      "dvp": {
+        "rank": 31,
+        "label": "Avoid"
       },
       "injury": null
     },
@@ -1422,16 +1409,20 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 38.5,
+        "rec_yds": 37.6,
         "rec_tds": 0.18,
-        "receptions": 2.7,
-        "targets": 4.6
+        "receptions": 2.6,
+        "targets": 4.5
       },
       "dvp": {
         "rank": 5,
         "label": "Smash"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Hamstring",
+        "practice": null
+      }
     },
     {
       "player_name": "Tanner McKee",
@@ -1446,15 +1437,15 @@
         "blend_source": "prior_season_only"
       },
       "projections": {
-        "pass_yds": 97.1,
-        "pass_tds": 0.65,
-        "completions": 8.8,
-        "pass_att": 12.9,
+        "pass_yds": 94.8,
+        "pass_tds": 0.64,
+        "completions": 8.6,
+        "pass_att": 12.6,
         "interceptions": 0.39,
         "rush_yds": 1.2
       },
       "dvp": {
-        "rank": 5,
+        "rank": 4,
         "label": "Smash"
       },
       "injury": null
@@ -1496,15 +1487,15 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 6.2,
+        "rush_yds": 6.0,
         "carries": 2.0,
-        "rec_yds": 5.3,
-        "receptions": 0.9,
+        "rec_yds": 5.2,
+        "receptions": 0.8,
         "targets": 1.0,
-        "rush_rec_yds": 11.5
+        "rush_rec_yds": 11.2
       },
       "dvp": {
-        "rank": 32,
+        "rank": 31,
         "label": "Avoid"
       },
       "injury": null
@@ -1522,10 +1513,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 13.2,
-        "rec_tds": 0.3,
-        "receptions": 1.2,
-        "targets": 2.0
+        "rec_yds": 12.9,
+        "rec_tds": 0.29,
+        "receptions": 1.1,
+        "targets": 1.9
       },
       "dvp": {
         "rank": 5,
@@ -1546,9 +1537,9 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "rec_yds": 16.8,
+        "rec_yds": 16.4,
         "receptions": 2.5,
-        "targets": 3.9
+        "targets": 3.8
       },
       "dvp": {
         "rank": 5,
@@ -1677,6 +1668,32 @@
       },
       "dvp": {
         "rank": 12,
+        "label": "Favorable"
+      },
+      "injury": null
+    },
+    {
+      "player_name": "Pierre Strong",
+      "player_id": "00-0038098",
+      "team": "GB",
+      "position": "RB",
+      "opponent": "CHI",
+      "game_id": "2026_05_CHI_GB",
+      "is_home": true,
+      "depth_chart_rank": 4,
+      "usage": {
+        "blend_source": "prior_season_only"
+      },
+      "projections": {
+        "rush_yds": 2.8,
+        "carries": 0.6,
+        "rec_yds": 2.2,
+        "receptions": 0.3,
+        "targets": 0.5,
+        "rush_rec_yds": 5.0
+      },
+      "dvp": {
+        "rank": 7,
         "label": "Favorable"
       },
       "injury": null
@@ -1981,10 +1998,14 @@
         "rush_rec_yds": 90.4
       },
       "dvp": {
-        "rank": 12,
+        "rank": 13,
         "label": "Favorable"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Hip",
+        "practice": null
+      }
     },
     {
       "player_name": "Cole Kmet",
@@ -2056,7 +2077,7 @@
         "rush_rec_yds": 9.5
       },
       "dvp": {
-        "rank": 12,
+        "rank": 13,
         "label": "Favorable"
       },
       "injury": null
@@ -2162,12 +2183,12 @@
         "rush_rec_yds": 64.5
       },
       "dvp": {
-        "rank": 12,
+        "rank": 13,
         "label": "Favorable"
       },
       "injury": {
-        "status": "Questionable",
-        "body_part": "Thumb",
+        "status": "Out",
+        "body_part": "Toe",
         "practice": null
       }
     },
@@ -2278,10 +2299,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 34.3,
+        "rec_yds": 35.1,
         "rec_tds": 0.05,
-        "receptions": 3.2,
-        "targets": 4.4
+        "receptions": 3.3,
+        "targets": 4.5
       },
       "dvp": {
         "rank": 1,
@@ -2302,10 +2323,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 9.3,
+        "rec_yds": 9.5,
         "rec_tds": 0.08,
         "receptions": 0.8,
-        "targets": 1.8
+        "targets": 1.9
       },
       "dvp": {
         "rank": 31,
@@ -2326,16 +2347,16 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "pass_yds": 143.7,
-        "pass_tds": 0.46,
-        "completions": 10.4,
-        "pass_att": 16.3,
+        "pass_yds": 147.0,
+        "pass_tds": 0.48,
+        "completions": 10.7,
+        "pass_att": 16.7,
         "interceptions": 0.23,
         "rush_yds": 33.7,
         "rush_tds": 0.33
       },
       "dvp": {
-        "rank": 7,
+        "rank": 8,
         "label": "Favorable"
       },
       "injury": null
@@ -2353,7 +2374,7 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 15.5,
+        "rec_yds": 15.9,
         "rec_tds": 0.2,
         "receptions": 0.6,
         "targets": 1.0
@@ -2377,19 +2398,23 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 17.3,
-        "rush_tds": 0.07,
-        "carries": 4.5,
+        "rush_yds": 17.7,
+        "rush_tds": 0.08,
+        "carries": 4.6,
         "rec_yds": 2.1,
         "receptions": 0.2,
         "targets": 0.4,
-        "rush_rec_yds": 19.4
+        "rush_rec_yds": 19.8
       },
       "dvp": {
         "rank": 8,
         "label": "Favorable"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Foot",
+        "practice": null
+      }
     },
     {
       "player_name": "Malik Washington",
@@ -2404,10 +2429,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 29.9,
+        "rec_yds": 30.6,
         "rec_tds": 0.05,
-        "receptions": 2.6,
-        "targets": 4.3
+        "receptions": 2.7,
+        "targets": 4.4
       },
       "dvp": {
         "rank": 31,
@@ -2429,7 +2454,7 @@
       },
       "projections": {},
       "dvp": {
-        "rank": 7,
+        "rank": 8,
         "label": "Favorable"
       },
       "injury": null
@@ -2447,14 +2472,14 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 29.5,
-        "rush_tds": 0.37,
-        "carries": 5.8,
-        "rec_yds": 3.4,
+        "rush_yds": 30.2,
+        "rush_tds": 0.38,
+        "carries": 5.9,
+        "rec_yds": 3.5,
         "rec_tds": 0.02,
         "receptions": 1.0,
         "targets": 1.0,
-        "rush_rec_yds": 32.9
+        "rush_rec_yds": 33.7
       },
       "dvp": {
         "rank": 8,
@@ -2475,15 +2500,15 @@
         "blend_source": "prior_season_only"
       },
       "projections": {
-        "pass_yds": 106.4,
-        "pass_tds": 0.28,
-        "completions": 11.8,
-        "pass_att": 20.2,
+        "pass_yds": 108.9,
+        "pass_tds": 0.29,
+        "completions": 12.1,
+        "pass_att": 20.7,
         "interceptions": 0.14,
         "rush_yds": 8.2
       },
       "dvp": {
-        "rank": 7,
+        "rank": 8,
         "label": "Favorable"
       },
       "injury": null
@@ -2501,10 +2526,10 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "rec_yds": 10.3,
+        "rec_yds": 10.5,
         "receptions": 0.5,
         "targets": 1.4,
-        "rush_rec_yds": 10.3
+        "rush_rec_yds": 10.5
       },
       "dvp": {
         "rank": 8,
@@ -2525,9 +2550,9 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "rec_yds": 46.6,
-        "receptions": 2.7,
-        "targets": 4.1
+        "rec_yds": 47.7,
+        "receptions": 2.8,
+        "targets": 4.2
       },
       "dvp": {
         "rank": 31,
@@ -2552,7 +2577,7 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "rec_yds": 5.6,
+        "rec_yds": 5.7,
         "receptions": 0.6,
         "targets": 1.2
       },
@@ -2575,15 +2600,19 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "rec_yds": 19.0,
+        "rec_yds": 19.4,
         "receptions": 1.0,
-        "targets": 2.7
+        "targets": 2.8
       },
       "dvp": {
         "rank": 31,
         "label": "Avoid"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Knee",
+        "practice": null
+      }
     },
     {
       "player_name": "Kevin Coleman Jr.",
@@ -2598,7 +2627,7 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "rec_yds": 1.6,
+        "rec_yds": 1.7,
         "receptions": 0.5,
         "targets": 2.8
       },
@@ -2640,10 +2669,10 @@
         "blend_source": "prior_season_only"
       },
       "projections": {
-        "pass_yds": 191.4,
-        "pass_tds": 1.28,
-        "completions": 19.4,
-        "pass_att": 29.9,
+        "pass_yds": 195.9,
+        "pass_tds": 1.31,
+        "completions": 19.9,
+        "pass_att": 30.6,
         "interceptions": 0.66,
         "rush_yds": 2.5,
         "rush_tds": 0.05
@@ -2667,17 +2696,17 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 14.3,
+        "rush_yds": 14.7,
         "rush_tds": 0.07,
         "carries": 3.5,
-        "rec_yds": 11.6,
+        "rec_yds": 11.9,
         "rec_tds": 0.01,
         "receptions": 1.3,
-        "targets": 1.6,
-        "rush_rec_yds": 25.9
+        "targets": 1.7,
+        "rush_rec_yds": 26.6
       },
       "dvp": {
-        "rank": 11,
+        "rank": 12,
         "label": "Favorable"
       },
       "injury": null
@@ -2695,10 +2724,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 13.1,
+        "rec_yds": 13.5,
         "rec_tds": 0.08,
-        "receptions": 1.8,
-        "targets": 1.9
+        "receptions": 1.9,
+        "targets": 2.0
       },
       "dvp": {
         "rank": 2,
@@ -2719,10 +2748,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 46.4,
-        "rec_tds": 0.52,
-        "receptions": 3.6,
-        "targets": 4.6
+        "rec_yds": 47.5,
+        "rec_tds": 0.53,
+        "receptions": 3.7,
+        "targets": 4.8
       },
       "dvp": {
         "rank": 2,
@@ -2743,10 +2772,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 10.6,
+        "rec_yds": 10.8,
         "rec_tds": 0.04,
-        "receptions": 1.9,
-        "targets": 2.2
+        "receptions": 2.0,
+        "targets": 2.3
       },
       "dvp": {
         "rank": 2,
@@ -2767,10 +2796,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 65.1,
-        "rec_tds": 0.41,
-        "receptions": 4.6,
-        "targets": 6.6
+        "rec_yds": 66.6,
+        "rec_tds": 0.42,
+        "receptions": 4.7,
+        "targets": 6.8
       },
       "dvp": {
         "rank": 29,
@@ -2795,10 +2824,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "pass_yds": 246.3,
-        "pass_tds": 1.93,
-        "completions": 24.3,
-        "pass_att": 33.2,
+        "pass_yds": 252.1,
+        "pass_tds": 1.98,
+        "completions": 24.9,
+        "pass_att": 34.0,
         "interceptions": 1.0,
         "rush_yds": 7.0,
         "rush_tds": 0.14
@@ -2822,10 +2851,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 58.0,
-        "rec_tds": 0.56,
-        "receptions": 5.5,
-        "targets": 7.1
+        "rec_yds": 59.4,
+        "rec_tds": 0.58,
+        "receptions": 5.6,
+        "targets": 7.3
       },
       "dvp": {
         "rank": 29,
@@ -2850,17 +2879,17 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 53.7,
-        "rush_tds": 0.28,
-        "carries": 13.1,
-        "rec_yds": 26.1,
+        "rush_yds": 55.0,
+        "rush_tds": 0.29,
+        "carries": 13.4,
+        "rec_yds": 26.7,
         "rec_tds": 0.13,
-        "receptions": 4.5,
-        "targets": 4.9,
-        "rush_rec_yds": 79.8
+        "receptions": 4.6,
+        "targets": 5.0,
+        "rush_rec_yds": 81.7
       },
       "dvp": {
-        "rank": 11,
+        "rank": 12,
         "label": "Favorable"
       },
       "injury": null
@@ -2878,10 +2907,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 23.7,
+        "rec_yds": 24.2,
         "rec_tds": 0.07,
         "receptions": 1.6,
-        "targets": 3.5
+        "targets": 3.6
       },
       "dvp": {
         "rank": 29,
@@ -2902,8 +2931,8 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 6.2,
-        "receptions": 1.5,
+        "rec_yds": 6.3,
+        "receptions": 1.6,
         "targets": 2.0
       },
       "dvp": {
@@ -2932,7 +2961,7 @@
         "rush_rec_yds": 1.6
       },
       "dvp": {
-        "rank": 11,
+        "rank": 12,
         "label": "Favorable"
       },
       "injury": null
@@ -2950,9 +2979,9 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "rec_yds": 25.8,
-        "receptions": 2.3,
-        "targets": 3.1
+        "rec_yds": 26.4,
+        "receptions": 2.4,
+        "targets": 3.2
       },
       "dvp": {
         "rank": 29,
@@ -2973,19 +3002,15 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "rec_yds": 3.6,
-        "receptions": 0.8,
+        "rec_yds": 3.7,
+        "receptions": 0.9,
         "targets": 0.8
       },
       "dvp": {
         "rank": 29,
         "label": "Avoid"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Knee",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Hunter Henry",
@@ -3030,11 +3055,11 @@
         "targets": 4.7
       },
       "dvp": {
-        "rank": 13,
-        "label": "Favorable"
+        "rank": 14,
+        "label": "Neutral"
       },
       "injury": {
-        "status": "Questionable",
+        "status": "Out",
         "body_part": "Calf",
         "practice": null
       }
@@ -3063,7 +3088,11 @@
         "rank": 10,
         "label": "Favorable"
       },
-      "injury": null
+      "injury": {
+        "status": "Out",
+        "body_part": "Ankle",
+        "practice": null
+      }
     },
     {
       "player_name": "Rhamondre Stevenson",
@@ -3116,8 +3145,8 @@
         "targets": 5.3
       },
       "dvp": {
-        "rank": 13,
-        "label": "Favorable"
+        "rank": 14,
+        "label": "Neutral"
       },
       "injury": null
     },
@@ -3183,8 +3212,8 @@
         "targets": 4.0
       },
       "dvp": {
-        "rank": 13,
-        "label": "Favorable"
+        "rank": 14,
+        "label": "Neutral"
       },
       "injury": null
     },
@@ -3234,8 +3263,8 @@
         "targets": 1.4
       },
       "dvp": {
-        "rank": 13,
-        "label": "Favorable"
+        "rank": 14,
+        "label": "Neutral"
       },
       "injury": null
     },
@@ -3284,8 +3313,8 @@
         "targets": 1.3
       },
       "dvp": {
-        "rank": 13,
-        "label": "Favorable"
+        "rank": 14,
+        "label": "Neutral"
       },
       "injury": null
     },
@@ -3358,11 +3387,7 @@
         "rank": 23,
         "label": "Tough"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Ankle",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Kirk Cousins",
@@ -3436,7 +3461,11 @@
         "rank": 28,
         "label": "Avoid"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Ankle",
+        "practice": null
+      }
     },
     {
       "player_name": "Dareke Young",
@@ -3668,7 +3697,11 @@
         "rank": 23,
         "label": "Tough"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Ankle",
+        "practice": null
+      }
     },
     {
       "player_name": "Mike Washington Jr.",
@@ -3751,20 +3784,24 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 34.4,
+        "rush_yds": 33.6,
         "rush_tds": 0.4,
-        "carries": 10.9,
-        "rec_yds": 14.8,
+        "carries": 10.6,
+        "rec_yds": 14.4,
         "rec_tds": 0.02,
-        "receptions": 2.8,
-        "targets": 4.3,
-        "rush_rec_yds": 49.2
+        "receptions": 2.7,
+        "targets": 4.2,
+        "rush_rec_yds": 48.0
       },
       "dvp": {
         "rank": 20,
         "label": "Tough"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Back",
+        "practice": null
+      }
     },
     {
       "player_name": "Noah Fant",
@@ -3779,10 +3816,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 20.0,
-        "rec_tds": 0.45,
-        "receptions": 2.2,
-        "targets": 3.3
+        "rec_yds": 19.5,
+        "rec_tds": 0.44,
+        "receptions": 2.1,
+        "targets": 3.2
       },
       "dvp": {
         "rank": 25,
@@ -3807,10 +3844,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 43.7,
-        "rec_tds": 0.35,
-        "receptions": 3.7,
-        "targets": 5.3
+        "rec_yds": 42.7,
+        "rec_tds": 0.34,
+        "receptions": 3.6,
+        "targets": 5.2
       },
       "dvp": {
         "rank": 25,
@@ -3831,7 +3868,7 @@
         "blend_source": "prior_season_only"
       },
       "projections": {
-        "pass_yds": 4.8,
+        "pass_yds": 4.7,
         "completions": 0.9,
         "pass_att": 1.8,
         "rush_yds": 0.1
@@ -3855,10 +3892,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 15.0,
+        "rec_yds": 14.6,
         "rec_tds": 0.05,
-        "receptions": 1.5,
-        "targets": 2.4
+        "receptions": 1.4,
+        "targets": 2.3
       },
       "dvp": {
         "rank": 16,
@@ -3879,16 +3916,20 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 87.6,
-        "rec_tds": 0.26,
-        "receptions": 6.5,
-        "targets": 9.5
+        "rec_yds": 85.5,
+        "rec_tds": 0.25,
+        "receptions": 6.3,
+        "targets": 9.3
       },
       "dvp": {
         "rank": 16,
         "label": "Neutral"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Foot",
+        "practice": null
+      }
     },
     {
       "player_name": "Kendre Miller",
@@ -3903,13 +3944,13 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 20.4,
-        "rush_tds": 0.23,
-        "carries": 6.5,
+        "rush_yds": 19.9,
+        "rush_tds": 0.22,
+        "carries": 6.4,
         "rec_yds": 3.6,
         "receptions": 0.8,
-        "targets": 1.4,
-        "rush_rec_yds": 24.0
+        "targets": 1.3,
+        "rush_rec_yds": 23.5
       },
       "dvp": {
         "rank": 20,
@@ -3930,10 +3971,10 @@
         "blend_source": "prior_season_only"
       },
       "projections": {
-        "pass_yds": 155.4,
-        "pass_tds": 0.6,
-        "completions": 16.1,
-        "pass_att": 28.0,
+        "pass_yds": 151.8,
+        "pass_tds": 0.58,
+        "completions": 15.7,
+        "pass_att": 27.4,
         "interceptions": 0.4,
         "rush_yds": 15.7
       },
@@ -3956,10 +3997,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 41.9,
+        "rec_yds": 40.9,
         "rec_tds": 0.27,
-        "receptions": 3.7,
-        "targets": 5.6
+        "receptions": 3.6,
+        "targets": 5.5
       },
       "dvp": {
         "rank": 16,
@@ -4001,10 +4042,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "pass_yds": 195.6,
-        "pass_tds": 1.09,
-        "completions": 18.7,
-        "pass_att": 31.0,
+        "pass_yds": 191.0,
+        "pass_tds": 1.06,
+        "completions": 18.2,
+        "pass_att": 30.3,
         "interceptions": 0.72,
         "rush_yds": 12.2,
         "rush_tds": 0.22
@@ -4028,7 +4069,7 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "rec_yds": 3.3,
+        "rec_yds": 3.2,
         "receptions": 0.4,
         "targets": 0.4
       },
@@ -4051,7 +4092,7 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "rec_yds": 13.2,
+        "rec_yds": 12.9,
         "receptions": 1.1,
         "targets": 3.0
       },
@@ -4078,7 +4119,11 @@
         "rank": 16,
         "label": "Neutral"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Thigh",
+        "practice": null
+      }
     },
     {
       "player_name": "CJ Donaldson",
@@ -4093,12 +4138,12 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "rush_yds": 6.7,
-        "carries": 1.8,
+        "rush_yds": 6.5,
+        "carries": 1.7,
         "rec_yds": 0.6,
         "receptions": 0.6,
         "targets": 0.9,
-        "rush_rec_yds": 7.3
+        "rush_rec_yds": 7.1
       },
       "dvp": {
         "rank": 20,
@@ -4119,10 +4164,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "pass_yds": 141.2,
-        "pass_tds": 0.99,
-        "completions": 12.3,
-        "pass_att": 20.8,
+        "pass_yds": 137.9,
+        "pass_tds": 0.97,
+        "completions": 12.0,
+        "pass_att": 20.3,
         "interceptions": 0.58,
         "rush_yds": 4.9
       },
@@ -4145,14 +4190,14 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 67.5,
-        "rush_tds": 0.21,
-        "carries": 15.7,
-        "rec_yds": 13.1,
+        "rush_yds": 66.0,
+        "rush_tds": 0.2,
+        "carries": 15.3,
+        "rec_yds": 12.8,
         "rec_tds": 0.04,
         "receptions": 1.8,
-        "targets": 3.3,
-        "rush_rec_yds": 80.6
+        "targets": 3.2,
+        "rush_rec_yds": 78.8
       },
       "dvp": {
         "rank": 2,
@@ -4173,10 +4218,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "pass_yds": 150.3,
-        "pass_tds": 0.65,
-        "completions": 15.8,
-        "pass_att": 25.2,
+        "pass_yds": 146.8,
+        "pass_tds": 0.64,
+        "completions": 15.5,
+        "pass_att": 24.6,
         "interceptions": 0.39,
         "rush_yds": 22.4,
         "rush_tds": 0.11
@@ -4200,10 +4245,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 41.1,
+        "rec_yds": 40.2,
         "rec_tds": 0.14,
-        "receptions": 4.4,
-        "targets": 5.5
+        "receptions": 4.3,
+        "targets": 5.3
       },
       "dvp": {
         "rank": 9,
@@ -4224,10 +4269,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 22.3,
+        "rec_yds": 21.7,
         "rec_tds": 0.27,
         "receptions": 2.0,
-        "targets": 3.4
+        "targets": 3.3
       },
       "dvp": {
         "rank": 27,
@@ -4248,10 +4293,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 55.1,
-        "rec_tds": 0.47,
-        "receptions": 4.1,
-        "targets": 6.1
+        "rec_yds": 53.8,
+        "rec_tds": 0.45,
+        "receptions": 4.0,
+        "targets": 6.0
       },
       "dvp": {
         "rank": 27,
@@ -4276,13 +4321,13 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 3.4,
+        "rush_yds": 3.3,
         "carries": 0.7,
-        "rec_yds": 2.2,
+        "rec_yds": 2.1,
         "rec_tds": 0.01,
         "receptions": 0.3,
         "targets": 0.4,
-        "rush_rec_yds": 5.6
+        "rush_rec_yds": 5.4
       },
       "dvp": {
         "rank": 2,
@@ -4303,16 +4348,20 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 37.6,
-        "rec_tds": 0.29,
-        "receptions": 2.6,
-        "targets": 4.9
+        "rec_yds": 36.8,
+        "rec_tds": 0.28,
+        "receptions": 2.5,
+        "targets": 4.8
       },
       "dvp": {
         "rank": 27,
         "label": "Avoid"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Hamstring",
+        "practice": null
+      }
     },
     {
       "player_name": "Tai Felton",
@@ -4327,7 +4376,7 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 3.6,
+        "rec_yds": 3.5,
         "receptions": 0.3,
         "targets": 0.7
       },
@@ -4350,9 +4399,9 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "rec_yds": 4.0,
-        "receptions": 1.0,
-        "targets": 1.0
+        "rec_yds": 3.9,
+        "receptions": 0.9,
+        "targets": 0.9
       },
       "dvp": {
         "rank": 9,
@@ -4373,9 +4422,9 @@
         "blend_source": "prior_season_only"
       },
       "projections": {
-        "pass_yds": 28.4,
-        "completions": 4.0,
-        "pass_att": 6.4,
+        "pass_yds": 27.8,
+        "completions": 3.9,
+        "pass_att": 6.3,
         "rush_yds": 1.0
       },
       "dvp": {
@@ -4439,12 +4488,12 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "rush_yds": 4.6,
-        "carries": 2.1,
+        "rush_yds": 4.5,
+        "carries": 2.0,
         "rec_yds": 0.5,
-        "receptions": 0.3,
+        "receptions": 0.2,
         "targets": 0.3,
-        "rush_rec_yds": 5.1
+        "rush_rec_yds": 5.0
       },
       "dvp": {
         "rank": 2,
@@ -4500,7 +4549,7 @@
         "rush_rec_yds": 1.1
       },
       "dvp": {
-        "rank": 14,
+        "rank": 15,
         "label": "Neutral"
       },
       "injury": null
@@ -4523,7 +4572,7 @@
         "rush_rec_yds": 1.5
       },
       "dvp": {
-        "rank": 14,
+        "rank": 15,
         "label": "Neutral"
       },
       "injury": null
@@ -4622,11 +4671,11 @@
         "rush_rec_yds": 72.7
       },
       "dvp": {
-        "rank": 14,
+        "rank": 15,
         "label": "Neutral"
       },
       "injury": {
-        "status": "Doubtful",
+        "status": "Out",
         "body_part": "Quadriceps",
         "practice": null
       }
@@ -4678,7 +4727,7 @@
         "rush_rec_yds": 25.5
       },
       "dvp": {
-        "rank": 14,
+        "rank": 15,
         "label": "Neutral"
       },
       "injury": null
@@ -4706,7 +4755,7 @@
         "rush_rec_yds": 9.9
       },
       "dvp": {
-        "rank": 14,
+        "rank": 15,
         "label": "Neutral"
       },
       "injury": null
@@ -4734,7 +4783,7 @@
         "label": "Tough"
       },
       "injury": {
-        "status": "Doubtful",
+        "status": "Out",
         "body_part": "Finger",
         "practice": null
       }
@@ -4780,11 +4829,7 @@
         "rank": 14,
         "label": "Neutral"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Thumb",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Kenyon Sadiq",
@@ -4950,7 +4995,7 @@
         "label": "Tough"
       },
       "injury": {
-        "status": "Questionable",
+        "status": "Out",
         "body_part": "Knee",
         "practice": null
       }
@@ -5218,7 +5263,11 @@
         "rank": 17,
         "label": "Neutral"
       },
-      "injury": null
+      "injury": {
+        "status": "Out",
+        "body_part": "Calf",
+        "practice": null
+      }
     },
     {
       "player_name": "KC Concepcion",
@@ -5256,10 +5305,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "pass_yds": 261.5,
-        "pass_tds": 1.63,
-        "completions": 22.8,
-        "pass_att": 34.7,
+        "pass_yds": 255.7,
+        "pass_tds": 1.59,
+        "completions": 22.3,
+        "pass_att": 33.9,
         "interceptions": 0.82,
         "rush_yds": 3.6,
         "rush_tds": 0.02
@@ -5284,7 +5333,7 @@
       },
       "projections": {
         "rec_yds": 1.4,
-        "receptions": 0.8,
+        "receptions": 0.7,
         "targets": 0.7
       },
       "dvp": {
@@ -5306,10 +5355,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "pass_yds": 56.8,
+        "pass_yds": 55.5,
         "pass_tds": 0.3,
-        "completions": 5.8,
-        "pass_att": 8.3,
+        "completions": 5.6,
+        "pass_att": 8.1,
         "interceptions": 0.15,
         "rush_yds": 3.8,
         "rush_tds": 0.02
@@ -5333,12 +5382,12 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 2.8,
+        "rush_yds": 2.7,
         "carries": 1.0,
         "rec_yds": 0.2,
         "receptions": 0.1,
         "targets": 0.1,
-        "rush_rec_yds": 3.0
+        "rush_rec_yds": 2.9
       },
       "dvp": {
         "rank": 17,
@@ -5359,10 +5408,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 64.6,
-        "rec_tds": 0.31,
-        "receptions": 4.4,
-        "targets": 8.0
+        "rec_yds": 63.1,
+        "rec_tds": 0.3,
+        "receptions": 4.3,
+        "targets": 7.9
       },
       "dvp": {
         "rank": 4,
@@ -5383,14 +5432,14 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 40.8,
+        "rush_yds": 39.9,
         "rush_tds": 0.14,
-        "carries": 11.3,
-        "rec_yds": 14.8,
+        "carries": 11.0,
+        "rec_yds": 14.4,
         "rec_tds": 0.05,
-        "receptions": 2.1,
-        "targets": 3.2,
-        "rush_rec_yds": 55.6
+        "receptions": 2.0,
+        "targets": 3.1,
+        "rush_rec_yds": 54.3
       },
       "dvp": {
         "rank": 17,
@@ -5415,16 +5464,20 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 44.2,
+        "rec_yds": 43.2,
         "rec_tds": 0.17,
         "receptions": 3.7,
-        "targets": 5.7
+        "targets": 5.6
       },
       "dvp": {
         "rank": 4,
         "label": "Smash"
       },
-      "injury": null
+      "injury": {
+        "status": "Out",
+        "body_part": "Foot",
+        "practice": null
+      }
     },
     {
       "player_name": "Ben Skowronek",
@@ -5439,8 +5492,8 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 9.2,
-        "rec_tds": 0.19,
+        "rec_yds": 8.9,
+        "rec_tds": 0.18,
         "receptions": 0.7,
         "targets": 0.9
       },
@@ -5463,10 +5516,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 38.6,
-        "rec_tds": 0.4,
-        "receptions": 3.7,
-        "targets": 4.7
+        "rec_yds": 37.7,
+        "rec_tds": 0.39,
+        "receptions": 3.6,
+        "targets": 4.6
       },
       "dvp": {
         "rank": 3,
@@ -5487,14 +5540,14 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 63.6,
+        "rush_yds": 62.1,
         "rush_tds": 0.14,
-        "carries": 13.2,
-        "rec_yds": 27.0,
+        "carries": 12.9,
+        "rec_yds": 26.4,
         "rec_tds": 0.04,
-        "receptions": 2.8,
-        "targets": 3.9,
-        "rush_rec_yds": 90.6
+        "receptions": 2.7,
+        "targets": 3.8,
+        "rush_rec_yds": 88.5
       },
       "dvp": {
         "rank": 17,
@@ -5515,10 +5568,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 31.8,
+        "rec_yds": 31.1,
         "rec_tds": 0.16,
         "receptions": 2.4,
-        "targets": 3.4
+        "targets": 3.3
       },
       "dvp": {
         "rank": 3,
@@ -5539,10 +5592,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 34.3,
+        "rec_yds": 33.5,
         "rec_tds": 0.32,
-        "receptions": 2.4,
-        "targets": 4.1
+        "receptions": 2.3,
+        "targets": 4.0
       },
       "dvp": {
         "rank": 4,
@@ -5620,9 +5673,9 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "rec_yds": 22.9,
+        "rec_yds": 22.4,
         "receptions": 2.5,
-        "targets": 3.9
+        "targets": 3.8
       },
       "dvp": {
         "rank": 4,
@@ -5662,10 +5715,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 42.2,
+        "rec_yds": 41.3,
         "rec_tds": 0.3,
-        "receptions": 4.6,
-        "targets": 7.0
+        "receptions": 4.5,
+        "targets": 6.9
       },
       "dvp": {
         "rank": 7,
@@ -5690,9 +5743,9 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 16.2,
+        "rec_yds": 15.8,
         "receptions": 1.1,
-        "targets": 1.4
+        "targets": 1.3
       },
       "dvp": {
         "rank": 7,
@@ -5713,7 +5766,7 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 14.0,
+        "rec_yds": 13.7,
         "rec_tds": 0.05,
         "receptions": 1.1,
         "targets": 1.4
@@ -5737,7 +5790,7 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 11.7,
+        "rec_yds": 11.4,
         "rec_tds": 0.01,
         "receptions": 0.9,
         "targets": 2.1
@@ -5746,7 +5799,11 @@
         "rank": 7,
         "label": "Favorable"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Hamstring",
+        "practice": null
+      }
     },
     {
       "player_name": "Darius Slayton",
@@ -5761,10 +5818,10 @@
         "blend_source": "prior_season_only"
       },
       "projections": {
-        "rec_yds": 39.6,
+        "rec_yds": 38.7,
         "rec_tds": 0.08,
         "receptions": 2.6,
-        "targets": 4.5
+        "targets": 4.4
       },
       "dvp": {
         "rank": 7,
@@ -5785,17 +5842,17 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "pass_yds": 216.7,
-        "pass_tds": 0.95,
-        "completions": 21.1,
-        "pass_att": 30.3,
+        "pass_yds": 211.9,
+        "pass_tds": 0.93,
+        "completions": 20.6,
+        "pass_att": 29.6,
         "interceptions": 0.5,
         "rush_yds": 8.6,
         "rush_tds": 0.28
       },
       "dvp": {
-        "rank": 6,
-        "label": "Smash"
+        "rank": 7,
+        "label": "Favorable"
       },
       "injury": null
     },
@@ -5812,14 +5869,14 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 85.9,
-        "rush_tds": 1.17,
-        "carries": 19.7,
-        "rec_yds": 17.6,
+        "rush_yds": 84.0,
+        "rush_tds": 1.15,
+        "carries": 19.2,
+        "rec_yds": 17.2,
         "rec_tds": 0.05,
         "receptions": 2.4,
-        "targets": 3.2,
-        "rush_rec_yds": 103.5
+        "targets": 3.1,
+        "rush_rec_yds": 101.2
       },
       "dvp": {
         "rank": 19,
@@ -5840,7 +5897,7 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 2.3,
+        "rec_yds": 2.2,
         "rec_tds": 0.05,
         "receptions": 0.2,
         "targets": 0.7
@@ -5864,10 +5921,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 48.7,
+        "rec_yds": 47.6,
         "rec_tds": 0.13,
-        "receptions": 4.2,
-        "targets": 6.5
+        "receptions": 4.1,
+        "targets": 6.4
       },
       "dvp": {
         "rank": 7,
@@ -5888,17 +5945,17 @@
         "blend_source": "prior_season_only"
       },
       "projections": {
-        "pass_yds": 54.6,
-        "pass_tds": 0.21,
+        "pass_yds": 53.4,
+        "pass_tds": 0.2,
         "completions": 3.8,
-        "pass_att": 7.5,
+        "pass_att": 7.3,
         "interceptions": 0.11,
         "rush_yds": 10.4,
         "rush_tds": 0.16
       },
       "dvp": {
-        "rank": 6,
-        "label": "Smash"
+        "rank": 7,
+        "label": "Favorable"
       },
       "injury": null
     },
@@ -5915,7 +5972,7 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 0.7,
+        "rec_yds": 0.6,
         "receptions": 0.1,
         "targets": 0.1
       },
@@ -5938,10 +5995,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 34.1,
+        "rec_yds": 33.4,
         "rec_tds": 0.39,
-        "receptions": 4.5,
-        "targets": 5.8
+        "receptions": 4.4,
+        "targets": 5.6
       },
       "dvp": {
         "rank": 10,
@@ -5962,10 +6019,10 @@
         "blend_source": "prior_season_only"
       },
       "projections": {
-        "rush_yds": 12.5,
-        "carries": 3.5,
+        "rush_yds": 12.3,
+        "carries": 3.4,
         "targets": 0.3,
-        "rush_rec_yds": 12.5
+        "rush_rec_yds": 12.3
       },
       "dvp": {
         "rank": 19,
@@ -5986,17 +6043,17 @@
         "blend_source": "prior_season_only"
       },
       "projections": {
-        "pass_yds": 60.3,
-        "pass_tds": 0.27,
-        "completions": 5.5,
-        "pass_att": 8.9,
+        "pass_yds": 59.0,
+        "pass_tds": 0.26,
+        "completions": 5.4,
+        "pass_att": 8.7,
         "interceptions": 0.14,
         "rush_yds": 3.0,
         "rush_tds": 0.27
       },
       "dvp": {
-        "rank": 6,
-        "label": "Smash"
+        "rank": 7,
+        "label": "Favorable"
       },
       "injury": null
     },
@@ -6013,12 +6070,12 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "rush_yds": 10.5,
-        "carries": 2.9,
+        "rush_yds": 10.3,
+        "carries": 2.8,
         "rec_yds": 1.7,
         "receptions": 0.5,
         "targets": 0.7,
-        "rush_rec_yds": 12.2
+        "rush_rec_yds": 12.0
       },
       "dvp": {
         "rank": 19,
@@ -6039,7 +6096,7 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "rec_yds": 3.2,
+        "rec_yds": 3.1,
         "receptions": 0.5,
         "targets": 1.0
       },
@@ -6299,7 +6356,11 @@
         "rank": 24,
         "label": "Tough"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Hamstring",
+        "practice": null
+      }
     },
     {
       "player_name": "Elic Ayomanor",
@@ -6347,7 +6408,11 @@
         "rank": 24,
         "label": "Tough"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Knee",
+        "practice": null
+      }
     },
     {
       "player_name": "Cam Ward",
@@ -6469,8 +6534,8 @@
         "rush_rec_yds": 7.5
       },
       "dvp": {
-        "rank": 13,
-        "label": "Favorable"
+        "rank": 14,
+        "label": "Neutral"
       },
       "injury": null
     },
@@ -6545,8 +6610,8 @@
         "rush_rec_yds": 41.8
       },
       "dvp": {
-        "rank": 13,
-        "label": "Favorable"
+        "rank": 14,
+        "label": "Neutral"
       },
       "injury": null
     },
@@ -6747,6 +6812,29 @@
       "injury": null
     },
     {
+      "player_name": "Bryce Oliver",
+      "player_id": "00-0039650",
+      "team": "HOU",
+      "position": "WR",
+      "opponent": "TEN",
+      "game_id": "2026_05_HOU_TEN",
+      "is_home": false,
+      "depth_chart_rank": 6,
+      "usage": {
+        "blend_source": "prior_season_only"
+      },
+      "projections": {
+        "rec_yds": 5.6,
+        "receptions": 0.5,
+        "targets": 0.5
+      },
+      "dvp": {
+        "rank": 9,
+        "label": "Favorable"
+      },
+      "injury": null
+    },
+    {
       "player_name": "Jaylin Noel",
       "player_id": "00-0040138",
       "team": "HOU",
@@ -6793,8 +6881,27 @@
         "rush_rec_yds": 26.7
       },
       "dvp": {
-        "rank": 13,
-        "label": "Favorable"
+        "rank": 14,
+        "label": "Neutral"
+      },
+      "injury": null
+    },
+    {
+      "player_name": "Mark Gronowski",
+      "player_id": "00-0041156",
+      "team": "HOU",
+      "position": "QB",
+      "opponent": "TEN",
+      "game_id": "2026_05_HOU_TEN",
+      "is_home": false,
+      "depth_chart_rank": 3,
+      "usage": {
+        "blend_source": "positional_prior (dc_rank=3)"
+      },
+      "projections": {},
+      "dvp": {
+        "rank": 14,
+        "label": "Neutral"
       },
       "injury": null
     },
@@ -6834,10 +6941,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 52.0,
-        "rec_tds": 0.55,
-        "receptions": 4.8,
-        "targets": 7.1
+        "rec_yds": 49.6,
+        "rec_tds": 0.53,
+        "receptions": 4.6,
+        "targets": 6.8
       },
       "dvp": {
         "rank": 11,
@@ -6862,10 +6969,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "pass_yds": 128.0,
-        "pass_tds": 1.25,
-        "completions": 11.8,
-        "pass_att": 18.0,
+        "pass_yds": 122.1,
+        "pass_tds": 1.19,
+        "completions": 11.3,
+        "pass_att": 17.2,
         "interceptions": 0.61,
         "rush_yds": 26.5,
         "rush_tds": 0.09
@@ -6888,18 +6995,18 @@
       "opponent": "NYG",
       "game_id": "2026_05_NYG_WAS",
       "is_home": true,
-      "depth_chart_rank": 4,
+      "depth_chart_rank": 3,
       "usage": {
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 30.3,
+        "rush_yds": 28.9,
         "rush_tds": 0.05,
-        "carries": 5.2,
-        "rec_yds": 15.1,
-        "receptions": 1.8,
-        "targets": 2.6,
-        "rush_rec_yds": 45.4
+        "carries": 5.0,
+        "rec_yds": 14.4,
+        "receptions": 1.7,
+        "targets": 2.5,
+        "rush_rec_yds": 43.3
       },
       "dvp": {
         "rank": 3,
@@ -6920,10 +7027,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 54.2,
-        "rec_tds": 0.41,
-        "receptions": 3.7,
-        "targets": 6.7
+        "rec_yds": 51.7,
+        "rec_tds": 0.4,
+        "receptions": 3.5,
+        "targets": 6.4
       },
       "dvp": {
         "rank": 11,
@@ -6948,10 +7055,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 21.3,
+        "rec_yds": 20.3,
         "rec_tds": 0.04,
-        "receptions": 1.8,
-        "targets": 3.2
+        "receptions": 1.7,
+        "targets": 3.0
       },
       "dvp": {
         "rank": 11,
@@ -6972,10 +7079,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 8.4,
+        "rec_yds": 8.1,
         "rec_tds": 0.03,
         "receptions": 1.1,
-        "targets": 1.6
+        "targets": 1.5
       },
       "dvp": {
         "rank": 26,
@@ -6996,14 +7103,14 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 39.4,
-        "rush_tds": 0.11,
-        "carries": 7.6,
-        "rec_yds": 15.3,
-        "rec_tds": 0.22,
-        "receptions": 2.8,
-        "targets": 2.9,
-        "rush_rec_yds": 54.7
+        "rush_yds": 37.5,
+        "rush_tds": 0.1,
+        "carries": 7.2,
+        "rec_yds": 14.6,
+        "rec_tds": 0.21,
+        "receptions": 2.7,
+        "targets": 2.8,
+        "rush_rec_yds": 52.1
       },
       "dvp": {
         "rank": 3,
@@ -7028,10 +7135,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 16.9,
-        "rec_tds": 0.4,
+        "rec_yds": 16.1,
+        "rec_tds": 0.39,
         "receptions": 1.0,
-        "targets": 2.2
+        "targets": 2.1
       },
       "dvp": {
         "rank": 11,
@@ -7052,16 +7159,20 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 17.8,
-        "rec_tds": 0.05,
-        "receptions": 2.4,
-        "targets": 3.7
+        "rec_yds": 17.0,
+        "rec_tds": 0.04,
+        "receptions": 2.3,
+        "targets": 3.5
       },
       "dvp": {
         "rank": 26,
         "label": "Tough"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Hamstring",
+        "practice": null
+      }
     },
     {
       "player_name": "Luke McCaffrey",
@@ -7076,10 +7187,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 10.0,
-        "rec_tds": 0.13,
+        "rec_yds": 9.5,
+        "rec_tds": 0.12,
         "receptions": 0.6,
-        "targets": 0.9
+        "targets": 0.8
       },
       "dvp": {
         "rank": 11,
@@ -7100,9 +7211,9 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 2.2,
+        "rec_yds": 2.1,
         "receptions": 0.3,
-        "targets": 0.6
+        "targets": 0.5
       },
       "dvp": {
         "rank": 26,
@@ -7123,10 +7234,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "pass_yds": 152.2,
-        "pass_tds": 1.41,
-        "completions": 15.5,
-        "pass_att": 25.5,
+        "pass_yds": 145.2,
+        "pass_tds": 1.35,
+        "completions": 14.8,
+        "pass_att": 24.3,
         "interceptions": 0.69,
         "rush_yds": 53.6,
         "rush_tds": 0.16
@@ -7135,11 +7246,7 @@
         "rank": 18,
         "label": "Neutral"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Elbow",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Ben Sinnott",
@@ -7154,8 +7261,8 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 5.5,
-        "rec_tds": 0.05,
+        "rec_yds": 5.2,
+        "rec_tds": 0.04,
         "receptions": 0.7,
         "targets": 1.0
       },
@@ -7178,19 +7285,23 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 41.2,
-        "rush_tds": 0.28,
-        "carries": 10.3,
-        "rec_yds": 5.8,
+        "rush_yds": 39.3,
+        "rush_tds": 0.27,
+        "carries": 9.8,
+        "rec_yds": 5.5,
         "receptions": 0.8,
         "targets": 1.1,
-        "rush_rec_yds": 47.0
+        "rush_rec_yds": 44.8
       },
       "dvp": {
         "rank": 3,
         "label": "Smash"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Groin",
+        "practice": null
+      }
     },
     {
       "player_name": "Antonio Williams",
@@ -7205,37 +7316,14 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "rec_yds": 31.4,
-        "rec_tds": 0.27,
-        "receptions": 3.0,
-        "targets": 4.7
+        "rec_yds": 29.9,
+        "rec_tds": 0.26,
+        "receptions": 2.8,
+        "targets": 4.5
       },
       "dvp": {
         "rank": 11,
         "label": "Favorable"
-      },
-      "injury": null
-    },
-    {
-      "player_name": "Kaytron Allen",
-      "player_id": "00-0041096",
-      "team": "WAS",
-      "position": "RB",
-      "opponent": "NYG",
-      "game_id": "2026_05_NYG_WAS",
-      "is_home": true,
-      "depth_chart_rank": 3,
-      "usage": {
-        "blend_source": "current_season_only"
-      },
-      "projections": {
-        "rush_yds": 15.6,
-        "carries": 3.9,
-        "rush_rec_yds": 15.6
-      },
-      "dvp": {
-        "rank": 3,
-        "label": "Smash"
       },
       "injury": null
     },
@@ -7252,10 +7340,10 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "pass_yds": 177.4,
-        "pass_tds": 1.03,
-        "completions": 14.7,
-        "pass_att": 31.8,
+        "pass_yds": 169.3,
+        "pass_tds": 0.98,
+        "completions": 14.0,
+        "pass_att": 30.4,
         "interceptions": 0.5,
         "rush_yds": 18.3
       },
@@ -7287,7 +7375,11 @@
         "rank": 12,
         "label": "Favorable"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Shoulder",
+        "practice": null
+      }
     },
     {
       "player_name": "Jameis Winston",
@@ -7302,10 +7394,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "pass_yds": 172.4,
-        "pass_tds": 1.05,
-        "completions": 12.6,
-        "pass_att": 22.9,
+        "pass_yds": 164.4,
+        "pass_tds": 1.01,
+        "completions": 12.0,
+        "pass_att": 21.9,
         "interceptions": 0.46,
         "rush_yds": 6.6,
         "rush_tds": 0.13
@@ -7331,44 +7423,17 @@
       "projections": {
         "rush_yds": 0.2,
         "carries": 0.1,
-        "rec_yds": 1.0,
+        "rec_yds": 0.9,
         "rec_tds": 0.01,
         "receptions": 0.3,
         "targets": 0.9,
-        "rush_rec_yds": 1.2
+        "rush_rec_yds": 1.1
       },
       "dvp": {
         "rank": 6,
         "label": "Smash"
       },
       "injury": null
-    },
-    {
-      "player_name": "Braxton Berrios",
-      "player_id": "00-0034419",
-      "team": "NYG",
-      "position": "WR",
-      "opponent": "WAS",
-      "game_id": "2026_05_NYG_WAS",
-      "is_home": false,
-      "depth_chart_rank": 6,
-      "usage": {
-        "blend_source": "blended (cw=0.50, pw=0.50)"
-      },
-      "projections": {
-        "rec_yds": 3.3,
-        "receptions": 0.5,
-        "targets": 0.9
-      },
-      "dvp": {
-        "rank": 6,
-        "label": "Smash"
-      },
-      "injury": {
-        "status": "Out",
-        "body_part": "Foot",
-        "practice": null
-      }
     },
     {
       "player_name": "Devin Singletary",
@@ -7383,14 +7448,14 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 20.4,
+        "rush_yds": 19.4,
         "rush_tds": 0.13,
-        "carries": 5.7,
-        "rec_yds": 8.2,
-        "rec_tds": 0.23,
-        "receptions": 1.2,
+        "carries": 5.5,
+        "rec_yds": 7.9,
+        "rec_tds": 0.22,
+        "receptions": 1.1,
         "targets": 1.7,
-        "rush_rec_yds": 28.6
+        "rush_rec_yds": 27.3
       },
       "dvp": {
         "rank": 6,
@@ -7411,10 +7476,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 32.4,
+        "rec_yds": 30.9,
         "rec_tds": 0.08,
-        "receptions": 2.1,
-        "targets": 3.8
+        "receptions": 2.0,
+        "targets": 3.6
       },
       "dvp": {
         "rank": 6,
@@ -7435,13 +7500,13 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 32.2,
+        "rush_yds": 30.7,
         "rush_tds": 0.05,
-        "carries": 7.6,
-        "rec_yds": 4.5,
+        "carries": 7.3,
+        "rec_yds": 4.3,
         "receptions": 0.5,
         "targets": 0.7,
-        "rush_rec_yds": 36.7
+        "rush_rec_yds": 35.0
       },
       "dvp": {
         "rank": 6,
@@ -7462,16 +7527,20 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 36.6,
-        "rec_tds": 0.39,
-        "receptions": 3.3,
-        "targets": 4.9
+        "rec_yds": 34.9,
+        "rec_tds": 0.37,
+        "receptions": 3.2,
+        "targets": 4.6
       },
       "dvp": {
         "rank": 12,
         "label": "Favorable"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Knee",
+        "practice": null
+      }
     },
     {
       "player_name": "Charlie Jones",
@@ -7495,6 +7564,32 @@
       "injury": null
     },
     {
+      "player_name": "Jake Haener",
+      "player_id": "00-0038998",
+      "team": "NYG",
+      "position": "QB",
+      "opponent": "WAS",
+      "game_id": "2026_05_NYG_WAS",
+      "is_home": false,
+      "depth_chart_rank": 3,
+      "usage": {
+        "blend_source": "prior_season_only"
+      },
+      "projections": {
+        "pass_yds": 8.0,
+        "pass_tds": 0.04,
+        "completions": 0.6,
+        "pass_att": 1.3,
+        "interceptions": 0.02,
+        "rush_yds": 0.9
+      },
+      "dvp": {
+        "rank": 9,
+        "label": "Favorable"
+      },
+      "injury": null
+    },
+    {
       "player_name": "Malik Nabers",
       "player_id": "00-0039337",
       "team": "NYG",
@@ -7507,16 +7602,20 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 63.5,
-        "rec_tds": 0.42,
-        "receptions": 5.0,
-        "targets": 7.8
+        "rec_yds": 60.6,
+        "rec_tds": 0.4,
+        "receptions": 4.8,
+        "targets": 7.4
       },
       "dvp": {
         "rank": 6,
         "label": "Smash"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Undisclosed",
+        "practice": null
+      }
     },
     {
       "player_name": "Tyrone Tracy Jr.",
@@ -7531,14 +7630,14 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 27.7,
+        "rush_yds": 26.4,
         "rush_tds": 0.08,
-        "carries": 6.2,
-        "rec_yds": 7.8,
+        "carries": 5.9,
+        "rec_yds": 7.4,
         "rec_tds": 0.05,
-        "receptions": 0.9,
-        "targets": 1.5,
-        "rush_rec_yds": 35.5
+        "receptions": 0.8,
+        "targets": 1.4,
+        "rush_rec_yds": 33.8
       },
       "dvp": {
         "rank": 6,
@@ -7559,10 +7658,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 19.7,
-        "rec_tds": 0.34,
-        "receptions": 1.5,
-        "targets": 2.7
+        "rec_yds": 18.8,
+        "rec_tds": 0.33,
+        "receptions": 1.4,
+        "targets": 2.6
       },
       "dvp": {
         "rank": 12,
@@ -7583,10 +7682,10 @@
         "blend_source": "prior_season_only"
       },
       "projections": {
-        "pass_yds": 112.6,
-        "pass_tds": 0.89,
-        "completions": 8.9,
-        "pass_att": 15.8,
+        "pass_yds": 107.4,
+        "pass_tds": 0.85,
+        "completions": 8.5,
+        "pass_att": 15.0,
         "interceptions": 0.39,
         "rush_yds": 13.2,
         "rush_tds": 0.27
@@ -7610,20 +7709,24 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 49.2,
-        "rush_tds": 0.32,
-        "carries": 12.7,
-        "rec_yds": 14.6,
+        "rush_yds": 46.9,
+        "rush_tds": 0.3,
+        "carries": 12.2,
+        "rec_yds": 14.0,
         "rec_tds": 0.08,
-        "receptions": 1.5,
-        "targets": 2.3,
-        "rush_rec_yds": 63.8
+        "receptions": 1.4,
+        "targets": 2.2,
+        "rush_rec_yds": 60.9
       },
       "dvp": {
         "rank": 6,
         "label": "Smash"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Shoulder",
+        "practice": null
+      }
     },
     {
       "player_name": "Malachi Fields",
@@ -7638,10 +7741,10 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "rec_yds": 32.4,
-        "rec_tds": 0.28,
-        "receptions": 2.0,
-        "targets": 3.6
+        "rec_yds": 30.9,
+        "rec_tds": 0.27,
+        "receptions": 1.9,
+        "targets": 3.5
       },
       "dvp": {
         "rank": 6,
@@ -7662,10 +7765,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 8.6,
+        "rec_yds": 8.4,
         "rec_tds": 0.06,
         "receptions": 0.7,
-        "targets": 2.2
+        "targets": 2.1
       },
       "dvp": {
         "rank": 19,
@@ -7689,16 +7792,20 @@
         "rush_yds": 0.5,
         "rush_tds": 0.01,
         "carries": 0.2,
-        "rec_yds": 8.3,
+        "rec_yds": 8.1,
         "receptions": 0.8,
         "targets": 1.2,
-        "rush_rec_yds": 8.8
+        "rush_rec_yds": 8.6
       },
       "dvp": {
         "rank": 26,
         "label": "Tough"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Shoulder",
+        "practice": null
+      }
     },
     {
       "player_name": "Justin Herbert",
@@ -7713,16 +7820,16 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "pass_yds": 204.1,
-        "pass_tds": 0.96,
-        "completions": 18.3,
-        "pass_att": 28.8,
+        "pass_yds": 199.3,
+        "pass_tds": 0.94,
+        "completions": 17.9,
+        "pass_att": 28.1,
         "interceptions": 0.64,
         "rush_yds": 24.1,
         "rush_tds": 0.06
       },
       "dvp": {
-        "rank": 17,
+        "rank": 16,
         "label": "Neutral"
       },
       "injury": null
@@ -7740,16 +7847,20 @@
         "blend_source": "prior_season_only"
       },
       "projections": {
-        "pass_yds": 55.8,
-        "completions": 6.3,
-        "pass_att": 12.3,
+        "pass_yds": 54.5,
+        "completions": 6.1,
+        "pass_att": 12.0,
         "rush_yds": 17.6
       },
       "dvp": {
-        "rank": 17,
+        "rank": 16,
         "label": "Neutral"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Groin",
+        "practice": null
+      }
     },
     {
       "player_name": "Charlie Kolar",
@@ -7764,9 +7875,9 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 11.4,
+        "rec_yds": 11.2,
         "rec_tds": 0.06,
-        "receptions": 1.2,
+        "receptions": 1.1,
         "targets": 1.4
       },
       "dvp": {
@@ -7792,14 +7903,14 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 21.0,
-        "rush_tds": 0.03,
-        "carries": 4.8,
-        "rec_yds": 6.2,
+        "rush_yds": 20.5,
+        "rush_tds": 0.02,
+        "carries": 4.7,
+        "rec_yds": 6.1,
         "rec_tds": 0.12,
         "receptions": 1.2,
         "targets": 1.5,
-        "rush_rec_yds": 27.2
+        "rush_rec_yds": 26.6
       },
       "dvp": {
         "rank": 26,
@@ -7820,16 +7931,20 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 36.8,
+        "rec_yds": 35.9,
         "rec_tds": 0.22,
-        "receptions": 2.7,
-        "targets": 5.6
+        "receptions": 2.6,
+        "targets": 5.5
       },
       "dvp": {
         "rank": 19,
         "label": "Neutral"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Chest",
+        "practice": null
+      }
     },
     {
       "player_name": "Derius Davis",
@@ -7844,8 +7959,8 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 2.0,
-        "rec_tds": 0.02,
+        "rec_yds": 1.9,
+        "rec_tds": 0.01,
         "receptions": 0.3,
         "targets": 0.6
       },
@@ -7868,14 +7983,14 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 20.4,
-        "rush_tds": 0.08,
-        "carries": 5.1,
-        "rec_yds": 7.9,
-        "rec_tds": 0.2,
-        "receptions": 0.9,
+        "rush_yds": 20.0,
+        "rush_tds": 0.07,
+        "carries": 5.0,
+        "rec_yds": 7.7,
+        "rec_tds": 0.19,
+        "receptions": 0.8,
         "targets": 1.6,
-        "rush_rec_yds": 28.3
+        "rush_rec_yds": 27.7
       },
       "dvp": {
         "rank": 26,
@@ -7915,10 +8030,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 46.4,
+        "rec_yds": 45.3,
         "rec_tds": 0.24,
-        "receptions": 3.5,
-        "targets": 5.6
+        "receptions": 3.4,
+        "targets": 5.4
       },
       "dvp": {
         "rank": 19,
@@ -7943,10 +8058,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 27.2,
+        "rec_yds": 26.5,
         "rec_tds": 0.18,
-        "receptions": 2.3,
-        "targets": 3.8
+        "receptions": 2.2,
+        "targets": 3.7
       },
       "dvp": {
         "rank": 8,
@@ -7968,7 +8083,7 @@
       },
       "projections": {},
       "dvp": {
-        "rank": 17,
+        "rank": 16,
         "label": "Neutral"
       },
       "injury": null
@@ -7986,14 +8101,14 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 41.5,
-        "rush_tds": 0.5,
-        "carries": 10.6,
-        "rec_yds": 9.9,
+        "rush_yds": 40.6,
+        "rush_tds": 0.49,
+        "carries": 10.3,
+        "rec_yds": 9.7,
         "rec_tds": 0.04,
         "receptions": 1.5,
-        "targets": 1.9,
-        "rush_rec_yds": 51.4
+        "targets": 1.8,
+        "rush_rec_yds": 50.3
       },
       "dvp": {
         "rank": 26,
@@ -8014,10 +8129,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 30.2,
+        "rec_yds": 29.5,
         "rec_tds": 0.02,
-        "receptions": 2.2,
-        "targets": 3.6
+        "receptions": 2.1,
+        "targets": 3.5
       },
       "dvp": {
         "rank": 19,
@@ -8038,8 +8153,8 @@
         "blend_source": "current_season_only"
       },
       "projections": {
-        "rec_yds": 11.8,
-        "receptions": 1.0,
+        "rec_yds": 11.6,
+        "receptions": 0.9,
         "targets": 3.0
       },
       "dvp": {
@@ -8065,10 +8180,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 18.4,
+        "rec_yds": 17.9,
         "rec_tds": 0.12,
-        "receptions": 2.1,
-        "targets": 3.4
+        "receptions": 2.0,
+        "targets": 3.3
       },
       "dvp": {
         "rank": 30,
@@ -8089,10 +8204,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 36.4,
-        "rec_tds": 0.18,
-        "receptions": 2.9,
-        "targets": 5.7
+        "rec_yds": 35.5,
+        "rec_tds": 0.17,
+        "receptions": 2.8,
+        "targets": 5.5
       },
       "dvp": {
         "rank": 20,
@@ -8132,13 +8247,13 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 49.8,
+        "rush_yds": 48.7,
         "rush_tds": 0.22,
-        "carries": 11.8,
-        "rec_yds": 3.9,
-        "receptions": 1.0,
+        "carries": 11.5,
+        "rec_yds": 3.8,
+        "receptions": 0.9,
         "targets": 1.3,
-        "rush_rec_yds": 53.7
+        "rush_rec_yds": 52.5
       },
       "dvp": {
         "rank": 21,
@@ -8159,10 +8274,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 7.5,
+        "rec_yds": 7.3,
         "rec_tds": 0.04,
         "receptions": 0.9,
-        "targets": 1.5
+        "targets": 1.4
       },
       "dvp": {
         "rank": 30,
@@ -8183,10 +8298,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 43.9,
+        "rec_yds": 42.9,
         "rec_tds": 0.22,
-        "receptions": 3.4,
-        "targets": 5.4
+        "receptions": 3.3,
+        "targets": 5.3
       },
       "dvp": {
         "rank": 20,
@@ -8209,10 +8324,10 @@
       "projections": {
         "rush_yds": 1.0,
         "carries": 0.2,
-        "rec_yds": 1.4,
+        "rec_yds": 1.3,
         "receptions": 0.3,
         "targets": 0.4,
-        "rush_rec_yds": 2.4
+        "rush_rec_yds": 2.3
       },
       "dvp": {
         "rank": 21,
@@ -8252,12 +8367,12 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 5.6,
+        "rush_yds": 5.5,
         "carries": 1.2,
-        "rec_yds": 11.5,
+        "rec_yds": 11.2,
         "receptions": 1.2,
-        "targets": 1.7,
-        "rush_rec_yds": 17.1
+        "targets": 1.6,
+        "rush_rec_yds": 16.7
       },
       "dvp": {
         "rank": 21,
@@ -8278,10 +8393,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 8.0,
-        "rec_tds": 0.31,
+        "rec_yds": 7.8,
+        "rec_tds": 0.3,
         "receptions": 0.9,
-        "targets": 1.3
+        "targets": 1.2
       },
       "dvp": {
         "rank": 30,
@@ -8302,10 +8417,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 12.6,
+        "rec_yds": 12.3,
         "rec_tds": 0.06,
         "receptions": 1.2,
-        "targets": 2.1
+        "targets": 2.0
       },
       "dvp": {
         "rank": 20,
@@ -8326,10 +8441,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "pass_yds": 179.2,
-        "pass_tds": 1.01,
-        "completions": 17.8,
-        "pass_att": 31.2,
+        "pass_yds": 175.0,
+        "pass_tds": 0.99,
+        "completions": 17.4,
+        "pass_att": 30.5,
         "interceptions": 0.7,
         "rush_yds": 13.6,
         "rush_tds": 0.26
@@ -8353,10 +8468,10 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 21.8,
+        "rec_yds": 21.3,
         "rec_tds": 0.11,
         "receptions": 1.6,
-        "targets": 2.9
+        "targets": 2.8
       },
       "dvp": {
         "rank": 20,
@@ -8377,9 +8492,9 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rec_yds": 23.3,
+        "rec_yds": 22.8,
         "rec_tds": 0.12,
-        "receptions": 1.7,
+        "receptions": 1.6,
         "targets": 2.4
       },
       "dvp": {
@@ -8405,14 +8520,14 @@
         "blend_source": "blended (cw=0.50, pw=0.50)"
       },
       "projections": {
-        "rush_yds": 16.7,
+        "rush_yds": 16.3,
         "rush_tds": 0.13,
-        "carries": 4.4,
-        "rec_yds": 22.5,
+        "carries": 4.3,
+        "rec_yds": 22.0,
         "rec_tds": 0.09,
-        "receptions": 3.6,
-        "targets": 4.3,
-        "rush_rec_yds": 39.2
+        "receptions": 3.5,
+        "targets": 4.2,
+        "rush_rec_yds": 38.3
       },
       "dvp": {
         "rank": 21,
@@ -8612,8 +8727,8 @@
       },
       "projections": {},
       "dvp": {
-        "rank": 7,
-        "label": "Favorable"
+        "rank": 6,
+        "label": "Smash"
       },
       "injury": null
     },
@@ -8636,8 +8751,8 @@
         "targets": 14.8
       },
       "dvp": {
-        "rank": 7,
-        "label": "Favorable"
+        "rank": 6,
+        "label": "Smash"
       },
       "injury": null
     },
@@ -8708,8 +8823,8 @@
         "targets": 2.6
       },
       "dvp": {
-        "rank": 7,
-        "label": "Favorable"
+        "rank": 6,
+        "label": "Smash"
       },
       "injury": null
     },
@@ -8860,7 +8975,7 @@
         "targets": 3.2
       },
       "dvp": {
-        "rank": 5,
+        "rank": 4,
         "label": "Smash"
       },
       "injury": null
@@ -8883,7 +8998,7 @@
         "targets": 0.3
       },
       "dvp": {
-        "rank": 14,
+        "rank": 15,
         "label": "Neutral"
       },
       "injury": null
@@ -8907,7 +9022,7 @@
         "targets": 2.3
       },
       "dvp": {
-        "rank": 5,
+        "rank": 4,
         "label": "Smash"
       },
       "injury": null
@@ -8931,7 +9046,7 @@
         "targets": 11.8
       },
       "dvp": {
-        "rank": 14,
+        "rank": 15,
         "label": "Neutral"
       },
       "injury": null
@@ -8955,7 +9070,7 @@
         "targets": 6.8
       },
       "dvp": {
-        "rank": 14,
+        "rank": 15,
         "label": "Neutral"
       },
       "injury": null
@@ -8979,7 +9094,7 @@
         "targets": 0.7
       },
       "dvp": {
-        "rank": 14,
+        "rank": 15,
         "label": "Neutral"
       },
       "injury": null
@@ -9026,7 +9141,7 @@
         "targets": 8.4
       },
       "dvp": {
-        "rank": 5,
+        "rank": 4,
         "label": "Smash"
       },
       "injury": null
@@ -9103,7 +9218,7 @@
         "targets": 1.1
       },
       "dvp": {
-        "rank": 14,
+        "rank": 15,
         "label": "Neutral"
       },
       "injury": null
@@ -9127,7 +9242,7 @@
         "targets": 3.1
       },
       "dvp": {
-        "rank": 14,
+        "rank": 15,
         "label": "Neutral"
       },
       "injury": null
@@ -9202,7 +9317,7 @@
         "rush_tds": 0.01
       },
       "dvp": {
-        "rank": 16,
+        "rank": 17,
         "label": "Neutral"
       },
       "injury": null
@@ -9229,7 +9344,7 @@
         "rush_tds": 0.04
       },
       "dvp": {
-        "rank": 16,
+        "rank": 17,
         "label": "Neutral"
       },
       "injury": null
@@ -9382,7 +9497,11 @@
         "rank": 16,
         "label": "Neutral"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Ribs",
+        "practice": null
+      }
     },
     {
       "player_name": "AJ Barner",
@@ -9488,7 +9607,7 @@
         "rush_yds": 0.8
       },
       "dvp": {
-        "rank": 16,
+        "rank": 17,
         "label": "Neutral"
       },
       "injury": null
@@ -9544,7 +9663,7 @@
         "label": "Avoid"
       },
       "injury": {
-        "status": "Doubtful",
+        "status": "Out",
         "body_part": "Knee",
         "practice": null
       }
@@ -9595,7 +9714,11 @@
         "rank": 32,
         "label": "Avoid"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Ribs",
+        "practice": null
+      }
     },
     {
       "player_name": "Christian McCaffrey",
@@ -10252,6 +10375,30 @@
       "injury": null
     },
     {
+      "player_name": "Nick Vannett",
+      "player_id": "00-0032394",
+      "team": "BAL",
+      "position": "TE",
+      "opponent": "ATL",
+      "game_id": "2026_05_BAL_ATL",
+      "is_home": false,
+      "depth_chart_rank": 4,
+      "usage": {
+        "blend_source": "prior_season_only"
+      },
+      "projections": {
+        "rec_yds": 2.9,
+        "rec_tds": 0.06,
+        "receptions": 0.4,
+        "targets": 0.4
+      },
+      "dvp": {
+        "rank": 19,
+        "label": "Neutral"
+      },
+      "injury": null
+    },
+    {
       "player_name": "Chris Moore",
       "player_id": "00-0032398",
       "team": "BAL",
@@ -10273,11 +10420,7 @@
         "rank": 8,
         "label": "Favorable"
       },
-      "injury": {
-        "status": "Questionable",
-        "body_part": "Ankle",
-        "practice": null
-      }
+      "injury": null
     },
     {
       "player_name": "Derrick Henry",
@@ -10357,35 +10500,8 @@
         "label": "Favorable"
       },
       "injury": {
-        "status": "Questionable",
-        "body_part": "Ankle",
-        "practice": null
-      }
-    },
-    {
-      "player_name": "Durham Smythe",
-      "player_id": "00-0034798",
-      "team": "BAL",
-      "position": "TE",
-      "opponent": "ATL",
-      "game_id": "2026_05_BAL_ATL",
-      "is_home": false,
-      "depth_chart_rank": 4,
-      "usage": {
-        "blend_source": "blended (cw=0.50, pw=0.50)"
-      },
-      "projections": {
-        "rec_yds": 2.2,
-        "receptions": 0.4,
-        "targets": 0.7
-      },
-      "dvp": {
-        "rank": 19,
-        "label": "Neutral"
-      },
-      "injury": {
         "status": "Out",
-        "body_part": "Achilles",
+        "body_part": "Ankle",
         "practice": null
       }
     },
@@ -10490,7 +10606,11 @@
         "rank": 8,
         "label": "Favorable"
       },
-      "injury": null
+      "injury": {
+        "status": "Questionable",
+        "body_part": "Hamstring",
+        "practice": null
+      }
     },
     {
       "player_name": "Devontez Walker",

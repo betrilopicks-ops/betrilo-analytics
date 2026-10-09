@@ -1,7 +1,7 @@
 {
   "season": 2026,
-  "generated_at": "2026-10-07T15:00:41.390261-04:00",
-  "through_week": 4,
+  "generated_at": "2026-10-09T17:00:40.279938-04:00",
+  "through_week": 5,
   "player_count": 474,
   "players": {
     "00-0023459": {
@@ -358,6 +358,10 @@
           },
           "snap_pct": 83,
           "target_share": 0.148
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -750,6 +754,10 @@
           },
           "snap_pct": 53,
           "target_share": 0.154
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -1273,6 +1281,27 @@
             "carries": 2
           },
           "snap_pct": 100
+        },
+        {
+          "week": 5,
+          "opponent": "TB",
+          "is_home": true,
+          "stats": {
+            "pass_yds": 316,
+            "pass_tds": 1,
+            "completions": 24
+          },
+          "snap_pct": 100,
+          "projected": {
+            "pass_yds": {
+              "projection": 303.3,
+              "model_version": "v1"
+            },
+            "pass_tds": {
+              "projection": 2.2,
+              "model_version": "v1"
+            }
+          }
         }
       ]
     },
@@ -2122,6 +2151,10 @@
           "is_home": true,
           "stats": {},
           "snap_pct": 1
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -2294,6 +2327,10 @@
             "carries": 2
           },
           "snap_pct": 100
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -2550,6 +2587,29 @@
             "targets": 7
           },
           "target_share": 0.269
+        },
+        {
+          "week": 5,
+          "opponent": "DAL",
+          "is_home": false,
+          "stats": {
+            "rush_yds": 3,
+            "carries": 1,
+            "rec_yds": 37,
+            "receptions": 3,
+            "targets": 3
+          },
+          "target_share": 0.12,
+          "projected": {
+            "rec_yds": {
+              "projection": 52.3,
+              "model_version": "v1"
+            },
+            "receptions": {
+              "projection": 4.8,
+              "model_version": "v1"
+            }
+          }
         }
       ]
     },
@@ -5181,6 +5241,10 @@
           },
           "snap_pct": 15,
           "target_share": 0.026
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -5549,6 +5613,28 @@
           },
           "snap_pct": 86,
           "target_share": 0.488
+        },
+        {
+          "week": 5,
+          "opponent": "TB",
+          "is_home": true,
+          "stats": {
+            "rec_yds": 9,
+            "receptions": 2,
+            "targets": 5
+          },
+          "snap_pct": 57,
+          "target_share": 0.119,
+          "projected": {
+            "receptions": {
+              "projection": 8.3,
+              "model_version": "v1"
+            },
+            "rec_yds": {
+              "projection": 107.7,
+              "model_version": "v1"
+            }
+          }
         }
       ]
     },
@@ -6082,6 +6168,10 @@
           },
           "snap_pct": 84,
           "target_share": 0.051
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -6345,6 +6435,10 @@
           },
           "snap_pct": 68,
           "target_share": 0.111
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -6454,6 +6548,10 @@
           "opponent": "DET",
           "is_home": true,
           "stats": {}
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -6932,6 +7030,33 @@
             "targets": 2
           },
           "target_share": 0.077
+        },
+        {
+          "week": 5,
+          "opponent": "DAL",
+          "is_home": false,
+          "stats": {
+            "rush_yds": 18,
+            "carries": 4,
+            "rec_yds": 10,
+            "receptions": 3,
+            "targets": 4
+          },
+          "target_share": 0.16,
+          "projected": {
+            "rec_yds": {
+              "projection": 19.6,
+              "model_version": "v1"
+            },
+            "rush_yds": {
+              "projection": 17.2,
+              "model_version": "v1"
+            },
+            "receptions": {
+              "projection": 2.7,
+              "model_version": "v1"
+            }
+          }
         }
       ]
     },
@@ -7288,6 +7413,35 @@
           },
           "snap_pct": 74,
           "target_share": 0.116
+        },
+        {
+          "week": 5,
+          "opponent": "TB",
+          "is_home": true,
+          "stats": {
+            "rush_yds": 45,
+            "rush_tds": 1,
+            "carries": 12,
+            "rec_yds": 17,
+            "receptions": 2,
+            "targets": 3
+          },
+          "snap_pct": 85,
+          "target_share": 0.071,
+          "projected": {
+            "rush_yds": {
+              "projection": 50.3,
+              "model_version": "v1"
+            },
+            "receptions": {
+              "projection": 3.9,
+              "model_version": "v1"
+            },
+            "rec_yds": {
+              "projection": 20.6,
+              "model_version": "v1"
+            }
+          }
         }
       ]
     },
@@ -7388,6 +7542,10 @@
           },
           "snap_pct": 51,
           "target_share": 0.103
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -7941,6 +8099,29 @@
           },
           "snap_pct": 86,
           "target_share": 0.07
+        },
+        {
+          "week": 5,
+          "opponent": "TB",
+          "is_home": true,
+          "stats": {
+            "rec_yds": 130,
+            "rec_tds": 1,
+            "receptions": 9,
+            "targets": 13
+          },
+          "snap_pct": 88,
+          "target_share": 0.31,
+          "projected": {
+            "rec_yds": {
+              "projection": 70.1,
+              "model_version": "v1"
+            },
+            "receptions": {
+              "projection": 5.2,
+              "model_version": "v1"
+            }
+          }
         }
       ]
     },
@@ -8562,6 +8743,10 @@
             "targets": 5
           },
           "target_share": 0.128
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -8958,6 +9143,18 @@
           "is_home": false,
           "stats": {},
           "snap_pct": 10
+        },
+        {
+          "week": 5,
+          "opponent": "TB",
+          "is_home": true,
+          "stats": {
+            "rec_yds": 22,
+            "receptions": 2,
+            "targets": 4
+          },
+          "snap_pct": 40,
+          "target_share": 0.095
         }
       ]
     },
@@ -9364,6 +9561,28 @@
           },
           "snap_pct": 71,
           "target_share": 0.093
+        },
+        {
+          "week": 5,
+          "opponent": "TB",
+          "is_home": true,
+          "stats": {
+            "rec_yds": 19,
+            "receptions": 3,
+            "targets": 6
+          },
+          "snap_pct": 83,
+          "target_share": 0.143,
+          "projected": {
+            "receptions": {
+              "projection": 4.6,
+              "model_version": "v1"
+            },
+            "rec_yds": {
+              "projection": 34.8,
+              "model_version": "v1"
+            }
+          }
         }
       ]
     },
@@ -9470,6 +9689,10 @@
             "carries": 1
           },
           "snap_pct": 6
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -9524,6 +9747,10 @@
           },
           "snap_pct": 63,
           "target_share": 0.296
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -9856,6 +10083,28 @@
           },
           "snap_pct": 95,
           "target_share": 0.231
+        },
+        {
+          "week": 5,
+          "opponent": "DAL",
+          "is_home": false,
+          "stats": {
+            "rec_yds": 25,
+            "receptions": 3,
+            "targets": 4
+          },
+          "snap_pct": 92,
+          "target_share": 0.16,
+          "projected": {
+            "rec_yds": {
+              "projection": 37.0,
+              "model_version": "v1"
+            },
+            "receptions": {
+              "projection": 3.7,
+              "model_version": "v1"
+            }
+          }
         }
       ]
     },
@@ -9924,6 +10173,10 @@
           },
           "snap_pct": 75,
           "target_share": 0.037
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -10198,6 +10451,10 @@
           "opponent": "MIA",
           "is_home": false,
           "stats": {}
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -10250,6 +10507,10 @@
           "opponent": "LV",
           "is_home": false,
           "stats": {}
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -10476,6 +10737,18 @@
           },
           "snap_pct": 22,
           "target_share": 0.025
+        },
+        {
+          "week": 5,
+          "opponent": "TB",
+          "is_home": true,
+          "stats": {
+            "rec_yds": 9,
+            "receptions": 1,
+            "targets": 1
+          },
+          "snap_pct": 8,
+          "target_share": 0.024
         }
       ]
     },
@@ -11486,6 +11759,16 @@
           },
           "snap_pct": 12,
           "target_share": 0.023
+        },
+        {
+          "week": 5,
+          "opponent": "TB",
+          "is_home": true,
+          "stats": {
+            "rush_yds": 5,
+            "carries": 1
+          },
+          "snap_pct": 12
         }
       ]
     },
@@ -11729,6 +12012,10 @@
           },
           "snap_pct": 92,
           "target_share": 0.077
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -11901,6 +12188,16 @@
             "carries": 3
           },
           "snap_pct": 5
+        },
+        {
+          "week": 5,
+          "opponent": "DAL",
+          "is_home": false,
+          "stats": {
+            "rush_yds": 18,
+            "carries": 5
+          },
+          "snap_pct": 10
         }
       ]
     },
@@ -12283,6 +12580,18 @@
           },
           "snap_pct": 55,
           "target_share": 0.029
+        },
+        {
+          "week": 5,
+          "opponent": "DAL",
+          "is_home": false,
+          "stats": {
+            "rec_yds": 5,
+            "receptions": 1,
+            "targets": 1
+          },
+          "snap_pct": 38,
+          "target_share": 0.04
         }
       ]
     },
@@ -12312,6 +12621,18 @@
           },
           "snap_pct": 18,
           "target_share": 0.047
+        },
+        {
+          "week": 5,
+          "opponent": "TB",
+          "is_home": true,
+          "stats": {
+            "rec_yds": 20,
+            "receptions": 2,
+            "targets": 4
+          },
+          "snap_pct": 20,
+          "target_share": 0.095
         }
       ]
     },
@@ -12526,6 +12847,10 @@
           },
           "snap_pct": 77,
           "target_share": 0.391
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -12813,6 +13138,10 @@
             "carries": 3
           },
           "snap_pct": 100
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -13050,6 +13379,10 @@
           },
           "snap_pct": 50,
           "target_share": 0.125
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -13085,6 +13418,10 @@
           },
           "snap_pct": 30,
           "target_share": 0.031
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -13189,6 +13526,36 @@
             "carries": 16
           },
           "snap_pct": 59
+        },
+        {
+          "week": 5,
+          "opponent": "DAL",
+          "is_home": false,
+          "stats": {
+            "rush_yds": 165,
+            "rush_tds": 1,
+            "carries": 21,
+            "rec_yds": 10,
+            "rec_tds": 1,
+            "receptions": 2,
+            "targets": 3
+          },
+          "snap_pct": 54,
+          "target_share": 0.12,
+          "projected": {
+            "rec_yds": {
+              "projection": 24.7,
+              "model_version": "v1"
+            },
+            "receptions": {
+              "projection": 3.2,
+              "model_version": "v1"
+            },
+            "rush_yds": {
+              "projection": 61.7,
+              "model_version": "v1"
+            }
+          }
         }
       ]
     },
@@ -13470,6 +13837,28 @@
           },
           "snap_pct": 74,
           "target_share": 0.116
+        },
+        {
+          "week": 5,
+          "opponent": "TB",
+          "is_home": true,
+          "stats": {
+            "rec_yds": 90,
+            "receptions": 3,
+            "targets": 4
+          },
+          "snap_pct": 68,
+          "target_share": 0.095,
+          "projected": {
+            "rec_yds": {
+              "projection": 26.9,
+              "model_version": "v1"
+            },
+            "receptions": {
+              "projection": 2.9,
+              "model_version": "v1"
+            }
+          }
         }
       ]
     },
@@ -13660,6 +14049,10 @@
           },
           "snap_pct": 36,
           "target_share": 0.095
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -13732,6 +14125,16 @@
           },
           "snap_pct": 40,
           "target_share": 0.023
+        },
+        {
+          "week": 5,
+          "opponent": "TB",
+          "is_home": true,
+          "stats": {
+            "targets": 2
+          },
+          "snap_pct": 33,
+          "target_share": 0.048
         }
       ]
     },
@@ -13771,6 +14174,13 @@
           },
           "snap_pct": 8,
           "target_share": 0.077
+        },
+        {
+          "week": 5,
+          "opponent": "DAL",
+          "is_home": false,
+          "stats": {},
+          "snap_pct": 3
         }
       ]
     },
@@ -14953,6 +15363,10 @@
           },
           "snap_pct": 75,
           "target_share": 0.259
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -15404,6 +15818,10 @@
           },
           "snap_pct": 8,
           "target_share": 0.043
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -15440,6 +15858,10 @@
           "is_home": false,
           "stats": {},
           "snap_pct": 13
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -15560,6 +15982,10 @@
           },
           "snap_pct": 89,
           "target_share": 0.41
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -15732,6 +16158,31 @@
           },
           "snap_pct": 94,
           "target_share": 0.154
+        },
+        {
+          "week": 5,
+          "opponent": "DAL",
+          "is_home": false,
+          "stats": {
+            "rush_yds": 14,
+            "rush_tds": 1,
+            "carries": 1,
+            "rec_yds": 38,
+            "receptions": 6,
+            "targets": 9
+          },
+          "snap_pct": 89,
+          "target_share": 0.36,
+          "projected": {
+            "receptions": {
+              "projection": 3.5,
+              "model_version": "v1"
+            },
+            "rec_yds": {
+              "projection": 45.7,
+              "model_version": "v1"
+            }
+          }
         }
       ]
     },
@@ -16178,6 +16629,10 @@
           },
           "snap_pct": 61,
           "target_share": 0.026
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -16349,6 +16804,10 @@
             "targets": 1
           },
           "target_share": 0.029
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -16467,6 +16926,24 @@
           },
           "snap_pct": 56,
           "target_share": 0.077
+        },
+        {
+          "week": 5,
+          "opponent": "DAL",
+          "is_home": false,
+          "stats": {
+            "rec_yds": 64,
+            "receptions": 1,
+            "targets": 1
+          },
+          "snap_pct": 39,
+          "target_share": 0.04,
+          "projected": {
+            "rec_yds": {
+              "projection": 19.9,
+              "model_version": "v1"
+            }
+          }
         }
       ]
     },
@@ -16580,6 +17057,10 @@
             "targets": 1
           },
           "target_share": 0.026
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -16681,6 +17162,10 @@
           "is_home": true,
           "stats": {},
           "snap_pct": 3
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -17214,6 +17699,10 @@
           },
           "snap_pct": 63,
           "target_share": 0.074
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -18578,6 +19067,10 @@
           },
           "snap_pct": 8,
           "target_share": 0.037
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -18719,6 +19212,10 @@
           },
           "snap_pct": 27,
           "target_share": 0.037
+        },
+        {
+          "week": 5,
+          "is_bye": true
         }
       ]
     },
@@ -19360,6 +19857,13 @@
           "is_home": true,
           "stats": {},
           "snap_pct": 6
+        },
+        {
+          "week": 5,
+          "opponent": "DAL",
+          "is_home": false,
+          "stats": {},
+          "snap_pct": 6
         }
       ]
     },
@@ -19690,6 +20194,29 @@
             "carries": 8
           },
           "snap_pct": 100
+        },
+        {
+          "week": 5,
+          "opponent": "DAL",
+          "is_home": false,
+          "stats": {
+            "pass_yds": 189,
+            "pass_tds": 1,
+            "completions": 19,
+            "rush_yds": 23,
+            "carries": 7
+          },
+          "snap_pct": 100,
+          "projected": {
+            "pass_tds": {
+              "projection": 0.6,
+              "model_version": "v1"
+            },
+            "rush_yds": {
+              "projection": 39.2,
+              "model_version": "v1"
+            }
+          }
         }
       ]
     },

@@ -2,31 +2,31 @@
   "sport": "NFL",
   "verdict": "ALL GOOD",
   "headline": "All NFL surfaces current.",
-  "checked_at": "2026-10-07T15:00:42.442491",
+  "checked_at": "2026-10-09T17:00:41.281555",
   "cadence_note": "NFL updates weekly (Wed/Thu/Fri). No games Tue-Wed is normal.",
   "surfaces": [
     {
       "name": "nfl_team_rankings",
       "status": "OK",
-      "last_updated": "2026-10-07T15:00:14.161838",
+      "last_updated": "2026-10-09T17:00:15.053334",
       "age_hours": 0.0
     },
     {
       "name": "nfl_schedule",
       "status": "OK",
-      "last_updated": "2026-10-07T15:00:15.369393",
+      "last_updated": "2026-10-09T17:00:16.255293",
       "age_hours": 0.0
     },
     {
       "name": "nfl_player_projections",
       "status": "OK",
-      "last_updated": "2026-10-07T15:00:20.553238",
+      "last_updated": "2026-10-09T17:00:21.452917",
       "age_hours": 0.0
     },
     {
       "name": "nfl_game_matchups",
       "status": "OK",
-      "last_updated": "2026-10-07T15:00:40.284803",
+      "last_updated": "2026-10-09T17:00:39.256566",
       "age_hours": 0.0
     },
     {
@@ -38,7 +38,7 @@
     {
       "name": "freeze_status",
       "status": "OK",
-      "detail": "All required freezes present (0 checked)",
+      "detail": "All required freezes present (1 checked)",
       "freezes": {
         "wednesday_initial": {
           "status": "OK",
@@ -47,6 +47,14 @@
           "frozen_at": "2026-10-07T14:01:14.163350-04:00",
           "scope": "2026-10-07",
           "file": "nfl_picks_2026_wk5_wednesday_initial_2026-10-07.csv"
+        },
+        "friday_final": {
+          "status": "OK",
+          "pick_count": 287,
+          "coverage_ok": true,
+          "frozen_at": "2026-10-09T14:01:27.282067-04:00",
+          "scope": "2026-10-09",
+          "file": "nfl_picks_2026_wk5_friday_final_2026-10-09.csv"
         }
       }
     }
