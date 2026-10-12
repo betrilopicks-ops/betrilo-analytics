@@ -1,14 +1,14 @@
 {
   "verdict": "ALL GOOD",
-  "headline": "Core run OK. Optional step warnings: Edge report JSON export, Validation metrics",
-  "checked_at": "2026-10-11T06:03:42",
-  "run_date": "2026-10-11",
+  "headline": "Core run OK. Optional step warnings: Validation metrics",
+  "checked_at": "2026-10-12T06:04:24",
+  "run_date": "2026-10-12",
   "required_ok": true,
   "steps": {
     "Pipeline generation": "OK",
     "Sync publish worktree to main": "OK",
     "BvP matchup export": "OK",
-    "Edge report JSON export": "FAIL",
+    "Edge report JSON export": "OK",
     "Best bets JSON export": "OK",
     "Player projections JSON export": "OK",
     "Starting lineups JSON export": "OK",
