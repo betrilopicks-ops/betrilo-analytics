@@ -167,7 +167,7 @@ function TrackRecordBanner() {
 function SportSection({ title, subtitle, cards, children }) {
   return (
     <div style={{ marginBottom: '40px' }}>
-      <h2 style={{ color: '#fff', fontSize: '22px', fontWeight: 800, marginBottom: '4px' }}>{title}</h2>
+      <h2 style={{ color: '#fff', fontSize: '22px', fontWeight: 800, margin: '0 0 4px' }}>{title}</h2>
       {subtitle && <p style={{ color: colors.subtitleOnWhite, fontSize: '14px', marginBottom: '16px' }}>{subtitle}</p>}
       {children}
       <div className="landing-grid" style={{
@@ -188,7 +188,7 @@ export default function MlbLandingPage() {
   const desc = 'Model-driven MLB projections, daily picks, and a publicly tracked record. Starting lineups, pitcher reports, BvP, and edge analysis.';
   const url = 'https://betrilo.com/mlb';
   return (
-    <div style={{ maxWidth: 960, margin: '0 auto', padding: '40px 16px 60px' }}>
+    <div style={{ maxWidth: 960, margin: '0 auto', padding: '20px 16px 60px' }}>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={desc} />

@@ -20,8 +20,9 @@ const baseHtml = fs.readFileSync(src, 'utf8');
 const ROUTES = [
   {
     file: 'nba.html',
-    title: 'NBA on Betrilo launches Tuesday, October 20',
-    desc: 'Model-driven player projections for every NBA game, starting opening night.',
+    title: 'NBA Player Projections — Betrilo',
+    ogTitle: 'NBA on Betrilo launches Tuesday, October 20',
+    desc: 'Model-driven NBA player projections for every game, starting opening night October 20, 2026.',
     url: 'https://betrilo.com/nba',
   },
   {
@@ -55,10 +56,11 @@ for (const route of ROUTES) {
     `<meta name="description" content="${route.desc}"/>`
   );
 
-  // Replace og:title
+  // Replace og:title (use ogTitle if set, otherwise title)
+  const ogTitle = route.ogTitle || route.title;
   html = html.replace(
     /<meta property="og:title" content="[^"]*"\/>/,
-    `<meta property="og:title" content="${route.title}"/>`
+    `<meta property="og:title" content="${ogTitle}"/>`
   );
 
   // Replace og:description
@@ -76,7 +78,7 @@ for (const route of ROUTES) {
   // Replace twitter:title
   html = html.replace(
     /<meta name="twitter:title" content="[^"]*"\/>/,
-    `<meta name="twitter:title" content="${route.title}"/>`
+    `<meta name="twitter:title" content="${ogTitle}"/>`
   );
 
   // Replace twitter:description

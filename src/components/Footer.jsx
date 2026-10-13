@@ -15,7 +15,7 @@ export default function Footer() {
       </div>
       <div style={{ marginTop: '16px', paddingTop: '14px', borderTop: '1px solid rgba(255,255,255,0.1)',
         fontSize: '11px', lineHeight: 1.6, color: colors.textMuted, maxWidth: '640px', margin: '16px auto 0' }}>
-        DISCLAIMER: This site is for entertainment purposes only and does not accept wagers or
+        21+. DISCLAIMER: This site is for entertainment purposes only and does not accept wagers or
         involve real-money gambling. If you or someone you know has a gambling problem, help is
         available — call 1-800-GAMBLER. Availability varies by state or jurisdiction.
       </div>

@@ -23,7 +23,7 @@ const SPORTS = [
   },
   {
     title: 'NBA',
-    subtitle: 'Launches Tuesday, October 20 · Projections',
+    subtitle: 'Projections launch Tuesday, October\u00a020',
     to: '/nba',
     badge: null,
   },

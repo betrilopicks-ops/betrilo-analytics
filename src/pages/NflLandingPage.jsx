@@ -53,7 +53,7 @@ export default function NflLandingPage() {
   const url = 'https://betrilo.com/nfl';
 
   return (
-    <div style={{ maxWidth: 960, margin: '0 auto', padding: '40px 16px 60px' }}>
+    <div style={{ maxWidth: 960, margin: '0 auto', padding: '20px 16px 60px' }}>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={desc} />
@@ -65,7 +65,7 @@ export default function NflLandingPage() {
       </Helmet>
 
       <div style={{ marginBottom: '40px' }}>
-        <h2 style={{ color: '#fff', fontSize: '22px', fontWeight: 800, marginBottom: '4px' }}>NFL</h2>
+        <h2 style={{ color: '#fff', fontSize: '22px', fontWeight: 800, margin: '0 0 4px' }}>NFL</h2>
         <p style={{ color: colors.subtitleOnWhite, fontSize: '14px', marginBottom: '16px' }}>Weekly projections, DvP matchup rankings, and schedule analysis</p>
 
         {/* Validation banner */}
@@ -82,7 +82,7 @@ export default function NflLandingPage() {
           gap: '16px',
           flexWrap: 'wrap',
         }}>
-          <div>
+          <div style={{ textAlign: 'left' }}>
             <span style={{
               display: 'inline-block',
               background: colors.navyLight,
