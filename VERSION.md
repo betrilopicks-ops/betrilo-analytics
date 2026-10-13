@@ -1,6 +1,13 @@
 # @betrilopicks Project Book Versions
 
-FE: BFEv0.37.0
+FE: BFEv0.37.1
+
+## BFEv0.37.1 — og:image absolute URL + twitter:card fix (2026-10-13)
+
+og:image changed from %PUBLIC_URL%/appicon_512.png (relative, breaks in OG
+crawlers) to https://betrilo.com/appicon_512.png (absolute). twitter:card
+changed from summary_large_image to summary (square icon, not wide banner).
+Applies to all routes via index.html; gen-route-meta inherits both.
 
 ## BFEv0.37.0 — NFL accuracy transparency + side-by-side (2026-10-13)
 
