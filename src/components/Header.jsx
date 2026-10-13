@@ -30,8 +30,10 @@ export default function Header() {
   const location = useLocation();
   const isNfl = location.pathname.startsWith('/nfl');
   const isNba = location.pathname.startsWith('/nba');
-  const activeSport = isNba ? 'nba' : isNfl ? 'nfl' : 'mlb';
-  const navItems = activeSport === 'nba' ? nbaNavItems : activeSport === 'nfl' ? nflNavItems : mlbNavItems;
+  const isMlb = location.pathname === '/mlb' || location.pathname.startsWith('/mlb/');
+  const isMain = location.pathname === '/';
+  const activeSport = isMain ? null : isNba ? 'nba' : isNfl ? 'nfl' : isMlb ? 'mlb' : 'mlb';
+  const navItems = activeSport === 'nba' ? nbaNavItems : activeSport === 'nfl' ? nflNavItems : activeSport === 'mlb' ? mlbNavItems : [];
 
   const sportToggleStyle = (sport) => ({
     color: activeSport === sport ? colors.navy : colors.textMuted,
@@ -60,8 +62,8 @@ export default function Header() {
 
       {/* Sport toggle */}
       <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', padding: '0 12px 8px' }}>
-        <NavLink to="/mlb/starting-lineups" style={sportToggleStyle('mlb')}>MLB</NavLink>
-        <NavLink to="/nfl/matchups" style={sportToggleStyle('nfl')}>NFL</NavLink>
+        <NavLink to="/mlb" style={sportToggleStyle('mlb')}>MLB</NavLink>
+        <NavLink to="/nfl" style={sportToggleStyle('nfl')}>NFL</NavLink>
         <NavLink to="/nba" style={sportToggleStyle('nba')}>NBA</NavLink>
       </div>
 

@@ -2,6 +2,11 @@
   "rewrites": [
     { "source": "/mlb/batter-vs-pitcher-guide", "destination": "/mlb/batter-vs-pitcher-guide.html" },
     { "source": "/nba", "destination": "/nba.html" },
+    { "source": "/mlb", "destination": "/mlb.html" },
+    { "source": "/nfl", "destination": "/nfl.html" },
+    { "source": "/MLB", "destination": "/mlb.html" },
+    { "source": "/NFL", "destination": "/nfl.html" },
+    { "source": "/NBA", "destination": "/nba.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

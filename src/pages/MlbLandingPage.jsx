@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { colors } from '../theme';
-import logo from '../assets/betrilo_logo.png';
 
 const NAVY = '#0B2331';
 const GREEN = '#19C93E';
@@ -17,13 +16,6 @@ const MLB_CARDS = [
   { name: 'Player Projections', desc: 'Per-player stat projections for hits, total bases, HR, and walks.', to: '/mlb/player-projections' },
   { name: 'Edge Report', desc: 'Model-identified edges with EV and direction on every prop.', to: '/mlb/edge-report' },
   { name: 'Results', desc: 'Day-by-day pick results — every pick graded against actuals.', to: '/mlb/results' },
-];
-
-const NFL_CARDS = [
-  { name: 'Matchups', desc: 'Player vs defense matchup data with DvP rankings and history.', to: '/nfl/matchups' },
-  { name: 'Schedule', desc: 'Weekly games with snap leaders, injuries, and game lines.', to: '/nfl/schedule' },
-  { name: 'Player Projections', desc: 'Per-player stat projections for passing, rushing, and receiving.', to: '/nfl/projections' },
-  { name: 'Team Rankings', desc: 'Defense vs Position (DvP) — find the easiest and toughest matchups.', to: '/nfl/team-rankings' },
 ];
 
 function Card({ name, desc, to, comingSoon }) {
@@ -191,10 +183,10 @@ function SportSection({ title, subtitle, cards, children }) {
   );
 }
 
-export default function LandingPage() {
-  const title = 'Betrilo — MLB & NFL Betting Projections';
-  const desc = 'Model-driven MLB and NFL projections with a publicly tracked pick record. Batter vs pitcher, DvP rankings, best bets, and daily results.';
-  const url = 'https://betrilo.com/';
+export default function MlbLandingPage() {
+  const title = 'MLB Projections & Picks — Betrilo';
+  const desc = 'Model-driven MLB projections, daily picks, and a publicly tracked record. Starting lineups, pitcher reports, BvP, and edge analysis.';
+  const url = 'https://betrilo.com/mlb';
   return (
     <div style={{ maxWidth: 960, margin: '0 auto', padding: '40px 16px 60px' }}>
       <Helmet>
@@ -205,80 +197,11 @@ export default function LandingPage() {
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
         <link rel="canonical" href={url} />
-        <script type="application/ld+json">{JSON.stringify({
-          '@context': 'https://schema.org',
-          '@graph': [
-            {
-              '@type': 'WebSite',
-              'name': 'Betrilo',
-              'url': 'https://betrilo.com',
-              'description': 'Model-driven MLB and NFL betting projections with a publicly tracked record.'
-            },
-            {
-              '@type': 'Organization',
-              'name': 'Betrilo',
-              'url': 'https://betrilo.com',
-              'sameAs': []
-            }
-          ]
-        })}</script>
       </Helmet>
-
-      {/* Logo + tagline */}
-      <div style={{ textAlign: 'center', marginBottom: '36px' }}>
-        <img src={logo} alt="Betrilo" style={{ width: 'clamp(160px, 40vw, 280px)', height: 'auto', marginBottom: '14px' }} />
-        <p style={{ color: colors.subtitleOnWhite, fontSize: '16px', margin: 0, lineHeight: 1.5 }}>
-          Data-driven sports projections with a publicly tracked record.
-        </p>
-      </div>
 
       {/* MLB section with track record banner */}
       <SportSection title="MLB" subtitle="162-game season — daily projections, picks, and results" cards={MLB_CARDS}>
         <TrackRecordBanner />
-      </SportSection>
-
-      {/* NFL section */}
-      <SportSection title="NFL" subtitle="Weekly projections, DvP matchup rankings, and schedule analysis" cards={NFL_CARDS}>
-        <div style={{
-          background: NAVY,
-          borderTop: `3px solid ${GREEN}`,
-          borderBottom: `3px solid ${GREEN}`,
-          borderRadius: '12px',
-          padding: '20px 28px',
-          marginBottom: '16px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          gap: '16px',
-          flexWrap: 'wrap',
-        }}>
-          <div>
-            <span style={{
-              display: 'inline-block',
-              background: colors.navyLight,
-              color: '#e8a838',
-              fontSize: '11px',
-              fontWeight: 700,
-              letterSpacing: '1.5px',
-              textTransform: 'uppercase',
-              padding: '4px 12px',
-              borderRadius: '999px',
-              marginBottom: '8px',
-            }}>
-              In Validation
-            </span>
-            <p style={{ color: '#9fb3c0', fontSize: '14px', margin: '6px 0 0' }}>
-              NFL model accuracy is being validated privately. Pick surfaces will launch after three graded shadow weeks.
-            </p>
-          </div>
-          <Link to="/nfl/team-rankings" style={{
-            display: 'inline-block', background: GREEN, color: NAVY,
-            fontWeight: 800, fontSize: '14px', padding: '10px 20px',
-            borderRadius: '8px', textDecoration: 'none', whiteSpace: 'nowrap', flexShrink: 0,
-          }}>
-            Explore NFL tools
-          </Link>
-        </div>
       </SportSection>
 
       <style>{`
