@@ -22,6 +22,7 @@ import NflMatchupsPage from './pages/NflMatchupsPage';
 import NflTeamRankingsPage from './pages/NflTeamRankingsPage';
 import NflSchedulePage from './pages/NflSchedulePage';
 import NflProjectionsPage from './pages/NflProjectionsPage';
+import NbaLaunchPage from './pages/NbaLaunchPage';
 
 /** Wrap a page component in an error boundary */
 const P = (Component) => <PageErrorBoundary><Component /></PageErrorBoundary>;
@@ -30,11 +31,12 @@ function AppContent() {
   const location = useLocation();
   const isLanding = location.pathname === '/';
   const isNfl = location.pathname.startsWith('/nfl');
+  const isNba = location.pathname.startsWith('/nba');
 
   return (
     <div className="App">
       <Header />
-      {!isLanding && !isNfl && <PicksCTA />}
+      {!isLanding && !isNfl && !isNba && <PicksCTA />}
       <main>
         <Routes>
           <Route path="/" element={P(LandingPage)} />
@@ -53,6 +55,8 @@ function AppContent() {
           <Route path="/nfl/team-rankings" element={P(NflTeamRankingsPage)} />
           <Route path="/nfl/schedule" element={P(NflSchedulePage)} />
           <Route path="/nfl/projections" element={P(NflProjectionsPage)} />
+          {/* NBA routes */}
+          <Route path="/nba" element={P(NbaLaunchPage)} />
           {/* System */}
           <Route path="/status" element={P(StatusPage)} />
           <Route path="*" element={<NotFoundPage />} />

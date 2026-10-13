@@ -24,11 +24,14 @@ const nflNavItems = [
   { to: '/nfl/team-rankings', label: 'Team Rankings' },
 ];
 
+const nbaNavItems = [];
+
 export default function Header() {
   const location = useLocation();
   const isNfl = location.pathname.startsWith('/nfl');
-  const activeSport = isNfl ? 'nfl' : 'mlb';
-  const navItems = activeSport === 'nfl' ? nflNavItems : mlbNavItems;
+  const isNba = location.pathname.startsWith('/nba');
+  const activeSport = isNba ? 'nba' : isNfl ? 'nfl' : 'mlb';
+  const navItems = activeSport === 'nba' ? nbaNavItems : activeSport === 'nfl' ? nflNavItems : mlbNavItems;
 
   const sportToggleStyle = (sport) => ({
     color: activeSport === sport ? colors.navy : colors.textMuted,
@@ -59,10 +62,11 @@ export default function Header() {
       <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', padding: '0 12px 8px' }}>
         <NavLink to="/mlb/starting-lineups" style={sportToggleStyle('mlb')}>MLB</NavLink>
         <NavLink to="/nfl/matchups" style={sportToggleStyle('nfl')}>NFL</NavLink>
+        <NavLink to="/nba" style={sportToggleStyle('nba')}>NBA</NavLink>
       </div>
 
       {/* Per-sport nav */}
-      <nav style={{ display: 'flex', justifyContent: 'center', gap: '4px', flexWrap: 'wrap', padding: '0 12px 10px' }}>
+      {navItems.length > 0 && <nav style={{ display: 'flex', justifyContent: 'center', gap: '4px', flexWrap: 'wrap', padding: '0 12px 10px' }}>
         {navItems.map(item => (
           <NavLink
             key={item.to}
@@ -81,7 +85,7 @@ export default function Header() {
             {item.label}
           </NavLink>
         ))}
-      </nav>
+      </nav>}
     </header>
   );
 }
