@@ -1227,6 +1227,8 @@ Pre-push hook rewritten to block ANY branch pushed to origin/main — not just l
 
 **Cross-references:** NBA_SITE_SPEC.md v1.2, PICKS_CALIBRATION_REVIEW.md (NBA repo), PREREGISTRATION_NBA_PICKS.md (NBA repo, pending).
 
+**Status:** LIVE — pushed to production October 13, 2026 (`3be624f nba-launch → origin/main`). Verified via headless Chromium (Playwright): /nba renders approved copy at 390x844 and 1440x900; home page, MLB /player-projections, and NFL /projections all render. Screenshots at `outputs/verification/nba_390x844.png` and `nba_1440x900.png`.
+
 ---
 
 ### Session: September 27, 2026 — BFEv0.33.0 → BFEv0.34.0 — Opponent Defense Column
