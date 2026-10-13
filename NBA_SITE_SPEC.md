@@ -1,6 +1,8 @@
 # NBA Site Spec — betrilo.com NBA Extension
 
-**Version:** 1.1 | **Created:** October 13, 2026 | **Status:** SPEC — pending operator approval
+**Version:** 1.2 | **Created:** October 13, 2026 | **Status:** SPEC — pending operator approval
+
+**v1.2 changes:** Projections-only launch (§1.5, §2.1–2.3); picks gated behind pre-registration (§2.3); landing page revised (§6.4); calendar revised (§7.3); pick pages, ledger, results, track-record moved to Wave 2 (§2.3). All v1.1 record rules retained for Wave 2. Driven by PICKS_CALIBRATION_REVIEW.md findings: recommended picks 51.4% / ROI -4.2% over 5,940 rows; player props against sportsbook lines 46.9% in the Mar 22–Apr 5 window.
 
 **v1.1 changes:** Record ledger (§2.4), publication rule (§2.5), Lock Parlay recommendation (§2.6), one-pick-one-count (§2.7), same-selection-as-bet-sheet (§4), strict grading (§2.5.4), BDL-grounded fields (§3), corrected calendar (§7), 21+ footer (§2.9), deploy path update (§6.1), sequencing constraint (§7.1).
 
@@ -20,7 +22,7 @@ Header.jsx already implements a sport-scoped toggle (MLB | NFL) from the NFL bui
 
 ### 1.3 Status Monitoring
 
-StatusPage.jsx monitors 13 surfaces (9 MLB + 4 NFL). NBA adds 5 surfaces (one per data contract + health). Each defines: file path, freshness field, game-count extractor, `noGameCount` flag. NBA plays nearly every day, so the StatusPage cross-checks the NBA game count against `nba_slate_latest.json` game count on game days; a mismatch between expected and actual is a yellow flag. Off-days (no games in the slate) show green with "No games today."
+StatusPage.jsx monitors 13 surfaces (9 MLB + 4 NFL). NBA Wave 1 adds 2 surfaces (projections + health); Wave 2 adds 3 more (best_bets, results, track_record). Each defines: file path, freshness field, game-count extractor, `noGameCount` flag. NBA plays nearly every day, so the StatusPage cross-checks the NBA game count against `nba_slate_latest.json` game count on game days; a mismatch between expected and actual is a yellow flag. Off-days (no games in the slate) show green with "No games today."
 
 ### 1.4 Shared Components
 
@@ -28,40 +30,46 @@ StatusPage.jsx monitors 13 surfaces (9 MLB + 4 NFL). NBA adds 5 surfaces (one pe
 
 **Generalize:** NflPageWrapper → `DarkPageWrapper` (remove NflValidationBanner import; accept optional banner as prop). Or clone as `NbaPageWrapper` with no validation banner.
 
-**Do not reuse:** NflValidationBanner — NBA is tracked from day one, not in shadow validation. NBA pages have no "No Track Record" banner.
+**Do not reuse:** NflValidationBanner — NBA Wave 1 has no pick pages and therefore no validation banner. Wave 2 pick pages launch with a verified record, not under validation.
 
-### 1.5 Key Difference from NFL
+### 1.5 Key Difference from NFL — and Revised NBA Posture
 
 NFL launched under a shadow validation gate — pages were noindex, pick surfaces were blocked pending 3 weeks graded at >=54%, and every page showed a "No Track Record" disclosure banner.
 
-**NBA launches differently.** Picks are tracked and graded in public from day one. There is no shadow gate, no validation banner, no noindex. NBA pages are indexable immediately and added to the sitemap at launch. The early-season carryover notice (see §2.8) is the only disclosure, and it's data-driven — it disappears on its own as players accumulate games.
+**NBA takes a similar posture, for different reasons.** An independent calibration review (PICKS_CALIBRATION_REVIEW.md) found that the EV engine's recommended picks hit 51.4% with -4.2% ROI over 5,940 graded rows — below break-even. Player props graded against sportsbook lines hit 46.9% in the Mar 22–Apr 5 window. The L10 hit-rate probability (p_model) is miscalibrated: stated 80%+ picks hit 52.4%. Edge size has zero predictive power.
+
+**NBA launches October 20 with projections only.** Projection pages (`/nba`, `/nba/projections`) are live and indexable from day one. Pick surfaces (`/nba/best-bets`, `/nba/results`, `/nba/track-record`) are gated behind a pre-registered publish decision in the NBA repo — they ship only when picks have beaten the market over a real sample. This is the honest posture: show what works (projections), grade what doesn't yet work (picks) privately, and publish picks only when they've earned it.
 
 ---
 
 ## 2. Launch Scope
 
-### 2.1 Live October 20 (Opening Night)
+### 2.1 Wave 1 — Live October 20 (Opening Night)
 
 | Route | Surface | Description |
 |-------|---------|-------------|
-| `/nba` | Hub | Today's slate summary + links to all NBA pages |
+| `/nba` | Hub | Today's slate summary + link to projections. No pick links, no track-record banner. |
 | `/nba/projections` | Player projections | Per-player PTS, REB, AST, 3PM, STL, BLK, TOV, PRA; filter by game and team |
-| `/nba/best-bets` | Picks | Best Bets and Strong Picks with tier labels; "last updated" time |
 
-**Best-bets empty state:** When props haven't posted yet (morning before books release lines), the page shows: "Lines aren't posted yet — picks appear once they are." Never a blank page, never a spinner that doesn't resolve.
+Both pages are indexable from day one and added to the sitemap. The hub page includes the line: "Picks: in private grading, not yet published."
 
-### 2.2 Live October 21 (First Graded Day)
+### 2.2 Wave 2 — Gated Behind Pre-Registration
 
-| Route | Surface | Description |
-|-------|---------|-------------|
-| `/nba/results` | Graded picks | Each day's graded picks — wins, losses, pushes, and voids |
-| `/nba/track-record` | Season record | NBA season to date, starting 0-0 on October 20 |
+These pages ship **only** when the pre-registered publish gate in `PREREGISTRATION_NBA_PICKS.md` (NBA repo) is met and the operator records a publish decision. Until then, these routes do not exist on the site.
 
-### 2.3 Not at Launch
+| Route | Surface | Gate |
+|-------|---------|------|
+| `/nba/best-bets` | Picks | Pre-registration gate met + operator publish decision |
+| `/nba/results` | Graded picks | Same |
+| `/nba/track-record` | Season record | Same |
+
+All v1.1 record rules (§2.4 ledger, §2.5 publication rule, §2.5.4 strict grading, §2.6 no Lock Parlay, §2.7 one-pick-one-count) are **unchanged** and apply to Wave 2 when it ships. The ledger, grading, and export infrastructure are built in the NBA repo now (for private shadow grading) but are not wired into the publish worktree until the gate is met.
+
+### 2.3 Not in Either Wave
 
 - Full edge report (per-prop EV/edge table)
 - Safe projections (conservative model output)
-- Lock Parlay (see §2.6 — recommendation: leave off at launch)
+- Lock Parlay (see §2.6 — recommendation: leave off permanently unless parlay legs are graded against sportsbook lines)
 
 These may ship later if there's demand. No spec work needed now.
 
@@ -179,19 +187,21 @@ The site Footer (`Footer.jsx:16-22`) currently says:
 
 This is a site-wide Footer change — it affects MLB and NFL pages too. This is correct: the 21+ notice should apply everywhere, not just NBA.
 
-### 2.10 Track Record Rules
+### 2.10 Track Record Rules (Wave 2)
 
-- **NBA only.** Starts at 0-0 on October 20, 2026. No 2025-26 numbers (the model has changed, and that record was never published on the site). Never combined with MLB or NFL.
+- **NBA only.** Starts at 0-0 on the date the publish gate is met. No pre-gate numbers — the private shadow log is not the public record. Never combined with MLB or NFL.
 - Track record displays: overall hit rate, by-stat breakdown (PTS, REB, AST, 3PM, STL, BLK, TOV, PRA), and daily results.
 - `verified` flag starts `false` and moves to `true` when the operator confirms the grading output matches the published picks ledger (manual check, same as MLB).
 
 ### 2.11 Search / Indexing
 
-NBA pages are **indexable** from day one. Unlike NFL (noindex during shadow validation), NBA picks are tracked from the start, so there's no reason to hide from search engines.
+**Wave 1 pages are indexable from day one.** `/nba` and `/nba/projections` are added to the sitemap at launch. They make no pick claims, so there's nothing to gate.
 
-- Add all 5 NBA routes to `public/sitemap.xml` at launch
-- Helmet tags: title, description, og:title, og:description, canonical — no `robots: noindex`
-- JSON-LD: add NBA to the WebSite schema on the landing page
+**Wave 2 pages are not indexed until they ship.** `/nba/best-bets`, `/nba/results`, `/nba/track-record` are not in the sitemap, not routed, and do not exist until the publish gate is met.
+
+- Add Wave 1 routes (2) to `public/sitemap.xml` at launch
+- Helmet tags: title, description, og:title, og:description, canonical — no `robots: noindex` on Wave 1 pages
+- JSON-LD: add NBA to the WebSite schema on the landing page (projections surface only)
 
 ---
 
@@ -286,9 +296,9 @@ All IDs are BallDontLie IDs. All timestamps are ISO 8601 with timezone. Data sou
 **Size:** ~100-150 players × ~15 fields ≈ 30-50 KB.
 **Empty state:** `"players": []` — page shows "No games today."
 
-### 3c. `nba_best_bets_latest.json`
+### 3c. `nba_best_bets_latest.json` (Wave 2)
 
-**Purpose:** Pick recommendations. Drives `/nba/best-bets`. Generated from the ledger.
+**Purpose:** Pick recommendations. Drives `/nba/best-bets`. Generated from the ledger. **Not exported until the publish gate is met.**
 
 ```json
 {
@@ -333,9 +343,9 @@ All IDs are BallDontLie IDs. All timestamps are ISO 8601 with timezone. Data sou
 **Size:** ~5-10 KB (20-40 picks per slate).
 **Empty state:** `"props_available": false, "picks": []` — page shows "Lines aren't posted yet — picks appear once they are."
 
-### 3d. `nba_results_latest.json`
+### 3d. `nba_results_latest.json` (Wave 2)
 
-**Purpose:** Graded picks. Drives `/nba/results`.
+**Purpose:** Graded picks. Drives `/nba/results`. **Not exported until the publish gate is met.**
 
 ```json
 {
@@ -379,9 +389,9 @@ All IDs are BallDontLie IDs. All timestamps are ISO 8601 with timezone. Data sou
 **Size:** ~15-25 KB (14-day window).
 **Empty state:** `"days": []` — page shows "No results yet — check back after games are graded."
 
-### 3e. `nba_track_record_latest.json`
+### 3e. `nba_track_record_latest.json` (Wave 2)
 
-**Purpose:** Season aggregate. Drives `/nba/track-record`.
+**Purpose:** Season aggregate. Drives `/nba/track-record`. **Not exported until the publish gate is met.**
 
 ```json
 {
@@ -447,14 +457,14 @@ All IDs are BallDontLie IDs. All timestamps are ISO 8601 with timezone. Data sou
 
 ## 4. Sources: Pipeline → Export Mapping
 
-| Export JSON | Pipeline Source | Runner Change Required |
-|-------------|---------------|----------------------|
-| `nba_slate_latest.json` | BDL game schedule (`bdl_client.py` game list, already fetched) | New export script; no runner change |
-| `nba_player_projections_latest.json` | `nba_predictions_YYYYMMDD_vN.csv` (already written) | New export script; no runner change |
-| `nba_best_bets_latest.json` | `published_picks_ledger.csv` (new) ← `build_edge_report()` + publishing rules | **Runner change:** factor pick selection out of the Excel renderer so exports and workbook call the same code (see below) |
-| `nba_results_latest.json` | Ledger + BDL box scores | New grading script (grades against ledger lines, not projections) |
-| `nba_track_record_latest.json` | Accumulated from graded ledger | New export script |
-| `nba_health_latest.json` | Timestamps from other exports + slate game count | New export script |
+| Export JSON | Wave | Pipeline Source | Runner Change Required |
+|-------------|------|---------------|----------------------|
+| `nba_slate_latest.json` | 1 | BDL game schedule (`bdl_client.py` game list, already fetched) | New export script; no runner change |
+| `nba_player_projections_latest.json` | 1 | `nba_predictions_YYYYMMDD_vN.csv` (already written) | New export script; no runner change |
+| `nba_health_latest.json` | 1 | Timestamps from other exports + slate game count | New export script |
+| `nba_best_bets_latest.json` | 2 | `published_picks_ledger.csv` (new) ← `build_edge_report()` + publishing rules | **Runner change:** factor pick selection out of the Excel renderer so exports and workbook call the same code (see below) |
+| `nba_results_latest.json` | 2 | Ledger + BDL box scores | New grading script (grades against ledger lines, not projections) |
+| `nba_track_record_latest.json` | 2 | Accumulated from graded ledger | New export script |
 
 **Any runner change that alters an output contract requires a BNv4 version bump under the NBA repo's rule.** The FE consumes the JSON contracts above; the internal runner format is the NBA pipeline's concern.
 
@@ -474,7 +484,15 @@ If the factoring has already happened by the time the NBA go-live session (sessi
 
 ## 5. Cadence and Push Schedule
 
-### NBA Refresh Schedule
+### NBA Refresh Schedule (Wave 1)
+
+| Trigger | Time (ET) | Surfaces Updated | Deploy |
+|---------|-----------|-----------------|--------|
+| Morning run | ~10 AM | slate, projections, health | Yes |
+
+The shadow log and private grader run in the NBA repo but do **not** push to the publish worktree.
+
+### NBA Refresh Schedule (Wave 2 — after publish gate met)
 
 | Trigger | Time (ET) | Surfaces Updated | Deploy |
 |---------|-----------|-----------------|--------|
@@ -485,14 +503,13 @@ If the factoring has already happened by the time the NBA go-live session (sessi
 
 ### Deploys Per Day Added
 
-- **Game days (nearly every day):** 3-4 deploys (morning + props + re-run + grading)
-- **Off days (rare — ~10-15 per season):** 0-1 deploys (health check only)
-- **Weekly total:** ~20-25 additional deploys
-- Combined with MLB's ~6/day and NFL's ~2-3/week, total is well within Vercel's limits
+- **Wave 1 game days:** 1 deploy (morning projections)
+- **Wave 2 game days:** 3-4 deploys (morning + props + re-run + grading)
+- **Off days:** 0-1 deploys (health check only)
 
 ### Storage Effect
 
-NBA adds ~120 KB of JSON per deploy (6 files, all small). The only growth file is `nba_track_record_latest.json` at ~15 KB max by season end. The ledger CSV in the NBA repo grows ~2 KB/day (~360 KB/season). **Negligible impact.**
+Wave 1 adds ~35 KB of JSON per deploy (3 files: slate, projections, health). The shadow log CSV in the NBA repo grows ~2 KB/day (~360 KB/season) but is not deployed. **Negligible impact.**
 
 ### "Last Refreshed" Display
 
@@ -519,31 +536,51 @@ NBA pages show: `"Updated Oct 20, 2:30 PM ET"` — absolute timestamp with relat
 
 ### 6.2 Components
 
+**Wave 1 (October 20):**
+
 | Component | Action | Notes |
 |-----------|--------|-------|
-| `NbaLaunchPage.jsx` | **New** → becomes `NbaHubPage.jsx` at launch | Pre-launch: "launches Oct 20" teaser. Post-launch: today's slate + links |
+| `NbaHubPage.jsx` | **New** | Today's slate + projections link. "Picks: in private grading, not yet published." No pick links. |
 | `NbaProjectionsPage.jsx` | **New** | SortableTable with PTS/REB/AST/3PM/STL/BLK/TOV/PRA columns; filter by game, team; carryover notice driven by `has_carryover` |
-| `NbaBestBetsPage.jsx` | **New** | Best Bets and Strong Picks with tier labels; "last updated" time; empty state for no-props; carryover notice. No Lock Parlay at launch. |
-| `NbaResultsPage.jsx` | **New** | Day-by-day graded picks, HIT/MISS/PUSH/VOID badges; daily summary; tier labels |
-| `NbaTrackRecordPage.jsx` | **New** | Season aggregate, by-stat breakdown, daily chart; "starts Oct 20" empty state |
 | `NbaPageWrapper.jsx` | **New** | Clone of NflPageWrapper without NflValidationBanner; accepts optional notice as children |
 | `NbaCarryoverNotice.jsx` | **New** | Early-season blending notice; rendered when `has_carryover === true` in data |
-| Header.jsx | **Modify** | Add `nbaNavItems`, 3-way sport detection, NBA toggle button |
-| LandingPage.jsx | **Modify** | Add `NBA_CARDS` array, NBA sport section, NBA banner |
-| StatusPage.jsx | **Modify** | Add NBA surfaces to SURFACES array; cross-check game count against slate |
-| App.js | **Modify** | Add `/nba/*` routes, update PicksCTA guard for `isNba` |
+| Header.jsx | **Modify** | Add `nbaNavItems` (hub + projections only), 3-way sport detection, NBA toggle button |
+| LandingPage.jsx | **Modify** | Add NBA sport section — projections only, "Picks: in private grading, not yet published." No track-record banner. |
+| StatusPage.jsx | **Modify** | Add Wave 1 NBA surfaces (health, projections, slate) |
+| App.js | **Modify** | Add `/nba` and `/nba/projections` routes only |
 | Footer.jsx | **Modify** | 21+ responsible gambling text (site-wide, affects all sports) |
-| sitemap.xml | **Modify** | Add 5 NBA routes |
+| sitemap.xml | **Modify** | Add 2 NBA routes (`/nba`, `/nba/projections`) |
 | check-theme-tokens.js | **Modify** | Add NBA page files to ENFORCED_FILES |
+
+**Wave 2 (after publish gate met):**
+
+| Component | Action | Notes |
+|-----------|--------|-------|
+| `NbaBestBetsPage.jsx` | **New** | Best Bets and Strong Picks with tier labels; "last updated" time; empty state for no-props. No Lock Parlay. |
+| `NbaResultsPage.jsx` | **New** | Day-by-day graded picks, HIT/MISS/PUSH/VOID badges; daily summary; tier labels |
+| `NbaTrackRecordPage.jsx` | **New** | Season aggregate, by-stat breakdown, daily chart |
+| Header.jsx | **Modify** | Expand `nbaNavItems` to include best-bets, results, track-record |
+| LandingPage.jsx | **Modify** | Add track-record banner and pick links to NBA section |
+| StatusPage.jsx | **Modify** | Add Wave 2 NBA surfaces (best_bets, results, track_record) |
+| App.js | **Modify** | Add `/nba/best-bets`, `/nba/results`, `/nba/track-record` routes |
+| sitemap.xml | **Modify** | Add 3 Wave 2 NBA routes |
 
 ### 6.3 StatusPage Surfaces
 
+**Wave 1:**
+
 ```js
-// NBA surfaces
+// NBA surfaces (Wave 1)
 { label: 'NBA Health', file: 'nba_health_latest.json', freshnessField: 'last_refreshed',
   countExtractor: d => d.slate_game_count, countLabel: 'games today' },
 { label: 'NBA Projections', file: 'nba_player_projections_latest.json', freshnessField: 'last_refreshed',
   countExtractor: d => d.players?.length, countLabel: 'players' },
+```
+
+**Wave 2 (add when publish gate met):**
+
+```js
+// NBA surfaces (Wave 2)
 { label: 'NBA Best Bets', file: 'nba_best_bets_latest.json', freshnessField: 'last_refreshed',
   countExtractor: d => d.picks?.length, countLabel: 'picks' },
 { label: 'NBA Results', file: 'nba_results_latest.json', freshnessField: 'last_refreshed', noGameCount: true },
@@ -555,20 +592,15 @@ NBA pages show: `"Updated Oct 20, 2:30 PM ET"` — absolute timestamp with relat
 ```
 ┌──────────────────────────────────────────────────────────┐
 │  🏀 NBA                                                  │
-│  Daily player projections and picks, tracked from day one │
+│  Model-driven player projections for every NBA game       │
 │                                                           │
-│  ┌──────────────────────────────────────────────────────┐ │
-│  │  Publicly Tracked Record                             │ │
-│  │  XX.X% hit rate (or "Season starts October 20")      │ │
-│  │  On published NBA picks — every win and loss counted. │ │
-│  │                                          [See it →]  │ │
-│  └──────────────────────────────────────────────────────┘ │
+│  Picks: in private grading, not yet published.            │
 │                                                           │
-│  [Projections] [Best Bets] [Results] [Track Record]       │
+│  [Projections]                                            │
 └──────────────────────────────────────────────────────────┘
 ```
 
-The NBA banner fetches `nba_track_record_latest.json`. Before October 20 or if fetch fails, shows "Season starts October 20" instead of a rate.
+No track-record banner. No pick links. No mention of best bets, a record, or tracked picks. When Wave 2 ships, the section expands to include the track-record banner and pick links — that is a separate FE change gated on the publish decision.
 
 ---
 
@@ -580,56 +612,67 @@ The NBA banner fetches `nba_track_record_latest.json`. Before October 20 or if f
 
 ### 7.2 Hours
 
+**Wave 1 (October 20 launch):**
+
 | # | Item | Backend (NBA repo) | Frontend (FE repo) | Total |
 |---|------|-------------------|--------------------| ------|
-| 1 | Export scripts: slate, projections, best_bets, results, track_record, health | 8 hrs | — | 8 hrs |
-| 2 | Published-picks ledger + publication rule (§2.4-2.5) | 4 hrs | — | 4 hrs |
-| 3 | Factor publishing rules into shared function (§4.1) | 2 hrs | — | 2 hrs |
-| 4 | Public grading script (grades against ledger lines, §2.5.4) | 3 hrs | — | 3 hrs |
-| 5 | Header 3-way toggle + NBA nav items | — | 1 hr | 1 hr |
-| 6 | NbaPageWrapper + NbaCarryoverNotice | — | 1 hr | 1 hr |
-| 7 | /nba hub (NbaHubPage.jsx) | — | 2 hrs | 2 hrs |
-| 8 | /nba/projections (NbaProjectionsPage.jsx) | — | 4 hrs | 4 hrs |
-| 9 | /nba/best-bets (NbaBestBetsPage.jsx) | — | 3 hrs | 3 hrs |
-| 10 | /nba/results (NbaResultsPage.jsx) | — | 3 hrs | 3 hrs |
-| 11 | /nba/track-record (NbaTrackRecordPage.jsx) | — | 3 hrs | 3 hrs |
-| 12 | StatusPage NBA surfaces + sitemap + theme guard + Footer 21+ | — | 1.5 hrs | 1.5 hrs |
-| 13 | LandingPage NBA section | — | 1.5 hrs | 1.5 hrs |
-| 14 | Publish script integration (NBA → publish worktree) | 2 hrs | — | 2 hrs |
-| | **Total** | **19 hrs** | **20 hrs** | **39 hrs** |
+| 1 | Export scripts: slate, projections, health | 4 hrs | — | 4 hrs |
+| 2 | Publish script integration (Wave 1 JSONs → publish worktree) | 2 hrs | — | 2 hrs |
+| 3 | Private shadow log + grader + weekly report | 4 hrs | — | 4 hrs |
+| 4 | Pre-registration document | 1 hr | — | 1 hr |
+| 5 | Honest accuracy reporting (split categories) | 2 hrs | — | 2 hrs |
+| 6 | Header 3-way toggle + NBA nav items (hub + projections) | — | 1 hr | 1 hr |
+| 7 | NbaPageWrapper + NbaCarryoverNotice | — | 1 hr | 1 hr |
+| 8 | /nba hub (NbaHubPage.jsx) | — | 2 hrs | 2 hrs |
+| 9 | /nba/projections (NbaProjectionsPage.jsx) | — | 4 hrs | 4 hrs |
+| 10 | StatusPage Wave 1 surfaces + sitemap + theme guard + Footer 21+ | — | 1.5 hrs | 1.5 hrs |
+| 11 | LandingPage NBA section (projections only) | — | 1 hr | 1 hr |
+| | **Wave 1 Total** | **13 hrs** | **10.5 hrs** | **23.5 hrs** |
+
+**Wave 2 (after publish gate met — separate sessions):**
+
+| # | Item | Backend (NBA repo) | Frontend (FE repo) | Total |
+|---|------|-------------------|--------------------| ------|
+| W2-1 | Export scripts: best_bets, results, track_record | 4 hrs | — | 4 hrs |
+| W2-2 | Published-picks ledger + publication rule (§2.4-2.5) | 4 hrs | — | 4 hrs |
+| W2-3 | Factor publishing rules into shared function (§4.1) | 2 hrs | — | 2 hrs |
+| W2-4 | Public grading script (grades against ledger lines, §2.5.4) | 3 hrs | — | 3 hrs |
+| W2-5 | /nba/best-bets, /nba/results, /nba/track-record pages | — | 9 hrs | 9 hrs |
+| W2-6 | Landing page upgrade (track-record banner, pick links) | — | 1.5 hrs | 1.5 hrs |
+| | **Wave 2 Total** | **13 hrs** | **10.5 hrs** | **23.5 hrs** |
 
 ### 7.3 Calendar
 
 Today is Tuesday, October 13.
 
+**Wave 1:**
+
 | Day | Work | Deliverable |
 |-----|------|-------------|
-| **Wed Oct 14** | NBA export scripts (#1-#4, #14) — starts after session 7 finishes | NBA pipeline writes all 6 JSONs + ledger; publishing rules factored; public grading script tested |
-| **Thu Oct 15** | FE pages (#5-#13) | All NBA pages built on branch; Footer 21+ applied |
+| **Wed Oct 14** | NBA export scripts, shadow log, pre-registration, accuracy fix | NBA pipeline writes Wave 1 JSONs; shadow log ready; pre-registration committed; accuracy reports split |
+| **Thu Oct 15** | FE pages (hub + projections only) | Wave 1 pages built on branch; Footer 21+ applied |
 | **Fri Oct 16** | Preview build + operator review | Preview URL with real NBA data for approval |
 | **Sat-Sun Oct 17-18** | Merge after approval | Code on production; data not yet flowing (no games) |
-| **Mon Oct 19** | Dry run using a replayed past date | Data pushed to preview branch only, never production. End-to-end: pipeline → ledger → export → publish worktree → site renders |
-| **Tue Oct 20** | Opening night — NBA live | Morning: projections. Afternoon: picks publish, ledger starts. Evening: first graded results. |
-| **Wed Oct 21** | Results + track record live | First graded day published |
+| **Mon Oct 19** | Dry run using a replayed past date | Wave 1 exports pushed to preview branch only. Shadow log records but does not publish. |
+| **Tue Oct 20** | Opening night — NBA live | Morning: projections go live on site. Shadow log starts recording pick candidates privately. |
+
+**Wave 2:** Scheduled only after the pre-registration gate is met. Not on this calendar.
 
 ---
 
 ## 8. Disagreements with Operator Decisions
 
-**None on the 11 revision items.** All operator decisions in the prompt are consistent with the recon and strengthen the spec. Specific notes:
+**None.** The projections-only launch is the correct call given the calibration review findings. Specific notes:
 
-1. **Record ledger** — strictly better than v1.0's in-JSON locking. The ledger is append-only, git-tracked, survives JSON overwrites, and gives an unambiguous audit trail.
-2. **Publication locking > tip-off locking** — agreed and documented in §2.5.2 with rationale. No scenario where tip-off locking is better.
-3. **Lock Parlay off at launch** — recommended. Model safe lines ≠ sportsbook lines; mixing them in any form is confusing for credibility.
-4. **One pick, one count** — clean. Tier labels are display-only; the rate is the rate.
-5. **Same selection as bet sheet** — the factoring of publishing rules is the right call. Currently inline at `runner:1788-1810`; needs to be a shared function.
-6. **Strict grading** — correct. `actual > line` for OVER, `actual < line` for UNDER, `==` is push. The accuracy runner's `err = actual - proj` is a different measurement (projection accuracy) and must not be used for the public record.
-7. **BDL grounding** — all IDs, timestamps, and data sources now explicitly BDL. Tipoff is full ISO 8601 with timezone.
-8. **21+ footer** — missing from current footer, confirmed. Site-wide change is correct.
-9. **Calendar** — corrected to start Wed Oct 14, preview Fri Oct 16. Dry run on Mon Oct 19 pushes to preview branch only.
-10. **StatusPage game-count check** — corrected. NBA plays nearly every day; checking against the slate is the right approach, not treating most days as off days.
-11. **Sequencing** — critical constraint. Session 7 and site exports both touch the runner; they must not overlap.
+1. **Projections-only launch** — correct. Recommended picks hit 51.4% / ROI -4.2%. Publishing them on day one would damage credibility.
+2. **Private shadow grading** — the only honest path. Grade privately, publish if the gate is met.
+3. **Pre-registration** — makes the gate tamper-evident and pre-committed. The 600-pick / +2% ROI bar is a minimum, not proof of an edge — stated plainly in the document.
+4. **All v1.1 record rules retained for Wave 2** — correct. The ledger, strict grading, publication locking, no Lock Parlay, one-pick-one-count infrastructure is built now for shadow grading and ships unchanged when the gate is met.
+5. **Landing page: "Picks: in private grading, not yet published."** — honest, minimal, no false claims.
+6. **21+ footer** — still in Wave 1 scope, site-wide.
+7. **Accuracy reporting split** — critical. The 55.1% blended rate mixed parlay-floor hits with sportsbook-line hits. Separate categories prevent this.
+8. **Calendar** — Wave 1 is smaller (hub + projections), so the timeline is tighter. Wave 2 is scheduled only after the gate is met.
 
 ---
 
-*NBA Site Spec v1.1 — October 13, 2026. Spec pending operator approval.*
+*NBA Site Spec v1.2 — October 13, 2026. Spec pending operator approval.*

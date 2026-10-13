@@ -1,19 +1,22 @@
 #!/bin/bash
 #
-# Pre-push hook: blocks pushes of local main to origin/main while
-# the NFL production gate is unmet (layout approval + shadow validation,
-# §BFEv0.11.0). Local main contains unreleased NFL page code that would
-# auto-deploy to production via Vercel.
+# Pre-push hook: blocks pushes of local main to origin/main unless an
+# approved override env var is set. Local main may contain unreleased
+# page code (NFL, NBA) that would auto-deploy to production via Vercel.
 #
 # This hook does NOT block the publish-main worktree's data pushes —
 # those push HEAD:main from the publish-main branch, so local_ref is
 # refs/heads/publish-main, not refs/heads/main.
 #
-# Override: NFL_GATE_MET=1 git push origin main
+# Override (any one of these):
+#   NFL_GATE_MET=1 git push origin main
+#   NBA_SITE_APPROVED=1 git push origin main
+#
 # Note: --no-verify bypasses all hooks including this one.
 #
 # Wire: git config core.hooksPath scripts/hooks
 # Tracked: BFEv0.22.0 (September 8, 2026)
+# Updated: BFEv0.35.0 (October 13, 2026) — added NBA_SITE_APPROVED
 
 remote="$1"
 url="$2"
@@ -24,31 +27,34 @@ while read local_ref local_sha remote_ref remote_sha; do
         # Block if pushing LOCAL main (refs/heads/main) to origin/main,
         # regardless of which branch is currently checked out.
         if [ "$local_ref" = "refs/heads/main" ]; then
-            # Allow override — but require a terminal so someone sees the summary.
-            # NFL_GATE_MET=1 in a non-interactive shell (background, pipe, etc.)
-            # is blocked — an override nobody can see is not an approved push.
-            # Use NFL_GATE_MET_UNATTENDED=1 for genuinely automated pushes.
+            # Check for any approved override
+            override_label=""
             if [ "$NFL_GATE_MET" = "1" ]; then
-                if [ ! -t 1 ] && [ "$NFL_GATE_MET_UNATTENDED" != "1" ]; then
+                override_label="NFL_GATE_MET"
+            elif [ "$NBA_SITE_APPROVED" = "1" ]; then
+                override_label="NBA_SITE_APPROVED"
+            fi
+
+            if [ -n "$override_label" ]; then
+                # Require interactive terminal unless _UNATTENDED is also set
+                unattended_var="${override_label}_UNATTENDED"
+                if [ ! -t 1 ] && [ "${!unattended_var}" != "1" ]; then
                     echo ""
                     echo "============================================================"
                     echo "  BLOCKED: override in non-interactive shell"
                     echo "============================================================"
                     echo ""
-                    echo "  NFL_GATE_MET=1 requires an interactive terminal so the"
+                    echo "  ${override_label}=1 requires an interactive terminal so the"
                     echo "  operator can review the diff summary before it ships."
                     echo ""
                     echo "  Run this in a terminal, not a background process:"
-                    echo "    NFL_GATE_MET=1 git push origin main"
-                    echo ""
-                    echo "  For genuinely automated pushes (rare):"
-                    echo "    NFL_GATE_MET_UNATTENDED=1 NFL_GATE_MET=1 git push origin main"
+                    echo "    ${override_label}=1 git push origin main"
                     echo ""
                     echo "============================================================"
                     exit 1
                 fi
                 echo ""
-                echo "[pre-push] NFL_GATE_MET=1 — override accepted."
+                echo "[pre-push] ${override_label}=1 — override accepted."
                 echo ""
                 # Show diff summary so operator can abort if needed
                 if [ "$remote_sha" != "0000000000000000000000000000000000000000" ]; then
@@ -79,20 +85,16 @@ while read local_ref local_sha remote_ref remote_sha; do
             echo "  BLOCKED: push of local main to origin/main"
             echo "============================================================"
             echo ""
-            echo "  Local main contains unreleased NFL page code (BFEv0.7.0+)"
-            echo "  that would auto-deploy to production via Vercel."
-            echo ""
-            echo "  The NFL production gate is NOT yet met:"
-            echo "    - Layout approval (operator review of nfl-preview)"
-            echo "    - Shadow validation (3 weeks graded, STRONG >= 54%)"
-            echo "  See §BFEv0.11.0 in BETRILO_FE_PROJECT_BOOK.md"
+            echo "  Local main contains unreleased page code that would"
+            echo "  auto-deploy to production via Vercel."
             echo ""
             echo "  To push data-only from the publish worktree:"
             echo "    cd E:/Betrilo/betrilo-analytics-publish"
             echo "    git push origin HEAD:main"
             echo ""
-            echo "  To override (NFL gate met, operator approved):"
+            echo "  To override (approved code push):"
             echo "    NFL_GATE_MET=1 git push origin main"
+            echo "    NBA_SITE_APPROVED=1 git push origin main"
             echo ""
             echo "  Note: --no-verify bypasses all git hooks including this one."
             echo ""

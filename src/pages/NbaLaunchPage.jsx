@@ -1,16 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { dark } from '../theme';
 
 /**
- * Pre-launch /nba page — "NBA on Betrilo launches October 20."
- * After launch, this file becomes NbaHubPage.jsx (today's slate + links).
- * Built to swap cleanly: same route, same wrapper, same theme.
+ * /nba launch page — projections-only posture (v1.2).
+ * No pick links, no track-record banner, no MLB cross-link.
+ * Thursday's build adds the projections page and links to it from here.
  */
 export default function NbaLaunchPage() {
-  const title = 'NBA Projections & Best Bets — Betrilo';
-  const desc = 'Model-driven NBA player projections and best bets launching October 20, 2026. Every pick tracked and graded in public.';
+  const title = 'NBA Player Projections — Betrilo';
+  const desc = 'Model-driven NBA player projections for every game, starting opening night October 20, 2026.';
 
   return (
     <div style={{ background: dark.pageBg, minHeight: '100vh', padding: '60px 16px 80px' }}>
@@ -44,45 +43,9 @@ export default function NbaLaunchPage() {
           lineHeight: 1.6,
           marginBottom: '32px',
         }}>
-          Model-driven player projections and best bets for every NBA slate,
-          starting opening night. Every pick is tracked and graded in
-          public — wins and losses.
+          Model-driven player projections for every NBA game, starting
+          opening night.
         </p>
-
-        {/* Track record CTA */}
-        <div style={{
-          background: dark.surfaceBg,
-          border: `1px solid ${dark.border}`,
-          borderRadius: '10px',
-          padding: '24px 28px',
-          marginBottom: '40px',
-          textAlign: 'left',
-        }}>
-          <p style={{
-            color: dark.textSecondary,
-            fontSize: '15px',
-            lineHeight: 1.55,
-            margin: '0 0 16px',
-          }}>
-            See how we track every pick on the MLB side — same transparency,
-            same accountability, coming to NBA.
-          </p>
-          <Link
-            to="/mlb/track-record"
-            style={{
-              display: 'inline-block',
-              background: dark.accentBg,
-              color: dark.accentText,
-              fontWeight: 800,
-              fontSize: '14px',
-              padding: '10px 22px',
-              borderRadius: '8px',
-              textDecoration: 'none',
-            }}
-          >
-            See MLB track record →
-          </Link>
-        </div>
 
         {/* Green accent divider */}
         <div style={{
@@ -95,11 +58,11 @@ export default function NbaLaunchPage() {
 
         <p style={{
           color: dark.textMuted,
-          fontSize: '13px',
-          lineHeight: 1.5,
+          fontSize: '14px',
+          lineHeight: 1.55,
         }}>
-          Projections, best bets, results, and a full track record — all
-          live on opening night.
+          Picks come later: we grade them privately first and publish them
+          only once they've beaten the market over a real sample.
         </p>
       </div>
     </div>
