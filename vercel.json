@@ -1,6 +1,7 @@
 {
   "rewrites": [
     { "source": "/mlb/batter-vs-pitcher-guide", "destination": "/mlb/batter-vs-pitcher-guide.html" },
+    { "source": "/nba", "destination": "/nba.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
