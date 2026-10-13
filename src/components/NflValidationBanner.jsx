@@ -2,9 +2,9 @@ import React from 'react';
 import { dark } from '../theme';
 
 /**
- * Persistent validation disclosure for all NFL pages.
- * Visually distinct from the navy page background — slightly lighter
- * surface with amber accent border, not blending into the page.
+ * Accuracy disclosure banner for all NFL pages.
+ * Replaces the former "NO TRACK RECORD" banner with a measured accuracy statement.
+ * Amber treatment kept as a note, not marketing.
  */
 export default function NflValidationBanner() {
   return (
@@ -31,15 +31,18 @@ export default function NflValidationBanner() {
         whiteSpace: 'nowrap',
         marginTop: '1px',
       }}>
-        No Track Record
+        Accuracy Note
       </span>
       <span style={{
         color: dark.bannerText,
         fontSize: '13px',
         lineHeight: 1.45,
       }}>
-        Not picks — this model has no track record yet. Projections are from an unvalidated
-        system in private testing and are not published recommendations.
+        These are model projections measured weekly against market consensus lines.
+        The model is more accurate than the line on some markets and less accurate on others
+        — accuracy figures are published below. These are projections, not betting
+        recommendations. 21+ only. If you or someone you know has a gambling problem,
+        call 1-800-GAMBLER.
       </span>
     </div>
   );

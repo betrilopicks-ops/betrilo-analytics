@@ -13,9 +13,35 @@ const DVP_COLORS = {
   Neutral: dark.dvpNeutral, Tough: dark.dvpTough, Avoid: dark.dvpAvoid,
 };
 
+// Primary market per position for the Gap column
+const PRIMARY_MARKET = { QB: 'pass_yds', RB: 'rush_yds', WR: 'rec_yds', TE: 'rec_yds' };
+
+/** Format a stat cell showing projection + line + diff when a line exists. */
+const statWithLine = (lineKey, decimals = 1) => (v, row) => {
+  if (v == null) return '—';
+  const line = row[lineKey];
+  const fmt = n => n != null ? Number(n).toFixed(decimals) : null;
+  const projStr = fmt(v);
+  if (line == null) return projStr;
+  const diff = v - line;
+  const diffSign = diff > 0 ? '+' : '';
+  return (
+    <div style={{ lineHeight: 1.3 }}>
+      <div>{projStr}</div>
+      <div style={{ fontSize: '10px', color: dark.textMuted }}>
+        Ln {fmt(line)}{' '}
+        <span style={{ color: Math.abs(diff) > 0.05 ? (diff > 0 ? dark.statusGreen : dark.statusAmber) : dark.textMuted }}>
+          ({diffSign}{fmt(diff)})
+        </span>
+      </div>
+    </div>
+  );
+};
+
 export default function NflProjectionsPage() {
   const [data, setData] = useState(null);
   const [gameLogs, setGameLogs] = useState(null);
+  const [accuracy, setAccuracy] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [activePos, setActivePos] = useState('All');
@@ -32,6 +58,10 @@ export default function NflProjectionsPage() {
     fetch(`/data/nfl_game_logs_${new Date().getFullYear()}.json`)
       .then(r => r.ok ? r.json() : null)
       .then(d => setGameLogs(d))
+      .catch(() => {});
+    fetch('/data/nfl_accuracy_latest.json')
+      .then(r => r.ok ? r.json() : null)
+      .then(d => setAccuracy(d))
       .catch(() => {});
   }, []);
 
@@ -55,6 +85,12 @@ export default function NflProjectionsPage() {
     const logPlayers = gameLogs?.players || {};
     let rows = data.players.map(p => {
       const hasLog = !!logPlayers[p.player_id];
+      const ln = p.lines || {};
+      // Compute gap for sorting: primary market's absolute gap
+      const pm = PRIMARY_MARKET[p.position];
+      const proj_pm = p.projections?.[pm];
+      const line_pm = ln[pm];
+      const gap = (proj_pm != null && line_pm != null) ? proj_pm - line_pm : null;
       return {
         player_id: p.player_id,
         player_name: p.player_name,
@@ -77,6 +113,14 @@ export default function NflProjectionsPage() {
         pass_tds: p.projections?.pass_tds,
         completions: p.projections?.completions,
         target_share: p.usage?.target_share,
+        // Book lines
+        rec_yds_line: ln.rec_yds,
+        receptions_line: ln.receptions,
+        rush_yds_line: ln.rush_yds,
+        pass_yds_line: ln.pass_yds,
+        pass_tds_line: ln.pass_tds,
+        // Gap for sorting (raw difference, primary market)
+        gap: gap,
         _clickable: hasLog,
       };
     });
@@ -135,37 +179,51 @@ export default function NflProjectionsPage() {
   let statColumns = [];
   if (activePos === 'QB') {
     statColumns = [
-      { key: 'pass_yds', label: 'Pass Yds', sortable: true, align: 'right' },
-      { key: 'pass_tds', label: 'Pass TD', sortable: true, align: 'right', format: v => v?.toFixed(1) },
+      { key: 'pass_yds', label: 'Pass Yds', sortable: true, align: 'right', format: statWithLine('pass_yds_line', 1) },
+      { key: 'pass_tds', label: 'Pass TD', sortable: true, align: 'right', format: statWithLine('pass_tds_line', 1) },
       { key: 'completions', label: 'Comp', sortable: true, align: 'right' },
-      { key: 'rush_yds', label: 'Rush Yds', sortable: true, align: 'right' },
+      { key: 'rush_yds', label: 'Rush Yds', sortable: true, align: 'right', format: statWithLine('rush_yds_line', 1) },
     ];
   } else if (activePos === 'RB') {
     statColumns = [
-      { key: 'rush_yds', label: 'Rush Yds', sortable: true, align: 'right' },
+      { key: 'rush_yds', label: 'Rush Yds', sortable: true, align: 'right', format: statWithLine('rush_yds_line', 1) },
       { key: 'carries', label: 'Carries', sortable: true, align: 'right' },
       { key: 'rush_tds', label: 'Rush TD', sortable: true, align: 'right', format: v => v?.toFixed(2) },
-      { key: 'rec_yds', label: 'Rec Yds', sortable: true, align: 'right' },
-      { key: 'receptions', label: 'Rec', sortable: true, align: 'right' },
+      { key: 'rec_yds', label: 'Rec Yds', sortable: true, align: 'right', format: statWithLine('rec_yds_line', 1) },
+      { key: 'receptions', label: 'Rec', sortable: true, align: 'right', format: statWithLine('receptions_line', 1) },
     ];
   } else if (activePos === 'WR' || activePos === 'TE') {
     statColumns = [
-      { key: 'rec_yds', label: 'Rec Yds', sortable: true, align: 'right' },
-      { key: 'receptions', label: 'Rec', sortable: true, align: 'right' },
+      { key: 'rec_yds', label: 'Rec Yds', sortable: true, align: 'right', format: statWithLine('rec_yds_line', 1) },
+      { key: 'receptions', label: 'Rec', sortable: true, align: 'right', format: statWithLine('receptions_line', 1) },
       { key: 'targets', label: 'Tgt', sortable: true, align: 'right' },
       { key: 'rec_tds', label: 'Rec TD', sortable: true, align: 'right', format: v => v?.toFixed(2) },
       { key: 'target_share', label: 'Tgt%', sortable: true, align: 'right', format: v => v ? (v * 100).toFixed(0) + '%' : '—' },
     ];
   } else {
     statColumns = [
-      { key: 'pass_yds', label: 'Pass Yds', sortable: true, align: 'right' },
-      { key: 'rush_yds', label: 'Rush Yds', sortable: true, align: 'right' },
-      { key: 'rec_yds', label: 'Rec Yds', sortable: true, align: 'right' },
-      { key: 'receptions', label: 'Rec', sortable: true, align: 'right' },
+      { key: 'pass_yds', label: 'Pass Yds', sortable: true, align: 'right', format: statWithLine('pass_yds_line', 1) },
+      { key: 'rush_yds', label: 'Rush Yds', sortable: true, align: 'right', format: statWithLine('rush_yds_line', 1) },
+      { key: 'rec_yds', label: 'Rec Yds', sortable: true, align: 'right', format: statWithLine('rec_yds_line', 1) },
+      { key: 'receptions', label: 'Rec', sortable: true, align: 'right', format: statWithLine('receptions_line', 1) },
     ];
   }
 
-  const columns = [...baseColumns, ...statColumns,
+  // Gap column — shows how much the model disagrees with the book line
+  const gapCol = {
+    key: 'gap', label: 'Gap', sortable: true, align: 'right',
+    format: (v) => {
+      if (v == null) return '—';
+      const sign = v > 0 ? '+' : '';
+      return (
+        <span style={{ color: Math.abs(v) > 0.5 ? (v > 0 ? dark.statusGreen : dark.statusAmber) : dark.textMuted, fontWeight: 600 }}>
+          {sign}{v.toFixed(1)}
+        </span>
+      );
+    },
+  };
+
+  const columns = [...baseColumns, ...statColumns, gapCol,
     { key: 'dc', label: 'DC', sortable: true, align: 'center', format: v => v <= 3 ? v : '—' },
   ];
 
@@ -175,7 +233,7 @@ export default function NflProjectionsPage() {
     <>
       <Helmet>
         <title>{data?.week ? `NFL Player Projections — Week ${data.week} | Betrilo` : 'NFL Player Projections | Betrilo'}</title>
-        <meta name="description" content="NFL player projections for QB, RB, WR, TE — passing, rushing, receiving yards and touchdowns. Model in private validation, not published picks." />
+        <meta name="description" content="NFL player projections for QB, RB, WR, TE — passing, rushing, receiving yards and touchdowns. Model projections shown alongside consensus book lines with measured accuracy." />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 
@@ -279,6 +337,8 @@ export default function NflProjectionsPage() {
 
         <div style={{ marginTop: '16px', padding: '12px 16px', background: dark.surfaceBg, borderRadius: '8px', fontSize: '12px', color: dark.textSecondary, lineHeight: 1.6 }}>
           <strong style={{ color: dark.textPrimary }}>Key:</strong>{' '}
+          Stat columns show model projection; <span style={{ color: dark.textMuted }}>Ln</span> = consensus book line |{' '}
+          Gap = model minus line (sort to find biggest disagreements) |{' '}
           DvP = Defense vs Position (Rank 1 = easiest matchup) |{' '}
           DC = Depth Chart rank (1 = starter) | Inj = Injury status | Tgt% = Target share |{' '}
           <span style={{ color: dark.dvpSmash }}>Smash</span>{' / '}
@@ -287,6 +347,56 @@ export default function NflProjectionsPage() {
           <span style={{ color: dark.dvpTough }}>Tough</span>{' / '}
           <span style={{ color: dark.dvpAvoid }}>Avoid</span>
         </div>
+
+        {/* Accuracy Transparency Section */}
+        {accuracy?.pooled && (
+          <div style={{
+            marginTop: '24px', padding: '16px 20px',
+            background: dark.surfaceBg, borderRadius: '8px',
+            border: `1px solid ${dark.border}`,
+          }}>
+            <h2 style={{ color: dark.textPrimary, fontSize: '18px', fontWeight: 700, margin: '0 0 4px 0' }}>
+              Model Accuracy
+            </h2>
+            <p style={{ color: dark.textSecondary, fontSize: '12px', margin: '0 0 14px 0' }}>
+              Measured weekly against actual results. Ratio = model error / line error
+              (below 1.00 = model is more accurate).
+              {accuracy.graded_weeks && ` Based on ${accuracy.total_graded} projections across Weeks ${accuracy.graded_weeks.join(', ')}.`}
+            </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+              {Object.entries(accuracy.pooled).map(([mkt, m]) => {
+                const better = m.ratio < 1.0;
+                const close = m.ratio >= 1.0 && m.ratio <= 1.05;
+                const pctLabel = better
+                  ? `${((1 - m.ratio) * 100).toFixed(0)}% more accurate than the market line`
+                  : `${((m.ratio - 1) * 100).toFixed(0)}% less accurate than the market line`;
+                return (
+                  <div key={mkt} style={{
+                    flex: '1 1 180px', padding: '10px 14px',
+                    background: dark.pageBg, borderRadius: '6px',
+                    border: `1px solid ${better ? dark.statusGreen : close ? dark.statusAmber : dark.border}`,
+                  }}>
+                    <div style={{ color: dark.textPrimary, fontWeight: 700, fontSize: '13px', marginBottom: '4px' }}>
+                      {m.display_name}
+                    </div>
+                    <div style={{
+                      color: better ? dark.statusGreen : close ? dark.statusAmber : dark.statusRed,
+                      fontWeight: 700, fontSize: '20px',
+                    }}>
+                      {m.ratio.toFixed(2)}x
+                    </div>
+                    <div style={{ color: dark.textSecondary, fontSize: '11px', lineHeight: 1.4 }}>
+                      {pctLabel}
+                    </div>
+                    <div style={{ color: dark.textMuted, fontSize: '10px', marginTop: '4px' }}>
+                      n={m.n} | Model MAE: {m.model_mae} | Line MAE: {m.line_mae}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
       </NflPageWrapper>
 
       {modalPlayer && (
