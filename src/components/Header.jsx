@@ -25,7 +25,10 @@ const nflNavItems = [
 ];
 
 const nbaNavItems = process.env.REACT_APP_NBA_PROJECTIONS === '1'
-  ? [{ to: '/nba/projections', label: 'Projections' }]
+  ? [
+      { to: '/nba/matchups', label: 'Matchups' },
+      { to: '/nba/projections', label: 'Projections' },
+    ]
   : [];
 
 export default function Header() {

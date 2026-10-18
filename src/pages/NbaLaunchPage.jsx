@@ -66,7 +66,7 @@ export default function NbaLaunchPage() {
                   they've beaten the market over a real sample.
                 </p>
                 <a
-                  href="/nba/projections"
+                  href="/nba/matchups"
                   style={{
                     display: 'inline-block',
                     alignSelf: 'flex-start',
@@ -80,7 +80,7 @@ export default function NbaLaunchPage() {
                     textDecoration: 'none',
                   }}
                 >
-                  View Projections &rarr;
+                  View Matchups &rarr;
                 </a>
               </>
             ) : (

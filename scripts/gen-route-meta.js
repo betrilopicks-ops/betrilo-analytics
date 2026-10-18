@@ -19,6 +19,12 @@ const baseHtml = fs.readFileSync(src, 'utf8');
 
 const ROUTES = [
   {
+    file: 'nba_matchups.html',
+    title: 'NBA Matchups \u2014 Betrilo',
+    desc: 'Model-driven NBA game matchup projections with team scores and player breakdowns.',
+    url: 'https://betrilo.com/nba/matchups',
+  },
+  {
     file: 'nba_projections.html',
     title: 'NBA Player Projections \u2014 Betrilo',
     desc: 'Model-driven NBA player projections for every game.',
