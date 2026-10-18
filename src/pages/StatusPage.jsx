@@ -152,6 +152,20 @@ const SURFACES = [
     getRecords: d => ({ count: d.player_count ?? 0, label: 'players' }),
     noGameCount: true,
   },
+  // ── NBA surfaces ──
+  {
+    key: 'nba_projections',
+    label: 'NBA Projections',
+    file: '/data/nba_gate_report_latest.json',
+    getFreshness: d => d.generated_at || d.checked_at,
+    getGames: () => null,
+    getRecords: d => {
+      const result = d.result ?? 'UNKNOWN';
+      return { count: result === 'PASS' ? 1 : 0, label: result === 'PASS' ? 'PASS' : result };
+    },
+    noGameCount: true,
+    getVerdict: d => d.result,
+  },
 ];
 
 // ── Helpers ──────────────────────────────────────────────────────────────────

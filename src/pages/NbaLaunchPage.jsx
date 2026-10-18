@@ -44,25 +44,68 @@ export default function NbaLaunchPage() {
           textAlign: 'left',
         }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-            <span style={{
-              display: 'inline-block',
-              background: colors.navyLight,
-              color: GREEN,
-              fontSize: '11px',
-              fontWeight: 700,
-              letterSpacing: '1.5px',
-              textTransform: 'uppercase',
-              padding: '4px 12px',
-              borderRadius: '999px',
-              alignSelf: 'flex-start',
-            }}>
-              Launches Oct 20
-            </span>
-            <p style={{ color: '#9fb3c0', fontSize: '14px', margin: '6px 0 0', lineHeight: 1.55 }}>
-              Model-driven player projections for every NBA game, starting
-              opening night. Picks come later: we grade them privately first and
-              publish them only once they've beaten the market over a real sample.
-            </p>
+            {process.env.REACT_APP_NBA_PROJECTIONS === '1' ? (
+              <>
+                <span style={{
+                  display: 'inline-block',
+                  background: '#19C93E',
+                  color: '#0B2331',
+                  fontSize: '11px',
+                  fontWeight: 700,
+                  letterSpacing: '1.5px',
+                  textTransform: 'uppercase',
+                  padding: '4px 12px',
+                  borderRadius: '999px',
+                  alignSelf: 'flex-start',
+                }}>
+                  LIVE
+                </span>
+                <p style={{ color: '#9fb3c0', fontSize: '14px', margin: '6px 0 0', lineHeight: 1.55 }}>
+                  Model-driven player projections for every NBA game. Picks come
+                  later: we grade them privately first and publish them only once
+                  they've beaten the market over a real sample.
+                </p>
+                <a
+                  href="/nba/projections"
+                  style={{
+                    display: 'inline-block',
+                    alignSelf: 'flex-start',
+                    marginTop: '10px',
+                    background: GREEN,
+                    color: NAVY,
+                    padding: '8px 20px',
+                    borderRadius: '6px',
+                    fontSize: '14px',
+                    fontWeight: 700,
+                    textDecoration: 'none',
+                  }}
+                >
+                  View Projections &rarr;
+                </a>
+              </>
+            ) : (
+              <>
+                <span style={{
+                  display: 'inline-block',
+                  background: colors.navyLight,
+                  color: GREEN,
+                  fontSize: '11px',
+                  fontWeight: 700,
+                  letterSpacing: '1.5px',
+                  textTransform: 'uppercase',
+                  padding: '4px 12px',
+                  borderRadius: '999px',
+                  alignSelf: 'flex-start',
+                }}>
+                  Launches Oct 20
+                </span>
+                <p style={{ color: '#9fb3c0', fontSize: '14px', margin: '6px 0 0', lineHeight: 1.55 }}>
+                  Model-driven player projections for every NBA game, starting
+                  opening night. Picks come later: we grade them privately first and
+                  publish them only once they've beaten the market over a real sample.
+                </p>
+              </>
+            )}
           </div>
         </div>
       </div>
