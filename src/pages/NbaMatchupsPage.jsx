@@ -119,8 +119,9 @@ function GameCard({ game }) {
   const [playersOpen, setPlayersOpen] = useState(false);
 
   const delta = game.delta_vs_market;
+  const hasMarket = game.market_total != null && delta != null;
   const deltaColor = delta > 0 ? dark.statusGreen : delta < 0 ? dark.statusRed : dark.textSecondary;
-  const deltaStr = delta > 0 ? `+${delta.toFixed(1)}` : delta.toFixed(1);
+  const deltaStr = hasMarket ? (delta > 0 ? `+${delta.toFixed(1)}` : delta.toFixed(1)) : '';
 
   return (
     <div style={{
@@ -150,12 +151,16 @@ function GameCard({ game }) {
         <span style={{ color: dark.textSecondary }}>
           Proj Total: <strong style={{ color: dark.textPrimary }}>{game.proj_total}</strong>
         </span>
-        <span style={{ color: dark.textSecondary }}>
-          Market: <strong style={{ color: dark.textPrimary }}>{game.market_total}</strong>
-        </span>
-        <span style={{ color: dark.textSecondary }}>
-          Delta: <strong style={{ color: deltaColor }}>{deltaStr}</strong>
-        </span>
+        {hasMarket && (
+          <>
+            <span style={{ color: dark.textSecondary }}>
+              Market: <strong style={{ color: dark.textPrimary }}>{game.market_total}</strong>
+            </span>
+            <span style={{ color: dark.textSecondary }}>
+              Delta: <strong style={{ color: deltaColor }}>{deltaStr}</strong>
+            </span>
+          </>
+        )}
       </div>
 
       {/* Blowout badge */}
