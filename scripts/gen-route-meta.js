@@ -37,6 +37,13 @@ const ROUTES = [
     desc: 'Model-driven NFL projections, DvP matchup rankings, and weekly schedule analysis.',
     url: 'https://betrilo.com/nfl',
   },
+  {
+    file: 'nba_projections.html',
+    title: 'NBA Player Projections — Betrilo',
+    desc: 'Model-driven NBA player projections for every game.',
+    url: 'https://betrilo.com/nba/projections',
+    noindex: true,
+  },
 ];
 
 let allOk = true;
@@ -86,6 +93,14 @@ for (const route of ROUTES) {
     /<meta name="twitter:description" content="[^"]*"\/>/,
     `<meta name="twitter:description" content="${route.desc}"/>`
   );
+
+  // Inject noindex if flagged (preview routes)
+  if (route.noindex) {
+    html = html.replace(
+      '</head>',
+      '  <meta name="robots" content="noindex, nofollow"/>\n  </head>'
+    );
+  }
 
   const dest = path.join(buildDir, route.file);
   fs.writeFileSync(dest, html, 'utf8');

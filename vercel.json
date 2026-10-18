@@ -7,6 +7,8 @@
     { "source": "/MLB", "destination": "/mlb.html" },
     { "source": "/NFL", "destination": "/nfl.html" },
     { "source": "/NBA", "destination": "/nba.html" },
+    { "source": "/nba/projections", "destination": "/nba_projections.html" },
+    { "source": "/NBA/PROJECTIONS", "destination": "/nba_projections.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

@@ -25,6 +25,7 @@ import NflSchedulePage from './pages/NflSchedulePage';
 import NflProjectionsPage from './pages/NflProjectionsPage';
 import NflLandingPage from './pages/NflLandingPage';
 import NbaLaunchPage from './pages/NbaLaunchPage';
+import NbaProjectionsPage from './pages/NbaProjectionsPage';
 
 /** Wrap a page component in an error boundary */
 const P = (Component) => <PageErrorBoundary><Component /></PageErrorBoundary>;
@@ -62,6 +63,7 @@ function AppContent() {
           <Route path="/nfl/projections" element={P(NflProjectionsPage)} />
           {/* NBA routes */}
           <Route path="/nba" element={P(NbaLaunchPage)} />
+          <Route path="/nba/projections" element={P(NbaProjectionsPage)} />
           {/* Case-insensitive redirects */}
           <Route path="/MLB" element={<Navigate to="/mlb" replace />} />
           <Route path="/NFL" element={<Navigate to="/nfl" replace />} />
