@@ -235,21 +235,35 @@ export default function NbaProjectionsPage() {
                 )}
               </div>
 
-              <SortableTable
-                columns={columns}
-                data={players}
-                defaultSort={{ key: 'proj_pts', order: 'desc' }}
-                filters={[]}
-                searchKey="player"
-                searchPlaceholder="Search players..."
-                loading={loading}
-                lastRefreshed={
-                  data?.generated_at
-                    ? new Date(data.generated_at).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })
-                    : null
-                }
-                emptyMessage="No players match your filters"
-              />
+              {isFilteredEmpty ? (
+                <div style={{ textAlign: 'center', padding: '60px 20px', color: dark.textSecondary }}>
+                  <div style={{ fontSize: '16px', marginBottom: '12px' }}>No players match these filters</div>
+                  <button
+                    onClick={() => { setConfFilter('All'); setSelectedGame('all'); }}
+                    style={{
+                      background: dark.accentBg, color: dark.accentText, border: 'none',
+                      padding: '8px 20px', borderRadius: '6px', fontSize: '13px',
+                      fontWeight: 600, cursor: 'pointer',
+                    }}
+                  >Clear filters</button>
+                </div>
+              ) : (
+                <SortableTable
+                  columns={columns}
+                  data={players}
+                  defaultSort={{ key: 'proj_pts', order: 'desc' }}
+                  filters={[]}
+                  searchKey="player"
+                  searchPlaceholder="Search players..."
+                  loading={loading}
+                  lastRefreshed={
+                    data?.generated_at
+                      ? new Date(data.generated_at).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })
+                      : null
+                  }
+                  emptyMessage="No players match your filters"
+                />
+              )}
             </>
           )}
 

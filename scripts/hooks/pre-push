@@ -82,6 +82,21 @@ while read local_ref local_sha remote_ref remote_sha; do
         fi
         echo "  Ctrl+C now to abort, or wait for push to proceed."
         echo ""
+
+        # CI build gate: a broken build blocks ALL data deploys (incident Oct 20 2026)
+        if [ -f "package.json" ]; then
+            echo "  Running CI=true npm run build..."
+            if ! CI=true npm run build --silent 2>/dev/null; then
+                echo ""
+                echo "  ============================================"
+                echo "  BLOCKED: CI build failed — fix before pushing"
+                echo "  ============================================"
+                exit 1
+            fi
+            echo "  Build passed."
+            echo ""
+        fi
+
         exit 0
     fi
 
