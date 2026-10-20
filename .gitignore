@@ -39,6 +39,5 @@ public/data/nfl_game_matchups_20[0-9][0-9]-*.json
 public/data/batter_game_logs_latest.json
 public/data/pitcher_game_logs_latest.json
 
-# NBA prod data — arrives via publish-main push path, not branch commits.
-# Ignore in nba-launch-prod and main to prevent accidental staging.
-public/data/nba_*.json
+# NBA prod data — arrives via publish-main push path.
+# NOT ignored: publish-main needs to commit + push these files.
