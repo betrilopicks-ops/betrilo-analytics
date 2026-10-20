@@ -24,7 +24,12 @@ const nflNavItems = [
   { to: '/nfl/team-rankings', label: 'Team Rankings' },
 ];
 
-const nbaNavItems = [];
+const nbaNavItems = process.env.REACT_APP_NBA_PROJECTIONS === '1'
+  ? [
+      { to: '/nba/matchups', label: 'Matchups' },
+      { to: '/nba/projections', label: 'Projections' },
+    ]
+  : [];
 
 export default function Header() {
   const location = useLocation();

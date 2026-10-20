@@ -1,6 +1,10 @@
 {
   "rewrites": [
     { "source": "/mlb/batter-vs-pitcher-guide", "destination": "/mlb/batter-vs-pitcher-guide.html" },
+    { "source": "/nba/matchups", "destination": "/nba_matchups.html" },
+    { "source": "/NBA/MATCHUPS", "destination": "/nba_matchups.html" },
+    { "source": "/nba/projections", "destination": "/nba_projections.html" },
+    { "source": "/NBA/PROJECTIONS", "destination": "/nba_projections.html" },
     { "source": "/nba", "destination": "/nba.html" },
     { "source": "/mlb", "destination": "/mlb.html" },
     { "source": "/nfl", "destination": "/nfl.html" },
