@@ -133,8 +133,11 @@ export default function NbaProjectionsPage() {
   const today = todayET();
   const slateIsStale = data && data.slate_date !== today;
   const isStaleOrUpdating = isSample || slateIsStale;
-  const isLiveSlate = !loading && data && !isSample && !slateIsStale && players.length > 0;
-  const isNoGames = !loading && data && !isSample && !slateIsStale && players.length === 0;
+  const rawPlayerCount = data?.players?.length || 0;
+  const hasAnyConfidence = data?.players?.some(p => p.confidence_rate != null) ?? false;
+  const isLiveSlate = !loading && data && !isSample && !slateIsStale && rawPlayerCount > 0;
+  const isNoGames = !loading && data && !isSample && !slateIsStale && rawPlayerCount === 0;
+  const isFilteredEmpty = isLiveSlate && players.length === 0;
 
   const updatedTime = fmtUpdatedTime(data?.generated_at);
 
@@ -208,7 +211,8 @@ export default function NbaProjectionsPage() {
                   {matchupOptions.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
                 </select>
 
-                {/* Confidence filter pills */}
+                {/* Confidence filter pills — hidden when all confidence is null (carry-over period) */}
+                {hasAnyConfidence && (
                 <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap', alignItems: 'center' }}>
                   <span style={{ color: dark.textSecondary, fontSize: '12px', marginRight: '2px' }}>Conf:</span>
                   {CONF_OPTIONS.map(opt => {
@@ -228,6 +232,7 @@ export default function NbaProjectionsPage() {
                     );
                   })}
                 </div>
+                )}
               </div>
 
               <SortableTable
