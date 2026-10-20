@@ -73,7 +73,7 @@ export default function NbaProjectionsPage() {
     }));
     // Confidence filter
     const minConf = CONF_MIN[confFilter] || 0;
-    if (minConf > 0) rows = rows.filter(r => r.confidence_rate >= minConf);
+    if (minConf > 0) rows = rows.filter(r => r.confidence_rate != null && r.confidence_rate >= minConf);
     // Game filter
     if (selectedGame !== 'all') rows = rows.filter(r => r.game_id === selectedGame);
     return rows;
