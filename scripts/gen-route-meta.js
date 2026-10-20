@@ -33,8 +33,8 @@ const ROUTES = [
   {
     file: 'nba.html',
     title: 'NBA Player Projections — Betrilo',
-    ogTitle: 'NBA on Betrilo launches Tuesday, October 20',
-    desc: 'Model-driven NBA player projections for every game, starting opening night October 20, 2026.',
+    ogTitle: 'NBA projections on Betrilo: daily matchups and player projections',
+    desc: 'Model-driven NBA player projections for every game on Betrilo.',
     url: 'https://betrilo.com/nba',
   },
   {

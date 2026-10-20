@@ -23,9 +23,9 @@ const SPORTS = [
   },
   {
     title: 'NBA',
-    subtitle: 'Projections launch Tuesday, October\u00a020',
+    subtitle: 'Daily projections and matchups',
     to: '/nba',
-    badge: null,
+    badge: 'Live',
   },
 ];
 
@@ -58,8 +58,8 @@ function SportCard({ title, subtitle, to, badge }) {
             <span style={{
               fontSize: '10px',
               fontWeight: 700,
-              color: '#e8a838',
-              background: colors.navyLight,
+              color: badge === 'Live' ? GREEN : '#e8a838',
+              background: badge === 'Live' ? 'rgba(25,201,62,0.12)' : colors.navyLight,
               padding: '3px 9px',
               borderRadius: '4px',
               textTransform: 'uppercase',
