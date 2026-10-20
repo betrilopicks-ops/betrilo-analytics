@@ -107,8 +107,23 @@ export default function NbaProjectionsPage() {
 
   if (error) {
     return (
-      <div style={{ textAlign: 'center', padding: '60px', color: dark.textSecondary, background: dark.pageBg, minHeight: '100vh' }}>
-        Projections data is unavailable right now.
+      <div style={{ background: dark.pageBg, minHeight: '100vh', padding: '24px 16px 60px' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <h1 style={{ color: dark.textPrimary, fontSize: '30px', fontWeight: 800, marginBottom: '16px' }}>
+            NBA Projections
+          </h1>
+          <div style={{
+            background: '#3d2e0a',
+            border: `1px solid ${dark.statusAmber}`,
+            borderRadius: '8px',
+            padding: '24px 18px',
+            textAlign: 'center',
+          }}>
+            <div style={{ color: dark.statusAmber, fontWeight: 700, fontSize: '16px' }}>
+              Today's projections are updating &mdash; check back shortly
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
