@@ -1,0 +1,66 @@
+{
+  "result": "PASS",
+  "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
+  "run_at": "2026-10-20T12:26:31.078140+00:00",
+  "slate_date": "2026-10-20",
+  "today_et": "2026-10-20",
+  "player_count": 59,
+  "game_count": 3,
+  "checks": {
+    "1_slate_date_and_sample": {
+      "passed": true,
+      "slate_date": "2026-10-20",
+      "expected_date": "2026-10-20",
+      "is_sample": false
+    },
+    "2_game_count": {
+      "passed": true,
+      "json_games": 3,
+      "scoreboard_games": 3
+    },
+    "3_game_coverage": {
+      "passed": true,
+      "issues": []
+    },
+    "4_no_out_players": {
+      "passed": true,
+      "out_players_found": 0,
+      "examples": []
+    },
+    "5_plausibility": {
+      "passed": true,
+      "violations": []
+    },
+    "6_prior_season_cap": {
+      "passed": true,
+      "violations": [],
+      "players_checked": 54
+    },
+    "7_integrity": {
+      "passed": true,
+      "issues": []
+    },
+    "8_plausible_projections": {
+      "passed": true,
+      "issues": [],
+      "rotation_count": 59,
+      "median_rotation_pts": 9.0,
+      "team_scores": {
+        "BOS": 98.0,
+        "DET": 104.0,
+        "PHI": 124.0,
+        "NYK": 117.0,
+        "OKC": 104.0,
+        "SAS": 120.0
+      },
+      "zero_pts_pct": 0.0
+    }
+  },
+  "failures": [],
+  "matchups_checks": {
+    "slate_date_match": true,
+    "game_count_before": 3,
+    "game_count_after": 3,
+    "dropped_games": []
+  }
+}
