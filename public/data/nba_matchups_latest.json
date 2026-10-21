@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-21T17:18:48.789846+00:00",
+  "generated_at": "2026-10-21T17:38:32.870356+00:00",
   "slate_date": "2026-10-21",
   "season": "2026-27",
   "is_sample": false,
-  "game_count": 9,
+  "game_count": 10,
   "games": [
     {
       "away_team": "ATL",
@@ -12,7 +12,32 @@
       "away_proj_score": 115,
       "home_proj_score": 118,
       "proj_total": 233,
-      "injuries": [],
+      "injuries": [
+        {
+          "player": "Henri Veesaar",
+          "status": "Out"
+        },
+        {
+          "player": "Mouhamed Gueye",
+          "status": "Out"
+        },
+        {
+          "player": "Anthony Black",
+          "status": "Out"
+        },
+        {
+          "player": "Jonathan Isaac",
+          "status": "Out"
+        },
+        {
+          "player": "Izaiyah Nelson",
+          "status": "Out"
+        },
+        {
+          "player": "Noah Penda",
+          "status": "Out"
+        }
+      ],
       "blowout_flag": false,
       "away_top_players": [
         {
@@ -126,7 +151,24 @@
       "away_proj_score": 109,
       "home_proj_score": 113,
       "proj_total": 222,
-      "injuries": [],
+      "injuries": [
+        {
+          "player": "Nate Ament",
+          "status": "Day-To-Day"
+        },
+        {
+          "player": "Tristan Vukcevic",
+          "status": "Out"
+        },
+        {
+          "player": "Jamir Watkins",
+          "status": "Out"
+        },
+        {
+          "player": "AJ Dybantsa",
+          "status": "Out"
+        }
+      ],
       "blowout_flag": false,
       "away_top_players": [
         {
@@ -240,7 +282,16 @@
       "away_proj_score": 120,
       "home_proj_score": 123,
       "proj_total": 243,
-      "injuries": [],
+      "injuries": [
+        {
+          "player": "Donte DiVincenzo",
+          "status": "Out"
+        },
+        {
+          "player": "Vladislav Goldin",
+          "status": "Day-To-Day"
+        }
+      ],
       "blowout_flag": false,
       "away_top_players": [
         {
@@ -354,7 +405,28 @@
       "away_proj_score": 100,
       "home_proj_score": 112,
       "proj_total": 212,
-      "injuries": [],
+      "injuries": [
+        {
+          "player": "Kylan Boswell",
+          "status": "Out"
+        },
+        {
+          "player": "Coby White",
+          "status": "Out"
+        },
+        {
+          "player": "Kon Knueppel",
+          "status": "Out"
+        },
+        {
+          "player": "Grant Williams",
+          "status": "Out"
+        },
+        {
+          "player": "Tyler Bilodeau",
+          "status": "Out"
+        }
+      ],
       "blowout_flag": false,
       "away_top_players": [
         {
@@ -468,7 +540,40 @@
       "away_proj_score": 112,
       "home_proj_score": 122,
       "proj_total": 234,
-      "injuries": [],
+      "injuries": [
+        {
+          "player": "Zach Collins",
+          "status": "Day-To-Day"
+        },
+        {
+          "player": "Nicolas Claxton",
+          "status": "Out"
+        },
+        {
+          "player": "Isaac Okoro",
+          "status": "Day-To-Day"
+        },
+        {
+          "player": "Tobe Awaka",
+          "status": "Day-To-Day"
+        },
+        {
+          "player": "Jordan Hawkins",
+          "status": "Day-To-Day"
+        },
+        {
+          "player": "Dailyn Swain",
+          "status": "Day-To-Day"
+        },
+        {
+          "player": "Leonard Miller",
+          "status": "Day-To-Day"
+        },
+        {
+          "player": "Nate Bittle",
+          "status": "Out"
+        }
+      ],
       "blowout_flag": false,
       "away_top_players": [
         {
@@ -576,13 +681,157 @@
       ]
     },
     {
+      "away_team": "UTA",
+      "home_team": "MEM",
+      "tip_time_et": "8:00 PM ET",
+      "away_proj_score": 149,
+      "home_proj_score": 122,
+      "proj_total": 271,
+      "injuries": [
+        {
+          "player": "Jusuf Nurkic",
+          "status": "Out"
+        },
+        {
+          "player": "Trey Alexander",
+          "status": "Out"
+        },
+        {
+          "player": "Tony Bradley",
+          "status": "Out"
+        },
+        {
+          "player": "Isaiah Stewart",
+          "status": "Day-To-Day"
+        }
+      ],
+      "blowout_flag": true,
+      "away_top_players": [
+        {
+          "player": "Jaren Jackson Jr.",
+          "player_id": "231",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 21,
+          "proj_reb": 6,
+          "proj_ast": 2,
+          "proj_3pm": 1
+        },
+        {
+          "player": "Brice Sensabaugh",
+          "player_id": "56677842",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 19,
+          "proj_reb": 4,
+          "proj_ast": 3,
+          "proj_3pm": 2
+        },
+        {
+          "player": "Lauri Markkanen",
+          "player_id": "297",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 18,
+          "proj_reb": 6,
+          "proj_ast": 2,
+          "proj_3pm": 2
+        },
+        {
+          "player": "Keyonte George",
+          "player_id": "56677834",
+          "position": "G",
+          "confidence_rate": null,
+          "proj_pts": 18,
+          "proj_reb": 2,
+          "proj_ast": 4,
+          "proj_3pm": 1
+        },
+        {
+          "player": "Airious Bailey",
+          "player_id": "1057260888",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 17,
+          "proj_reb": 5,
+          "proj_ast": 3,
+          "proj_3pm": 3
+        }
+      ],
+      "home_top_players": [
+        {
+          "player": "Jerami Grant",
+          "player_id": "182",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 18,
+          "proj_reb": 3,
+          "proj_ast": 1,
+          "proj_3pm": 2
+        },
+        {
+          "player": "Ty Jerome",
+          "player_id": "666676",
+          "position": "G",
+          "confidence_rate": null,
+          "proj_pts": 18,
+          "proj_reb": 3,
+          "proj_ast": 6,
+          "proj_3pm": 2
+        },
+        {
+          "player": "Olivier-Maxence Prosper",
+          "player_id": "56677859",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 17,
+          "proj_reb": 5,
+          "proj_ast": 1,
+          "proj_3pm": 1
+        },
+        {
+          "player": "GG Jackson",
+          "player_id": "56677830",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 15,
+          "proj_reb": 4,
+          "proj_ast": 1,
+          "proj_3pm": 1
+        },
+        {
+          "player": "Zach Edey",
+          "player_id": "1028025754",
+          "position": "C",
+          "confidence_rate": null,
+          "proj_pts": 11,
+          "proj_reb": 12,
+          "proj_ast": 1,
+          "proj_3pm": 0
+        }
+      ]
+    },
+    {
       "away_team": "IND",
       "home_team": "NOP",
       "tip_time_et": "8:00 PM ET",
       "away_proj_score": 114,
       "home_proj_score": 112,
       "proj_total": 226,
-      "injuries": [],
+      "injuries": [
+        {
+          "player": "T.J. McConnell",
+          "status": "Out"
+        },
+        {
+          "player": "Johnny Furphy",
+          "status": "Out"
+        },
+        {
+          "player": "Aaron Nesmith",
+          "status": "Out"
+        }
+      ],
       "blowout_flag": false,
       "away_top_players": [
         {
@@ -696,8 +945,37 @@
       "away_proj_score": 109,
       "home_proj_score": 115,
       "proj_total": 224,
-      "injuries": [],
-      "blowout_flag": true,
+      "injuries": [
+        {
+          "player": "Santi Aldama",
+          "status": "Out"
+        },
+        {
+          "player": "Dereck Lively II",
+          "status": "Out"
+        },
+        {
+          "player": "Tarik Biberovic",
+          "status": "Out"
+        },
+        {
+          "player": "Caleb Martin",
+          "status": "Out"
+        },
+        {
+          "player": "Jett Howard",
+          "status": "Day-To-Day"
+        },
+        {
+          "player": "Julian Phillips",
+          "status": "Day-To-Day"
+        },
+        {
+          "player": "Steven Adams",
+          "status": "Day-To-Day"
+        }
+      ],
+      "blowout_flag": false,
       "away_top_players": [
         {
           "player": "Kyrie Irving",
@@ -810,8 +1088,45 @@
       "away_proj_score": 112,
       "home_proj_score": 120,
       "proj_total": 232,
-      "injuries": [],
-      "blowout_flag": true,
+      "injuries": [
+        {
+          "player": "Kristaps Porzingis",
+          "status": "Out"
+        },
+        {
+          "player": "Jimmy Butler",
+          "status": "Out"
+        },
+        {
+          "player": "Moses Moody",
+          "status": "Out"
+        },
+        {
+          "player": "Stephen Curry",
+          "status": "Day-To-Day"
+        },
+        {
+          "player": "Charles Bassey",
+          "status": "Day-To-Day"
+        },
+        {
+          "player": "Brandin Podziemski",
+          "status": "Out"
+        },
+        {
+          "player": "Collin Sexton",
+          "status": "Day-To-Day"
+        },
+        {
+          "player": "Cameron Carr",
+          "status": "Out"
+        },
+        {
+          "player": "Adou Thiero",
+          "status": "Out"
+        }
+      ],
+      "blowout_flag": false,
       "away_top_players": [
         {
           "player": "Stephen Curry",
@@ -924,7 +1239,36 @@
       "away_proj_score": 120,
       "home_proj_score": 116,
       "proj_total": 236,
-      "injuries": [],
+      "injuries": [
+        {
+          "player": "Mark Williams",
+          "status": "Out"
+        },
+        {
+          "player": "Luke Kennard",
+          "status": "Day-To-Day"
+        },
+        {
+          "player": "Shaedon Sharpe",
+          "status": "Out"
+        },
+        {
+          "player": "Chris Youngblood",
+          "status": "Out"
+        },
+        {
+          "player": "Micah Potter",
+          "status": "Day-To-Day"
+        },
+        {
+          "player": "Branden Carlson",
+          "status": "Out"
+        },
+        {
+          "player": "Deni Avdija",
+          "status": "Day-To-Day"
+        }
+      ],
       "blowout_flag": false,
       "away_top_players": [
         {
