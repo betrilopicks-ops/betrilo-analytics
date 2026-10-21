@@ -1,7 +1,7 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-10-21T16:12:03.753068+00:00",
+  "run_at": "2026-10-21T17:18:49.664613+00:00",
   "slate_date": "2026-10-21",
   "today_et": "2026-10-21",
   "player_count": 217,
@@ -34,7 +34,7 @@
     "6_prior_season_cap": {
       "passed": true,
       "violations": [],
-      "players_checked": 183
+      "players_checked": 182
     },
     "7_integrity": {
       "passed": true,
@@ -56,7 +56,7 @@
         "BKN": 112.0,
         "CHI": 112.0,
         "TOR": 122.0,
-        "UTA": 140.0,
+        "UTA": 149.0,
         "MEM": 122.0,
         "IND": 114.0,
         "NOP": 112.0,
@@ -83,8 +83,14 @@
   "matchups_checks": {
     "slate_date_match": true,
     "game_count_before": 11,
-    "game_count_after": 10,
+    "game_count_after": 9,
     "dropped_games": [
+      {
+        "game": "UTA@MEM",
+        "reasons": [
+          "total=271"
+        ]
+      },
       {
         "game": "SAC@LAC",
         "reasons": [
