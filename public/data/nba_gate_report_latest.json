@@ -1,7 +1,7 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-10-21T12:58:15.111868+00:00",
+  "run_at": "2026-10-21T13:06:17.569425+00:00",
   "slate_date": "2026-10-21",
   "today_et": "2026-10-21",
   "player_count": 207,
@@ -87,25 +87,36 @@
         }
       ],
       "thin_teams": {
+        "GSW": [
+          "score=75<85"
+        ],
         "SAC": [
           "score=47<85",
           "players=6<8"
-        ],
-        "GSW": [
-          "score=75<85"
         ]
       }
     }
   },
   "failures": [],
+  "_thin_roster_game_ids": [
+    "21717931",
+    "21717859"
+  ],
   "matchups_checks": {
     "slate_date_match": true,
     "game_count_before": 11,
-    "game_count_after": 10,
+    "game_count_after": 9,
     "dropped_games": [
+      {
+        "game": "GSW@LAL",
+        "reasons": [
+          "thin roster: GSW"
+        ]
+      },
       {
         "game": "SAC@LAC",
         "reasons": [
+          "thin roster: SAC",
           "total=133"
         ]
       }
