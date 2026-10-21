@@ -1,10 +1,10 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-10-21T14:15:54.822511+00:00",
+  "run_at": "2026-10-21T14:35:25.062631+00:00",
   "slate_date": "2026-10-21",
   "today_et": "2026-10-21",
-  "player_count": 216,
+  "player_count": 217,
   "game_count": 11,
   "checks": {
     "1_slate_date_and_sample": {
@@ -34,7 +34,7 @@
     "6_prior_season_cap": {
       "passed": true,
       "violations": [],
-      "players_checked": 184
+      "players_checked": 183
     },
     "7_integrity": {
       "passed": true,
@@ -43,11 +43,11 @@
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 216,
+      "rotation_count": 217,
       "median_rotation_pts": 10.0,
       "team_scores": {
         "ATL": 115.0,
-        "ORL": 120.0,
+        "ORL": 118.0,
         "MIL": 109.0,
         "WAS": 113.0,
         "MIN": 120.0,
@@ -58,20 +58,25 @@
         "TOR": 122.0,
         "UTA": 140.0,
         "MEM": 122.0,
-        "IND": 112.0,
+        "IND": 114.0,
         "NOP": 112.0,
-        "DAL": 103.0,
-        "HOU": 108.0,
-        "GSW": 118.0,
+        "DAL": 109.0,
+        "HOU": 115.0,
+        "GSW": 112.0,
         "LAL": 120.0,
         "PHX": 120.0,
-        "POR": 120.0,
+        "POR": 116.0,
         "SAC": 91.0,
         "LAC": 87.0
       },
       "zero_pts_pct": 0.0,
       "dropped_games": [],
       "thin_teams": {}
+    },
+    "9_core_player_missing": {
+      "passed": true,
+      "missing": [],
+      "games_dropped": []
     }
   },
   "failures": [],
