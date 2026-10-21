@@ -1,6 +1,6 @@
 # @betrilopicks Project Book Versions
 
-FE: BFEv0.39.6
+FE: BFEv0.39.7
 
 ## BFEv0.37.1 — og:image absolute URL + twitter:card fix (2026-10-13)
 

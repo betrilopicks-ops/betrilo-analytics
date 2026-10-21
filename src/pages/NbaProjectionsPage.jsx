@@ -45,13 +45,31 @@ export default function NbaProjectionsPage() {
       .catch(() => { setError(true); setLoading(false); });
   }, []);
 
-  // Build matchup dropdown options from games array
+  // Build matchup dropdown options sorted by tip time
   const matchupOptions = useMemo(() => {
     if (!data?.games) return [];
-    return data.games.map(g => ({
-      value: g.game_id,
-      label: `${g.away_team_code} @ ${g.home_team_code} \u00B7 ${g.game_time || 'TBD'}`,
-    }));
+    const tipSortKey = (tip) => {
+      if (!tip) return 9999;
+      const m = tip.match(/(\d+):(\d+)\s*(AM|PM)/i);
+      if (!m) return 9999;
+      let h = parseInt(m[1], 10);
+      const min = parseInt(m[2], 10);
+      const ampm = m[3].toUpperCase();
+      if (ampm === 'PM' && h !== 12) h += 12;
+      if (ampm === 'AM' && h === 12) h = 0;
+      return h * 60 + min;
+    };
+    return [...data.games]
+      .sort((a, b) => {
+        const ta = tipSortKey(a.game_time);
+        const tb = tipSortKey(b.game_time);
+        if (ta !== tb) return ta - tb;
+        return (a.away_team_code || '').localeCompare(b.away_team_code || '');
+      })
+      .map(g => ({
+        value: g.game_id,
+        label: `${g.away_team_code} @ ${g.home_team_code} \u00B7 ${g.game_time || 'TBD'}`,
+      }));
   }, [data]);
 
   const players = useMemo(() => {
