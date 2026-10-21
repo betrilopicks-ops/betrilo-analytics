@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-21T13:06:16.842663+00:00",
+  "generated_at": "2026-10-21T13:26:13.135074+00:00",
   "slate_date": "2026-10-21",
   "season": "2026-27",
   "is_sample": false,
-  "game_count": 9,
+  "game_count": 10,
   "games": [
     {
       "away_team": "ATL",
@@ -20,7 +20,7 @@
           "player_id": "666400",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 25,
+          "proj_pts": 24,
           "proj_reb": 4,
           "proj_ast": 5,
           "proj_3pm": 2
@@ -30,9 +30,9 @@
           "player_id": "17896040",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 21,
-          "proj_reb": 8,
-          "proj_ast": 8,
+          "proj_pts": 20,
+          "proj_reb": 7,
+          "proj_ast": 7,
           "proj_3pm": 2
         },
         {
@@ -40,7 +40,7 @@
           "player_id": "303",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 21,
+          "proj_pts": 20,
           "proj_reb": 3,
           "proj_ast": 5,
           "proj_3pm": 2
@@ -50,19 +50,19 @@
           "player_id": "38017677",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 10,
-          "proj_reb": 7,
+          "proj_pts": 12,
+          "proj_reb": 6,
           "proj_ast": 4,
           "proj_3pm": 0
         },
         {
-          "player": "Jalen Wilson",
-          "player_id": "56677722",
+          "player": "Onyeka Okongwu",
+          "player_id": "3547244",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 10,
-          "proj_reb": 4,
-          "proj_ast": 1,
+          "proj_pts": 8,
+          "proj_reb": 6,
+          "proj_ast": 3,
           "proj_3pm": 1
         }
       ],
@@ -72,8 +72,8 @@
           "player_id": "38017683",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 29,
-          "proj_reb": 7,
+          "proj_pts": 26,
+          "proj_reb": 6,
           "proj_ast": 5,
           "proj_3pm": 1
         },
@@ -82,9 +82,19 @@
           "player_id": "3547287",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 20,
+          "proj_pts": 19,
           "proj_reb": 4,
           "proj_ast": 4,
+          "proj_3pm": 1
+        },
+        {
+          "player": "Franz Wagner",
+          "player_id": "17896026",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 19,
+          "proj_reb": 4,
+          "proj_ast": 3,
           "proj_3pm": 1
         },
         {
@@ -92,7 +102,7 @@
           "player_id": "1028025497",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 12,
+          "proj_pts": 11,
           "proj_reb": 4,
           "proj_ast": 2,
           "proj_3pm": 1
@@ -102,20 +112,10 @@
           "player_id": "17896073",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 9,
+          "proj_pts": 11,
           "proj_reb": 4,
           "proj_ast": 5,
           "proj_3pm": 1
-        },
-        {
-          "player": "Wendell Carter Jr.",
-          "player_id": "85",
-          "position": "F",
-          "confidence_rate": null,
-          "proj_pts": 9,
-          "proj_reb": 7,
-          "proj_ast": 2,
-          "proj_3pm": 0
         }
       ]
     },
@@ -144,7 +144,7 @@
           "player_id": "666633",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 21,
+          "proj_pts": 20,
           "proj_reb": 5,
           "proj_ast": 4,
           "proj_3pm": 2
@@ -154,20 +154,20 @@
           "player_id": "56677785",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 14,
-          "proj_reb": 4,
+          "proj_pts": 13,
+          "proj_reb": 5,
           "proj_ast": 5,
           "proj_3pm": 1
         },
         {
-          "player": "Gary Trent Jr.",
-          "player_id": "3089",
-          "position": "G",
+          "player": "Kyle Kuzma",
+          "player_id": "265",
+          "position": "F",
           "confidence_rate": null,
-          "proj_pts": 14,
-          "proj_reb": 1,
-          "proj_ast": 1,
-          "proj_3pm": 2
+          "proj_pts": 13,
+          "proj_reb": 3,
+          "proj_ast": 2,
+          "proj_3pm": 1
         },
         {
           "player": "Ousmane Dieng",
@@ -176,17 +176,27 @@
           "confidence_rate": null,
           "proj_pts": 7,
           "proj_reb": 4,
-          "proj_ast": 3,
+          "proj_ast": 4,
           "proj_3pm": 1
         }
       ],
       "home_top_players": [
         {
+          "player": "Anthony Davis",
+          "player_id": "117",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 21,
+          "proj_reb": 12,
+          "proj_ast": 3,
+          "proj_3pm": 0
+        },
+        {
           "player": "Will Riley",
           "player_id": "1057279594",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 20,
+          "proj_pts": 16,
           "proj_reb": 3,
           "proj_ast": 3,
           "proj_3pm": 1
@@ -196,37 +206,27 @@
           "player_id": "490",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 19,
-          "proj_reb": 3,
-          "proj_ast": 6,
-          "proj_3pm": 1
+          "proj_pts": 16,
+          "proj_reb": 2,
+          "proj_ast": 7,
+          "proj_3pm": 2
         },
         {
           "player": "Bilal Coulibaly",
           "player_id": "56677844",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 16,
+          "proj_pts": 14,
           "proj_reb": 5,
-          "proj_ast": 2,
+          "proj_ast": 3,
           "proj_3pm": 1
         },
         {
-          "player": "Carlton Carrington",
-          "player_id": "1028025235",
+          "player": "Tre Johnson",
+          "player_id": "1057262985",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 10,
-          "proj_reb": 2,
-          "proj_ast": 5,
-          "proj_3pm": 2
-        },
-        {
-          "player": "Khris Middleton",
-          "player_id": "315",
-          "position": "F",
-          "confidence_rate": null,
-          "proj_pts": 9,
+          "proj_pts": 12,
           "proj_reb": 3,
           "proj_ast": 1,
           "proj_3pm": 1
@@ -248,7 +248,7 @@
           "player_id": "3547238",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 24,
+          "proj_pts": 28,
           "proj_reb": 4,
           "proj_ast": 4,
           "proj_3pm": 2
@@ -258,7 +258,7 @@
           "player_id": "3547239",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 19,
+          "proj_pts": 20,
           "proj_reb": 4,
           "proj_ast": 6,
           "proj_3pm": 3
@@ -268,30 +268,30 @@
           "player_id": "1028029291",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 17,
+          "proj_pts": 18,
           "proj_reb": 3,
           "proj_ast": 4,
           "proj_3pm": 0
-        },
-        {
-          "player": "Ayo Dosunmu",
-          "player_id": "17895983",
-          "position": "G",
-          "confidence_rate": null,
-          "proj_pts": 16,
-          "proj_reb": 8,
-          "proj_ast": 6,
-          "proj_3pm": 2
         },
         {
           "player": "Nah'Shon Hyland",
           "player_id": "17896031",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 12,
+          "proj_pts": 13,
           "proj_reb": 2,
           "proj_ast": 3,
           "proj_3pm": 2
+        },
+        {
+          "player": "Ayo Dosunmu",
+          "player_id": "17895983",
+          "position": "G",
+          "confidence_rate": null,
+          "proj_pts": 12,
+          "proj_reb": 8,
+          "proj_ast": 5,
+          "proj_3pm": 1
         }
       ],
       "home_top_players": [
@@ -300,9 +300,9 @@
           "player_id": "15",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 28,
+          "proj_pts": 26,
           "proj_reb": 9,
-          "proj_ast": 6,
+          "proj_ast": 5,
           "proj_3pm": 0
         },
         {
@@ -310,8 +310,8 @@
           "player_id": "4",
           "position": "C",
           "confidence_rate": null,
-          "proj_pts": 18,
-          "proj_reb": 11,
+          "proj_pts": 21,
+          "proj_reb": 12,
           "proj_ast": 4,
           "proj_3pm": 1
         },
@@ -320,10 +320,20 @@
           "player_id": "377",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 16,
-          "proj_reb": 7,
+          "proj_pts": 15,
+          "proj_reb": 6,
           "proj_ast": 2,
           "proj_3pm": 2
+        },
+        {
+          "player": "Simone Fontecchio",
+          "player_id": "38017739",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 12,
+          "proj_reb": 3,
+          "proj_ast": 1,
+          "proj_3pm": 1
         },
         {
           "player": "Pelle Larsson",
@@ -334,16 +344,6 @@
           "proj_reb": 5,
           "proj_ast": 3,
           "proj_3pm": 1
-        },
-        {
-          "player": "Tim Hardaway Jr.",
-          "player_id": "191",
-          "position": "G",
-          "confidence_rate": null,
-          "proj_pts": 9,
-          "proj_reb": 2,
-          "proj_ast": 2,
-          "proj_3pm": 2
         }
       ]
     },
@@ -374,7 +374,27 @@
           "confidence_rate": null,
           "proj_pts": 19,
           "proj_reb": 3,
-          "proj_ast": 3,
+          "proj_ast": 4,
+          "proj_3pm": 2
+        },
+        {
+          "player": "Naz Reid",
+          "player_id": "667378",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 10,
+          "proj_reb": 6,
+          "proj_ast": 1,
+          "proj_3pm": 0
+        },
+        {
+          "player": "Royce O'Neale",
+          "player_id": "351",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 9,
+          "proj_reb": 4,
+          "proj_ast": 2,
           "proj_3pm": 2
         },
         {
@@ -386,48 +406,38 @@
           "proj_reb": 9,
           "proj_ast": 2,
           "proj_3pm": 0
-        },
-        {
-          "player": "Naz Reid",
-          "player_id": "667378",
-          "position": "F",
-          "confidence_rate": null,
-          "proj_pts": 8,
-          "proj_reb": 5,
-          "proj_ast": 1,
-          "proj_3pm": 0
-        },
-        {
-          "player": "Liam McNeeley",
-          "player_id": "1057278805",
-          "position": "F",
-          "confidence_rate": null,
-          "proj_pts": 8,
-          "proj_reb": 6,
-          "proj_ast": 0,
-          "proj_3pm": 0
         }
       ],
       "home_top_players": [
+        {
+          "player": "Michael Porter Jr.",
+          "player_id": "375",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 24,
+          "proj_reb": 8,
+          "proj_ast": 2,
+          "proj_3pm": 2
+        },
         {
           "player": "Julius Randle",
           "player_id": "387",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 20,
+          "proj_pts": 18,
           "proj_reb": 6,
           "proj_ast": 4,
-          "proj_3pm": 0
+          "proj_3pm": 1
         },
         {
-          "player": "Josh Minott",
-          "player_id": "38017715",
+          "player": "Drake Powell",
+          "player_id": "1057279425",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 15,
-          "proj_reb": 4,
+          "proj_pts": 10,
+          "proj_reb": 2,
           "proj_ast": 1,
-          "proj_3pm": 2
+          "proj_3pm": 1
         },
         {
           "player": "Keon Ellis",
@@ -440,24 +450,14 @@
           "proj_3pm": 1
         },
         {
-          "player": "Drake Powell",
-          "player_id": "1057279425",
-          "position": "F",
+          "player": "Ben Saraf",
+          "player_id": "1057279760",
+          "position": "G",
           "confidence_rate": null,
           "proj_pts": 9,
-          "proj_reb": 2,
-          "proj_ast": 1,
+          "proj_reb": 4,
+          "proj_ast": 4,
           "proj_3pm": 0
-        },
-        {
-          "player": "Noah Clowney",
-          "player_id": "56677843",
-          "position": "F",
-          "confidence_rate": null,
-          "proj_pts": 9,
-          "proj_reb": 5,
-          "proj_ast": 1,
-          "proj_3pm": 1
         }
       ]
     },
@@ -476,20 +476,10 @@
           "player_id": "3547274",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 21,
+          "proj_pts": 20,
           "proj_reb": 5,
           "proj_ast": 5,
           "proj_3pm": 0
-        },
-        {
-          "player": "Matas Buzelis",
-          "player_id": "1028025177",
-          "position": "F",
-          "confidence_rate": null,
-          "proj_pts": 18,
-          "proj_reb": 7,
-          "proj_ast": 2,
-          "proj_3pm": 2
         },
         {
           "player": "Norman Powell",
@@ -499,16 +489,26 @@
           "proj_pts": 18,
           "proj_reb": 3,
           "proj_ast": 2,
-          "proj_3pm": 1
+          "proj_3pm": 2
+        },
+        {
+          "player": "Matas Buzelis",
+          "player_id": "1028025177",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 16,
+          "proj_reb": 7,
+          "proj_ast": 2,
+          "proj_3pm": 2
         },
         {
           "player": "Josh Giddey",
           "player_id": "17896065",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 13,
+          "proj_pts": 12,
           "proj_reb": 8,
-          "proj_ast": 11,
+          "proj_ast": 10,
           "proj_3pm": 2
         },
         {
@@ -516,7 +516,7 @@
           "player_id": "56677782",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 13,
+          "proj_pts": 12,
           "proj_reb": 6,
           "proj_ast": 2,
           "proj_3pm": 1
@@ -528,9 +528,9 @@
           "player_id": "274",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 29,
-          "proj_reb": 6,
-          "proj_ast": 2,
+          "proj_pts": 30,
+          "proj_reb": 7,
+          "proj_ast": 3,
           "proj_3pm": 2
         },
         {
@@ -550,7 +550,7 @@
           "confidence_rate": null,
           "proj_pts": 16,
           "proj_reb": 7,
-          "proj_ast": 11,
+          "proj_ast": 10,
           "proj_3pm": 0
         },
         {
@@ -564,14 +564,14 @@
           "proj_3pm": 2
         },
         {
-          "player": "Collin Murray-Boyles",
-          "player_id": "1057268940",
-          "position": "F",
+          "player": "Immanuel Quickley",
+          "player_id": "3547269",
+          "position": "G",
           "confidence_rate": null,
-          "proj_pts": 11,
-          "proj_reb": 4,
-          "proj_ast": 0,
-          "proj_3pm": 0
+          "proj_pts": 10,
+          "proj_reb": 3,
+          "proj_ast": 6,
+          "proj_3pm": 1
         }
       ]
     },
@@ -586,66 +586,66 @@
       "blowout_flag": false,
       "away_top_players": [
         {
+          "player": "Jaren Jackson Jr.",
+          "player_id": "231",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 21,
+          "proj_reb": 6,
+          "proj_ast": 2,
+          "proj_3pm": 1
+        },
+        {
           "player": "Brice Sensabaugh",
           "player_id": "56677842",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 28,
+          "proj_pts": 19,
           "proj_reb": 4,
+          "proj_ast": 3,
+          "proj_3pm": 2
+        },
+        {
+          "player": "Lauri Markkanen",
+          "player_id": "297",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 18,
+          "proj_reb": 6,
           "proj_ast": 2,
           "proj_3pm": 2
+        },
+        {
+          "player": "Keyonte George",
+          "player_id": "56677834",
+          "position": "G",
+          "confidence_rate": null,
+          "proj_pts": 18,
+          "proj_reb": 2,
+          "proj_ast": 4,
+          "proj_3pm": 1
         },
         {
           "player": "Airious Bailey",
           "player_id": "1057260888",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 24,
+          "proj_pts": 17,
           "proj_reb": 5,
           "proj_ast": 3,
-          "proj_3pm": 2
-        },
-        {
-          "player": "Isaiah Collier",
-          "player_id": "1028025362",
-          "position": "G",
-          "confidence_rate": null,
-          "proj_pts": 19,
-          "proj_reb": 4,
-          "proj_ast": 6,
-          "proj_3pm": 0
-        },
-        {
-          "player": "Kyle Filipowski",
-          "player_id": "1028035794",
-          "position": "C",
-          "confidence_rate": null,
-          "proj_pts": 19,
-          "proj_reb": 8,
-          "proj_ast": 4,
-          "proj_3pm": 1
-        },
-        {
-          "player": "Svi Mykhailiuk",
-          "player_id": "338",
-          "position": "G",
-          "confidence_rate": null,
-          "proj_pts": 11,
-          "proj_reb": 2,
-          "proj_ast": 1,
           "proj_3pm": 3
         }
       ],
       "home_top_players": [
         {
-          "player": "GG Jackson",
-          "player_id": "56677830",
+          "player": "Jerami Grant",
+          "player_id": "182",
           "position": "F",
           "confidence_rate": null,
           "proj_pts": 18,
-          "proj_reb": 4,
+          "proj_reb": 3,
           "proj_ast": 1,
-          "proj_3pm": 1
+          "proj_3pm": 2
         },
         {
           "player": "Ty Jerome",
@@ -668,24 +668,24 @@
           "proj_3pm": 1
         },
         {
-          "player": "Jerami Grant",
-          "player_id": "182",
+          "player": "GG Jackson",
+          "player_id": "56677830",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 14,
-          "proj_reb": 3,
+          "proj_pts": 15,
+          "proj_reb": 4,
           "proj_ast": 1,
-          "proj_3pm": 2
+          "proj_3pm": 1
         },
         {
-          "player": "Cedric Coward",
-          "player_id": "1057266649",
-          "position": "G",
+          "player": "Zach Edey",
+          "player_id": "1028025754",
+          "position": "C",
           "confidence_rate": null,
-          "proj_pts": 14,
-          "proj_reb": 4,
-          "proj_ast": 3,
-          "proj_3pm": 1
+          "proj_pts": 11,
+          "proj_reb": 12,
+          "proj_ast": 1,
+          "proj_3pm": 0
         }
       ]
     },
@@ -704,8 +704,28 @@
           "player_id": "416",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 24,
+          "proj_pts": 25,
           "proj_reb": 7,
+          "proj_ast": 3,
+          "proj_3pm": 1
+        },
+        {
+          "player": "Kelly Oubre Jr.",
+          "player_id": "360",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 13,
+          "proj_reb": 7,
+          "proj_ast": 2,
+          "proj_3pm": 1
+        },
+        {
+          "player": "Obi Toppin",
+          "player_id": "3547243",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 13,
+          "proj_reb": 4,
           "proj_ast": 3,
           "proj_3pm": 1
         },
@@ -714,7 +734,7 @@
           "player_id": "38017507",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 13,
+          "proj_pts": 11,
           "proj_reb": 3,
           "proj_ast": 11,
           "proj_3pm": 1
@@ -724,30 +744,10 @@
           "player_id": "56677832",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 12,
+          "proj_pts": 10,
           "proj_reb": 6,
           "proj_ast": 3,
           "proj_3pm": 2
-        },
-        {
-          "player": "Obi Toppin",
-          "player_id": "3547243",
-          "position": "F",
-          "confidence_rate": null,
-          "proj_pts": 12,
-          "proj_reb": 4,
-          "proj_ast": 3,
-          "proj_3pm": 2
-        },
-        {
-          "player": "Kelly Oubre Jr.",
-          "player_id": "360",
-          "position": "F",
-          "confidence_rate": null,
-          "proj_pts": 10,
-          "proj_reb": 8,
-          "proj_ast": 1,
-          "proj_3pm": 1
         }
       ],
       "home_top_players": [
@@ -756,10 +756,10 @@
           "player_id": "38017686",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 21,
-          "proj_reb": 5,
+          "proj_pts": 19,
+          "proj_reb": 4,
           "proj_ast": 2,
-          "proj_3pm": 0
+          "proj_3pm": 1
         },
         {
           "player": "Zion Williamson",
@@ -772,16 +772,6 @@
           "proj_3pm": 0
         },
         {
-          "player": "Dejounte Murray",
-          "player_id": "334",
-          "position": "G",
-          "confidence_rate": null,
-          "proj_pts": 16,
-          "proj_reb": 4,
-          "proj_ast": 6,
-          "proj_3pm": 1
-        },
-        {
           "player": "Trey Murphy III",
           "player_id": "18677986",
           "position": "F",
@@ -792,11 +782,21 @@
           "proj_3pm": 2
         },
         {
+          "player": "Dejounte Murray",
+          "player_id": "334",
+          "position": "G",
+          "confidence_rate": null,
+          "proj_pts": 15,
+          "proj_reb": 4,
+          "proj_ast": 6,
+          "proj_3pm": 1
+        },
+        {
           "player": "Saddiq Bey",
           "player_id": "3547256",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 15,
+          "proj_pts": 14,
           "proj_reb": 4,
           "proj_ast": 3,
           "proj_3pm": 2
@@ -828,7 +828,7 @@
           "player_id": "3547293",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 19,
+          "proj_pts": 18,
           "proj_reb": 4,
           "proj_ast": 4,
           "proj_3pm": 0
@@ -838,7 +838,7 @@
           "player_id": "666577",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 18,
+          "proj_pts": 16,
           "proj_reb": 9,
           "proj_ast": 2,
           "proj_3pm": 0
@@ -848,7 +848,7 @@
           "player_id": "666950",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 11,
+          "proj_pts": 12,
           "proj_reb": 8,
           "proj_ast": 1,
           "proj_3pm": 1
@@ -870,7 +870,7 @@
           "player_id": "140",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 28,
+          "proj_pts": 24,
           "proj_reb": 4,
           "proj_ast": 6,
           "proj_3pm": 2
@@ -882,15 +882,15 @@
           "confidence_rate": null,
           "proj_pts": 23,
           "proj_reb": 8,
-          "proj_ast": 6,
-          "proj_3pm": 1
+          "proj_ast": 5,
+          "proj_3pm": 0
         },
         {
           "player": "Amen Thompson",
           "player_id": "56677825",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 13,
+          "proj_pts": 12,
           "proj_reb": 8,
           "proj_ast": 4,
           "proj_3pm": 0
@@ -900,7 +900,7 @@
           "player_id": "38017684",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 13,
+          "proj_pts": 12,
           "proj_reb": 8,
           "proj_ast": 2,
           "proj_3pm": 1
@@ -910,10 +910,124 @@
           "player_id": "1028028519",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 10,
+          "proj_pts": 8,
+          "proj_reb": 3,
+          "proj_ast": 3,
+          "proj_3pm": 2
+        }
+      ]
+    },
+    {
+      "away_team": "GSW",
+      "home_team": "LAL",
+      "tip_time_et": "10:00 PM ET",
+      "away_proj_score": 75,
+      "home_proj_score": 120,
+      "proj_total": 195,
+      "injuries": [],
+      "blowout_flag": true,
+      "away_top_players": [
+        {
+          "player": "Stephen Curry",
+          "player_id": "115",
+          "position": "G",
+          "confidence_rate": null,
+          "proj_pts": 25,
+          "proj_reb": 2,
+          "proj_ast": 5,
+          "proj_3pm": 3
+        },
+        {
+          "player": "Gui Santos",
+          "player_id": "57875092",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 18,
+          "proj_reb": 5,
+          "proj_ast": 4,
+          "proj_3pm": 1
+        },
+        {
+          "player": "De'Anthony Melton",
+          "player_id": "313",
+          "position": "G",
+          "confidence_rate": null,
+          "proj_pts": 14,
+          "proj_reb": 5,
+          "proj_ast": 3,
+          "proj_3pm": 1
+        },
+        {
+          "player": "Gary Payton II",
+          "player_id": "2189",
+          "position": "G",
+          "confidence_rate": null,
+          "proj_pts": 13,
+          "proj_reb": 5,
+          "proj_ast": 2,
+          "proj_3pm": 0
+        },
+        {
+          "player": "Brandon Williams",
+          "player_id": "24489167",
+          "position": "G",
+          "confidence_rate": null,
+          "proj_pts": 12,
+          "proj_reb": 3,
+          "proj_ast": 5,
+          "proj_3pm": 0
+        }
+      ],
+      "home_top_players": [
+        {
+          "player": "Luka Doncic",
+          "player_id": "132",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 24,
+          "proj_reb": 7,
+          "proj_ast": 6,
+          "proj_3pm": 4
+        },
+        {
+          "player": "Austin Reaves",
+          "player_id": "17553995",
+          "position": "G",
+          "confidence_rate": null,
+          "proj_pts": 18,
+          "proj_reb": 4,
+          "proj_ast": 5,
+          "proj_3pm": 1
+        },
+        {
+          "player": "Collin Sexton",
+          "player_id": "413",
+          "position": "G",
+          "confidence_rate": null,
+          "proj_pts": 17,
+          "proj_reb": 2,
+          "proj_ast": 3,
+          "proj_3pm": 2
+        },
+        {
+          "player": "Quentin Grimes",
+          "player_id": "17895858",
+          "position": "G",
+          "confidence_rate": null,
+          "proj_pts": 13,
           "proj_reb": 4,
           "proj_ast": 4,
-          "proj_3pm": 2
+          "proj_3pm": 1
+        },
+        {
+          "player": "Ziaire Williams",
+          "player_id": "17896027",
+          "position": "G",
+          "confidence_rate": null,
+          "proj_pts": 13,
+          "proj_reb": 2,
+          "proj_ast": 1,
+          "proj_3pm": 1
         }
       ]
     },
@@ -932,7 +1046,7 @@
           "player_id": "57",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 27,
+          "proj_pts": 26,
           "proj_reb": 3,
           "proj_ast": 5,
           "proj_3pm": 1
@@ -942,10 +1056,20 @@
           "player_id": "17895966",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 23,
+          "proj_pts": 22,
           "proj_reb": 5,
           "proj_ast": 4,
           "proj_3pm": 2
+        },
+        {
+          "player": "Dillon Brooks",
+          "player_id": "66",
+          "position": "G",
+          "confidence_rate": null,
+          "proj_pts": 22,
+          "proj_reb": 4,
+          "proj_ast": 2,
+          "proj_3pm": 1
         },
         {
           "player": "Miles Bridges",
@@ -964,18 +1088,8 @@
           "confidence_rate": null,
           "proj_pts": 9,
           "proj_reb": 4,
-          "proj_ast": 6,
+          "proj_ast": 5,
           "proj_3pm": 2
-        },
-        {
-          "player": "Oso Ighodaro",
-          "player_id": "1028036515",
-          "position": "F",
-          "confidence_rate": null,
-          "proj_pts": 8,
-          "proj_reb": 6,
-          "proj_ast": 4,
-          "proj_3pm": 0
         }
       ],
       "home_top_players": [
@@ -984,17 +1098,27 @@
           "player_id": "3547242",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 24,
+          "proj_pts": 22,
           "proj_reb": 7,
           "proj_ast": 6,
           "proj_3pm": 0
+        },
+        {
+          "player": "Ja Morant",
+          "player_id": "666786",
+          "position": "G",
+          "confidence_rate": null,
+          "proj_pts": 21,
+          "proj_reb": 3,
+          "proj_ast": 9,
+          "proj_3pm": 1
         },
         {
           "player": "Scoot Henderson",
           "player_id": "56677747",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 16,
+          "proj_pts": 15,
           "proj_reb": 3,
           "proj_ast": 4,
           "proj_3pm": 1
@@ -1004,7 +1128,7 @@
           "player_id": "1028025344",
           "position": "C",
           "confidence_rate": null,
-          "proj_pts": 15,
+          "proj_pts": 14,
           "proj_reb": 14,
           "proj_ast": 2,
           "proj_3pm": 0
@@ -1014,20 +1138,10 @@
           "player_id": "56677850",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 11,
+          "proj_pts": 10,
           "proj_reb": 5,
           "proj_ast": 2,
           "proj_3pm": 2
-        },
-        {
-          "player": "Jrue Holiday",
-          "player_id": "214",
-          "position": "G",
-          "confidence_rate": null,
-          "proj_pts": 11,
-          "proj_reb": 4,
-          "proj_ast": 5,
-          "proj_3pm": 1
         }
       ]
     }

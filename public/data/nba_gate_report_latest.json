@@ -1,10 +1,10 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-10-21T13:06:17.569425+00:00",
+  "run_at": "2026-10-21T13:26:13.838141+00:00",
   "slate_date": "2026-10-21",
   "today_et": "2026-10-21",
-  "player_count": 207,
+  "player_count": 216,
   "game_count": 11,
   "checks": {
     "1_slate_date_and_sample": {
@@ -43,80 +43,46 @@
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 174,
-      "median_rotation_pts": 9.0,
+      "rotation_count": 216,
+      "median_rotation_pts": 10.0,
       "team_scores": {
-        "ATL": 118.0,
-        "ORL": 108.0,
-        "MIL": 111.0,
-        "WAS": 109.0,
-        "MIN": 121.0,
-        "MIA": 116.0,
-        "CHA": 89.0,
-        "BKN": 94.0,
-        "CHI": 114.0,
-        "TOR": 125.0,
-        "UTA": 120.0,
-        "MEM": 116.0,
+        "ATL": 115.0,
+        "ORL": 120.0,
+        "MIL": 109.0,
+        "WAS": 113.0,
+        "MIN": 120.0,
+        "MIA": 123.0,
+        "CHA": 100.0,
+        "BKN": 112.0,
+        "CHI": 112.0,
+        "TOR": 122.0,
+        "UTA": 140.0,
+        "MEM": 122.0,
         "IND": 112.0,
-        "NOP": 124.0,
-        "DAL": 98.0,
-        "HOU": 113.0,
+        "NOP": 112.0,
+        "DAL": 103.0,
+        "HOU": 108.0,
+        "GSW": 118.0,
         "LAL": 120.0,
-        "PHX": 112.0,
-        "POR": 106.0,
-        "LAC": 86.0
+        "PHX": 120.0,
+        "POR": 120.0,
+        "SAC": 91.0,
+        "LAC": 87.0
       },
       "zero_pts_pct": 0.0,
-      "dropped_games": [
-        {
-          "game": "GSW@LAL",
-          "game_id": "21717859",
-          "reasons": [
-            "GSW: score=75<85"
-          ],
-          "label": "insufficient roster data"
-        },
-        {
-          "game": "SAC@LAC",
-          "game_id": "21717931",
-          "reasons": [
-            "SAC: score=47<85, players=6<8"
-          ],
-          "label": "insufficient roster data"
-        }
-      ],
-      "thin_teams": {
-        "GSW": [
-          "score=75<85"
-        ],
-        "SAC": [
-          "score=47<85",
-          "players=6<8"
-        ]
-      }
+      "dropped_games": [],
+      "thin_teams": {}
     }
   },
   "failures": [],
-  "_thin_roster_game_ids": [
-    "21717931",
-    "21717859"
-  ],
   "matchups_checks": {
     "slate_date_match": true,
     "game_count_before": 11,
-    "game_count_after": 9,
+    "game_count_after": 10,
     "dropped_games": [
-      {
-        "game": "GSW@LAL",
-        "reasons": [
-          "thin roster: GSW"
-        ]
-      },
       {
         "game": "SAC@LAC",
         "reasons": [
-          "thin roster: SAC",
           "total=133"
         ]
       }
