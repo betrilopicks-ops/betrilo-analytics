@@ -1,7 +1,7 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-10-21T15:59:40.309424+00:00",
+  "run_at": "2026-10-21T16:08:05.865620+00:00",
   "slate_date": "2026-10-21",
   "today_et": "2026-10-21",
   "player_count": 217,
@@ -83,18 +83,12 @@
   "matchups_checks": {
     "slate_date_match": true,
     "game_count_before": 11,
-    "game_count_after": 9,
+    "game_count_after": 10,
     "dropped_games": [
-      {
-        "game": "CHA@BKN",
-        "reasons": [
-          "total=183"
-        ]
-      },
       {
         "game": "SAC@LAC",
         "reasons": [
-          "total=133"
+          "total=178"
         ]
       }
     ]
