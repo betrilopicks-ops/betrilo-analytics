@@ -118,6 +118,32 @@ function InjuryList({ injuries }) {
 function GameCard({ game }) {
   const [playersOpen, setPlayersOpen] = useState(false);
 
+  // Unavailable game: show matchup + tip time + reason
+  if (game.status === 'unavailable') {
+    return (
+      <div style={{
+        background: dark.surfaceBg,
+        borderRadius: '10px',
+        padding: '18px 20px',
+        marginBottom: '14px',
+        border: `1px solid ${dark.border}`,
+        opacity: 0.6,
+      }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+          <h2 style={{ margin: 0, fontSize: '20px', fontWeight: 800, color: dark.textPrimary }}>
+            {game.away_team} @ {game.home_team}
+          </h2>
+          <span style={{ color: dark.textMuted, fontSize: '13px', fontWeight: 600 }}>
+            {game.tip_time_et}
+          </span>
+        </div>
+        <div style={{ color: dark.textMuted, fontSize: '14px', fontStyle: 'italic' }}>
+          {game.unavailable_reason || 'Projections unavailable for this game.'}
+        </div>
+      </div>
+    );
+  }
+
   const delta = game.delta_vs_market;
   const hasMarket = game.market_total != null && delta != null;
   const deltaColor = delta > 0 ? dark.statusGreen : delta < 0 ? dark.statusRed : dark.textSecondary;
