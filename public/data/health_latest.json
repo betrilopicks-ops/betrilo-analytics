@@ -1,8 +1,8 @@
 {
   "verdict": "NEEDS ATTENTION",
-  "headline": "Required step(s) failed: GitHub image upload, Caption generation, Pipeline generation",
-  "checked_at": "2026-10-20T07:37:54",
-  "run_date": "2026-10-20",
+  "headline": "Required step(s) failed: GitHub image upload, Pipeline generation, Caption generation",
+  "checked_at": "2026-10-21T06:00:19",
+  "run_date": "2026-10-21",
   "required_ok": false,
   "steps": {
     "Pipeline generation": "SKIP",
@@ -25,6 +25,5 @@
     "Buffer posting (IG + Threads + X)": "SKIP",
     "Validation metrics": "FAIL",
     "Database backup": "OK"
-  },
-  "off_day_note": "No MLB games scheduled \u2014 data exports skipped"
+  }
 }
