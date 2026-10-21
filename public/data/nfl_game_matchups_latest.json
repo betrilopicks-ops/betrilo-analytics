@@ -1,6 +1,6 @@
 {
-  "exported_date": "2026-10-20",
-  "generated_at": "2026-10-20T07:01:08.985510-04:00",
+  "exported_date": "2026-10-21",
+  "generated_at": "2026-10-21T15:00:45.471767-04:00",
   "season": 2026,
   "week": 7,
   "dvp_method": {
@@ -27,6 +27,53 @@
       "spread_line": 3.0,
       "total_line": 50.5,
       "home_players": [
+        {
+          "player_name": "Case Keenum",
+          "player_id": "00-0028986",
+          "gsis_id": "00-0028986",
+          "team": "CHI",
+          "position": "QB",
+          "opponent": "NE",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 2,
+            "fpts_ppr_per_game": 12.6,
+            "completions": 35,
+            "attempts": 53,
+            "pass_yds": 355,
+            "pass_tds": 2,
+            "interceptions": 1,
+            "rush_yds": 10,
+            "pass_yds_per_game": 177.5
+          },
+          "dvp": {
+            "rank": 25,
+            "label": "Tough",
+            "games_in_sample": 40,
+            "pass_yds_per_game": 215.7,
+            "pass_tds_per_game": 1.4,
+            "completions_per_game": 20.7
+          },
+          "vs_opponent": {
+            "games": 1,
+            "first_season": 2021,
+            "last_season": 2021,
+            "fpts_per_game": 3.2,
+            "small_sample": true,
+            "completions": 8,
+            "pass_attempts": 12,
+            "pass_yds": 81,
+            "pass_tds": 0,
+            "interceptions": 0,
+            "rush_yds": 0,
+            "pass_yds_per_game": 81.0
+          },
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
         {
           "player_name": "Kalif Raymond",
           "player_id": "00-0032464",
@@ -187,40 +234,6 @@
             "pass_yds_per_game": 215.7,
             "pass_tds_per_game": 1.4,
             "completions_per_game": 20.7
-          },
-          "vs_opponent": null,
-          "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
-            "practice_participation": null
-          }
-        },
-        {
-          "player_name": "Zavier Scott",
-          "player_id": "00-0038440",
-          "gsis_id": "00-0038440",
-          "team": "CHI",
-          "position": "RB",
-          "opponent": "NE",
-          "season_stats": {
-            "stat_season": 2026,
-            "games": 2,
-            "fpts_ppr_per_game": 0.0,
-            "carries": 0,
-            "rush_yds": 0,
-            "rush_tds": 0,
-            "receptions": 0,
-            "rec_yds": 0,
-            "rush_yds_per_game": 0.0
-          },
-          "dvp": {
-            "rank": 24,
-            "label": "Tough",
-            "games_in_sample": 40,
-            "rush_yds_per_game": 87.8,
-            "carries_per_game": 21.0,
-            "rec_per_game": 4.4,
-            "rec_yds_per_game": 31.5
           },
           "vs_opponent": null,
           "injury": {
@@ -396,6 +409,40 @@
           "injury": {
             "injury_status": null,
             "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Kyle Monangai",
+          "player_id": "00-0040236",
+          "gsis_id": "00-0040236",
+          "team": "CHI",
+          "position": "RB",
+          "opponent": "NE",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 4,
+            "fpts_ppr_per_game": 14.8,
+            "carries": 60,
+            "rush_yds": 324,
+            "rush_tds": 3,
+            "receptions": 5,
+            "rec_yds": 39,
+            "rush_yds_per_game": 81.0
+          },
+          "dvp": {
+            "rank": 24,
+            "label": "Tough",
+            "games_in_sample": 40,
+            "rush_yds_per_game": 87.8,
+            "carries_per_game": 21.0,
+            "rec_per_game": 4.4,
+            "rec_yds_per_game": 31.5
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": "Questionable",
+            "injury_body_part": "Toe",
             "practice_participation": null
           }
         },
@@ -591,7 +638,7 @@
             "rec_yds_per_game": 26.5
           },
           "dvp": {
-            "rank": 9,
+            "rank": 10,
             "label": "Favorable",
             "games_in_sample": 40,
             "rec_yds_per_game": 155.5,
@@ -660,50 +707,6 @@
           "injury": {
             "injury_status": null,
             "injury_body_part": null,
-            "practice_participation": null
-          }
-        },
-        {
-          "player_name": "Romeo Doubs",
-          "player_id": "00-0037816",
-          "gsis_id": "00-0037816",
-          "team": "NE",
-          "position": "WR",
-          "opponent": "CHI",
-          "season_stats": {
-            "stat_season": 2026,
-            "games": 6,
-            "fpts_ppr_per_game": 9.7,
-            "receptions": 14,
-            "targets": 24,
-            "rec_yds": 261,
-            "rec_tds": 3,
-            "rec_yds_per_game": 43.5
-          },
-          "dvp": {
-            "rank": 9,
-            "label": "Favorable",
-            "games_in_sample": 40,
-            "rec_yds_per_game": 155.5,
-            "rec_per_game": 10.5,
-            "targets_per_game": 16.6,
-            "rec_tds_per_game": 1.1
-          },
-          "vs_opponent": {
-            "games": 6,
-            "first_season": 2022,
-            "last_season": 2025,
-            "fpts_per_game": 7.6,
-            "small_sample": false,
-            "receptions": 12,
-            "targets": 19,
-            "rec_yds": 154,
-            "rec_tds": 3,
-            "rec_yds_per_game": 25.7
-          },
-          "injury": {
-            "injury_status": "IR",
-            "injury_body_part": "Shoulder",
             "practice_participation": null
           }
         },
@@ -803,7 +806,7 @@
             "rec_yds_per_game": 38.8
           },
           "dvp": {
-            "rank": 9,
+            "rank": 10,
             "label": "Favorable",
             "games_in_sample": 40,
             "rec_yds_per_game": 155.5,
@@ -894,7 +897,7 @@
             "rec_yds_per_game": 24.5
           },
           "dvp": {
-            "rank": 9,
+            "rank": 10,
             "label": "Favorable",
             "games_in_sample": 40,
             "rec_yds_per_game": 155.5,
@@ -961,7 +964,7 @@
             "rec_yds_per_game": 19.6
           },
           "dvp": {
-            "rank": 9,
+            "rank": 10,
             "label": "Favorable",
             "games_in_sample": 40,
             "rec_yds_per_game": 155.5,
@@ -998,6 +1001,62 @@
             "carries_per_game": 21.1,
             "rec_per_game": 3.8,
             "rec_yds_per_game": 27.5
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Behren Morton",
+          "player_id": null,
+          "gsis_id": "00-0041123",
+          "team": "NE",
+          "position": "QB",
+          "opponent": "CHI",
+          "season_stats": null,
+          "dvp": {
+            "rank": 12,
+            "label": "Favorable",
+            "games_in_sample": 40,
+            "pass_yds_per_game": 234.5,
+            "pass_tds_per_game": 1.6,
+            "completions_per_game": 19.4
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Tanner Arkin",
+          "player_id": "00-0041314",
+          "gsis_id": "00-0041314",
+          "team": "NE",
+          "position": "TE",
+          "opponent": "CHI",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 1,
+            "fpts_ppr_per_game": 0.0,
+            "receptions": 0,
+            "targets": 0,
+            "rec_yds": 0,
+            "rec_tds": 0,
+            "rec_yds_per_game": 0.0
+          },
+          "dvp": {
+            "rank": 14,
+            "label": "Neutral",
+            "games_in_sample": 40,
+            "rec_yds_per_game": 51.5,
+            "rec_per_game": 5.1,
+            "targets_per_game": 6.9,
+            "rec_tds_per_game": 0.3
           },
           "vs_opponent": null,
           "injury": {
@@ -1093,8 +1152,8 @@
             "rush_yds_per_game": 26.0
           },
           "injury": {
-            "injury_status": "Questionable",
-            "injury_body_part": "Undisclosed",
+            "injury_status": null,
+            "injury_body_part": null,
             "practice_participation": null
           }
         },
@@ -1187,6 +1246,53 @@
           }
         },
         {
+          "player_name": "Zach Wilson",
+          "player_id": "00-0037013",
+          "gsis_id": "00-0037013",
+          "team": "NO",
+          "position": "QB",
+          "opponent": "PIT",
+          "season_stats": {
+            "stat_season": 2025,
+            "games": 4,
+            "fpts_ppr_per_game": 0.3,
+            "completions": 6,
+            "attempts": 11,
+            "pass_yds": 32,
+            "pass_tds": 0,
+            "interceptions": 0,
+            "rush_yds": 1,
+            "pass_yds_per_game": 8.0
+          },
+          "dvp": {
+            "rank": 8,
+            "label": "Favorable",
+            "games_in_sample": 40,
+            "pass_yds_per_game": 246.0,
+            "pass_tds_per_game": 1.5,
+            "completions_per_game": 22.4
+          },
+          "vs_opponent": {
+            "games": 1,
+            "first_season": 2022,
+            "last_season": 2022,
+            "fpts_per_game": 18.8,
+            "small_sample": true,
+            "completions": 18,
+            "pass_attempts": 36,
+            "pass_yds": 252,
+            "pass_tds": 1,
+            "interceptions": 2,
+            "rush_yds": 15,
+            "pass_yds_per_game": 252.0
+          },
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
           "player_name": "Chris Olave",
           "player_id": "00-0037239",
           "gsis_id": "00-0037239",
@@ -1204,7 +1310,7 @@
             "rec_yds_per_game": 96.7
           },
           "dvp": {
-            "rank": 10,
+            "rank": 9,
             "label": "Favorable",
             "games_in_sample": 40,
             "rec_yds_per_game": 155.5,
@@ -1265,50 +1371,6 @@
           }
         },
         {
-          "player_name": "Cedric Tillman",
-          "player_id": "00-0038979",
-          "gsis_id": "00-0038979",
-          "team": "NO",
-          "position": "WR",
-          "opponent": "PIT",
-          "season_stats": {
-            "stat_season": 2025,
-            "games": 12,
-            "fpts_ppr_per_game": 5.0,
-            "receptions": 21,
-            "targets": 39,
-            "rec_yds": 270,
-            "rec_tds": 2,
-            "rec_yds_per_game": 22.5
-          },
-          "dvp": {
-            "rank": 10,
-            "label": "Favorable",
-            "games_in_sample": 40,
-            "rec_yds_per_game": 155.5,
-            "rec_per_game": 12.1,
-            "targets_per_game": 19.9,
-            "rec_tds_per_game": 0.8
-          },
-          "vs_opponent": {
-            "games": 3,
-            "first_season": 2023,
-            "last_season": 2025,
-            "fpts_per_game": 3.3,
-            "small_sample": false,
-            "receptions": 4,
-            "targets": 7,
-            "rec_yds": 72,
-            "rec_tds": 0,
-            "rec_yds_per_game": 24.0
-          },
-          "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
-            "practice_participation": null
-          }
-        },
-        {
           "player_name": "Spencer Rattler",
           "player_id": "00-0039376",
           "gsis_id": "00-0039376",
@@ -1360,7 +1422,7 @@
             "rec_yds_per_game": 49.0
           },
           "dvp": {
-            "rank": 10,
+            "rank": 9,
             "label": "Favorable",
             "games_in_sample": 40,
             "rec_yds_per_game": 155.5,
@@ -1493,7 +1555,7 @@
             "rec_yds_per_game": 11.0
           },
           "dvp": {
-            "rank": 10,
+            "rank": 9,
             "label": "Favorable",
             "games_in_sample": 40,
             "rec_yds_per_game": 155.5,
@@ -1526,7 +1588,7 @@
             "rec_yds_per_game": 1.0
           },
           "dvp": {
-            "rank": 10,
+            "rank": 9,
             "label": "Favorable",
             "games_in_sample": 40,
             "rec_yds_per_game": 155.5,
@@ -1642,7 +1704,7 @@
             "rec_yds_per_game": 2.0
           },
           "dvp": {
-            "rank": 7,
+            "rank": 8,
             "label": "Favorable",
             "games_in_sample": 40,
             "rec_yds_per_game": 59.4,
@@ -1839,21 +1901,21 @@
           }
         },
         {
-          "player_name": "Brandon Smith",
-          "player_id": "00-0036775",
-          "gsis_id": "00-0036775",
+          "player_name": "Ben Skowronek",
+          "player_id": "00-0036862",
+          "gsis_id": "00-0036862",
           "team": "PIT",
           "position": "WR",
           "opponent": "NO",
           "season_stats": {
             "stat_season": 2026,
-            "games": 1,
-            "fpts_ppr_per_game": 0.0,
-            "receptions": 0,
-            "targets": 0,
-            "rec_yds": 0,
-            "rec_tds": 0,
-            "rec_yds_per_game": 0.0
+            "games": 3,
+            "fpts_ppr_per_game": 4.1,
+            "receptions": 3,
+            "targets": 4,
+            "rec_yds": 32,
+            "rec_tds": 1,
+            "rec_yds_per_game": 10.7
           },
           "dvp": {
             "rank": 17,
@@ -1864,10 +1926,21 @@
             "targets_per_game": 17.6,
             "rec_tds_per_game": 1.0
           },
-          "vs_opponent": null,
+          "vs_opponent": {
+            "games": 1,
+            "first_season": 2022,
+            "last_season": 2022,
+            "fpts_per_game": 1.4,
+            "small_sample": true,
+            "receptions": 1,
+            "targets": 4,
+            "rec_yds": 4,
+            "rec_tds": 0,
+            "rec_yds_per_game": 4.0
+          },
           "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
+            "injury_status": "Questionable",
+            "injury_body_part": "Calf",
             "practice_participation": null
           }
         },
@@ -1889,7 +1962,7 @@
             "rec_yds_per_game": 30.0
           },
           "dvp": {
-            "rank": 7,
+            "rank": 8,
             "label": "Favorable",
             "games_in_sample": 40,
             "rec_yds_per_game": 59.4,
@@ -1962,30 +2035,6 @@
           }
         },
         {
-          "player_name": "Brandon Johnson",
-          "player_id": "00-0037382",
-          "gsis_id": "00-0037382",
-          "team": "PIT",
-          "position": "WR",
-          "opponent": "NO",
-          "season_stats": null,
-          "dvp": {
-            "rank": 17,
-            "label": "Neutral",
-            "games_in_sample": 40,
-            "rec_yds_per_game": 140.2,
-            "rec_per_game": 10.9,
-            "targets_per_game": 17.6,
-            "rec_tds_per_game": 1.0
-          },
-          "vs_opponent": null,
-          "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
-            "practice_participation": null
-          }
-        },
-        {
           "player_name": "Lew Nichols III",
           "player_id": "00-0038409",
           "gsis_id": "00-0038409",
@@ -2033,13 +2082,36 @@
             "rec_yds_per_game": 26.0
           },
           "dvp": {
-            "rank": 7,
+            "rank": 8,
             "label": "Favorable",
             "games_in_sample": 40,
             "rec_yds_per_game": 59.4,
             "rec_per_game": 5.6,
             "targets_per_game": 7.8,
             "rec_tds_per_game": 0.3
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Will Howard",
+          "player_id": null,
+          "gsis_id": "00-0040203",
+          "team": "PIT",
+          "position": "QB",
+          "opponent": "NO",
+          "season_stats": null,
+          "dvp": {
+            "rank": 17,
+            "label": "Neutral",
+            "games_in_sample": 40,
+            "pass_yds_per_game": 226.6,
+            "pass_tds_per_game": 1.4,
+            "completions_per_game": 20.2
           },
           "vs_opponent": null,
           "injury": {
@@ -2147,6 +2219,63 @@
             "injury_body_part": null,
             "practice_participation": null
           }
+        },
+        {
+          "player_name": "Eli Heidenreich",
+          "player_id": "00-0041490",
+          "gsis_id": "00-0041490",
+          "team": "PIT",
+          "position": "RB",
+          "opponent": "NO",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 2,
+            "fpts_ppr_per_game": 0.0,
+            "carries": 0,
+            "rush_yds": 0,
+            "rush_tds": 0,
+            "receptions": 0,
+            "rec_yds": 0,
+            "rush_yds_per_game": 0.0
+          },
+          "dvp": {
+            "rank": 4,
+            "label": "Smash",
+            "games_in_sample": 40,
+            "rush_yds_per_game": 108.4,
+            "carries_per_game": 24.5,
+            "rec_per_game": 3.7,
+            "rec_yds_per_game": 26.8
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Drew Allar",
+          "player_id": null,
+          "gsis_id": "00-0041565",
+          "team": "PIT",
+          "position": "QB",
+          "opponent": "NO",
+          "season_stats": null,
+          "dvp": {
+            "rank": 17,
+            "label": "Neutral",
+            "games_in_sample": 40,
+            "pass_yds_per_game": 226.6,
+            "pass_tds_per_game": 1.4,
+            "completions_per_game": 20.2
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
         }
       ]
     },
@@ -2158,9 +2287,56 @@
       "gametime": "13:00",
       "roof": null,
       "stadium": "Mercedes-Benz Stadium",
-      "spread_line": -3.5,
+      "spread_line": -3.0,
       "total_line": 50.5,
       "home_players": [
+        {
+          "player_name": "Andy Dalton",
+          "player_id": "00-0027973",
+          "gsis_id": "00-0027973",
+          "team": "ATL",
+          "position": "QB",
+          "opponent": "SF",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 1,
+            "fpts_ppr_per_game": -2.0,
+            "completions": 0,
+            "attempts": 1,
+            "pass_yds": 0,
+            "pass_tds": 0,
+            "interceptions": 1,
+            "rush_yds": 0,
+            "pass_yds_per_game": 0.0
+          },
+          "dvp": {
+            "rank": 15,
+            "label": "Neutral",
+            "games_in_sample": 40,
+            "pass_yds_per_game": 228.3,
+            "pass_tds_per_game": 1.5,
+            "completions_per_game": 22.6
+          },
+          "vs_opponent": {
+            "games": 2,
+            "first_season": 2020,
+            "last_season": 2022,
+            "fpts_per_game": 13.7,
+            "small_sample": true,
+            "completions": 37,
+            "pass_attempts": 62,
+            "pass_yds": 413,
+            "pass_tds": 2,
+            "interceptions": 0,
+            "rush_yds": 29,
+            "pass_yds_per_game": 206.5
+          },
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
         {
           "player_name": "Austin Hooper",
           "player_id": "00-0032392",
@@ -2705,6 +2881,40 @@
             "injury_body_part": null,
             "practice_participation": null
           }
+        },
+        {
+          "player_name": "Jack Strand",
+          "player_id": "00-0041194",
+          "gsis_id": "00-0041194",
+          "team": "ATL",
+          "position": "QB",
+          "opponent": "SF",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 1,
+            "fpts_ppr_per_game": -0.0,
+            "completions": 8,
+            "attempts": 15,
+            "pass_yds": 59,
+            "pass_tds": 0,
+            "interceptions": 1,
+            "rush_yds": 16,
+            "pass_yds_per_game": 59.0
+          },
+          "dvp": {
+            "rank": 15,
+            "label": "Neutral",
+            "games_in_sample": 40,
+            "pass_yds_per_game": 228.3,
+            "pass_tds_per_game": 1.5,
+            "completions_per_game": 22.6
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
         }
       ],
       "away_players": [
@@ -2826,7 +3036,7 @@
             "rec_yds_per_game": 74.6
           },
           "injury": {
-            "injury_status": "Out",
+            "injury_status": "Questionable",
             "injury_body_part": "Achilles",
             "practice_participation": null
           }
@@ -2922,21 +3132,21 @@
           }
         },
         {
-          "player_name": "Malik Turner",
-          "player_id": "00-0034867",
-          "gsis_id": "00-0034867",
+          "player_name": "Deebo Samuel Sr.",
+          "player_id": "00-0035719",
+          "gsis_id": "00-0035719",
           "team": "SF",
           "position": "WR",
           "opponent": "ATL",
           "season_stats": {
-            "stat_season": 2025,
-            "games": 2,
-            "fpts_ppr_per_game": 0.0,
-            "receptions": 0,
-            "targets": 1,
-            "rec_yds": 0,
-            "rec_tds": 0,
-            "rec_yds_per_game": 0.0
+            "stat_season": 2026,
+            "games": 5,
+            "fpts_ppr_per_game": 12.1,
+            "receptions": 16,
+            "targets": 20,
+            "rec_yds": 206,
+            "rec_tds": 3,
+            "rec_yds_per_game": 41.2
           },
           "dvp": {
             "rank": 8,
@@ -2949,21 +3159,17 @@
           },
           "vs_opponent": {
             "games": 3,
-            "first_season": 2020,
+            "first_season": 2021,
             "last_season": 2025,
-            "fpts_per_game": 0.6,
+            "fpts_per_game": 18.3,
             "small_sample": false,
-            "receptions": 1,
-            "targets": 1,
-            "rec_yds": 7,
-            "rec_tds": 0,
-            "rec_yds_per_game": 2.3
+            "receptions": 17,
+            "targets": 21,
+            "rec_yds": 211,
+            "rec_tds": 1,
+            "rec_yds_per_game": 70.3
           },
-          "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
-            "practice_participation": null
-          }
+          "injury": null
         },
         {
           "player_name": "Luke Farrell",
@@ -3224,6 +3430,29 @@
           }
         },
         {
+          "player_name": "Kurtis Rourke",
+          "player_id": null,
+          "gsis_id": "00-0040589",
+          "team": "SF",
+          "position": "QB",
+          "opponent": "ATL",
+          "season_stats": null,
+          "dvp": {
+            "rank": 11,
+            "label": "Favorable",
+            "games_in_sample": 40,
+            "pass_yds_per_game": 237.6,
+            "pass_tds_per_game": 1.7,
+            "completions_per_game": 22.4
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
           "player_name": "Kaelon Black",
           "player_id": "00-0041052",
           "gsis_id": "00-0041052",
@@ -3267,8 +3496,8 @@
       "gametime": "13:00",
       "roof": "outdoors",
       "stadium": "M&T Bank Stadium",
-      "spread_line": 3.0,
-      "total_line": 51.5,
+      "spread_line": 1.5,
+      "total_line": 48.5,
       "home_players": [
         {
           "player_name": "Nick Vannett",
@@ -3392,6 +3621,53 @@
           "injury": {
             "injury_status": null,
             "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Lamar Jackson",
+          "player_id": "00-0034796",
+          "gsis_id": "00-0034796",
+          "team": "BAL",
+          "position": "QB",
+          "opponent": "CIN",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 4,
+            "fpts_ppr_per_game": 19.8,
+            "completions": 68,
+            "attempts": 96,
+            "pass_yds": 967,
+            "pass_tds": 6,
+            "interceptions": 1,
+            "rush_yds": 144,
+            "pass_yds_per_game": 241.8
+          },
+          "dvp": {
+            "rank": 9,
+            "label": "Favorable",
+            "games_in_sample": 39,
+            "pass_yds_per_game": 242.8,
+            "pass_tds_per_game": 1.6,
+            "completions_per_game": 20.9
+          },
+          "vs_opponent": {
+            "games": 10,
+            "first_season": 2020,
+            "last_season": 2025,
+            "fpts_per_game": 21.0,
+            "small_sample": false,
+            "completions": 179,
+            "pass_attempts": 296,
+            "pass_yds": 2259,
+            "pass_tds": 21,
+            "interceptions": 5,
+            "rush_yds": 495,
+            "pass_yds_per_game": 225.9
+          },
+          "injury": {
+            "injury_status": "Questionable",
+            "injury_body_part": "Ankle",
             "practice_participation": null
           }
         },
@@ -3527,7 +3803,7 @@
             "rec_yds_per_game": 35.1
           },
           "injury": {
-            "injury_status": "Out",
+            "injury_status": "Questionable",
             "injury_body_part": "Shoulder",
             "practice_participation": null
           }
@@ -3744,6 +4020,68 @@
           }
         },
         {
+          "player_name": "Elijah Sarratt",
+          "player_id": "00-0040876",
+          "gsis_id": "00-0040876",
+          "team": "BAL",
+          "position": "WR",
+          "opponent": "CIN",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 1,
+            "fpts_ppr_per_game": 2.3,
+            "receptions": 1,
+            "targets": 2,
+            "rec_yds": 13,
+            "rec_tds": 0,
+            "rec_yds_per_game": 13.0
+          },
+          "dvp": {
+            "rank": 31,
+            "label": "Avoid",
+            "games_in_sample": 39,
+            "rec_yds_per_game": 123.2,
+            "rec_per_game": 9.4,
+            "targets_per_game": 15.9,
+            "rec_tds_per_game": 0.8
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Matthew Hibner",
+          "player_id": "00-0040879",
+          "gsis_id": "00-0040879",
+          "team": "BAL",
+          "position": "TE",
+          "opponent": "CIN",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 3,
+            "fpts_ppr_per_game": 6.0,
+            "receptions": 5,
+            "targets": 5,
+            "rec_yds": 70,
+            "rec_tds": 1,
+            "rec_yds_per_game": 23.3
+          },
+          "dvp": {
+            "rank": 1,
+            "label": "Smash",
+            "games_in_sample": 39,
+            "rec_yds_per_game": 81.4,
+            "rec_per_game": 6.8,
+            "targets_per_game": 9.3,
+            "rec_tds_per_game": 0.6
+          },
+          "vs_opponent": null,
+          "injury": null
+        },
+        {
           "player_name": "Josh Cuevas",
           "player_id": "00-0040887",
           "gsis_id": "00-0040887",
@@ -3891,50 +4229,6 @@
           "injury": {
             "injury_status": null,
             "injury_body_part": null,
-            "practice_participation": null
-          }
-        },
-        {
-          "player_name": "Tanner Hudson",
-          "player_id": "00-0034613",
-          "gsis_id": "00-0034613",
-          "team": "CIN",
-          "position": "TE",
-          "opponent": "BAL",
-          "season_stats": {
-            "stat_season": 2026,
-            "games": 4,
-            "fpts_ppr_per_game": 4.1,
-            "receptions": 7,
-            "targets": 7,
-            "rec_yds": 33,
-            "rec_tds": 1,
-            "rec_yds_per_game": 8.2
-          },
-          "dvp": {
-            "rank": 25,
-            "label": "Tough",
-            "games_in_sample": 40,
-            "rec_yds_per_game": 46.0,
-            "rec_per_game": 4.7,
-            "targets_per_game": 6.4,
-            "rec_tds_per_game": 0.3
-          },
-          "vs_opponent": {
-            "games": 4,
-            "first_season": 2023,
-            "last_season": 2025,
-            "fpts_per_game": 9.6,
-            "small_sample": false,
-            "receptions": 14,
-            "targets": 18,
-            "rec_yds": 121,
-            "rec_tds": 2,
-            "rec_yds_per_game": 30.2
-          },
-          "injury": {
-            "injury_status": "IR",
-            "injury_body_part": "Pectoral",
             "practice_participation": null
           }
         },
@@ -4369,6 +4663,63 @@
             "injury_body_part": null,
             "practice_participation": null
           }
+        },
+        {
+          "player_name": "Colbie Young",
+          "player_id": "00-0041069",
+          "gsis_id": "00-0041069",
+          "team": "CIN",
+          "position": "WR",
+          "opponent": "BAL",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 2,
+            "fpts_ppr_per_game": 1.5,
+            "receptions": 2,
+            "targets": 2,
+            "rec_yds": 9,
+            "rec_tds": 0,
+            "rec_yds_per_game": 4.5
+          },
+          "dvp": {
+            "rank": 2,
+            "label": "Smash",
+            "games_in_sample": 40,
+            "rec_yds_per_game": 170.5,
+            "rec_per_game": 13.1,
+            "targets_per_game": 20.9,
+            "rec_tds_per_game": 0.8
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": "Questionable",
+            "injury_body_part": "Knee",
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Jack Endries",
+          "player_id": null,
+          "gsis_id": "00-0041116",
+          "team": "CIN",
+          "position": "TE",
+          "opponent": "BAL",
+          "season_stats": null,
+          "dvp": {
+            "rank": 25,
+            "label": "Tough",
+            "games_in_sample": 40,
+            "rec_yds_per_game": 46.0,
+            "rec_per_game": 4.7,
+            "targets_per_game": 6.4,
+            "rec_tds_per_game": 0.3
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
         }
       ]
     },
@@ -4468,6 +4819,52 @@
           "injury": {
             "injury_status": null,
             "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "AJ Dillon",
+          "player_id": "00-0036265",
+          "gsis_id": "00-0036265",
+          "team": "CAR",
+          "position": "RB",
+          "opponent": "TB",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 4,
+            "fpts_ppr_per_game": 1.7,
+            "carries": 17,
+            "rush_yds": 43,
+            "rush_tds": 0,
+            "receptions": 2,
+            "rec_yds": 3,
+            "rush_yds_per_game": 10.8
+          },
+          "dvp": {
+            "rank": 31,
+            "label": "Avoid",
+            "games_in_sample": 40,
+            "rush_yds_per_game": 73.5,
+            "carries_per_game": 18.1,
+            "rec_per_game": 4.9,
+            "rec_yds_per_game": 43.6
+          },
+          "vs_opponent": {
+            "games": 3,
+            "first_season": 2020,
+            "last_season": 2025,
+            "fpts_per_game": 3.5,
+            "small_sample": false,
+            "carries": 20,
+            "rush_yds": 80,
+            "rush_tds": 0,
+            "receptions": 2,
+            "rec_yds": 6,
+            "rush_yds_per_game": 26.7
+          },
+          "injury": {
+            "injury_status": "Questionable",
+            "injury_body_part": "Ankle",
             "practice_participation": null
           }
         },
@@ -4784,6 +5181,50 @@
           }
         },
         {
+          "player_name": "Ja'Tavion Sanders",
+          "player_id": "00-0039356",
+          "gsis_id": "00-0039356",
+          "team": "CAR",
+          "position": "TE",
+          "opponent": "TB",
+          "season_stats": {
+            "stat_season": 2025,
+            "games": 12,
+            "fpts_ppr_per_game": 4.5,
+            "receptions": 29,
+            "targets": 34,
+            "rec_yds": 190,
+            "rec_tds": 1,
+            "rec_yds_per_game": 15.8
+          },
+          "dvp": {
+            "rank": 9,
+            "label": "Favorable",
+            "games_in_sample": 40,
+            "rec_yds_per_game": 59.2,
+            "rec_per_game": 5.9,
+            "targets_per_game": 8.0,
+            "rec_tds_per_game": 0.6
+          },
+          "vs_opponent": {
+            "games": 2,
+            "first_season": 2024,
+            "last_season": 2025,
+            "fpts_per_game": 5.2,
+            "small_sample": true,
+            "receptions": 3,
+            "targets": 3,
+            "rec_yds": 14,
+            "rec_tds": 1,
+            "rec_yds_per_game": 7.0
+          },
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
           "player_name": "Jalen Coker",
           "player_id": "00-0039491",
           "gsis_id": "00-0039491",
@@ -4916,36 +5357,6 @@
           }
         },
         {
-          "player_name": "Anthony Tyus III",
-          "player_id": "00-0040394",
-          "gsis_id": "00-0040394",
-          "team": "CAR",
-          "position": "RB",
-          "opponent": "TB",
-          "season_stats": {
-            "stat_season": 2026,
-            "games": 2,
-            "fpts_ppr_per_game": 0.0,
-            "carries": 0,
-            "rush_yds": 0,
-            "rush_tds": 0,
-            "receptions": 0,
-            "rec_yds": 0,
-            "rush_yds_per_game": 0.0
-          },
-          "dvp": {
-            "rank": 31,
-            "label": "Avoid",
-            "games_in_sample": 40,
-            "rush_yds_per_game": 73.5,
-            "carries_per_game": 18.1,
-            "rec_per_game": 4.9,
-            "rec_yds_per_game": 43.6
-          },
-          "vs_opponent": null,
-          "injury": null
-        },
-        {
           "player_name": "Trevor Etienne",
           "player_id": "00-0040644",
           "gsis_id": "00-0040644",
@@ -4985,6 +5396,29 @@
             "rec_yds": 0,
             "rush_yds_per_game": 0.0
           },
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Haynes King",
+          "player_id": null,
+          "gsis_id": "00-0041149",
+          "team": "CAR",
+          "position": "QB",
+          "opponent": "TB",
+          "season_stats": null,
+          "dvp": {
+            "rank": 4,
+            "label": "Smash",
+            "games_in_sample": 40,
+            "pass_yds_per_game": 251.6,
+            "pass_tds_per_game": 1.6,
+            "completions_per_game": 23.3
+          },
+          "vs_opponent": null,
           "injury": {
             "injury_status": null,
             "injury_body_part": null,
@@ -5034,13 +5468,24 @@
           "injury": null
         },
         {
-          "player_name": "Easton Stick",
-          "player_id": "00-0035282",
-          "gsis_id": "00-0035282",
+          "player_name": "Baker Mayfield",
+          "player_id": "00-0034855",
+          "gsis_id": "00-0034855",
           "team": "TB",
           "position": "QB",
           "opponent": "CAR",
-          "season_stats": null,
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 3,
+            "fpts_ppr_per_game": 11.7,
+            "completions": 61,
+            "attempts": 96,
+            "pass_yds": 615,
+            "pass_tds": 2,
+            "interceptions": 2,
+            "rush_yds": 65,
+            "pass_yds_per_game": 205.0
+          },
           "dvp": {
             "rank": 18,
             "label": "Neutral",
@@ -5049,10 +5494,23 @@
             "pass_tds_per_game": 1.4,
             "completions_per_game": 20.8
           },
-          "vs_opponent": null,
+          "vs_opponent": {
+            "games": 6,
+            "first_season": 2023,
+            "last_season": 2025,
+            "fpts_per_game": 14.5,
+            "small_sample": false,
+            "completions": 116,
+            "pass_attempts": 174,
+            "pass_yds": 1281,
+            "pass_tds": 9,
+            "interceptions": 5,
+            "rush_yds": 95,
+            "pass_yds_per_game": 213.5
+          },
           "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
+            "injury_status": "Questionable",
+            "injury_body_part": "Thumb",
             "practice_participation": null
           }
         },
@@ -5187,6 +5645,52 @@
           "injury": {
             "injury_status": null,
             "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Sean Tucker",
+          "player_id": "00-0038951",
+          "gsis_id": "00-0038951",
+          "team": "TB",
+          "position": "RB",
+          "opponent": "CAR",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 2,
+            "fpts_ppr_per_game": 4.4,
+            "carries": 8,
+            "rush_yds": 28,
+            "rush_tds": 1,
+            "receptions": 0,
+            "rec_yds": 0,
+            "rush_yds_per_game": 14.0
+          },
+          "dvp": {
+            "rank": 1,
+            "label": "Smash",
+            "games_in_sample": 39,
+            "rush_yds_per_game": 116.0,
+            "carries_per_game": 23.8,
+            "rec_per_game": 4.5,
+            "rec_yds_per_game": 31.7
+          },
+          "vs_opponent": {
+            "games": 4,
+            "first_season": 2024,
+            "last_season": 2025,
+            "fpts_per_game": 2.8,
+            "small_sample": false,
+            "carries": 16,
+            "rush_yds": 38,
+            "rush_tds": 1,
+            "receptions": 1,
+            "rec_yds": 5,
+            "rush_yds_per_game": 9.5
+          },
+          "injury": {
+            "injury_status": "Questionable",
+            "injury_body_part": "Quadriceps",
             "practice_participation": null
           }
         },
@@ -5413,40 +5917,6 @@
           }
         },
         {
-          "player_name": "Josh Williams",
-          "player_id": "00-0040429",
-          "gsis_id": "00-0040429",
-          "team": "TB",
-          "position": "RB",
-          "opponent": "CAR",
-          "season_stats": {
-            "stat_season": 2026,
-            "games": 1,
-            "fpts_ppr_per_game": 0.0,
-            "carries": 0,
-            "rush_yds": 0,
-            "rush_tds": 0,
-            "receptions": 0,
-            "rec_yds": 0,
-            "rush_yds_per_game": 0.0
-          },
-          "dvp": {
-            "rank": 1,
-            "label": "Smash",
-            "games_in_sample": 39,
-            "rush_yds_per_game": 116.0,
-            "carries_per_game": 23.8,
-            "rec_per_game": 4.5,
-            "rec_yds_per_game": 31.7
-          },
-          "vs_opponent": null,
-          "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
-            "practice_participation": null
-          }
-        },
-        {
           "player_name": "Ted Hurst III",
           "player_id": "00-0041048",
           "gsis_id": "00-0041048",
@@ -5552,7 +6022,7 @@
       "gametime": "13:00",
       "roof": null,
       "stadium": "Reliant Stadium",
-      "spread_line": 10.0,
+      "spread_line": 10.5,
       "total_line": 42.5,
       "home_players": [
         {
@@ -5686,6 +6156,52 @@
           "injury": {
             "injury_status": null,
             "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "David Montgomery",
+          "player_id": "00-0035685",
+          "gsis_id": "00-0035685",
+          "team": "HOU",
+          "position": "RB",
+          "opponent": "NYG",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 5,
+            "fpts_ppr_per_game": 9.1,
+            "carries": 52,
+            "rush_yds": 138,
+            "rush_tds": 2,
+            "receptions": 7,
+            "rec_yds": 67,
+            "rush_yds_per_game": 27.6
+          },
+          "dvp": {
+            "rank": 2,
+            "label": "Smash",
+            "games_in_sample": 40,
+            "rush_yds_per_game": 112.8,
+            "carries_per_game": 22.4,
+            "rec_per_game": 4.3,
+            "rec_yds_per_game": 29.8
+          },
+          "vs_opponent": {
+            "games": 3,
+            "first_season": 2020,
+            "last_season": 2025,
+            "fpts_per_game": 16.2,
+            "small_sample": false,
+            "carries": 43,
+            "rush_yds": 164,
+            "rush_tds": 2,
+            "receptions": 8,
+            "rec_yds": 81,
+            "rush_yds_per_game": 54.7
+          },
+          "injury": {
+            "injury_status": "Questionable",
+            "injury_body_part": "Groin",
             "practice_participation": null
           }
         },
@@ -5958,40 +6474,6 @@
           }
         },
         {
-          "player_name": "Jawhar Jordan",
-          "player_id": "00-0039405",
-          "gsis_id": "00-0039405",
-          "team": "HOU",
-          "position": "RB",
-          "opponent": "NYG",
-          "season_stats": {
-            "stat_season": 2026,
-            "games": 1,
-            "fpts_ppr_per_game": 12.0,
-            "carries": 6,
-            "rush_yds": 43,
-            "rush_tds": 1,
-            "receptions": 1,
-            "rec_yds": 7,
-            "rush_yds_per_game": 43.0
-          },
-          "dvp": {
-            "rank": 2,
-            "label": "Smash",
-            "games_in_sample": 40,
-            "rush_yds_per_game": 112.8,
-            "carries_per_game": 22.4,
-            "rec_per_game": 4.3,
-            "rec_yds_per_game": 29.8
-          },
-          "vs_opponent": null,
-          "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
-            "practice_participation": null
-          }
-        },
-        {
           "player_name": "Marvin Harrison Jr.",
           "player_id": "00-0039849",
           "gsis_id": "00-0039849",
@@ -6090,6 +6572,39 @@
             "carries_per_game": 22.4,
             "rec_per_game": 4.3,
             "rec_yds_per_game": 29.8
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Marlin Klein",
+          "player_id": "00-0041472",
+          "gsis_id": "00-0041472",
+          "team": "HOU",
+          "position": "TE",
+          "opponent": "NYG",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 1,
+            "fpts_ppr_per_game": 2.6,
+            "receptions": 1,
+            "targets": 1,
+            "rec_yds": 16,
+            "rec_tds": 0,
+            "rec_yds_per_game": 16.0
+          },
+          "dvp": {
+            "rank": 29,
+            "label": "Avoid",
+            "games_in_sample": 40,
+            "rec_yds_per_game": 44.9,
+            "rec_per_game": 4.9,
+            "targets_per_game": 6.7,
+            "rec_tds_per_game": 0.3
           },
           "vs_opponent": null,
           "injury": {
@@ -6315,52 +6830,6 @@
           }
         },
         {
-          "player_name": "Najee Harris",
-          "player_id": "00-0036893",
-          "gsis_id": "00-0036893",
-          "team": "NYG",
-          "position": "RB",
-          "opponent": "HOU",
-          "season_stats": {
-            "stat_season": 2026,
-            "games": 5,
-            "fpts_ppr_per_game": 2.3,
-            "carries": 31,
-            "rush_yds": 99,
-            "rush_tds": 0,
-            "receptions": 1,
-            "rec_yds": 5,
-            "rush_yds_per_game": 19.8
-          },
-          "dvp": {
-            "rank": 29,
-            "label": "Avoid",
-            "games_in_sample": 40,
-            "rush_yds_per_game": 77.2,
-            "carries_per_game": 20.7,
-            "rec_per_game": 4.2,
-            "rec_yds_per_game": 28.2
-          },
-          "vs_opponent": {
-            "games": 1,
-            "first_season": 2023,
-            "last_season": 2023,
-            "fpts_per_game": 11.3,
-            "small_sample": true,
-            "carries": 14,
-            "rush_yds": 71,
-            "rush_tds": 0,
-            "receptions": 1,
-            "rec_yds": 32,
-            "rush_yds_per_game": 71.0
-          },
-          "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
-            "practice_participation": null
-          }
-        },
-        {
           "player_name": "Isaiah Likely",
           "player_id": "00-0037838",
           "gsis_id": "00-0037838",
@@ -6438,6 +6907,29 @@
           }
         },
         {
+          "player_name": "Jake Haener",
+          "player_id": "00-0038998",
+          "gsis_id": "00-0038998",
+          "team": "NYG",
+          "position": "QB",
+          "opponent": "HOU",
+          "season_stats": null,
+          "dvp": {
+            "rank": 19,
+            "label": "Neutral",
+            "games_in_sample": 40,
+            "pass_yds_per_game": 225.1,
+            "pass_tds_per_game": 1.5,
+            "completions_per_game": 20.2
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
           "player_name": "Malik Nabers",
           "player_id": "00-0039337",
           "gsis_id": "00-0039337",
@@ -6499,6 +6991,39 @@
           },
           "vs_opponent": null,
           "injury": null
+        },
+        {
+          "player_name": "Theo Johnson",
+          "player_id": "00-0039847",
+          "gsis_id": "00-0039847",
+          "team": "NYG",
+          "position": "TE",
+          "opponent": "HOU",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 4,
+            "fpts_ppr_per_game": 3.9,
+            "receptions": 4,
+            "targets": 9,
+            "rec_yds": 55,
+            "rec_tds": 1,
+            "rec_yds_per_game": 13.8
+          },
+          "dvp": {
+            "rank": 28,
+            "label": "Avoid",
+            "games_in_sample": 40,
+            "rec_yds_per_game": 45.0,
+            "rec_per_game": 4.8,
+            "targets_per_game": 6.9,
+            "rec_tds_per_game": 0.4
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": "Questionable",
+            "injury_body_part": "Neck",
+            "practice_participation": null
+          }
         },
         {
           "player_name": "J.J. McCarthy",
@@ -6718,8 +7243,8 @@
             "rush_yds_per_game": 52.5
           },
           "injury": {
-            "injury_status": "Questionable",
-            "injury_body_part": "Leg",
+            "injury_status": null,
+            "injury_body_part": null,
             "practice_participation": null
           }
         },
@@ -6809,7 +7334,7 @@
             "rec_yds_per_game": 41.7
           },
           "injury": {
-            "injury_status": "Out",
+            "injury_status": "Questionable",
             "injury_body_part": "Concussion",
             "practice_participation": null
           }
@@ -6949,21 +7474,21 @@
           }
         },
         {
-          "player_name": "Jeshaun Jones",
-          "player_id": "00-0039710",
-          "gsis_id": "00-0039710",
+          "player_name": "Jordan Addison",
+          "player_id": "00-0038994",
+          "gsis_id": "00-0038994",
           "team": "MIN",
           "position": "WR",
           "opponent": "IND",
           "season_stats": {
             "stat_season": 2026,
-            "games": 2,
-            "fpts_ppr_per_game": 2.1,
-            "receptions": 1,
-            "targets": 1,
-            "rec_yds": 32,
-            "rec_tds": 0,
-            "rec_yds_per_game": 16.0
+            "games": 4,
+            "fpts_ppr_per_game": 8.3,
+            "receptions": 11,
+            "targets": 22,
+            "rec_yds": 163,
+            "rec_tds": 1,
+            "rec_yds_per_game": 40.8
           },
           "dvp": {
             "rank": 6,
@@ -6974,10 +7499,21 @@
             "targets_per_game": 19.2,
             "rec_tds_per_game": 0.9
           },
-          "vs_opponent": null,
+          "vs_opponent": {
+            "games": 1,
+            "first_season": 2024,
+            "last_season": 2024,
+            "fpts_per_game": 16.1,
+            "small_sample": true,
+            "receptions": 5,
+            "targets": 5,
+            "rec_yds": 42,
+            "rec_tds": 1,
+            "rec_yds_per_game": 42.0
+          },
           "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
+            "injury_status": "Questionable",
+            "injury_body_part": "Hamstring",
             "practice_participation": null
           }
         },
@@ -7039,6 +7575,40 @@
             "rec_per_game": 5.7,
             "targets_per_game": 7.8,
             "rec_tds_per_game": 0.5
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Max Brosmer",
+          "player_id": "00-0040494",
+          "gsis_id": "00-0040494",
+          "team": "MIN",
+          "position": "QB",
+          "opponent": "IND",
+          "season_stats": {
+            "stat_season": 2025,
+            "games": 7,
+            "fpts_ppr_per_game": 0.6,
+            "completions": 47,
+            "attempts": 71,
+            "pass_yds": 328,
+            "pass_tds": 0,
+            "interceptions": 4,
+            "rush_yds": 11,
+            "pass_yds_per_game": 46.9
+          },
+          "dvp": {
+            "rank": 5,
+            "label": "Smash",
+            "games_in_sample": 40,
+            "pass_yds_per_game": 251.4,
+            "pass_tds_per_game": 1.5,
+            "completions_per_game": 21.9
           },
           "vs_opponent": null,
           "injury": {
@@ -7201,7 +7771,7 @@
             "rec_yds_per_game": 45.4
           },
           "dvp": {
-            "rank": 21,
+            "rank": 22,
             "label": "Tough",
             "games_in_sample": 39,
             "rec_yds_per_game": 137.0,
@@ -7245,7 +7815,7 @@
             "rec_yds_per_game": 29.7
           },
           "dvp": {
-            "rank": 21,
+            "rank": 22,
             "label": "Tough",
             "games_in_sample": 39,
             "rec_yds_per_game": 137.0,
@@ -7345,6 +7915,50 @@
           "injury": {
             "injury_status": null,
             "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Ashton Dulin",
+          "player_id": "00-0035021",
+          "gsis_id": "00-0035021",
+          "team": "IND",
+          "position": "WR",
+          "opponent": "MIN",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 2,
+            "fpts_ppr_per_game": 3.0,
+            "receptions": 3,
+            "targets": 7,
+            "rec_yds": 29,
+            "rec_tds": 0,
+            "rec_yds_per_game": 14.5
+          },
+          "dvp": {
+            "rank": 22,
+            "label": "Tough",
+            "games_in_sample": 39,
+            "rec_yds_per_game": 137.0,
+            "rec_per_game": 10.7,
+            "targets_per_game": 17.7,
+            "rec_tds_per_game": 0.7
+          },
+          "vs_opponent": {
+            "games": 3,
+            "first_season": 2020,
+            "last_season": 2024,
+            "fpts_per_game": 2.8,
+            "small_sample": false,
+            "receptions": 3,
+            "targets": 5,
+            "rec_yds": 31,
+            "rec_tds": 0,
+            "rec_yds_per_game": 10.3
+          },
+          "injury": {
+            "injury_status": "Questionable",
+            "injury_body_part": "Hamstring",
             "practice_participation": null
           }
         },
@@ -7521,7 +8135,7 @@
             "rec_yds_per_game": 48.2
           },
           "dvp": {
-            "rank": 21,
+            "rank": 22,
             "label": "Tough",
             "games_in_sample": 39,
             "rec_yds_per_game": 137.0,
@@ -7599,7 +8213,7 @@
             "rec_yds_per_game": 0.0
           },
           "dvp": {
-            "rank": 21,
+            "rank": 22,
             "label": "Tough",
             "games_in_sample": 39,
             "rec_yds_per_game": 137.0,
@@ -7611,6 +8225,39 @@
           "injury": {
             "injury_status": "Questionable",
             "injury_body_part": "Concussion",
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Tyler Warren",
+          "player_id": "00-0040128",
+          "gsis_id": "00-0040128",
+          "team": "IND",
+          "position": "TE",
+          "opponent": "MIN",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 5,
+            "fpts_ppr_per_game": 14.0,
+            "receptions": 30,
+            "targets": 36,
+            "rec_yds": 213,
+            "rec_tds": 2,
+            "rec_yds_per_game": 42.6
+          },
+          "dvp": {
+            "rank": 27,
+            "label": "Avoid",
+            "games_in_sample": 39,
+            "rec_yds_per_game": 45.1,
+            "rec_per_game": 4.3,
+            "targets_per_game": 6.5,
+            "rec_tds_per_game": 0.2
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": "Questionable",
+            "injury_body_part": "Groin",
             "practice_participation": null
           }
         },
@@ -7640,6 +8287,40 @@
             "carries_per_game": 23.0,
             "rec_per_game": 3.5,
             "rec_yds_per_game": 21.2
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Riley Leonard",
+          "player_id": "00-0040206",
+          "gsis_id": "00-0040206",
+          "team": "IND",
+          "position": "QB",
+          "opponent": "MIN",
+          "season_stats": {
+            "stat_season": 2025,
+            "games": 5,
+            "fpts_ppr_per_game": 6.2,
+            "completions": 39,
+            "attempts": 67,
+            "pass_yds": 415,
+            "pass_tds": 2,
+            "interceptions": 3,
+            "rush_yds": 27,
+            "pass_yds_per_game": 83.0
+          },
+          "dvp": {
+            "rank": 31,
+            "label": "Avoid",
+            "games_in_sample": 39,
+            "pass_yds_per_game": 203.1,
+            "pass_tds_per_game": 0.9,
+            "completions_per_game": 18.5
           },
           "vs_opponent": null,
           "injury": {
@@ -7700,7 +8381,7 @@
             "rec_yds_per_game": 11.8
           },
           "dvp": {
-            "rank": 21,
+            "rank": 22,
             "label": "Tough",
             "games_in_sample": 39,
             "rec_yds_per_game": 137.0,
@@ -7726,7 +8407,7 @@
       "roof": "outdoors",
       "stadium": "MetLife Stadium",
       "spread_line": 4.5,
-      "total_line": 38.5,
+      "total_line": 39.5,
       "home_players": [
         {
           "player_name": "Geno Smith",
@@ -8033,6 +8714,52 @@
           }
         },
         {
+          "player_name": "Breece Hall",
+          "player_id": "00-0038120",
+          "gsis_id": "00-0038120",
+          "team": "NYJ",
+          "position": "RB",
+          "opponent": "MIA",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 3,
+            "fpts_ppr_per_game": 14.2,
+            "carries": 51,
+            "rush_yds": 163,
+            "rush_tds": 1,
+            "receptions": 10,
+            "rec_yds": 102,
+            "rush_yds_per_game": 54.3
+          },
+          "dvp": {
+            "rank": 10,
+            "label": "Favorable",
+            "games_in_sample": 39,
+            "rush_yds_per_game": 100.6,
+            "carries_per_game": 22.5,
+            "rec_per_game": 4.7,
+            "rec_yds_per_game": 36.5
+          },
+          "vs_opponent": {
+            "games": 6,
+            "first_season": 2022,
+            "last_season": 2025,
+            "fpts_per_game": 13.5,
+            "small_sample": false,
+            "carries": 71,
+            "rush_yds": 315,
+            "rush_tds": 1,
+            "receptions": 18,
+            "rec_yds": 175,
+            "rush_yds_per_game": 52.5
+          },
+          "injury": {
+            "injury_status": "Questionable",
+            "injury_body_part": "Quadriceps",
+            "practice_participation": null
+          }
+        },
+        {
           "player_name": "Isaiah Williams",
           "player_id": "00-0039451",
           "gsis_id": "00-0039451",
@@ -8165,6 +8892,50 @@
           "injury": {
             "injury_status": null,
             "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Adonai Mitchell",
+          "player_id": "00-0039890",
+          "gsis_id": "00-0039890",
+          "team": "NYJ",
+          "position": "WR",
+          "opponent": "MIA",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 2,
+            "fpts_ppr_per_game": 10.7,
+            "receptions": 9,
+            "targets": 15,
+            "rec_yds": 123,
+            "rec_tds": 0,
+            "rec_yds_per_game": 61.5
+          },
+          "dvp": {
+            "rank": 29,
+            "label": "Avoid",
+            "games_in_sample": 39,
+            "rec_yds_per_game": 125.3,
+            "rec_per_game": 10.6,
+            "targets_per_game": 15.5,
+            "rec_tds_per_game": 0.8
+          },
+          "vs_opponent": {
+            "games": 3,
+            "first_season": 2024,
+            "last_season": 2025,
+            "fpts_per_game": 4.2,
+            "small_sample": false,
+            "receptions": 5,
+            "targets": 11,
+            "rec_yds": 75,
+            "rec_tds": 0,
+            "rec_yds_per_game": 25.0
+          },
+          "injury": {
+            "injury_status": "Doubtful",
+            "injury_body_part": "Finger",
             "practice_participation": null
           }
         },
@@ -8394,7 +9165,7 @@
             "rec_yds_per_game": 11.0
           },
           "dvp": {
-            "rank": 22,
+            "rank": 21,
             "label": "Tough",
             "games_in_sample": 40,
             "rec_yds_per_game": 137.0,
@@ -8455,61 +9226,30 @@
           }
         },
         {
-          "player_name": "Ryan Miller",
-          "player_id": "00-0038824",
-          "gsis_id": "00-0038824",
+          "player_name": "Jared Wayne",
+          "player_id": "00-0038728",
+          "gsis_id": "00-0038728",
           "team": "MIA",
           "position": "WR",
           "opponent": "NYJ",
           "season_stats": {
             "stat_season": 2026,
-            "games": 3,
-            "fpts_ppr_per_game": 6.1,
-            "receptions": 3,
-            "targets": 4,
-            "rec_yds": 92,
-            "rec_tds": 1,
-            "rec_yds_per_game": 30.7
+            "games": 4,
+            "fpts_ppr_per_game": 2.6,
+            "receptions": 4,
+            "targets": 12,
+            "rec_yds": 65,
+            "rec_tds": 0,
+            "rec_yds_per_game": 16.2
           },
           "dvp": {
-            "rank": 22,
+            "rank": 21,
             "label": "Tough",
             "games_in_sample": 40,
             "rec_yds_per_game": 137.0,
             "rec_per_game": 10.8,
             "targets_per_game": 17.4,
             "rec_tds_per_game": 0.9
-          },
-          "vs_opponent": {
-            "games": 1,
-            "first_season": 2025,
-            "last_season": 2025,
-            "fpts_per_game": 0.0,
-            "small_sample": true,
-            "receptions": 0,
-            "targets": 1,
-            "rec_yds": 0,
-            "rec_tds": 0,
-            "rec_yds_per_game": 0.0
-          },
-          "injury": null
-        },
-        {
-          "player_name": "Carlos Washington",
-          "player_id": null,
-          "gsis_id": "00-0038930",
-          "team": "MIA",
-          "position": "RB",
-          "opponent": "NYJ",
-          "season_stats": null,
-          "dvp": {
-            "rank": 5,
-            "label": "Smash",
-            "games_in_sample": 40,
-            "rush_yds_per_game": 106.1,
-            "carries_per_game": 25.1,
-            "rec_per_game": 3.7,
-            "rec_yds_per_game": 30.3
           },
           "vs_opponent": null,
           "injury": {
@@ -8582,7 +9322,7 @@
             "rec_yds_per_game": 52.4
           },
           "dvp": {
-            "rank": 22,
+            "rank": 21,
             "label": "Tough",
             "games_in_sample": 40,
             "rec_yds_per_game": 137.0,
@@ -8674,6 +9414,64 @@
           "injury": null
         },
         {
+          "player_name": "Justin Joly",
+          "player_id": null,
+          "gsis_id": "00-0041077",
+          "team": "MIA",
+          "position": "TE",
+          "opponent": "NYJ",
+          "season_stats": null,
+          "dvp": {
+            "rank": 22,
+            "label": "Tough",
+            "games_in_sample": 40,
+            "rec_yds_per_game": 48.5,
+            "rec_per_game": 5.1,
+            "targets_per_game": 7.1,
+            "rec_tds_per_game": 0.4
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": "Questionable",
+            "injury_body_part": "Concussion",
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Kaytron Allen",
+          "player_id": "00-0041096",
+          "gsis_id": "00-0041096",
+          "team": "MIA",
+          "position": "RB",
+          "opponent": "NYJ",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 3,
+            "fpts_ppr_per_game": 1.4,
+            "carries": 12,
+            "rush_yds": 41,
+            "rush_tds": 0,
+            "receptions": 0,
+            "rec_yds": 0,
+            "rush_yds_per_game": 13.7
+          },
+          "dvp": {
+            "rank": 5,
+            "label": "Smash",
+            "games_in_sample": 40,
+            "rush_yds_per_game": 106.1,
+            "carries_per_game": 25.1,
+            "rec_per_game": 3.7,
+            "rec_yds_per_game": 30.3
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
           "player_name": "DJ Herman",
           "player_id": "00-0041436",
           "gsis_id": "00-0041436",
@@ -8704,6 +9502,39 @@
           "injury": {
             "injury_status": null,
             "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Caleb Douglas",
+          "player_id": "00-0041523",
+          "gsis_id": "00-0041523",
+          "team": "MIA",
+          "position": "WR",
+          "opponent": "NYJ",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 2,
+            "fpts_ppr_per_game": 9.2,
+            "receptions": 7,
+            "targets": 10,
+            "rec_yds": 113,
+            "rec_tds": 0,
+            "rec_yds_per_game": 56.5
+          },
+          "dvp": {
+            "rank": 21,
+            "label": "Tough",
+            "games_in_sample": 40,
+            "rec_yds_per_game": 137.0,
+            "rec_per_game": 10.8,
+            "targets_per_game": 17.4,
+            "rec_tds_per_game": 0.9
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": "Questionable",
+            "injury_body_part": "Ankle",
             "practice_participation": null
           }
         },
@@ -8758,7 +9589,7 @@
             "rec_yds_per_game": 18.4
           },
           "dvp": {
-            "rank": 22,
+            "rank": 21,
             "label": "Tough",
             "games_in_sample": 40,
             "rec_yds_per_game": 137.0,
@@ -8791,7 +9622,7 @@
             "rec_yds_per_game": 9.0
           },
           "dvp": {
-            "rank": 22,
+            "rank": 21,
             "label": "Tough",
             "games_in_sample": 40,
             "rec_yds_per_game": 137.0,
@@ -8846,7 +9677,7 @@
       "roof": "outdoors",
       "stadium": "Nissan Stadium",
       "spread_line": -1.5,
-      "total_line": 38.5,
+      "total_line": 37.5,
       "home_players": [
         {
           "player_name": "Mitchell Trubisky",
@@ -8979,6 +9810,39 @@
             "rec_yds": 16,
             "rush_yds_per_game": 88.5
           },
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Kylen Granson",
+          "player_id": "00-0036876",
+          "gsis_id": "00-0036876",
+          "team": "TEN",
+          "position": "TE",
+          "opponent": "CLE",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 1,
+            "fpts_ppr_per_game": 0.0,
+            "receptions": 0,
+            "targets": 1,
+            "rec_yds": 0,
+            "rec_tds": 0,
+            "rec_yds_per_game": 0.0
+          },
+          "dvp": {
+            "rank": 15,
+            "label": "Neutral",
+            "games_in_sample": 40,
+            "rec_yds_per_game": 51.3,
+            "rec_per_game": 5.2,
+            "targets_per_game": 7.5,
+            "rec_tds_per_game": 0.4
+          },
+          "vs_opponent": null,
           "injury": {
             "injury_status": null,
             "injury_body_part": null,
@@ -9428,6 +10292,40 @@
             "rec_tds": 1,
             "rec_yds_per_game": 24.0
           },
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Nicholas Singleton",
+          "player_id": "00-0040886",
+          "gsis_id": "00-0040886",
+          "team": "TEN",
+          "position": "RB",
+          "opponent": "CLE",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 2,
+            "fpts_ppr_per_game": 0.6,
+            "carries": 7,
+            "rush_yds": 12,
+            "rush_tds": 0,
+            "receptions": 0,
+            "rec_yds": 0,
+            "rush_yds_per_game": 6.0
+          },
+          "dvp": {
+            "rank": 14,
+            "label": "Neutral",
+            "games_in_sample": 40,
+            "rush_yds_per_game": 95.5,
+            "carries_per_game": 22.1,
+            "rec_per_game": 3.8,
+            "rec_yds_per_game": 24.6
+          },
+          "vs_opponent": null,
           "injury": {
             "injury_status": null,
             "injury_body_part": null,
@@ -9935,6 +10833,52 @@
           }
         },
         {
+          "player_name": "Quinshon Judkins",
+          "player_id": "00-0040784",
+          "gsis_id": "00-0040784",
+          "team": "CLE",
+          "position": "RB",
+          "opponent": "TEN",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 5,
+            "fpts_ppr_per_game": 11.3,
+            "carries": 73,
+            "rush_yds": 221,
+            "rush_tds": 1,
+            "receptions": 18,
+            "rec_yds": 102,
+            "rush_yds_per_game": 44.2
+          },
+          "dvp": {
+            "rank": 13,
+            "label": "Favorable",
+            "games_in_sample": 40,
+            "rush_yds_per_game": 96.3,
+            "carries_per_game": 23.1,
+            "rec_per_game": 3.3,
+            "rec_yds_per_game": 27.2
+          },
+          "vs_opponent": {
+            "games": 1,
+            "first_season": 2025,
+            "last_season": 2025,
+            "fpts_per_game": 9.4,
+            "small_sample": true,
+            "carries": 14,
+            "rush_yds": 26,
+            "rush_tds": 0,
+            "receptions": 1,
+            "rec_yds": 58,
+            "rush_yds_per_game": 26.0
+          },
+          "injury": {
+            "injury_status": "Questionable",
+            "injury_body_part": "Ankle",
+            "practice_participation": null
+          }
+        },
+        {
           "player_name": "Denzel Boston",
           "player_id": "00-0041037",
           "gsis_id": "00-0041037",
@@ -9959,6 +10903,29 @@
             "rec_per_game": 12.3,
             "targets_per_game": 17.7,
             "rec_tds_per_game": 0.9
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Taylen Green",
+          "player_id": null,
+          "gsis_id": "00-0041092",
+          "team": "CLE",
+          "position": "QB",
+          "opponent": "TEN",
+          "season_stats": null,
+          "dvp": {
+            "rank": 13,
+            "label": "Favorable",
+            "games_in_sample": 40,
+            "pass_yds_per_game": 230.4,
+            "pass_tds_per_game": 1.5,
+            "completions_per_game": 20.5
           },
           "vs_opponent": null,
           "injury": {
@@ -10402,40 +11369,6 @@
           }
         },
         {
-          "player_name": "Evan Hull",
-          "player_id": "00-0038397",
-          "gsis_id": "00-0038397",
-          "team": "ARI",
-          "position": "RB",
-          "opponent": "DEN",
-          "season_stats": {
-            "stat_season": 2025,
-            "games": 6,
-            "fpts_ppr_per_game": 1.1,
-            "carries": 19,
-            "rush_yds": 48,
-            "rush_tds": 0,
-            "receptions": 1,
-            "rec_yds": 6,
-            "rush_yds_per_game": 8.0
-          },
-          "dvp": {
-            "rank": 25,
-            "label": "Tough",
-            "games_in_sample": 40,
-            "rush_yds_per_game": 83.5,
-            "carries_per_game": 20.6,
-            "rec_per_game": 3.8,
-            "rec_yds_per_game": 28.7
-          },
-          "vs_opponent": null,
-          "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
-            "practice_participation": null
-          }
-        },
-        {
           "player_name": "Michael Wilson",
           "player_id": "00-0038559",
           "gsis_id": "00-0038559",
@@ -10559,6 +11492,40 @@
           }
         },
         {
+          "player_name": "Jeremiyah Love",
+          "player_id": "00-0041027",
+          "gsis_id": "00-0041027",
+          "team": "ARI",
+          "position": "RB",
+          "opponent": "DEN",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 5,
+            "fpts_ppr_per_game": 10.2,
+            "carries": 67,
+            "rush_yds": 245,
+            "rush_tds": 1,
+            "receptions": 11,
+            "rec_yds": 36,
+            "rush_yds_per_game": 49.0
+          },
+          "dvp": {
+            "rank": 25,
+            "label": "Tough",
+            "games_in_sample": 40,
+            "rush_yds_per_game": 83.5,
+            "carries_per_game": 20.6,
+            "rec_per_game": 3.8,
+            "rec_yds_per_game": 28.7
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": "Questionable",
+            "injury_body_part": "Ankle",
+            "practice_participation": null
+          }
+        },
+        {
           "player_name": "Reggie Virgil",
           "player_id": "00-0041070",
           "gsis_id": "00-0041070",
@@ -10583,6 +11550,29 @@
             "rec_per_game": 11.6,
             "targets_per_game": 19.7,
             "rec_tds_per_game": 0.5
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Carson Beck",
+          "player_id": null,
+          "gsis_id": "00-0041561",
+          "team": "ARI",
+          "position": "QB",
+          "opponent": "DEN",
+          "season_stats": null,
+          "dvp": {
+            "rank": 20,
+            "label": "Tough",
+            "games_in_sample": 40,
+            "pass_yds_per_game": 223.8,
+            "pass_tds_per_game": 1.1,
+            "completions_per_game": 20.9
           },
           "vs_opponent": null,
           "injury": {
@@ -10855,8 +11845,8 @@
             "rec_yds_per_game": 45.0
           },
           "injury": {
-            "injury_status": "Questionable",
-            "injury_body_part": "Shoulder",
+            "injury_status": null,
+            "injury_body_part": null,
             "practice_participation": null
           }
         },
@@ -10886,6 +11876,29 @@
             "carries_per_game": 23.9,
             "rec_per_game": 4.1,
             "rec_yds_per_game": 33.3
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Sam Ehlinger",
+          "player_id": "00-0036879",
+          "gsis_id": "00-0036879",
+          "team": "DEN",
+          "position": "QB",
+          "opponent": "ARI",
+          "season_stats": null,
+          "dvp": {
+            "rank": 10,
+            "label": "Favorable",
+            "games_in_sample": 40,
+            "pass_yds_per_game": 241.3,
+            "pass_tds_per_game": 1.9,
+            "completions_per_game": 21.1
           },
           "vs_opponent": null,
           "injury": {
@@ -11090,6 +12103,30 @@
             "injury_body_part": null,
             "practice_participation": null
           }
+        },
+        {
+          "player_name": "Dallen Bentley",
+          "player_id": null,
+          "gsis_id": "00-0041133",
+          "team": "DEN",
+          "position": "TE",
+          "opponent": "ARI",
+          "season_stats": null,
+          "dvp": {
+            "rank": 4,
+            "label": "Smash",
+            "games_in_sample": 40,
+            "rec_yds_per_game": 62.5,
+            "rec_per_game": 6.0,
+            "targets_per_game": 7.8,
+            "rec_tds_per_game": 0.6
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
         }
       ]
     },
@@ -11226,50 +12263,6 @@
           "injury": {
             "injury_status": null,
             "injury_body_part": null,
-            "practice_participation": null
-          }
-        },
-        {
-          "player_name": "Tom Kennedy",
-          "player_id": "00-0035544",
-          "gsis_id": "00-0035544",
-          "team": "DET",
-          "position": "WR",
-          "opponent": "GB",
-          "season_stats": {
-            "stat_season": 2026,
-            "games": 5,
-            "fpts_ppr_per_game": 0.0,
-            "receptions": 0,
-            "targets": 0,
-            "rec_yds": 0,
-            "rec_tds": 0,
-            "rec_yds_per_game": 0.0
-          },
-          "dvp": {
-            "rank": 23,
-            "label": "Tough",
-            "games_in_sample": 40,
-            "rec_yds_per_game": 136.7,
-            "rec_per_game": 12.0,
-            "targets_per_game": 18.3,
-            "rec_tds_per_game": 0.9
-          },
-          "vs_opponent": {
-            "games": 3,
-            "first_season": 2021,
-            "last_season": 2025,
-            "fpts_per_game": 6.9,
-            "small_sample": false,
-            "receptions": 7,
-            "targets": 10,
-            "rec_yds": 68,
-            "rec_tds": 0,
-            "rec_yds_per_game": 22.7
-          },
-          "injury": {
-            "injury_status": "IR",
-            "injury_body_part": "Knee - MCL",
             "practice_participation": null
           }
         },
@@ -11614,6 +12607,39 @@
             "rec_yds": 0,
             "rush_yds_per_game": 0.0
           },
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Jackson Meeks",
+          "player_id": "00-0040390",
+          "gsis_id": "00-0040390",
+          "team": "DET",
+          "position": "TE",
+          "opponent": "GB",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 1,
+            "fpts_ppr_per_game": 1.8,
+            "receptions": 1,
+            "targets": 1,
+            "rec_yds": 8,
+            "rec_tds": 0,
+            "rec_yds_per_game": 8.0
+          },
+          "dvp": {
+            "rank": 30,
+            "label": "Avoid",
+            "games_in_sample": 40,
+            "rec_yds_per_game": 44.8,
+            "rec_per_game": 5.2,
+            "targets_per_game": 7.1,
+            "rec_tds_per_game": 0.3
+          },
+          "vs_opponent": null,
           "injury": {
             "injury_status": null,
             "injury_body_part": null,
@@ -12114,39 +13140,6 @@
           }
         },
         {
-          "player_name": "Coleman Owen",
-          "player_id": "00-0040352",
-          "gsis_id": "00-0040352",
-          "team": "GB",
-          "position": "WR",
-          "opponent": "DET",
-          "season_stats": {
-            "stat_season": 2026,
-            "games": 1,
-            "fpts_ppr_per_game": 0.0,
-            "receptions": 0,
-            "targets": 0,
-            "rec_yds": 0,
-            "rec_tds": 0,
-            "rec_yds_per_game": 0.0
-          },
-          "dvp": {
-            "rank": 1,
-            "label": "Smash",
-            "games_in_sample": 39,
-            "rec_yds_per_game": 172.6,
-            "rec_per_game": 13.0,
-            "targets_per_game": 21.0,
-            "rec_tds_per_game": 1.1
-          },
-          "vs_opponent": null,
-          "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
-            "practice_participation": null
-          }
-        },
-        {
           "player_name": "Mark Redman",
           "player_id": "00-0040598",
           "gsis_id": "00-0040598",
@@ -12267,7 +13260,7 @@
       "roof": "dome",
       "stadium": "Allegiant Stadium",
       "spread_line": -4.5,
-      "total_line": 47.5,
+      "total_line": 48.5,
       "home_players": [
         {
           "player_name": "Kirk Cousins",
@@ -12583,6 +13576,53 @@
           }
         },
         {
+          "player_name": "Aidan O'Connell",
+          "player_id": "00-0038579",
+          "gsis_id": "00-0038579",
+          "team": "LV",
+          "position": "QB",
+          "opponent": "LA",
+          "season_stats": {
+            "stat_season": 2025,
+            "games": 1,
+            "fpts_ppr_per_game": 4.8,
+            "completions": 10,
+            "attempts": 22,
+            "pass_yds": 102,
+            "pass_tds": 0,
+            "interceptions": 0,
+            "rush_yds": 7,
+            "pass_yds_per_game": 102.0
+          },
+          "dvp": {
+            "rank": 23,
+            "label": "Tough",
+            "games_in_sample": 40,
+            "pass_yds_per_game": 218.3,
+            "pass_tds_per_game": 1.5,
+            "completions_per_game": 20.5
+          },
+          "vs_opponent": {
+            "games": 1,
+            "first_season": 2024,
+            "last_season": 2024,
+            "fpts_per_game": 2.1,
+            "small_sample": true,
+            "completions": 6,
+            "pass_attempts": 10,
+            "pass_yds": 52,
+            "pass_tds": 0,
+            "interceptions": 0,
+            "rush_yds": 0,
+            "pass_yds_per_game": 52.0
+          },
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
           "player_name": "Michael Mayer",
           "player_id": "00-0039066",
           "gsis_id": "00-0039066",
@@ -12870,35 +13910,6 @@
           "injury": null
         },
         {
-          "player_name": "Davante Adams",
-          "player_id": "00-0031381",
-          "gsis_id": "00-0031381",
-          "team": "LA",
-          "position": "WR",
-          "opponent": "LV",
-          "season_stats": {
-            "stat_season": 2026,
-            "games": 6,
-            "fpts_ppr_per_game": 17.0,
-            "receptions": 30,
-            "targets": 49,
-            "rec_yds": 480,
-            "rec_tds": 4,
-            "rec_yds_per_game": 80.0
-          },
-          "dvp": {
-            "rank": 11,
-            "label": "Favorable",
-            "games_in_sample": 40,
-            "rec_yds_per_game": 149.9,
-            "rec_per_game": 11.4,
-            "targets_per_game": 18.0,
-            "rec_tds_per_game": 1.0
-          },
-          "vs_opponent": null,
-          "injury": null
-        },
-        {
           "player_name": "Tyler Higbee",
           "player_id": "00-0033110",
           "gsis_id": "00-0033110",
@@ -13004,6 +14015,46 @@
             "rec_yds": 32,
             "rec_tds": 0,
             "rec_yds_per_game": 32.0
+          },
+          "injury": null
+        },
+        {
+          "player_name": "Tutu Atwell",
+          "player_id": "00-0036849",
+          "gsis_id": "00-0036849",
+          "team": "LA",
+          "position": "WR",
+          "opponent": "LV",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 3,
+            "fpts_ppr_per_game": 2.0,
+            "receptions": 3,
+            "targets": 4,
+            "rec_yds": 31,
+            "rec_tds": 0,
+            "rec_yds_per_game": 10.3
+          },
+          "dvp": {
+            "rank": 11,
+            "label": "Favorable",
+            "games_in_sample": 40,
+            "rec_yds_per_game": 149.9,
+            "rec_per_game": 11.4,
+            "targets_per_game": 18.0,
+            "rec_tds_per_game": 1.0
+          },
+          "vs_opponent": {
+            "games": 2,
+            "first_season": 2022,
+            "last_season": 2024,
+            "fpts_per_game": 10.3,
+            "small_sample": true,
+            "receptions": 11,
+            "targets": 18,
+            "rec_yds": 101,
+            "rec_tds": 0,
+            "rec_yds_per_game": 50.5
           },
           "injury": null
         },
@@ -13238,6 +14289,26 @@
           "injury": null
         },
         {
+          "player_name": "CJ Daniels",
+          "player_id": null,
+          "gsis_id": "00-0041399",
+          "team": "LA",
+          "position": "WR",
+          "opponent": "LV",
+          "season_stats": null,
+          "dvp": {
+            "rank": 11,
+            "label": "Favorable",
+            "games_in_sample": 40,
+            "rec_yds_per_game": 149.9,
+            "rec_per_game": 11.4,
+            "targets_per_game": 18.0,
+            "rec_tds_per_game": 1.0
+          },
+          "vs_opponent": null,
+          "injury": null
+        },
+        {
           "player_name": "Dean Connors",
           "player_id": "00-0041415",
           "gsis_id": "00-0041415",
@@ -13286,6 +14357,25 @@
           },
           "vs_opponent": null,
           "injury": null
+        },
+        {
+          "player_name": "Ty Simpson",
+          "player_id": null,
+          "gsis_id": "00-0041568",
+          "team": "LA",
+          "position": "QB",
+          "opponent": "LV",
+          "season_stats": null,
+          "dvp": {
+            "rank": 14,
+            "label": "Neutral",
+            "games_in_sample": 40,
+            "pass_yds_per_game": 230.2,
+            "pass_tds_per_game": 1.7,
+            "completions_per_game": 21.1
+          },
+          "vs_opponent": null,
+          "injury": null
         }
       ]
     },
@@ -13318,7 +14408,7 @@
             "rec_yds_per_game": 0.5
           },
           "dvp": {
-            "rank": 8,
+            "rank": 7,
             "label": "Favorable",
             "games_in_sample": 39,
             "rec_yds_per_game": 59.4,
@@ -13465,39 +14555,6 @@
             "rush_yds": 52,
             "pass_yds_per_game": 189.0
           },
-          "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
-            "practice_participation": null
-          }
-        },
-        {
-          "player_name": "Irvin Charles",
-          "player_id": "00-0037156",
-          "gsis_id": "00-0037156",
-          "team": "SEA",
-          "position": "WR",
-          "opponent": "KC",
-          "season_stats": {
-            "stat_season": 2026,
-            "games": 1,
-            "fpts_ppr_per_game": 0.0,
-            "receptions": 0,
-            "targets": 0,
-            "rec_yds": 0,
-            "rec_tds": 0,
-            "rec_yds_per_game": 0.0
-          },
-          "dvp": {
-            "rank": 30,
-            "label": "Avoid",
-            "games_in_sample": 39,
-            "rec_yds_per_game": 125.1,
-            "rec_per_game": 10.9,
-            "targets_per_game": 17.7,
-            "rec_tds_per_game": 0.6
-          },
-          "vs_opponent": null,
           "injury": {
             "injury_status": null,
             "injury_body_part": null,
@@ -13743,7 +14800,7 @@
             "rec_yds_per_game": 23.0
           },
           "dvp": {
-            "rank": 8,
+            "rank": 7,
             "label": "Favorable",
             "games_in_sample": 39,
             "rec_yds_per_game": 59.4,
@@ -13776,7 +14833,7 @@
             "rec_yds_per_game": 0.0
           },
           "dvp": {
-            "rank": 8,
+            "rank": 7,
             "label": "Favorable",
             "games_in_sample": 39,
             "rec_yds_per_game": 59.4,
@@ -13790,6 +14847,35 @@
             "injury_body_part": null,
             "practice_participation": null
           }
+        },
+        {
+          "player_name": "Montorie Foster Jr",
+          "player_id": "00-0040621",
+          "gsis_id": "00-0040621",
+          "team": "SEA",
+          "position": "WR",
+          "opponent": "KC",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 1,
+            "fpts_ppr_per_game": 0.0,
+            "receptions": 0,
+            "targets": 0,
+            "rec_yds": 0,
+            "rec_tds": 0,
+            "rec_yds_per_game": 0.0
+          },
+          "dvp": {
+            "rank": 30,
+            "label": "Avoid",
+            "games_in_sample": 39,
+            "rec_yds_per_game": 125.1,
+            "rec_per_game": 10.9,
+            "targets_per_game": 17.7,
+            "rec_tds_per_game": 0.6
+          },
+          "vs_opponent": null,
+          "injury": null
         },
         {
           "player_name": "Tory Horton",
@@ -13825,6 +14911,40 @@
           }
         },
         {
+          "player_name": "Jalen Milroe",
+          "player_id": "00-0040673",
+          "gsis_id": "00-0040673",
+          "team": "SEA",
+          "position": "QB",
+          "opponent": "KC",
+          "season_stats": {
+            "stat_season": 2025,
+            "games": 3,
+            "fpts_ppr_per_game": -0.5,
+            "completions": 0,
+            "attempts": 0,
+            "pass_yds": 0,
+            "pass_tds": 0,
+            "interceptions": 0,
+            "rush_yds": 4,
+            "pass_yds_per_game": 0.0
+          },
+          "dvp": {
+            "rank": 24,
+            "label": "Tough",
+            "games_in_sample": 39,
+            "pass_yds_per_game": 216.9,
+            "pass_tds_per_game": 1.1,
+            "completions_per_game": 21.1
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
           "player_name": "Elijah Arroyo",
           "player_id": "00-0040739",
           "gsis_id": "00-0040739",
@@ -13842,7 +14962,7 @@
             "rec_yds_per_game": 8.5
           },
           "dvp": {
-            "rank": 8,
+            "rank": 7,
             "label": "Favorable",
             "games_in_sample": 39,
             "rec_yds_per_game": 59.4,
@@ -13856,6 +14976,26 @@
             "injury_body_part": "Shoulder",
             "practice_participation": null
           }
+        },
+        {
+          "player_name": "Robert Henry Jr.",
+          "player_id": null,
+          "gsis_id": "00-0041178",
+          "team": "SEA",
+          "position": "RB",
+          "opponent": "KC",
+          "season_stats": null,
+          "dvp": {
+            "rank": 30,
+            "label": "Avoid",
+            "games_in_sample": 39,
+            "rush_yds_per_game": 75.2,
+            "carries_per_game": 20.0,
+            "rec_per_game": 4.2,
+            "rec_yds_per_game": 30.1
+          },
+          "vs_opponent": null,
+          "injury": null
         }
       ],
       "away_players": [
@@ -13943,50 +15083,6 @@
             "interceptions": 0,
             "rush_yds": 8,
             "pass_yds_per_game": 224.0
-          },
-          "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
-            "practice_participation": null
-          }
-        },
-        {
-          "player_name": "Justin Watson",
-          "player_id": "00-0034386",
-          "gsis_id": "00-0034386",
-          "team": "KC",
-          "position": "WR",
-          "opponent": "SEA",
-          "season_stats": {
-            "stat_season": 2025,
-            "games": 3,
-            "fpts_ppr_per_game": 2.0,
-            "receptions": 3,
-            "targets": 4,
-            "rec_yds": 30,
-            "rec_tds": 0,
-            "rec_yds_per_game": 10.0
-          },
-          "dvp": {
-            "rank": 32,
-            "label": "Avoid",
-            "games_in_sample": 40,
-            "rec_yds_per_game": 115.5,
-            "rec_per_game": 10.3,
-            "targets_per_game": 17.5,
-            "rec_tds_per_game": 0.8
-          },
-          "vs_opponent": {
-            "games": 1,
-            "first_season": 2022,
-            "last_season": 2022,
-            "fpts_per_game": 0.0,
-            "small_sample": true,
-            "receptions": 0,
-            "targets": 4,
-            "rec_yds": 0,
-            "rec_tds": 0,
-            "rec_yds_per_game": 0.0
           },
           "injury": {
             "injury_status": null,
@@ -14170,6 +15266,72 @@
           }
         },
         {
+          "player_name": "Rashee Rice",
+          "player_id": "00-0039067",
+          "gsis_id": "00-0039067",
+          "team": "KC",
+          "position": "WR",
+          "opponent": "SEA",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 3,
+            "fpts_ppr_per_game": 12.7,
+            "receptions": 13,
+            "targets": 17,
+            "rec_yds": 190,
+            "rec_tds": 1,
+            "rec_yds_per_game": 63.3
+          },
+          "dvp": {
+            "rank": 32,
+            "label": "Avoid",
+            "games_in_sample": 40,
+            "rec_yds_per_game": 115.5,
+            "rec_per_game": 10.3,
+            "targets_per_game": 17.5,
+            "rec_tds_per_game": 0.8
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": "Questionable",
+            "injury_body_part": "Hamstring",
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Jared Wiley",
+          "player_id": "00-0039824",
+          "gsis_id": "00-0039824",
+          "team": "KC",
+          "position": "TE",
+          "opponent": "SEA",
+          "season_stats": {
+            "stat_season": 2025,
+            "games": 2,
+            "fpts_ppr_per_game": 0.7,
+            "receptions": 1,
+            "targets": 1,
+            "rec_yds": 4,
+            "rec_tds": 0,
+            "rec_yds_per_game": 2.0
+          },
+          "dvp": {
+            "rank": 18,
+            "label": "Neutral",
+            "games_in_sample": 40,
+            "rec_yds_per_game": 49.8,
+            "rec_per_game": 5.3,
+            "targets_per_game": 7.4,
+            "rec_tds_per_game": 0.3
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
           "player_name": "Xavier Worthy",
           "player_id": "00-0039894",
           "gsis_id": "00-0039894",
@@ -14270,39 +15432,6 @@
           }
         },
         {
-          "player_name": "Andrew Armstrong",
-          "player_id": "00-0040298",
-          "gsis_id": "00-0040298",
-          "team": "KC",
-          "position": "WR",
-          "opponent": "SEA",
-          "season_stats": {
-            "stat_season": 2026,
-            "games": 1,
-            "fpts_ppr_per_game": 2.3,
-            "receptions": 1,
-            "targets": 2,
-            "rec_yds": 13,
-            "rec_tds": 0,
-            "rec_yds_per_game": 13.0
-          },
-          "dvp": {
-            "rank": 32,
-            "label": "Avoid",
-            "games_in_sample": 40,
-            "rec_yds_per_game": 115.5,
-            "rec_per_game": 10.3,
-            "targets_per_game": 17.5,
-            "rec_tds_per_game": 0.8
-          },
-          "vs_opponent": null,
-          "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
-            "practice_participation": null
-          }
-        },
-        {
           "player_name": "Jalen Royals",
           "player_id": "00-0040646",
           "gsis_id": "00-0040646",
@@ -14360,6 +15489,29 @@
             "rec_per_game": 10.3,
             "targets_per_game": 17.5,
             "rec_tds_per_game": 0.8
+          },
+          "vs_opponent": null,
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Garrett Nussmeier",
+          "player_id": null,
+          "gsis_id": "00-0040906",
+          "team": "KC",
+          "position": "QB",
+          "opponent": "SEA",
+          "season_stats": null,
+          "dvp": {
+            "rank": 32,
+            "label": "Avoid",
+            "games_in_sample": 40,
+            "pass_yds_per_game": 201.4,
+            "pass_tds_per_game": 1.3,
+            "completions_per_game": 21.1
           },
           "vs_opponent": null,
           "injury": {
@@ -14496,6 +15648,96 @@
             "rec_yds": 377,
             "rec_tds": 1,
             "rec_yds_per_game": 37.7
+          },
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Saquon Barkley",
+          "player_id": "00-0034844",
+          "gsis_id": "00-0034844",
+          "team": "PHI",
+          "position": "RB",
+          "opponent": "DAL",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 4,
+            "fpts_ppr_per_game": 5.8,
+            "carries": 36,
+            "rush_yds": 182,
+            "rush_tds": 0,
+            "receptions": 4,
+            "rec_yds": 8,
+            "rush_yds_per_game": 45.5
+          },
+          "dvp": {
+            "rank": 12,
+            "label": "Favorable",
+            "games_in_sample": 40,
+            "rush_yds_per_game": 97.7,
+            "carries_per_game": 21.7,
+            "rec_per_game": 4.4,
+            "rec_yds_per_game": 37.0
+          },
+          "vs_opponent": {
+            "games": 10,
+            "first_season": 2021,
+            "last_season": 2025,
+            "fpts_per_game": 12.3,
+            "small_sample": false,
+            "carries": 140,
+            "rush_yds": 611,
+            "rush_tds": 3,
+            "receptions": 30,
+            "rec_yds": 179,
+            "rush_yds_per_game": 61.1
+          },
+          "injury": {
+            "injury_status": "Questionable",
+            "injury_body_part": "Hamstring",
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Marquise Brown",
+          "player_id": "00-0035662",
+          "gsis_id": "00-0035662",
+          "team": "PHI",
+          "position": "WR",
+          "opponent": "DAL",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 1,
+            "fpts_ppr_per_game": 1.2,
+            "receptions": 0,
+            "targets": 0,
+            "rec_yds": 0,
+            "rec_tds": 0,
+            "rec_yds_per_game": 0.0
+          },
+          "dvp": {
+            "rank": 3,
+            "label": "Smash",
+            "games_in_sample": 40,
+            "rec_yds_per_game": 167.3,
+            "rec_per_game": 12.2,
+            "targets_per_game": 18.2,
+            "rec_tds_per_game": 1.3
+          },
+          "vs_opponent": {
+            "games": 3,
+            "first_season": 2020,
+            "last_season": 2025,
+            "fpts_per_game": 14.0,
+            "small_sample": false,
+            "receptions": 12,
+            "targets": 17,
+            "rec_yds": 120,
+            "rec_tds": 3,
+            "rec_yds_per_game": 40.0
           },
           "injury": {
             "injury_status": null,
@@ -14720,8 +15962,8 @@
             "rec_yds_per_game": 19.0
           },
           "injury": {
-            "injury_status": "Questionable",
-            "injury_body_part": "Undisclosed",
+            "injury_status": null,
+            "injury_body_part": null,
             "practice_participation": null
           }
         },
@@ -14817,38 +16059,34 @@
           }
         },
         {
-          "player_name": "Carson Steele",
-          "player_id": "00-0039325",
-          "gsis_id": "00-0039325",
+          "player_name": "Joe Milton III",
+          "player_id": "00-0039398",
+          "gsis_id": "00-0039398",
           "team": "PHI",
-          "position": "RB",
+          "position": "QB",
           "opponent": "DAL",
           "season_stats": {
-            "stat_season": 2026,
-            "games": 2,
-            "fpts_ppr_per_game": 0.7,
-            "carries": 0,
-            "rush_yds": 0,
-            "rush_tds": 0,
-            "receptions": 1,
-            "rec_yds": 4,
-            "rush_yds_per_game": 0.0
+            "stat_season": 2025,
+            "games": 4,
+            "fpts_ppr_per_game": 2.6,
+            "completions": 15,
+            "attempts": 24,
+            "pass_yds": 183,
+            "pass_tds": 1,
+            "interceptions": 2,
+            "rush_yds": 50,
+            "pass_yds_per_game": 45.8
           },
           "dvp": {
-            "rank": 12,
-            "label": "Favorable",
+            "rank": 3,
+            "label": "Smash",
             "games_in_sample": 40,
-            "rush_yds_per_game": 97.7,
-            "carries_per_game": 21.7,
-            "rec_per_game": 4.4,
-            "rec_yds_per_game": 37.0
+            "pass_yds_per_game": 251.7,
+            "pass_tds_per_game": 1.9,
+            "completions_per_game": 21.4
           },
           "vs_opponent": null,
-          "injury": {
-            "injury_status": "Questionable",
-            "injury_body_part": "Shoulder",
-            "practice_participation": null
-          }
+          "injury": null
         },
         {
           "player_name": "Darius Cooper",
@@ -14895,40 +16133,6 @@
           }
         },
         {
-          "player_name": "Jaydon Blue",
-          "player_id": "00-0040586",
-          "gsis_id": "00-0040586",
-          "team": "PHI",
-          "position": "RB",
-          "opponent": "DAL",
-          "season_stats": {
-            "stat_season": 2025,
-            "games": 5,
-            "fpts_ppr_per_game": 4.1,
-            "carries": 38,
-            "rush_yds": 129,
-            "rush_tds": 1,
-            "receptions": 1,
-            "rec_yds": 5,
-            "rush_yds_per_game": 25.8
-          },
-          "dvp": {
-            "rank": 12,
-            "label": "Favorable",
-            "games_in_sample": 40,
-            "rush_yds_per_game": 97.7,
-            "carries_per_game": 21.7,
-            "rec_per_game": 4.4,
-            "rec_yds_per_game": 37.0
-          },
-          "vs_opponent": null,
-          "injury": {
-            "injury_status": null,
-            "injury_body_part": null,
-            "practice_participation": null
-          }
-        },
-        {
           "player_name": "Makai Lemon",
           "player_id": "00-0040867",
           "gsis_id": "00-0040867",
@@ -14956,8 +16160,8 @@
           },
           "vs_opponent": null,
           "injury": {
-            "injury_status": "Questionable",
-            "injury_body_part": "Undisclosed",
+            "injury_status": null,
+            "injury_body_part": null,
             "practice_participation": null
           }
         },
@@ -15276,7 +16480,7 @@
             "rec_yds_per_game": 10.9
           },
           "injury": {
-            "injury_status": "Out",
+            "injury_status": "Questionable",
             "injury_body_part": "Ribs",
             "practice_participation": null
           }
@@ -15362,6 +16566,52 @@
             "rec_yds": 0,
             "rec_tds": 0,
             "rec_yds_per_game": 0.0
+          },
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Emari Demercado",
+          "player_id": "00-0038705",
+          "gsis_id": "00-0038705",
+          "team": "DAL",
+          "position": "RB",
+          "opponent": "PHI",
+          "season_stats": {
+            "stat_season": 2026,
+            "games": 2,
+            "fpts_ppr_per_game": 0.8,
+            "carries": 5,
+            "rush_yds": 15,
+            "rush_tds": 0,
+            "receptions": 0,
+            "rec_yds": 0,
+            "rush_yds_per_game": 7.5
+          },
+          "dvp": {
+            "rank": 15,
+            "label": "Neutral",
+            "games_in_sample": 40,
+            "rush_yds_per_game": 94.5,
+            "carries_per_game": 23.1,
+            "rec_per_game": 3.9,
+            "rec_yds_per_game": 31.1
+          },
+          "vs_opponent": {
+            "games": 1,
+            "first_season": 2023,
+            "last_season": 2023,
+            "fpts_per_game": 1.9,
+            "small_sample": true,
+            "carries": 0,
+            "rush_yds": 0,
+            "rush_tds": 0,
+            "receptions": 1,
+            "rec_yds": 9,
+            "rush_yds_per_game": 0.0
           },
           "injury": {
             "injury_status": null,
@@ -15541,6 +16791,30 @@
             "rec_tds": 1,
             "rec_yds_per_game": 2.0
           },
+          "injury": {
+            "injury_status": null,
+            "injury_body_part": null,
+            "practice_participation": null
+          }
+        },
+        {
+          "player_name": "Camden Brown",
+          "player_id": null,
+          "gsis_id": "00-0040930",
+          "team": "DAL",
+          "position": "WR",
+          "opponent": "PHI",
+          "season_stats": null,
+          "dvp": {
+            "rank": 14,
+            "label": "Neutral",
+            "games_in_sample": 40,
+            "rec_yds_per_game": 147.7,
+            "rec_per_game": 11.5,
+            "targets_per_game": 19.8,
+            "rec_tds_per_game": 0.7
+          },
+          "vs_opponent": null,
           "injury": {
             "injury_status": null,
             "injury_body_part": null,
