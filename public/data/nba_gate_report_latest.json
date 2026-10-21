@@ -1,7 +1,7 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-10-21T11:39:28.655688+00:00",
+  "run_at": "2026-10-21T12:58:15.111868+00:00",
   "slate_date": "2026-10-21",
   "today_et": "2026-10-21",
   "player_count": 207,
@@ -43,7 +43,7 @@
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 207,
+      "rotation_count": 174,
       "median_rotation_pts": 9.0,
       "team_scores": {
         "ATL": 118.0,
@@ -62,21 +62,53 @@
         "NOP": 124.0,
         "DAL": 98.0,
         "HOU": 113.0,
-        "GSW": 75.0,
         "LAL": 120.0,
         "PHX": 112.0,
         "POR": 106.0,
-        "SAC": 47.0,
         "LAC": 86.0
       },
-      "zero_pts_pct": 0.0
+      "zero_pts_pct": 0.0,
+      "dropped_games": [
+        {
+          "game": "GSW@LAL",
+          "game_id": "21717859",
+          "reasons": [
+            "GSW: score=75<85"
+          ],
+          "label": "insufficient roster data"
+        },
+        {
+          "game": "SAC@LAC",
+          "game_id": "21717931",
+          "reasons": [
+            "SAC: score=47<85, players=6<8"
+          ],
+          "label": "insufficient roster data"
+        }
+      ],
+      "thin_teams": {
+        "SAC": [
+          "score=47<85",
+          "players=6<8"
+        ],
+        "GSW": [
+          "score=75<85"
+        ]
+      }
     }
   },
   "failures": [],
   "matchups_checks": {
     "slate_date_match": true,
-    "game_count_before": 10,
+    "game_count_before": 11,
     "game_count_after": 10,
-    "dropped_games": []
+    "dropped_games": [
+      {
+        "game": "SAC@LAC",
+        "reasons": [
+          "total=133"
+        ]
+      }
+    ]
   }
 }
