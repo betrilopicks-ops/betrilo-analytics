@@ -1,22 +1,22 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-10-21T21:46:09.235190+00:00",
-  "slate_date": "2026-10-21",
-  "today_et": "2026-10-21",
-  "player_count": 217,
-  "game_count": 11,
+  "run_at": "2026-10-22T11:02:22.777554+00:00",
+  "slate_date": "2026-10-22",
+  "today_et": "2026-10-22",
+  "player_count": 40,
+  "game_count": 2,
   "checks": {
     "1_slate_date_and_sample": {
       "passed": true,
-      "slate_date": "2026-10-21",
-      "expected_date": "2026-10-21",
+      "slate_date": "2026-10-22",
+      "expected_date": "2026-10-22",
       "is_sample": false
     },
     "2_game_count": {
       "passed": true,
-      "json_games": 11,
-      "scoreboard_games": 11
+      "json_games": 2,
+      "scoreboard_games": 2
     },
     "3_game_coverage": {
       "passed": true,
@@ -34,7 +34,7 @@
     "6_prior_season_cap": {
       "passed": true,
       "violations": [],
-      "players_checked": 183
+      "players_checked": 36
     },
     "7_integrity": {
       "passed": true,
@@ -43,50 +43,17 @@
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 199,
+      "rotation_count": 40,
       "median_rotation_pts": 9.0,
       "team_scores": {
-        "ATL": 118.0,
-        "ORL": 119.0,
-        "MIL": 112.0,
-        "WAS": 108.0,
-        "MIN": 128.0,
-        "MIA": 117.0,
-        "CHA": 99.0,
-        "BKN": 112.0,
-        "CHI": 100.0,
-        "TOR": 114.0,
-        "UTA": 122.0,
-        "MEM": 115.0,
-        "IND": 108.0,
-        "NOP": 117.0,
-        "DAL": 116.0,
-        "HOU": 115.0,
-        "GSW": 116.0,
-        "LAL": 118.0,
-        "PHX": 118.0,
-        "POR": 120.0
+        "CLE": 117.0,
+        "PHI": 122.0,
+        "DEN": 119.0,
+        "OKC": 120.0
       },
       "zero_pts_pct": 0.0,
-      "dropped_games": [
-        {
-          "game": "SAC@LAC",
-          "game_id": "21717931",
-          "reasons": [
-            "SAC: score=83<85",
-            "LAC: score=78<85"
-          ],
-          "label": "insufficient roster data"
-        }
-      ],
-      "thin_teams": {
-        "LAC": [
-          "score=78<85"
-        ],
-        "SAC": [
-          "score=83<85"
-        ]
-      }
+      "dropped_games": [],
+      "thin_teams": {}
     },
     "9_core_player_missing": {
       "passed": true,
@@ -97,17 +64,8 @@
   "failures": [],
   "matchups_checks": {
     "slate_date_match": true,
-    "game_count_before": 11,
-    "game_count_after": 10,
-    "dropped_games": [
-      {
-        "game": "SAC@LAC",
-        "reasons": [
-          "thin roster: SAC",
-          "thin roster: LAC",
-          "total=161"
-        ]
-      }
-    ]
+    "game_count_before": 2,
+    "game_count_after": 2,
+    "dropped_games": []
   }
 }
