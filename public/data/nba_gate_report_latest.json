@@ -1,7 +1,7 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-10-23T11:09:38.110957+00:00",
+  "run_at": "2026-10-23T14:16:08.627201+00:00",
   "slate_date": "2026-10-23",
   "today_et": "2026-10-23",
   "player_count": 240,
@@ -44,48 +44,81 @@
       "passed": true,
       "issues": [],
       "rotation_count": 240,
-      "median_rotation_pts": 10.0,
+      "median_rotation_pts": 9.0,
       "team_scores": {
-        "CHI": 119.0,
-        "MIL": 120.0,
+        "CHI": 111.0,
+        "MIL": 108.0,
         "NYK": 105.0,
-        "BOS": 110.0,
-        "ATL": 116.0,
-        "CHA": 110.0,
+        "BOS": 103.0,
+        "ATL": 104.0,
+        "CHA": 100.0,
         "DAL": 113.0,
-        "IND": 114.0,
-        "MIN": 118.0,
+        "IND": 104.0,
+        "MIN": 106.0,
         "ORL": 110.0,
-        "TOR": 116.0,
-        "WAS": 118.0,
-        "DET": 118.0,
-        "MIA": 114.0,
-        "HOU": 109.0,
-        "SAS": 117.0,
+        "TOR": 108.0,
+        "WAS": 108.0,
+        "DET": 106.0,
+        "MIA": 106.0,
+        "HOU": 98.0,
+        "SAS": 101.0,
         "NOP": 115.0,
         "UTA": 122.0,
-        "MEM": 118.0,
-        "GSW": 116.0,
-        "LAC": 106.0,
+        "MEM": 109.0,
+        "GSW": 107.0,
+        "LAC": 96.0,
         "LAL": 121.0,
-        "POR": 117.0,
+        "POR": 106.0,
         "SAC": 100.0
       },
       "zero_pts_pct": 0.0,
       "dropped_games": [],
-      "thin_teams": {}
+      "thin_teams": {
+        "UTA": "clamp guard: raw=167.0 scale=\u00d70.731",
+        "LAL": "clamp guard: raw=161.0 scale=\u00d70.752"
+      }
     },
     "9_core_player_missing": {
       "passed": true,
       "missing": [],
       "games_dropped": []
+    },
+    "10_vegas_cal_clamp": {
+      "passed": true,
+      "clamped_teams": [
+        {
+          "team": "UTA",
+          "raw_total": 167.0,
+          "calibrated_total": 122.0,
+          "scale": 0.731
+        },
+        {
+          "team": "LAL",
+          "raw_total": 161.0,
+          "calibrated_total": 121.0,
+          "scale": 0.752
+        }
+      ]
     }
   },
   "failures": [],
   "matchups_checks": {
     "slate_date_match": true,
     "game_count_before": 12,
-    "game_count_after": 12,
-    "dropped_games": []
+    "game_count_after": 10,
+    "dropped_games": [
+      {
+        "game": "NOP@UTA",
+        "reasons": [
+          "thin roster: UTA"
+        ]
+      },
+      {
+        "game": "LAC@LAL",
+        "reasons": [
+          "thin roster: LAL"
+        ]
+      }
+    ]
   }
 }
