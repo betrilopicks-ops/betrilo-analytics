@@ -1,6 +1,6 @@
 {
-  "slate_date": "2026-10-13",
-  "last_refreshed": "2026-10-13T11:00:27-04:00",
+  "slate_date": "2026-10-23",
+  "last_refreshed": "2026-10-23T06:02:46-04:00",
   "games": 1,
   "pitchers": 2,
   "coverage": {
@@ -11,139 +11,139 @@
   "hot_cold_rule": "hot = L5 K% >= 3pts above season AND L5 xwOBA <= season; cold = L5 K% >= 3pts below season OR L5 xwOBA >= 3pts above season; else steady",
   "matchups": [
     {
-      "game_pk": 849813,
-      "start_time": "2026-10-14T00:00:00Z",
-      "home_team": "TB",
-      "away_team": "CLE",
+      "game_pk": 849805,
+      "start_time": "2026-10-24T00:00:00Z",
+      "home_team": "MIL",
+      "away_team": "TB",
       "pitchers": [
         {
           "side": "home",
-          "team": "TB",
-          "opponent": "CLE",
-          "pitcher_name": "Freddy Peralta",
-          "pitcher_id": 642547,
+          "team": "MIL",
+          "opponent": "TB",
+          "pitcher_name": "Jacob Misiorowski",
+          "pitcher_id": 694819,
           "hand": "R",
           "season": {
-            "w": 10,
-            "l": 11,
-            "era": "4.42",
-            "whip": "1.33"
+            "w": 16,
+            "l": 5,
+            "era": "1.80",
+            "whip": "0.80"
           },
           "stuff": {
-            "k_rate": 0.214,
-            "whiff_rate": 0.233,
-            "bb_rate": 0.085,
-            "xwoba_against": 0.297,
+            "k_rate": 0.365,
+            "whiff_rate": 0.334,
+            "bb_rate": 0.075,
+            "xwoba_against": 0.236,
             "vintage": "2026"
           },
           "arsenal": [
             {
               "pitch": "4-Seam",
-              "usage_pct": 52.4,
-              "velo": 94.4
+              "usage_pct": 63.5,
+              "velo": 100.4
             },
             {
-              "pitch": "Changeup",
-              "usage_pct": 24.7,
-              "velo": 87.5
+              "pitch": "Slider",
+              "usage_pct": 16.3,
+              "velo": 93.1
             },
             {
               "pitch": "Curve",
-              "usage_pct": 12.5,
-              "velo": 79.4
+              "usage_pct": 9.8,
+              "velo": 87.7
             }
           ],
           "splits": {
             "vs_lhb": {
-              "k_rate": 0.22,
-              "ops_against": 0.757
+              "k_rate": 0.427,
+              "ops_against": 0.411
             },
             "vs_rhb": {
-              "k_rate": 0.211,
-              "ops_against": 0.615
+              "k_rate": 0.291,
+              "ops_against": 0.514
             },
             "vintage": "2026"
           },
           "recent_form": {
             "last5": {
-              "k_rate": 0.213,
-              "whiff_rate": 0.193,
-              "xwoba": 0.263,
+              "k_rate": 0.325,
+              "whiff_rate": 0.327,
+              "xwoba": 0.251,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.214,
-              "whiff_rate": 0.233,
-              "xwoba": 0.297
+              "k_rate": 0.365,
+              "whiff_rate": 0.334,
+              "xwoba": 0.236
             },
-            "trend": "steady",
-            "note": "K% steady over L5"
+            "trend": "cold",
+            "note": "K% down 4.0pts over L5"
           },
           "sample_flag": null,
           "scratched": false
         },
         {
           "side": "away",
-          "team": "CLE",
-          "opponent": "TB",
-          "pitcher_name": "Parker Messick",
-          "pitcher_id": 800048,
-          "hand": "L",
+          "team": "TB",
+          "opponent": "MIL",
+          "pitcher_name": "Nick Martinez",
+          "pitcher_id": 607259,
+          "hand": "R",
           "season": {
-            "w": 12,
-            "l": 9,
-            "era": "2.56",
-            "whip": "1.06"
+            "w": 15,
+            "l": 6,
+            "era": "3.10",
+            "whip": "1.09"
           },
           "stuff": {
-            "k_rate": 0.265,
-            "whiff_rate": 0.231,
-            "bb_rate": 0.069,
-            "xwoba_against": 0.278,
+            "k_rate": 0.155,
+            "whiff_rate": 0.162,
+            "bb_rate": 0.035,
+            "xwoba_against": 0.308,
             "vintage": "2026"
           },
           "arsenal": [
             {
-              "pitch": "4-Seam",
-              "usage_pct": 41.3,
-              "velo": 94.3
+              "pitch": "Sinker",
+              "usage_pct": 31.5,
+              "velo": 92.5
             },
             {
               "pitch": "Changeup",
-              "usage_pct": 23.8,
-              "velo": 85.9
+              "usage_pct": 25.9,
+              "velo": 78.3
             },
             {
-              "pitch": "Sinker",
-              "usage_pct": 14.5,
-              "velo": 92.9
+              "pitch": "Cutter",
+              "usage_pct": 21.8,
+              "velo": 89.2
             }
           ],
           "splits": {
             "vs_lhb": {
-              "k_rate": 0.262,
-              "ops_against": 0.707
+              "k_rate": 0.156,
+              "ops_against": 0.67
             },
             "vs_rhb": {
-              "k_rate": 0.271,
-              "ops_against": 0.606
+              "k_rate": 0.154,
+              "ops_against": 0.692
             },
             "vintage": "2026"
           },
           "recent_form": {
             "last5": {
-              "k_rate": 0.274,
-              "whiff_rate": 0.216,
-              "xwoba": 0.325,
+              "k_rate": 0.165,
+              "whiff_rate": 0.178,
+              "xwoba": 0.245,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.265,
-              "whiff_rate": 0.231,
-              "xwoba": 0.278
+              "k_rate": 0.155,
+              "whiff_rate": 0.162,
+              "xwoba": 0.308
             },
-            "trend": "cold",
-            "note": "K% steady over L5"
+            "trend": "steady",
+            "note": "K% up 1.0pts over L5"
           },
           "sample_flag": null,
           "scratched": false
