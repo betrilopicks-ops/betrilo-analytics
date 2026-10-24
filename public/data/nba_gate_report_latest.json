@@ -1,22 +1,22 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-10-23T14:16:08.627201+00:00",
-  "slate_date": "2026-10-23",
-  "today_et": "2026-10-23",
-  "player_count": 240,
-  "game_count": 12,
+  "run_at": "2026-10-24T14:19:30.011759+00:00",
+  "slate_date": "2026-10-24",
+  "today_et": "2026-10-24",
+  "player_count": 160,
+  "game_count": 8,
   "checks": {
     "1_slate_date_and_sample": {
       "passed": true,
-      "slate_date": "2026-10-23",
-      "expected_date": "2026-10-23",
+      "slate_date": "2026-10-24",
+      "expected_date": "2026-10-24",
       "is_sample": false
     },
     "2_game_count": {
       "passed": true,
-      "json_games": 12,
-      "scoreboard_games": 12
+      "json_games": 8,
+      "scoreboard_games": 8
     },
     "3_game_coverage": {
       "passed": true,
@@ -34,7 +34,7 @@
     "6_prior_season_cap": {
       "passed": true,
       "violations": [],
-      "players_checked": 201
+      "players_checked": 138
     },
     "7_integrity": {
       "passed": true,
@@ -43,40 +43,29 @@
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 240,
+      "rotation_count": 160,
       "median_rotation_pts": 9.0,
       "team_scores": {
-        "CHI": 111.0,
+        "MIA": 103.0,
+        "CHA": 108.0,
+        "BKN": 95.0,
+        "CLE": 103.0,
         "MIL": 108.0,
-        "NYK": 105.0,
-        "BOS": 103.0,
-        "ATL": 104.0,
-        "CHA": 100.0,
-        "DAL": 113.0,
-        "IND": 104.0,
-        "MIN": 106.0,
-        "ORL": 110.0,
-        "TOR": 108.0,
-        "WAS": 108.0,
-        "DET": 106.0,
-        "MIA": 106.0,
-        "HOU": 98.0,
-        "SAS": 101.0,
-        "NOP": 115.0,
-        "UTA": 122.0,
-        "MEM": 109.0,
-        "GSW": 107.0,
-        "LAC": 96.0,
-        "LAL": 121.0,
-        "POR": 106.0,
-        "SAC": 100.0
+        "PHI": 104.0,
+        "WAS": 112.0,
+        "CHI": 116.0,
+        "SAS": 103.0,
+        "DAL": 103.0,
+        "HOU": 95.0,
+        "ATL": 106.0,
+        "NOP": 103.0,
+        "DEN": 108.0,
+        "GSW": 106.0,
+        "PHX": 100.0
       },
       "zero_pts_pct": 0.0,
       "dropped_games": [],
-      "thin_teams": {
-        "UTA": "clamp guard: raw=167.0 scale=\u00d70.731",
-        "LAL": "clamp guard: raw=161.0 scale=\u00d70.752"
-      }
+      "thin_teams": {}
     },
     "9_core_player_missing": {
       "passed": true,
@@ -87,16 +76,10 @@
       "passed": true,
       "clamped_teams": [
         {
-          "team": "UTA",
-          "raw_total": 167.0,
-          "calibrated_total": 122.0,
-          "scale": 0.731
-        },
-        {
-          "team": "LAL",
-          "raw_total": 161.0,
-          "calibrated_total": 121.0,
-          "scale": 0.752
+          "team": "PHI",
+          "raw_total": 152.0,
+          "calibrated_total": 104.0,
+          "scale": 0.684
         }
       ]
     }
@@ -104,21 +87,8 @@
   "failures": [],
   "matchups_checks": {
     "slate_date_match": true,
-    "game_count_before": 12,
-    "game_count_after": 10,
-    "dropped_games": [
-      {
-        "game": "NOP@UTA",
-        "reasons": [
-          "thin roster: UTA"
-        ]
-      },
-      {
-        "game": "LAC@LAL",
-        "reasons": [
-          "thin roster: LAL"
-        ]
-      }
-    ]
+    "game_count_before": 8,
+    "game_count_after": 8,
+    "dropped_games": []
   }
 }
