@@ -1,7 +1,7 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-10-24T14:19:30.011759+00:00",
+  "run_at": "2026-10-24T21:46:13.354933+00:00",
   "slate_date": "2026-10-24",
   "today_et": "2026-10-24",
   "player_count": 160,
@@ -34,7 +34,7 @@
     "6_prior_season_cap": {
       "passed": true,
       "violations": [],
-      "players_checked": 138
+      "players_checked": 135
     },
     "7_integrity": {
       "passed": true,
@@ -46,22 +46,22 @@
       "rotation_count": 160,
       "median_rotation_pts": 9.0,
       "team_scores": {
-        "MIA": 103.0,
-        "CHA": 108.0,
+        "MIA": 101.0,
+        "CHA": 100.0,
         "BKN": 95.0,
         "CLE": 103.0,
         "MIL": 108.0,
         "PHI": 104.0,
         "WAS": 112.0,
         "CHI": 116.0,
-        "SAS": 103.0,
-        "DAL": 103.0,
-        "HOU": 95.0,
+        "SAS": 102.0,
+        "DAL": 109.0,
+        "HOU": 98.0,
         "ATL": 106.0,
-        "NOP": 103.0,
+        "NOP": 106.0,
         "DEN": 108.0,
-        "GSW": 106.0,
-        "PHX": 100.0
+        "GSW": 101.0,
+        "PHX": 103.0
       },
       "zero_pts_pct": 0.0,
       "dropped_games": [],
@@ -74,14 +74,7 @@
     },
     "10_vegas_cal_clamp": {
       "passed": true,
-      "clamped_teams": [
-        {
-          "team": "PHI",
-          "raw_total": 152.0,
-          "calibrated_total": 104.0,
-          "scale": 0.684
-        }
-      ]
+      "clamped_teams": []
     }
   },
   "failures": [],
