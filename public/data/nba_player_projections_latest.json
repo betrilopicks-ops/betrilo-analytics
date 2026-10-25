@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T14:15:56.277617+00:00",
+  "generated_at": "2026-10-25T21:46:25.214557+00:00",
   "slate_date": "2026-10-25",
   "season": "2026-27",
   "is_sample": false,
@@ -422,7 +422,7 @@
       "proj_ast": 1,
       "proj_3pm": 2,
       "proj_pra": 20,
-      "injury_status": "Probable"
+      "injury_status": "Available"
     },
     {
       "game_id": "21717956",
@@ -434,7 +434,7 @@
       "position": "F",
       "confidence_rate": null,
       "proj_pts": 9,
-      "proj_reb": 4,
+      "proj_reb": 5,
       "proj_ast": 2,
       "proj_3pm": 1,
       "proj_pra": 15
@@ -464,26 +464,10 @@
       "position": "F",
       "confidence_rate": null,
       "proj_pts": 6,
-      "proj_reb": 4,
+      "proj_reb": 5,
       "proj_ast": 3,
       "proj_3pm": 2,
-      "proj_pra": 13
-    },
-    {
-      "game_id": "21717956",
-      "game_time": "6:00 PM ET",
-      "team": "IND",
-      "opp": "BKN",
-      "player_id": "56677849",
-      "player": "Kobe Brown",
-      "position": "F",
-      "confidence_rate": null,
-      "proj_pts": 4,
-      "proj_reb": 3,
-      "proj_ast": 2,
-      "proj_3pm": 1,
-      "proj_pra": 8,
-      "injury_status": "Probable"
+      "proj_pra": 14
     },
     {
       "game_id": "21717956",
@@ -494,12 +478,12 @@
       "player": "Jalen Slawson",
       "position": "F",
       "confidence_rate": null,
-      "proj_pts": 4,
+      "proj_pts": 5,
       "proj_reb": 4,
       "proj_ast": 2,
       "proj_3pm": 1,
       "proj_pra": 10,
-      "injury_status": "Probable"
+      "injury_status": "Available"
     },
     {
       "game_id": "21717956",
@@ -515,6 +499,21 @@
       "proj_ast": 1,
       "proj_3pm": 1,
       "proj_pra": 7
+    },
+    {
+      "game_id": "21717956",
+      "game_time": "6:00 PM ET",
+      "team": "IND",
+      "opp": "BKN",
+      "player_id": "3547243",
+      "player": "Obi Toppin",
+      "position": "F",
+      "confidence_rate": null,
+      "proj_pts": 10,
+      "proj_reb": 4,
+      "proj_ast": 2,
+      "proj_3pm": 2,
+      "proj_pra": 15
     },
     {
       "game_id": "21717956",
@@ -725,7 +724,7 @@
       "proj_ast": 3,
       "proj_3pm": 1,
       "proj_pra": 14,
-      "injury_status": "Questionable"
+      "injury_status": "Available"
     },
     {
       "game_id": "21717957",
@@ -957,16 +956,15 @@
       "game_time": "7:00 PM ET",
       "team": "NYK",
       "opp": "ORL",
-      "player_id": "17896097",
-      "player": "Jose Alvarado",
-      "position": "G",
+      "player_id": "1057393207",
+      "player": "Mohamed Diawara",
+      "position": "F",
       "confidence_rate": null,
-      "proj_pts": 5,
+      "proj_pts": 3,
       "proj_reb": 2,
-      "proj_ast": 4,
+      "proj_ast": 1,
       "proj_3pm": 1,
-      "proj_pra": 10,
-      "injury_status": "Questionable"
+      "proj_pra": 5
     },
     {
       "game_id": "21717958",
@@ -1729,11 +1727,11 @@
       "player": "Tyrese Maxey",
       "position": "G",
       "confidence_rate": null,
-      "proj_pts": 19,
-      "proj_reb": 3,
+      "proj_pts": 22,
+      "proj_reb": 4,
       "proj_ast": 5,
       "proj_3pm": 2,
-      "proj_pra": 27
+      "proj_pra": 31
     },
     {
       "game_id": "21717960",
@@ -1744,11 +1742,11 @@
       "player": "Jaylen Brown",
       "position": "G",
       "confidence_rate": null,
-      "proj_pts": 18,
+      "proj_pts": 21,
       "proj_reb": 5,
       "proj_ast": 4,
       "proj_3pm": 1,
-      "proj_pra": 27
+      "proj_pra": 31
     },
     {
       "game_id": "21717960",
@@ -1759,28 +1757,11 @@
       "player": "LeBron James",
       "position": "F",
       "confidence_rate": null,
-      "proj_pts": 12,
-      "proj_reb": 7,
+      "proj_pts": 14,
+      "proj_reb": 8,
       "proj_ast": 7,
       "proj_3pm": 0,
-      "proj_pra": 26,
-      "injury_status": "Day-To-Day"
-    },
-    {
-      "game_id": "21717960",
-      "game_time": "7:30 PM ET",
-      "team": "PHI",
-      "opp": "DET",
-      "player_id": "145",
-      "player": "Joel Embiid",
-      "position": "F",
-      "confidence_rate": null,
-      "proj_pts": 19,
-      "proj_reb": 7,
-      "proj_ast": 4,
-      "proj_3pm": 1,
-      "proj_pra": 30,
-      "injury_status": "Day-To-Day"
+      "proj_pra": 29
     },
     {
       "game_id": "21717960",
@@ -1791,11 +1772,12 @@
       "player": "VJ Edgecombe",
       "position": "G",
       "confidence_rate": null,
-      "proj_pts": 11,
+      "proj_pts": 13,
       "proj_reb": 6,
-      "proj_ast": 3,
+      "proj_ast": 4,
       "proj_3pm": 2,
-      "proj_pra": 20
+      "proj_pra": 23,
+      "injury_status": "Questionable"
     },
     {
       "game_id": "21717960",
@@ -1806,11 +1788,11 @@
       "player": "Rayan Rupert",
       "position": "G",
       "confidence_rate": null,
-      "proj_pts": 3,
+      "proj_pts": 4,
       "proj_reb": 4,
       "proj_ast": 1,
       "proj_3pm": 1,
-      "proj_pra": 8
+      "proj_pra": 9
     },
     {
       "game_id": "21717960",
@@ -1821,11 +1803,11 @@
       "player": "Anfernee Simons",
       "position": "G",
       "confidence_rate": null,
-      "proj_pts": 8,
+      "proj_pts": 10,
       "proj_reb": 2,
       "proj_ast": 2,
       "proj_3pm": 2,
-      "proj_pra": 12
+      "proj_pra": 13
     },
     {
       "game_id": "21717960",
@@ -1836,11 +1818,11 @@
       "player": "Kentavious Caldwell-Pope",
       "position": "G",
       "confidence_rate": null,
-      "proj_pts": 6,
-      "proj_reb": 2,
+      "proj_pts": 7,
+      "proj_reb": 3,
       "proj_ast": 1,
       "proj_3pm": 1,
-      "proj_pra": 9
+      "proj_pra": 11
     },
     {
       "game_id": "21717960",
@@ -1852,10 +1834,10 @@
       "position": "F",
       "confidence_rate": null,
       "proj_pts": 4,
-      "proj_reb": 3,
+      "proj_reb": 4,
       "proj_ast": 1,
       "proj_3pm": 1,
-      "proj_pra": 8
+      "proj_pra": 9
     },
     {
       "game_id": "21717960",
@@ -1866,11 +1848,26 @@
       "player": "Justin Edwards",
       "position": "F",
       "confidence_rate": null,
-      "proj_pts": 3,
+      "proj_pts": 4,
       "proj_reb": 1,
       "proj_ast": 1,
       "proj_3pm": 1,
       "proj_pra": 5
+    },
+    {
+      "game_id": "21717960",
+      "game_time": "7:30 PM ET",
+      "team": "PHI",
+      "opp": "DET",
+      "player_id": "1057847330",
+      "player": "Caleb Love",
+      "position": "G",
+      "confidence_rate": null,
+      "proj_pts": 4,
+      "proj_reb": 1,
+      "proj_ast": 2,
+      "proj_3pm": 1,
+      "proj_pra": 7
     },
     {
       "game_id": "21717961",
@@ -2082,7 +2079,7 @@
       "proj_ast": 2,
       "proj_3pm": 1,
       "proj_pra": 10,
-      "injury_status": "Questionable"
+      "injury_status": "Doubtful"
     },
     {
       "game_id": "21717961",
