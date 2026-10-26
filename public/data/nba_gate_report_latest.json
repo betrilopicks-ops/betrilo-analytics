@@ -1,22 +1,22 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-10-25T21:46:28.636108+00:00",
-  "slate_date": "2026-10-25",
-  "today_et": "2026-10-25",
-  "player_count": 140,
-  "game_count": 7,
+  "run_at": "2026-10-26T11:07:48.485490+00:00",
+  "slate_date": "2026-10-26",
+  "today_et": "2026-10-26",
+  "player_count": 180,
+  "game_count": 9,
   "checks": {
     "1_slate_date_and_sample": {
       "passed": true,
-      "slate_date": "2026-10-25",
-      "expected_date": "2026-10-25",
+      "slate_date": "2026-10-26",
+      "expected_date": "2026-10-26",
       "is_sample": false
     },
     "2_game_count": {
       "passed": true,
-      "json_games": 7,
-      "scoreboard_games": 7
+      "json_games": 9,
+      "scoreboard_games": 9
     },
     "3_game_coverage": {
       "passed": true,
@@ -34,7 +34,7 @@
     "6_prior_season_cap": {
       "passed": true,
       "violations": [],
-      "players_checked": 116
+      "players_checked": 151
     },
     "7_integrity": {
       "passed": true,
@@ -43,23 +43,27 @@
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 140,
+      "rotation_count": 180,
       "median_rotation_pts": 9.0,
       "team_scores": {
-        "LAL": 114.0,
-        "UTA": 121.0,
-        "IND": 107.0,
-        "BKN": 106.0,
-        "ORL": 96.0,
-        "NYK": 101.0,
-        "TOR": 103.0,
-        "MIN": 103.0,
-        "LAC": 99.0,
-        "OKC": 98.0,
-        "DET": 94.0,
-        "PHI": 103.0,
-        "MEM": 106.0,
-        "SAC": 105.0
+        "WAS": 103.0,
+        "CHA": 102.0,
+        "MIN": 105.0,
+        "CLE": 105.0,
+        "CHI": 104.0,
+        "BOS": 104.0,
+        "DAL": 105.0,
+        "MIA": 111.0,
+        "IND": 104.0,
+        "MIL": 107.0,
+        "PHX": 97.0,
+        "OKC": 99.0,
+        "ATL": 105.0,
+        "HOU": 98.0,
+        "MEM": 107.0,
+        "UTA": 116.0,
+        "GSW": 110.0,
+        "DEN": 105.0
       },
       "zero_pts_pct": 0.0,
       "dropped_games": [],
@@ -75,15 +79,9 @@
       "clamped_teams": [
         {
           "team": "UTA",
-          "raw_total": 150.0,
-          "calibrated_total": 133.2,
+          "raw_total": 144.0,
+          "calibrated_total": 128.2,
           "scale": 0.8
-        },
-        {
-          "team": "ORL",
-          "raw_total": 88.0,
-          "calibrated_total": 108.2,
-          "scale": 1.1
         }
       ]
     }
@@ -91,8 +89,8 @@
   "failures": [],
   "matchups_checks": {
     "slate_date_match": true,
-    "game_count_before": 7,
-    "game_count_after": 7,
+    "game_count_before": 9,
+    "game_count_after": 9,
     "dropped_games": []
   }
 }
