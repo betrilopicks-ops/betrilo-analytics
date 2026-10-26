@@ -1,7 +1,7 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-10-26T11:07:48.485490+00:00",
+  "run_at": "2026-10-26T14:16:01.559604+00:00",
   "slate_date": "2026-10-26",
   "today_et": "2026-10-26",
   "player_count": 180,
@@ -34,7 +34,7 @@
     "6_prior_season_cap": {
       "passed": true,
       "violations": [],
-      "players_checked": 151
+      "players_checked": 146
     },
     "7_integrity": {
       "passed": true,
@@ -46,23 +46,23 @@
       "rotation_count": 180,
       "median_rotation_pts": 9.0,
       "team_scores": {
-        "WAS": 103.0,
-        "CHA": 102.0,
-        "MIN": 105.0,
-        "CLE": 105.0,
-        "CHI": 104.0,
-        "BOS": 104.0,
-        "DAL": 105.0,
-        "MIA": 111.0,
-        "IND": 104.0,
+        "WAS": 102.0,
+        "CHA": 106.0,
+        "MIN": 104.0,
+        "CLE": 104.0,
+        "CHI": 112.0,
+        "BOS": 111.0,
+        "DAL": 108.0,
+        "MIA": 108.0,
+        "IND": 115.0,
         "MIL": 107.0,
-        "PHX": 97.0,
-        "OKC": 99.0,
-        "ATL": 105.0,
-        "HOU": 98.0,
-        "MEM": 107.0,
-        "UTA": 116.0,
-        "GSW": 110.0,
+        "PHX": 99.0,
+        "OKC": 101.0,
+        "ATL": 99.0,
+        "HOU": 104.0,
+        "MEM": 108.0,
+        "UTA": 115.0,
+        "GSW": 105.0,
         "DEN": 105.0
       },
       "zero_pts_pct": 0.0,
@@ -79,8 +79,8 @@
       "clamped_teams": [
         {
           "team": "UTA",
-          "raw_total": 144.0,
-          "calibrated_total": 128.2,
+          "raw_total": 142.0,
+          "calibrated_total": 126.8,
           "scale": 0.8
         }
       ]
