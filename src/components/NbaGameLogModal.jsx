@@ -140,6 +140,12 @@ export default function NbaGameLogModal({ player, loading, error, onClose }) {
                     </tr>
                   )}
                   <tr style={{ background: i % 2 === 0 ? dark.surfaceBgAlt : dark.surfaceBg }}>
+                    {g.dnp && g.dnp_count > 1 ? (
+                      <td colSpan={8} style={{ ...tdStyle, textAlign: 'center', color: dark.textMuted, fontStyle: 'italic' }}>
+                        DNP {'\u00D7'} {g.dnp_count} ({fmtDate(g.date)} {'\u2013'} {fmtDate(g.date_end)})
+                      </td>
+                    ) : (
+                    <>
                     <td style={{ ...tdStyle, color: isLastSeason ? dark.textMuted : dark.textPrimary }}>
                       {fmtDate(g.date)}
                     </td>
@@ -159,6 +165,8 @@ export default function NbaGameLogModal({ player, loading, error, onClose }) {
                         <td style={{ ...tdStyle, textAlign: 'right', color: isLastSeason ? dark.textMuted : dark.textPrimary }}>{g.tpm}</td>
                         <td style={{ ...tdStyle, textAlign: 'right', color: isLastSeason ? dark.textMuted : dark.textPrimary }}>{g.pra}</td>
                       </>
+                    )}
+                    </>
                     )}
                   </tr>
                 </React.Fragment>
