@@ -2,61 +2,44 @@
   "sport": "NFL",
   "verdict": "ALL GOOD",
   "headline": "All NFL surfaces current.",
-  "checked_at": "2026-10-23T17:00:42.212390",
+  "checked_at": "2026-10-27T07:01:12.625058",
   "cadence_note": "NFL updates weekly (Wed/Thu/Fri). No games Tue-Wed is normal.",
   "surfaces": [
     {
       "name": "nfl_team_rankings",
       "status": "OK",
-      "last_updated": "2026-10-23T17:00:16.370636",
+      "last_updated": "2026-10-27T07:00:20.138960",
       "age_hours": 0.0
     },
     {
       "name": "nfl_schedule",
       "status": "OK",
-      "last_updated": "2026-10-23T17:00:17.706550",
+      "last_updated": "2026-10-27T07:00:21.556626",
       "age_hours": 0.0
     },
     {
       "name": "nfl_player_projections",
       "status": "OK",
-      "last_updated": "2026-10-23T17:00:22.720483",
+      "last_updated": "2026-10-27T07:00:51.896630",
       "age_hours": 0.0
     },
     {
       "name": "nfl_game_matchups",
       "status": "OK",
-      "last_updated": "2026-10-23T17:00:39.783303",
+      "last_updated": "2026-10-27T07:01:10.117361",
       "age_hours": 0.0
     },
     {
       "name": "week_currency",
       "status": "OK",
-      "detail": "Week 7 matches schedule",
-      "published_week": 7
+      "detail": "Week 8 matches schedule",
+      "published_week": 8
     },
     {
       "name": "freeze_status",
       "status": "OK",
-      "detail": "All required freezes present (1 checked)",
-      "freezes": {
-        "wednesday_initial": {
-          "status": "OK",
-          "pick_count": 33,
-          "coverage_ok": true,
-          "frozen_at": "2026-10-21T14:01:17.168963-04:00",
-          "scope": "2026-10-21",
-          "file": "nfl_picks_2026_wk7_wednesday_initial_2026-10-21.csv"
-        },
-        "friday_final": {
-          "status": "OK",
-          "pick_count": 298,
-          "coverage_ok": true,
-          "frozen_at": "2026-10-23T14:01:36.806928-04:00",
-          "scope": "2026-10-23",
-          "file": "nfl_picks_2026_wk7_friday_final_2026-10-23.csv"
-        }
-      }
+      "detail": "freeze_status.json is from Week 7 but current week is 8 \u2014 new week, no freezes expected yet",
+      "freezes": {}
     }
   ]
 }
