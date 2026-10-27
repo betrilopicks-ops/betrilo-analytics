@@ -1,7 +1,8 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { dark } from '../theme';
 import SortableTable from '../components/SortableTable';
+import NbaGameLogModal from '../components/NbaGameLogModal';
 
 const CONF_OPTIONS = ['All', '70+', '80+', '90+', '100'];
 const CONF_MIN = { 'All': 0, '70+': 70, '80+': 80, '90+': 90, '100': 100 };
@@ -37,6 +38,10 @@ export default function NbaProjectionsPage() {
   const [error, setError] = useState(false);
   const [confFilter, setConfFilter] = useState('All');
   const [selectedGame, setSelectedGame] = useState('all');
+  const [modalPlayer, setModalPlayer] = useState(null);
+  const [gameLogs, setGameLogs] = useState(null);       // cached after first fetch
+  const [glLoading, setGlLoading] = useState(false);
+  const [glError, setGlError] = useState(false);
 
   useEffect(() => {
     fetch('/data/nba_player_projections_latest.json')
@@ -88,6 +93,7 @@ export default function NbaProjectionsPage() {
       proj_ast: p.proj_ast,
       proj_3pm: p.proj_3pm,
       proj_pra: p.proj_pra,
+      _clickable: true,
     }));
     // Confidence filter
     const minConf = CONF_MIN[confFilter] || 0;
@@ -109,8 +115,25 @@ export default function NbaProjectionsPage() {
     return <span style={{ color, fontWeight: 600 }}>{v}</span>;
   };
 
+  const handleRowClick = useCallback((row) => {
+    // Open modal immediately; game log data merges in once loaded
+    setModalPlayer(row);
+
+    // Lazy-fetch game logs on first click (cached after that)
+    if (!gameLogs && !glLoading && !glError) {
+      setGlLoading(true);
+      fetch('/data/nba_game_logs_latest.json')
+        .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(d => { setGameLogs(d); setGlLoading(false); })
+        .catch(() => { setGlError(true); setGlLoading(false); });
+    }
+  }, [gameLogs, glLoading, glError]);
+
   const columns = [
-    { key: 'player', label: 'Player', sortable: true, width: '150px' },
+    { key: 'player', label: 'Player', sortable: true, width: '150px',
+      format: (v, row) => row._clickable
+        ? <span>{v} <span style={{ color: dark.textMuted, fontSize: '10px' }}>{'\u25B8'}</span></span>
+        : v },
     { key: 'team', label: 'Team', sortable: true, width: '50px' },
     { key: 'position', label: 'Pos', sortable: true, align: 'center', width: '35px' },
     { key: 'opp', label: 'Opp', sortable: true, width: '50px' },
@@ -280,6 +303,7 @@ export default function NbaProjectionsPage() {
                       : null
                   }
                   emptyMessage="No players match your filters"
+                  onRowClick={handleRowClick}
                 />
               )}
             </>
@@ -303,6 +327,18 @@ export default function NbaProjectionsPage() {
           </div>
         </div>
       </div>
+
+      {modalPlayer && (
+        <NbaGameLogModal
+          player={{
+            ...modalPlayer,
+            ...(gameLogs?.[modalPlayer.player_id] || {}),
+          }}
+          loading={glLoading}
+          error={glError}
+          onClose={() => setModalPlayer(null)}
+        />
+      )}
     </>
   );
 }
