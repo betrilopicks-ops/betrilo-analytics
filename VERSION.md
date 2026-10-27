@@ -1,6 +1,16 @@
 # @betrilopicks Project Book Versions
 
-FE: BFEv0.39.7
+FE: BFEv0.40.0
+
+## BFEv0.40.0 — NBA last-10 game log modal (2026-10-27)
+
+NBA Projections page: click a player row to open a game log modal showing
+last 10 games (same modal pattern as NFL). Fetches nba_game_logs_latest.json
+lazily on first click (cached in state after). Columns: Date, Opp, MIN, PTS,
+REB, AST, 3PM, PRA. Last-season rows marked with muted text + divider.
+Summary row shows L10 averages alongside today's projection. Handles DNPs,
+team changes, loading/error/empty states gracefully. Mobile horizontal scroll.
+Data contract: separate compact JSON file (not embedded in projections).
 
 ## BFEv0.37.1 — og:image absolute URL + twitter:card fix (2026-10-13)
 
