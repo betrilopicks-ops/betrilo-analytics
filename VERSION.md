@@ -2,11 +2,21 @@
 
 FE: BFEv0.40.1
 
-## BFEv0.40.1 — Collapse consecutive DNP rows (2026-10-27)
+## Rules
+
+- **No data in FE commits.** Files under `public/data/` are never committed
+  by FE feature branches or code pushes. Data reaches main exclusively via
+  the pipelines' `publish-main:main` pushes (MLB, NBA, NFL publish scripts).
+  If a preview branch needs test data, copy it locally but `.gitignore` or
+  exclude from `git add`.
+
+## BFEv0.40.1 — Collapse consecutive DNP rows + multi-season dividers (2026-10-27)
 
 Consecutive DNP rows in game log modal collapsed into single summary row:
 "DNP × N (date – date)". Single DNPs unchanged. Reduces visual clutter
-for injury-prone players (Porter Jr: 18 rows → 2).
+for injury-prone players (Porter Jr: 18 rows → 2). Season divider rows
+now appear at every season transition (supports 3-season logs: 2026-27 →
+2025-26 → 2024-25 for players whose projections use deep carryover).
 
 ## BFEv0.40.0 — NBA last-10 game log modal (2026-10-27)
 
