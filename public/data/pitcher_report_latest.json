@@ -1,18 +1,18 @@
 {
-  "slate_date": "2026-10-26",
-  "last_refreshed": "2026-10-26T16:30:16-04:00",
+  "slate_date": "2026-10-27",
+  "last_refreshed": "2026-10-27T06:02:25-04:00",
   "games": 1,
-  "pitchers": 2,
+  "pitchers": 1,
   "coverage": {
-    "full_2026": 2,
+    "full_2026": 1,
     "fallback_2025": 0,
     "thin_no_data": 0
   },
   "hot_cold_rule": "hot = L5 K% >= 3pts above season AND L5 xwOBA <= season; cold = L5 K% >= 3pts below season OR L5 xwOBA >= 3pts above season; else steady",
   "matchups": [
     {
-      "game_pk": 849804,
-      "start_time": "2026-10-27T00:00:00Z",
+      "game_pk": 849803,
+      "start_time": "2026-10-28T00:00:00Z",
       "home_team": "TB",
       "away_team": "MIL",
       "pitchers": [
@@ -20,64 +20,64 @@
           "side": "home",
           "team": "TB",
           "opponent": "MIL",
-          "pitcher_name": "Freddy Peralta",
-          "pitcher_id": 642547,
+          "pitcher_name": "Griffin Jax",
+          "pitcher_id": 643377,
           "hand": "R",
           "season": {
-            "w": 10,
-            "l": 11,
-            "era": "4.42",
-            "whip": "1.33"
+            "w": 8,
+            "l": 10,
+            "era": "3.53",
+            "whip": "1.18"
           },
           "stuff": {
-            "k_rate": 0.214,
-            "whiff_rate": 0.233,
-            "bb_rate": 0.085,
-            "xwoba_against": 0.297,
+            "k_rate": 0.212,
+            "whiff_rate": 0.249,
+            "bb_rate": 0.076,
+            "xwoba_against": 0.321,
             "vintage": "2026"
           },
           "arsenal": [
             {
-              "pitch": "4-Seam",
-              "usage_pct": 52.4,
-              "velo": 94.4
-            },
-            {
-              "pitch": "Changeup",
-              "usage_pct": 24.7,
+              "pitch": "Sweeper",
+              "usage_pct": 26.8,
               "velo": 87.5
             },
             {
-              "pitch": "Curve",
-              "usage_pct": 12.5,
-              "velo": 79.4
+              "pitch": "Sinker",
+              "usage_pct": 21.5,
+              "velo": 95.2
+            },
+            {
+              "pitch": "Changeup",
+              "usage_pct": 20.9,
+              "velo": 90.7
             }
           ],
           "splits": {
             "vs_lhb": {
-              "k_rate": 0.22,
-              "ops_against": 0.757
+              "k_rate": 0.244,
+              "ops_against": 0.751
             },
             "vs_rhb": {
-              "k_rate": 0.211,
-              "ops_against": 0.615
+              "k_rate": 0.193,
+              "ops_against": 0.534
             },
             "vintage": "2026"
           },
           "recent_form": {
             "last5": {
-              "k_rate": 0.213,
-              "whiff_rate": 0.193,
-              "xwoba": 0.263,
+              "k_rate": 0.19,
+              "whiff_rate": 0.244,
+              "xwoba": 0.288,
               "starts": 5
             },
             "season_avg": {
-              "k_rate": 0.214,
-              "whiff_rate": 0.233,
-              "xwoba": 0.297
+              "k_rate": 0.212,
+              "whiff_rate": 0.249,
+              "xwoba": 0.321
             },
             "trend": "steady",
-            "note": "K% steady over L5"
+            "note": "K% down 2.2pts over L5"
           },
           "sample_flag": null,
           "scratched": false
@@ -86,66 +86,20 @@
           "side": "away",
           "team": "MIL",
           "opponent": "TB",
-          "pitcher_name": "Robert Gasser",
-          "pitcher_id": 688107,
-          "hand": "L",
+          "pitcher_name": "TBD",
+          "pitcher_id": null,
+          "hand": null,
           "season": {
-            "w": 5,
-            "l": 5,
-            "era": "3.87",
-            "whip": "1.19"
+            "w": null,
+            "l": null,
+            "era": null,
+            "whip": null
           },
-          "stuff": {
-            "k_rate": 0.238,
-            "whiff_rate": 0.202,
-            "bb_rate": 0.087,
-            "xwoba_against": 0.318,
-            "vintage": "2026"
-          },
-          "arsenal": [
-            {
-              "pitch": "Sweeper",
-              "usage_pct": 23.8,
-              "velo": 80.5
-            },
-            {
-              "pitch": "Sinker",
-              "usage_pct": 22.7,
-              "velo": 92.8
-            },
-            {
-              "pitch": "4-Seam",
-              "usage_pct": 21.9,
-              "velo": 93.0
-            }
-          ],
-          "splits": {
-            "vs_lhb": {
-              "k_rate": 0.243,
-              "ops_against": 0.627
-            },
-            "vs_rhb": {
-              "k_rate": 0.232,
-              "ops_against": 0.731
-            },
-            "vintage": "2026"
-          },
-          "recent_form": {
-            "last5": {
-              "k_rate": 0.248,
-              "whiff_rate": 0.219,
-              "xwoba": 0.312,
-              "starts": 5
-            },
-            "season_avg": {
-              "k_rate": 0.238,
-              "whiff_rate": 0.202,
-              "xwoba": 0.318
-            },
-            "trend": "steady",
-            "note": "K% up 1.0pts over L5"
-          },
-          "sample_flag": null,
+          "stuff": {},
+          "arsenal": [],
+          "splits": {},
+          "recent_form": {},
+          "sample_flag": "tbd",
           "scratched": false
         }
       ]
