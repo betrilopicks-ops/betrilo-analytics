@@ -1,6 +1,12 @@
 # @betrilopicks Project Book Versions
 
-FE: BFEv0.40.0
+FE: BFEv0.40.1
+
+## BFEv0.40.1 — Collapse consecutive DNP rows (2026-10-27)
+
+Consecutive DNP rows in game log modal collapsed into single summary row:
+"DNP × N (date – date)". Single DNPs unchanged. Reduces visual clutter
+for injury-prone players (Porter Jr: 18 rows → 2).
 
 ## BFEv0.40.0 — NBA last-10 game log modal (2026-10-27)
 
