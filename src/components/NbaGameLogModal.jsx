@@ -66,14 +66,17 @@ export default function NbaGameLogModal({ player, loading, error, onClose }) {
     );
   }
 
-  // Detect where last-season rows begin for the divider
+  // Detect season transition points for divider rows
   const currentSeason = '2026-27';
-  let lastSeasonDividerIdx = -1;
-  for (let i = 0; i < game_log.length; i++) {
-    if (game_log[i].season !== currentSeason && (i === 0 || game_log[i - 1].season === currentSeason)) {
-      lastSeasonDividerIdx = i;
-      break;
+  const dividerIndexes = new Set();
+  for (let i = 1; i < game_log.length; i++) {
+    if (game_log[i].season !== game_log[i - 1].season) {
+      dividerIndexes.add(i);
     }
+  }
+  // Also show divider at index 0 if the first row isn't current season
+  if (game_log.length > 0 && game_log[0].season !== currentSeason) {
+    dividerIndexes.add(0);
   }
 
   return (
@@ -120,7 +123,7 @@ export default function NbaGameLogModal({ player, loading, error, onClose }) {
           <tbody>
             {game_log.map((g, i) => {
               const isLastSeason = g.season !== currentSeason;
-              const showDivider = i === lastSeasonDividerIdx;
+              const showDivider = dividerIndexes.has(i);
 
               return (
                 <React.Fragment key={`${g.date}-${i}`}>
