@@ -1,10 +1,10 @@
 {
   "slate_date": "2026-10-28",
-  "last_refreshed": "2026-10-28T11:00:15-04:00",
+  "last_refreshed": "2026-10-28T16:30:17-04:00",
   "games": 1,
-  "pitchers": 1,
+  "pitchers": 2,
   "coverage": {
-    "full_2026": 1,
+    "full_2026": 2,
     "fallback_2025": 0,
     "thin_no_data": 0
   },
@@ -20,20 +20,66 @@
           "side": "home",
           "team": "TB",
           "opponent": "MIL",
-          "pitcher_name": "TBD",
-          "pitcher_id": null,
-          "hand": null,
+          "pitcher_name": "Drew Rasmussen",
+          "pitcher_id": 656876,
+          "hand": "R",
           "season": {
-            "w": null,
-            "l": null,
-            "era": null,
-            "whip": null
+            "w": 16,
+            "l": 5,
+            "era": "2.67",
+            "whip": "0.91"
           },
-          "stuff": {},
-          "arsenal": [],
-          "splits": {},
-          "recent_form": {},
-          "sample_flag": "tbd",
+          "stuff": {
+            "k_rate": 0.263,
+            "whiff_rate": 0.22,
+            "bb_rate": 0.053,
+            "xwoba_against": 0.272,
+            "vintage": "2026"
+          },
+          "arsenal": [
+            {
+              "pitch": "Cutter",
+              "usage_pct": 30.0,
+              "velo": 90.0
+            },
+            {
+              "pitch": "4-Seam",
+              "usage_pct": 27.0,
+              "velo": 95.9
+            },
+            {
+              "pitch": "Sinker",
+              "usage_pct": 23.9,
+              "velo": 95.3
+            }
+          ],
+          "splits": {
+            "vs_lhb": {
+              "k_rate": 0.287,
+              "ops_against": 0.545
+            },
+            "vs_rhb": {
+              "k_rate": 0.233,
+              "ops_against": 0.49
+            },
+            "vintage": "2026"
+          },
+          "recent_form": {
+            "last5": {
+              "k_rate": 0.26,
+              "whiff_rate": 0.225,
+              "xwoba": 0.249,
+              "starts": 5
+            },
+            "season_avg": {
+              "k_rate": 0.263,
+              "whiff_rate": 0.22,
+              "xwoba": 0.272
+            },
+            "trend": "steady",
+            "note": "K% steady over L5"
+          },
+          "sample_flag": null,
           "scratched": false
         },
         {
