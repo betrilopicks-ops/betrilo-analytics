@@ -1,22 +1,22 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-10-27T21:46:02.631208+00:00",
-  "slate_date": "2026-10-27",
-  "today_et": "2026-10-27",
-  "player_count": 80,
-  "game_count": 4,
+  "run_at": "2026-10-28T11:10:07.122714+00:00",
+  "slate_date": "2026-10-28",
+  "today_et": "2026-10-28",
+  "player_count": 237,
+  "game_count": 12,
   "checks": {
     "1_slate_date_and_sample": {
       "passed": true,
-      "slate_date": "2026-10-27",
-      "expected_date": "2026-10-27",
+      "slate_date": "2026-10-28",
+      "expected_date": "2026-10-28",
       "is_sample": false
     },
     "2_game_count": {
       "passed": true,
-      "json_games": 4,
-      "scoreboard_games": 4
+      "json_games": 12,
+      "scoreboard_games": 12
     },
     "3_game_coverage": {
       "passed": true,
@@ -34,7 +34,7 @@
     "6_prior_season_cap": {
       "passed": true,
       "violations": [],
-      "players_checked": 64
+      "players_checked": 198
     },
     "7_integrity": {
       "passed": true,
@@ -43,17 +43,33 @@
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 80,
+      "rotation_count": 237,
       "median_rotation_pts": 9.0,
       "team_scores": {
-        "BKN": 106.0,
-        "BOS": 99.0,
-        "DET": 92.0,
-        "NYK": 97.0,
-        "SAC": 106.0,
-        "SAS": 109.0,
-        "POR": 110.0,
-        "LAL": 113.0
+        "MIA": 108.0,
+        "ATL": 106.0,
+        "WAS": 108.0,
+        "CLE": 107.0,
+        "CHA": 102.0,
+        "DET": 95.0,
+        "PHI": 106.0,
+        "IND": 107.0,
+        "ORL": 107.0,
+        "TOR": 98.0,
+        "NYK": 110.0,
+        "CHI": 104.0,
+        "HOU": 96.0,
+        "MIL": 109.0,
+        "GSW": 102.0,
+        "MIN": 101.0,
+        "DEN": 107.0,
+        "NOP": 116.0,
+        "SAS": 105.0,
+        "UTA": 108.0,
+        "OKC": 103.0,
+        "DAL": 102.0,
+        "LAL": 113.0,
+        "LAC": 101.0
       },
       "zero_pts_pct": 0.0,
       "dropped_games": [],
@@ -69,7 +85,7 @@
       "clamped_teams": [
         {
           "team": "LAL",
-          "raw_total": 141.0,
+          "raw_total": 142.0,
           "calibrated_total": 124.8,
           "scale": 0.8
         }
@@ -79,8 +95,8 @@
   "failures": [],
   "matchups_checks": {
     "slate_date_match": true,
-    "game_count_before": 4,
-    "game_count_after": 4,
+    "game_count_before": 12,
+    "game_count_after": 12,
     "dropped_games": []
   }
 }
