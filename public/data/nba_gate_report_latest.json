@@ -1,10 +1,10 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-10-28T14:16:14.334960+00:00",
+  "run_at": "2026-10-28T21:46:28.285126+00:00",
   "slate_date": "2026-10-28",
   "today_et": "2026-10-28",
-  "player_count": 237,
+  "player_count": 236,
   "game_count": 12,
   "checks": {
     "1_slate_date_and_sample": {
@@ -34,7 +34,7 @@
     "6_prior_season_cap": {
       "passed": true,
       "violations": [],
-      "players_checked": 198
+      "players_checked": 194
     },
     "7_integrity": {
       "passed": true,
@@ -43,22 +43,22 @@
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 237,
+      "rotation_count": 236,
       "median_rotation_pts": 9.0,
       "team_scores": {
         "MIA": 108.0,
         "ATL": 106.0,
-        "WAS": 108.0,
-        "CLE": 107.0,
+        "WAS": 109.0,
+        "CLE": 108.0,
         "CHA": 102.0,
-        "DET": 95.0,
+        "DET": 93.0,
         "PHI": 106.0,
-        "IND": 107.0,
+        "IND": 105.0,
         "ORL": 107.0,
         "TOR": 98.0,
-        "NYK": 110.0,
+        "NYK": 111.0,
         "CHI": 104.0,
-        "HOU": 96.0,
+        "HOU": 99.0,
         "MIL": 109.0,
         "GSW": 102.0,
         "MIN": 101.0,
@@ -67,9 +67,9 @@
         "SAS": 105.0,
         "UTA": 108.0,
         "OKC": 102.0,
-        "DAL": 102.0,
-        "LAL": 113.0,
-        "LAC": 101.0
+        "DAL": 101.0,
+        "LAL": 100.0,
+        "LAC": 99.0
       },
       "zero_pts_pct": 0.0,
       "dropped_games": [],
@@ -82,14 +82,7 @@
     },
     "10_vegas_cal_clamp": {
       "passed": true,
-      "clamped_teams": [
-        {
-          "team": "LAL",
-          "raw_total": 142.0,
-          "calibrated_total": 124.8,
-          "scale": 0.8
-        }
-      ]
+      "clamped_teams": []
     }
   },
   "failures": [],
