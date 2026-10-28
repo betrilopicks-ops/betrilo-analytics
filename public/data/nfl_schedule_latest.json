@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 8,
-  "generated_at": "2026-10-27T07:00:21.546116-04:00",
+  "generated_at": "2026-10-28T15:00:19.748468-04:00",
   "bye_teams": [
     "HOU",
     "NO",
@@ -58,6 +58,12 @@
           "prior_season_games": 17
         },
         {
+          "player": "Ja'Tavion Sanders",
+          "position": "TE",
+          "snap_pct": 0.52,
+          "prior_season_games": 12
+        },
+        {
           "player": "Mitchell Evans",
           "position": "TE",
           "snap_pct": 0.45,
@@ -104,34 +110,6 @@
       ],
       "away_injuries": [
         {
-          "player": "Haynes King",
-          "position": "QB",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
-          "player": "Ja'Tavion Sanders",
-          "position": "TE",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
-          "player": "AJ Dillon",
-          "position": "RB",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
-          "player": "Jalen Coker",
-          "position": "WR",
-          "status": "Questionable",
-          "body_part": "Shoulder",
-          "practice": null
-        },
-        {
           "player": "Chris Brazzell II",
           "position": "WR",
           "status": "IR",
@@ -154,13 +132,6 @@
         }
       ],
       "home_injuries": [
-        {
-          "player": "Kaleb Johnson",
-          "position": "RB",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
         {
           "player": "Matthew Golden",
           "position": "WR",
@@ -212,11 +183,17 @@
       "home_team": "BUF",
       "gameday": "2026-11-01",
       "gametime": "13:00",
-      "spread_line": 3.5,
-      "total_line": 53.5,
+      "spread_line": 3.0,
+      "total_line": 54.5,
       "roof": "outdoors",
       "stadium": "Highmark Stadium",
       "away_snap_leaders": [
+        {
+          "player": "Lamar Jackson",
+          "position": "QB",
+          "snap_pct": 0.92,
+          "prior_season_games": 13
+        },
         {
           "player": "Tyler Huntley",
           "position": "QB",
@@ -330,16 +307,9 @@
       ],
       "away_injuries": [
         {
-          "player": "Elijah Sarratt",
-          "position": "WR",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
           "player": "Lamar Jackson",
           "position": "QB",
-          "status": "Out",
+          "status": "Questionable",
           "body_part": "Ankle",
           "practice": null
         },
@@ -369,15 +339,8 @@
         {
           "player": "DJ Moore",
           "position": "WR",
-          "status": "Out",
-          "body_part": "Shoulder - AC Joint",
-          "practice": null
-        },
-        {
-          "player": "Dalton Kincaid",
-          "position": "TE",
           "status": "Questionable",
-          "body_part": "Ribs",
+          "body_part": "Shoulder - AC Joint",
           "practice": null
         },
         {
@@ -396,7 +359,7 @@
       "home_team": "CIN",
       "gameday": "2026-11-01",
       "gametime": "13:00",
-      "spread_line": 10.0,
+      "spread_line": 10.5,
       "total_line": 46.5,
       "roof": "outdoors",
       "stadium": "Paycor Stadium",
@@ -414,10 +377,22 @@
           "prior_season_games": 17
         },
         {
+          "player": "Tyjae Spears",
+          "position": "RB",
+          "snap_pct": 0.48,
+          "prior_season_games": 12
+        },
+        {
           "player": "Elic Ayomanor",
           "position": "WR",
           "snap_pct": 0.81,
           "prior_season_games": 16
+        },
+        {
+          "player": "Calvin Ridley",
+          "position": "WR",
+          "snap_pct": 0.78,
+          "prior_season_games": 5
         },
         {
           "player": "Chimere Dike",
@@ -484,38 +459,31 @@
       ],
       "away_injuries": [
         {
+          "player": "Donnie Ernsberger",
+          "position": "TE",
+          "status": "Questionable",
+          "body_part": null,
+          "practice": null
+        },
+        {
           "player": "Calvin Ridley",
           "position": "WR",
-          "status": "Out",
+          "status": "Questionable",
           "body_part": "Hip",
+          "practice": null
+        },
+        {
+          "player": "Carnell Tate",
+          "position": "WR",
+          "status": "Questionable",
+          "body_part": "Shoulder",
           "practice": null
         },
         {
           "player": "Tyjae Spears",
           "position": "RB",
-          "status": "Out",
-          "body_part": "Knee",
-          "practice": null
-        },
-        {
-          "player": "Nicholas Singleton",
-          "position": "RB",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
-          "player": "Kylen Granson",
-          "position": "TE",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
-          "player": "Donnie Ernsberger",
-          "position": "TE",
           "status": "Questionable",
-          "body_part": null,
+          "body_part": "Knee",
           "practice": null
         },
         {
@@ -535,10 +503,17 @@
       ],
       "home_injuries": [
         {
+          "player": "Josh Kattus",
+          "position": "TE",
+          "status": "Out",
+          "body_part": "Undisclosed",
+          "practice": null
+        },
+        {
           "player": "Erick All Jr.",
           "position": "TE",
-          "status": "Questionable",
-          "body_part": "Knee",
+          "status": "IR",
+          "body_part": "Knee - ACL",
           "practice": null
         },
         {
@@ -564,7 +539,7 @@
       "home_team": "DAL",
       "gameday": "2026-11-01",
       "gametime": "13:00",
-      "spread_line": 6.5,
+      "spread_line": 7.0,
       "total_line": 54.5,
       "roof": "dome",
       "stadium": "AT&T Stadium",
@@ -580,12 +555,6 @@
           "position": "WR",
           "snap_pct": 0.81,
           "prior_season_games": 17
-        },
-        {
-          "player": "Jalen Brooks",
-          "position": "WR",
-          "snap_pct": 0.55,
-          "prior_season_games": 2
         },
         {
           "player": "Trey McBride",
@@ -660,22 +629,15 @@
         {
           "player": "Carson Beck",
           "position": "QB",
-          "status": "Out",
+          "status": "Questionable",
           "body_part": "Back",
           "practice": null
         },
         {
           "player": "Jeremiyah Love",
           "position": "RB",
-          "status": "Out",
+          "status": "Questionable",
           "body_part": "Ankle",
-          "practice": null
-        },
-        {
-          "player": "Jalen Brooks",
-          "position": "WR",
-          "status": "Out",
-          "body_part": "Wrist",
           "practice": null
         },
         {
@@ -707,10 +669,10 @@
           "practice": null
         },
         {
-          "player": "Jameson Geers",
-          "position": "TE",
+          "player": "Jalen Brooks",
+          "position": "WR",
           "status": "IR",
-          "body_part": "Undisclosed",
+          "body_part": "Wrist",
           "practice": null
         }
       ],
@@ -718,22 +680,8 @@
         {
           "player": "KaVontae Turpin",
           "position": "WR",
-          "status": "Out",
+          "status": "Questionable",
           "body_part": "Ribs",
-          "practice": null
-        },
-        {
-          "player": "Emari Demercado",
-          "position": "RB",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
-          "player": "DJ Rogers",
-          "position": "TE",
-          "status": "IR",
-          "body_part": "Knee",
           "practice": null
         },
         {
@@ -771,16 +719,22 @@
           "prior_season_games": 5
         },
         {
-          "player": "Aaron Jones",
-          "position": "RB",
-          "snap_pct": 0.55,
-          "prior_season_games": 12
+          "player": "Max Brosmer",
+          "position": "QB",
+          "snap_pct": 0.71,
+          "prior_season_games": 4
         },
         {
           "player": "Jordan Mason",
           "position": "RB",
           "snap_pct": 0.55,
           "prior_season_games": 10
+        },
+        {
+          "player": "Aaron Jones",
+          "position": "RB",
+          "snap_pct": 0.55,
+          "prior_season_games": 12
         },
         {
           "player": "Justin Jefferson",
@@ -853,17 +807,10 @@
       ],
       "away_injuries": [
         {
-          "player": "Demond Claiborne",
-          "position": "RB",
+          "player": "Michael Briscoe",
+          "position": "WR",
           "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
-          "player": "Max Brosmer",
-          "position": "QB",
-          "status": "Out",
-          "body_part": "Coach's Decision",
+          "body_part": "Undisclosed",
           "practice": null
         },
         {
@@ -871,13 +818,6 @@
           "position": "RB",
           "status": "Questionable",
           "body_part": "Undisclosed",
-          "practice": null
-        },
-        {
-          "player": "Myles Price",
-          "position": "WR",
-          "status": "Questionable",
-          "body_part": "Concussion",
           "practice": null
         },
         {
@@ -889,13 +829,6 @@
         }
       ],
       "home_injuries": [
-        {
-          "player": "Jackson Meeks",
-          "position": "TE",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
         {
           "player": "Amon-Ra St. Brown",
           "position": "WR",
@@ -933,7 +866,7 @@
       "home_team": "JAX",
       "gameday": "2026-11-01",
       "gametime": "13:00",
-      "spread_line": 7.5,
+      "spread_line": 10.0,
       "total_line": 46.5,
       "roof": "outdoors",
       "stadium": "EverBank Stadium",
@@ -943,6 +876,12 @@
           "position": "QB",
           "snap_pct": 0.97,
           "prior_season_games": 12
+        },
+        {
+          "player": "Riley Leonard",
+          "position": "QB",
+          "snap_pct": 0.89,
+          "prior_season_games": 2
         },
         {
           "player": "Jonathan Taylor",
@@ -957,6 +896,12 @@
           "prior_season_games": 1
         },
         {
+          "player": "Anthony Gould",
+          "position": "WR",
+          "snap_pct": 0.65,
+          "prior_season_games": 1
+        },
+        {
           "player": "Josh Downs",
           "position": "WR",
           "snap_pct": 0.59,
@@ -967,6 +912,12 @@
           "position": "WR",
           "snap_pct": 0.54,
           "prior_season_games": 2
+        },
+        {
+          "player": "Tyler Warren",
+          "position": "TE",
+          "snap_pct": 0.84,
+          "prior_season_games": 17
         },
         {
           "player": "Mo Alie-Cox",
@@ -1029,21 +980,14 @@
         {
           "player": "Tyler Warren",
           "position": "TE",
-          "status": "Out",
+          "status": "Questionable",
           "body_part": "Groin",
-          "practice": null
-        },
-        {
-          "player": "Riley Leonard",
-          "position": "QB",
-          "status": "Out",
-          "body_part": "Coach's Decision",
           "practice": null
         },
         {
           "player": "Anthony Gould",
           "position": "WR",
-          "status": "Out",
+          "status": "Questionable",
           "body_part": "Concussion",
           "practice": null
         },
@@ -1069,22 +1013,7 @@
           "practice": null
         }
       ],
-      "home_injuries": [
-        {
-          "player": "CJ Williams",
-          "position": "WR",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
-          "player": "Ameer Abdullah",
-          "position": "RB",
-          "status": "Questionable",
-          "body_part": "Concussion",
-          "practice": null
-        }
-      ],
+      "home_injuries": [],
       "inactives": null
     },
     {
@@ -1098,6 +1027,12 @@
       "roof": "outdoors",
       "stadium": "MetLife Stadium",
       "away_snap_leaders": [
+        {
+          "player": "Aidan O'Connell",
+          "position": "QB",
+          "snap_pct": 0.82,
+          "prior_season_games": 1
+        },
         {
           "player": "Ashton Jeanty",
           "position": "RB",
@@ -1131,16 +1066,22 @@
       ],
       "home_snap_leaders": [
         {
+          "player": "Breece Hall",
+          "position": "RB",
+          "snap_pct": 0.64,
+          "prior_season_games": 16
+        },
+        {
           "player": "Isaiah Davis",
           "position": "RB",
           "snap_pct": 0.4,
           "prior_season_games": 6
         },
         {
-          "player": "Braelon Allen",
+          "player": "Kene Nwangwu",
           "position": "RB",
-          "snap_pct": 0.32,
-          "prior_season_games": 2
+          "snap_pct": 0.33,
+          "prior_season_games": 1
         },
         {
           "player": "Garrett Wilson",
@@ -1181,31 +1122,10 @@
       ],
       "away_injuries": [
         {
-          "player": "Aidan O'Connell",
-          "position": "QB",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
-          "player": "Ian Thomas",
-          "position": "TE",
-          "status": "Questionable",
-          "body_part": "Shoulder",
-          "practice": null
-        },
-        {
           "player": "Jack Bech",
           "position": "WR",
           "status": "IR",
           "body_part": "Forearm",
-          "practice": null
-        },
-        {
-          "player": "Dont'e Thornton Jr.",
-          "position": "WR",
-          "status": "IR",
-          "body_part": "Undisclosed",
           "practice": null
         },
         {
@@ -1225,16 +1145,23 @@
       ],
       "home_injuries": [
         {
+          "player": "Braelon Allen",
+          "position": "RB",
+          "status": "Questionable",
+          "body_part": "Ankle",
+          "practice": null
+        },
+        {
           "player": "Kene Nwangwu",
           "position": "RB",
-          "status": "Out",
+          "status": "Questionable",
           "body_part": "Knee",
           "practice": null
         },
         {
           "player": "Breece Hall",
           "position": "RB",
-          "status": "Out",
+          "status": "Questionable",
           "body_part": "Quadriceps",
           "practice": null
         },
@@ -1264,6 +1191,12 @@
           "position": "QB",
           "snap_pct": 0.92,
           "prior_season_games": 8
+        },
+        {
+          "player": "Dillon Gabriel",
+          "position": "QB",
+          "snap_pct": 0.91,
+          "prior_season_games": 6
         },
         {
           "player": "Quinshon Judkins",
@@ -1322,6 +1255,12 @@
           "prior_season_games": 15
         },
         {
+          "player": "Ben Skowronek",
+          "position": "WR",
+          "snap_pct": 0.35,
+          "prior_season_games": 3
+        },
+        {
           "player": "Darnell Washington",
           "position": "TE",
           "snap_pct": 0.62,
@@ -1336,13 +1275,6 @@
       ],
       "away_injuries": [
         {
-          "player": "Audric Estime",
-          "position": "RB",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
           "player": "Bub Means",
           "position": "WR",
           "status": "Out",
@@ -1350,24 +1282,10 @@
           "practice": null
         },
         {
-          "player": "Taylen Green",
-          "position": "QB",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
           "player": "Raheim Sanders",
           "position": "RB",
           "status": "IR",
           "body_part": "Hip",
-          "practice": null
-        },
-        {
-          "player": "Dillon Gabriel",
-          "position": "QB",
-          "status": "IR",
-          "body_part": "Back",
           "practice": null
         },
         {
@@ -1380,31 +1298,10 @@
       ],
       "home_injuries": [
         {
-          "player": "Eli Heidenreich",
-          "position": "RB",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
-          "player": "Will Howard",
-          "position": "QB",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
           "player": "Ben Skowronek",
           "position": "WR",
-          "status": "Out",
+          "status": "Questionable",
           "body_part": "Calf",
-          "practice": null
-        },
-        {
-          "player": "Drew Allar",
-          "position": "QB",
-          "status": "Out",
-          "body_part": "Coach's Decision",
           "practice": null
         },
         {
@@ -1431,7 +1328,7 @@
       "gameday": "2026-11-01",
       "gametime": "13:00",
       "spread_line": 2.5,
-      "total_line": 46.5,
+      "total_line": 44.5,
       "roof": "outdoors",
       "stadium": "Raymond James Stadium",
       "away_snap_leaders": [
@@ -1480,6 +1377,12 @@
           "prior_season_games": 4
         },
         {
+          "player": "Emeka Egbuka",
+          "position": "WR",
+          "snap_pct": 0.78,
+          "prior_season_games": 17
+        },
+        {
           "player": "Tez Johnson",
           "position": "WR",
           "snap_pct": 0.63,
@@ -1506,38 +1409,17 @@
       ],
       "away_injuries": [
         {
-          "player": "Andy Dalton",
-          "position": "QB",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
           "player": "Brian Robinson Jr.",
           "position": "RB",
-          "status": "Out",
+          "status": "Questionable",
           "body_part": "Hamstring",
           "practice": null
         },
         {
           "player": "Olamide Zaccheaus",
           "position": "WR",
-          "status": "Out",
-          "body_part": "Shoulder",
-          "practice": null
-        },
-        {
-          "player": "Jack Strand",
-          "position": "QB",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
-          "player": "Drake London",
-          "position": "WR",
           "status": "Questionable",
-          "body_part": "Head",
+          "body_part": "Shoulder",
           "practice": null
         },
         {
@@ -1559,15 +1441,8 @@
         {
           "player": "Emeka Egbuka",
           "position": "WR",
-          "status": "Out",
-          "body_part": "Concussion",
-          "practice": null
-        },
-        {
-          "player": "Kenny Gainwell",
-          "position": "RB",
           "status": "Questionable",
-          "body_part": "Hip",
+          "body_part": "Concussion",
           "practice": null
         },
         {
@@ -1587,7 +1462,7 @@
       "gameday": "2026-11-01",
       "gametime": "16:05",
       "spread_line": 6.5,
-      "total_line": 44.5,
+      "total_line": 45.5,
       "roof": "dome",
       "stadium": "SoFi Stadium",
       "away_snap_leaders": [
@@ -1692,20 +1567,6 @@
       ],
       "away_injuries": [
         {
-          "player": "Ladd McConkey",
-          "position": "WR",
-          "status": "Out",
-          "body_part": "Concussion",
-          "practice": null
-        },
-        {
-          "player": "Tre' Harris",
-          "position": "WR",
-          "status": "Out",
-          "body_part": "Hamstring",
-          "practice": null
-        },
-        {
           "player": "Evan Svoboda",
           "position": "TE",
           "status": "Out",
@@ -1717,6 +1578,20 @@
           "position": "WR",
           "status": "Questionable",
           "body_part": "Quadriceps",
+          "practice": null
+        },
+        {
+          "player": "Ladd McConkey",
+          "position": "WR",
+          "status": "Questionable",
+          "body_part": "Concussion",
+          "practice": null
+        },
+        {
+          "player": "Tre' Harris",
+          "position": "WR",
+          "status": "Questionable",
+          "body_part": "Hamstring",
           "practice": null
         },
         {
@@ -1751,7 +1626,7 @@
       "gameday": "2026-11-01",
       "gametime": "16:25",
       "spread_line": -1.5,
-      "total_line": 41.5,
+      "total_line": 40.5,
       "roof": "outdoors",
       "stadium": "Empower Field at Mile High",
       "away_snap_leaders": [
@@ -1766,6 +1641,12 @@
           "position": "WR",
           "snap_pct": 0.76,
           "prior_season_games": 13
+        },
+        {
+          "player": "Rashee Rice",
+          "position": "WR",
+          "snap_pct": 0.75,
+          "prior_season_games": 8
         },
         {
           "player": "Jalen Royals",
@@ -1844,24 +1725,10 @@
       ],
       "away_injuries": [
         {
-          "player": "Ben VanSumeren",
-          "position": "RB",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
           "player": "Rashee Rice",
           "position": "WR",
-          "status": "Out",
+          "status": "Questionable",
           "body_part": "Hamstring",
-          "practice": null
-        },
-        {
-          "player": "Garrett Nussmeier",
-          "position": "QB",
-          "status": "Out",
-          "body_part": "Coach's Decision",
           "practice": null
         },
         {
@@ -1909,20 +1776,6 @@
       ],
       "home_injuries": [
         {
-          "player": "Sam Ehlinger",
-          "position": "QB",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
-          "player": "Dallen Bentley",
-          "position": "TE",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
           "player": "Jaylen Waddle",
           "position": "WR",
           "status": "Questionable",
@@ -1959,8 +1812,8 @@
       "home_team": "MIA",
       "gameday": "2026-11-01",
       "gametime": "16:25",
-      "spread_line": -7.5,
-      "total_line": 44.5,
+      "spread_line": -7.0,
+      "total_line": 43.5,
       "roof": "outdoors",
       "stadium": "Hard Rock Stadium",
       "away_snap_leaders": [
@@ -2017,13 +1870,6 @@
       ],
       "away_injuries": [
         {
-          "player": "Behren Morton",
-          "position": "QB",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
           "player": "Myles Montgomery",
           "position": "RB",
           "status": "IR",
@@ -2061,13 +1907,6 @@
       ],
       "home_injuries": [
         {
-          "player": "Jalen Tolbert",
-          "position": "WR",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
           "player": "Jaylen Wright",
           "position": "RB",
           "status": "Questionable",
@@ -2097,7 +1936,7 @@
       "home_team": "WAS",
       "gameday": "2026-11-01",
       "gametime": "20:20",
-      "spread_line": 4.5,
+      "spread_line": 5.5,
       "total_line": 40.5,
       "roof": "outdoors",
       "stadium": "Northwest Stadium",
@@ -2112,6 +1951,12 @@
           "player": "Saquon Barkley",
           "position": "RB",
           "snap_pct": 0.78,
+          "prior_season_games": 16
+        },
+        {
+          "player": "DeVonta Smith",
+          "position": "WR",
+          "snap_pct": 0.89,
           "prior_season_games": 16
         },
         {
@@ -2145,6 +1990,12 @@
           "position": "QB",
           "snap_pct": 0.9,
           "prior_season_games": 7
+        },
+        {
+          "player": "Marcus Mariota",
+          "position": "QB",
+          "snap_pct": 0.87,
+          "prior_season_games": 9
         },
         {
           "player": "Austin Ekeler",
@@ -2199,29 +2050,15 @@
         {
           "player": "Britain Covey",
           "position": "WR",
-          "status": "Out",
+          "status": "Questionable",
           "body_part": "Knee",
           "practice": null
         },
         {
           "player": "Dontayvion Wicks",
           "position": "WR",
-          "status": "Out",
+          "status": "Questionable",
           "body_part": "Ankle",
-          "practice": null
-        },
-        {
-          "player": "Cole Payton",
-          "position": "QB",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
-          "player": "DeVonta Smith",
-          "position": "WR",
-          "status": "Out",
-          "body_part": "Hamstring",
           "practice": null
         },
         {
@@ -2229,6 +2066,20 @@
           "position": "RB",
           "status": "Questionable",
           "body_part": "Back",
+          "practice": null
+        },
+        {
+          "player": "DeVonta Smith",
+          "position": "WR",
+          "status": "Questionable",
+          "body_part": "Hamstring",
+          "practice": null
+        },
+        {
+          "player": "Dameon Pierce",
+          "position": "RB",
+          "status": "Questionable",
+          "body_part": "Undisclosed",
           "practice": null
         },
         {
@@ -2262,16 +2113,9 @@
       ],
       "home_injuries": [
         {
-          "player": "Terry McLaurin",
-          "position": "WR",
-          "status": "Out",
-          "body_part": "Knee",
-          "practice": null
-        },
-        {
           "player": "Marcus Mariota",
           "position": "QB",
-          "status": "Out",
+          "status": "Questionable",
           "body_part": "Knee - MCL",
           "practice": null
         },
@@ -2287,6 +2131,13 @@
           "position": "RB",
           "status": "IR",
           "body_part": "Groin",
+          "practice": null
+        },
+        {
+          "player": "Terry McLaurin",
+          "position": "WR",
+          "status": "IR",
+          "body_part": "Knee",
           "practice": null
         }
       ],
@@ -2316,6 +2167,12 @@
           "prior_season_games": 16
         },
         {
+          "player": "Kyle Monangai",
+          "position": "RB",
+          "snap_pct": 0.45,
+          "prior_season_games": 14
+        },
+        {
           "player": "Rome Odunze",
           "position": "WR",
           "snap_pct": 0.88,
@@ -2326,12 +2183,6 @@
           "position": "WR",
           "snap_pct": 0.49,
           "prior_season_games": 2
-        },
-        {
-          "player": "Cole Kmet",
-          "position": "TE",
-          "snap_pct": 0.74,
-          "prior_season_games": 15
         },
         {
           "player": "Colston Loveland",
@@ -2346,6 +2197,18 @@
           "position": "QB",
           "snap_pct": 0.96,
           "prior_season_games": 17
+        },
+        {
+          "player": "Drew Lock",
+          "position": "QB",
+          "snap_pct": 0.32,
+          "prior_season_games": 1
+        },
+        {
+          "player": "Zach Charbonnet",
+          "position": "RB",
+          "snap_pct": 0.48,
+          "prior_season_games": 16
         },
         {
           "player": "George Holani",
@@ -2392,16 +2255,9 @@
       ],
       "away_injuries": [
         {
-          "player": "Case Keenum",
-          "position": "QB",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
           "player": "Kyle Monangai",
           "position": "RB",
-          "status": "Out",
+          "status": "Questionable",
           "body_part": "Toe",
           "practice": null
         },
@@ -2436,20 +2292,6 @@
       ],
       "home_injuries": [
         {
-          "player": "Drew Lock",
-          "position": "QB",
-          "status": "Out",
-          "body_part": "Elbow",
-          "practice": null
-        },
-        {
-          "player": "Robert Henry Jr.",
-          "position": "RB",
-          "status": "Out",
-          "body_part": "Coach's Decision",
-          "practice": null
-        },
-        {
           "player": "Jacardia Wright",
           "position": "RB",
           "status": "Out",
@@ -2457,25 +2299,33 @@
           "practice": null
         },
         {
+          "player": "Drew Lock",
+          "position": "QB",
+          "status": "Questionable",
+          "body_part": "Elbow",
+          "practice": null
+        },
+        {
           "player": "Velus Jones Jr.",
           "position": "WR",
-          "status": "Out",
+          "status": "Questionable",
           "body_part": "Hamstring",
           "practice": null
         },
         {
           "player": "Rashid Shaheed",
           "position": "WR",
-          "status": "Out",
+          "status": "Questionable",
           "body_part": "Knee",
           "practice": null
         },
         {
           "player": "Zach Charbonnet",
           "position": "RB",
-          "status": "Out",
+          "status": "Questionable",
           "body_part": "Knee - ACL",
-          "practice": null
+          "practice": null,
+          "acl_flag": true
         },
         {
           "player": "Jake Bobo",
