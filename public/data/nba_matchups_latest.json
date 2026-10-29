@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T11:03:20.464640+00:00",
+  "generated_at": "2026-10-29T14:16:15.801300+00:00",
   "slate_date": "2026-10-29",
   "season": "2026-27",
   "is_sample": false,
@@ -9,9 +9,9 @@
       "away_team": "CLE",
       "home_team": "ATL",
       "tip_time_et": "8:00 PM ET",
-      "away_proj_score": 118,
-      "home_proj_score": 114,
-      "proj_total": 233,
+      "away_proj_score": 125,
+      "home_proj_score": 116,
+      "proj_total": 242,
       "injuries": [
         {
           "player": "Henri Veesaar",
@@ -25,31 +25,31 @@
       "blowout_flag": false,
       "away_top_players": [
         {
-          "player": "Donovan Mitchell",
-          "player_id": "322",
-          "position": "G",
-          "confidence_rate": null,
-          "proj_pts": 19,
-          "proj_reb": 5,
-          "proj_ast": 5,
-          "proj_3pm": 2
-        },
-        {
           "player": "Evan Mobley",
           "player_id": "17896076",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 16,
-          "proj_reb": 9,
+          "proj_pts": 23,
+          "proj_reb": 11,
           "proj_ast": 3,
           "proj_3pm": 1
+        },
+        {
+          "player": "Donovan Mitchell",
+          "player_id": "322",
+          "position": "G",
+          "confidence_rate": null,
+          "proj_pts": 18,
+          "proj_reb": 5,
+          "proj_ast": 5,
+          "proj_3pm": 2
         },
         {
           "player": "James Harden",
           "player_id": "192",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 14,
+          "proj_pts": 13,
           "proj_reb": 5,
           "proj_ast": 8,
           "proj_3pm": 2
@@ -59,7 +59,7 @@
           "player_id": "9",
           "position": "C",
           "confidence_rate": null,
-          "proj_pts": 14,
+          "proj_pts": 13,
           "proj_reb": 8,
           "proj_ast": 1,
           "proj_3pm": 0
@@ -77,6 +77,16 @@
       ],
       "home_top_players": [
         {
+          "player": "Jalen Johnson",
+          "player_id": "17896040",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 19,
+          "proj_reb": 7,
+          "proj_ast": 7,
+          "proj_3pm": 1
+        },
+        {
           "player": "Nickeil Alexander-Walker",
           "player_id": "666400",
           "position": "G",
@@ -87,21 +97,11 @@
           "proj_3pm": 2
         },
         {
-          "player": "Jalen Johnson",
-          "player_id": "17896040",
-          "position": "F",
-          "confidence_rate": null,
-          "proj_pts": 18,
-          "proj_reb": 7,
-          "proj_ast": 7,
-          "proj_3pm": 1
-        },
-        {
           "player": "CJ McCollum",
           "player_id": "303",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 18,
+          "proj_pts": 19,
           "proj_reb": 2,
           "proj_ast": 3,
           "proj_3pm": 2
@@ -123,7 +123,7 @@
           "confidence_rate": null,
           "proj_pts": 8,
           "proj_reb": 5,
-          "proj_ast": 5,
+          "proj_ast": 4,
           "proj_3pm": 0
         }
       ]
@@ -132,9 +132,9 @@
       "away_team": "SAC",
       "home_team": "NOP",
       "tip_time_et": "8:00 PM ET",
-      "away_proj_score": 123,
-      "home_proj_score": 121,
-      "proj_total": 245,
+      "away_proj_score": 118,
+      "home_proj_score": 116,
+      "proj_total": 235,
       "injuries": [
         {
           "player": "Dylan Cardwell",
@@ -172,7 +172,7 @@
           "player_id": "268",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 23,
+          "proj_pts": 24,
           "proj_reb": 3,
           "proj_ast": 2,
           "proj_3pm": 2
@@ -182,7 +182,7 @@
           "player_id": "1091338860",
           "position": "G",
           "confidence_rate": 0,
-          "proj_pts": 18,
+          "proj_pts": 21,
           "proj_reb": 3,
           "proj_ast": 5,
           "proj_3pm": 1
@@ -192,19 +192,9 @@
           "player_id": "406",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 18,
-          "proj_reb": 14,
-          "proj_ast": 6,
-          "proj_3pm": 0
-        },
-        {
-          "player": "Precious Achiuwa",
-          "player_id": "3547249",
-          "position": "F",
-          "confidence_rate": null,
-          "proj_pts": 9,
-          "proj_reb": 6,
-          "proj_ast": 1,
+          "proj_pts": 14,
+          "proj_reb": 13,
+          "proj_ast": 5,
           "proj_3pm": 0
         },
         {
@@ -216,6 +206,16 @@
           "proj_reb": 2,
           "proj_ast": 5,
           "proj_3pm": 1
+        },
+        {
+          "player": "Precious Achiuwa",
+          "player_id": "3547249",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 8,
+          "proj_reb": 6,
+          "proj_ast": 1,
+          "proj_3pm": 0
         }
       ],
       "home_top_players": [
@@ -224,17 +224,27 @@
           "player_id": "666969",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 19,
+          "proj_pts": 18,
           "proj_reb": 4,
           "proj_ast": 2,
           "proj_3pm": 0
+        },
+        {
+          "player": "Saddiq Bey",
+          "player_id": "3547256",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 15,
+          "proj_reb": 3,
+          "proj_ast": 2,
+          "proj_3pm": 2
         },
         {
           "player": "Bennedict Mathurin",
           "player_id": "38017686",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 16,
+          "proj_pts": 15,
           "proj_reb": 4,
           "proj_ast": 2,
           "proj_3pm": 0
@@ -244,7 +254,7 @@
           "player_id": "18677986",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 14,
+          "proj_pts": 13,
           "proj_reb": 4,
           "proj_ast": 3,
           "proj_3pm": 2
@@ -254,20 +264,10 @@
           "player_id": "334",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 14,
+          "proj_pts": 13,
           "proj_reb": 5,
           "proj_ast": 6,
           "proj_3pm": 1
-        },
-        {
-          "player": "Saddiq Bey",
-          "player_id": "3547256",
-          "position": "F",
-          "confidence_rate": null,
-          "proj_pts": 14,
-          "proj_reb": 3,
-          "proj_ast": 2,
-          "proj_3pm": 2
         }
       ]
     },
@@ -275,9 +275,9 @@
       "away_team": "MEM",
       "home_team": "POR",
       "tip_time_et": "10:00 PM ET",
-      "away_proj_score": 124,
+      "away_proj_score": 120,
       "home_proj_score": 116,
-      "proj_total": 241,
+      "proj_total": 237,
       "injuries": [
         {
           "player": "Shaedon Sharpe",
@@ -307,7 +307,7 @@
           "player_id": "666676",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 19,
+          "proj_pts": 16,
           "proj_reb": 3,
           "proj_ast": 7,
           "proj_3pm": 2
@@ -333,16 +333,6 @@
           "proj_3pm": 2
         },
         {
-          "player": "Cedric Coward",
-          "player_id": "1057266649",
-          "position": "G",
-          "confidence_rate": null,
-          "proj_pts": 12,
-          "proj_reb": 7,
-          "proj_ast": 3,
-          "proj_3pm": 1
-        },
-        {
           "player": "GG Jackson",
           "player_id": "56677830",
           "position": "F",
@@ -350,6 +340,16 @@
           "proj_pts": 12,
           "proj_reb": 4,
           "proj_ast": 1,
+          "proj_3pm": 1
+        },
+        {
+          "player": "Cedric Coward",
+          "player_id": "1057266649",
+          "position": "G",
+          "confidence_rate": null,
+          "proj_pts": 11,
+          "proj_reb": 7,
+          "proj_ast": 2,
           "proj_3pm": 1
         }
       ],
@@ -359,7 +359,7 @@
           "player_id": "3547242",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 19,
+          "proj_pts": 18,
           "proj_reb": 7,
           "proj_ast": 6,
           "proj_3pm": 1
@@ -369,7 +369,7 @@
           "player_id": "278",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 16,
+          "proj_pts": 17,
           "proj_reb": 4,
           "proj_ast": 5,
           "proj_3pm": 2
@@ -379,7 +379,7 @@
           "player_id": "666786",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 16,
+          "proj_pts": 17,
           "proj_reb": 2,
           "proj_ast": 7,
           "proj_3pm": 1
