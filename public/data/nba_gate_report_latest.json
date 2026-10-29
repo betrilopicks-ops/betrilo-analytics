@@ -1,22 +1,22 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-10-28T21:46:28.285126+00:00",
-  "slate_date": "2026-10-28",
-  "today_et": "2026-10-28",
-  "player_count": 236,
-  "game_count": 12,
+  "run_at": "2026-10-29T11:03:21.617329+00:00",
+  "slate_date": "2026-10-29",
+  "today_et": "2026-10-29",
+  "player_count": 60,
+  "game_count": 3,
   "checks": {
     "1_slate_date_and_sample": {
       "passed": true,
-      "slate_date": "2026-10-28",
-      "expected_date": "2026-10-28",
+      "slate_date": "2026-10-29",
+      "expected_date": "2026-10-29",
       "is_sample": false
     },
     "2_game_count": {
       "passed": true,
-      "json_games": 12,
-      "scoreboard_games": 12
+      "json_games": 3,
+      "scoreboard_games": 3
     },
     "3_game_coverage": {
       "passed": true,
@@ -34,7 +34,7 @@
     "6_prior_season_cap": {
       "passed": true,
       "violations": [],
-      "players_checked": 194
+      "players_checked": 42
     },
     "7_integrity": {
       "passed": true,
@@ -43,33 +43,15 @@
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 236,
+      "rotation_count": 60,
       "median_rotation_pts": 9.0,
       "team_scores": {
-        "MIA": 108.0,
-        "ATL": 106.0,
-        "WAS": 109.0,
-        "CLE": 108.0,
-        "CHA": 102.0,
-        "DET": 93.0,
-        "PHI": 106.0,
-        "IND": 105.0,
-        "ORL": 107.0,
-        "TOR": 98.0,
-        "NYK": 111.0,
-        "CHI": 104.0,
-        "HOU": 99.0,
-        "MIL": 109.0,
-        "GSW": 102.0,
-        "MIN": 101.0,
-        "DEN": 107.0,
-        "NOP": 116.0,
-        "SAS": 105.0,
-        "UTA": 108.0,
-        "OKC": 102.0,
-        "DAL": 101.0,
-        "LAL": 100.0,
-        "LAC": 99.0
+        "CLE": 107.0,
+        "ATL": 103.0,
+        "SAC": 112.0,
+        "NOP": 110.0,
+        "MEM": 113.0,
+        "POR": 105.0
       },
       "zero_pts_pct": 0.0,
       "dropped_games": [],
@@ -88,8 +70,8 @@
   "failures": [],
   "matchups_checks": {
     "slate_date_match": true,
-    "game_count_before": 12,
-    "game_count_after": 12,
+    "game_count_before": 3,
+    "game_count_after": 3,
     "dropped_games": []
   }
 }
