@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T14:16:12.137393+00:00",
+  "generated_at": "2026-10-30T21:46:33.501579+00:00",
   "slate_date": "2026-10-30",
   "season": "2026-27",
   "is_sample": false,
@@ -9,9 +9,9 @@
       "away_team": "CHA",
       "home_team": "WAS",
       "tip_time_et": "7:00 PM ET",
-      "away_proj_score": 109,
+      "away_proj_score": 107,
       "home_proj_score": 110,
-      "proj_total": 220,
+      "proj_total": 218,
       "injuries": [
         {
           "player": "Coby White",
@@ -35,7 +35,7 @@
         },
         {
           "player": "Dennis Schroder",
-          "status": "Questionable"
+          "status": "Probable"
         },
         {
           "player": "Tristan Vukcevic",
@@ -185,6 +185,10 @@
           "status": "Questionable"
         },
         {
+          "player": "Dailyn Swain",
+          "status": "Questionable"
+        },
+        {
           "player": "Devin Carter",
           "status": "Out"
         }
@@ -299,9 +303,9 @@
       "away_team": "DET",
       "home_team": "BKN",
       "tip_time_et": "7:30 PM ET",
-      "away_proj_score": 112,
+      "away_proj_score": 109,
       "home_proj_score": 109,
-      "proj_total": 222,
+      "proj_total": 219,
       "injuries": [
         {
           "player": "Jalen Duren",
@@ -309,15 +313,15 @@
         },
         {
           "player": "Isaiah Joe",
-          "status": "Questionable"
+          "status": "Out"
         },
         {
           "player": "Elijah Harkless",
-          "status": "Questionable"
+          "status": "Available"
         },
         {
           "player": "Isaac Jones",
-          "status": "Questionable"
+          "status": "Available"
         },
         {
           "player": "Ugonna Onyenso",
@@ -341,11 +345,15 @@
         },
         {
           "player": "Drake Powell",
-          "status": "Questionable"
+          "status": "Available"
         },
         {
           "player": "Ben Saraf",
           "status": "Out"
+        },
+        {
+          "player": "Noah Clowney",
+          "status": "Questionable"
         }
       ],
       "blowout_flag": false,
@@ -440,7 +448,7 @@
           "proj_pts": 9,
           "proj_reb": 3,
           "proj_ast": 1,
-          "proj_3pm": 2
+          "proj_3pm": 1
         },
         {
           "player": "Danny Wolf",
@@ -459,12 +467,16 @@
       "home_team": "PHI",
       "tip_time_et": "7:30 PM ET",
       "away_proj_score": 117,
-      "home_proj_score": 113,
-      "proj_total": 231,
+      "home_proj_score": 110,
+      "proj_total": 228,
       "injuries": [
         {
           "player": "Jose Alvarado",
           "status": "Out"
+        },
+        {
+          "player": "Karl-Anthony Towns",
+          "status": "Probable"
         },
         {
           "player": "Dominick Barlow",
@@ -484,7 +496,7 @@
         },
         {
           "player": "Jaylen Brown",
-          "status": "Questionable"
+          "status": "Doubtful"
         }
       ],
       "blowout_flag": false,
@@ -546,7 +558,7 @@
           "player_id": "145",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 23,
+          "proj_pts": 22,
           "proj_reb": 7,
           "proj_ast": 3,
           "proj_3pm": 2
@@ -716,7 +728,7 @@
           "proj_pts": 14,
           "proj_reb": 3,
           "proj_ast": 5,
-          "proj_3pm": 2
+          "proj_3pm": 3
         },
         {
           "player": "Ja'Kobe Walter",
@@ -777,8 +789,12 @@
           "status": "Probable"
         },
         {
-          "player": "Simone Fontecchio",
+          "player": "Obi Toppin",
           "status": "Questionable"
+        },
+        {
+          "player": "Simone Fontecchio",
+          "status": "Probable"
         }
       ],
       "blowout_flag": false,
@@ -933,7 +949,7 @@
         },
         {
           "player": "Naji Marshall",
-          "status": "Questionable"
+          "status": "Probable"
         },
         {
           "player": "Sergio De Larrea",
@@ -1080,7 +1096,7 @@
         },
         {
           "player": "Rui Hachimura",
-          "status": "Questionable"
+          "status": "Probable"
         },
         {
           "player": "Donte DiVincenzo",
@@ -1201,9 +1217,9 @@
       "away_team": "LAL",
       "home_team": "GSW",
       "tip_time_et": "10:00 PM ET",
-      "away_proj_score": 120,
+      "away_proj_score": 119,
       "home_proj_score": 116,
-      "proj_total": 237,
+      "proj_total": 236,
       "injuries": [
         {
           "player": "Cameron Carr",
@@ -1215,7 +1231,7 @@
         },
         {
           "player": "Ziaire Williams",
-          "status": "Questionable"
+          "status": "Out"
         },
         {
           "player": "Walker Kessler",
@@ -1235,7 +1251,7 @@
         },
         {
           "player": "Gui Santos",
-          "status": "Doubtful"
+          "status": "Questionable"
         }
       ],
       "blowout_flag": false,
@@ -1245,30 +1261,20 @@
           "player_id": "132",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 21,
+          "proj_pts": 22,
           "proj_reb": 6,
           "proj_ast": 6,
-          "proj_3pm": 4
+          "proj_3pm": 5
         },
         {
           "player": "Austin Reaves",
           "player_id": "17553995",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 21,
+          "proj_pts": 22,
           "proj_reb": 4,
           "proj_ast": 5,
           "proj_3pm": 2
-        },
-        {
-          "player": "Ziaire Williams",
-          "player_id": "17896027",
-          "position": "G",
-          "confidence_rate": null,
-          "proj_pts": 13,
-          "proj_reb": 3,
-          "proj_ast": 2,
-          "proj_3pm": 1
         },
         {
           "player": "Collin Sexton",
@@ -1278,6 +1284,16 @@
           "proj_pts": 13,
           "proj_reb": 2,
           "proj_ast": 2,
+          "proj_3pm": 2
+        },
+        {
+          "player": "Jaden Hardy",
+          "player_id": "38017679",
+          "position": "G",
+          "confidence_rate": null,
+          "proj_pts": 10,
+          "proj_reb": 2,
+          "proj_ast": 1,
           "proj_3pm": 2
         },
         {
@@ -1366,7 +1382,7 @@
         },
         {
           "player": "Alpha Diallo",
-          "status": "Questionable"
+          "status": "Doubtful"
         },
         {
           "player": "Mark Williams",
