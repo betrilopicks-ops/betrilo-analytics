@@ -1,22 +1,22 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-10-29T21:46:04.252823+00:00",
-  "slate_date": "2026-10-29",
-  "today_et": "2026-10-29",
-  "player_count": 60,
-  "game_count": 3,
+  "run_at": "2026-10-30T11:08:09.146075+00:00",
+  "slate_date": "2026-10-30",
+  "today_et": "2026-10-30",
+  "player_count": 200,
+  "game_count": 10,
   "checks": {
     "1_slate_date_and_sample": {
       "passed": true,
-      "slate_date": "2026-10-29",
-      "expected_date": "2026-10-29",
+      "slate_date": "2026-10-30",
+      "expected_date": "2026-10-30",
       "is_sample": false
     },
     "2_game_count": {
       "passed": true,
-      "json_games": 3,
-      "scoreboard_games": 3
+      "json_games": 10,
+      "scoreboard_games": 10
     },
     "3_game_coverage": {
       "passed": true,
@@ -34,7 +34,7 @@
     "6_prior_season_cap": {
       "passed": true,
       "violations": [],
-      "players_checked": 42
+      "players_checked": 164
     },
     "7_integrity": {
       "passed": true,
@@ -43,15 +43,29 @@
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 60,
+      "rotation_count": 200,
       "median_rotation_pts": 9.0,
       "team_scores": {
-        "CLE": 114.0,
-        "ATL": 104.0,
-        "SAC": 107.0,
-        "NOP": 105.0,
-        "MEM": 109.0,
-        "POR": 105.0
+        "CHA": 98.0,
+        "WAS": 99.0,
+        "CHI": 106.0,
+        "BOS": 107.0,
+        "DET": 101.0,
+        "BKN": 98.0,
+        "NYK": 106.0,
+        "PHI": 102.0,
+        "ORL": 100.0,
+        "TOR": 101.0,
+        "IND": 114.0,
+        "MIA": 107.0,
+        "HOU": 100.0,
+        "DAL": 107.0,
+        "LAC": 101.0,
+        "MIN": 101.0,
+        "LAL": 109.0,
+        "GSW": 105.0,
+        "DEN": 105.0,
+        "PHX": 108.0
       },
       "zero_pts_pct": 0.0,
       "dropped_games": [],
@@ -70,8 +84,8 @@
   "failures": [],
   "matchups_checks": {
     "slate_date_match": true,
-    "game_count_before": 3,
-    "game_count_after": 3,
+    "game_count_before": 10,
+    "game_count_after": 10,
     "dropped_games": []
   }
 }
