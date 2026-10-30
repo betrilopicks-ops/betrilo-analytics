@@ -1,9 +1,9 @@
 {
-  "verdict": "NEEDS ATTENTION",
-  "headline": "Required step(s) failed: GitHub image upload, Pipeline generation, Caption generation",
-  "checked_at": "2026-10-29T06:00:21",
-  "run_date": "2026-10-29",
-  "required_ok": false,
+  "verdict": "ALL GOOD",
+  "headline": "Core run OK. Optional step warnings: Pipeline generation, BvP matchup export, Edge report JSON export, Best bets JSON export, Player projections JSON export, Starting lineups JSON export, Batter splits JSON export, Pitcher logs 2026 enrichment, Pitcher report JSON export, Batter game logs JSON export, Pitcher game logs JSON export, Caption generation, GitHub image upload, Buffer posting (IG + Threads + X), Validation metrics",
+  "checked_at": "2026-10-30T06:00:21",
+  "run_date": "2026-10-30",
+  "required_ok": true,
   "steps": {
     "Pipeline generation": "SKIP",
     "Sync publish worktree to main": "OK",
