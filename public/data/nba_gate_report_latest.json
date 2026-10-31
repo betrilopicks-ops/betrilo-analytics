@@ -1,22 +1,22 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-10-30T21:46:34.518789+00:00",
-  "slate_date": "2026-10-30",
-  "today_et": "2026-10-30",
-  "player_count": 200,
-  "game_count": 10,
+  "run_at": "2026-10-31T11:05:56.478128+00:00",
+  "slate_date": "2026-10-31",
+  "today_et": "2026-10-31",
+  "player_count": 139,
+  "game_count": 7,
   "checks": {
     "1_slate_date_and_sample": {
       "passed": true,
-      "slate_date": "2026-10-30",
-      "expected_date": "2026-10-30",
+      "slate_date": "2026-10-31",
+      "expected_date": "2026-10-31",
       "is_sample": false
     },
     "2_game_count": {
       "passed": true,
-      "json_games": 10,
-      "scoreboard_games": 10
+      "json_games": 7,
+      "scoreboard_games": 7
     },
     "3_game_coverage": {
       "passed": true,
@@ -34,7 +34,7 @@
     "6_prior_season_cap": {
       "passed": true,
       "violations": [],
-      "players_checked": 164
+      "players_checked": 111
     },
     "7_integrity": {
       "passed": true,
@@ -43,29 +43,23 @@
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 200,
+      "rotation_count": 139,
       "median_rotation_pts": 9.0,
       "team_scores": {
-        "CHA": 96.0,
-        "WAS": 99.0,
-        "CHI": 106.0,
-        "BOS": 107.0,
-        "DET": 98.0,
-        "BKN": 98.0,
-        "NYK": 106.0,
-        "PHI": 99.0,
-        "ORL": 100.0,
-        "TOR": 101.0,
-        "IND": 114.0,
-        "MIA": 107.0,
-        "HOU": 99.0,
-        "DAL": 107.0,
-        "LAC": 101.0,
-        "MIN": 101.0,
-        "LAL": 108.0,
-        "GSW": 105.0,
-        "DEN": 105.0,
-        "PHX": 108.0
+        "POR": 104.0,
+        "UTA": 103.0,
+        "PHI": 96.0,
+        "CHA": 92.0,
+        "ATL": 114.0,
+        "NOP": 107.0,
+        "SAC": 106.0,
+        "MEM": 107.0,
+        "CLE": 108.0,
+        "MIL": 109.0,
+        "MIN": 102.0,
+        "SAS": 103.0,
+        "OKC": 96.0,
+        "HOU": 98.0
       },
       "zero_pts_pct": 0.0,
       "dropped_games": [],
@@ -84,8 +78,8 @@
   "failures": [],
   "matchups_checks": {
     "slate_date_match": true,
-    "game_count_before": 10,
-    "game_count_after": 10,
+    "game_count_before": 7,
+    "game_count_after": 7,
     "dropped_games": []
   }
 }
