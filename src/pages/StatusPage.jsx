@@ -32,7 +32,7 @@ const SURFACES = [
     key: 'edge_report',
     label: 'Edge Report',
     file: '/data/edge_report_latest.json',
-    getFreshness: d => d.slate_date ? d.slate_date + 'T06:00:00-04:00' : null,
+    getFreshness: d => d.slate_date ? d.slate_date + 'T12:00:00Z' : null,
     getGames: () => null,
     getRecords: d => ({ count: d.count ?? d.picks?.length ?? 0, label: 'picks' }),
     noGameCount: true, // pick count ≠ game count — freshness-only health
@@ -41,7 +41,7 @@ const SURFACES = [
     key: 'batter_splits',
     label: 'Batter Splits',
     file: '/data/batter_splits_latest.json',
-    getFreshness: d => d.generated ? d.generated + 'T06:00:00-04:00' : null,
+    getFreshness: d => d.generated ? d.generated + 'T12:00:00Z' : null,
     getGames: () => null,
     getRecords: d => ({ count: d.count ?? d.players?.length ?? 0, label: 'players' }),
     noGameCount: true, // team count ≠ game count — freshness-only health
@@ -50,7 +50,7 @@ const SURFACES = [
     key: 'game_matchups',
     label: 'Game Matchups',
     file: '/data/game_matchups_latest.json',
-    getFreshness: d => d.exported_date ? d.exported_date + 'T06:00:00-04:00' : null,
+    getFreshness: d => d.exported_date ? d.exported_date + 'T12:00:00Z' : null,
     getGames: d => d.games_count ?? d.games?.length ?? 0,
     getRecords: d => {
       const n = d.games?.reduce((s, g) =>
@@ -74,7 +74,7 @@ const SURFACES = [
     key: 'track_record',
     label: 'Track Record',
     file: '/data/track_record_latest.json',
-    getFreshness: d => d.generated ? d.generated + 'T06:00:00-04:00' : null,
+    getFreshness: d => d.generated ? d.generated + 'T12:00:00Z' : null,
     getGames: () => null, // not game-scoped
     getRecords: d => {
       const o = d.overall ?? {};
@@ -87,7 +87,7 @@ const SURFACES = [
     key: 'results_by_date',
     label: 'Results by Date',
     file: '/data/results_by_date.json',
-    getFreshness: d => d.generated ? d.generated + 'T06:00:00-04:00' : null,
+    getFreshness: d => d.generated ? d.generated + 'T12:00:00Z' : null,
     getGames: () => null,
     getRecords: d => ({ count: d.total_days ?? d.days?.length ?? 0, label: 'days' }),
     noGameCount: true,
@@ -174,10 +174,10 @@ const SURFACES = [
 function parseSlateDateHuman(s) {
   if (!s) return null;
   // Already ISO-like?
-  if (/^\d{4}-\d{2}-\d{2}/.test(s)) return s.length === 10 ? s + 'T06:00:00-04:00' : s;
-  const d = new Date(s + ' EDT');
+  if (/^\d{4}-\d{2}-\d{2}/.test(s)) return s.length === 10 ? s + 'T12:00:00Z' : s;
+  const d = new Date(s);
   if (isNaN(d)) return null;
-  return d.toISOString().slice(0, 10) + 'T06:00:00-04:00';
+  return d.toISOString().slice(0, 10) + 'T12:00:00Z';
 }
 
 /** Today's date string in ET (YYYY-MM-DD) */
