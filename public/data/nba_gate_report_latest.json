@@ -1,22 +1,22 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-11-01T21:46:08.710828+00:00",
-  "slate_date": "2026-11-01",
-  "today_et": "2026-11-01",
-  "player_count": 80,
-  "game_count": 4,
+  "run_at": "2026-11-02T11:12:37.316382+00:00",
+  "slate_date": "2026-11-02",
+  "today_et": "2026-11-02",
+  "player_count": 298,
+  "game_count": 15,
   "checks": {
     "1_slate_date_and_sample": {
       "passed": true,
-      "slate_date": "2026-11-01",
-      "expected_date": "2026-11-01",
+      "slate_date": "2026-11-02",
+      "expected_date": "2026-11-02",
       "is_sample": false
     },
     "2_game_count": {
       "passed": true,
-      "json_games": 4,
-      "scoreboard_games": 4
+      "json_games": 15,
+      "scoreboard_games": 15
     },
     "3_game_coverage": {
       "passed": true,
@@ -34,7 +34,7 @@
     "6_prior_season_cap": {
       "passed": true,
       "violations": [],
-      "players_checked": 66
+      "players_checked": 243
     },
     "7_integrity": {
       "passed": true,
@@ -43,17 +43,39 @@
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 80,
-      "median_rotation_pts": 8.0,
+      "rotation_count": 298,
+      "median_rotation_pts": 9.0,
       "team_scores": {
-        "BOS": 93.0,
-        "ORL": 98.0,
-        "BKN": 98.0,
+        "OKC": 103.0,
+        "CLE": 105.0,
+        "DET": 95.0,
+        "CHA": 98.0,
+        "ATL": 106.0,
         "IND": 103.0,
-        "LAC": 101.0,
-        "GSW": 98.0,
-        "TOR": 105.0,
-        "LAL": 100.0
+        "BKN": 95.0,
+        "NYK": 100.0,
+        "WAS": 99.0,
+        "ORL": 100.0,
+        "CHI": 103.0,
+        "PHI": 107.0,
+        "SAC": 105.0,
+        "DAL": 105.0,
+        "NOP": 105.0,
+        "MEM": 106.0,
+        "MIL": 104.0,
+        "MIN": 111.0,
+        "BOS": 104.0,
+        "HOU": 102.0,
+        "UTA": 105.0,
+        "SAS": 104.0,
+        "POR": 103.0,
+        "DEN": 102.0,
+        "PHX": 102.0,
+        "GSW": 103.0,
+        "TOR": 98.0,
+        "LAC": 95.0,
+        "MIA": 107.0,
+        "LAL": 108.0
       },
       "zero_pts_pct": 0.0,
       "dropped_games": [],
@@ -72,8 +94,8 @@
   "failures": [],
   "matchups_checks": {
     "slate_date_match": true,
-    "game_count_before": 4,
-    "game_count_after": 4,
+    "game_count_before": 15,
+    "game_count_after": 15,
     "dropped_games": []
   }
 }
