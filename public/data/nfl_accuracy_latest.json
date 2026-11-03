@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generated_at": "2026-10-30T17:00:44.091176-04:00",
+  "generated_at": "2026-11-03T06:01:15.359866-05:00",
   "through_week": 8,
   "graded_weeks": [
     1,
@@ -11,53 +11,53 @@
     7,
     8
   ],
-  "total_graded": 1686,
+  "total_graded": 2011,
   "overall": {
-    "n": 1686,
-    "model_mae": 18.19,
-    "line_mae": 16.64,
-    "ratio": 1.093,
-    "line_closer_pct": 51.5
+    "n": 2011,
+    "model_mae": 18.62,
+    "line_mae": 16.87,
+    "ratio": 1.104,
+    "line_closer_pct": 51.8
   },
   "pooled": {
     "player_pass_tds": {
-      "n": 139,
-      "model_mae": 0.87,
-      "line_mae": 0.89,
-      "ratio": 0.978,
-      "line_closer_pct": 44.6,
+      "n": 164,
+      "model_mae": 0.9,
+      "line_mae": 0.91,
+      "ratio": 0.989,
+      "line_closer_pct": 43.9,
       "display_name": "Passing TDs"
     },
     "player_receptions": {
-      "n": 582,
-      "model_mae": 1.77,
-      "line_mae": 1.75,
-      "ratio": 1.011,
+      "n": 696,
+      "model_mae": 1.76,
+      "line_mae": 1.73,
+      "ratio": 1.017,
       "line_closer_pct": 44.5,
       "display_name": "Receptions"
     },
     "player_reception_yds": {
-      "n": 577,
-      "model_mae": 25.12,
-      "line_mae": 23.81,
-      "ratio": 1.055,
-      "line_closer_pct": 56.0,
+      "n": 689,
+      "model_mae": 25.13,
+      "line_mae": 23.75,
+      "ratio": 1.058,
+      "line_closer_pct": 55.7,
       "display_name": "Receiving Yards"
     },
     "player_rush_yds": {
-      "n": 252,
-      "model_mae": 24.08,
-      "line_mae": 21.99,
-      "ratio": 1.095,
-      "line_closer_pct": 56.0,
+      "n": 300,
+      "model_mae": 24.71,
+      "line_mae": 22.1,
+      "ratio": 1.118,
+      "line_closer_pct": 58.3,
       "display_name": "Rushing Yards"
     },
     "player_pass_yds": {
-      "n": 136,
-      "model_mae": 65.87,
-      "line_mae": 56.15,
-      "ratio": 1.173,
-      "line_closer_pct": 61.0,
+      "n": 162,
+      "model_mae": 70.1,
+      "line_mae": 59.15,
+      "ratio": 1.185,
+      "line_closer_pct": 61.7,
       "display_name": "Passing Yards"
     }
   },
@@ -105,92 +105,92 @@
       "line_closer_pct": 46.4
     },
     "8": {
-      "n": 27,
-      "model_mae": 11.01,
-      "line_mae": 10.8,
-      "ratio": 1.019,
-      "line_closer_pct": 48.1
+      "n": 352,
+      "model_mae": 20.11,
+      "line_mae": 17.51,
+      "ratio": 1.148,
+      "line_closer_pct": 52.8
     }
   },
   "by_position": {
     "player_pass_tds": {
       "QB": {
-        "n": 139,
-        "model_mae": 0.87,
-        "line_mae": 0.89,
-        "ratio": 0.978,
-        "line_closer_pct": 44.6
+        "n": 164,
+        "model_mae": 0.9,
+        "line_mae": 0.91,
+        "ratio": 0.989,
+        "line_closer_pct": 43.9
       }
     },
     "player_receptions": {
       "RB": {
-        "n": 111,
-        "model_mae": 1.64,
-        "line_mae": 1.71,
-        "ratio": 0.959,
-        "line_closer_pct": 43.2
+        "n": 135,
+        "model_mae": 1.62,
+        "line_mae": 1.68,
+        "ratio": 0.964,
+        "line_closer_pct": 40.0
       },
       "TE": {
-        "n": 163,
-        "model_mae": 1.73,
-        "line_mae": 1.7,
+        "n": 196,
+        "model_mae": 1.67,
+        "line_mae": 1.64,
         "ratio": 1.018,
-        "line_closer_pct": 47.2
+        "line_closer_pct": 48.0
       },
       "WR": {
-        "n": 308,
-        "model_mae": 1.84,
-        "line_mae": 1.79,
-        "ratio": 1.028,
-        "line_closer_pct": 43.5
+        "n": 365,
+        "model_mae": 1.86,
+        "line_mae": 1.8,
+        "ratio": 1.033,
+        "line_closer_pct": 44.4
       }
     },
     "player_reception_yds": {
       "RB": {
-        "n": 85,
-        "model_mae": 17.08,
-        "line_mae": 16.49,
-        "ratio": 1.036,
-        "line_closer_pct": 56.5
+        "n": 101,
+        "model_mae": 16.98,
+        "line_mae": 16.37,
+        "ratio": 1.037,
+        "line_closer_pct": 55.4
       },
       "TE": {
-        "n": 162,
-        "model_mae": 20.96,
-        "line_mae": 20.41,
-        "ratio": 1.027,
-        "line_closer_pct": 53.1
+        "n": 194,
+        "model_mae": 21.31,
+        "line_mae": 20.81,
+        "ratio": 1.024,
+        "line_closer_pct": 52.6
       },
       "WR": {
-        "n": 330,
-        "model_mae": 29.24,
-        "line_mae": 27.37,
-        "ratio": 1.068,
-        "line_closer_pct": 57.3
+        "n": 394,
+        "model_mae": 29.1,
+        "line_mae": 27.08,
+        "ratio": 1.075,
+        "line_closer_pct": 57.4
       }
     },
     "player_rush_yds": {
       "QB": {
-        "n": 59,
-        "model_mae": 17.78,
-        "line_mae": 16.06,
-        "ratio": 1.107,
-        "line_closer_pct": 62.7
+        "n": 70,
+        "model_mae": 17.7,
+        "line_mae": 15.8,
+        "ratio": 1.12,
+        "line_closer_pct": 62.9
       },
       "RB": {
-        "n": 193,
-        "model_mae": 26.01,
-        "line_mae": 23.8,
-        "ratio": 1.093,
-        "line_closer_pct": 53.9
+        "n": 230,
+        "model_mae": 26.84,
+        "line_mae": 24.01,
+        "ratio": 1.118,
+        "line_closer_pct": 57.0
       }
     },
     "player_pass_yds": {
       "QB": {
-        "n": 136,
-        "model_mae": 65.87,
-        "line_mae": 56.15,
-        "ratio": 1.173,
-        "line_closer_pct": 61.0
+        "n": 162,
+        "model_mae": 70.1,
+        "line_mae": 59.15,
+        "ratio": 1.185,
+        "line_closer_pct": 61.7
       }
     }
   }
