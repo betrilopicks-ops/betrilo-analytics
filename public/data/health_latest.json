@@ -1,8 +1,8 @@
 {
   "verdict": "ALL GOOD",
-  "headline": "Core run OK. Optional step warnings: Pipeline generation, BvP matchup export, Edge report JSON export, Best bets JSON export, Player projections JSON export, Starting lineups JSON export, Batter splits JSON export, Pitcher logs 2026 enrichment, Pitcher report JSON export, Batter game logs JSON export, Pitcher game logs JSON export, Caption generation, GitHub image upload, Buffer posting (IG + Threads + X), Validation metrics",
-  "checked_at": "2026-11-02T06:00:20",
-  "run_date": "2026-11-02",
+  "headline": "Core run OK. Optional step warnings: Pipeline generation, BvP matchup export, Edge report JSON export, Best bets JSON export, Player projections JSON export, Starting lineups JSON export, Batter splits JSON export, Pitcher logs 2026 enrichment, Pitcher report JSON export, Batter game logs JSON export, Pitcher game logs JSON export, Push site data to GitHub, Caption generation, GitHub image upload, Buffer posting (IG + Threads + X), Validation metrics",
+  "checked_at": "2026-11-04T06:00:49",
+  "run_date": "2026-11-04",
   "required_ok": true,
   "steps": {
     "Pipeline generation": "SKIP",
@@ -19,7 +19,7 @@
     "Pitcher report JSON export": "SKIP",
     "Batter game logs JSON export": "SKIP",
     "Pitcher game logs JSON export": "SKIP",
-    "Push site data to GitHub": "OK",
+    "Push site data to GitHub": "FAIL",
     "Caption generation": "SKIP",
     "GitHub image upload": "SKIP",
     "Buffer posting (IG + Threads + X)": "SKIP",
