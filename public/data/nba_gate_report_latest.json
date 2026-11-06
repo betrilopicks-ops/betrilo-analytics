@@ -1,10 +1,10 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-11-06T15:16:12.823540+00:00",
+  "run_at": "2026-11-06T22:46:40.513387+00:00",
   "slate_date": "2026-11-06",
   "today_et": "2026-11-06",
-  "player_count": 179,
+  "player_count": 178,
   "game_count": 9,
   "checks": {
     "1_slate_date_and_sample": {
@@ -34,7 +34,7 @@
     "6_prior_season_cap": {
       "passed": true,
       "violations": [],
-      "players_checked": 142
+      "players_checked": 141
     },
     "7_integrity": {
       "passed": true,
@@ -43,22 +43,22 @@
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 179,
+      "rotation_count": 178,
       "median_rotation_pts": 9.0,
       "team_scores": {
-        "WAS": 108.0,
-        "ATL": 103.0,
+        "WAS": 105.0,
+        "ATL": 109.0,
         "BOS": 99.0,
-        "CHA": 96.0,
-        "PHI": 105.0,
+        "CHA": 94.0,
+        "PHI": 106.0,
         "CLE": 106.0,
-        "UTA": 102.0,
+        "UTA": 101.0,
         "DAL": 103.0,
         "OKC": 103.0,
         "MEM": 105.0,
         "TOR": 107.0,
         "MIL": 105.0,
-        "MIN": 106.0,
+        "MIN": 104.0,
         "NOP": 109.0,
         "POR": 106.0,
         "LAL": 105.0,
