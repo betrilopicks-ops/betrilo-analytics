@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T12:06:06.449979+00:00",
+  "generated_at": "2026-11-07T15:16:11.181973+00:00",
   "slate_date": "2026-11-07",
   "season": "2026-27",
   "is_sample": false,
@@ -10,8 +10,8 @@
       "home_team": "IND",
       "tip_time_et": "5:00 PM ET",
       "away_proj_score": 121,
-      "home_proj_score": 115,
-      "proj_total": 236,
+      "home_proj_score": 116,
+      "proj_total": 237,
       "injuries": [
         {
           "player": "Julian Strawther",
@@ -111,7 +111,7 @@
           "player_id": "38017507",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 12,
+          "proj_pts": 13,
           "proj_reb": 2,
           "proj_ast": 9,
           "proj_3pm": 2
@@ -174,11 +174,15 @@
         },
         {
           "player": "Drake Powell",
-          "status": "Questionable"
+          "status": "Available"
         },
         {
           "player": "Ben Saraf",
           "status": "Out"
+        },
+        {
+          "player": "Noah Clowney",
+          "status": "Questionable"
         },
         {
           "player": "Henri Veesaar",
@@ -446,9 +450,9 @@
       "away_team": "WAS",
       "home_team": "OKC",
       "tip_time_et": "8:00 PM ET",
-      "away_proj_score": 117,
-      "home_proj_score": 110,
-      "proj_total": 227,
+      "away_proj_score": 113,
+      "home_proj_score": 113,
+      "proj_total": 226,
       "injuries": [
         {
           "player": "Tristan Vukcevic",
@@ -468,7 +472,7 @@
         },
         {
           "player": "Anthony Davis",
-          "status": "Out"
+          "status": "Day-To-Day"
         },
         {
           "player": "Cason Wallace",
@@ -492,17 +496,27 @@
         },
         {
           "player": "Jaylin Williams",
-          "status": "Out"
+          "status": "Day-To-Day"
         }
       ],
       "blowout_flag": false,
       "away_top_players": [
         {
+          "player": "Anthony Davis",
+          "player_id": "117",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 20,
+          "proj_reb": 10,
+          "proj_ast": 2,
+          "proj_3pm": 0
+        },
+        {
           "player": "KyShawn George",
           "player_id": "1028026060",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 22,
+          "proj_pts": 18,
           "proj_reb": 4,
           "proj_ast": 6,
           "proj_3pm": 2
@@ -512,7 +526,7 @@
           "player_id": "490",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 16,
+          "proj_pts": 13,
           "proj_reb": 3,
           "proj_ast": 9,
           "proj_3pm": 2
@@ -522,7 +536,7 @@
           "player_id": "1028028405",
           "position": "C",
           "confidence_rate": null,
-          "proj_pts": 11,
+          "proj_pts": 9,
           "proj_reb": 6,
           "proj_ast": 2,
           "proj_3pm": 1
@@ -532,20 +546,10 @@
           "player_id": "1091340077",
           "position": "F",
           "confidence_rate": 0,
-          "proj_pts": 9,
+          "proj_pts": 8,
           "proj_reb": 6,
           "proj_ast": 2,
           "proj_3pm": 1
-        },
-        {
-          "player": "Bilal Coulibaly",
-          "player_id": "56677844",
-          "position": "G",
-          "confidence_rate": null,
-          "proj_pts": 9,
-          "proj_reb": 3,
-          "proj_ast": 1,
-          "proj_3pm": 0
         }
       ],
       "home_top_players": [
@@ -580,6 +584,16 @@
           "proj_3pm": 1
         },
         {
+          "player": "Jaylin Williams",
+          "player_id": "38017706",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 7,
+          "proj_reb": 5,
+          "proj_ast": 1,
+          "proj_3pm": 1
+        },
+        {
           "player": "Isaiah Hartenstein",
           "player_id": "201",
           "position": "F",
@@ -587,16 +601,6 @@
           "proj_pts": 6,
           "proj_reb": 12,
           "proj_ast": 3,
-          "proj_3pm": 0
-        },
-        {
-          "player": "Aday Mara",
-          "player_id": "1091351965",
-          "position": "C",
-          "confidence_rate": 0,
-          "proj_pts": 6,
-          "proj_reb": 7,
-          "proj_ast": 1,
           "proj_3pm": 0
         }
       ]
@@ -765,8 +769,8 @@
       "home_team": "PHX",
       "tip_time_et": "9:00 PM ET",
       "away_proj_score": 111,
-      "home_proj_score": 111,
-      "proj_total": 222,
+      "home_proj_score": 112,
+      "proj_total": 223,
       "injuries": [
         {
           "player": "Steven Adams",
@@ -860,7 +864,7 @@
           "player_id": "57",
           "position": "G",
           "confidence_rate": null,
-          "proj_pts": 21,
+          "proj_pts": 22,
           "proj_reb": 2,
           "proj_ast": 5,
           "proj_3pm": 1
