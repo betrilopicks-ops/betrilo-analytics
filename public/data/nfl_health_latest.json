@@ -2,43 +2,43 @@
   "sport": "NFL",
   "verdict": "ALL GOOD",
   "headline": "All NFL surfaces current.",
-  "checked_at": "2026-11-03T06:01:14.065593",
+  "checked_at": "2026-11-10T06:01:07.973038",
   "cadence_note": "NFL updates weekly (Wed/Thu/Fri). No games Tue-Wed is normal.",
   "surfaces": [
     {
       "name": "nfl_team_rankings",
       "status": "OK",
-      "last_updated": "2026-11-03T06:00:20.008017",
+      "last_updated": "2026-11-10T06:00:18.498823",
       "age_hours": 0.0
     },
     {
       "name": "nfl_schedule",
       "status": "OK",
-      "last_updated": "2026-11-03T06:00:21.509563",
+      "last_updated": "2026-11-10T06:00:19.895913",
       "age_hours": 0.0
     },
     {
       "name": "nfl_player_projections",
       "status": "OK",
-      "last_updated": "2026-11-03T06:00:53.824203",
+      "last_updated": "2026-11-10T06:00:50.183825",
       "age_hours": 0.0
     },
     {
       "name": "nfl_game_matchups",
       "status": "OK",
-      "last_updated": "2026-11-03T06:01:11.425227",
+      "last_updated": "2026-11-10T06:01:05.633530",
       "age_hours": 0.0
     },
     {
       "name": "week_currency",
       "status": "OK",
-      "detail": "Week 9 matches schedule",
-      "published_week": 9
+      "detail": "Week 10 matches schedule",
+      "published_week": 10
     },
     {
       "name": "freeze_status",
       "status": "OK",
-      "detail": "freeze_status.json is from Week 8 but current week is 9 \u2014 new week, no freezes expected yet",
+      "detail": "freeze_status.json is from Week 9 but current week is 10 \u2014 new week, no freezes expected yet",
       "freezes": {}
     }
   ]
