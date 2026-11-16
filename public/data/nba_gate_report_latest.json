@@ -1,10 +1,10 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-11-16T15:16:38.624547+00:00",
+  "run_at": "2026-11-16T22:46:32.000529+00:00",
   "slate_date": "2026-11-16",
   "today_et": "2026-11-16",
-  "player_count": 158,
+  "player_count": 155,
   "game_count": 8,
   "checks": {
     "1_slate_date_and_sample": {
@@ -35,7 +35,7 @@
       "passed": true,
       "dropped": [],
       "exempted": [],
-      "players_checked": 126,
+      "players_checked": 124,
       "players_dropped": 0
     },
     "7_integrity": {
@@ -46,7 +46,7 @@
     },
     "6_7_systemic_guard": {
       "passed": true,
-      "total_players": 158,
+      "total_players": 155,
       "players_dropped": 0,
       "drop_pct": 0.0,
       "threshold": 0.05
@@ -54,18 +54,18 @@
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 158,
+      "rotation_count": 155,
       "median_rotation_pts": 9.0,
       "team_scores": {
         "ORL": 95.0,
-        "BOS": 96.0,
+        "BOS": 97.0,
         "CHI": 111.0,
         "CLE": 111.0,
-        "MEM": 106.0,
+        "MEM": 107.0,
         "WAS": 100.0,
-        "PHI": 103.0,
+        "PHI": 104.0,
         "BKN": 111.0,
-        "HOU": 107.0,
+        "HOU": 113.0,
         "MIA": 111.0,
         "POR": 104.0,
         "MIN": 103.0,
