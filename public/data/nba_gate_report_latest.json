@@ -1,10 +1,10 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-11-17T15:16:07.687431+00:00",
+  "run_at": "2026-11-17T22:46:33.361826+00:00",
   "slate_date": "2026-11-17",
   "today_et": "2026-11-17",
-  "player_count": 96,
+  "player_count": 94,
   "game_count": 5,
   "checks": {
     "1_slate_date_and_sample": {
@@ -35,7 +35,7 @@
       "passed": true,
       "dropped": [],
       "exempted": [],
-      "players_checked": 83,
+      "players_checked": 81,
       "players_dropped": 0
     },
     "7_integrity": {
@@ -46,7 +46,7 @@
     },
     "6_7_systemic_guard": {
       "passed": true,
-      "total_players": 96,
+      "total_players": 94,
       "players_dropped": 0,
       "drop_pct": 0.0,
       "threshold": 0.05
@@ -54,15 +54,15 @@
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 96,
+      "rotation_count": 94,
       "median_rotation_pts": 9.0,
       "team_scores": {
         "NYK": 103.0,
         "TOR": 96.0,
-        "POR": 105.0,
-        "MIN": 107.0,
-        "DET": 102.0,
-        "SAS": 101.0,
+        "POR": 102.0,
+        "MIN": 108.0,
+        "DET": 103.0,
+        "SAS": 100.0,
         "UTA": 103.0,
         "LAC": 100.0,
         "CHA": 102.0,
