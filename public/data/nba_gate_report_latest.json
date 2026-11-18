@@ -1,10 +1,10 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-11-18T12:06:21.058346+00:00",
+  "run_at": "2026-11-18T15:16:16.104109+00:00",
   "slate_date": "2026-11-18",
   "today_et": "2026-11-18",
-  "player_count": 233,
+  "player_count": 234,
   "game_count": 12,
   "checks": {
     "1_slate_date_and_sample": {
@@ -35,7 +35,7 @@
       "passed": true,
       "dropped": [],
       "exempted": [],
-      "players_checked": 183,
+      "players_checked": 184,
       "players_dropped": 0
     },
     "7_integrity": {
@@ -46,7 +46,7 @@
     },
     "6_7_systemic_guard": {
       "passed": true,
-      "total_players": 233,
+      "total_players": 234,
       "players_dropped": 0,
       "drop_pct": 0.0,
       "threshold": 0.05
@@ -54,7 +54,7 @@
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 233,
+      "rotation_count": 234,
       "median_rotation_pts": 9.0,
       "team_scores": {
         "MEM": 111.0,
@@ -62,23 +62,23 @@
         "HOU": 110.0,
         "IND": 102.0,
         "MIL": 107.0,
-        "MIA": 108.0,
+        "MIA": 110.0,
         "PHI": 108.0,
         "ORL": 99.0,
         "CHI": 111.0,
         "BKN": 109.0,
         "WAS": 102.0,
         "TOR": 104.0,
-        "DET": 112.0,
-        "NOP": 104.0,
+        "DET": 103.0,
+        "NOP": 103.0,
         "ATL": 100.0,
         "OKC": 99.0,
         "GSW": 106.0,
         "DAL": 100.0,
-        "BOS": 109.0,
+        "BOS": 99.0,
         "DEN": 97.0,
-        "UTA": 109.0,
-        "LAL": 106.0,
+        "UTA": 107.0,
+        "LAL": 110.0,
         "PHX": 105.0,
         "SAC": 106.0
       },
