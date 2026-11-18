@@ -1,22 +1,22 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-11-17T22:46:33.361826+00:00",
-  "slate_date": "2026-11-17",
-  "today_et": "2026-11-17",
-  "player_count": 94,
-  "game_count": 5,
+  "run_at": "2026-11-18T12:06:21.058346+00:00",
+  "slate_date": "2026-11-18",
+  "today_et": "2026-11-18",
+  "player_count": 233,
+  "game_count": 12,
   "checks": {
     "1_slate_date_and_sample": {
       "passed": true,
-      "slate_date": "2026-11-17",
-      "expected_date": "2026-11-17",
+      "slate_date": "2026-11-18",
+      "expected_date": "2026-11-18",
       "is_sample": false
     },
     "2_game_count": {
       "passed": true,
-      "json_games": 5,
-      "scoreboard_games": 5
+      "json_games": 12,
+      "scoreboard_games": 12
     },
     "3_game_coverage": {
       "passed": true,
@@ -35,7 +35,7 @@
       "passed": true,
       "dropped": [],
       "exempted": [],
-      "players_checked": 81,
+      "players_checked": 183,
       "players_dropped": 0
     },
     "7_integrity": {
@@ -46,7 +46,7 @@
     },
     "6_7_systemic_guard": {
       "passed": true,
-      "total_players": 94,
+      "total_players": 233,
       "players_dropped": 0,
       "drop_pct": 0.0,
       "threshold": 0.05
@@ -54,19 +54,33 @@
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 94,
+      "rotation_count": 233,
       "median_rotation_pts": 9.0,
       "team_scores": {
-        "NYK": 103.0,
-        "TOR": 96.0,
-        "POR": 102.0,
-        "MIN": 108.0,
-        "DET": 103.0,
-        "SAS": 100.0,
-        "UTA": 103.0,
-        "LAC": 100.0,
-        "CHA": 102.0,
-        "LAL": 101.0
+        "MEM": 111.0,
+        "CLE": 108.0,
+        "HOU": 110.0,
+        "IND": 102.0,
+        "MIL": 107.0,
+        "MIA": 108.0,
+        "PHI": 108.0,
+        "ORL": 99.0,
+        "CHI": 111.0,
+        "BKN": 109.0,
+        "WAS": 102.0,
+        "TOR": 104.0,
+        "DET": 112.0,
+        "NOP": 104.0,
+        "ATL": 100.0,
+        "OKC": 99.0,
+        "GSW": 106.0,
+        "DAL": 100.0,
+        "BOS": 109.0,
+        "DEN": 97.0,
+        "UTA": 109.0,
+        "LAL": 106.0,
+        "PHX": 105.0,
+        "SAC": 106.0
       },
       "zero_pts_pct": 0.0,
       "dropped_games": [],
@@ -85,8 +99,8 @@
   "failures": [],
   "matchups_checks": {
     "slate_date_match": true,
-    "game_count_before": 5,
-    "game_count_after": 5,
+    "game_count_before": 12,
+    "game_count_after": 12,
     "dropped_games": []
   }
 }
