@@ -1,22 +1,22 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-11-18T22:46:29.597880+00:00",
-  "slate_date": "2026-11-18",
-  "today_et": "2026-11-18",
-  "player_count": 234,
-  "game_count": 12,
+  "run_at": "2026-11-19T12:03:08.840783+00:00",
+  "slate_date": "2026-11-19",
+  "today_et": "2026-11-19",
+  "player_count": 79,
+  "game_count": 4,
   "checks": {
     "1_slate_date_and_sample": {
       "passed": true,
-      "slate_date": "2026-11-18",
-      "expected_date": "2026-11-18",
+      "slate_date": "2026-11-19",
+      "expected_date": "2026-11-19",
       "is_sample": false
     },
     "2_game_count": {
       "passed": true,
-      "json_games": 12,
-      "scoreboard_games": 12
+      "json_games": 4,
+      "scoreboard_games": 4
     },
     "3_game_coverage": {
       "passed": true,
@@ -34,19 +34,8 @@
     "6_prior_season_cap": {
       "passed": true,
       "dropped": [],
-      "exempted": [
-        {
-          "player": "Tyrese Proctor",
-          "player_id": "1057395754",
-          "proj_pts": 13.0,
-          "avg_pts": 5.1,
-          "ratio": 2.56,
-          "exempt": true,
-          "current_season_avg": 9.9,
-          "current_season_games": 14
-        }
-      ],
-      "players_checked": 182,
+      "exempted": [],
+      "players_checked": 64,
       "players_dropped": 0
     },
     "7_integrity": {
@@ -57,7 +46,7 @@
     },
     "6_7_systemic_guard": {
       "passed": true,
-      "total_players": 234,
+      "total_players": 79,
       "players_dropped": 0,
       "drop_pct": 0.0,
       "threshold": 0.05
@@ -65,33 +54,17 @@
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 234,
+      "rotation_count": 79,
       "median_rotation_pts": 9.0,
       "team_scores": {
-        "MEM": 111.0,
-        "CLE": 114.0,
-        "HOU": 110.0,
-        "IND": 102.0,
-        "MIL": 109.0,
-        "MIA": 108.0,
-        "PHI": 108.0,
-        "ORL": 99.0,
-        "CHI": 111.0,
-        "BKN": 109.0,
-        "WAS": 105.0,
-        "TOR": 102.0,
-        "DET": 102.0,
-        "NOP": 101.0,
-        "ATL": 100.0,
-        "OKC": 99.0,
-        "GSW": 106.0,
-        "DAL": 101.0,
-        "BOS": 98.0,
-        "DEN": 97.0,
-        "UTA": 107.0,
-        "LAL": 106.0,
-        "PHX": 105.0,
-        "SAC": 106.0
+        "GSW": 100.0,
+        "MEM": 103.0,
+        "POR": 108.0,
+        "MIL": 96.0,
+        "NYK": 92.0,
+        "MIN": 103.0,
+        "LAC": 99.0,
+        "SAS": 106.0
       },
       "zero_pts_pct": 0.0,
       "dropped_games": [],
@@ -110,8 +83,8 @@
   "failures": [],
   "matchups_checks": {
     "slate_date_match": true,
-    "game_count_before": 12,
-    "game_count_after": 12,
+    "game_count_before": 4,
+    "game_count_after": 4,
     "dropped_games": []
   }
 }
