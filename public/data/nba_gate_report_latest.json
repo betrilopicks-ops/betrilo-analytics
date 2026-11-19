@@ -1,7 +1,7 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-11-19T12:03:08.840783+00:00",
+  "run_at": "2026-11-19T15:16:10.914444+00:00",
   "slate_date": "2026-11-19",
   "today_et": "2026-11-19",
   "player_count": 79,
@@ -35,14 +35,14 @@
       "passed": true,
       "dropped": [],
       "exempted": [],
-      "players_checked": 64,
+      "players_checked": 58,
       "players_dropped": 0
     },
     "7_integrity": {
       "passed": true,
       "issues": [],
       "players_dropped": 0,
-      "skipped_clamp_teams": 0
+      "skipped_clamp_teams": 10
     },
     "6_7_systemic_guard": {
       "passed": true,
@@ -54,21 +54,33 @@
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 79,
+      "rotation_count": 59,
       "median_rotation_pts": 9.0,
       "team_scores": {
-        "GSW": 100.0,
-        "MEM": 103.0,
+        "MEM": 104.0,
         "POR": 108.0,
-        "MIL": 96.0,
+        "MIL": 106.0,
         "NYK": 92.0,
         "MIN": 103.0,
         "LAC": 99.0,
         "SAS": 106.0
       },
       "zero_pts_pct": 0.0,
-      "dropped_games": [],
-      "thin_teams": {}
+      "dropped_games": [
+        {
+          "game": "GSW@MEM",
+          "game_id": "21718143",
+          "reasons": [
+            "GSW: score=0<85"
+          ],
+          "label": "insufficient roster data"
+        }
+      ],
+      "thin_teams": {
+        "GSW": [
+          "score=0<85"
+        ]
+      }
     },
     "9_core_player_missing": {
       "passed": true,
@@ -77,14 +89,28 @@
     },
     "10_vegas_cal_clamp": {
       "passed": true,
-      "clamped_teams": []
+      "clamped_teams": [
+        {
+          "team": "GSW",
+          "raw_total": 89.0,
+          "calibrated_total": 109.0,
+          "scale": 1.1
+        }
+      ]
     }
   },
   "failures": [],
   "matchups_checks": {
     "slate_date_match": true,
     "game_count_before": 4,
-    "game_count_after": 4,
-    "dropped_games": []
+    "game_count_after": 3,
+    "dropped_games": [
+      {
+        "game": "GSW@MEM",
+        "reasons": [
+          "thin roster: GSW"
+        ]
+      }
+    ]
   }
 }

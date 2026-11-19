@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-11-19T12:03:07.645483+00:00",
+  "generated_at": "2026-11-19T15:16:09.457046+00:00",
   "slate_date": "2026-11-19",
   "season": "2026-27",
   "is_sample": false,
-  "game_count": 4,
+  "game_count": 3,
   "games": [
     {
       "away_team": "GSW",
       "home_team": "MEM",
       "tip_time_et": "8:00 PM ET",
-      "away_proj_score": 110,
-      "home_proj_score": 113,
-      "proj_total": 223,
+      "away_proj_score": null,
+      "home_proj_score": null,
+      "proj_total": null,
       "injuries": [
         {
           "player": "Kristaps Porzingis",
@@ -35,7 +35,11 @@
         },
         {
           "player": "Al Horford",
-          "status": "Out"
+          "status": "Day-To-Day"
+        },
+        {
+          "player": "Draymond Green",
+          "status": "Day-To-Day"
         },
         {
           "player": "Scotty Pippen Jr.",
@@ -55,7 +59,7 @@
         },
         {
           "player": "Isaiah Stewart",
-          "status": "Out"
+          "status": "Day-To-Day"
         }
       ],
       "blowout_flag": false,
@@ -75,8 +79,8 @@
           "player_id": "56677858",
           "position": "G",
           "confidence_rate": 70,
-          "proj_pts": 14,
-          "proj_reb": 4,
+          "proj_pts": 15,
+          "proj_reb": 5,
           "proj_ast": 3,
           "proj_3pm": 2
         },
@@ -119,7 +123,7 @@
           "confidence_rate": 70,
           "proj_pts": 19,
           "proj_reb": 9,
-          "proj_ast": 6,
+          "proj_ast": 5,
           "proj_3pm": 1
         },
         {
@@ -127,7 +131,7 @@
           "player_id": "1028048549",
           "position": "G",
           "confidence_rate": 0,
-          "proj_pts": 17,
+          "proj_pts": 15,
           "proj_reb": 3,
           "proj_ast": 9,
           "proj_3pm": 2
@@ -137,10 +141,20 @@
           "player_id": "1057266649",
           "position": "G",
           "confidence_rate": 70,
-          "proj_pts": 13,
+          "proj_pts": 12,
           "proj_reb": 9,
-          "proj_ast": 6,
+          "proj_ast": 5,
           "proj_3pm": 2
+        },
+        {
+          "player": "Isaiah Stewart",
+          "player_id": "3547267",
+          "position": "F",
+          "confidence_rate": 0,
+          "proj_pts": 10,
+          "proj_reb": 3,
+          "proj_ast": 1,
+          "proj_3pm": 1
         },
         {
           "player": "Taylor Hendricks",
@@ -148,29 +162,21 @@
           "position": "F",
           "confidence_rate": 0,
           "proj_pts": 10,
-          "proj_reb": 6,
+          "proj_reb": 5,
           "proj_ast": 1,
           "proj_3pm": 1
-        },
-        {
-          "player": "Jaylen Wells",
-          "player_id": "1028039105",
-          "position": "F",
-          "confidence_rate": 0,
-          "proj_pts": 9,
-          "proj_reb": 3,
-          "proj_ast": 2,
-          "proj_3pm": 1
         }
-      ]
+      ],
+      "status": "unavailable",
+      "unavailable_reason": "Projections under review"
     },
     {
       "away_team": "POR",
       "home_team": "MIL",
       "tip_time_et": "8:00 PM ET",
       "away_proj_score": 118,
-      "home_proj_score": 106,
-      "proj_total": 224,
+      "home_proj_score": 116,
+      "proj_total": 234,
       "injuries": [
         {
           "player": "Shaedon Sharpe",
@@ -210,7 +216,7 @@
         },
         {
           "player": "Ryan Rollins",
-          "status": "Out"
+          "status": "Day-To-Day"
         }
       ],
       "blowout_flag": false,
@@ -272,7 +278,7 @@
           "player_id": "666633",
           "position": "G",
           "confidence_rate": 0,
-          "proj_pts": 16,
+          "proj_pts": 17,
           "proj_reb": 3,
           "proj_ast": 3,
           "proj_3pm": 2
@@ -282,7 +288,7 @@
           "player_id": "56677785",
           "position": "G",
           "confidence_rate": 0,
-          "proj_pts": 13,
+          "proj_pts": 14,
           "proj_reb": 4,
           "proj_ast": 3,
           "proj_3pm": 2
@@ -292,7 +298,7 @@
           "player_id": "265",
           "position": "F",
           "confidence_rate": 0,
-          "proj_pts": 12,
+          "proj_pts": 13,
           "proj_reb": 4,
           "proj_ast": 2,
           "proj_3pm": 1
@@ -302,7 +308,7 @@
           "player_id": "1057272939",
           "position": "G",
           "confidence_rate": 0,
-          "proj_pts": 11,
+          "proj_pts": 12,
           "proj_reb": 3,
           "proj_ast": 4,
           "proj_3pm": 1
