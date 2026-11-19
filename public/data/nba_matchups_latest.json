@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-11-19T15:16:09.457046+00:00",
+  "generated_at": "2026-11-19T22:46:19.541553+00:00",
   "slate_date": "2026-11-19",
   "season": "2026-27",
   "is_sample": false,
-  "game_count": 3,
+  "game_count": 4,
   "games": [
     {
       "away_team": "GSW",
       "home_team": "MEM",
       "tip_time_et": "8:00 PM ET",
-      "away_proj_score": null,
-      "home_proj_score": null,
-      "proj_total": null,
+      "away_proj_score": 107,
+      "home_proj_score": 114,
+      "proj_total": 221,
       "injuries": [
         {
           "player": "Kristaps Porzingis",
@@ -34,12 +34,12 @@
           "status": "Out"
         },
         {
-          "player": "Al Horford",
-          "status": "Day-To-Day"
+          "player": "Draymond Green",
+          "status": "Out"
         },
         {
-          "player": "Draymond Green",
-          "status": "Day-To-Day"
+          "player": "LJ Cryer",
+          "status": "Questionable"
         },
         {
           "player": "Scotty Pippen Jr.",
@@ -59,7 +59,11 @@
         },
         {
           "player": "Isaiah Stewart",
-          "status": "Day-To-Day"
+          "status": "Questionable"
+        },
+        {
+          "player": "Zach Edey",
+          "status": "Out"
         }
       ],
       "blowout_flag": false,
@@ -69,9 +73,9 @@
           "player_id": "1091351802",
           "position": "F",
           "confidence_rate": 0,
-          "proj_pts": 21,
+          "proj_pts": 20,
           "proj_reb": 7,
-          "proj_ast": 3,
+          "proj_ast": 4,
           "proj_3pm": 2
         },
         {
@@ -79,9 +83,9 @@
           "player_id": "56677858",
           "position": "G",
           "confidence_rate": 70,
-          "proj_pts": 15,
+          "proj_pts": 14,
           "proj_reb": 5,
-          "proj_ast": 3,
+          "proj_ast": 4,
           "proj_3pm": 2
         },
         {
@@ -99,8 +103,8 @@
           "player_id": "313",
           "position": "G",
           "confidence_rate": 0,
-          "proj_pts": 10,
-          "proj_reb": 3,
+          "proj_pts": 9,
+          "proj_reb": 4,
           "proj_ast": 2,
           "proj_3pm": 2
         },
@@ -109,7 +113,7 @@
           "player_id": "17895854",
           "position": "G",
           "confidence_rate": 0,
-          "proj_pts": 10,
+          "proj_pts": 9,
           "proj_reb": 6,
           "proj_ast": 1,
           "proj_3pm": 0
@@ -123,7 +127,7 @@
           "confidence_rate": 70,
           "proj_pts": 19,
           "proj_reb": 9,
-          "proj_ast": 5,
+          "proj_ast": 6,
           "proj_3pm": 1
         },
         {
@@ -141,9 +145,9 @@
           "player_id": "1057266649",
           "position": "G",
           "confidence_rate": 70,
-          "proj_pts": 12,
+          "proj_pts": 13,
           "proj_reb": 9,
-          "proj_ast": 5,
+          "proj_ast": 6,
           "proj_3pm": 2
         },
         {
@@ -151,7 +155,7 @@
           "player_id": "3547267",
           "position": "F",
           "confidence_rate": 0,
-          "proj_pts": 10,
+          "proj_pts": 11,
           "proj_reb": 3,
           "proj_ast": 1,
           "proj_3pm": 1
@@ -161,22 +165,20 @@
           "player_id": "56677824",
           "position": "F",
           "confidence_rate": 0,
-          "proj_pts": 10,
-          "proj_reb": 5,
+          "proj_pts": 11,
+          "proj_reb": 6,
           "proj_ast": 1,
           "proj_3pm": 1
         }
-      ],
-      "status": "unavailable",
-      "unavailable_reason": "Projections under review"
+      ]
     },
     {
       "away_team": "POR",
       "home_team": "MIL",
       "tip_time_et": "8:00 PM ET",
       "away_proj_score": 118,
-      "home_proj_score": 116,
-      "proj_total": 234,
+      "home_proj_score": 114,
+      "proj_total": 232,
       "injuries": [
         {
           "player": "Shaedon Sharpe",
@@ -215,8 +217,12 @@
           "status": "Out"
         },
         {
-          "player": "Ryan Rollins",
-          "status": "Day-To-Day"
+          "player": "Kyle Kuzma",
+          "status": "Out"
+        },
+        {
+          "player": "Myles Turner",
+          "status": "Out"
         }
       ],
       "blowout_flag": false,
@@ -278,7 +284,7 @@
           "player_id": "666633",
           "position": "G",
           "confidence_rate": 0,
-          "proj_pts": 17,
+          "proj_pts": 19,
           "proj_reb": 3,
           "proj_ast": 3,
           "proj_3pm": 2
@@ -288,29 +294,19 @@
           "player_id": "56677785",
           "position": "G",
           "confidence_rate": 0,
-          "proj_pts": 14,
-          "proj_reb": 4,
+          "proj_pts": 15,
+          "proj_reb": 5,
           "proj_ast": 3,
           "proj_3pm": 2
-        },
-        {
-          "player": "Kyle Kuzma",
-          "player_id": "265",
-          "position": "F",
-          "confidence_rate": 0,
-          "proj_pts": 13,
-          "proj_reb": 4,
-          "proj_ast": 2,
-          "proj_3pm": 1
         },
         {
           "player": "Kasparas Jaku\u010dionis",
           "player_id": "1057272939",
           "position": "G",
           "confidence_rate": 0,
-          "proj_pts": 12,
+          "proj_pts": 13,
           "proj_reb": 3,
-          "proj_ast": 4,
+          "proj_ast": 5,
           "proj_3pm": 1
         },
         {
@@ -318,7 +314,17 @@
           "player_id": "1091349754",
           "position": "G",
           "confidence_rate": 0,
-          "proj_pts": 9,
+          "proj_pts": 10,
+          "proj_reb": 8,
+          "proj_ast": 3,
+          "proj_3pm": 1
+        },
+        {
+          "player": "Ryan Rollins",
+          "player_id": "38017712",
+          "position": "G",
+          "confidence_rate": 0,
+          "proj_pts": 10,
           "proj_reb": 7,
           "proj_ast": 3,
           "proj_3pm": 1
@@ -351,7 +357,7 @@
         },
         {
           "player": "Zyon Pullin",
-          "status": "Questionable"
+          "status": "Available"
         },
         {
           "player": "Joan Beringer",
