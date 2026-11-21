@@ -1,825 +1,648 @@
 {
-  "generated_at": "2026-11-20T22:46:30.402114+00:00",
-  "slate_date": "2026-11-20",
+  "generated_at": "2026-11-21T12:03:47.403393+00:00",
+  "slate_date": "2026-11-21",
   "season": "2026-27",
   "is_sample": false,
-  "game_count": 9,
+  "game_count": 4,
   "games": [
     {
-      "away_team": "CHA",
-      "home_team": "ATL",
-      "tip_time_et": "7:00 PM ET",
-      "away_proj_score": 109,
-      "home_proj_score": 108,
-      "proj_total": 217,
+      "away_team": "MIL",
+      "home_team": "PHI",
+      "tip_time_et": "1:00 PM ET",
+      "away_proj_score": null,
+      "home_proj_score": null,
+      "proj_total": null,
       "injuries": [
         {
-          "player": "Kon Knueppel",
+          "player": "Ousmane Dieng",
           "status": "Out"
         },
         {
-          "player": "Dennis Schroder",
+          "player": "Kam Jones",
           "status": "Out"
         },
         {
-          "player": "Grayson Allen",
+          "player": "Bogoljub Markovi\u0107",
           "status": "Out"
         },
         {
-          "player": "Michael Ajayi",
-          "status": "Out"
-        },
-        {
-          "player": "Kylan Boswell",
-          "status": "Out"
-        },
-        {
-          "player": "Grant Williams",
-          "status": "Out"
-        },
-        {
-          "player": "Henri Veesaar",
-          "status": "Out"
-        },
-        {
-          "player": "Mouhamed Gueye",
-          "status": "Out"
-        },
-        {
-          "player": "Asa Newell",
-          "status": "Out"
-        },
-        {
-          "player": "Kingston Flemings",
-          "status": "Out"
-        },
-        {
-          "player": "Jock Landale",
-          "status": "Out"
-        },
-        {
-          "player": "CJ McCollum",
-          "status": "Out"
-        },
-        {
-          "player": "Rafael Castro",
-          "status": "Out"
-        },
-        {
-          "player": "RayJ Dennis",
-          "status": "Available"
-        },
-        {
-          "player": "Jalen Wilson",
-          "status": "Available"
-        }
-      ],
-      "blowout_flag": false,
-      "away_top_players": [
-        {
-          "player": "Brandon Miller",
-          "player_id": "56677823",
-          "position": "F",
-          "confidence_rate": 70,
-          "proj_pts": 23,
-          "proj_reb": 5,
-          "proj_ast": 3,
-          "proj_3pm": 3
-        },
-        {
-          "player": "Naz Reid",
-          "player_id": "667378",
-          "position": "F",
-          "confidence_rate": 80,
-          "proj_pts": 21,
-          "proj_reb": 10,
-          "proj_ast": 3,
-          "proj_3pm": 2
-        },
-        {
-          "player": "Coby White",
-          "player_id": "666956",
-          "position": "G",
-          "confidence_rate": null,
-          "proj_pts": 14,
-          "proj_reb": 2,
-          "proj_ast": 2,
-          "proj_3pm": 1
-        },
-        {
-          "player": "Moussa Diabate",
-          "player_id": "38017725",
-          "position": "F",
-          "confidence_rate": 0,
-          "proj_pts": 7,
-          "proj_reb": 15,
-          "proj_ast": 2,
-          "proj_3pm": 0
-        },
-        {
-          "player": "Tidjane Salaun",
-          "player_id": "1028028379",
-          "position": "F",
-          "confidence_rate": 70,
-          "proj_pts": 7,
-          "proj_reb": 3,
-          "proj_ast": 0,
-          "proj_3pm": 1
-        }
-      ],
-      "home_top_players": [
-        {
-          "player": "Nickeil Alexander-Walker",
-          "player_id": "666400",
-          "position": "G",
-          "confidence_rate": 0,
-          "proj_pts": 21,
-          "proj_reb": 6,
-          "proj_ast": 3,
-          "proj_3pm": 3
-        },
-        {
-          "player": "Onyeka Okongwu",
-          "player_id": "3547244",
-          "position": "F",
-          "confidence_rate": 0,
-          "proj_pts": 19,
-          "proj_reb": 10,
-          "proj_ast": 2,
-          "proj_3pm": 2
-        },
-        {
-          "player": "Jalen Johnson",
-          "player_id": "17896040",
-          "position": "F",
-          "confidence_rate": 0,
-          "proj_pts": 16,
-          "proj_reb": 12,
-          "proj_ast": 9,
-          "proj_3pm": 1
-        },
-        {
-          "player": "Aaron Wiggins",
-          "player_id": "17896078",
-          "position": "G",
-          "confidence_rate": 80,
-          "proj_pts": 14,
-          "proj_reb": 3,
-          "proj_ast": 2,
-          "proj_3pm": 3
-        },
-        {
-          "player": "Corey Kispert",
-          "player_id": "17896045",
-          "position": "F",
-          "confidence_rate": 0,
-          "proj_pts": 9,
-          "proj_reb": 2,
-          "proj_ast": 1,
-          "proj_3pm": 2
-        }
-      ]
-    },
-    {
-      "away_team": "ORL",
-      "home_team": "BKN",
-      "tip_time_et": "7:30 PM ET",
-      "away_proj_score": 117,
-      "home_proj_score": 119,
-      "proj_total": 236,
-      "injuries": [
-        {
-          "player": "Jonathan Isaac",
-          "status": "Out"
-        },
-        {
-          "player": "Izaiyah Nelson",
-          "status": "Out"
-        },
-        {
-          "player": "Noah Penda",
-          "status": "Out"
-        },
-        {
-          "player": "Paolo Banchero",
-          "status": "Out"
-        },
-        {
-          "player": "Grant Nelson",
-          "status": "Out"
-        }
-      ],
-      "blowout_flag": false,
-      "away_top_players": [
-        {
-          "player": "Franz Wagner",
-          "player_id": "17896026",
-          "position": "F",
-          "confidence_rate": 80,
-          "proj_pts": 27,
-          "proj_reb": 7,
-          "proj_ast": 10,
-          "proj_3pm": 1
-        },
-        {
-          "player": "Desmond Bane",
-          "player_id": "3547287",
-          "position": "G",
-          "confidence_rate": 80,
-          "proj_pts": 18,
-          "proj_reb": 4,
-          "proj_ast": 3,
-          "proj_3pm": 3
-        },
-        {
-          "player": "Anthony Black",
-          "player_id": "56677827",
-          "position": "G",
-          "confidence_rate": 0,
-          "proj_pts": 12,
-          "proj_reb": 4,
-          "proj_ast": 5,
-          "proj_3pm": 1
-        },
-        {
-          "player": "Tristan Da Silva",
-          "player_id": "1028025497",
-          "position": "F",
-          "confidence_rate": 0,
-          "proj_pts": 11,
-          "proj_reb": 4,
-          "proj_ast": 2,
-          "proj_3pm": 2
-        },
-        {
-          "player": "Wendell Carter Jr.",
-          "player_id": "85",
-          "position": "F",
-          "confidence_rate": 70,
-          "proj_pts": 10,
-          "proj_reb": 7,
-          "proj_ast": 1,
-          "proj_3pm": 1
-        }
-      ],
-      "home_top_players": [
-        {
-          "player": "Julius Randle",
-          "player_id": "387",
-          "position": "F",
-          "confidence_rate": 80,
-          "proj_pts": 20,
-          "proj_reb": 4,
-          "proj_ast": 4,
-          "proj_3pm": 1
-        },
-        {
-          "player": "Michael Porter Jr.",
-          "player_id": "375",
-          "position": "F",
-          "confidence_rate": 0,
-          "proj_pts": 19,
-          "proj_reb": 7,
-          "proj_ast": 1,
-          "proj_3pm": 3
-        },
-        {
-          "player": "Nolan Traor\u00e9",
-          "player_id": "1057275262",
-          "position": "G",
-          "confidence_rate": 0,
-          "proj_pts": 14,
-          "proj_reb": 2,
-          "proj_ast": 3,
-          "proj_3pm": 1
-        },
-        {
-          "player": "Egor Demin",
-          "player_id": "1057266813",
-          "position": "G",
-          "confidence_rate": null,
-          "proj_pts": 10,
-          "proj_reb": 3,
-          "proj_ast": 3,
-          "proj_3pm": 3
-        },
-        {
-          "player": "Mikel Brown Jr.",
-          "player_id": "1091339436",
-          "position": "G",
-          "confidence_rate": 70,
-          "proj_pts": 10,
-          "proj_reb": 2,
-          "proj_ast": 4,
-          "proj_3pm": 1
-        }
-      ]
-    },
-    {
-      "away_team": "IND",
-      "home_team": "CLE",
-      "tip_time_et": "7:30 PM ET",
-      "away_proj_score": 117,
-      "home_proj_score": 116,
-      "proj_total": 233,
-      "injuries": [
-        {
-          "player": "Johnny Furphy",
-          "status": "Out"
-        },
-        {
-          "player": "Ben Sheppard",
-          "status": "Out"
-        },
-        {
-          "player": "Tyrese Haliburton",
-          "status": "Out"
-        },
-        {
-          "player": "Andrew Nembhard",
-          "status": "Questionable"
-        },
-        {
-          "player": "Braden Smith",
-          "status": "Questionable"
-        },
-        {
-          "player": "T.J. McConnell",
+          "player": "Dominick Barlow",
           "status": "Probable"
         },
         {
-          "player": "Evan Mobley",
+          "player": "Ariel Hukporti",
           "status": "Out"
         },
         {
-          "player": "Nae'Qwan Tomlin",
+          "player": "Adem Bona",
           "status": "Out"
         },
         {
-          "player": "Peyton Watson",
+          "player": "Jaylen Brown",
+          "status": "Out"
+        },
+        {
+          "player": "Tyrese Maxey",
           "status": "Questionable"
         },
         {
-          "player": "Jaylon Tyson",
-          "status": "Out"
-        },
-        {
-          "player": "Khalifa Diop",
-          "status": "Out"
-        },
-        {
-          "player": "Ernest Udeh, Jr.",
+          "player": "Dean Wade",
           "status": "Out"
         }
       ],
       "blowout_flag": false,
       "away_top_players": [
         {
-          "player": "Pascal Siakam",
-          "player_id": "416",
-          "position": "F",
-          "confidence_rate": 0,
-          "proj_pts": 23,
-          "proj_reb": 5,
-          "proj_ast": 4,
-          "proj_3pm": 1
-        },
-        {
-          "player": "Andrew Nembhard",
-          "player_id": "38017507",
+          "player": "Tyler Herro",
+          "player_id": "666633",
           "position": "G",
           "confidence_rate": 0,
-          "proj_pts": 15,
+          "proj_pts": 16,
           "proj_reb": 3,
-          "proj_ast": 9,
+          "proj_ast": 3,
           "proj_3pm": 2
         },
         {
-          "player": "Kelly Oubre Jr.",
-          "player_id": "360",
+          "player": "Kyle Kuzma",
+          "player_id": "265",
           "position": "F",
           "confidence_rate": 70,
-          "proj_pts": 14,
+          "proj_pts": 16,
           "proj_reb": 4,
-          "proj_ast": 1,
+          "proj_ast": 2,
+          "proj_3pm": 2
+        },
+        {
+          "player": "Jaime Jaquez Jr.",
+          "player_id": "56677785",
+          "position": "G",
+          "confidence_rate": 0,
+          "proj_pts": 13,
+          "proj_reb": 3,
+          "proj_ast": 3,
+          "proj_3pm": 2
+        },
+        {
+          "player": "Brayden Burries",
+          "player_id": "1091349754",
+          "position": "G",
+          "confidence_rate": 0,
+          "proj_pts": 10,
+          "proj_reb": 6,
+          "proj_ast": 3,
           "proj_3pm": 1
         },
         {
-          "player": "Quenton Jackson",
-          "player_id": "44477085",
+          "player": "Kasparas Jaku\u010dionis",
+          "player_id": "1057272939",
           "position": "G",
-          "confidence_rate": 0,
-          "proj_pts": 12,
-          "proj_reb": 4,
-          "proj_ast": 4,
-          "proj_3pm": 1
-        },
-        {
-          "player": "Aaron Nesmith",
-          "player_id": "3547250",
-          "position": "G",
-          "confidence_rate": 0,
-          "proj_pts": 11,
-          "proj_reb": 4,
+          "confidence_rate": 70,
+          "proj_pts": 10,
+          "proj_reb": 2,
           "proj_ast": 3,
           "proj_3pm": 1
         }
       ],
       "home_top_players": [
         {
-          "player": "Donovan Mitchell",
-          "player_id": "322",
-          "position": "G",
-          "confidence_rate": 80,
-          "proj_pts": 26,
-          "proj_reb": 4,
-          "proj_ast": 5,
-          "proj_3pm": 2
-        },
-        {
-          "player": "Mario Hezonja",
-          "player_id": "208",
+          "player": "Joel Embiid",
+          "player_id": "145",
           "position": "F",
           "confidence_rate": 70,
-          "proj_pts": 12,
-          "proj_reb": 7,
-          "proj_ast": 3,
-          "proj_3pm": 1
+          "proj_pts": 28,
+          "proj_reb": 9,
+          "proj_ast": 4,
+          "proj_3pm": 0
         },
         {
-          "player": "James Harden",
-          "player_id": "192",
+          "player": "Tyrese Maxey",
+          "player_id": "3547254",
           "position": "G",
           "confidence_rate": 0,
-          "proj_pts": 11,
-          "proj_reb": 5,
+          "proj_pts": 26,
+          "proj_reb": 4,
+          "proj_ast": 9,
+          "proj_3pm": 3
+        },
+        {
+          "player": "VJ Edgecombe",
+          "player_id": "1057261935",
+          "position": "G",
+          "confidence_rate": 70,
+          "proj_pts": 13,
+          "proj_reb": 7,
           "proj_ast": 7,
           "proj_3pm": 2
         },
         {
-          "player": "Meleek Thomas",
-          "player_id": "1091467074",
-          "position": "G",
-          "confidence_rate": 70,
-          "proj_pts": 11,
-          "proj_reb": 4,
-          "proj_ast": 2,
-          "proj_3pm": 2
-        },
-        {
-          "player": "Tyrese Proctor",
-          "player_id": "1057395754",
-          "position": "G",
-          "confidence_rate": 70,
-          "proj_pts": 11,
-          "proj_reb": 4,
-          "proj_ast": 3,
-          "proj_3pm": 2
-        }
-      ]
-    },
-    {
-      "away_team": "TOR",
-      "home_team": "DET",
-      "tip_time_et": "7:30 PM ET",
-      "away_proj_score": 102,
-      "home_proj_score": 110,
-      "proj_total": 212,
-      "injuries": [
-        {
-          "player": "Nate Bittle",
-          "status": "Out"
-        },
-        {
-          "player": "Kawhi Leonard",
-          "status": "Out"
-        },
-        {
-          "player": "RJ Barrett",
-          "status": "Out"
-        },
-        {
-          "player": "Collin Murray-Boyles",
-          "status": "Out"
-        },
-        {
-          "player": "Jaden Bradley",
-          "status": "Out"
-        },
-        {
-          "player": "Kevin McCullar Jr.",
-          "status": "Out"
-        },
-        {
-          "player": "Jalen Duren",
-          "status": "Out"
-        },
-        {
-          "player": "Duncan Robinson",
-          "status": "Out"
-        },
-        {
-          "player": "Ronald Holland II",
-          "status": "Doubtful"
-        },
-        {
-          "player": "Taurean Prince",
-          "status": "Out"
-        },
-        {
-          "player": "Cade Cunningham",
-          "status": "Probable"
-        },
-        {
-          "player": "Ugonna Onyenso",
-          "status": "Out"
-        },
-        {
-          "player": "Ebuka Okorie",
-          "status": "Out"
-        }
-      ],
-      "blowout_flag": false,
-      "away_top_players": [
-        {
-          "player": "Scottie Barnes",
-          "player_id": "17896055",
-          "position": "G",
+          "player": "LeBron James",
+          "player_id": "237",
+          "position": "F",
           "confidence_rate": 0,
-          "proj_pts": 21,
+          "proj_pts": 13,
           "proj_reb": 7,
-          "proj_ast": 4,
+          "proj_ast": 9,
           "proj_3pm": 1
         },
         {
-          "player": "Immanuel Quickley",
-          "player_id": "3547269",
+          "player": "Anfernee Simons",
+          "player_id": "419",
           "position": "G",
-          "confidence_rate": 0,
-          "proj_pts": 16,
-          "proj_reb": 3,
-          "proj_ast": 6,
-          "proj_3pm": 2
-        },
-        {
-          "player": "Jamison Battle",
-          "player_id": "1028243201",
-          "position": "F",
           "confidence_rate": 70,
           "proj_pts": 13,
           "proj_reb": 2,
-          "proj_ast": 0,
+          "proj_ast": 1,
           "proj_3pm": 2
+        }
+      ],
+      "status": "unavailable",
+      "unavailable_reason": "Projections unavailable for this game."
+    },
+    {
+      "away_team": "POR",
+      "home_team": "NYK",
+      "tip_time_et": "7:30 PM ET",
+      "away_proj_score": 106,
+      "home_proj_score": 111,
+      "proj_total": 217,
+      "injuries": [
+        {
+          "player": "Shaedon Sharpe",
+          "status": "Out"
         },
         {
-          "player": "Ja'Kobe Walter",
-          "player_id": "1028029111",
-          "position": "G",
-          "confidence_rate": 70,
-          "proj_pts": 10,
-          "proj_reb": 4,
-          "proj_ast": 2,
-          "proj_3pm": 2
+          "player": "Ja Morant",
+          "status": "Out"
         },
         {
-          "player": "Jakob Poeltl",
-          "player_id": "373",
-          "position": "C",
+          "player": "Vit Krejci",
+          "status": "Out"
+        },
+        {
+          "player": "Chris Youngblood",
+          "status": "Out"
+        },
+        {
+          "player": "Deni Avdija",
+          "status": "Questionable"
+        },
+        {
+          "player": "Branden Carlson",
+          "status": "Available"
+        },
+        {
+          "player": "OG Anunoby",
+          "status": "Questionable"
+        },
+        {
+          "player": "Jordan Clarkson",
+          "status": "Out"
+        }
+      ],
+      "blowout_flag": false,
+      "away_top_players": [
+        {
+          "player": "Deni Avdija",
+          "player_id": "3547242",
+          "position": "F",
           "confidence_rate": 0,
-          "proj_pts": 7,
-          "proj_reb": 7,
+          "proj_pts": 21,
+          "proj_reb": 6,
+          "proj_ast": 5,
+          "proj_3pm": 2
+        },
+        {
+          "player": "Damian Lillard",
+          "player_id": "278",
+          "position": "G",
+          "confidence_rate": 0,
+          "proj_pts": 20,
+          "proj_reb": 3,
+          "proj_ast": 4,
+          "proj_3pm": 3
+        },
+        {
+          "player": "Jrue Holiday",
+          "player_id": "214",
+          "position": "G",
+          "confidence_rate": 0,
+          "proj_pts": 12,
+          "proj_reb": 3,
+          "proj_ast": 5,
+          "proj_3pm": 2
+        },
+        {
+          "player": "Toumani Camara",
+          "player_id": "56677850",
+          "position": "F",
+          "confidence_rate": 0,
+          "proj_pts": 9,
+          "proj_reb": 5,
           "proj_ast": 2,
-          "proj_3pm": 0
+          "proj_3pm": 2
+        },
+        {
+          "player": "Scoot Henderson",
+          "player_id": "56677747",
+          "position": "G",
+          "confidence_rate": 0,
+          "proj_pts": 9,
+          "proj_reb": 2,
+          "proj_ast": 1,
+          "proj_3pm": 1
         }
       ],
       "home_top_players": [
         {
-          "player": "Cade Cunningham",
-          "player_id": "17896075",
-          "position": "G",
-          "confidence_rate": 0,
-          "proj_pts": 29,
-          "proj_reb": 5,
-          "proj_ast": 8,
-          "proj_3pm": 1
+          "player": "Karl-Anthony Towns",
+          "player_id": "447",
+          "position": "C",
+          "confidence_rate": 80,
+          "proj_pts": 25,
+          "proj_reb": 15,
+          "proj_ast": 5,
+          "proj_3pm": 2
         },
         {
-          "player": "Daniss Jenkins",
-          "player_id": "1028240128",
+          "player": "Jalen Brunson",
+          "player_id": "73",
           "position": "G",
           "confidence_rate": 0,
-          "proj_pts": 10,
-          "proj_reb": 4,
+          "proj_pts": 24,
+          "proj_reb": 3,
           "proj_ast": 6,
           "proj_3pm": 2
         },
         {
-          "player": "Paul Reed",
-          "player_id": "3547270",
+          "player": "OG Anunoby",
+          "player_id": "18",
           "position": "F",
           "confidence_rate": 0,
-          "proj_pts": 9,
-          "proj_reb": 8,
-          "proj_ast": 2,
-          "proj_3pm": 0
-        },
-        {
-          "player": "John Collins",
-          "player_id": "101",
-          "position": "F",
-          "confidence_rate": 0,
-          "proj_pts": 9,
-          "proj_reb": 5,
+          "proj_pts": 12,
+          "proj_reb": 6,
           "proj_ast": 1,
-          "proj_3pm": 1
+          "proj_3pm": 2
         },
         {
-          "player": "Ausar Thompson",
-          "player_id": "56677826",
+          "player": "Landry Shamet",
+          "player_id": "414",
           "position": "G",
-          "confidence_rate": 70,
-          "proj_pts": 8,
-          "proj_reb": 9,
-          "proj_ast": 7,
-          "proj_3pm": 0
+          "confidence_rate": 0,
+          "proj_pts": 10,
+          "proj_reb": 2,
+          "proj_ast": 1,
+          "proj_3pm": 2
+        },
+        {
+          "player": "Mikal Bridges",
+          "player_id": "61",
+          "position": "F",
+          "confidence_rate": 0,
+          "proj_pts": 7,
+          "proj_reb": 4,
+          "proj_ast": 2,
+          "proj_3pm": 1
         }
       ]
     },
     {
-      "away_team": "WAS",
-      "home_team": "CHI",
+      "away_team": "LAC",
+      "home_team": "DAL",
       "tip_time_et": "8:00 PM ET",
-      "away_proj_score": 113,
-      "home_proj_score": 118,
-      "proj_total": 231,
+      "away_proj_score": 117,
+      "home_proj_score": 122,
+      "proj_total": 239,
       "injuries": [
         {
-          "player": "Tristan Vukcevic",
+          "player": "Bradley Beal",
           "status": "Out"
         },
         {
-          "player": "Jamir Watkins",
+          "player": "Brandon Ingram",
           "status": "Out"
         },
         {
-          "player": "Justin Champagnie",
+          "player": "Jordan Miller",
           "status": "Out"
         },
         {
-          "player": "Reece Beekman",
+          "player": "Nick Martinelli",
           "status": "Out"
         },
         {
-          "player": "Felix Okpara",
+          "player": "Jalen Pickett",
+          "status": "Out"
+        },
+        {
+          "player": "Dereck Lively II",
+          "status": "Out"
+        },
+        {
+          "player": "Tarik Biberovic",
+          "status": "Out"
+        },
+        {
+          "player": "Sergio De Larrea",
+          "status": "Out"
+        },
+        {
+          "player": "Tobi Lawal",
+          "status": "Out"
+        },
+        {
+          "player": "Walter Clayton Jr.",
           "status": "Questionable"
         },
         {
-          "player": "Tobe Awaka",
-          "status": "Out"
+          "player": "Jett Howard",
+          "status": "Questionable"
         },
         {
-          "player": "Caleb Wilson",
-          "status": "Out"
+          "player": "Caleb Martin",
+          "status": "Available"
         },
         {
-          "player": "Noa Essengue",
-          "status": "Probable"
-        },
-        {
-          "player": "Orlando Robinson",
-          "status": "Out"
-        },
-        {
-          "player": "Jaylin Sellers",
-          "status": "Out"
-        },
-        {
-          "player": "Dailyn Swain",
-          "status": "Out"
-        },
-        {
-          "player": "Jalen Smith",
+          "player": "P.J. Washington",
           "status": "Questionable"
         }
       ],
       "blowout_flag": false,
       "away_top_players": [
         {
-          "player": "Anthony Davis",
-          "player_id": "117",
-          "position": "F",
-          "confidence_rate": 0,
-          "proj_pts": 21,
-          "proj_reb": 9,
-          "proj_ast": 2,
-          "proj_3pm": 0
-        },
-        {
-          "player": "KyShawn George",
-          "player_id": "1028026060",
-          "position": "F",
+          "player": "Darius Garland",
+          "player_id": "666581",
+          "position": "G",
           "confidence_rate": 70,
-          "proj_pts": 15,
-          "proj_reb": 4,
-          "proj_ast": 4,
+          "proj_pts": 23,
+          "proj_reb": 3,
+          "proj_ast": 7,
           "proj_3pm": 2
         },
         {
-          "player": "Trae Young",
-          "player_id": "490",
-          "position": "G",
-          "confidence_rate": 70,
-          "proj_pts": 15,
-          "proj_reb": 2,
-          "proj_ast": 8,
-          "proj_3pm": 1
+          "player": "Brook Lopez",
+          "player_id": "283",
+          "position": "C",
+          "confidence_rate": 0,
+          "proj_pts": 14,
+          "proj_reb": 5,
+          "proj_ast": 3,
+          "proj_3pm": 2
         },
         {
-          "player": "AJ Dybantsa",
-          "player_id": "1091340077",
+          "player": "Rui Hachimura",
+          "player_id": "666609",
           "position": "F",
           "confidence_rate": 0,
           "proj_pts": 12,
-          "proj_reb": 8,
+          "proj_reb": 6,
+          "proj_ast": 1,
+          "proj_3pm": 2
+        },
+        {
+          "player": "Keaton Wagler",
+          "player_id": "1091343544",
+          "position": "G",
+          "confidence_rate": 0,
+          "proj_pts": 10,
+          "proj_reb": 3,
           "proj_ast": 2,
           "proj_3pm": 1
         },
         {
-          "player": "Alexandre Sarr",
-          "player_id": "1028028405",
-          "position": "C",
+          "player": "Isaiah Jackson",
+          "player_id": "17896035",
+          "position": "F",
           "confidence_rate": 70,
           "proj_pts": 10,
+          "proj_reb": 4,
+          "proj_ast": 2,
+          "proj_3pm": 0
+        }
+      ],
+      "home_top_players": [
+        {
+          "player": "Kyrie Irving",
+          "player_id": "228",
+          "position": "G",
+          "confidence_rate": 80,
+          "proj_pts": 25,
+          "proj_reb": 5,
+          "proj_ast": 5,
+          "proj_3pm": 3
+        },
+        {
+          "player": "Cooper Flagg",
+          "player_id": "1057262088",
+          "position": "F",
+          "confidence_rate": 80,
+          "proj_pts": 24,
+          "proj_reb": 7,
+          "proj_ast": 6,
+          "proj_3pm": 1
+        },
+        {
+          "player": "P.J. Washington",
+          "player_id": "666950",
+          "position": "F",
+          "confidence_rate": 0,
+          "proj_pts": 10,
+          "proj_reb": 5,
+          "proj_ast": 1,
+          "proj_3pm": 2
+        },
+        {
+          "player": "Walter Clayton Jr.",
+          "player_id": "1057271583",
+          "position": "G",
+          "confidence_rate": 0,
+          "proj_pts": 10,
+          "proj_reb": 3,
+          "proj_ast": 4,
+          "proj_3pm": 1
+        },
+        {
+          "player": "Santi Aldama",
+          "player_id": "17896067",
+          "position": "F",
+          "confidence_rate": null,
+          "proj_pts": 9,
+          "proj_reb": 4,
+          "proj_ast": 1,
+          "proj_3pm": 1
+        }
+      ]
+    },
+    {
+      "away_team": "MEM",
+      "home_team": "MIN",
+      "tip_time_et": "8:00 PM ET",
+      "away_proj_score": 114,
+      "home_proj_score": 118,
+      "proj_total": 232,
+      "injuries": [
+        {
+          "player": "Scotty Pippen Jr.",
+          "status": "Out"
+        },
+        {
+          "player": "Richie Saunders",
+          "status": "Out"
+        },
+        {
+          "player": "Ty Jerome",
+          "status": "Probable"
+        },
+        {
+          "player": "GG Jackson",
+          "status": "Out"
+        },
+        {
+          "player": "Jerami Grant",
+          "status": "Out"
+        },
+        {
+          "player": "Cameron Boozer",
+          "status": "Out"
+        },
+        {
+          "player": "Javon Small",
+          "status": "Out"
+        },
+        {
+          "player": "Donte DiVincenzo",
+          "status": "Out"
+        },
+        {
+          "player": "Anthony Edwards",
+          "status": "Out"
+        },
+        {
+          "player": "Jaylen Clark",
+          "status": "Out"
+        },
+        {
+          "player": "Joan Beringer",
+          "status": "Available"
+        },
+        {
+          "player": "Rocco Zikarsky",
+          "status": "Out"
+        }
+      ],
+      "blowout_flag": false,
+      "away_top_players": [
+        {
+          "player": "Ty Jerome",
+          "player_id": "666676",
+          "position": "G",
+          "confidence_rate": 0,
+          "proj_pts": 20,
+          "proj_reb": 3,
+          "proj_ast": 6,
+          "proj_3pm": 2
+        },
+        {
+          "player": "Cedric Coward",
+          "player_id": "1057266649",
+          "position": "G",
+          "confidence_rate": 0,
+          "proj_pts": 17,
           "proj_reb": 8,
+          "proj_ast": 6,
+          "proj_3pm": 2
+        },
+        {
+          "player": "Cam Spencer",
+          "player_id": "1028048549",
+          "position": "G",
+          "confidence_rate": 70,
+          "proj_pts": 13,
+          "proj_reb": 3,
+          "proj_ast": 9,
+          "proj_3pm": 2
+        },
+        {
+          "player": "Isaiah Stewart",
+          "player_id": "3547267",
+          "position": "F",
+          "confidence_rate": 70,
+          "proj_pts": 11,
+          "proj_reb": 3,
+          "proj_ast": 1,
+          "proj_3pm": 1
+        },
+        {
+          "player": "Taylor Hendricks",
+          "player_id": "56677824",
+          "position": "F",
+          "confidence_rate": 0,
+          "proj_pts": 11,
+          "proj_reb": 5,
           "proj_ast": 1,
           "proj_3pm": 1
         }
       ],
       "home_top_players": [
         {
-          "player": "Norman Powell",
-          "player_id": "380",
-          "position": "F",
-          "confidence_rate": 80,
-          "proj_pts": 21,
-          "proj_reb": 3,
+          "player": "Ayo Dosunmu",
+          "player_id": "17895983",
+          "position": "G",
+          "confidence_rate": 0,
+          "proj_pts": 19,
+          "proj_reb": 4,
           "proj_ast": 3,
           "proj_3pm": 2
         },
         {
-          "player": "Matas Buzelis",
-          "player_id": "1028025177",
-          "position": "F",
-          "confidence_rate": 70,
-          "proj_pts": 20,
-          "proj_reb": 6,
-          "proj_ast": 2,
-          "proj_3pm": 2
+          "player": "LaMelo Ball",
+          "player_id": "3547239",
+          "position": "G",
+          "confidence_rate": 0,
+          "proj_pts": 18,
+          "proj_reb": 7,
+          "proj_ast": 5,
+          "proj_3pm": 3
         },
         {
-          "player": "Tre Jones",
-          "player_id": "3547274",
+          "player": "Terrence Shannon Jr.",
+          "player_id": "1028028501",
           "position": "G",
+          "confidence_rate": 70,
+          "proj_pts": 15,
+          "proj_reb": 3,
+          "proj_ast": 4,
+          "proj_3pm": 1
+        },
+        {
+          "player": "Jaden McDaniels",
+          "player_id": "3547259",
+          "position": "F",
           "confidence_rate": 80,
           "proj_pts": 14,
-          "proj_reb": 2,
-          "proj_ast": 5,
-          "proj_3pm": 0
+          "proj_reb": 5,
+          "proj_ast": 3,
+          "proj_3pm": 1
         },
         {
-          "player": "Jalen Smith",
-          "player_id": "3547264",
+          "player": "Jonathan Kuminga",
+          "player_id": "17553979",
           "position": "F",
           "confidence_rate": 0,
           "proj_pts": 11,
-          "proj_reb": 10,
-          "proj_ast": 3,
-          "proj_3pm": 2
-        },
-        {
-          "player": "Josh Giddey",
-          "player_id": "17896065",
-          "position": "G",
-          "confidence_rate": 0,
-          "proj_pts": 9,
-          "proj_reb": 8,
-          "proj_ast": 10,
+          "proj_reb": 5,
+          "proj_ast": 2,
           "proj_3pm": 1
         }
       ]
     },
     {
       "away_team": "NOP",
-      "home_team": "OKC",
+      "home_team": "SAS",
       "tip_time_et": "8:00 PM ET",
-      "away_proj_score": 114,
-      "home_proj_score": 115,
-      "proj_total": 229,
+      "away_proj_score": 111,
+      "home_proj_score": 113,
+      "proj_total": 224,
       "injuries": [
-        {
-          "player": "Trey Murphy III",
-          "status": "Questionable"
-        },
         {
           "player": "Trendon Watford",
           "status": "Out"
@@ -837,39 +660,23 @@
           "status": "Out"
         },
         {
-          "player": "Malik Dia",
+          "player": "Jayden Quaintance",
           "status": "Out"
         },
         {
-          "player": "Jaron Pierre Jr.",
-          "status": "Available"
-        },
-        {
-          "player": "Julian Reese",
+          "player": "Tobias Harris",
           "status": "Out"
         },
         {
-          "player": "Cason Wallace",
+          "player": "Dylan Harper",
           "status": "Out"
         },
         {
-          "player": "Jalen Williams",
+          "player": "Maliq Brown",
           "status": "Out"
         },
         {
-          "player": "Chet Holmgren",
-          "status": "Out"
-        },
-        {
-          "player": "Thomas Sorber",
-          "status": "Out"
-        },
-        {
-          "player": "Alex Caruso",
-          "status": "Questionable"
-        },
-        {
-          "player": "Nikola Topic",
+          "player": "Ja'Kobi Gillespie",
           "status": "Out"
         }
       ],
@@ -882,16 +689,16 @@
           "confidence_rate": 80,
           "proj_pts": 17,
           "proj_reb": 6,
-          "proj_ast": 2,
+          "proj_ast": 3,
           "proj_3pm": 0
         },
         {
           "player": "Jeremiah Fears",
           "player_id": "1057267077",
           "position": "G",
-          "confidence_rate": 70,
+          "confidence_rate": 0,
           "proj_pts": 16,
-          "proj_reb": 6,
+          "proj_reb": 7,
           "proj_ast": 7,
           "proj_3pm": 1
         },
@@ -899,392 +706,110 @@
           "player": "Saddiq Bey",
           "player_id": "3547256",
           "position": "F",
-          "confidence_rate": 70,
+          "confidence_rate": 0,
           "proj_pts": 13,
           "proj_reb": 6,
           "proj_ast": 4,
           "proj_3pm": 2
         },
         {
-          "player": "Derik Queen",
-          "player_id": "1057274415",
-          "position": "C",
-          "confidence_rate": 70,
-          "proj_pts": 11,
-          "proj_reb": 5,
-          "proj_ast": 2,
-          "proj_3pm": 1
-        },
-        {
           "player": "Trey Murphy III",
           "player_id": "18677986",
           "position": "F",
           "confidence_rate": 0,
-          "proj_pts": 9,
-          "proj_reb": 5,
-          "proj_ast": 4,
-          "proj_3pm": 2
-        }
-      ],
-      "home_top_players": [
-        {
-          "player": "Shai Gilgeous-Alexander",
-          "player_id": "175",
-          "position": "G",
-          "confidence_rate": 90,
-          "proj_pts": 35,
-          "proj_reb": 4,
-          "proj_ast": 4,
-          "proj_3pm": 2
-        },
-        {
-          "player": "Ajay Mitchell",
-          "player_id": "1028037477",
-          "position": "G",
-          "confidence_rate": 70,
-          "proj_pts": 16,
-          "proj_reb": 4,
-          "proj_ast": 4,
-          "proj_3pm": 1
-        },
-        {
-          "player": "Jared McCain",
-          "player_id": "1028027372",
-          "position": "G",
-          "confidence_rate": 70,
           "proj_pts": 12,
           "proj_reb": 4,
-          "proj_ast": 2,
+          "proj_ast": 3,
           "proj_3pm": 2
         },
         {
-          "player": "Isaiah Hartenstein",
-          "player_id": "201",
-          "position": "F",
-          "confidence_rate": 70,
-          "proj_pts": 8,
-          "proj_reb": 15,
-          "proj_ast": 5,
-          "proj_3pm": 0
-        },
-        {
-          "player": "Aday Mara",
-          "player_id": "1091351965",
+          "player": "Derik Queen",
+          "player_id": "1057274415",
           "position": "C",
           "confidence_rate": 0,
-          "proj_pts": 8,
-          "proj_reb": 8,
-          "proj_ast": 3,
-          "proj_3pm": 0
-        }
-      ]
-    },
-    {
-      "away_team": "PHX",
-      "home_team": "UTA",
-      "tip_time_et": "9:30 PM ET",
-      "away_proj_score": 109,
-      "home_proj_score": 112,
-      "proj_total": 221,
-      "injuries": [
-        {
-          "player": "Mark Williams",
-          "status": "Out"
-        },
-        {
-          "player": "Jusuf Nurkic",
-          "status": "Out"
-        },
-        {
-          "player": "Jaren Jackson Jr.",
-          "status": "Out"
-        },
-        {
-          "player": "Lauri Markkanen",
-          "status": "Out"
-        },
-        {
-          "player": "Jonas Aidoo",
-          "status": "Out"
-        },
-        {
-          "player": "Kobe Bufkin",
-          "status": "Out"
-        },
-        {
-          "player": "Harrison Ingram",
-          "status": "Out"
-        }
-      ],
-      "blowout_flag": false,
-      "away_top_players": [
-        {
-          "player": "Devin Booker",
-          "player_id": "57",
-          "position": "G",
-          "confidence_rate": 70,
-          "proj_pts": 23,
-          "proj_reb": 3,
-          "proj_ast": 6,
-          "proj_3pm": 2
-        },
-        {
-          "player": "Dillon Brooks",
-          "player_id": "66",
-          "position": "G",
-          "confidence_rate": 0,
-          "proj_pts": 12,
-          "proj_reb": 4,
+          "proj_pts": 10,
+          "proj_reb": 5,
           "proj_ast": 2,
-          "proj_3pm": 2
-        },
-        {
-          "player": "Miles Bridges",
-          "player_id": "62",
-          "position": "F",
-          "confidence_rate": 0,
-          "proj_pts": 12,
-          "proj_reb": 6,
-          "proj_ast": 3,
           "proj_3pm": 1
-        },
-        {
-          "player": "Jalen Green",
-          "player_id": "17895966",
-          "position": "G",
-          "confidence_rate": 0,
-          "proj_pts": 10,
-          "proj_reb": 4,
-          "proj_ast": 3,
-          "proj_3pm": 1
-        },
-        {
-          "player": "Collin Gillespie",
-          "player_id": "38017727",
-          "position": "G",
-          "confidence_rate": 70,
-          "proj_pts": 10,
-          "proj_reb": 3,
-          "proj_ast": 3,
-          "proj_3pm": 2
         }
       ],
       "home_top_players": [
         {
-          "player": "Keyonte George",
-          "player_id": "56677834",
-          "position": "G",
-          "confidence_rate": 70,
-          "proj_pts": 20,
-          "proj_reb": 4,
-          "proj_ast": 8,
-          "proj_3pm": 1
+          "player": "Victor Wembanyama",
+          "player_id": "56677822",
+          "position": "F",
+          "confidence_rate": 0,
+          "proj_pts": 28,
+          "proj_reb": 14,
+          "proj_ast": 4,
+          "proj_3pm": 2
         },
         {
-          "player": "Darryn Peterson",
-          "player_id": "1091342427",
+          "player": "Stephon Castle",
+          "player_id": "1028025261",
           "position": "G",
           "confidence_rate": 70,
           "proj_pts": 18,
-          "proj_reb": 4,
-          "proj_ast": 4,
-          "proj_3pm": 2
-        },
-        {
-          "player": "Brice Sensabaugh",
-          "player_id": "56677842",
-          "position": "F",
-          "confidence_rate": 70,
-          "proj_pts": 14,
-          "proj_reb": 6,
-          "proj_ast": 3,
-          "proj_3pm": 2
-        },
-        {
-          "player": "Airious Bailey",
-          "player_id": "1057260888",
-          "position": "F",
-          "confidence_rate": 70,
-          "proj_pts": 9,
           "proj_reb": 5,
-          "proj_ast": 3,
-          "proj_3pm": 1
-        },
-        {
-          "player": "Mo Bamba",
-          "player_id": "28",
-          "position": "C",
-          "confidence_rate": 70,
-          "proj_pts": 9,
-          "proj_reb": 9,
-          "proj_ast": 1,
-          "proj_3pm": 1
-        }
-      ]
-    },
-    {
-      "away_team": "HOU",
-      "home_team": "DEN",
-      "tip_time_et": "10:00 PM ET",
-      "away_proj_score": 115,
-      "home_proj_score": 112,
-      "proj_total": 227,
-      "injuries": [
-        {
-          "player": "Clint Capela",
-          "status": "Out"
-        },
-        {
-          "player": "Alperen Sengun",
-          "status": "Questionable"
-        },
-        {
-          "player": "Steven Adams",
-          "status": "Questionable"
-        },
-        {
-          "player": "Quadir Copeland",
-          "status": "Out"
-        },
-        {
-          "player": "Julian Phillips",
-          "status": "Out"
-        },
-        {
-          "player": "Bruce Thornton",
-          "status": "Out"
-        },
-        {
-          "player": "Julian Strawther",
-          "status": "Out"
-        },
-        {
-          "player": "DaRon Holmes II",
-          "status": "Out"
-        },
-        {
-          "player": "Bryce Hopkins",
-          "status": "Out"
-        },
-        {
-          "player": "Cam Whitmore",
-          "status": "Out"
-        }
-      ],
-      "blowout_flag": false,
-      "away_top_players": [
-        {
-          "player": "Alperen Sengun",
-          "player_id": "17896062",
-          "position": "F",
-          "confidence_rate": 0,
-          "proj_pts": 25,
-          "proj_reb": 9,
-          "proj_ast": 7,
-          "proj_3pm": 1
-        },
-        {
-          "player": "Kevin Durant",
-          "player_id": "140",
-          "position": "F",
-          "confidence_rate": 70,
-          "proj_pts": 18,
-          "proj_reb": 4,
-          "proj_ast": 4,
-          "proj_3pm": 1
-        },
-        {
-          "player": "Jabari Smith Jr.",
-          "player_id": "38017684",
-          "position": "F",
-          "confidence_rate": 0,
-          "proj_pts": 11,
-          "proj_reb": 6,
-          "proj_ast": 2,
-          "proj_3pm": 2
-        },
-        {
-          "player": "Amen Thompson",
-          "player_id": "56677825",
-          "position": "G",
-          "confidence_rate": 0,
-          "proj_pts": 10,
-          "proj_reb": 8,
-          "proj_ast": 3,
-          "proj_3pm": 0
-        },
-        {
-          "player": "Tari Eason",
-          "player_id": "38017695",
-          "position": "F",
-          "confidence_rate": 70,
-          "proj_pts": 10,
-          "proj_reb": 5,
-          "proj_ast": 2,
-          "proj_3pm": 1
-        }
-      ],
-      "home_top_players": [
-        {
-          "player": "Nikola Jokic",
-          "player_id": "246",
-          "position": "C",
-          "confidence_rate": 80,
-          "proj_pts": 27,
-          "proj_reb": 11,
           "proj_ast": 9,
-          "proj_3pm": 1
-        },
-        {
-          "player": "Jamal Murray",
-          "player_id": "335",
-          "position": "G",
-          "confidence_rate": 0,
-          "proj_pts": 24,
-          "proj_reb": 5,
-          "proj_ast": 5,
           "proj_3pm": 2
         },
         {
-          "player": "Christian Braun",
-          "player_id": "38017709",
+          "player": "De'Aaron Fox",
+          "player_id": "161",
+          "position": "G",
+          "confidence_rate": 70,
+          "proj_pts": 11,
+          "proj_reb": 4,
+          "proj_ast": 4,
+          "proj_3pm": 0
+        },
+        {
+          "player": "Devin Vassell",
+          "player_id": "3547246",
           "position": "G",
           "confidence_rate": 0,
           "proj_pts": 10,
           "proj_reb": 4,
-          "proj_ast": 2,
-          "proj_3pm": 1
-        },
-        {
-          "player": "Aaron Gordon",
-          "player_id": "177",
-          "position": "F",
-          "confidence_rate": 70,
-          "proj_pts": 8,
-          "proj_reb": 4,
-          "proj_ast": 2,
-          "proj_3pm": 1
-        },
-        {
-          "player": "DeMar DeRozan",
-          "player_id": "125",
-          "position": "G",
-          "confidence_rate": 0,
-          "proj_pts": 8,
-          "proj_reb": 2,
           "proj_ast": 3,
-          "proj_3pm": 0
+          "proj_3pm": 1
+        },
+        {
+          "player": "Julian Champagnie",
+          "player_id": "38017649",
+          "position": "F",
+          "confidence_rate": 0,
+          "proj_pts": 9,
+          "proj_reb": 5,
+          "proj_ast": 1,
+          "proj_3pm": 2
         }
       ]
     },
     {
-      "away_team": "SAC",
-      "home_team": "LAL",
+      "away_team": "BOS",
+      "home_team": "SAC",
       "tip_time_et": "10:00 PM ET",
-      "away_proj_score": 108,
-      "home_proj_score": 115,
-      "proj_total": 223,
+      "away_proj_score": null,
+      "home_proj_score": null,
+      "proj_total": null,
       "injuries": [
+        {
+          "player": "Dillon Mitchell",
+          "status": "Out"
+        },
+        {
+          "player": "Jayson Tatum",
+          "status": "Questionable"
+        },
+        {
+          "player": "Derrick White",
+          "status": "Questionable"
+        },
+        {
+          "player": "Amari Williams",
+          "status": "Out"
+        },
         {
           "player": "Maxime Raynaud",
           "status": "Out"
@@ -1296,133 +821,115 @@
         {
           "player": "Precious Achiuwa",
           "status": "Out"
-        },
-        {
-          "player": "De'Andre Hunter",
-          "status": "Questionable"
-        },
-        {
-          "player": "Jonathan Mogbo",
-          "status": "Out"
-        },
-        {
-          "player": "Sean Pedulla",
-          "status": "Out"
-        },
-        {
-          "player": "Austin Reaves",
-          "status": "Out"
-        },
-        {
-          "player": "Quentin Grimes",
-          "status": "Available"
         }
       ],
       "blowout_flag": false,
       "away_top_players": [
         {
+          "player": "Jayson Tatum",
+          "player_id": "434",
+          "position": "F",
+          "confidence_rate": 0,
+          "proj_pts": 25,
+          "proj_reb": 9,
+          "proj_ast": 5,
+          "proj_3pm": 2
+        },
+        {
+          "player": "Paul George",
+          "player_id": "172",
+          "position": "F",
+          "confidence_rate": 0,
+          "proj_pts": 18,
+          "proj_reb": 5,
+          "proj_ast": 4,
+          "proj_3pm": 2
+        },
+        {
+          "player": "Payton Pritchard",
+          "player_id": "3547276",
+          "position": "G",
+          "confidence_rate": 70,
+          "proj_pts": 11,
+          "proj_reb": 3,
+          "proj_ast": 4,
+          "proj_3pm": 2
+        },
+        {
+          "player": "Derrick White",
+          "player_id": "473",
+          "position": "G",
+          "confidence_rate": 0,
+          "proj_pts": 10,
+          "proj_reb": 3,
+          "proj_ast": 5,
+          "proj_3pm": 1
+        },
+        {
+          "player": "Neemias Queta",
+          "player_id": "17553967",
+          "position": "C",
+          "confidence_rate": 0,
+          "proj_pts": 8,
+          "proj_reb": 11,
+          "proj_ast": 2,
+          "proj_3pm": 0
+        }
+      ],
+      "home_top_players": [
+        {
           "player": "Darius Acuff Jr.",
           "player_id": "1091338860",
           "position": "G",
           "confidence_rate": 70,
-          "proj_pts": 27,
-          "proj_reb": 4,
+          "proj_pts": 20,
+          "proj_reb": 3,
           "proj_ast": 7,
-          "proj_3pm": 3
+          "proj_3pm": 2
         },
         {
           "player": "Zach LaVine",
           "player_id": "268",
           "position": "G",
-          "confidence_rate": 80,
-          "proj_pts": 18,
-          "proj_reb": 3,
+          "confidence_rate": 0,
+          "proj_pts": 15,
+          "proj_reb": 4,
           "proj_ast": 3,
           "proj_3pm": 2
-        },
-        {
-          "player": "Domantas Sabonis",
-          "player_id": "406",
-          "position": "F",
-          "confidence_rate": 70,
-          "proj_pts": 10,
-          "proj_reb": 10,
-          "proj_ast": 5,
-          "proj_3pm": 0
         },
         {
           "player": "De'Andre Hunter",
           "player_id": "666656",
           "position": "F",
           "confidence_rate": 0,
-          "proj_pts": 9,
+          "proj_pts": 13,
           "proj_reb": 4,
           "proj_ast": 2,
           "proj_3pm": 2
+        },
+        {
+          "player": "Domantas Sabonis",
+          "player_id": "406",
+          "position": "F",
+          "confidence_rate": 0,
+          "proj_pts": 11,
+          "proj_reb": 11,
+          "proj_ast": 4,
+          "proj_3pm": 0
         },
         {
           "player": "Keegan Murray",
           "player_id": "38017688",
           "position": "F",
           "confidence_rate": null,
-          "proj_pts": 9,
-          "proj_reb": 3,
+          "proj_pts": 10,
+          "proj_reb": 4,
           "proj_ast": 2,
           "proj_3pm": 1
         }
       ],
-      "home_top_players": [
-        {
-          "player": "Luka Doncic",
-          "player_id": "132",
-          "position": "F",
-          "confidence_rate": 80,
-          "proj_pts": 39,
-          "proj_reb": 8,
-          "proj_ast": 8,
-          "proj_3pm": 4
-        },
-        {
-          "player": "Quentin Grimes",
-          "player_id": "17895858",
-          "position": "G",
-          "confidence_rate": 70,
-          "proj_pts": 13,
-          "proj_reb": 4,
-          "proj_ast": 3,
-          "proj_3pm": 2
-        },
-        {
-          "player": "Collin Sexton",
-          "player_id": "413",
-          "position": "G",
-          "confidence_rate": 70,
-          "proj_pts": 12,
-          "proj_reb": 2,
-          "proj_ast": 3,
-          "proj_3pm": 1
-        },
-        {
-          "player": "Walker Kessler",
-          "player_id": "38017705",
-          "position": "C",
-          "confidence_rate": 70,
-          "proj_pts": 10,
-          "proj_reb": 12,
-          "proj_ast": 2,
-          "proj_3pm": 0
-        },
-        {
-          "player": "Sandro Mamukelashvili",
-          "player_id": "17896059",
-          "position": "F",
-          "confidence_rate": 70,
-          "proj_pts": 8,
-          "proj_reb": 4,
-          "proj_ast": 2,
-          "proj_3pm": 1
-        }
-      ]
+      "status": "unavailable",
+      "unavailable_reason": "Projections under review"
     }
   ]
 }
