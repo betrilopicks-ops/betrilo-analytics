@@ -1,10 +1,10 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-11-22T15:16:18.665007+00:00",
+  "run_at": "2026-11-22T22:46:51.381675+00:00",
   "slate_date": "2026-11-22",
   "today_et": "2026-11-22",
-  "player_count": 139,
+  "player_count": 137,
   "game_count": 7,
   "checks": {
     "1_slate_date_and_sample": {
@@ -42,11 +42,11 @@
       "passed": true,
       "issues": [],
       "players_dropped": 0,
-      "skipped_clamp_teams": 20
+      "skipped_clamp_teams": 18
     },
     "6_7_systemic_guard": {
       "passed": true,
-      "total_players": 139,
+      "total_players": 137,
       "players_dropped": 0,
       "drop_pct": 0.0,
       "threshold": 0.05
@@ -54,29 +54,29 @@
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 100,
-      "median_rotation_pts": 8.0,
+      "rotation_count": 99,
+      "median_rotation_pts": 9.0,
       "team_scores": {
+        "DET": 89.0,
         "ATL": 100.0,
-        "OKC": 105.0,
-        "MIA": 111.0,
+        "MIA": 104.0,
         "ORL": 105.0,
         "WAS": 106.0,
         "DEN": 111.0,
-        "CHI": 108.0,
-        "DAL": 102.0,
+        "CHI": 102.0,
+        "DAL": 103.0,
         "UTA": 104.0,
-        "NYK": 97.0,
-        "BOS": 95.0,
+        "NYK": 98.0,
+        "BOS": 103.0,
         "GSW": 94.0
       },
       "zero_pts_pct": 0.0,
       "dropped_games": [
         {
-          "game": "DET@ATL",
-          "game_id": "21718162",
+          "game": "OKC@MIA",
+          "game_id": "21718163",
           "reasons": [
-            "DET: score=0<85"
+            "OKC: score=0<85"
           ],
           "label": "insufficient roster data"
         },
@@ -93,7 +93,7 @@
         "IND": [
           "score=0<85"
         ],
-        "DET": [
+        "OKC": [
           "score=0<85"
         ]
       }
@@ -107,9 +107,9 @@
       "passed": true,
       "clamped_teams": [
         {
-          "team": "DET",
-          "raw_total": 89.0,
-          "calibrated_total": 110.0,
+          "team": "OKC",
+          "raw_total": 87.0,
+          "calibrated_total": 105.0,
           "scale": 1.1
         },
         {
@@ -128,9 +128,9 @@
     "game_count_after": 5,
     "dropped_games": [
       {
-        "game": "DET@ATL",
+        "game": "OKC@MIA",
         "reasons": [
-          "thin roster: DET"
+          "thin roster: OKC"
         ]
       },
       {
