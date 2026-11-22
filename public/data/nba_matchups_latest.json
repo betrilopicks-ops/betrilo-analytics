@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T12:04:41.296336+00:00",
+  "generated_at": "2026-11-22T15:16:17.147933+00:00",
   "slate_date": "2026-11-22",
   "season": "2026-27",
   "is_sample": false,
@@ -685,11 +685,11 @@
         },
         {
           "player": "Tobi Lawal",
-          "status": "Out"
+          "status": "Day-To-Day"
         },
         {
           "player": "P.J. Washington",
-          "status": "Out"
+          "status": "Day-To-Day"
         },
         {
           "player": "Jusuf Nurkic",
@@ -733,20 +733,20 @@
           "player_id": "228",
           "position": "G",
           "confidence_rate": 0,
-          "proj_pts": 20,
+          "proj_pts": 19,
           "proj_reb": 5,
           "proj_ast": 4,
-          "proj_3pm": 3
+          "proj_3pm": 2
         },
         {
-          "player": "Naji Marshall",
-          "player_id": "3547293",
+          "player": "P.J. Washington",
+          "player_id": "666950",
           "position": "F",
           "confidence_rate": 0,
-          "proj_pts": 10,
-          "proj_reb": 3,
-          "proj_ast": 3,
-          "proj_3pm": 1
+          "proj_pts": 11,
+          "proj_reb": 5,
+          "proj_ast": 1,
+          "proj_3pm": 2
         },
         {
           "player": "Santi Aldama",
@@ -759,11 +759,11 @@
           "proj_3pm": 1
         },
         {
-          "player": "Walter Clayton Jr.",
-          "player_id": "1057271583",
-          "position": "G",
+          "player": "Naji Marshall",
+          "player_id": "3547293",
+          "position": "F",
           "confidence_rate": 0,
-          "proj_pts": 8,
+          "proj_pts": 9,
           "proj_reb": 3,
           "proj_ast": 3,
           "proj_3pm": 1
@@ -975,13 +975,13 @@
       "away_team": "BOS",
       "home_team": "GSW",
       "tip_time_et": "8:30 PM ET",
-      "away_proj_score": 107,
+      "away_proj_score": 105,
       "home_proj_score": 104,
-      "proj_total": 211,
+      "proj_total": 209,
       "injuries": [
         {
           "player": "Jayson Tatum",
-          "status": "Out"
+          "status": "Day-To-Day"
         },
         {
           "player": "Derrick White",
@@ -1015,13 +1015,23 @@
       "blowout_flag": false,
       "away_top_players": [
         {
+          "player": "Jayson Tatum",
+          "player_id": "434",
+          "position": "F",
+          "confidence_rate": 0,
+          "proj_pts": 24,
+          "proj_reb": 9,
+          "proj_ast": 7,
+          "proj_3pm": 3
+        },
+        {
           "player": "Paul George",
           "player_id": "172",
           "position": "F",
           "confidence_rate": 0,
-          "proj_pts": 22,
+          "proj_pts": 17,
           "proj_reb": 6,
-          "proj_ast": 4,
+          "proj_ast": 3,
           "proj_3pm": 3
         },
         {
@@ -1029,40 +1039,30 @@
           "player_id": "3547276",
           "position": "G",
           "confidence_rate": 0,
-          "proj_pts": 12,
-          "proj_reb": 4,
+          "proj_pts": 9,
+          "proj_reb": 3,
           "proj_ast": 6,
           "proj_3pm": 2
-        },
-        {
-          "player": "Devin Carter",
-          "player_id": "1028025242",
-          "position": "G",
-          "confidence_rate": null,
-          "proj_pts": 12,
-          "proj_reb": 5,
-          "proj_ast": 2,
-          "proj_3pm": 1
         },
         {
           "player": "Neemias Queta",
           "player_id": "17553967",
           "position": "C",
           "confidence_rate": 0,
-          "proj_pts": 11,
-          "proj_reb": 10,
+          "proj_pts": 9,
+          "proj_reb": 9,
           "proj_ast": 2,
           "proj_3pm": 0
         },
         {
-          "player": "Sam Hauser",
-          "player_id": "17896060",
-          "position": "F",
-          "confidence_rate": 0,
-          "proj_pts": 10,
+          "player": "Devin Carter",
+          "player_id": "1028025242",
+          "position": "G",
+          "confidence_rate": null,
+          "proj_pts": 9,
           "proj_reb": 4,
-          "proj_ast": 1,
-          "proj_3pm": 3
+          "proj_ast": 2,
+          "proj_3pm": 1
         }
       ],
       "home_top_players": [
