@@ -1,22 +1,22 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-11-21T15:16:28.846662+00:00",
-  "slate_date": "2026-11-21",
-  "today_et": "2026-11-21",
-  "player_count": 116,
-  "game_count": 6,
+  "run_at": "2026-11-22T12:04:42.638939+00:00",
+  "slate_date": "2026-11-22",
+  "today_et": "2026-11-22",
+  "player_count": 139,
+  "game_count": 7,
   "checks": {
     "1_slate_date_and_sample": {
       "passed": true,
-      "slate_date": "2026-11-21",
-      "expected_date": "2026-11-21",
+      "slate_date": "2026-11-22",
+      "expected_date": "2026-11-22",
       "is_sample": false
     },
     "2_game_count": {
       "passed": true,
-      "json_games": 6,
-      "scoreboard_games": 6
+      "json_games": 7,
+      "scoreboard_games": 7
     },
     "3_game_coverage": {
       "passed": true,
@@ -35,18 +35,18 @@
       "passed": true,
       "dropped": [],
       "exempted": [],
-      "players_checked": 90,
+      "players_checked": 98,
       "players_dropped": 0
     },
     "7_integrity": {
       "passed": true,
       "issues": [],
       "players_dropped": 0,
-      "skipped_clamp_teams": 10
+      "skipped_clamp_teams": 20
     },
     "6_7_systemic_guard": {
       "passed": true,
-      "total_players": 116,
+      "total_players": 139,
       "players_dropped": 0,
       "drop_pct": 0.0,
       "threshold": 0.05
@@ -54,44 +54,46 @@
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 79,
-      "median_rotation_pts": 9.0,
+      "rotation_count": 100,
+      "median_rotation_pts": 8.0,
       "team_scores": {
-        "MIL": 105.0,
-        "POR": 96.0,
-        "NYK": 101.0,
-        "LAC": 107.0,
-        "DAL": 112.0,
-        "MEM": 104.0,
-        "MIN": 108.0,
-        "NOP": 101.0,
-        "SAS": 103.0,
-        "BOS": 99.0
+        "ATL": 100.0,
+        "OKC": 105.0,
+        "MIA": 111.0,
+        "ORL": 105.0,
+        "WAS": 106.0,
+        "DEN": 111.0,
+        "CHI": 108.0,
+        "DAL": 102.0,
+        "UTA": 104.0,
+        "NYK": 97.0,
+        "BOS": 97.0,
+        "GSW": 94.0
       },
       "zero_pts_pct": 0.0,
       "dropped_games": [
         {
-          "game": "MIL@PHI",
-          "game_id": "21718156",
+          "game": "DET@ATL",
+          "game_id": "21718162",
           "reasons": [
-            "PHI: players=7<8"
+            "DET: score=0<85"
           ],
           "label": "insufficient roster data"
         },
         {
-          "game": "BOS@SAC",
-          "game_id": "21718161",
+          "game": "IND@NYK",
+          "game_id": "21718169",
           "reasons": [
-            "SAC: score=0<85"
+            "IND: score=0<85"
           ],
           "label": "insufficient roster data"
         }
       ],
       "thin_teams": {
-        "PHI": [
-          "players=7<8"
+        "IND": [
+          "score=0<85"
         ],
-        "SAC": [
+        "DET": [
           "score=0<85"
         ]
       }
@@ -105,9 +107,15 @@
       "passed": true,
       "clamped_teams": [
         {
-          "team": "SAC",
-          "raw_total": 88.0,
-          "calibrated_total": 107.0,
+          "team": "DET",
+          "raw_total": 89.0,
+          "calibrated_total": 110.0,
+          "scale": 1.1
+        },
+        {
+          "team": "IND",
+          "raw_total": 85.0,
+          "calibrated_total": 104.0,
           "scale": 1.1
         }
       ]
@@ -116,19 +124,19 @@
   "failures": [],
   "matchups_checks": {
     "slate_date_match": true,
-    "game_count_before": 6,
-    "game_count_after": 4,
+    "game_count_before": 7,
+    "game_count_after": 5,
     "dropped_games": [
       {
-        "game": "MIL@PHI",
+        "game": "DET@ATL",
         "reasons": [
-          "thin roster: PHI"
+          "thin roster: DET"
         ]
       },
       {
-        "game": "BOS@SAC",
+        "game": "IND@NYK",
         "reasons": [
-          "thin roster: SAC"
+          "thin roster: IND"
         ]
       }
     ]
