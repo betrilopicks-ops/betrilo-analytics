@@ -1,22 +1,22 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-11-22T22:46:51.381675+00:00",
-  "slate_date": "2026-11-22",
-  "today_et": "2026-11-22",
-  "player_count": 137,
-  "game_count": 7,
+  "run_at": "2026-11-23T22:46:28.282301+00:00",
+  "slate_date": "2026-11-23",
+  "today_et": "2026-11-23",
+  "player_count": 198,
+  "game_count": 10,
   "checks": {
     "1_slate_date_and_sample": {
       "passed": true,
-      "slate_date": "2026-11-22",
-      "expected_date": "2026-11-22",
+      "slate_date": "2026-11-23",
+      "expected_date": "2026-11-23",
       "is_sample": false
     },
     "2_game_count": {
       "passed": true,
-      "json_games": 7,
-      "scoreboard_games": 7
+      "json_games": 10,
+      "scoreboard_games": 10
     },
     "3_game_coverage": {
       "passed": true,
@@ -33,70 +33,62 @@
     },
     "6_prior_season_cap": {
       "passed": true,
-      "dropped": [],
+      "dropped": [
+        {
+          "player": "Brook Lopez",
+          "player_id": "283",
+          "proj_pts": 23.0,
+          "avg_pts": 8.6,
+          "ratio": 2.69
+        }
+      ],
       "exempted": [],
-      "players_checked": 97,
-      "players_dropped": 0
+      "players_checked": 154,
+      "players_dropped": 1
     },
     "7_integrity": {
       "passed": true,
       "issues": [],
       "players_dropped": 0,
-      "skipped_clamp_teams": 18
+      "skipped_clamp_teams": 0
     },
     "6_7_systemic_guard": {
       "passed": true,
-      "total_players": 137,
-      "players_dropped": 0,
-      "drop_pct": 0.0,
+      "total_players": 198,
+      "players_dropped": 1,
+      "drop_pct": 0.005,
       "threshold": 0.05
     },
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 99,
+      "rotation_count": 198,
       "median_rotation_pts": 9.0,
       "team_scores": {
-        "DET": 89.0,
-        "ATL": 100.0,
-        "MIA": 104.0,
-        "ORL": 105.0,
-        "WAS": 106.0,
-        "DEN": 111.0,
-        "CHI": 102.0,
-        "DAL": 103.0,
-        "UTA": 104.0,
-        "NYK": 98.0,
-        "BOS": 103.0,
-        "GSW": 94.0
+        "MEM": 96.0,
+        "CHA": 102.0,
+        "POR": 109.0,
+        "PHI": 106.0,
+        "OKC": 103.0,
+        "IND": 95.0,
+        "MIL": 102.0,
+        "TOR": 109.0,
+        "BKN": 96.0,
+        "MIN": 100.0,
+        "CLE": 111.0,
+        "CHI": 103.0,
+        "PHX": 113.0,
+        "NOP": 106.0,
+        "LAC": 100.0,
+        "HOU": 102.0,
+        "UTA": 102.0,
+        "LAL": 103.0,
+        "SAS": 102.0,
+        "SAC": 100.0
       },
       "zero_pts_pct": 0.0,
-      "dropped_games": [
-        {
-          "game": "OKC@MIA",
-          "game_id": "21718163",
-          "reasons": [
-            "OKC: score=0<85"
-          ],
-          "label": "insufficient roster data"
-        },
-        {
-          "game": "IND@NYK",
-          "game_id": "21718169",
-          "reasons": [
-            "IND: score=0<85"
-          ],
-          "label": "insufficient roster data"
-        }
-      ],
-      "thin_teams": {
-        "IND": [
-          "score=0<85"
-        ],
-        "OKC": [
-          "score=0<85"
-        ]
-      }
+      "dropped_games": [],
+      "thin_teams": {}
     },
     "9_core_player_missing": {
       "passed": true,
@@ -105,40 +97,14 @@
     },
     "10_vegas_cal_clamp": {
       "passed": true,
-      "clamped_teams": [
-        {
-          "team": "OKC",
-          "raw_total": 87.0,
-          "calibrated_total": 105.0,
-          "scale": 1.1
-        },
-        {
-          "team": "IND",
-          "raw_total": 85.0,
-          "calibrated_total": 104.0,
-          "scale": 1.1
-        }
-      ]
+      "clamped_teams": []
     }
   },
   "failures": [],
   "matchups_checks": {
     "slate_date_match": true,
-    "game_count_before": 7,
-    "game_count_after": 5,
-    "dropped_games": [
-      {
-        "game": "OKC@MIA",
-        "reasons": [
-          "thin roster: OKC"
-        ]
-      },
-      {
-        "game": "IND@NYK",
-        "reasons": [
-          "thin roster: IND"
-        ]
-      }
-    ]
+    "game_count_before": 10,
+    "game_count_after": 10,
+    "dropped_games": []
   }
 }
