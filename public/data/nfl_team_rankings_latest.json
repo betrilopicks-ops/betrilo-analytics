@@ -1,130 +1,130 @@
 {
   "season": 2026,
-  "generated_at": "2026-11-17T06:00:18.771457-05:00",
+  "generated_at": "2026-11-24T06:00:20.027638-05:00",
   "dvp_method": "Based on 2026 (1.0x), 2025 (0.6x), 2024 (0.3x)",
   "games_note": "Games column shows total games across all weighted seasons (e.g., 34 = 17 per season x 2 seasons)",
   "rank_note": "Rank 1 = most yards/stats allowed to this position = easiest matchup for offense",
   "position_groups": {
     "QB": [
       {
-        "team": "PIT",
+        "team": "DAL",
         "rank": 1,
         "label": "Smash",
-        "games": 43,
-        "passing_yards_per_game": 257.3,
-        "passing_tds_per_game": 1.5,
-        "completions_per_game": 23.5,
-        "rushing_yards_per_game": 13.9
+        "games": 45,
+        "passing_yards_per_game": 254.6,
+        "passing_tds_per_game": 1.9,
+        "completions_per_game": 21.6,
+        "rushing_yards_per_game": 25.5
       },
       {
-        "team": "DAL",
+        "team": "PIT",
         "rank": 2,
         "label": "Smash",
         "games": 44,
-        "passing_yards_per_game": 254.9,
-        "passing_tds_per_game": 1.9,
-        "completions_per_game": 21.7,
-        "rushing_yards_per_game": 26.4
-      },
-      {
-        "team": "DET",
-        "rank": 3,
-        "label": "Smash",
-        "games": 43,
-        "passing_yards_per_game": 249.3,
-        "passing_tds_per_game": 1.7,
-        "completions_per_game": 21.9,
-        "rushing_yards_per_game": 19.5
-      },
-      {
-        "team": "BAL",
-        "rank": 4,
-        "label": "Smash",
-        "games": 44,
-        "passing_yards_per_game": 248.5,
-        "passing_tds_per_game": 1.3,
-        "completions_per_game": 22.0,
-        "rushing_yards_per_game": 18.0
+        "passing_yards_per_game": 252.7,
+        "passing_tds_per_game": 1.4,
+        "completions_per_game": 23.0,
+        "rushing_yards_per_game": 13.6
       },
       {
         "team": "TEN",
-        "rank": 5,
-        "label": "Smash",
-        "games": 43,
-        "passing_yards_per_game": 248.2,
-        "passing_tds_per_game": 1.6,
-        "completions_per_game": 21.6,
-        "rushing_yards_per_game": 20.3
-      },
-      {
-        "team": "IND",
-        "rank": 6,
+        "rank": 3,
         "label": "Smash",
         "games": 44,
-        "passing_yards_per_game": 247.7,
-        "passing_tds_per_game": 1.5,
-        "completions_per_game": 21.0,
-        "rushing_yards_per_game": 16.0
+        "passing_yards_per_game": 251.2,
+        "passing_tds_per_game": 1.7,
+        "completions_per_game": 21.8,
+        "rushing_yards_per_game": 19.8
       },
       {
         "team": "WAS",
-        "rank": 7,
-        "label": "Favorable",
-        "games": 43,
-        "passing_yards_per_game": 246.5,
+        "rank": 4,
+        "label": "Smash",
+        "games": 44,
+        "passing_yards_per_game": 248.7,
         "passing_tds_per_game": 1.8,
-        "completions_per_game": 21.3,
-        "rushing_yards_per_game": 20.6
+        "completions_per_game": 21.6,
+        "rushing_yards_per_game": 19.7
+      },
+      {
+        "team": "BAL",
+        "rank": 5,
+        "label": "Smash",
+        "games": 45,
+        "passing_yards_per_game": 248.7,
+        "passing_tds_per_game": 1.4,
+        "completions_per_game": 22.0,
+        "rushing_yards_per_game": 17.2
       },
       {
         "team": "TB",
-        "rank": 8,
-        "label": "Favorable",
-        "games": 43,
-        "passing_yards_per_game": 245.8,
+        "rank": 6,
+        "label": "Smash",
+        "games": 44,
+        "passing_yards_per_game": 247.1,
         "passing_tds_per_game": 1.6,
-        "completions_per_game": 22.3,
-        "rushing_yards_per_game": 17.2
+        "completions_per_game": 22.2,
+        "rushing_yards_per_game": 17.0
       },
       {
-        "team": "JAX",
-        "rank": 9,
+        "team": "DET",
+        "rank": 7,
         "label": "Favorable",
-        "games": 43,
-        "passing_yards_per_game": 241.1,
-        "passing_tds_per_game": 1.4,
-        "completions_per_game": 22.7,
-        "rushing_yards_per_game": 17.9
+        "games": 44,
+        "passing_yards_per_game": 246.9,
+        "passing_tds_per_game": 1.8,
+        "completions_per_game": 21.8,
+        "rushing_yards_per_game": 20.2
+      },
+      {
+        "team": "IND",
+        "rank": 8,
+        "label": "Favorable",
+        "games": 45,
+        "passing_yards_per_game": 245.7,
+        "passing_tds_per_game": 1.6,
+        "completions_per_game": 21.0,
+        "rushing_yards_per_game": 16.4
       },
       {
         "team": "CIN",
-        "rank": 10,
+        "rank": 9,
         "label": "Favorable",
-        "games": 43,
-        "passing_yards_per_game": 240.3,
-        "passing_tds_per_game": 1.6,
-        "completions_per_game": 20.9,
-        "rushing_yards_per_game": 24.9
-      },
-      {
-        "team": "CHI",
-        "rank": 11,
-        "label": "Favorable",
-        "games": 43,
-        "passing_yards_per_game": 236.5,
+        "games": 44,
+        "passing_yards_per_game": 242.2,
         "passing_tds_per_game": 1.5,
-        "completions_per_game": 19.4,
-        "rushing_yards_per_game": 17.2
+        "completions_per_game": 21.0,
+        "rushing_yards_per_game": 26.1
       },
       {
         "team": "ARI",
+        "rank": 10,
+        "label": "Favorable",
+        "games": 45,
+        "passing_yards_per_game": 239.7,
+        "passing_tds_per_game": 1.9,
+        "completions_per_game": 20.8,
+        "rushing_yards_per_game": 13.8
+      },
+      {
+        "team": "JAX",
+        "rank": 11,
+        "label": "Favorable",
+        "games": 44,
+        "passing_yards_per_game": 238.4,
+        "passing_tds_per_game": 1.4,
+        "completions_per_game": 22.5,
+        "rushing_yards_per_game": 18.7
+      },
+      {
+        "team": "CHI",
         "rank": 12,
         "label": "Favorable",
         "games": 44,
-        "passing_yards_per_game": 236.4,
-        "passing_tds_per_game": 1.8,
-        "completions_per_game": 20.6,
-        "rushing_yards_per_game": 14.4
+        "passing_yards_per_game": 236.0,
+        "passing_tds_per_game": 1.5,
+        "completions_per_game": 19.6,
+        "rushing_yards_per_game": 17.9
       },
       {
         "team": "ATL",
@@ -137,48 +137,38 @@
         "rushing_yards_per_game": 16.7
       },
       {
-        "team": "SF",
+        "team": "DEN",
         "rank": 14,
         "label": "Neutral",
-        "games": 43,
-        "passing_yards_per_game": 231.9,
-        "passing_tds_per_game": 1.7,
-        "completions_per_game": 23.0,
-        "rushing_yards_per_game": 11.0
+        "games": 44,
+        "passing_yards_per_game": 233.3,
+        "passing_tds_per_game": 1.4,
+        "completions_per_game": 21.7,
+        "rushing_yards_per_game": 18.8
       },
       {
-        "team": "DEN",
+        "team": "SF",
         "rank": 15,
         "label": "Neutral",
-        "games": 43,
-        "passing_yards_per_game": 231.9,
-        "passing_tds_per_game": 1.3,
-        "completions_per_game": 21.8,
-        "rushing_yards_per_game": 18.7
+        "games": 44,
+        "passing_yards_per_game": 233.2,
+        "passing_tds_per_game": 1.6,
+        "completions_per_game": 23.2,
+        "rushing_yards_per_game": 10.5
       },
       {
         "team": "LV",
         "rank": 16,
         "label": "Neutral",
-        "games": 44,
-        "passing_yards_per_game": 231.7,
-        "passing_tds_per_game": 1.8,
-        "completions_per_game": 20.7,
-        "rushing_yards_per_game": 16.0
-      },
-      {
-        "team": "HOU",
-        "rank": 17,
-        "label": "Neutral",
-        "games": 43,
-        "passing_yards_per_game": 229.4,
-        "passing_tds_per_game": 1.4,
-        "completions_per_game": 20.2,
-        "rushing_yards_per_game": 17.6
+        "games": 45,
+        "passing_yards_per_game": 231.4,
+        "passing_tds_per_game": 1.7,
+        "completions_per_game": 20.6,
+        "rushing_yards_per_game": 15.6
       },
       {
         "team": "NE",
-        "rank": 18,
+        "rank": 17,
         "label": "Neutral",
         "games": 44,
         "passing_yards_per_game": 229.1,
@@ -187,28 +177,48 @@
         "rushing_yards_per_game": 12.7
       },
       {
+        "team": "HOU",
+        "rank": 18,
+        "label": "Neutral",
+        "games": 44,
+        "passing_yards_per_game": 226.0,
+        "passing_tds_per_game": 1.3,
+        "completions_per_game": 19.9,
+        "rushing_yards_per_game": 17.1
+      },
+      {
         "team": "NO",
         "rank": 19,
         "label": "Neutral",
-        "games": 43,
-        "passing_yards_per_game": 227.8,
+        "games": 44,
+        "passing_yards_per_game": 225.9,
         "passing_tds_per_game": 1.4,
-        "completions_per_game": 20.0,
-        "rushing_yards_per_game": 18.7
+        "completions_per_game": 19.8,
+        "rushing_yards_per_game": 18.4
       },
       {
         "team": "MIA",
         "rank": 20,
         "label": "Tough",
-        "games": 43,
-        "passing_yards_per_game": 222.0,
+        "games": 44,
+        "passing_yards_per_game": 225.2,
         "passing_tds_per_game": 1.7,
-        "completions_per_game": 21.0,
-        "rushing_yards_per_game": 13.8
+        "completions_per_game": 21.2,
+        "rushing_yards_per_game": 13.2
+      },
+      {
+        "team": "CAR",
+        "rank": 21,
+        "label": "Tough",
+        "games": 44,
+        "passing_yards_per_game": 222.7,
+        "passing_tds_per_game": 1.4,
+        "completions_per_game": 21.1,
+        "rushing_yards_per_game": 17.5
       },
       {
         "team": "GB",
-        "rank": 21,
+        "rank": 22,
         "label": "Tough",
         "games": 44,
         "passing_yards_per_game": 221.0,
@@ -218,7 +228,7 @@
       },
       {
         "team": "LA",
-        "rank": 22,
+        "rank": 23,
         "label": "Tough",
         "games": 44,
         "passing_yards_per_game": 220.7,
@@ -227,74 +237,64 @@
         "rushing_yards_per_game": 18.8
       },
       {
-        "team": "CAR",
-        "rank": 23,
+        "team": "NYG",
+        "rank": 24,
         "label": "Tough",
-        "games": 43,
-        "passing_yards_per_game": 220.5,
-        "passing_tds_per_game": 1.5,
-        "completions_per_game": 21.0,
-        "rushing_yards_per_game": 18.0
+        "games": 44,
+        "passing_yards_per_game": 219.7,
+        "passing_tds_per_game": 1.6,
+        "completions_per_game": 20.7,
+        "rushing_yards_per_game": 25.4
       },
       {
         "team": "KC",
-        "rank": 24,
+        "rank": 25,
         "label": "Tough",
-        "games": 43,
-        "passing_yards_per_game": 219.5,
+        "games": 44,
+        "passing_yards_per_game": 216.9,
         "passing_tds_per_game": 1.0,
-        "completions_per_game": 21.0,
-        "rushing_yards_per_game": 19.7
+        "completions_per_game": 20.8,
+        "rushing_yards_per_game": 19.1
       },
       {
         "team": "LAC",
-        "rank": 25,
-        "label": "Tough",
-        "games": 43,
-        "passing_yards_per_game": 218.0,
-        "passing_tds_per_game": 1.2,
-        "completions_per_game": 19.7,
-        "rushing_yards_per_game": 16.3
-      },
-      {
-        "team": "BUF",
         "rank": 26,
         "label": "Tough",
-        "games": 43,
-        "passing_yards_per_game": 217.0,
-        "passing_tds_per_game": 1.4,
-        "completions_per_game": 20.2,
-        "rushing_yards_per_game": 17.4
+        "games": 44,
+        "passing_yards_per_game": 216.3,
+        "passing_tds_per_game": 1.3,
+        "completions_per_game": 19.6,
+        "rushing_yards_per_game": 15.8
       },
       {
-        "team": "NYG",
+        "team": "PHI",
         "rank": 27,
         "label": "Avoid",
-        "games": 43,
-        "passing_yards_per_game": 216.3,
-        "passing_tds_per_game": 1.6,
-        "completions_per_game": 20.5,
-        "rushing_yards_per_game": 26.1
+        "games": 44,
+        "passing_yards_per_game": 215.1,
+        "passing_tds_per_game": 1.1,
+        "completions_per_game": 19.6,
+        "rushing_yards_per_game": 20.7
       },
       {
         "team": "NYJ",
         "rank": 28,
         "label": "Avoid",
-        "games": 44,
-        "passing_yards_per_game": 216.1,
+        "games": 45,
+        "passing_yards_per_game": 212.9,
         "passing_tds_per_game": 1.7,
-        "completions_per_game": 19.1,
-        "rushing_yards_per_game": 17.2
+        "completions_per_game": 19.0,
+        "rushing_yards_per_game": 17.8
       },
       {
-        "team": "PHI",
+        "team": "BUF",
         "rank": 29,
         "label": "Avoid",
-        "games": 43,
-        "passing_yards_per_game": 214.6,
-        "passing_tds_per_game": 1.2,
-        "completions_per_game": 19.2,
-        "rushing_yards_per_game": 20.4
+        "games": 44,
+        "passing_yards_per_game": 212.5,
+        "passing_tds_per_game": 1.4,
+        "completions_per_game": 19.9,
+        "rushing_yards_per_game": 17.0
       },
       {
         "team": "CLE",
@@ -310,11 +310,11 @@
         "team": "MIN",
         "rank": 31,
         "label": "Avoid",
-        "games": 43,
-        "passing_yards_per_game": 200.2,
-        "passing_tds_per_game": 0.9,
-        "completions_per_game": 18.3,
-        "rushing_yards_per_game": 12.3
+        "games": 44,
+        "passing_yards_per_game": 202.5,
+        "passing_tds_per_game": 1.0,
+        "completions_per_game": 18.4,
+        "rushing_yards_per_game": 11.8
       },
       {
         "team": "SEA",
@@ -332,101 +332,101 @@
         "team": "CAR",
         "rank": 1,
         "label": "Smash",
-        "games": 43,
-        "rushing_yards_per_game": 113.1,
-        "carries_per_game": 24.3,
-        "receptions_per_game": 4.6,
-        "receiving_yards_per_game": 30.4
+        "games": 44,
+        "rushing_yards_per_game": 115.1,
+        "carries_per_game": 24.1,
+        "receptions_per_game": 4.7,
+        "receiving_yards_per_game": 30.9
       },
       {
         "team": "LV",
         "rank": 2,
         "label": "Smash",
-        "games": 44,
-        "rushing_yards_per_game": 111.5,
-        "carries_per_game": 24.5,
+        "games": 45,
+        "rushing_yards_per_game": 111.7,
+        "carries_per_game": 24.6,
         "receptions_per_game": 4.0,
-        "receiving_yards_per_game": 28.6
+        "receiving_yards_per_game": 28.2
       },
       {
         "team": "ARI",
         "rank": 3,
         "label": "Smash",
-        "games": 44,
-        "rushing_yards_per_game": 110.5,
-        "carries_per_game": 24.8,
+        "games": 45,
+        "rushing_yards_per_game": 110.8,
+        "carries_per_game": 24.9,
         "receptions_per_game": 4.1,
-        "receiving_yards_per_game": 35.2
+        "receiving_yards_per_game": 35.3
       },
       {
         "team": "NYJ",
         "rank": 4,
         "label": "Smash",
-        "games": 44,
-        "rushing_yards_per_game": 110.0,
-        "carries_per_game": 25.3,
+        "games": 45,
+        "rushing_yards_per_game": 110.6,
+        "carries_per_game": 25.2,
         "receptions_per_game": 3.5,
-        "receiving_yards_per_game": 29.9
+        "receiving_yards_per_game": 29.8
       },
       {
         "team": "NO",
         "rank": 5,
         "label": "Smash",
-        "games": 43,
-        "rushing_yards_per_game": 107.3,
-        "carries_per_game": 24.8,
+        "games": 44,
+        "rushing_yards_per_game": 107.1,
+        "carries_per_game": 24.9,
         "receptions_per_game": 4.0,
-        "receiving_yards_per_game": 31.7
+        "receiving_yards_per_game": 30.7
       },
       {
         "team": "NYG",
         "rank": 6,
         "label": "Smash",
-        "games": 43,
-        "rushing_yards_per_game": 105.9,
-        "carries_per_game": 22.0,
-        "receptions_per_game": 4.1,
-        "receiving_yards_per_game": 28.9
+        "games": 44,
+        "rushing_yards_per_game": 104.1,
+        "carries_per_game": 21.7,
+        "receptions_per_game": 4.2,
+        "receiving_yards_per_game": 29.0
       },
       {
         "team": "MIA",
         "rank": 7,
         "label": "Favorable",
-        "games": 43,
-        "rushing_yards_per_game": 103.9,
-        "carries_per_game": 22.8,
-        "receptions_per_game": 4.6,
-        "receiving_yards_per_game": 35.2
+        "games": 44,
+        "rushing_yards_per_game": 103.5,
+        "carries_per_game": 22.9,
+        "receptions_per_game": 4.8,
+        "receiving_yards_per_game": 36.3
       },
       {
         "team": "DAL",
         "rank": 8,
         "label": "Favorable",
-        "games": 44,
-        "rushing_yards_per_game": 102.1,
-        "carries_per_game": 21.9,
-        "receptions_per_game": 4.7,
-        "receiving_yards_per_game": 42.1
-      },
-      {
-        "team": "WAS",
-        "rank": 9,
-        "label": "Favorable",
-        "games": 43,
-        "rushing_yards_per_game": 101.8,
-        "carries_per_game": 23.1,
-        "receptions_per_game": 3.8,
-        "receiving_yards_per_game": 31.6
+        "games": 45,
+        "rushing_yards_per_game": 102.8,
+        "carries_per_game": 22.0,
+        "receptions_per_game": 4.5,
+        "receiving_yards_per_game": 40.5
       },
       {
         "team": "CIN",
+        "rank": 9,
+        "label": "Favorable",
+        "games": 44,
+        "rushing_yards_per_game": 101.4,
+        "carries_per_game": 21.3,
+        "receptions_per_game": 4.7,
+        "receiving_yards_per_game": 36.2
+      },
+      {
+        "team": "IND",
         "rank": 10,
         "label": "Favorable",
-        "games": 43,
-        "rushing_yards_per_game": 101.7,
-        "carries_per_game": 21.4,
-        "receptions_per_game": 4.7,
-        "receiving_yards_per_game": 36.6
+        "games": 45,
+        "rushing_yards_per_game": 100.9,
+        "carries_per_game": 23.5,
+        "receptions_per_game": 4.1,
+        "receiving_yards_per_game": 32.9
       },
       {
         "team": "CLE",
@@ -449,54 +449,54 @@
         "receiving_yards_per_game": 33.5
       },
       {
-        "team": "IND",
+        "team": "WAS",
         "rank": 13,
         "label": "Favorable",
         "games": 44,
-        "rushing_yards_per_game": 99.3,
-        "carries_per_game": 23.2,
-        "receptions_per_game": 4.1,
-        "receiving_yards_per_game": 33.7
-      },
-      {
-        "team": "PHI",
-        "rank": 14,
-        "label": "Neutral",
-        "games": 43,
-        "rushing_yards_per_game": 97.6,
-        "carries_per_game": 23.7,
-        "receptions_per_game": 3.6,
-        "receiving_yards_per_game": 28.1
-      },
-      {
-        "team": "MIN",
-        "rank": 15,
-        "label": "Neutral",
-        "games": 43,
-        "rushing_yards_per_game": 97.3,
-        "carries_per_game": 23.9,
-        "receptions_per_game": 3.4,
-        "receiving_yards_per_game": 21.8
-      },
-      {
-        "team": "CHI",
-        "rank": 16,
-        "label": "Neutral",
-        "games": 43,
-        "rushing_yards_per_game": 97.3,
-        "carries_per_game": 20.8,
-        "receptions_per_game": 4.1,
-        "receiving_yards_per_game": 32.7
+        "rushing_yards_per_game": 99.1,
+        "carries_per_game": 22.7,
+        "receptions_per_game": 4.0,
+        "receiving_yards_per_game": 34.4
       },
       {
         "team": "TEN",
-        "rank": 17,
+        "rank": 14,
         "label": "Neutral",
-        "games": 43,
-        "rushing_yards_per_game": 96.7,
+        "games": 44,
+        "rushing_yards_per_game": 96.8,
         "carries_per_game": 23.1,
         "receptions_per_game": 3.6,
         "receiving_yards_per_game": 28.8
+      },
+      {
+        "team": "CHI",
+        "rank": 15,
+        "label": "Neutral",
+        "games": 44,
+        "rushing_yards_per_game": 96.7,
+        "carries_per_game": 20.6,
+        "receptions_per_game": 4.2,
+        "receiving_yards_per_game": 31.9
+      },
+      {
+        "team": "MIN",
+        "rank": 16,
+        "label": "Neutral",
+        "games": 44,
+        "rushing_yards_per_game": 96.0,
+        "carries_per_game": 23.7,
+        "receptions_per_game": 3.5,
+        "receiving_yards_per_game": 22.3
+      },
+      {
+        "team": "PHI",
+        "rank": 17,
+        "label": "Neutral",
+        "games": 44,
+        "rushing_yards_per_game": 95.5,
+        "carries_per_game": 23.3,
+        "receptions_per_game": 3.7,
+        "receiving_yards_per_game": 27.8
       },
       {
         "team": "GB",
@@ -512,15 +512,25 @@
         "team": "BUF",
         "rank": 19,
         "label": "Neutral",
-        "games": 43,
-        "rushing_yards_per_game": 94.3,
-        "carries_per_game": 21.2,
-        "receptions_per_game": 4.9,
-        "receiving_yards_per_game": 36.1
+        "games": 44,
+        "rushing_yards_per_game": 93.7,
+        "carries_per_game": 21.0,
+        "receptions_per_game": 4.8,
+        "receiving_yards_per_game": 34.9
+      },
+      {
+        "team": "LAC",
+        "rank": 20,
+        "label": "Tough",
+        "games": 44,
+        "rushing_yards_per_game": 93.2,
+        "carries_per_game": 21.9,
+        "receptions_per_game": 4.0,
+        "receiving_yards_per_game": 25.4
       },
       {
         "team": "NE",
-        "rank": 20,
+        "rank": 21,
         "label": "Tough",
         "games": 44,
         "rushing_yards_per_game": 91.7,
@@ -529,24 +539,14 @@
         "receiving_yards_per_game": 32.0
       },
       {
-        "team": "LAC",
-        "rank": 21,
-        "label": "Tough",
-        "games": 43,
-        "rushing_yards_per_game": 90.4,
-        "carries_per_game": 21.3,
-        "receptions_per_game": 4.0,
-        "receiving_yards_per_game": 25.5
-      },
-      {
         "team": "SF",
         "rank": 22,
         "label": "Tough",
-        "games": 43,
-        "rushing_yards_per_game": 87.4,
-        "carries_per_game": 21.3,
-        "receptions_per_game": 5.7,
-        "receiving_yards_per_game": 37.5
+        "games": 44,
+        "rushing_yards_per_game": 86.7,
+        "carries_per_game": 21.2,
+        "receptions_per_game": 5.6,
+        "receiving_yards_per_game": 36.9
       },
       {
         "team": "LA",
@@ -559,68 +559,58 @@
         "receiving_yards_per_game": 38.3
       },
       {
-        "team": "PIT",
+        "team": "DEN",
         "rank": 24,
         "label": "Tough",
-        "games": 43,
-        "rushing_yards_per_game": 83.9,
-        "carries_per_game": 20.9,
-        "receptions_per_game": 5.2,
-        "receiving_yards_per_game": 38.1
+        "games": 44,
+        "rushing_yards_per_game": 84.4,
+        "carries_per_game": 20.3,
+        "receptions_per_game": 4.2,
+        "receiving_yards_per_game": 35.8
       },
       {
-        "team": "DEN",
+        "team": "PIT",
         "rank": 25,
         "label": "Tough",
-        "games": 43,
-        "rushing_yards_per_game": 82.9,
-        "carries_per_game": 20.3,
-        "receptions_per_game": 4.1,
-        "receiving_yards_per_game": 33.6
-      },
-      {
-        "team": "HOU",
-        "rank": 26,
-        "label": "Tough",
-        "games": 43,
-        "rushing_yards_per_game": 82.0,
+        "games": 44,
+        "rushing_yards_per_game": 83.9,
         "carries_per_game": 20.9,
-        "receptions_per_game": 4.4,
-        "receiving_yards_per_game": 29.5
+        "receptions_per_game": 5.0,
+        "receiving_yards_per_game": 36.6
       },
       {
         "team": "BAL",
+        "rank": 26,
+        "label": "Tough",
+        "games": 45,
+        "rushing_yards_per_game": 82.0,
+        "carries_per_game": 21.3,
+        "receptions_per_game": 4.6,
+        "receiving_yards_per_game": 31.3
+      },
+      {
+        "team": "HOU",
         "rank": 27,
         "label": "Avoid",
         "games": 44,
-        "rushing_yards_per_game": 79.4,
-        "carries_per_game": 20.9,
-        "receptions_per_game": 4.8,
-        "receiving_yards_per_game": 32.2
+        "rushing_yards_per_game": 80.0,
+        "carries_per_game": 20.7,
+        "receptions_per_game": 4.4,
+        "receiving_yards_per_game": 29.1
       },
       {
         "team": "DET",
         "rank": 28,
         "label": "Avoid",
-        "games": 43,
-        "rushing_yards_per_game": 76.9,
-        "carries_per_game": 18.9,
-        "receptions_per_game": 3.7,
-        "receiving_yards_per_game": 28.1
-      },
-      {
-        "team": "KC",
-        "rank": 29,
-        "label": "Avoid",
-        "games": 43,
-        "rushing_yards_per_game": 76.8,
-        "carries_per_game": 20.4,
-        "receptions_per_game": 4.2,
-        "receiving_yards_per_game": 31.7
+        "games": 44,
+        "rushing_yards_per_game": 77.2,
+        "carries_per_game": 19.0,
+        "receptions_per_game": 3.8,
+        "receiving_yards_per_game": 29.9
       },
       {
         "team": "SEA",
-        "rank": 30,
+        "rank": 29,
         "label": "Avoid",
         "games": 44,
         "rushing_yards_per_game": 76.3,
@@ -629,24 +619,34 @@
         "receiving_yards_per_game": 34.6
       },
       {
+        "team": "KC",
+        "rank": 30,
+        "label": "Avoid",
+        "games": 44,
+        "rushing_yards_per_game": 76.0,
+        "carries_per_game": 20.2,
+        "receptions_per_game": 4.1,
+        "receiving_yards_per_game": 30.9
+      },
+      {
         "team": "JAX",
         "rank": 31,
         "label": "Avoid",
-        "games": 43,
-        "rushing_yards_per_game": 75.5,
-        "carries_per_game": 19.1,
+        "games": 44,
+        "rushing_yards_per_game": 74.0,
+        "carries_per_game": 18.9,
         "receptions_per_game": 5.1,
-        "receiving_yards_per_game": 36.6
+        "receiving_yards_per_game": 35.9
       },
       {
         "team": "TB",
         "rank": 32,
         "label": "Avoid",
-        "games": 43,
-        "rushing_yards_per_game": 73.0,
-        "carries_per_game": 18.1,
+        "games": 44,
+        "rushing_yards_per_game": 73.9,
+        "carries_per_game": 18.4,
         "receptions_per_game": 4.6,
-        "receiving_yards_per_game": 40.2
+        "receiving_yards_per_game": 39.7
       }
     ],
     "WR": [
@@ -654,18 +654,18 @@
         "team": "TEN",
         "rank": 1,
         "label": "Smash",
-        "games": 43,
-        "receiving_yards_per_game": 172.1,
-        "receptions_per_game": 13.0,
-        "targets_per_game": 18.5,
+        "games": 44,
+        "receiving_yards_per_game": 175.0,
+        "receptions_per_game": 13.3,
+        "targets_per_game": 18.7,
         "receiving_tds_per_game": 1.0
       },
       {
         "team": "BAL",
         "rank": 2,
         "label": "Smash",
-        "games": 44,
-        "receiving_yards_per_game": 166.9,
+        "games": 45,
+        "receiving_yards_per_game": 166.0,
         "receptions_per_game": 12.4,
         "targets_per_game": 19.8,
         "receiving_tds_per_game": 0.8
@@ -674,51 +674,51 @@
         "team": "DAL",
         "rank": 3,
         "label": "Smash",
-        "games": 44,
-        "receiving_yards_per_game": 163.1,
-        "receptions_per_game": 12.0,
-        "targets_per_game": 18.1,
-        "receiving_tds_per_game": 1.2
+        "games": 45,
+        "receiving_yards_per_game": 165.5,
+        "receptions_per_game": 12.2,
+        "targets_per_game": 18.3,
+        "receiving_tds_per_game": 1.3
       },
       {
         "team": "DET",
         "rank": 4,
         "label": "Smash",
-        "games": 43,
-        "receiving_yards_per_game": 161.8,
+        "games": 44,
+        "receiving_yards_per_game": 159.5,
         "receptions_per_game": 12.5,
-        "targets_per_game": 20.5,
-        "receiving_tds_per_game": 0.9
+        "targets_per_game": 20.4,
+        "receiving_tds_per_game": 1.0
       },
       {
         "team": "PIT",
         "rank": 5,
         "label": "Smash",
-        "games": 43,
-        "receiving_yards_per_game": 159.9,
-        "receptions_per_game": 12.5,
+        "games": 44,
+        "receiving_yards_per_game": 157.6,
+        "receptions_per_game": 12.4,
         "targets_per_game": 19.9,
         "receiving_tds_per_game": 0.8
       },
       {
-        "team": "JAX",
+        "team": "IND",
         "rank": 6,
         "label": "Smash",
-        "games": 43,
-        "receiving_yards_per_game": 157.6,
-        "receptions_per_game": 12.5,
-        "targets_per_game": 19.8,
-        "receiving_tds_per_game": 0.7
+        "games": 45,
+        "receiving_yards_per_game": 156.5,
+        "receptions_per_game": 11.5,
+        "targets_per_game": 18.5,
+        "receiving_tds_per_game": 0.9
       },
       {
-        "team": "IND",
+        "team": "JAX",
         "rank": 7,
         "label": "Favorable",
         "games": 44,
-        "receiving_yards_per_game": 157.2,
-        "receptions_per_game": 11.6,
-        "targets_per_game": 18.7,
-        "receiving_tds_per_game": 0.9
+        "receiving_yards_per_game": 154.9,
+        "receptions_per_game": 12.4,
+        "targets_per_game": 20.0,
+        "receiving_tds_per_game": 0.7
       },
       {
         "team": "ATL",
@@ -734,65 +734,55 @@
         "team": "LV",
         "rank": 9,
         "label": "Favorable",
-        "games": 44,
-        "receiving_yards_per_game": 153.6,
-        "receptions_per_game": 11.3,
-        "targets_per_game": 17.5,
-        "receiving_tds_per_game": 1.1
-      },
-      {
-        "team": "WAS",
-        "rank": 10,
-        "label": "Favorable",
-        "games": 43,
-        "receiving_yards_per_game": 153.5,
-        "receptions_per_game": 12.2,
-        "targets_per_game": 19.0,
-        "receiving_tds_per_game": 0.9
-      },
-      {
-        "team": "CHI",
-        "rank": 11,
-        "label": "Favorable",
-        "games": 43,
-        "receiving_yards_per_game": 151.4,
-        "receptions_per_game": 10.2,
-        "targets_per_game": 16.5,
+        "games": 45,
+        "receiving_yards_per_game": 152.7,
+        "receptions_per_game": 11.2,
+        "targets_per_game": 17.4,
         "receiving_tds_per_game": 1.0
       },
       {
-        "team": "HOU",
-        "rank": 12,
+        "team": "CHI",
+        "rank": 10,
         "label": "Favorable",
-        "games": 43,
-        "receiving_yards_per_game": 150.9,
-        "receptions_per_game": 10.8,
-        "targets_per_game": 19.0,
-        "receiving_tds_per_game": 0.8
+        "games": 44,
+        "receiving_yards_per_game": 152.7,
+        "receptions_per_game": 10.5,
+        "targets_per_game": 16.8,
+        "receiving_tds_per_game": 1.0
+      },
+      {
+        "team": "WAS",
+        "rank": 11,
+        "label": "Favorable",
+        "games": 44,
+        "receiving_yards_per_game": 150.6,
+        "receptions_per_game": 12.1,
+        "targets_per_game": 18.9,
+        "receiving_tds_per_game": 1.0
       },
       {
         "team": "PHI",
-        "rank": 13,
+        "rank": 12,
         "label": "Favorable",
-        "games": 43,
-        "receiving_yards_per_game": 150.5,
-        "receptions_per_game": 11.5,
-        "targets_per_game": 19.8,
+        "games": 44,
+        "receiving_yards_per_game": 150.3,
+        "receptions_per_game": 11.7,
+        "targets_per_game": 20.1,
         "receiving_tds_per_game": 0.8
       },
       {
-        "team": "TB",
-        "rank": 14,
-        "label": "Neutral",
-        "games": 43,
-        "receiving_yards_per_game": 146.3,
-        "receptions_per_game": 12.0,
-        "targets_per_game": 19.2,
-        "receiving_tds_per_game": 0.9
+        "team": "HOU",
+        "rank": 13,
+        "label": "Favorable",
+        "games": 44,
+        "receiving_yards_per_game": 149.0,
+        "receptions_per_game": 10.6,
+        "targets_per_game": 18.8,
+        "receiving_tds_per_game": 0.8
       },
       {
         "team": "NE",
-        "rank": 15,
+        "rank": 14,
         "label": "Neutral",
         "games": 44,
         "receiving_yards_per_game": 146.3,
@@ -801,23 +791,33 @@
         "receiving_tds_per_game": 1.2
       },
       {
+        "team": "NYG",
+        "rank": 15,
+        "label": "Neutral",
+        "games": 44,
+        "receiving_yards_per_game": 146.3,
+        "receptions_per_game": 11.5,
+        "targets_per_game": 19.0,
+        "receiving_tds_per_game": 1.1
+      },
+      {
         "team": "ARI",
         "rank": 16,
         "label": "Neutral",
-        "games": 44,
-        "receiving_yards_per_game": 144.4,
-        "receptions_per_game": 10.8,
-        "targets_per_game": 16.9,
+        "games": 45,
+        "receiving_yards_per_game": 146.2,
+        "receptions_per_game": 11.0,
+        "targets_per_game": 17.1,
         "receiving_tds_per_game": 1.0
       },
       {
-        "team": "LAC",
+        "team": "TB",
         "rank": 17,
         "label": "Neutral",
-        "games": 43,
-        "receiving_yards_per_game": 143.7,
-        "receptions_per_game": 11.0,
-        "targets_per_game": 17.7,
+        "games": 44,
+        "receiving_yards_per_game": 145.7,
+        "receptions_per_game": 11.8,
+        "targets_per_game": 19.0,
         "receiving_tds_per_game": 0.9
       },
       {
@@ -831,74 +831,74 @@
         "receiving_tds_per_game": 1.0
       },
       {
-        "team": "NYG",
+        "team": "SF",
         "rank": 19,
         "label": "Neutral",
-        "games": 43,
-        "receiving_yards_per_game": 142.0,
-        "receptions_per_game": 11.3,
-        "targets_per_game": 18.2,
-        "receiving_tds_per_game": 1.1
-      },
-      {
-        "team": "SF",
-        "rank": 20,
-        "label": "Tough",
-        "games": 43,
-        "receiving_yards_per_game": 140.8,
-        "receptions_per_game": 11.6,
-        "targets_per_game": 18.3,
+        "games": 44,
+        "receiving_yards_per_game": 142.4,
+        "receptions_per_game": 11.9,
+        "targets_per_game": 18.8,
         "receiving_tds_per_game": 1.0
       },
       {
-        "team": "NO",
-        "rank": 21,
+        "team": "LAC",
+        "rank": 20,
         "label": "Tough",
-        "games": 43,
-        "receiving_yards_per_game": 138.2,
-        "receptions_per_game": 10.5,
-        "targets_per_game": 17.3,
-        "receiving_tds_per_game": 0.9
+        "games": 44,
+        "receiving_yards_per_game": 141.9,
+        "receptions_per_game": 10.9,
+        "targets_per_game": 17.4,
+        "receiving_tds_per_game": 1.0
       },
       {
         "team": "CAR",
-        "rank": 22,
+        "rank": 21,
         "label": "Tough",
-        "games": 43,
-        "receiving_yards_per_game": 136.4,
+        "games": 44,
+        "receiving_yards_per_game": 138.8,
         "receptions_per_game": 11.4,
-        "targets_per_game": 17.7,
+        "targets_per_game": 17.8,
         "receiving_tds_per_game": 0.8
       },
       {
-        "team": "BUF",
-        "rank": 23,
+        "team": "NO",
+        "rank": 22,
         "label": "Tough",
-        "games": 43,
-        "receiving_yards_per_game": 135.5,
-        "receptions_per_game": 10.9,
-        "targets_per_game": 17.9,
-        "receiving_tds_per_game": 0.9
+        "games": 44,
+        "receiving_yards_per_game": 137.6,
+        "receptions_per_game": 10.5,
+        "targets_per_game": 17.1,
+        "receiving_tds_per_game": 0.8
       },
       {
         "team": "DEN",
-        "rank": 24,
+        "rank": 23,
         "label": "Tough",
-        "games": 43,
-        "receiving_yards_per_game": 135.4,
+        "games": 44,
+        "receiving_yards_per_game": 136.1,
         "receptions_per_game": 11.5,
-        "targets_per_game": 19.4,
+        "targets_per_game": 19.6,
         "receiving_tds_per_game": 0.5
       },
       {
         "team": "MIN",
-        "rank": 25,
+        "rank": 24,
         "label": "Tough",
-        "games": 43,
-        "receiving_yards_per_game": 133.6,
-        "receptions_per_game": 10.6,
+        "games": 44,
+        "receiving_yards_per_game": 135.7,
+        "receptions_per_game": 10.7,
         "targets_per_game": 17.2,
         "receiving_tds_per_game": 0.7
+      },
+      {
+        "team": "BUF",
+        "rank": 25,
+        "label": "Tough",
+        "games": 44,
+        "receiving_yards_per_game": 133.5,
+        "receptions_per_game": 10.8,
+        "targets_per_game": 18.1,
+        "receiving_tds_per_game": 0.9
       },
       {
         "team": "CLE",
@@ -921,44 +921,44 @@
         "receiving_tds_per_game": 0.9
       },
       {
-        "team": "NYJ",
+        "team": "MIA",
         "rank": 28,
         "label": "Avoid",
         "games": 44,
-        "receiving_yards_per_game": 130.9,
-        "receptions_per_game": 10.3,
-        "targets_per_game": 16.4,
+        "receiving_yards_per_game": 129.4,
+        "receptions_per_game": 10.5,
+        "targets_per_game": 15.3,
+        "receiving_tds_per_game": 0.8
+      },
+      {
+        "team": "NYJ",
+        "rank": 29,
+        "label": "Avoid",
+        "games": 45,
+        "receiving_yards_per_game": 128.8,
+        "receptions_per_game": 10.2,
+        "targets_per_game": 16.2,
         "receiving_tds_per_game": 0.9
       },
       {
-        "team": "KC",
-        "rank": 29,
-        "label": "Avoid",
-        "games": 43,
-        "receiving_yards_per_game": 127.5,
-        "receptions_per_game": 10.9,
-        "targets_per_game": 18.1,
-        "receiving_tds_per_game": 0.6
-      },
-      {
-        "team": "MIA",
+        "team": "CIN",
         "rank": 30,
         "label": "Avoid",
-        "games": 43,
-        "receiving_yards_per_game": 126.1,
-        "receptions_per_game": 10.3,
-        "targets_per_game": 14.9,
+        "games": 44,
+        "receiving_yards_per_game": 128.0,
+        "receptions_per_game": 9.8,
+        "targets_per_game": 16.2,
         "receiving_tds_per_game": 0.8
       },
       {
-        "team": "CIN",
+        "team": "KC",
         "rank": 31,
         "label": "Avoid",
-        "games": 43,
-        "receiving_yards_per_game": 125.1,
-        "receptions_per_game": 9.6,
-        "targets_per_game": 16.0,
-        "receiving_tds_per_game": 0.8
+        "games": 44,
+        "receiving_yards_per_game": 125.5,
+        "receptions_per_game": 10.7,
+        "targets_per_game": 17.9,
+        "receiving_tds_per_game": 0.6
       },
       {
         "team": "SEA",
@@ -976,131 +976,131 @@
         "team": "CIN",
         "rank": 1,
         "label": "Smash",
-        "games": 43,
-        "receiving_yards_per_game": 77.6,
-        "receptions_per_game": 6.5,
-        "targets_per_game": 9.1,
+        "games": 44,
+        "receiving_yards_per_game": 77.1,
+        "receptions_per_game": 6.4,
+        "targets_per_game": 9.0,
         "receiving_tds_per_game": 0.6
       },
       {
-        "team": "DEN",
+        "team": "WAS",
         "rank": 2,
         "label": "Smash",
-        "games": 43,
-        "receiving_yards_per_game": 62.9,
-        "receptions_per_game": 6.2,
-        "targets_per_game": 8.9,
+        "games": 44,
+        "receiving_yards_per_game": 64.5,
+        "receptions_per_game": 5.6,
+        "targets_per_game": 7.4,
+        "receiving_tds_per_game": 0.7
+      },
+      {
+        "team": "TB",
+        "rank": 3,
+        "label": "Smash",
+        "games": 44,
+        "receiving_yards_per_game": 62.2,
+        "receptions_per_game": 5.8,
+        "targets_per_game": 8.0,
         "receiving_tds_per_game": 0.5
       },
       {
-        "team": "WAS",
-        "rank": 3,
-        "label": "Smash",
-        "games": 43,
-        "receiving_yards_per_game": 62.2,
-        "receptions_per_game": 5.4,
-        "targets_per_game": 7.2,
-        "receiving_tds_per_game": 0.8
-      },
-      {
-        "team": "DET",
+        "team": "DEN",
         "rank": 4,
         "label": "Smash",
-        "games": 43,
+        "games": 44,
         "receiving_yards_per_game": 61.3,
-        "receptions_per_game": 5.8,
-        "targets_per_game": 8.2,
-        "receiving_tds_per_game": 0.7
+        "receptions_per_game": 6.0,
+        "targets_per_game": 8.7,
+        "receiving_tds_per_game": 0.5
       },
       {
         "team": "MIA",
         "rank": 5,
         "label": "Smash",
-        "games": 43,
+        "games": 44,
         "receiving_yards_per_game": 61.2,
-        "receptions_per_game": 6.2,
+        "receptions_per_game": 6.0,
         "targets_per_game": 7.9,
         "receiving_tds_per_game": 0.5
       },
       {
-        "team": "TB",
+        "team": "DET",
         "rank": 6,
         "label": "Smash",
-        "games": 43,
-        "receiving_yards_per_game": 59.7,
-        "receptions_per_game": 5.7,
-        "targets_per_game": 7.9,
-        "receiving_tds_per_game": 0.6
-      },
-      {
-        "team": "PIT",
-        "rank": 7,
-        "label": "Favorable",
-        "games": 43,
-        "receiving_yards_per_game": 59.4,
-        "receptions_per_game": 5.8,
-        "targets_per_game": 7.8,
-        "receiving_tds_per_game": 0.5
+        "games": 44,
+        "receiving_yards_per_game": 59.2,
+        "receptions_per_game": 5.6,
+        "targets_per_game": 8.1,
+        "receiving_tds_per_game": 0.7
       },
       {
         "team": "KC",
-        "rank": 8,
+        "rank": 7,
         "label": "Favorable",
-        "games": 43,
-        "receiving_yards_per_game": 58.3,
-        "receptions_per_game": 5.7,
-        "targets_per_game": 7.5,
+        "games": 44,
+        "receiving_yards_per_game": 58.7,
+        "receptions_per_game": 5.9,
+        "targets_per_game": 7.9,
         "receiving_tds_per_game": 0.4
       },
       {
-        "team": "IND",
-        "rank": 9,
+        "team": "PIT",
+        "rank": 8,
         "label": "Favorable",
         "games": 44,
-        "receiving_yards_per_game": 57.9,
-        "receptions_per_game": 5.3,
-        "targets_per_game": 7.3,
+        "receiving_yards_per_game": 58.6,
+        "receptions_per_game": 5.6,
+        "targets_per_game": 7.6,
         "receiving_tds_per_game": 0.5
+      },
+      {
+        "team": "ARI",
+        "rank": 9,
+        "label": "Favorable",
+        "games": 45,
+        "receiving_yards_per_game": 57.5,
+        "receptions_per_game": 5.7,
+        "targets_per_game": 7.6,
+        "receiving_tds_per_game": 0.7
       },
       {
         "team": "NO",
         "rank": 10,
         "label": "Favorable",
-        "games": 43,
-        "receiving_yards_per_game": 57.7,
-        "receptions_per_game": 5.4,
-        "targets_per_game": 7.6,
+        "games": 44,
+        "receiving_yards_per_game": 57.4,
+        "receptions_per_game": 5.3,
+        "targets_per_game": 7.4,
         "receiving_tds_per_game": 0.4
+      },
+      {
+        "team": "IND",
+        "rank": 11,
+        "label": "Favorable",
+        "games": 45,
+        "receiving_yards_per_game": 57.3,
+        "receptions_per_game": 5.3,
+        "targets_per_game": 7.3,
+        "receiving_tds_per_game": 0.5
       },
       {
         "team": "NYJ",
-        "rank": 11,
+        "rank": 12,
         "label": "Favorable",
-        "games": 44,
-        "receiving_yards_per_game": 56.2,
-        "receptions_per_game": 5.4,
-        "targets_per_game": 7.5,
+        "games": 45,
+        "receiving_yards_per_game": 55.2,
+        "receptions_per_game": 5.3,
+        "targets_per_game": 7.4,
         "receiving_tds_per_game": 0.4
       },
       {
-        "team": "ARI",
-        "rank": 12,
-        "label": "Favorable",
-        "games": 44,
-        "receiving_yards_per_game": 56.1,
-        "receptions_per_game": 5.5,
-        "targets_per_game": 7.4,
-        "receiving_tds_per_game": 0.6
-      },
-      {
-        "team": "CAR",
+        "team": "SF",
         "rank": 13,
         "label": "Favorable",
-        "games": 43,
-        "receiving_yards_per_game": 53.3,
-        "receptions_per_game": 4.9,
-        "targets_per_game": 6.9,
-        "receiving_tds_per_game": 0.5
+        "games": 44,
+        "receiving_yards_per_game": 52.9,
+        "receptions_per_game": 5.7,
+        "targets_per_game": 7.9,
+        "receiving_tds_per_game": 0.4
       },
       {
         "team": "SEA",
@@ -1113,34 +1113,34 @@
         "receiving_tds_per_game": 0.3
       },
       {
-        "team": "SF",
+        "team": "CAR",
         "rank": 15,
         "label": "Neutral",
-        "games": 43,
-        "receiving_yards_per_game": 52.6,
-        "receptions_per_game": 5.6,
-        "targets_per_game": 7.8,
-        "receiving_tds_per_game": 0.4
-      },
-      {
-        "team": "CHI",
-        "rank": 16,
-        "label": "Neutral",
-        "games": 43,
-        "receiving_yards_per_game": 52.4,
-        "receptions_per_game": 5.1,
-        "targets_per_game": 7.0,
-        "receiving_tds_per_game": 0.3
+        "games": 44,
+        "receiving_yards_per_game": 52.5,
+        "receptions_per_game": 4.9,
+        "targets_per_game": 6.9,
+        "receiving_tds_per_game": 0.5
       },
       {
         "team": "NE",
-        "rank": 17,
+        "rank": 16,
         "label": "Neutral",
         "games": 43,
         "receiving_yards_per_game": 52.1,
         "receptions_per_game": 5.3,
         "targets_per_game": 7.6,
         "receiving_tds_per_game": 0.3
+      },
+      {
+        "team": "BAL",
+        "rank": 17,
+        "label": "Neutral",
+        "games": 45,
+        "receiving_yards_per_game": 51.7,
+        "receptions_per_game": 4.9,
+        "targets_per_game": 6.6,
+        "receiving_tds_per_game": 0.4
       },
       {
         "team": "CLE",
@@ -1153,34 +1153,34 @@
         "receiving_tds_per_game": 0.4
       },
       {
-        "team": "LA",
+        "team": "CHI",
         "rank": 19,
         "label": "Neutral",
+        "games": 44,
+        "receiving_yards_per_game": 51.3,
+        "receptions_per_game": 5.0,
+        "targets_per_game": 7.0,
+        "receiving_tds_per_game": 0.3
+      },
+      {
+        "team": "LV",
+        "rank": 20,
+        "label": "Tough",
+        "games": 45,
+        "receiving_yards_per_game": 50.3,
+        "receptions_per_game": 5.4,
+        "targets_per_game": 7.2,
+        "receiving_tds_per_game": 0.6
+      },
+      {
+        "team": "LA",
+        "rank": 21,
+        "label": "Tough",
         "games": 44,
         "receiving_yards_per_game": 50.1,
         "receptions_per_game": 5.5,
         "targets_per_game": 7.9,
         "receiving_tds_per_game": 0.3
-      },
-      {
-        "team": "DAL",
-        "rank": 20,
-        "label": "Tough",
-        "games": 44,
-        "receiving_yards_per_game": 49.8,
-        "receptions_per_game": 5.1,
-        "targets_per_game": 6.6,
-        "receiving_tds_per_game": 0.3
-      },
-      {
-        "team": "BAL",
-        "rank": 21,
-        "label": "Tough",
-        "games": 44,
-        "receiving_yards_per_game": 49.6,
-        "receptions_per_game": 4.8,
-        "targets_per_game": 6.5,
-        "receiving_tds_per_game": 0.4
       },
       {
         "team": "ATL",
@@ -1193,78 +1193,58 @@
         "receiving_tds_per_game": 0.3
       },
       {
-        "team": "LV",
+        "team": "LAC",
         "rank": 23,
         "label": "Tough",
         "games": 44,
         "receiving_yards_per_game": 49.2,
-        "receptions_per_game": 5.3,
-        "targets_per_game": 7.1,
-        "receiving_tds_per_game": 0.6
-      },
-      {
-        "team": "LAC",
-        "rank": 24,
-        "label": "Tough",
-        "games": 43,
-        "receiving_yards_per_game": 49.0,
         "receptions_per_game": 4.7,
         "targets_per_game": 6.2,
         "receiving_tds_per_game": 0.2
       },
       {
-        "team": "JAX",
-        "rank": 25,
+        "team": "DAL",
+        "rank": 24,
         "label": "Tough",
-        "games": 43,
-        "receiving_yards_per_game": 47.8,
-        "receptions_per_game": 5.2,
-        "targets_per_game": 7.5,
-        "receiving_tds_per_game": 0.5
-      },
-      {
-        "team": "HOU",
-        "rank": 26,
-        "label": "Tough",
-        "games": 43,
-        "receiving_yards_per_game": 46.9,
-        "receptions_per_game": 4.9,
-        "targets_per_game": 6.9,
+        "games": 45,
+        "receiving_yards_per_game": 48.6,
+        "receptions_per_game": 5.0,
+        "targets_per_game": 6.5,
         "receiving_tds_per_game": 0.3
       },
       {
+        "team": "JAX",
+        "rank": 25,
+        "label": "Tough",
+        "games": 44,
+        "receiving_yards_per_game": 48.4,
+        "receptions_per_game": 5.1,
+        "targets_per_game": 7.4,
+        "receiving_tds_per_game": 0.5
+      },
+      {
         "team": "TEN",
-        "rank": 27,
-        "label": "Avoid",
-        "games": 43,
-        "receiving_yards_per_game": 46.5,
+        "rank": 26,
+        "label": "Tough",
+        "games": 44,
+        "receiving_yards_per_game": 46.7,
         "receptions_per_game": 4.9,
         "targets_per_game": 6.7,
         "receiving_tds_per_game": 0.5
       },
       {
-        "team": "BUF",
-        "rank": 28,
+        "team": "HOU",
+        "rank": 27,
         "label": "Avoid",
-        "games": 42,
-        "receiving_yards_per_game": 46.3,
-        "receptions_per_game": 4.5,
-        "targets_per_game": 6.8,
-        "receiving_tds_per_game": 0.2
-      },
-      {
-        "team": "NYG",
-        "rank": 29,
-        "label": "Avoid",
-        "games": 43,
+        "games": 44,
         "receiving_yards_per_game": 45.9,
-        "receptions_per_game": 5.1,
-        "targets_per_game": 7.0,
+        "receptions_per_game": 4.7,
+        "targets_per_game": 6.8,
         "receiving_tds_per_game": 0.3
       },
       {
         "team": "GB",
-        "rank": 30,
+        "rank": 28,
         "label": "Avoid",
         "games": 44,
         "receiving_yards_per_game": 45.8,
@@ -1273,23 +1253,43 @@
         "receiving_tds_per_game": 0.3
       },
       {
-        "team": "MIN",
-        "rank": 31,
+        "team": "BUF",
+        "rank": 29,
         "label": "Avoid",
         "games": 43,
         "receiving_yards_per_game": 44.9,
-        "receptions_per_game": 4.3,
-        "targets_per_game": 6.6,
+        "receptions_per_game": 4.4,
+        "targets_per_game": 6.8,
         "receiving_tds_per_game": 0.2
+      },
+      {
+        "team": "NYG",
+        "rank": 30,
+        "label": "Avoid",
+        "games": 44,
+        "receiving_yards_per_game": 44.7,
+        "receptions_per_game": 5.0,
+        "targets_per_game": 6.9,
+        "receiving_tds_per_game": 0.3
+      },
+      {
+        "team": "MIN",
+        "rank": 31,
+        "label": "Avoid",
+        "games": 44,
+        "receiving_yards_per_game": 44.7,
+        "receptions_per_game": 4.3,
+        "targets_per_game": 6.5,
+        "receiving_tds_per_game": 0.3
       },
       {
         "team": "PHI",
         "rank": 32,
         "label": "Avoid",
-        "games": 43,
-        "receiving_yards_per_game": 35.7,
-        "receptions_per_game": 4.1,
-        "targets_per_game": 6.0,
+        "games": 44,
+        "receiving_yards_per_game": 36.7,
+        "receptions_per_game": 4.2,
+        "targets_per_game": 6.1,
         "receiving_tds_per_game": 0.3
       }
     ]
