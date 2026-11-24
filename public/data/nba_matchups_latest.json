@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T15:16:02.892598+00:00",
+  "generated_at": "2026-11-24T22:46:22.251185+00:00",
   "slate_date": "2026-11-24",
   "season": "2026-27",
   "is_sample": false,
@@ -172,9 +172,9 @@
       "away_team": "BOS",
       "home_team": "WAS",
       "tip_time_et": "8:00 PM ET",
-      "away_proj_score": 107,
+      "away_proj_score": 111,
       "home_proj_score": 109,
-      "proj_total": 216,
+      "proj_total": 220,
       "injuries": [
         {
           "player": "Mitchell Robinson",
@@ -207,6 +207,10 @@
         {
           "player": "Felix Okpara",
           "status": "Questionable"
+        },
+        {
+          "player": "Tre Mann",
+          "status": "Questionable"
         }
       ],
       "blowout_flag": false,
@@ -216,7 +220,7 @@
           "player_id": "434",
           "position": "F",
           "confidence_rate": 0,
-          "proj_pts": 22,
+          "proj_pts": 23,
           "proj_reb": 9,
           "proj_ast": 5,
           "proj_3pm": 2
@@ -320,8 +324,8 @@
       "home_team": "DEN",
       "tip_time_et": "10:00 PM ET",
       "away_proj_score": 119,
-      "home_proj_score": 116,
-      "proj_total": 235,
+      "home_proj_score": 117,
+      "proj_total": 236,
       "injuries": [
         {
           "player": "Dereck Lively II",
@@ -433,6 +437,16 @@
           "proj_3pm": 1
         },
         {
+          "player": "Aaron Gordon",
+          "player_id": "177",
+          "position": "F",
+          "confidence_rate": 0,
+          "proj_pts": 11,
+          "proj_reb": 5,
+          "proj_ast": 2,
+          "proj_3pm": 1
+        },
+        {
           "player": "Cameron Johnson",
           "player_id": "666679",
           "position": "F",
@@ -441,16 +455,6 @@
           "proj_reb": 3,
           "proj_ast": 3,
           "proj_3pm": 2
-        },
-        {
-          "player": "Aaron Gordon",
-          "player_id": "177",
-          "position": "F",
-          "confidence_rate": 0,
-          "proj_pts": 10,
-          "proj_reb": 5,
-          "proj_ast": 2,
-          "proj_3pm": 1
         }
       ]
     }
