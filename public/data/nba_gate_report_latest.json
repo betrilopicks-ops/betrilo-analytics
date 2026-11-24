@@ -1,22 +1,22 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-11-23T22:46:28.282301+00:00",
-  "slate_date": "2026-11-23",
-  "today_et": "2026-11-23",
-  "player_count": 198,
-  "game_count": 10,
+  "run_at": "2026-11-24T12:02:45.348320+00:00",
+  "slate_date": "2026-11-24",
+  "today_et": "2026-11-24",
+  "player_count": 60,
+  "game_count": 3,
   "checks": {
     "1_slate_date_and_sample": {
       "passed": true,
-      "slate_date": "2026-11-23",
-      "expected_date": "2026-11-23",
+      "slate_date": "2026-11-24",
+      "expected_date": "2026-11-24",
       "is_sample": false
     },
     "2_game_count": {
       "passed": true,
-      "json_games": 10,
-      "scoreboard_games": 10
+      "json_games": 3,
+      "scoreboard_games": 3
     },
     "3_game_coverage": {
       "passed": true,
@@ -33,18 +33,10 @@
     },
     "6_prior_season_cap": {
       "passed": true,
-      "dropped": [
-        {
-          "player": "Brook Lopez",
-          "player_id": "283",
-          "proj_pts": 23.0,
-          "avg_pts": 8.6,
-          "ratio": 2.69
-        }
-      ],
+      "dropped": [],
       "exempted": [],
-      "players_checked": 154,
-      "players_dropped": 1
+      "players_checked": 48,
+      "players_dropped": 0
     },
     "7_integrity": {
       "passed": true,
@@ -54,37 +46,23 @@
     },
     "6_7_systemic_guard": {
       "passed": true,
-      "total_players": 198,
-      "players_dropped": 1,
-      "drop_pct": 0.005,
+      "total_players": 60,
+      "players_dropped": 0,
+      "drop_pct": 0.0,
       "threshold": 0.05
     },
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 198,
-      "median_rotation_pts": 9.0,
+      "rotation_count": 60,
+      "median_rotation_pts": 8.0,
       "team_scores": {
-        "MEM": 96.0,
-        "CHA": 102.0,
-        "POR": 109.0,
-        "PHI": 106.0,
-        "OKC": 103.0,
-        "IND": 95.0,
-        "MIL": 102.0,
-        "TOR": 109.0,
-        "BKN": 96.0,
-        "MIN": 100.0,
-        "CLE": 111.0,
-        "CHI": 103.0,
-        "PHX": 113.0,
-        "NOP": 106.0,
-        "LAC": 100.0,
-        "HOU": 102.0,
-        "UTA": 102.0,
-        "LAL": 103.0,
-        "SAS": 102.0,
-        "SAC": 100.0
+        "DET": 96.0,
+        "ORL": 95.0,
+        "BOS": 97.0,
+        "WAS": 99.0,
+        "DAL": 109.0,
+        "DEN": 107.0
       },
       "zero_pts_pct": 0.0,
       "dropped_games": [],
@@ -103,8 +81,8 @@
   "failures": [],
   "matchups_checks": {
     "slate_date_match": true,
-    "game_count_before": 10,
-    "game_count_after": 10,
+    "game_count_before": 3,
+    "game_count_after": 3,
     "dropped_games": []
   }
 }
