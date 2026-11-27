@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T15:16:10.953500+00:00",
+  "generated_at": "2026-11-27T22:46:36.506810+00:00",
   "slate_date": "2026-11-27",
   "season": "2026-27",
   "is_sample": false,
@@ -116,13 +116,13 @@
       "player_id": "15",
       "player": "Giannis Antetokounmpo",
       "position": "F",
-      "confidence_rate": 0,
+      "confidence_rate": 80,
       "proj_pts": 22,
       "proj_reb": 11,
       "proj_ast": 5,
       "proj_3pm": 0,
       "proj_pra": 38,
-      "injury_status": "Probable"
+      "injury_status": "Available"
     },
     {
       "game_id": "21718193",
@@ -168,7 +168,7 @@
       "proj_ast": 2,
       "proj_3pm": 1,
       "proj_pra": 10,
-      "injury_status": "Probable"
+      "injury_status": "Available"
     },
     {
       "game_id": "21718193",
@@ -239,27 +239,11 @@
       "player": "Jalen Brunson",
       "position": "G",
       "confidence_rate": 90,
-      "proj_pts": 26,
+      "proj_pts": 28,
       "proj_reb": 4,
-      "proj_ast": 6,
-      "proj_3pm": 2,
-      "proj_pra": 36
-    },
-    {
-      "game_id": "21718193",
-      "game_time": "7:00 PM ET",
-      "team": "NYK",
-      "opp": "MIA",
-      "player_id": "18",
-      "player": "OG Anunoby",
-      "position": "F",
-      "confidence_rate": 70,
-      "proj_pts": 13,
-      "proj_reb": 6,
-      "proj_ast": 2,
-      "proj_3pm": 1,
-      "proj_pra": 21,
-      "injury_status": "Doubtful"
+      "proj_ast": 7,
+      "proj_3pm": 3,
+      "proj_pra": 39
     },
     {
       "game_id": "21718193",
@@ -269,12 +253,13 @@
       "player_id": "447",
       "player": "Karl-Anthony Towns",
       "position": "C",
-      "confidence_rate": 80,
-      "proj_pts": 15,
-      "proj_reb": 12,
+      "confidence_rate": 0,
+      "proj_pts": 17,
+      "proj_reb": 13,
       "proj_ast": 5,
       "proj_3pm": 2,
-      "proj_pra": 32
+      "proj_pra": 35,
+      "injury_status": "Questionable"
     },
     {
       "game_id": "21718193",
@@ -285,11 +270,11 @@
       "player": "Josh Hart",
       "position": "G",
       "confidence_rate": 70,
-      "proj_pts": 8,
-      "proj_reb": 7,
-      "proj_ast": 6,
+      "proj_pts": 9,
+      "proj_reb": 8,
+      "proj_ast": 7,
       "proj_3pm": 1,
-      "proj_pra": 21
+      "proj_pra": 24
     },
     {
       "game_id": "21718193",
@@ -300,11 +285,11 @@
       "player": "Landry Shamet",
       "position": "G",
       "confidence_rate": 70,
-      "proj_pts": 11,
+      "proj_pts": 12,
       "proj_reb": 2,
       "proj_ast": 2,
       "proj_3pm": 2,
-      "proj_pra": 15
+      "proj_pra": 16
     },
     {
       "game_id": "21718193",
@@ -315,43 +300,11 @@
       "player": "Mikal Bridges",
       "position": "F",
       "confidence_rate": 0,
-      "proj_pts": 8,
+      "proj_pts": 9,
       "proj_reb": 5,
       "proj_ast": 2,
       "proj_3pm": 1,
-      "proj_pra": 15
-    },
-    {
-      "game_id": "21718193",
-      "game_time": "7:00 PM ET",
-      "team": "NYK",
-      "opp": "MIA",
-      "player_id": "17896033",
-      "player": "Miles McBride",
-      "position": "G",
-      "confidence_rate": 0,
-      "proj_pts": 5,
-      "proj_reb": 1,
-      "proj_ast": 1,
-      "proj_3pm": 1,
-      "proj_pra": 7,
-      "injury_status": "Questionable"
-    },
-    {
-      "game_id": "21718193",
-      "game_time": "7:00 PM ET",
-      "team": "NYK",
-      "opp": "MIA",
-      "player_id": "137",
-      "player": "Andre Drummond",
-      "position": "C",
-      "confidence_rate": 0,
-      "proj_pts": 4,
-      "proj_reb": 7,
-      "proj_ast": 1,
-      "proj_3pm": 0,
-      "proj_pra": 12,
-      "injury_status": "Questionable"
+      "proj_pra": 16
     },
     {
       "game_id": "21718193",
@@ -362,11 +315,11 @@
       "player": "Tyler Kolek",
       "position": "G",
       "confidence_rate": 70,
-      "proj_pts": 5,
+      "proj_pts": 6,
       "proj_reb": 2,
       "proj_ast": 3,
       "proj_3pm": 0,
-      "proj_pra": 10
+      "proj_pra": 11
     },
     {
       "game_id": "21718193",
@@ -377,11 +330,56 @@
       "player": "Jose Alvarado",
       "position": "G",
       "confidence_rate": 0,
-      "proj_pts": 6,
+      "proj_pts": 7,
       "proj_reb": 1,
       "proj_ast": 2,
       "proj_3pm": 1,
-      "proj_pra": 9
+      "proj_pra": 10
+    },
+    {
+      "game_id": "21718193",
+      "game_time": "7:00 PM ET",
+      "team": "NYK",
+      "opp": "MIA",
+      "player_id": "1057393207",
+      "player": "Mohamed Diawara",
+      "position": "F",
+      "confidence_rate": 0,
+      "proj_pts": 3,
+      "proj_reb": 2,
+      "proj_ast": 1,
+      "proj_3pm": 0,
+      "proj_pra": 6
+    },
+    {
+      "game_id": "21718193",
+      "game_time": "7:00 PM ET",
+      "team": "NYK",
+      "opp": "MIA",
+      "player_id": "1028025498",
+      "player": "Pacome Dadiet",
+      "position": "F",
+      "confidence_rate": 0,
+      "proj_pts": 4,
+      "proj_reb": 1,
+      "proj_ast": 1,
+      "proj_3pm": 1,
+      "proj_pra": 6
+    },
+    {
+      "game_id": "21718193",
+      "game_time": "7:00 PM ET",
+      "team": "NYK",
+      "opp": "MIA",
+      "player_id": "3547240",
+      "player": "James Wiseman",
+      "position": "C",
+      "confidence_rate": 0,
+      "proj_pts": 6,
+      "proj_reb": 8,
+      "proj_ast": 1,
+      "proj_3pm": 0,
+      "proj_pra": 15
     },
     {
       "game_id": "21718195",
@@ -452,12 +450,13 @@
       "player_id": "666940",
       "player": "Dean Wade",
       "position": "F",
-      "confidence_rate": 70,
+      "confidence_rate": 0,
       "proj_pts": 5,
       "proj_reb": 5,
       "proj_ast": 1,
       "proj_3pm": 1,
-      "proj_pra": 10
+      "proj_pra": 10,
+      "injury_status": "Questionable"
     },
     {
       "game_id": "21718195",
@@ -543,11 +542,11 @@
       "player": "Andrew Nembhard",
       "position": "G",
       "confidence_rate": 0,
-      "proj_pts": 13,
+      "proj_pts": 12,
       "proj_reb": 2,
       "proj_ast": 7,
       "proj_3pm": 2,
-      "proj_pra": 22
+      "proj_pra": 21
     },
     {
       "game_id": "21718195",
@@ -558,11 +557,11 @@
       "player": "Pascal Siakam",
       "position": "F",
       "confidence_rate": 80,
-      "proj_pts": 27,
+      "proj_pts": 25,
       "proj_reb": 5,
       "proj_ast": 3,
       "proj_3pm": 2,
-      "proj_pra": 36
+      "proj_pra": 33
     },
     {
       "game_id": "21718195",
@@ -573,11 +572,11 @@
       "player": "Aaron Nesmith",
       "position": "G",
       "confidence_rate": 0,
-      "proj_pts": 7,
+      "proj_pts": 6,
       "proj_reb": 5,
       "proj_ast": 4,
       "proj_3pm": 1,
-      "proj_pra": 17
+      "proj_pra": 15
     },
     {
       "game_id": "21718195",
@@ -588,11 +587,11 @@
       "player": "Kelly Oubre Jr.",
       "position": "F",
       "confidence_rate": 0,
-      "proj_pts": 21,
+      "proj_pts": 19,
       "proj_reb": 5,
       "proj_ast": 1,
       "proj_3pm": 1,
-      "proj_pra": 27,
+      "proj_pra": 25,
       "injury_status": "Questionable"
     },
     {
@@ -604,11 +603,11 @@
       "player": "Ivica Zubac",
       "position": "C",
       "confidence_rate": 0,
-      "proj_pts": 10,
+      "proj_pts": 9,
       "proj_reb": 13,
       "proj_ast": 2,
       "proj_3pm": 0,
-      "proj_pra": 25
+      "proj_pra": 24
     },
     {
       "game_id": "21718195",
@@ -619,11 +618,11 @@
       "player": "Quenton Jackson",
       "position": "G",
       "confidence_rate": 70,
-      "proj_pts": 7,
+      "proj_pts": 6,
       "proj_reb": 3,
       "proj_ast": 3,
       "proj_3pm": 1,
-      "proj_pra": 14
+      "proj_pra": 12
     },
     {
       "game_id": "21718195",
@@ -634,11 +633,11 @@
       "player": "Obi Toppin",
       "position": "F",
       "confidence_rate": 80,
-      "proj_pts": 14,
+      "proj_pts": 13,
       "proj_reb": 3,
       "proj_ast": 2,
       "proj_3pm": 1,
-      "proj_pra": 19
+      "proj_pra": 18
     },
     {
       "game_id": "21718195",
@@ -653,7 +652,7 @@
       "proj_reb": 2,
       "proj_ast": 4,
       "proj_3pm": 1,
-      "proj_pra": 12
+      "proj_pra": 11
     },
     {
       "game_id": "21718195",
@@ -664,11 +663,11 @@
       "player": "T.J. McConnell",
       "position": "G",
       "confidence_rate": null,
-      "proj_pts": 7,
+      "proj_pts": 6,
       "proj_reb": 2,
       "proj_ast": 4,
       "proj_3pm": 0,
-      "proj_pra": 14,
+      "proj_pra": 12,
       "injury_status": "Questionable"
     },
     {
@@ -1148,11 +1147,11 @@
       "player": "Jaden McDaniels",
       "position": "F",
       "confidence_rate": 80,
-      "proj_pts": 29,
-      "proj_reb": 8,
-      "proj_ast": 5,
+      "proj_pts": 33,
+      "proj_reb": 10,
+      "proj_ast": 6,
       "proj_3pm": 2,
-      "proj_pra": 42
+      "proj_pra": 49
     },
     {
       "game_id": "21718198",
@@ -1163,11 +1162,11 @@
       "player": "Ayo Dosunmu",
       "position": "G",
       "confidence_rate": 0,
-      "proj_pts": 15,
-      "proj_reb": 3,
-      "proj_ast": 3,
+      "proj_pts": 17,
+      "proj_reb": 4,
+      "proj_ast": 4,
       "proj_3pm": 2,
-      "proj_pra": 21
+      "proj_pra": 25
     },
     {
       "game_id": "21718198",
@@ -1178,27 +1177,11 @@
       "player": "Jonathan Kuminga",
       "position": "F",
       "confidence_rate": 70,
-      "proj_pts": 9,
-      "proj_reb": 5,
+      "proj_pts": 11,
+      "proj_reb": 6,
       "proj_ast": 2,
       "proj_3pm": 1,
-      "proj_pra": 16
-    },
-    {
-      "game_id": "21718198",
-      "game_time": "8:30 PM ET",
-      "team": "MIN",
-      "opp": "MEM",
-      "player_id": "3547239",
-      "player": "LaMelo Ball",
-      "position": "G",
-      "confidence_rate": 0,
-      "proj_pts": 14,
-      "proj_reb": 5,
-      "proj_ast": 6,
-      "proj_3pm": 3,
-      "proj_pra": 25,
-      "injury_status": "Questionable"
+      "proj_pra": 19
     },
     {
       "game_id": "21718198",
@@ -1209,11 +1192,11 @@
       "player": "Rudy Gobert",
       "position": "C",
       "confidence_rate": 0,
-      "proj_pts": 6,
-      "proj_reb": 8,
+      "proj_pts": 7,
+      "proj_reb": 10,
       "proj_ast": 2,
       "proj_3pm": 0,
-      "proj_pra": 16
+      "proj_pra": 19
     },
     {
       "game_id": "21718198",
@@ -1224,11 +1207,11 @@
       "player": "Terrence Shannon Jr.",
       "position": "G",
       "confidence_rate": 70,
-      "proj_pts": 9,
-      "proj_reb": 3,
-      "proj_ast": 3,
+      "proj_pts": 11,
+      "proj_reb": 4,
+      "proj_ast": 4,
       "proj_3pm": 1,
-      "proj_pra": 15
+      "proj_pra": 19
     },
     {
       "game_id": "21718198",
@@ -1239,11 +1222,11 @@
       "player": "Trey Lyles",
       "position": "F",
       "confidence_rate": 70,
-      "proj_pts": 6,
-      "proj_reb": 6,
+      "proj_pts": 7,
+      "proj_reb": 7,
       "proj_ast": 2,
       "proj_3pm": 1,
-      "proj_pra": 14
+      "proj_pra": 16
     },
     {
       "game_id": "21718198",
@@ -1255,10 +1238,10 @@
       "position": "F",
       "confidence_rate": 70,
       "proj_pts": 5,
-      "proj_reb": 5,
+      "proj_reb": 6,
       "proj_ast": 0,
       "proj_3pm": 0,
-      "proj_pra": 10,
+      "proj_pra": 11,
       "injury_status": "Available"
     },
     {
@@ -1270,11 +1253,11 @@
       "player": "Nah'Shon Hyland",
       "position": "G",
       "confidence_rate": 70,
-      "proj_pts": 8,
+      "proj_pts": 10,
       "proj_reb": 1,
-      "proj_ast": 3,
-      "proj_3pm": 1,
-      "proj_pra": 12
+      "proj_ast": 4,
+      "proj_3pm": 2,
+      "proj_pra": 15
     },
     {
       "game_id": "21718199",
@@ -1299,12 +1282,13 @@
       "player_id": "228",
       "player": "Kyrie Irving",
       "position": "G",
-      "confidence_rate": 80,
+      "confidence_rate": 0,
       "proj_pts": 21,
       "proj_reb": 4,
       "proj_ast": 6,
       "proj_3pm": 2,
-      "proj_pra": 32
+      "proj_pra": 32,
+      "injury_status": "Questionable"
     },
     {
       "game_id": "21718199",
@@ -1439,7 +1423,7 @@
       "proj_pts": 25,
       "proj_reb": 3,
       "proj_ast": 6,
-      "proj_3pm": 2,
+      "proj_3pm": 1,
       "proj_pra": 34
     },
     {
@@ -1454,7 +1438,7 @@
       "proj_pts": 12,
       "proj_reb": 4,
       "proj_ast": 3,
-      "proj_3pm": 2,
+      "proj_3pm": 1,
       "proj_pra": 20
     },
     {
@@ -1600,13 +1584,13 @@
       "player_id": "17553995",
       "player": "Austin Reaves",
       "position": "G",
-      "confidence_rate": 0,
+      "confidence_rate": 80,
       "proj_pts": 25,
       "proj_reb": 3,
       "proj_ast": 4,
       "proj_3pm": 1,
       "proj_pra": 32,
-      "injury_status": "Questionable"
+      "injury_status": "Available"
     },
     {
       "game_id": "21718200",
@@ -2073,7 +2057,7 @@
       "proj_pts": 12,
       "proj_reb": 5,
       "proj_ast": 2,
-      "proj_3pm": 2,
+      "proj_3pm": 1,
       "proj_pra": 19
     },
     {
@@ -2089,7 +2073,8 @@
       "proj_reb": 8,
       "proj_ast": 1,
       "proj_3pm": 1,
-      "proj_pra": 16
+      "proj_pra": 16,
+      "injury_status": "Questionable"
     },
     {
       "game_id": "21718201",
@@ -2269,7 +2254,7 @@
       "proj_pts": 20,
       "proj_reb": 2,
       "proj_ast": 4,
-      "proj_3pm": 2,
+      "proj_3pm": 1,
       "proj_pra": 26
     },
     {
@@ -2375,7 +2360,7 @@
       "proj_pts": 11,
       "proj_reb": 7,
       "proj_ast": 2,
-      "proj_3pm": 1,
+      "proj_3pm": 2,
       "proj_pra": 20
     },
     {
@@ -2402,11 +2387,11 @@
       "player": "Brook Lopez",
       "position": "C",
       "confidence_rate": 70,
-      "proj_pts": 14,
+      "proj_pts": 13,
       "proj_reb": 5,
       "proj_ast": 2,
-      "proj_3pm": 1,
-      "proj_pra": 21
+      "proj_3pm": 2,
+      "proj_pra": 20
     },
     {
       "game_id": "21718202",
@@ -2642,11 +2627,11 @@
       "player": "Deni Avdija",
       "position": "F",
       "confidence_rate": 80,
-      "proj_pts": 29,
-      "proj_reb": 7,
-      "proj_ast": 6,
+      "proj_pts": 32,
+      "proj_reb": 8,
+      "proj_ast": 7,
       "proj_3pm": 2,
-      "proj_pra": 43
+      "proj_pra": 46
     },
     {
       "game_id": "21718203",
@@ -2657,26 +2642,11 @@
       "player": "Toumani Camara",
       "position": "F",
       "confidence_rate": 70,
-      "proj_pts": 10,
+      "proj_pts": 11,
       "proj_reb": 4,
       "proj_ast": 2,
       "proj_3pm": 1,
-      "proj_pra": 16
-    },
-    {
-      "game_id": "21718203",
-      "game_time": "9:30 PM ET",
-      "team": "POR",
-      "opp": "GSW",
-      "player_id": "278",
-      "player": "Damian Lillard",
-      "position": "G",
-      "confidence_rate": 0,
-      "proj_pts": 19,
-      "proj_reb": 3,
-      "proj_ast": 4,
-      "proj_3pm": 3,
-      "proj_pra": 26
+      "proj_pra": 18
     },
     {
       "game_id": "21718203",
@@ -2687,11 +2657,11 @@
       "player": "Jrue Holiday",
       "position": "G",
       "confidence_rate": 0,
-      "proj_pts": 11,
-      "proj_reb": 5,
-      "proj_ast": 6,
+      "proj_pts": 12,
+      "proj_reb": 6,
+      "proj_ast": 7,
       "proj_3pm": 2,
-      "proj_pra": 22
+      "proj_pra": 24
     },
     {
       "game_id": "21718203",
@@ -2702,11 +2672,11 @@
       "player": "Sidy Cissoko",
       "position": "G",
       "confidence_rate": 70,
-      "proj_pts": 7,
+      "proj_pts": 8,
       "proj_reb": 4,
       "proj_ast": 2,
       "proj_3pm": 2,
-      "proj_pra": 13
+      "proj_pra": 14
     },
     {
       "game_id": "21718203",
@@ -2717,11 +2687,11 @@
       "player": "Donovan Clingan",
       "position": "C",
       "confidence_rate": 70,
-      "proj_pts": 10,
-      "proj_reb": 12,
+      "proj_pts": 11,
+      "proj_reb": 13,
       "proj_ast": 3,
       "proj_3pm": 1,
-      "proj_pra": 25
+      "proj_pra": 28
     },
     {
       "game_id": "21718203",
@@ -2732,11 +2702,11 @@
       "player": "Scoot Henderson",
       "position": "G",
       "confidence_rate": 70,
-      "proj_pts": 8,
+      "proj_pts": 9,
       "proj_reb": 3,
       "proj_ast": 2,
       "proj_3pm": 1,
-      "proj_pra": 13
+      "proj_pra": 14
     },
     {
       "game_id": "21718203",
@@ -2747,11 +2717,11 @@
       "player": "Robert Williams III",
       "position": "C",
       "confidence_rate": 70,
-      "proj_pts": 5,
-      "proj_reb": 5,
+      "proj_pts": 6,
+      "proj_reb": 6,
       "proj_ast": 1,
       "proj_3pm": 0,
-      "proj_pra": 11
+      "proj_pra": 12
     },
     {
       "game_id": "21718203",
@@ -2762,11 +2732,11 @@
       "player": "Jayson Kent",
       "position": "F",
       "confidence_rate": 0,
-      "proj_pts": 5,
+      "proj_pts": 6,
       "proj_reb": 1,
       "proj_ast": 1,
       "proj_3pm": 1,
-      "proj_pra": 7
+      "proj_pra": 8
     },
     {
       "game_id": "21718203",
@@ -2781,7 +2751,23 @@
       "proj_reb": 3,
       "proj_ast": 0,
       "proj_3pm": 0,
-      "proj_pra": 6
+      "proj_pra": 7
+    },
+    {
+      "game_id": "21718203",
+      "game_time": "9:30 PM ET",
+      "team": "POR",
+      "opp": "GSW",
+      "player_id": "1057275769",
+      "player": "Hansen Yang",
+      "position": "C",
+      "confidence_rate": 0,
+      "proj_pts": 2,
+      "proj_reb": 3,
+      "proj_ast": 1,
+      "proj_3pm": 1,
+      "proj_pra": 7,
+      "injury_status": "Questionable"
     }
   ]
 }
