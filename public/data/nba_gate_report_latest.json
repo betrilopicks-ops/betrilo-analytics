@@ -1,22 +1,22 @@
 {
   "result": "PASS",
   "file": "E:\\Betrilo\\NBA\\outputs\\site\\nba_player_projections_latest.json",
-  "run_at": "2026-11-27T22:46:41.017102+00:00",
-  "slate_date": "2026-11-27",
-  "today_et": "2026-11-27",
-  "player_count": 216,
-  "game_count": 11,
+  "run_at": "2026-11-28T12:03:09.596190+00:00",
+  "slate_date": "2026-11-28",
+  "today_et": "2026-11-28",
+  "player_count": 98,
+  "game_count": 5,
   "checks": {
     "1_slate_date_and_sample": {
       "passed": true,
-      "slate_date": "2026-11-27",
-      "expected_date": "2026-11-27",
+      "slate_date": "2026-11-28",
+      "expected_date": "2026-11-28",
       "is_sample": false
     },
     "2_game_count": {
       "passed": true,
-      "json_games": 11,
-      "scoreboard_games": 11
+      "json_games": 5,
+      "scoreboard_games": 5
     },
     "3_game_coverage": {
       "passed": true,
@@ -34,78 +34,59 @@
     },
     "6_prior_season_cap": {
       "passed": true,
-      "dropped": [],
+      "dropped": [
+        {
+          "player": "Buddy Hield",
+          "player_id": "210",
+          "proj_pts": 19.0,
+          "avg_pts": 7.5,
+          "ratio": 2.52
+        },
+        {
+          "player": "Jordan Hawkins",
+          "player_id": "56677837",
+          "proj_pts": 13.0,
+          "avg_pts": 5.1,
+          "ratio": 2.57
+        }
+      ],
       "exempted": [],
-      "players_checked": 163,
-      "players_dropped": 0
+      "players_checked": 78,
+      "players_dropped": 2
     },
     "7_integrity": {
       "passed": true,
       "issues": [],
       "players_dropped": 0,
-      "skipped_clamp_teams": 18
+      "skipped_clamp_teams": 0
     },
     "6_7_systemic_guard": {
       "passed": true,
-      "total_players": 216,
-      "players_dropped": 0,
-      "drop_pct": 0.0,
+      "total_players": 98,
+      "players_dropped": 2,
+      "drop_pct": 0.02,
       "threshold": 0.05
     },
     "8_plausible_projections": {
       "passed": true,
       "issues": [],
-      "rotation_count": 178,
-      "median_rotation_pts": 8.0,
+      "rotation_count": 98,
+      "median_rotation_pts": 9.0,
       "team_scores": {
-        "MIA": 102.0,
-        "NYK": 101.0,
-        "MIL": 100.0,
-        "PHI": 112.0,
+        "ORL": 105.0,
+        "WAS": 100.0,
+        "BKN": 96.0,
+        "CHA": 97.0,
         "IND": 103.0,
-        "BKN": 95.0,
-        "TOR": 99.0,
-        "BOS": 103.0,
-        "MEM": 99.0,
-        "MIN": 101.0,
-        "DAL": 111.0,
-        "PHX": 104.0,
-        "LAL": 110.0,
-        "SAS": 109.0,
-        "DEN": 108.0,
-        "UTA": 106.0,
-        "NOP": 105.0,
-        "LAC": 104.0,
-        "GSW": 100.0,
-        "POR": 100.0
+        "CHI": 110.0,
+        "OKC": 111.0,
+        "MIL": 106.0,
+        "PHI": 96.0,
+        "HOU": 99.0
       },
       "zero_pts_pct": 0.0,
-      "dropped_games": [
-        {
-          "game": "MIL@DET",
-          "game_id": "21718194",
-          "reasons": [
-            "DET: score=0<85"
-          ],
-          "label": "insufficient roster data"
-        },
-        {
-          "game": "ATL@BOS",
-          "game_id": "21718197",
-          "reasons": [
-            "ATL: score=0<85"
-          ],
-          "label": "insufficient roster data"
-        }
-      ],
-      "thin_teams": {
-        "DET": [
-          "score=0<85"
-        ],
-        "ATL": [
-          "score=0<85"
-        ]
-      }
+      "dropped_games": [],
+      "thin_teams": {}
     },
     "9_core_player_missing": {
       "passed": true,
@@ -114,40 +95,14 @@
     },
     "10_vegas_cal_clamp": {
       "passed": true,
-      "clamped_teams": [
-        {
-          "team": "DET",
-          "raw_total": 88.0,
-          "calibrated_total": 107.0,
-          "scale": 1.1
-        },
-        {
-          "team": "ATL",
-          "raw_total": 88.0,
-          "calibrated_total": 108.0,
-          "scale": 1.1
-        }
-      ]
+      "clamped_teams": []
     }
   },
   "failures": [],
   "matchups_checks": {
     "slate_date_match": true,
-    "game_count_before": 11,
-    "game_count_after": 9,
-    "dropped_games": [
-      {
-        "game": "MIL@DET",
-        "reasons": [
-          "thin roster: DET"
-        ]
-      },
-      {
-        "game": "ATL@BOS",
-        "reasons": [
-          "thin roster: ATL"
-        ]
-      }
-    ]
+    "game_count_before": 5,
+    "game_count_after": 5,
+    "dropped_games": []
   }
 }
